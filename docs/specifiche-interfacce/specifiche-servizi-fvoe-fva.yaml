@@ -8,10 +8,10 @@ info:
    
     #### Documentazione
     La documentazione a supporto delle specifiche di interfaccia con i sistemi che interoperano con il nuovo sistema di digitalizzazione è redatta con il linguaggio di markup Markdown ed è presente al segunete url:
-        [documento-specifiche-servizi-npa](https://github.com/anticorruzione/npa-docs/blob/main/npa-docs/docs/specifiche-interfacce/documento-specifiche-servizi-npa.md) 
+        [documento-specifiche-servizi-npa](https://github.com/anticorruzione/npa/blob/main/docs/specifiche-interfacce/documento-specifiche-servizi-npa.md)
 
   # I termini del servizio.
-  termsOfService: 'https://github.com/anticorruzione/npa-docs/blob/main/README.md#termini-del-servizio'
+  termsOfService: 'https://github.com/anticorruzione/npa/blob/main/README.md#termini-del-servizio'
   # Chi posso contattare per informazioni sul servizio e sul suo stato?
   contact:
     email: ufficio.uscp@anticorruzione.it
@@ -937,29 +937,29 @@ components:
             $ref: '#/components/schemas/ErrorResponse'
   schemas:
     StatoDocumentoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoDocumentoEnum'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoDocumentoEnum'
     StatoRichiestaType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoRichiestaType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoRichiestaType'
     TipoDocumentoEnum: 
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoDocumentoEnum'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoDocumentoEnum'
     AnagraficaOEType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AnagraficaOEType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AnagraficaOEType' 
     FVOEType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/FVOEType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/FVOEType' 
     FVAType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/FVAType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/FVAType'
     DocumentoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoType'
     DocumentoOEType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoOEType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoOEType'
     DocumentoAType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoAType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoAType'
     ContentDocumentType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/ContentDocumentType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/ContentDocumentType' 
     AutorizzazioneAccessoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AutorizzazioneAccessoType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AutorizzazioneAccessoType' 
     RichiestaAccessoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/RichiestaAccessoType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/RichiestaAccessoType'
     RichiestaAccessoRequest:
       allOf: # estende il modello dati RichiestaAccessoType
         - $ref: '#/components/schemas/RichiestaAccessoType'
