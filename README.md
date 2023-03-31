@@ -72,11 +72,11 @@ Nella tabella seguente sono disciplinati i tempi massimi e minimi per l'adozione
 * NB: l'aggiornamento del flusso di monitoraggio può includere l'aggiornamento o l'estensione del modello dati anche mediante l'introduzione di nuove schede.
  
 ## Domande, chiarimenti e ulteriori infomazioni
-Il canale di comunicazione con ANAC è rappresentato dall'apposita sezione [Issues](https://github.com/anticorruzione/npa-docs/issues) nella quale sarà possibile inserire una richiesta.
+Il canale di comunicazione con ANAC è rappresentato dall'apposita sezione [Issues](https://github.com/anticorruzione/npa/issues) nella quale sarà possibile inserire una richiesta.
 
 ## Disclaimer
 L’Autorità Nazionale Anticorruzione si riserva la facoltà di non fornire risposta puntuale a tutte le issues ricevute ed è sollevata da eventuali responsabilità dovuta:
-- alla mancanza di risposta per richieste pervenute al di fuori dell'unico canale di comunicazione con ANAC rappresentato dalla sezione [Issues](https://github.com/anticorruzione/npa-docs/issues)
+- alla mancanza di risposta per richieste pervenute al di fuori dell'unico canale di comunicazione con ANAC rappresentato dalla sezione [Issues](https://github.com/anticorruzione/npa/issues)
 - alla possibile mancanza di risposta per tutte le richieste pervenute nell'apposita sezione Issues o che potrebbero essere di competenza di organizzazioni esterne.
 
 # Roadmap del progetto
