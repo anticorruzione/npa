@@ -1,0 +1,80 @@
+info:
+  title: Modello Dati FVOE e FVA - OpenAPI 3.0
+  version: 1.0.0
+  description: |-
+   Vengono riportati gli oggetti usati dalle operazioni FVOE e FVA
+components:
+  schemas:
+    StatoDocumentoEnum:
+      type: string
+      minimum: 1
+      enum: []
+      description: >
+         stato- Stato in cui si trova il documento
+    StatoRichiestaType:
+        type: string
+        minimum: 1
+        enum: []   
+        description: >
+          stato- Stato in cui si trova la Scheda
+    TipoDocumentoEnum: 
+      type: string
+      minimum: 1
+      enum: [''] 
+      description: >
+        tipo oocumento- L' elenco dei tipi Documento
+    FascicoloType: 
+      description: Oggetto che riporta i dati del Fascicolo generico
+      type: object
+      additionalProperties: false
+    FVOEType:
+      allOf: # estende lo schema dati di FascicoloType
+        - $ref: '#/components/schemas/FascicoloType'
+      description: Oggetto che riporta i dati del FVOE
+      type: object
+      additionalProperties: false
+    FVAType:
+      allOf: # estende lo schema dati di FascicoloType
+        - $ref: '#/components/schemas/FascicoloType'
+      description: Oggetto che riporta i dati del FVA
+      type: object
+      additionalProperties: false
+    DocumentoType:
+      description: Oggetto che riporta i dati del Documento
+      type: object
+      additionalProperties: false
+    DocumentoOEType:
+      description: Oggetto che riporta i dati del Documento dell'OE
+      allOf: # estende lo schema dati di DocumentoType
+        - $ref: '#/components/schemas/DocumentoType'
+      type: object
+      additionalProperties: false
+    DocumentoAType:
+      description: Oggetto che riporta i dati del Documento dell'Appalto
+      allOf: 
+        - $ref: '#/components/schemas/DocumentoType' # estende lo schema dati di DocumentoType
+        - $ref: '#/components/schemas/DocumentoOEType' #estende lo schema dati di DocumentoOE perché potrebbe essere un Documento dell' Operatore Economico
+      type: object
+      additionalProperties: false
+    ContentDocumentType:
+      description: Oggetto che riporta il contenuto del
+      type: object
+      additionalProperties: false
+    AutorizzazioneAccessoType:
+      description: Oggetto che riporta tutti i dati della Pianificazione
+      type: object
+      additionalProperties: false
+    RichiestaAccessoType:
+      description: Oggetto che riporta i dato della Richiesta di Accesso
+      type: object
+      additionalProperties: false
+    AnagraficaType:
+      description: Oggetto generico dell'anagrafica
+      type: object
+      additionalProperties: false
+    AnagraficaOEType:
+      allOf: # estende la classe AnagraficaType
+        - $ref: '#/components/schemas/AnagraficaType'
+      description: Oggetto specifico dell'anagrafica dell'OE
+      type: object
+      additionalProperties: false

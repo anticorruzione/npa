@@ -1,0 +1,220 @@
+info:
+  title: Modello Dati NPA - OpenAPI 3.0
+  version: 1.0.0
+components:
+    schemas:
+      TipoSchedaEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-schede.yaml#/components/schemas/TipoSchedaEnum'
+      StatoSchedaEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-schede.yaml#/components/schemas/StatoSchedaEnum'
+      SchedaType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-schede.yaml#/components/schemas/SchedaType'  
+      StatoDocumentoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/StatoDocumentoEnum'
+      StatoRichiestaType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/StatoRichiestaType'
+      TipoDocumentoEnum: 
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/TipoDocumentoEnum'
+      AnagraficaOEType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/AnagraficaOEType' 
+      FVOEType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/FVOEType' 
+      FVAType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/FVAType'
+      DocumentoType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoType'
+      DocumentoOEType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoOEType'
+      DocumentoAType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoAType'
+      ContentDocumentType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType' 
+      AutorizzazioneAccessoType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/AutorizzazioneAccessoType' 
+      RichiestaAccessoType:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa-docs/main/npa-docs/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/RichiestaAccessoType'  
+      TipoFunzioneEnum:
+        type: string
+        minimum: 1
+        enum: []
+        description: >
+            tipoFunzione - Tipologia di Funzione associabili ad un Soggetto
+      TipoOperazioneEnum :
+        type: string
+        minimum: 1
+        enum: [ ]
+        description: >
+            tipoOperazione - Tipo Operazione di cui si richiedere l'esito dell'operazione
+      TipoPianoEnum:
+        type: string
+        minimum: 1
+        enum: []
+        description: >
+            tipoOperazione - Tipo Operazione di cui si richiedere l'esito dell'operazione
+      TipoAzioneAvvisoEnum:
+        description: azione dell'avviso
+        type: string
+        minimum: 1
+        enum: []
+      TipoAvvisoEnum:
+        description: Tipologie di avvisi 
+        type: string
+        minimum: 1
+        enum: []
+      TipoRuoloEnum:
+        type: string
+        minimum: 1
+        enum: [] 
+      StatoPianoEnum:  
+        type: string
+        minimum: 1
+        enum: []
+      StatoAppaltoEnum: 
+        type: string
+        minimum: 1
+        enum: []
+        description: >
+          stato- Stato in cui si trova la Appalto
+      StatoAvvisoEnum:
+        type: string
+        minimum: 1
+        enum: []
+        description: >
+          stato - Stato in cui si trova l'avviso
+      StatoLottoEnum:
+        type: string
+        minimum: 1
+        enum: []
+        description: >
+            stato- Stato in cui si trova il lotto:
+      CigType:
+        description: coppia progressivoLotto-CIG
+        type: object
+        additionalProperties: false
+      AnagraficaType:
+        description: oggetto generico dell'anagrafica
+        type: object
+        additionalProperties: false
+      RuoloType:
+        description: ruolo
+        type: object
+        additionalProperties: false
+      AnagraficaSoggettoType:
+        allOf: # estende la classe AnagraficaType
+          - $ref: '#/components/schemas/AnagraficaType'
+        description: Oggetto specifico dell'anagrafica
+        type: object
+        additionalProperties: false
+      EFormType:
+        description:  dati per la pubblicazione in TED nel formato definito in ambito europeo
+        type: object
+        additionalProperties: false
+        properties:
+          body:
+            description: EForm codificato Base64 e compresso XXXX nel formato XML definito da TED 
+            type: string
+            format: byte
+            example: U3dhZ2dlciByb2Nrcw== 
+      EspdRequestType:
+        description: Definizione delle gara, dei sui lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)
+        type: object
+        additionalProperties: false
+        properties:
+          body:
+            description: ESPD Request codificato Base64 nel formato XML definito da TED 
+            type: string
+            format: byte
+            example: U3dhZ2dlciByb2Nrcw==
+      AFormType:
+        description: dati aggiuntivi per la gestione italiana della richiesta
+        type: object
+        properties:
+          body:
+            description: Definizione form lato ANAC in formato JSON 
+            type: string
+      LottoType:
+        description: Oggetto che riporta tutti i dati del lotto
+        type: object
+        additionalProperties: false
+      AppaltoType:
+        description: Oggetto che riporta tutti i dati dell'Appalto
+        type: object
+        additionalProperties: false
+      AvvisoType:
+        description: Oggetto che riporta tutti i dati dell'Avviso
+        type: object
+        additionalProperties: false
+      PianoType:
+        description: Oggetto che riporta tutti i dati della Pianificazione
+        type: object
+        additionalProperties: false
+      PaginazioneType:
+        description: Oggetto per la paginazione dei risultati
+        type: object
+        additionalProperties: false
+        properties:
+          totRows: 
+            description: Numero totale di record risultante dalla ricerca
+            type: integer
+            format: int32
+          totPages: 
+            description: Numero totale di pagine risultanti dalla ricerca
+            type: integer
+            format: int32      
+          currentPage: 
+            description: Numero di pagina corrente
+            type: integer
+            format: int32
+          elementPage:
+            description: Numero di elementi per pagina
+            type: integer
+            format: int32
+      DatiAppaltoType:
+        description: Oggetto Complesso che riporta tutti i dati dell'appalto
+        type: object
+        additionalProperties: false
+        properties:
+          idAppalto:
+            description: identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          espdRequest:
+            $ref: '#/components/schemas/EspdRequestType'
+          eForm:
+            $ref: '#/components/schemas/EFormType'
+          anacForm:
+            $ref: '#/components/schemas/AFormType'
+        required:
+          - idAppalto
+      DatiPianoType :
+        description: Oggetto Complesso che riporta tutti i dati dell'appalto 
+        type: object
+        additionalProperties: false
+        properties:
+          idPianificazione:
+            description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Pianificazione. (A UUID specified by RFC4122)
+          eForm:
+            $ref: '#/components/schemas/EFormType'
+          anacForm:
+            $ref: '#/components/schemas/AFormType'  
+        required:
+          - idPianificazione
+      EsitoOperazioneType:
+        type: object
+        additionalProperties: false
+        required:  # List the required properties here
+          - codice
+          - descrizione
+        properties:
+          codice: 
+            description: codice dell'esito dell'operazione
+            type: string
+            example: '01'
+          descrizione:
+            description: descrizione dell'esito dell'operazione
+            type: string
+            example: 'AVVISO PUBBLICATO'
+          dettaglio:
+            description: descrizione dettagliata dell'esito dell'operazione
+            type: string
