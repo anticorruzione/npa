@@ -12,26 +12,40 @@ Il modello dati di NPA rappresenta l'insieme di informazioni oggetto del monitor
 La superclasse dalla quale derivano tutte le schede è riportata di seguito: 
 
 ```shell
-   AvvisoRequest{
-     idAvviso*	[...]
-     oneOf ->	
-       DatiAppaltoRequest{
-         description:oggetto complesso che riporta tutti i dati dell'appalto
-         idAppalto*	[...]
-         espdRequest EspdRequestType{...}
-         eForm EFormType{...}
-         anacForm AFormType{...}
-       }
-       SchedaRequest{
-        description:scheda generica definita dal contesto in cui si trova l'appalto
-        oneOf ->	
-          PartecipantiType{...}
-          AggiudicazioneType{...}
-          SchedaAdesioneType{...}
-          SchedaInizioLavoriType{...}
-          ...
-       }
-    }
+  AvvisoRequest{
+    idAvviso	[...]
+    oneOf ->	
+      DatiPianoType{
+        idPianificazione	{...}
+        scheda	SchedaPianificazioneType{
+          oneOf ->	
+            SchedaPIN.1Type{...}
+            SchedaPIN.2Type{...}
+            ...
+        }
+      }
+      DatiAppaltoType{
+        idAppalto	[...]
+        scheda	SchedaComunicaAppaltoType{
+          oneOf ->	
+            SchedaP1.10Type{...}
+            SchedaP1.11Type{...}
+            SchedaP1.12Type{...}
+            SchedaP1.13Type{...}
+            ...
+        }
+      }
+      DatiSchedaType{
+        idAppalto	[...]
+        idScheda	[...]
+        scheda	SchedaPostPubblicazioneType{
+          oneOf ->	
+            SchedaA1.29Type{...}
+            SchedaA1.30Type{...}
+            ...
+        }
+     }
+  }
  ```
 Durante l'esercizio della piattaforma NPA il processo di aggiornamento del modello dati sarà continuo, gli aggiornamenti verranno riportati nel presente repository e la loro efficacia è regolata secondo le specifiche del paragrafo [Termini del servizio](#termini-del-servizio). Le piattaforme interoperabili con NPA sono tenute all'aggiornamento del payload inviato entro i tempi previsti.
 
