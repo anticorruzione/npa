@@ -1,0 +1,1738 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati Schede - Dati comuni
+  version: 1.0.0
+components:
+  schemas:
+    TipologicaType:
+      description: oggetto che contiene i valori delle tipologiche
+      type: object
+      properties:
+        codice:
+          description: codice della tipologica
+          type: string
+        descrizione:
+          description: descrizione della voce della tipologica
+          type: string
+    TipoFinanziamentoEnum:
+      description: Tipo di finanziamento - fare riferimento ai valori contenuti nel file [tipoFinanziamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoFinanziamento.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    FunzioniDelegateEnum:
+      description: Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file [funzioniDelegate.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniDelegate.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    CategorieMerceologicheEnum:
+      description: Categorie merceologiche oggetto della fornitura di cui al DPCM soggetti aggregatori - fare riferimento ai valori contenuti nel file [categorieMerceologiche.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categorieMerceologiche.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    MotivazioneCIGEnum:
+      description: Motivazione richiesta CIG - fare riferimento ai valori contenuti nel file [motivazioneCig.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivazioneCig.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    StrumentiSvolgimentoProcedureEnum:
+      description: Strumenti per lo svolgimento delle procedure - fare riferimento ai valori contenuti nel file [strumentiSvolgimentoProcedure.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/strumentiSvolgimentoProcedure.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    TipoAggiudicatarioEnum:
+      description: Tipo di soggetto aggiudicatario - fare riferimento ai valori contenuti nel file [tipoAggiudicatario.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAggiudicatario.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'        
+    MotivoUrgenzaEnum:
+      description: Motivo urgenza - fare riferimento ai valori contenuti nel file [motivoUrgenza.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoUrgenza.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    PrestazioniEnum:
+      description: Prestazioni comprese nell'appalto - fare riferimento ai valori contenuti nel file [prestazioni.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/prestazioni.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    CondizioniNegoziataEnum:
+      description: Condizioni che giustificano il ricorso alla procedura negoziata senza previa pubblicazione di un bando oppure senza previa indizione di una gara - fare riferimento ai valori contenuti nel file [condizioniNegoziata.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/condizioniNegoziata.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    ContrattiDisposizioniParticolariEnum:
+      description: Contratti nei settori ordinari assoggettati a disposizioni particolari - fare riferimento ai valori contenuti nel file [contrattiDisposizioniParticolari.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/contrattiDisposizioniParticolari.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    CodIstatEnum:
+      description: Codice ISTAT - fare riferimento ai valori contenuti nel file [codIstat.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codIstat.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    CodNUTSEnum:
+      description: Il luogo di esecuzione secondo la classificazione comune delle unità territoriali per la statistica (NUTS). Va indicato il codice di livello NUTS 3 - corrisponde al campo bt-5071 - Place Performance Country Subdivision del TED - fare riferimento ai valori contenuti nel file [codNUTS.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codNUTS.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    RuoloOEEnum:
+      description: Ruolo del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file [ruoloOE.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ruoloOE.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'
+    ModalitaRealizzazioneEnum: 
+      description: Modalità di realizzazione - corrisponde al campo bt-765 - Framework Agreement del TED  - fare riferimento ai valori contenuti nel file [modalitaRealizzazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modalitaRealizzazione.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'       
+    TipoOEEnum:
+      description: Tipo soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file [tipoOE.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOE.json)
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'        
+    ModalitaAcquisizioneEnum:
+      description: Modalità di acquisizione (per servizi e forniture) - fare riferimento ai valori contenuti nel file  [modalitaAcquisizione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modalitaAcquisizione.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    OggettoPrincipaleContrattoEnum:
+      description: Oggetto principale del contratto - fare riferimento ai valori contenuti nel file [oggettoPrincipaleContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoPrincipaleContratto.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    TipologiaLavoroEnum:
+      description: Tipologia lavoro - fare riferimento ai valori contenuti nel file [tipologiaLavoro.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipologiaLavoro.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    MotivoCollegamentoEnum:
+      description: Motivo di collegamento - fare riferimento ai valori contenuti nel file [motivoCollegamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoCollegamento.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    CategoriaEnum:
+      description: Categoria - fare riferimento ai valori contenuti nel file [categoria.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categoria.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    MotivoDerogaEnum:
+      description: Motivo deroga che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii. - fare riferimento ai valori contenuti nel file [motivoDeroga.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoDeroga.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    MisurePremialiEnum:
+      description: Misure Premiali - fare riferimento ai valori contenuti nel file [misurePremiali.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/misurePremiali.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    TipoClassificazioneEnum:
+      description: Il tipo di classificazione che descrive l'appalto (ad es. CPV) - fare riferimento ai valori contenuti nel file [tipoClassificazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoClassificazione.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    TipoSoggettoEnum:
+      description: Tipologia del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file [tipoSoggetto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoSoggetto.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'        
+    CPVEnum:
+      description: Classificazione - fare riferimento ai valori contenuti nel file [CPV.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/CPV.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    AccessibilitaEnum:
+      description: Richiamo nel bando di gara, nell’avviso o nell’invito alla necessità da parte del concorrente o dell’offerente di aver assolto, al momento della presentazione dell'offerta, agli obblighi in materia di lavoro delle persone con disabilità di cui alla legge 12 marzo 1999, n. 68 - corrisponde al campo bt-754 - Accessibility del TED - fare riferimento ai valori contenuti nel file [accessibilita.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accessibilita.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    OggettoContrattoEnum:
+      description: Oggetto del contratto - corrisponde al campo bt-23 - Main Nature del TED - fare riferimento ai valori contenuti nel file [oggettoContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoContratto.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    SceltaContraenteEnum:
+      description: Il tipo di procedura di appalto (ad es. secondo i tipi indicati nelle direttive sugli appalti citate nei considerando del presente documento). - corrisponde al campo bt-105 - Procedure Type del TED - fare riferimento ai valori contenuti nel file [sceltaContraente.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/sceltaContraente.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    AffidamentiRiservatiEnum:
+      description: Indicare se la partecipazione è riservata a specifiche organizzazioni (ad es. laboratori protetti, organizzazioni con missione di servizio pubblico) - corrisponde al campo bt-71 - Reserved Participation del TED - fare riferimento ai valori contenuti nel file [affidamentiRiservati.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/affidamentiRiservati.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    CriteriAggiudicazioneEnum:
+      description: criteri di aggiudicazione - corrisponde al campo bt-539 - Award Criterion Type del TED - fare riferimento ai valori contenuti nel file [criteriAggiudicazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/criteriAggiudicazione.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    SistemaDinamicoAcquisizioneEnum:
+      description: Sistema dinamico di acquisizione - corrisponde al campo bt-766 - Dynamic Purchasing System del TED  - fare riferimento ai valori contenuti nel file [sistemaDinamicoAcquisizione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/sistemaDinamicoAcquisizione.json)
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    AccordoQuadroEnum:
+      description: Accordo quadro - corrisponde al campo bt-765 - Framework agreement del TED  - fare riferimento ai valori contenuti nel file [accordoQuadro.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accordoQuadro.json) 
+      allOf:
+        - $ref: '#/components/schemas/TipologicaType'
+    MotivoEsclusioneOrdinarioSpecialeEnum:
+      description: Motivo di esclusione settore ordinario e speciale - fare riferimento ai valori contenuti nel file [motivoEsclusioneOrdinarioSpeciale.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoEsclusioneOrdinarioSpeciale.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'        
+    MotivoEsclusioneConcessioneEnum:
+      description: Motivo di esclusione concessione - fare riferimento ai valori contenuti nel file [motivoEsclusioneConcessione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoEsclusioneConcessione.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'        
+    MotivoEsclusioneTracciabilitaEnum:
+      description: Motivo di esclusione tracciabilita - fare riferimento ai valori contenuti nel file [motivoEsclusioneTracciabilita.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoEsclusioneTracciabilita.json)
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'       
+    FattispecieContrattualeEnum:
+      description: Fattispecie contrattuale - fare riferimento ai valori contenuti nel file [fattispecieContrattuale.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/fattispecieContrattuale.json)  
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'      
+    ModalitaRiaggiudicazioneAffidamentoEnum:
+      description: Modalità di riaggiudicazione/affidamento dell'appalto - fare riferimento ai valori contenuti nel file [ModalitaRiaggiudicazioneAffidamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ModalitaRiaggiudicazioneAffidamento.json)    
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'       
+    EsitoProceduraEnum:
+      description: Esito procedura - corrisponde al campo bt-142 - Winner Chosen del TED - fare riferimento ai valori contenuti nel file [esitoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProcedura.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType' 
+    GiustificazioneEsitoProceduraEnum:
+      description: Giustificazione esito procedura - corrisponde al campo bt-144 - Not Awarded Reason del TED - fare riferimento ai valori contenuti nel file [giustificazioneEsitoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioneEsitoProcedura.json) 
+      allOf: 
+      - $ref: '#/components/schemas/TipologicaType'       
+    MotivoDerogaType:
+      type: array
+      items:
+        $ref: '#/components/schemas/MotivoDerogaEnum'
+    MisurePremialiType:
+      type: array
+      items:
+        $ref: '#/components/schemas/MisurePremialiEnum'
+    IpotesiCollegamentoType:
+      description: ipotesi di collegamento
+      type: object
+      required:
+        - appaltoDerivato
+      additionalProperties: false
+      properties:
+        cigCollegato:
+          description: CIG collegato
+          type: string
+        appaltoDerivato:
+          $ref: '#/components/schemas/MotivoCollegamentoEnum'
+    TipologiaLavoroType:
+      type: array
+      items:
+        $ref: '#/components/schemas/TipologiaLavoroEnum'
+    CondizioniNegoziataType:
+      type: array
+      items:
+        $ref: '#/components/schemas/CondizioniNegoziataEnum'
+    CategorieMerceologicheType:
+      type: array
+      items:
+        $ref: '#/components/schemas/CategorieMerceologicheEnum'
+    ImportoType:
+      description: Importo
+      type: string
+      format: decimal
+      example: '0'
+    FinanziamentoType:
+      description: Oggetto che riporta tutti i dati del finanziamento
+      type: object
+      required:
+        - tipo
+        - importo
+      additionalProperties: false
+      properties:
+        tipo:
+          $ref: '#/components/schemas/TipoFinanziamentoEnum'
+        importo:
+          $ref: '#/components/schemas/ImportoType'
+    StazioneAppaltanteType:
+      description: Stazione Appaltante e ruoli ricoperti nell'appalto
+      type: object
+      additionalProperties: false
+      properties:
+        codiceFiscale:
+          description: Codice fiscale della S.A.
+          type: string
+        codiceAusa:
+          description: Codice Ausa della S.A.
+          type: string
+        codiceCentroCosto:
+          description: Codice del centro di costo
+          type: string
+        funzioniSvolte:
+          type: array
+          items:
+            $ref: '#/components/schemas/FunzioniDelegateEnum'          
+        saTitolare:
+          description: Stazione appaltante titolare
+          type: boolean 
+    ParitaDiGenereGenerazionaleType:
+      description: Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)?
+      type: object
+      additionalProperties: false
+      properties:
+        quotaInferioreOccupFemminile:
+          description: Previsione di una quota inferiore con riferimento all’occupazione femminile
+          type: string
+          example: ''
+        quotaInferioreOccupGiovanile:
+          description: Previsione di una quota inferiore con riferimento all’occupazione giovanile
+          type: string
+          example: ''
+        motivoDeroga:
+          $ref: '#/components/schemas/MotivoDerogaType'
+        misurePremiali:
+          $ref: '#/components/schemas/MisurePremialiType'
+    DatiPersonaFisicaType:
+      description: Dati relativi alla persona fisica
+      type: object
+      #required: []
+      additionalProperties: false
+      properties: 
+        cf:
+          description: Codice fiscale
+          type: string
+        cognome:
+          description: Cognome
+          type: string
+        nome:
+          description: Nome
+          type: string
+        telefono:
+          description: Telefono
+          type: string
+          format: integer
+        fax:
+          description: Fax
+          type: string
+          format: integer          
+        email:
+          description: E-mail
+          type: string
+        indirizzo:
+          description: Indirizzo
+          type: string
+        cap:
+          description: CAP
+          type: string
+          format: integer
+        codIstat:
+          description: comuneIstat - Fare riferimento alla tabella di codifica dei comuni, province e regioni sul sito 'www.istat.it'
+          type: string
+          example: '058091'
+        incaricatoEstero:
+          description: Incaricato Estero
+          type: boolean
+    DatiPersonaGiuridicaType:
+      description: Dati relativi alla persona giuridica
+      type: object
+      #required: []
+      additionalProperties: false
+      properties: 
+        cf/piva:
+          description: Codice fiscale / Partita IVA 
+          type: string
+        denominazione:
+          description: Denominazione
+          type: string
+        cameraCommercio:
+          description: Camera Commercio
+          type: string
+        tipoAggiudicatario:
+          $ref: '#/components/schemas/TipoAggiudicatarioEnum'
+        operatoreEconomicoEstero:
+          description: Operatore Economico Estero
+          type: boolean         
+        paeseOperatoreEconomico:
+          description: Paese Operatore Economico
+          type: string
+        idRaggruppamento:
+          description: Progressivo raggruppamento 
+          type: string
+          format: integer
+        indirizzo:
+          description: Indirizzo
+          type: string
+        civico:
+          description: Civico
+          type: string
+          format: integer
+        cap:
+          description: CAP
+          type: string
+          format: integer
+        provincia:
+          description: Provincia
+          type: string
+        cognome:
+          description: Cognome
+          type: string
+        nome:
+          description: Nome
+          type: string          
+        cfLegaleRappresentante:
+          description: Codice Fiscale del legale Rappresentante
+          type: string          
+    IncaricatoType:
+      description: Anagrafica e riferimenti dei soggetti ai quali la stazione appaltante ha conferito incarichi
+      type: object
+      additionalProperties: false
+      properties:
+        datiSoggettoIncaricato:
+          $ref: '#/components/schemas/DatiPersonaFisicaType'
+        ruolo: 
+          $ref: '#/components/schemas/RuoloOEEnum'  
+    AggiudicatarioType:
+      description: Dati dell'aggiudicatario
+      type: object
+      required: [cf,denominazione,ruolo,tipo]
+      additionalProperties: false
+      properties:
+        cf:
+          description: codice fiscale del soggetto interessato
+          type: string
+        denominazione: 
+          description: denominazione del soggetto interessato
+          type: string  
+        ruolo: 
+          $ref: '#/components/schemas/RuoloOEEnum'
+        tipo: 
+          $ref: '#/components/schemas/TipoOEEnum'
+        idGruppo:
+          description: id gruppo
+          type: string          
+    AppaltoBaseType:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione
+      type: object
+      additionalProperties: false
+      properties:
+        idAppalto:
+          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
+          type: string      
+        categorieMerceologiche:
+          $ref: '#/components/schemas/CategorieMerceologicheType'
+        motivazioneCIG:
+          $ref: '#/components/schemas/MotivazioneCIGEnum'
+        strumentiSvolgimentoProcedure:
+          $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'
+    AppaltoP3BaseType:
+      description: Oggetto che riporta i dati dell'appalto relativi ai contratti senza limiti di importo con obblighi di comunicazione.
+      type: object
+      additionalProperties: false
+      properties:  
+        idAppalto:
+          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
+          type: string      
+        strumentiSvolgimentoProcedure: 
+          $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum' 
+    AppaltoP4BaseType:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sotto soglia per le adesioni AQ/convenzione con successivo confronto competitivo 
+      type: object
+      required: [cigAccordoQuadro,servizioPubblicoLocale,ripetizioniEConsegneComplementari,afferenteInvestimentiPNRR]
+      additionalProperties: false
+      properties:  
+        idAppalto:
+          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
+          type: string      
+        cigAccordoQuadro:
+          description: CIG relativo all’accordo quadro/convenzione cui si aderisce
+          type: string
+          example: '' 
+        strumentiSvolgimentoProcedure: 
+          $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'  
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean            
+    AppaltoP6BaseType:
+      description: Oggetto che riporta i dati dell'appalto all'interno della scheda di Finanza di progetto
+      type: object
+      required: [prelazionePromotore,servizioPubblicoLocale]
+      additionalProperties: false
+      properties:
+        idAppalto:
+          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
+          type: string      
+        prelazionePromotore:
+          description: E' previsto il diritto di prelazione per il promotore?
+          type: boolean  
+        strumentiSvolgimentoProcedure: 
+          $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'          
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean          
+    LottoBaseType:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione
+      type: object
+      additionalProperties: false
+      required:
+        - lotIdentifier
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
+        categorieMerceologiche:
+          $ref: '#/components/schemas/CategorieMerceologicheType'
+        condizioniNegoziata:
+          $ref: '#/components/schemas/CondizioniNegoziataType'
+        contrattiDisposizioniParticolari:
+          $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'
+        codIstat:
+          $ref: '#/components/schemas/CodIstatEnum'
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items:
+            type: string
+        modalitaAcquisizione:
+          $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
+        oggettoPrincipaleContratto:
+          $ref: '#/components/schemas/OggettoPrincipaleContrattoEnum'
+    LottoP3BaseType:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione
+      type: object
+      additionalProperties: false
+      required:
+        - lotIdentifier
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
+        codIstat:
+          $ref: '#/components/schemas/CodIstatEnum'
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items:
+            type: string
+        modalitaAcquisizione:
+          $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
+        tipologiaLavoro:
+          $ref: '#/components/schemas/TipologiaLavoroType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum'           
+        oggettoPrincipaleContratto:
+          $ref: '#/components/schemas/OggettoPrincipaleContrattoEnum'          
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP4BaseType:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      type: object
+      required: [lotIdentifier, regimeParticolare,afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
+        codIstat:
+          $ref: '#/components/schemas/CodIstatEnum'      
+        regimeParticolare:
+          description: Contratto regime particolare di appalto (speciale o alleggerito)
+          type: boolean          
+        contrattiDisposizioniParticolari:
+          $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'  
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''  
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean   
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items: 
+            type: string   
+        modalitaAcquisizione:
+          $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
+        tipologiaLavoro:
+          $ref: '#/components/schemas/TipologiaLavoroType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum'  
+        oggettoPrincipaleContratto:
+          $ref: '#/components/schemas/OggettoPrincipaleContrattoEnum'           
+    LottoP6BaseType:
+        description: Oggetto che riporta i dati del lotto all'interno della scheda di tracciabilità
+        type: object
+        required: [lotIdentifier,regimeParticolare,lavoroOAcquistoPrevistoInProgrammazione, opzioni/rinnovi,afferenteInvestimentiPNRR,categoria]
+        additionalProperties: false
+        properties:
+          cig:
+            description: codice identificativo lotto
+            type: string
+            example: 
+          lotIdentifier:
+            description: Id univoco del lotto generato dalla stazione appaltanteD
+            type: string  
+          condizioniNegoziata:
+            $ref: '#/components/schemas/CondizioniNegoziataType'  
+          codIstat:
+            $ref: '#/components/schemas/CodIstatEnum'      
+          regimeParticolare:
+            description: Contratto regime particolare di appalto (speciale o alleggerito)
+            type: boolean          
+          contrattiDisposizioniParticolari:
+            $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'       
+          lavoroOAcquistoPrevistoInProgrammazione:
+            description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+            type: boolean            
+          cui:
+            description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+            type: string
+            example: '' 
+          ipotesiCollegamento:
+            $ref: '#/components/schemas/IpotesiCollegamentoType'  
+          opzioni/rinnovi:
+            description: L’appalto prevede opzioni/rinnovi?
+            type: boolean   
+          afferenteInvestimentiPNRR:
+            description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+            type: boolean    
+          cupLotto:
+            description: Cup associati al lotto
+            type: array
+            items: 
+              type: string 
+          paritaDiGenereGenerazionale:
+            $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType' 
+          modalitaAcquisizione:
+            $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
+          tipologiaLavoro:
+            $ref: '#/components/schemas/TipologiaLavoroType'
+          categoria:
+            $ref: '#/components/schemas/CategoriaEnum'           
+    PartecipanteType:
+      description: Dati del partecipante
+      type: object
+      additionalProperties: false
+      properties:
+        cf:
+          description: Codice fiscale del soggetto interessato
+          type: string
+        denominazione: 
+          description: Denominazione del soggetto interessato
+          type: string  
+        ruolo: 
+          $ref: '#/components/schemas/RuoloOEEnum'
+        tipo: 
+          $ref: '#/components/schemas/TipoOEEnum'  
+        offertaEconomica:
+          description: Offerta economica ribasso
+          type: string
+        offertaQualitativa:
+          description: Offerta qualitativa
+          type: string
+          format: decimal
+        offertaInAumento:
+          description: Offerta in aumento
+          type: string
+          format: decimal              
+    PrestazioneProgettualeType:
+      description: Dati relativi alla prestazione progettuale
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        progettazioneInternaEsterna:
+          description: La progettazione è interna/esterna? 
+          type: boolean      
+        soggetti:
+          type: array
+          items:
+            $ref: '#/components/schemas/SoggettoPrestazioneProgettualeType' 
+    SoggettoPrestazioneProgettualeType:
+      description: Dati relativi alla prestazione progettuale
+      type: object
+      #required: []
+      additionalProperties: false
+      properties: 
+        tipo:
+          $ref: '#/components/schemas/TipoSoggettoEnum'
+        datiPersonaFisica:
+          $ref: '#/components/schemas/DatiPersonaFisicaType'
+        datiPersonaGiuridica:
+          $ref: '#/components/schemas/DatiPersonaGiuridicaType'
+        cig:
+          description: CIG affidamento incarico esterno di progettazione (in caso di progettista esterno)
+          type: string
+        dataAffidamentoIncarico:
+          description: Data di affidamento incarico (per progettazione esterna)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z'
+        dataConsegna: 
+          description: Data di consegna progetto (per progettazione esterna)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z'               
+    SoggettoType:
+      description: Dati del soggetto
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        cf:
+          description: codice fiscale del soggetto interessato
+          type: string
+        denominazione: 
+          description: denominazione del soggetto interessato
+          type: string
+        ruolo: 
+          $ref: '#/components/schemas/RuoloOEEnum'
+        tipo: 
+          $ref: '#/components/schemas/TipoOEEnum'            
+    AggiudicazioneBaseType:
+      description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
+      type: object
+      additionalProperties: false
+      required: [relazioneUnicaSulleProcedure]
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url  
+        relazioneUnicaSulleProcedure:
+          description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
+          type: boolean  
+        modalitaRiaggiudicazioneAffidamento:
+          $ref: '#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'            
+    QuadroEconomicoBaseType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      type: object
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in €
+          type: string
+          format: decimal
+        impServizi:
+          description: Importo componente servizi in €
+          type: string
+          format: decimal
+        impForniture:
+          description: Importo componente forniture in €
+          type: string
+          format: decimal
+        impTotaleSicurezza:
+          description: Importo totale per l'attuazione della sicurezza
+          type: string
+          format: decimal
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: string
+          format: decimal
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: string
+          format: decimal
+        sommeOpzioniRinnovi:
+          description: Somme per opzioni/rinnovi
+          type: string
+          format: decimal
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari
+          type: string
+          format: decimal
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: string
+          format: decimal
+    QuadroEconomicoType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      allOf:
+        - $ref: '#/components/schemas/QuadroEconomicoBaseType'
+      type: object
+      required:
+        - sommeADisposizione
+      additionalProperties: false
+    QuadroEconomicoConcorsiProgettazioneType:
+      description: Quadro economico concorsi progettazione
+      type: object
+      required: [impTotalePremi]
+      additionalProperties: false
+      properties:  
+        impTotalePremi:
+          description: Importo totale dei premi
+          type: string
+          format: decimal
+        impStimatoProgSuccessiva:
+          description: Importo stimato del servizio di progettazione successiva
+          type: string
+          format: decimal
+    QuadroEconomicoP3ContrattiEsclusiType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      type: object
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in € 
+          type: string
+          format: decimal
+        impServizi:
+          description: Importo componente servizi in € 
+          type: string
+          format: decimal
+        impForniture:
+          description: Importo componente forniture in €
+          type: string
+          format: decimal
+        impTotaleSicurezza: 
+          description: Importo totale per l'attuazione della sicurezza
+          type: string
+          format: decimal
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: string
+          format: decimal
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: string
+          format: decimal
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari 
+          type: string
+          format: decimal
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: string
+          format: decimal   
+    QuadroEconomicoP3.4Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      type: object
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in € 
+          type: string
+          format: decimal
+        impServizi:
+          description: Importo componente servizi in € 
+          type: string
+          format: decimal
+        impForniture:
+          description: Importo componente forniture in €
+          type: string
+          format: decimal
+        impTotaleSicurezza: 
+          description: Importo totale per l'attuazione della sicurezza
+          type: string
+          format: decimal
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: string
+          format: decimal
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: string
+          format: decimal
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari 
+          type: string
+          format: decimal
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: string
+          format: decimal             
+    QuadroEconomicoP3.5Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      allOf:
+        - $ref: '#/components/schemas/QuadroEconomicoBaseType'
+      type: object
+      required:
+        - sommeRipetizioni
+      additionalProperties: false          
+    QuadroEconomicoADType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      allOf: # estende la classe QuadroEconomicoBaseType
+      - $ref: '#/components/schemas/QuadroEconomicoBaseType'        
+      type: object
+      required: [impLavori, impServizi, impForniture]
+      additionalProperties: false
+    QuadroEconomicoAType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      allOf: # estende la classe QuadroEconomicoBaseType
+      - $ref: '#/components/schemas/QuadroEconomicoBaseType'        
+      type: object
+      required: [impLavori, impServizi, impForniture]
+      additionalProperties: false
+    QuadroEconomicoConcessioniType:
+      description: Oggetto che riporta tutti i dati del quadro economico per le concessioni. 
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in € 
+          type: string
+          format: decimal
+        impServizi:
+          description: Importo componente servizi in € 
+          type: string
+          format: decimal
+        impForniture:
+          description: Importo componente forniture in €
+          type: string
+          format: decimal
+        finanziamentiCanoniPA: 
+          description: Finanziamnenti o canoni della PA
+          type: string
+          format: decimal
+        entrateUtenza:
+          description: Entrate derivanti dall’utenza
+          type: string
+          format: decimal
+        introitoAttivo:
+          description: Introito attivo per la PA
+          type: string
+          format: decimal
+        impTotaleSicurezza: 
+          description: Importo totale per l'attuazione della sicurezza
+          type: string
+          format: decimal          
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: string
+          format: decimal
+        sommeOpzioniRinnovi:
+          description: Somme per opzioni/rinnovi 
+          type: string
+          format: decimal
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: string
+          format: decimal         
+    QuadroEconomicoA.33Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      allOf: # estende la classe QuadroEconomicoBaseType
+      - $ref: '#/components/schemas/QuadroEconomicoBaseType'        
+      type: object
+      required: [impLavori, impServizi, impForniture,sommeADisposizione]
+      additionalProperties: false
+    QuadroEconomicoA.34Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      allOf: # estende la classe QuadroEconomicoBaseType
+      - $ref: '#/components/schemas/QuadroEconomicoBaseType'        
+      type: object
+      required: [impLavori, impServizi, impForniture,sommeADisposizione]
+      additionalProperties: false        
+    DatiBaseAvvisoType:
+      description: Dato in comune con il Business Group Notice delle eforms
+      type: object
+      required:
+        - numeroGara
+      additionalProperties: false
+      properties:
+        numeroGara:
+          description: Numero gara - corrisponde al campo bt-04 - Procedure Identifier del TED
+          type: string
+          format: integer
+    DatiBaseCPVType:
+      description: Dato in comune con il Business Group Classification delle eforms
+      type: object
+      additionalProperties: false
+      required:
+        - tipoClassificazione
+      properties:
+        tipoClassificazione:
+          description: Il tipo di classificazione che descrive l'appalto (ad es. CPV).
+          $ref: '#/components/schemas/TipoClassificazioneEnum'
+        cpvPrevalente:
+          description: Il codice della classificazione che caratterizza meglio l'appalto - corrisponde al campo bt-262 - Main Classification Code del TED
+          $ref: '#/components/schemas/CPVEnum'
+        cpvSecondarie:
+          description: Codice classificazione supplementare che caratterizza anch'esso l'appalto - corrisponde al campo bt-263 - Additional Classification Codes del TED
+          type: array
+          items:
+            $ref: '#/components/schemas/CPVEnum'
+    DatiBaseAccessibilitaType:
+      description: Dato in comune con il Business Group Strategic Procurement delle eforms
+      additionalProperties: false
+      properties:
+        accessibilita:
+          $ref: '#/components/schemas/AccessibilitaEnum'
+        giustificazione:
+          description: giustificazione
+          type: string
+    DatiBaseAggiudicazioneAppaltoType:
+      description:  Dato in comune con il Business Group Contract delle eforms
+      #required: []
+      additionalProperties: false
+      properties:
+        dataAggiudicazione:
+          description: Data della decisione ufficiale di selezione dell'offerta vincitrice - corrisponde al campo bt-1451 - Winner Decision Date del TED
+          type: string
+          format: datetime   
+    DatiBaseStrumentiProceduraA2.30Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      additionalProperties: false
+      required: [modalitaRealizzazione,strumentiSvolgimentoProcedure,astaElettronica]
+      properties:
+        modalitaRealizzazione: 
+          $ref: '#/components/schemas/ModalitaRealizzazioneEnum'    
+        sistemaDinamicoAcquisizione: 
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean           
+    DatiBaseStrumentiProceduraA2.31Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      additionalProperties: false
+      required: [modalitaRealizzazione,astaElettronica]
+      properties:
+        modalitaRealizzazione: 
+          $ref: '#/components/schemas/ModalitaRealizzazioneEnum'    
+        sistemaDinamicoAcquisizione: 
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean                     
+    DatiBaseStrumentiProceduraA2.32Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      #required: []
+      additionalProperties: false
+      properties:
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean           
+    DatiBaseAggiudicazioneSubappaltoType:
+      description:  Dato in comune con il Business Group Subcontracting delle eforms
+      additionalProperties: false
+      properties:
+        subAppalto:
+          description: L'affidatario ha richiesto in sede di offerta la possibilità di subappaltare parte delle prestazioni?
+          type: boolean             
+    DatiBaseSottomissioniRicevuteType:
+      description:  Dato in comune con il Business Group Received Submissions delle eforms
+      #required: []
+      additionalProperties: false
+      properties:
+        offertaMassimoRibasso:
+          description: Offerta di massimo ribasso - corrisponde ai campi bt-710 e bt-711 del TED.
+          type: string
+          format: decimal          
+    DatiBaseStrumentiProceduraA2.29Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      additionalProperties: false
+      required: [modalitaRealizzazione,strumentiSvolgimentoProcedure,astaElettronica]
+      properties:
+        modalitaRealizzazione: 
+          $ref: '#/components/schemas/ModalitaRealizzazioneEnum'    
+        sistemaDinamicoAcquisizione: 
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean             
+    DatiBaseProceduraA2Type:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean           
+    DatiBaseType:
+      description: Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required:
+        - oggettoLotto
+      additionalProperties: false
+      properties:
+        oggettoContratto:
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara:
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED
+    DatiBaseP2.12Type:
+      description: Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required:
+        - oggettoLotto
+        - importoGara
+      additionalProperties: false
+      properties:
+        oggettoContratto:
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara:
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED
+    DatiBaseP2.13Type:
+      description:  Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required: [oggettoLotto,importoGara]
+      additionalProperties: false
+      properties:
+        oggettoContratto: 
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara: 
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED          
+    DatiBaseP2.14Type:
+      description:  Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required: [oggettoLotto,importoGara]
+      additionalProperties: false
+      properties:
+        oggettoContratto: 
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara: 
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED           
+    DatiBaseP2.20Type:
+      description:  Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required: [oggettoLotto,importoGara]
+      additionalProperties: false
+      properties:
+        oggettoContratto: 
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara: 
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED            
+    DatiBaseP2.21Type:
+      description:  Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required: [oggettoLotto,importoGara]
+      additionalProperties: false
+      properties:
+        oggettoContratto: 
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara: 
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED             
+    DatiBaseP2.23Type:
+      description:  Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required: [oggettoLotto,importoGara]
+      additionalProperties: false
+      properties:
+        oggettoContratto: 
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara: 
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED           
+    DatiBaseP2.24Type:
+      description:  Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required: [oggettoLotto,importoGara]
+      additionalProperties: false
+      properties:
+        oggettoContratto: 
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara: 
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED          
+    DatiBaseP4.1Type:
+      description:  Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required: [oggettoLotto,importoGara]
+      additionalProperties: false
+      properties:
+        oggettoContratto: 
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara: 
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED    
+    DatiBaseP3.5Type:
+      description: Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required:
+        - oggettoLotto
+        - importoGara
+      additionalProperties: false
+      properties:
+        oggettoContratto:
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggettoLotto:
+          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          type: string
+        importoGara:
+          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED          
+    DatiBaseProceduraType:
+      description: Dato in comune con il Business Group Procedure delle eforms
+      type: object
+      required:
+        - sceltaContraente
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'
+    DatiBaseProceduraP2.16Type:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      required: [sceltaContraente]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioneProceduraAccelerata:
+          description: La giustificazione del ricorso a una procedura accelerata - corrisponde al campo bt-1351 - Procedure Accelerated Justification del TED 
+          type: string            
+    DatiBaseProceduraP2.17Type:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      required: [sceltaContraente]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioneProceduraAccelerata:
+          description: La giustificazione del ricorso a una procedura accelerata - corrisponde al campo bt-1351 - Procedure Accelerated Justification del TED 
+          type: string            
+    DatiBaseProceduraP2.18Type:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      required: [sceltaContraente]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioneProceduraAccelerata:
+          description: La giustificazione del ricorso a una procedura accelerata - corrisponde al campo bt-1351 - Procedure Accelerated Justification del TED 
+          type: string           
+    DatiBaseProceduraP2.19Type:
+      description: Dato in comune con il Business Group Procedure dell'eform 10
+      type: object
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'          
+    DatiBaseProceduraP3ContrattiEsclusiType:
+      description: Dato in comune con il Business Group Procedure dell'eform 10
+      type: object
+      required: [sceltaContraente]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'           
+    DatiBaseProceduraP3.4Type:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      required: [sceltaContraente,proceduraAccelerata]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioneProceduraAccelerata:
+          description: La giustificazione del ricorso a una procedura accelerata - corrisponde al campo bt-1351 - Procedure Accelerated Justification del TED 
+          type: string          
+    DatiBaseProceduraP3.5Type:
+      description: Dato in comune con il Business Group Procedure dell'eform 10
+      type: object
+      required: [sceltaContraente]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioneProceduraAccelerata:
+          description: La giustificazione del ricorso a una procedura accelerata - corrisponde al campo bt-1351 - Procedure Accelerated Justification del TED 
+          type: string             
+    DatiBaseProceduraP6Type:
+      description: Dato in comune con il Business Group Procedure dell'eform 10
+      type: object
+      required: [sceltaContraente]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'          
+    DatiBaseProceduraP4.1Type:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      required: [sceltaContraente]
+      additionalProperties: false
+      properties:
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioneProceduraAccelerata:
+          description: La giustificazione del ricorso a una procedura accelerata - corrisponde al campo bt-1351 - Procedure Accelerated Justification del TED 
+          type: string           
+    DatiBaseAggiudicazioneP3ContrattiEsclusiType: 
+      description: Dato in comune con il Business Group Award Criterion delle eforms
+      required: [criteriAggiudicazione]    
+      additionalProperties: false
+      properties:
+        criteriAggiudicazione: 
+          $ref: '#/components/schemas/CriteriAggiudicazioneEnum'          
+    DatiBaseAggiudicazioneP4.1Type: 
+      description: Dato in comune con il Business Group Award Criterion delle eforms
+      required: [criteriAggiudicazione]    
+      additionalProperties: false
+      properties:
+        criteriAggiudicazione: 
+          $ref: '#/components/schemas/CriteriAggiudicazioneEnum'    
+    DatiBaseContrattoType:
+      description: Dato in comune con il Business Group Place of Performance delle eforms
+      type: object
+      additionalProperties: false
+      properties:
+        codNUTS:
+          $ref: '#/components/schemas/CodNUTSEnum'
+    DatiBaseAggiuntiviType:
+      description: Dato in comune con il Business Group Other Requirements delle eforms
+      required:
+        - affidamentiRiservati
+      additionalProperties: false
+      properties:
+        affidamentiRiservati:
+          $ref: '#/components/schemas/AffidamentiRiservatiEnum'
+    DatiBaseAggiudicazioneType:
+      description: Dato in comune con il Business Group Award Criterion delle eforms
+      additionalProperties: false
+      properties:
+        criteriAggiudicazione:
+          $ref: '#/components/schemas/CriteriAggiudicazioneEnum'
+    DatiBaseAggiudicazioneP3.4Type: 
+      description: Dato in comune con il Business Group Award Criterion delle eforms
+      required: [criteriAggiudicazione]    
+      additionalProperties: false
+      properties:
+        criteriAggiudicazione: 
+          $ref: '#/components/schemas/CriteriAggiudicazioneEnum' 
+    DatiBaseAggiudicazioneP3.5Type: 
+      description: Dato in comune con il Business Group Award Criterion delle eforms
+      required: [criteriAggiudicazione]    
+      additionalProperties: false
+      properties:
+        criteriAggiudicazione: 
+          $ref: '#/components/schemas/CriteriAggiudicazioneEnum'          
+    DatiBaseStrumentiProceduraType:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean
+    DatiBaseStrumentiProceduraP3.3Type:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      properties:
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean          
+    DatiBaseStrumentiProceduraP2.10Type:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      required:
+        - sistemaDinamicoAcquisizione
+        - accordoQuadro
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean
+    DatiBaseStrumentiProceduraP2.11Type:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      required:
+        - sistemaDinamicoAcquisizione
+        - accordoQuadro
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: string
+          enum:
+            - S
+            - 'N'
+    DatiBaseStrumentiProceduraP2.14Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'        
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean                
+    DatiBaseStrumentiProceduraP2.16Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      required: [sistemaDinamicoAcquisizione,accordoQuadro,astaElettronica]
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'        
+        sistemaDinamicoAcquisizione: 
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean           
+    DatiBaseStrumentiProceduraP2.17Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      required: [sistemaDinamicoAcquisizione,accordoQuadro,astaElettronica]
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'        
+        sistemaDinamicoAcquisizione: 
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean          
+    DatiBaseStrumentiProceduraP2.18Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      required: [accordoQuadro,astaElettronica]
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'        
+        sistemaDinamicoAcquisizione: 
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean            
+    DatiBaseStrumentiProceduraP2.19Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      additionalProperties: false
+      properties:
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean           
+    DatiBaseStrumentiProceduraP3.4Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      #required: []
+      additionalProperties: false
+      properties:
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean             
+    DatiBaseStrumentiProceduraP3.5Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      #required: []
+      additionalProperties: false
+      properties:
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean 
+    DatiBaseStrumentiProceduraP6Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      #required: []
+      additionalProperties: false
+      properties:
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean           
+    DatiBaseStrumentiProceduraP4Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      required: [astaElettronica]
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'       
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean            
+    DatiTerminiInvioType:
+      description: Dato in comune con il Business Group Submission Terms delle eforms 
+      additionalProperties: false
+      properties:
+        scadenzaPresentazioneInvito:
+          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          type: string
+          format: datetime
+        oraScadenzaPresentazioneOfferte: 
+          description: Ora scadenza per la presentazione delle offerte (hh:mm) - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          type: string
+          format: datetime          
+    DatiBaseTerminiInvioP2.10Type:
+      description: Dato in comune con il Business Group Submission Terms delle eforms
+      required:
+        - scadenzaPresentazioneInvito
+      additionalProperties: false
+      properties:
+        scadenzaPresentazioneInvito:
+          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          type: string
+          format: datetime
+    DatiBaseTerminiInvioP2.11Type:
+      description: Dato in comune con il Business Group Submission Terms delle eforms
+      required:
+        - scadenzaPresentazioneInvito
+      additionalProperties: false
+      properties:
+        scadenzaPresentazioneInvito:
+          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          type: string
+          format: datetime
+    DatiBaseTerminiInvioP2.12Type:
+      description: Dato in comune con il Business Group Submission Terms delle eforms
+      required:
+        - scadenzaPresentazioneInvito
+      additionalProperties: false
+      properties:
+        scadenzaPresentazioneInvito:
+          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          type: string
+          format: datetime
+    DatiBaseTerminiInvioP2.13Type:
+      description: Dato in comune con il Business Group Submission Terms delle eforms 
+      required: [scadenzaPresentazioneInvito]
+      additionalProperties: false
+      properties:
+        scadenzaPresentazioneInvito:
+          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          type: string
+          format: datetime          
+    DatiBaseTerminiInvioP2.14Type:
+      description: Dato in comune con il Business Group Submission Terms delle eforms 
+      required: [scadenzaPresentazioneInvito]
+      additionalProperties: false
+      properties:
+        scadenzaPresentazioneInvito:
+          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          type: string
+          format: datetime           
+    DatiBaseTerminiInvioP4Type:
+      description: Dato in comune con il Business Group Submission Terms delle eforms 
+      required: [oraScadenzaPresentazioneOfferte]
+      additionalProperties: false
+      properties:
+        oraScadenzaPresentazioneOfferte: 
+          description: Ora scadenza per la presentazione delle offerte (hh:mm) - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          type: string
+          format: datetime            
+    DatiBaseImportoType:
+      description: Dato in comune con il Business Group Prize delle eforms 
+      additionalProperties: false
+      required: [contrattiSuccessivi]
+      properties:
+        contrattiSuccessivi:
+          description: contratti successivi - corrisponde al campo bt-41 - Following Contract del TED
+          type: string           
+    AnacFormP2DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia > 5K
+      type: object
+      additionalProperties: false
+      properties:
+        datiBaseAvviso:
+          $ref: '#/components/schemas/DatiBaseAvvisoType'
+        datiBaseCPV:
+          type: array
+          items:
+            $ref: '#/components/schemas/DatiBaseCPVType'
+        datiBaseAccessibilita:
+          type: array
+          items:
+            $ref: '#/components/schemas/DatiBaseAccessibilitaType'
+    AnacFormP3ContrattiEsclusiDatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia dei contratti esclusi
+      type: object
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: '#/components/schemas/DatiBaseType'
+        datiBaseAvviso:
+          $ref: '#/components/schemas/DatiBaseAvvisoType'
+        datiBaseCPV:
+          $ref: '#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: '#/components/schemas/DatiBaseContrattoType' 
+        datiBaseProcedura:
+          $ref: '#/components/schemas/DatiBaseProceduraP3ContrattiEsclusiType'
+        datiBaseAggiudicazione:
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneP3ContrattiEsclusiType'  
+        datiBaseAggiuntivi:
+          $ref: '#/components/schemas/DatiBaseAggiuntiviType'       
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraType'
+        datiBaseTerminiInvio:
+          $ref: '#/components/schemas/DatiTerminiInvioType' 
+    AnacFormP3.3DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia dei contratti esclusi
+      type: object
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: '#/components/schemas/DatiBaseType'
+        datiBaseAvviso:
+          $ref: '#/components/schemas/DatiBaseAvvisoType'
+        datiBaseCPV:
+          $ref: '#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: '#/components/schemas/DatiBaseContrattoType' 
+        datiBaseProcedura:
+          $ref: '#/components/schemas/DatiBaseProceduraP3ContrattiEsclusiType'
+        datiBaseAggiudicazione:
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneP3ContrattiEsclusiType'  
+        datiBaseAggiuntivi:
+          $ref: '#/components/schemas/DatiBaseAggiuntiviType'       
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraP3.3Type'
+        datiBaseTerminiInvio:
+          $ref: '#/components/schemas/DatiTerminiInvioType'          
+    AnacFormP3.4DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia del contraente generale.
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: '#/components/schemas/DatiBaseType'
+        datiBaseAvviso:
+          $ref: '#/components/schemas/DatiBaseAvvisoType'
+        datiBaseCPV:
+          $ref: '#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: '#/components/schemas/DatiBaseContrattoType' 
+        datiBaseProcedura:
+          $ref: '#/components/schemas/DatiBaseProceduraP3.4Type'
+        datiBaseAggiudicazione:
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneP3.4Type'  
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraP3.4Type'
+        datiBaseTerminiInvio:
+          $ref: '#/components/schemas/DatiTerminiInvioType' 
+        datiBaseAccessibilita:
+          $ref: '#/components/schemas/DatiBaseAccessibilitaType'          
+    AnacFormP3.5DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia relativi alla scelta del socio privato nella società mista  
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: '#/components/schemas/DatiBaseP3.5Type'
+        datiBaseAvviso:
+          $ref: '#/components/schemas/DatiBaseAvvisoType'
+        datiBaseCPV:
+          $ref: '#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: '#/components/schemas/DatiBaseContrattoType' 
+        datiBaseProcedura:
+          $ref: '#/components/schemas/DatiBaseProceduraP3.5Type'
+        datiBaseAggiudicazione:
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneP3.5Type'  
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraP3.5Type'
+        datiBaseTerminiInvio:
+          $ref: '#/components/schemas/DatiTerminiInvioType' 
+        datiBaseAccessibilita:
+          $ref: '#/components/schemas/DatiBaseAccessibilitaType'    
+    AnacFormP6DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le schede relative ai Contratti di Partenariato Pubblico Privato 
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: '#/components/schemas/DatiBaseType'
+        datiBaseAvviso:
+          $ref: '#/components/schemas/DatiBaseAvvisoType'
+        datiBaseCPV:
+          $ref: '#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: '#/components/schemas/DatiBaseContrattoType' 
+        datiBaseProcedura:
+          $ref: '#/components/schemas/DatiBaseProceduraP6Type'
+        datiBaseAggiudicazione:
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneType'  
+        datiBaseAggiuntivi:
+          $ref: '#/components/schemas/DatiBaseAggiuntiviType'       
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraP6Type'
+        datiBaseTerminiInvio:
+          $ref: '#/components/schemas/DatiTerminiInvioType' 
+        datiBaseAccessibilita:
+          $ref: '#/components/schemas/DatiBaseAccessibilitaType'          
+    DatiBaseRisultatoProceduraType:
+      description:  Dato in comune con il Business Group Procedure Lot Result delle eforms
+      #required: []
+      additionalProperties: false
+      properties:
+        esito:
+          $ref: '#/components/schemas/EsitoProceduraEnum'
+        giustificazione:
+          $ref: '#/components/schemas/GiustificazioneEsitoProceduraEnum'           
+    AnacFormA2DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le aggiudicazioni sottosoglia
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBaseRisultatoProcedura:
+          $ref: '#/components/schemas/DatiBaseRisultatoProceduraType'
+        datiBaseAggiudicazioneAppalto:
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneAppaltoType'
+        datiBaseAccessibilita:
+          $ref: '#/components/schemas/DatiBaseAccessibilitaType'           
+    AnacFormBaseType:
+      description: Contiene i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia e sottosoglia con pubblicazione europea
+      type: object
+      required:
+        - finanziamenti
+      additionalProperties: false
+      properties:
+        finanziamenti:
+          description: Dati relativi ai finanziamenti
+          type: array
+          items:
+            $ref: '#/components/schemas/FinanziamentoType'
+        stazioniAppaltanti:
+          description: Dati relativi alle stazioni appaltanti
+          type: array
+          items:
+            $ref: '#/components/schemas/StazioneAppaltanteType'
+    EformType:
+      description: Eform codificato Base64 nel formato XML definito da TED
+      type: object
+      additionalProperties: false
+      properties:
+        body:
+          description: Eform codificato Base64 nel formato XML definito da TED
+          type: string
+          format: byte
+          example: U3dhZ2dlciByb2Nrcw==
+    EspdRequestType:
+      description: Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)
+      type: object
+      additionalProperties: false
+      properties:
+        body:
+          description: ESPD Request codificato Base64 nel formato XML definito da TED
+          type: string
+          format: byte
+          example: U3dhZ2dlciByb2Nrcw==

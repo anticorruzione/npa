@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A1.35 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE con invio di eform35.
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicatarioA1.35Type:
+      description: Dati dell'aggiudicatario
+      allOf: # estende la classe AggiudicatarioType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioType'      
+      type: object
+      additionalProperties: false 
+    AnacFormA1.35Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE
+      type: object
+      required: [aggiudicatari]
+      additionalProperties: false
+      properties:
+        aggiudicatari:
+          description: Dati degli aggiudicatari
+          type: array
+          items: 
+            $ref: '#/components/schemas/AggiudicatarioA1.35Type'
+        incaricati:
+          description: dati degli incaricati
+          type: array
+          items: 
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IncaricatoType'   
+        quadroEconomicoConcessioni:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType'   
+    SchedaA1.35Type:
+      description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE con invio di eform35.
+      type: object
+      required: [anacFormA1, eform]
+      additionalProperties: false
+      properties:
+        anacFormA1:
+          $ref: '#/components/schemas/AnacFormA1.35Type'
+        eform:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'           

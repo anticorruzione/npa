@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda SA1 - Scheda di SAL.
+  version: 1.0.0
+components:
+  schemas:
+    EsecuzioneType:
+      description: Oggetto che riporta i dati del SAL.
+      type: object
+      additionalProperties: false
+    AnacFormSA1Type:
+      description: Contiene tutti i dati di SAL
+      type: object
+      additionalProperties: false
+      properties:  
+        esecuzione:
+          $ref: '#/components/schemas/EsecuzioneType'
+    SchedaSA1Type:
+      description: Scheda di SAL
+      type: object
+      required: [anacFormSA1]
+      additionalProperties: false
+      properties:
+        anacFormSA1:
+          $ref: '#/components/schemas/AnacFormSA1Type'

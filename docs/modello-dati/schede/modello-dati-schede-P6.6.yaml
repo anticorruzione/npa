@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P6.6 - Scheda di Contratti di parternariato sociale.
+  version: 1.0.0
+components:
+  schemas:
+   AnacFormP6.6Type:
+      description: Contiene i dati per la scheda di Contratti di parternariato sociale
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType' 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP6DatiBaseType'      
+      type: object
+      required: [appalto,lotti] 
+      additionalProperties: false
+      properties:
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP6BaseType'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP6BaseType'    
+   SchedaP6.6Type:
+      description: Scheda di Contratti di parternariato sociale.
+      type: object
+      required: [anacFormP6]
+      additionalProperties: false
+      properties:
+        anacFormP6:
+          $ref: '#/components/schemas/AnacFormP6.6Type' 
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          

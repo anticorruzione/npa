@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A2.32 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormA2.32DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE
+      allOf: # estende la classe AnacFormA2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormA2DatiBaseType'      
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraA2.32Type'
+        datiBaseAggiudicazioneSubappalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType' 
+    AnacFormA2.32Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.32.yaml#/components/schemas/AnacFormA1.32Type'
+      - $ref: '#/components/schemas/AnacFormA2.32DatiBaseType'
+      type: object
+      #required: []
+      additionalProperties: false        
+    SchedaA2.32Type:
+      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE.
+      type: object
+      required: [anacFormA2]
+      additionalProperties: false
+      properties:
+        anacFormA2:
+          $ref: '#/components/schemas/AnacFormA2.32Type'           

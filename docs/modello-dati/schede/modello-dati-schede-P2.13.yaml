@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P2.13 - Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera b), della direttiva 2014/25/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormP2.13DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia > 5K - Bando periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera b), della direttiva 2014/25/UE
+      allOf: # estende la classe AnacFormP2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP2DatiBaseType'       
+      type: object
+      required: [importoGara]
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseP2.13Type'
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraType'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
+        datiBaseAggiuntivi:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiuntiviType'        
+        datiBaseAggiudicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraType'
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioP2.13Type' 
+    AnacFormP2.13Type:
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera b), della direttiva 2014/25/UE
+      allOf: # estende la classe AnacFormP1.13Type
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.13.yaml#/components/schemas/AnacFormP1.13Type' 
+      - $ref: '#/components/schemas/AnacFormP2.13DatiBaseType'
+      type: object
+      additionalProperties: false
+      required: [finanziamenti,opzioni/rinnovi, appalto]            
+    SchedaP2.13Type:
+      description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera b), della direttiva 2014/25/UE
+      type: object
+      required: [anacFormP2,espd]
+      additionalProperties: false
+      properties:
+        anacFormP2:
+          $ref: '#/components/schemas/AnacFormP2.13Type'
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          

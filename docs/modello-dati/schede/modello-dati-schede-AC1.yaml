@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda AC1 - Scheda di accordo bonario.
+  version: 1.0.0
+components:
+  schemas:
+    EsecuzioneType:
+      description: Oggetto che riporta i dati di accordo bonario.
+      type: object
+      additionalProperties: false
+    AnacFormAC1Type:
+      description: Contiene tutti i dati di accordo bonario
+      type: object
+      additionalProperties: false
+      properties:  
+        esecuzione:
+          $ref: '#/components/schemas/EsecuzioneType'
+    SchedaAC1Type:
+      description: Scheda di accordo bonario
+      type: object
+      required: [anacFormAC1]
+      additionalProperties: false
+      properties:
+        anacFormAC1:
+          $ref: '#/components/schemas/AnacFormAC1Type'

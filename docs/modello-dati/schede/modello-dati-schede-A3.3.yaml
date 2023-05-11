@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A3.3 - Scheda di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneA3.3Type:
+      description: Oggetto che riporta i dati dell'aggiudicazione
+      type: object
+      additionalProperties: false
+    AnacFormA3.3Type:
+      description: Contiene tutti i dati di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo
+      type: object
+      additionalProperties: false
+      properties:  
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneA3.3Type'
+    SchedaA3.3Type:
+      description: Scheda di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo
+      type: object
+      required: [anacFormA3.3]
+      additionalProperties: false
+      properties:
+        anacFormA3:
+          $ref: '#/components/schemas/AnacFormA3.3Type'

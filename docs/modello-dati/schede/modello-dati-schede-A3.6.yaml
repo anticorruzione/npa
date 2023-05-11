@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A3.6 - Scheda di aggiudicazione relativa ad affidamento a soc. inhouse
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneA3.6Type:
+      description: Oggetto che riporta i dati dell'aggiudicazione
+      type: object
+      additionalProperties: false
+    AnacFormA3.6Type:
+      description: Contiene tutti i dati di aggiudicazione relativa ad affidamento a soc. inhouse
+      type: object
+      additionalProperties: false
+      properties:  
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneA3.6Type'
+    SchedaA3.6Type:
+      description: Scheda di aggiudicazione relativa ad affidamento a soc. inhouse
+      type: object
+      required: [anacFormA3.6]
+      additionalProperties: false
+      properties:
+        anacFormA3:
+          $ref: '#/components/schemas/AnacFormA3.6Type'

@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P3.2 - Scheda di pubblicazione relativa ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ.
+  version: 1.0.0
+components:
+  schemas:
+    LottoP3.2Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoP3BaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'      
+      type: object
+      required: [afferenteInvestimentiPNRR,opzioni/rinnovi,motivoEsclusioneConcessione]
+      additionalProperties: false
+      properties:
+        motivoEsclusioneConcessione: 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoEsclusioneConcessioneEnum'  
+    AppaltoP3.2Type:
+      description: Oggetto che riporta i dati dell'appalto relativi ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
+      allOf: # estende la classe AppaltoP3BaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP3BaseType'      
+      type: object
+      #required: []
+      additionalProperties: false
+    AnacFormP3.2Type:
+      description: Contiene i dati relativi ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
+      allOf: # estende la classe AnacFormP3ContrattiEsclusiDatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP3ContrattiEsclusiDatiBaseType'       
+      type: object
+      required: [categoria, finanziamenti, appalto,lotti]
+      additionalProperties: false
+      properties:  
+        appalto: 
+          $ref: '#/components/schemas/AppaltoP3.2Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoP3.2Type'           
+        stazioniAppaltanti:
+          description: Dati relativi alle stazioni appaltanti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/StazioneAppaltanteType'    
+        finanziamenti:
+          description: Dati relativi ai finanziamenti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/FinanziamentoType'    
+    SchedaP3.2Type:
+      description: Scheda di pubblicazione relativa ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
+      type: object
+      required: [anacFormP3, anacFormP3DatiBase]
+      additionalProperties: false
+      properties:
+        anacFormP3:
+          $ref: '#/components/schemas/AnacFormP3.2Type' 
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'        

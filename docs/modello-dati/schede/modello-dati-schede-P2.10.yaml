@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P2.10 - Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormP2.10DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia > 5K - Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE
+      allOf: # estende la classe AnacFormP2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP2DatiBaseType'       
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBase:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseType'
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraType'
+        datiBaseContratto:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
+        datiBaseAggiuntivi:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiuntiviType'        
+        datiBaseAggiudicazione:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'
+        datiBaseStrumentiProcedura:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraP2.10Type'
+        datiBaseTerminiInvio:
+          type: array
+          items:          
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioP2.10Type'
+    AnacFormP2.10Type:
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE
+      allOf: # estende la classe AnacFormP1.10Type
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.10.yaml#/components/schemas/AnacFormP1.10Type'
+      - $ref: '#/components/schemas/AnacFormP2.10DatiBaseType'
+      type: object
+      required: [categoria, finanziamenti, opzioni/rinnovi, appalto,lotti]
+      additionalProperties: false          
+    SchedaP2.10Type:
+      description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE
+      type: object
+      required: [anacFormP2,espd]
+      additionalProperties: false
+      properties:
+        anacFormP2:
+          $ref: '#/components/schemas/AnacFormP2.10Type'
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'           

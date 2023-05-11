@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda I1 - Scheda di inizio esecuzione
+  version: 1.0.0
+components:
+  schemas:
+    EsecuzioneI1Type:
+      description: Oggetto che riporta i dati dell'esecuzione
+      type: object
+      additionalProperties: false
+    AnacFormI1Type:
+      description: Contiene tutti i dati di inizio esecuzione
+      type: object
+      additionalProperties: false
+      properties:  
+        esecuzione:
+          $ref: '#/components/schemas/EsecuzioneI1Type'
+    SchedaI1Type:
+      description: Scheda di inizio esecuzione
+      type: object
+      required: [anacFormI1]
+      additionalProperties: false
+      properties:
+        anacFormI1:
+          $ref: '#/components/schemas/AnacFormI1Type'

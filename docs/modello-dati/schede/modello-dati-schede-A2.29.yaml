@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A2.29 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormA2.29DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE
+      allOf: # estende la classe AnacFormA2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/AnacFormA2DatiBaseType'       
+      type: object
+      required: [datiBaseAggiudicazioneSubappalto]
+      additionalProperties: false
+      properties:
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraA2Type'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraA2.29Type'
+        datiBaseSottomissioniRicevute:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSottomissioniRicevuteType'
+        datiBaseAggiudicazioneSubappalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType'
+    AnacFormA2.29Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.29.yaml#/components/schemas/AnacFormA1.29Type'
+      - $ref: '#/components/schemas/AnacFormA2.29DatiBaseType'
+      type: object
+      additionalProperties: false
+    SchedaA2.29Type:
+      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE
+      type: object
+      required: [anacFormA2]
+      additionalProperties: false
+      properties:
+        anacFormA2:
+          $ref: '#/components/schemas/AnacFormA2.29Type'          

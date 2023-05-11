@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A3.4 - Scheda di aggiudicazione relativa al contraente generale 
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneA3.4Type:
+      description: Oggetto che riporta i dati dell'aggiudicazione
+      type: object
+      additionalProperties: false
+    AnacFormA3.4Type:
+      description: Contiene tutti i dati di aggiudicazione relativa al contraente generale
+      type: object
+      additionalProperties: false
+      properties:  
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneA3.4Type'
+    SchedaA3.4Type:
+      description: Scheda di aggiudicazione relativa al contraente generale
+      type: object
+      required: [anacFormA3.4]
+      additionalProperties: false
+      properties:
+        anacFormA3:
+          $ref: '#/components/schemas/AnacFormA3.4Type'

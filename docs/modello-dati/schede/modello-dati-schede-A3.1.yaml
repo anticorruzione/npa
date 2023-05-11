@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A3.1 - Scheda di aggiudicazione relativa ai Contratti esclusi (generale o di tipo accordo quadro)
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneA3.1Type:
+      description: Oggetto che riporta i dati dell'aggiudicazione
+      type: object
+      additionalProperties: false
+    AnacFormA3.1Type:
+      description: Contiene tutti i dati di aggiudicazione relativa ai Contratti esclusi (generale o di tipo accordo quadro).
+      type: object
+      additionalProperties: false
+      properties:  
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneA3.1Type'
+    SchedaA3.1Type:
+      description: Scheda di aggiudicazione relativa ai contratti esclusi generali
+      type: object
+      required: [anacFormA3.1, anacFormA3.1DatiBase]
+      additionalProperties: false
+      properties:
+        anacFormA3:
+          $ref: '#/components/schemas/AnacFormA3.1Type'

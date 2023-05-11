@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda SU1 - Scheda di subappalto.
+  version: 1.0.0
+components:
+  schemas:
+    EsecuzioneType:
+      description: Oggetto che riporta i dati del subappalto.
+      type: object
+      additionalProperties: false
+    AnacFormSU1Type:
+      description: Contiene tutti i dati di subappalto
+      type: object
+      additionalProperties: false
+      properties:  
+        esecuzione:
+          $ref: '#/components/schemas/EsecuzioneType'
+    SchedaSU1Type:
+      description: Scheda di subappalto
+      type: object
+      required: [anacFormSU1]
+      additionalProperties: false
+      properties:
+        anacFormSU1:
+          $ref: '#/components/schemas/AnacFormSU1Type'

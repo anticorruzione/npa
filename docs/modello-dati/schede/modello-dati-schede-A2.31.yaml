@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A2.31 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormA2.31DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE
+      allOf: # estende la classe AnacFormA2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormA2DatiBaseType'       
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraA2Type'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraA2.31Type'
+        datiBaseSottomissioniRicevute:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSottomissioniRicevuteType'
+        datiBaseAggiudicazioneSubappalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType' 
+    AnacFormA2.31Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.31.yaml#/components/schemas/AnacFormA1.31Type'
+      - $ref: '#/components/schemas/AnacFormA2.31DatiBaseType'
+      type: object
+      #required: []
+      additionalProperties: false      
+    SchedaA2.31Type:
+      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE.
+      type: object
+      required: [anacFormA2]
+      additionalProperties: false
+      properties:
+        anacFormA2:
+          $ref: '#/components/schemas/AnacFormA2.31Type'          

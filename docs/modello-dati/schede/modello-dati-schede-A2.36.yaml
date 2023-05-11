@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A2.36 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormA2.36DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE.
+      allOf: # estende la classe AnacFormA2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormA2DatiBaseType'       
+      type: object
+      required: [datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto]
+      additionalProperties: false     
+    AnacFormA2.36Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE.
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.36.yaml#/components/schemas/AnacFormA1.36Type'
+      - $ref: '#/components/schemas/AnacFormA2.36DatiBaseType'
+      type: object
+      #required: []
+      additionalProperties: false       
+    SchedaA2.36Type:
+      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE.
+      type: object
+      required: [anacFormA2]
+      additionalProperties: false
+      properties:
+        anacFormA2:
+          $ref: '#/components/schemas/AnacFormA2.36Type'          

@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A3.5 - Scheda di aggiudicazione relativa alla scelta del socio privato nella società mista
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneA3.5Type:
+      description: Oggetto che riporta i dati dell'aggiudicazione
+      type: object
+      additionalProperties: false
+    AnacFormA3.5Type:
+      description: Contiene tutti i dati di aggiudicazione relativa alla scelta del socio privato nella società mista
+      type: object
+      additionalProperties: false
+      properties:  
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneA3.5Type'
+    SchedaA3.5Type:
+      description: Scheda di aggiudicazione relativa alla scelta del socio privato nella società mista
+      type: object
+      required: [anacFormA3.5]
+      additionalProperties: false
+      properties:
+        anacFormA3:
+          $ref: '#/components/schemas/AnacFormA3.5Type'

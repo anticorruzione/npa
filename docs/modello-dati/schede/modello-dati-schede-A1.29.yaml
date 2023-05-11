@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A1.29 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE con invio di eform29.
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicatarioA1.29Type:
+      description: Dati dell'aggiudicatario
+      allOf: # estende la classe AggiudicatarioType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioType'      
+      type: object
+      required: [importoAggiudicazioneAffidamento]
+      additionalProperties: false
+      properties:
+        importoAggiudicazioneAffidamento:
+          description: Importo di aggiudicazione/affidamento 
+          type: string
+          format: decimal      
+        ribassoDasta:
+          description: Ribasso d’Asta 
+          type: string
+        offertaInAumento:
+          description: Offerta in Aumento
+          type: string
+        offertaQualitativa:
+          description: Offerta qualitativa
+          type: string
+          format: decimal            
+    AggiudicazioneA.29Type:
+      description: Oggetto che riporta i dati inerenti la fase di aggiudicazione sopra soglia e sotto soglia 
+      allOf: # estende la classe AggiudicazioneBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneBaseType'        
+      type: object
+      required: [opereUrbanizzazioneScomputo,preinformazione,termineRidottoAvvisoPreinformazione]
+      additionalProperties: false
+      properties: 
+        opereUrbanizzazioneScomputo:
+          description: Opere di urbanizzazione a scomputo
+          type: boolean
+        preinformazione:
+          description: E' stata effettuata la preinformazione?
+          type: boolean
+        termineRidottoAvvisoPreinformazione:
+          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
+          type: boolean            
+    AnacFormA1.29Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE
+      type: object
+      required: [aggiudicazione]
+      additionalProperties: false
+      properties:
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneA.29Type'
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoAType' 
+        aggiudicatari:
+          description: Dati degli aggiudicatari
+          type: array
+          items: 
+            $ref: '#/components/schemas/AggiudicatarioA1.29Type'
+        incaricati:
+          description: dati degli incaricati
+          type: array
+          items: 
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IncaricatoType'
+    SchedaA1.29Type:
+      description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE con invio di eform29.
+      type: object
+      required: [anacFormA1, eform]
+      additionalProperties: false
+      properties:
+        anacFormA1:
+          $ref: '#/components/schemas/AnacFormA1.29Type'
+        eform:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'           

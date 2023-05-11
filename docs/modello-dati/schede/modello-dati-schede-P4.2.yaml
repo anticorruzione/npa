@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P4.2 - Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (es. proc. Negoziata) - Articolo 49 della direttiva 2014/24/UE e Articolo 69 della direttiva 2014/25/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AppaltoP4.2Type:
+      description: Oggetto che riporta i dati dell'appalto per le adesioni AQ/convenzione con successivo confronto competitivo   
+      allOf: # estende la classe AppaltoP4BaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP4BaseType'
+      type: object
+      required: [servizioPubblicoLocale,ripetizioniEConsegneComplementari]
+      additionalProperties: false
+      properties:     
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean   
+    AnacFormP4.2Type:
+      description: Contiene i dati relativi alle adesioni AQ/convenzione con successivo confronto competitivo (ordinario/speciale) - Articolo 49 della direttiva 2014/24/UE e Articolo 69 della direttiva 2014/25/UE
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType' 
+      - $ref: '#/components/schemas/AnacFormP4.2DatiBaseType'      
+      type: object
+      required: [categoria, finanziamenti, opzioni/rinnovi, appalto,lotti]
+      additionalProperties: false
+      properties:  
+        appalto:
+          $ref: '#/components/schemas/AppaltoP4.2Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP4BaseType'         
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'      
+    AnacFormP4.2DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni delle adesione AQ/convenzione con successivo confronto competitivo
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseType'      
+        datiBaseAvviso:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAvvisoType'
+        datiBaseCPV:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraP4.1Type'
+        datiBaseAggiudicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneP4.1Type'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraP4Type'
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioP4Type'   
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'
+    SchedaP4.2Type:
+      description: Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (es. proc. Negoziata) - Articolo 49 della direttiva 2014/24/UE e Articolo 69 della direttiva 2014/25/UE
+      type: object
+      required: [anacFormP4,anacFormP4DatiBase]
+      additionalProperties: false
+      properties:
+        anacFormP4:
+          $ref: '#/components/schemas/AnacFormP4.2Type'      
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         

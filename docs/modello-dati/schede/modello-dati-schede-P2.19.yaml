@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P2.19 - Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando di concessione - direttiva sulle concessioni, regime ordinario. Articolo 31, paragrafo 1, della direttiva 2014/23/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormP2.19DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia > 5K - Bando di concessione - direttiva sulle concessioni, regime ordinario. Articolo 31, paragrafo 1, della direttiva 2014/23/UE
+      allOf: # estende la classe AnacFormP2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP2DatiBaseType' 
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseType'
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraP2.19Type'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
+        datiBaseAggiuntivi:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiuntiviType'        
+        datiBaseAggiudicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraP2.19Type'
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType'    
+    AnacFormP2.19Type:
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K- direttiva sulle concessioni, regime ordinario. Articolo 31, paragrafo 1, della direttiva 2014/23/UE 
+      allOf: # estende la classe AnacFormP1.19Type
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.19.yaml#/components/schemas/AnacFormP1.19Type' 
+      - $ref: '#/components/schemas/AnacFormP2.19DatiBaseType'
+      type: object
+      additionalProperties: false
+      required: [finanziamenti,opzioni/rinnovi, appalto] 
+    SchedaP2.19Type:
+      description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando di concessione - direttiva sulle concessioni, regime ordinario. Articolo 31, paragrafo 1, della direttiva 2014/23/UE
+      type: object
+      required: [anacFormP2,espd]
+      additionalProperties: false
+      properties:
+        anacFormP2:
+          $ref: '#/components/schemas/AnacFormP2.19Type'
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          

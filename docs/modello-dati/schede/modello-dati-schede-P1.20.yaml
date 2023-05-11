@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P1.20 - Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform20.
+  version: 1.0.0
+components:
+  schemas:
+    LottoP.20Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoBaseType'
+      type: object
+      required: [modalitaAcquisizione,contrattiDisposizioniParticolari,lavoroOAcquistoPrevistoInProgrammazione,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean         
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean         
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''           
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        ipotesiCollegamento:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType'
+    AppaltoP.20Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [
+        categorieMerceologiche,servizioPubblicoLocale,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione]       
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url      
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean       
+    AnacFormP1.20Type:
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia 
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'   
+      type: object
+      required: [categoria, finanziamenti, opzioni/rinnovi, appalto,lotti]
+      additionalProperties: false
+      properties:  
+        appalto:
+          $ref: '#/components/schemas/AppaltoP.20Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoP.20Type' 
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType' 
+    SchedaP1.20Type:
+      description: Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform20.
+      type: object
+      required: [anacFormP1, eform,espd]
+      additionalProperties: false
+      properties:
+        anacFormP1:
+          $ref: '#/components/schemas/AnacFormP1.20Type'
+        eform:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'  
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          
+         

@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P2.18 - Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormP2.18DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia > 5K - Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE
+      allOf: # estende la classe AnacFormP2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP2DatiBaseType'       
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseType'
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraP2.18Type'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'           
+        datiBaseAggiuntivi:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiuntiviType'        
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraP2.18Type'
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType'
+    AnacFormP2.18Type:
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE
+      allOf: # estende la classe AnacFormP1.18Type
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.18.yaml#/components/schemas/AnacFormP1.18Type' 
+      - $ref: '#/components/schemas/AnacFormP2.18DatiBaseType'
+      type: object
+      additionalProperties: false
+      required: [finanziamenti,opzioni/rinnovi, appalto]    
+    SchedaP2.18Type:
+      description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE
+      type: object
+      required: [anacFormP2,espd]
+      additionalProperties: false
+      properties:
+        anacFormP2:
+          $ref: '#/components/schemas/AnacFormP2.18Type'
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         

@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P6.5 - Scheda di Concessione di servizi e costruzione e gestione.
+  version: 1.0.0
+components:
+  schemas:
+   LottoP6.5Type:
+      description: Oggetto che riporta i dati del lotto all'interno della scheda di Concessione di servizi e costruzione e gestione
+      allOf: # estende la classe LottoP6BaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP6BaseType'      
+      type: object
+      additionalProperties: false
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioni/rinnovi,afferenteInvestimentiPNRR,categoria]       
+      properties:
+        strumentiElettroniciSpecifici:
+          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          type: boolean
+   AnacFormP6.5Type:
+      description: Contiene i dati per la scheda di Concessione di servizi e costruzione e gestione
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType' 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP6DatiBaseType'      
+      type: object
+      required: [appalto,lotti] 
+      additionalProperties: false
+      properties:
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP6BaseType'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoP6.5Type'    
+   SchedaP6.5Type:
+      description: Scheda di Concessione di servizi e costruzione e gestione.
+      type: object
+      required: [anacFormP6]
+      additionalProperties: false
+      properties:
+        anacFormP6:
+          $ref: '#/components/schemas/AnacFormP6.5Type' 
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          

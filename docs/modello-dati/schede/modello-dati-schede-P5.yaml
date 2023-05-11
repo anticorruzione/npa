@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P5 - Scheda di tracciabilità.
+  version: 1.0.0
+components:
+  schemas:
+   AppaltoP5Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della scheda di tracciabilità
+      type: object
+      required: [fattispecieContrattuale]
+      additionalProperties: false
+      properties:
+        fattispecieContrattuale:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/FattispecieContrattualeEnum' 
+        cigAccordoQuadro:
+          description: CIG relativo all’accordo quadro/convenzione cui si aderisce
+          type: string
+          example: ''          
+   LottoP5Type:
+      description: Oggetto che riporta i dati del lotto all'interno della scheda di tracciabilità
+      type: object
+      required: [lotIdentifier,importo,oggetto,sceltaContraente,oggettoPrincipaleContratto]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 9050626CD6
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltanteD
+          type: string  
+        motivoEsclusioneTracciabilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoEsclusioneTracciabilitaEnum'          
+        importo:
+          description: importo
+          type: string
+          format: decimal
+        oggetto: 
+          description: oggetto
+          type: string 
+        sceltaContraente:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SceltaContraenteEnum'
+        oggettoPrincipaleContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/OggettoPrincipaleContrattoEnum'  
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items: 
+            type: string
+   AnacFormP5Type:
+      description: Contiene i dati per la tracciabilità
+      type: object
+      required: [appalto,lotti] 
+      additionalProperties: false
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoP5Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoP5Type'       
+   SchedaP5Type:
+      description: Scheda di tracciabilità.
+      type: object
+      required: [anacFormP5]
+      additionalProperties: false
+      properties:
+        anacFormP5:
+          $ref: '#/components/schemas/AnacFormP5Type'          

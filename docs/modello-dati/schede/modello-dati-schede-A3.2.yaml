@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A3.2 - Scheda di aggiudicazione relativa ai Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneA3.2Type:
+      description: Oggetto che riporta i dati dell'aggiudicazione
+      type: object
+      additionalProperties: false
+    AnacFormA3.2Type:
+      description: Contiene tutti i dati di aggiudicazione relativa ai Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
+      type: object
+      additionalProperties: false
+      properties:  
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneA3.2Type'
+    SchedaA3.2Type:
+      description: Scheda di aggiudicazione relativa ai Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
+      type: object
+      required: [anacFormA3.2]
+      additionalProperties: false
+      properties:
+        anacFormA3:
+          $ref: '#/components/schemas/AnacFormA3.2Type'

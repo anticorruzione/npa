@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda S3 - Scheda relativa alle prestazioni progettuali
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormS3Type:
+      description: Dati relativi alla prestazione progettuale.
+      type: object
+      additionalProperties: false
+      properties:
+        prestazioneProgettuale:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PrestazioneProgettualeType'            
+    SchedaS3Type:
+      description: Scheda relativa alle prestazioni progettuali
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        anacFormS3:
+          $ref: '#/components/schemas/AnacFormS3Type'        

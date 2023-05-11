@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda NAG1 - Scheda di Mancata aggiudicazione procedura europea
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneNAG1Type:
+      description: Oggetto che riporta i dati dell'aggiudicazione
+      type: object
+      additionalProperties: false
+    AnacFormNAG1Type:
+      description: Contiene tutti i dati di Mancata aggiudicazione procedura europea
+      type: object
+      additionalProperties: false
+      properties:  
+        aggiudicazione:
+          $ref: '#/components/schemas/AggiudicazioneNAG1Type'
+    SchedaNAG1Type:
+      description: Scheda di Mancata aggiudicazione procedura europea
+      type: object
+      required: [anacFormNAG1]
+      additionalProperties: false
+      properties:
+        anacFormNAG:
+          $ref: '#/components/schemas/AnacFormNAG1Type'

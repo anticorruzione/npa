@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A2.33 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva generale, regime alleggerito. Articolo 75, paragrafo 2, della direttiva 2014/24/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormA2.33DatiBaseType:
+      description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso di aggiudicazione di un appalto — direttiva generale, regime alleggerito. Articolo 75, paragrafo 2, della direttiva 2014/24/UE.
+      allOf: # estende la classe AnacFormA2DatiBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormA2DatiBaseType'       
+      type: object
+      required: [datiBaseAggiudicazioneSubappalto]
+      additionalProperties: false
+      properties:
+        datiBaseSottomissioniRicevute:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSottomissioniRicevuteType'
+        datiBaseAggiudicazioneSubappalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType'
+    AnacFormA2.33Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva generale, regime alleggerito. Articolo 75, paragrafo 2, della direttiva 2014/24/UE.
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.33.yaml#/components/schemas/AnacFormA1.33Type'
+      - $ref: '#/components/schemas/AnacFormA2.33DatiBaseType'
+      type: object
+      #required: []
+      additionalProperties: false       
+    SchedaA2.33Type:
+      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva generale, regime alleggerito. Articolo 75, paragrafo 2, della direttiva 2014/24/UE.
+      type: object
+      required: [anacFormA2]
+      additionalProperties: false
+      properties:
+        anacFormA2:
+          $ref: '#/components/schemas/AnacFormA2.33Type'                  

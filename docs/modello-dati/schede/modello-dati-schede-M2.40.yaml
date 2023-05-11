@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda M2.40 - Scheda di modifica contrattuale.
+  version: 1.0.0
+components:
+  schemas:
+    ModificaContrattualeType:
+      description: Oggetto che riporta i dati della modifica contrattuale
+      type: object
+      additionalProperties: false
+    AnacFormM2.40Type:
+      description: Contiene tutti i dati di modifica contrattuale
+      type: object
+      additionalProperties: false
+      properties:  
+        esecuzione:
+          $ref: '#/components/schemas/ModificaContrattualeType'
+    SchedaM2.40Type:
+      description: Scheda di modifica contrattuale
+      type: object
+      required: [anacFormM2]
+      additionalProperties: false
+      properties:
+        anacFormM2:
+          $ref: '#/components/schemas/AnacFormM2.40Type'
