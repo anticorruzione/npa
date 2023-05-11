@@ -6,11 +6,16 @@ components:
   schemas:
     AnacFormA2.37DatiBaseType:
       description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso sui risultati di un concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, secondo comma, della direttiva 2014/25/UE.
-      allOf: # estende la classe AnacFormA2DatiBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormA2DatiBaseType'       
       type: object
       required: [datiBaseRisultatoProcedura]
-      additionalProperties: false   
+      additionalProperties: false 
+      properties:
+        datiBaseRisultatoProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseRisultatoProceduraType'
+        datiBaseAggiudicazioneAppalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'              
     AnacFormA2.37Type:
       description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, secondo comma, della direttiva 2014/25/UE.
       allOf: 
