@@ -1213,7 +1213,19 @@ components:
               format: uri
               maxLength: 2048
               type: string
-              example: 'https://tools.ietf.org/html/rfc7231#section-6.6.4'  
+              example: 'https://tools.ietf.org/html/rfc7231#section-6.6.4'
+          errori:
+            description: elenco degli errori
+            type: object
+            properties:
+              codice:
+                type: string
+                example: '001'
+              descrizione:
+                maxLength: 4096
+                pattern: ^.{0,1024}$
+                type: string
+                example: 'Non è stato indicato il campo Motivazione richiesta CIG.'
     ErrorResponse:
       allOf: # estende la classe BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
