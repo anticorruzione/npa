@@ -1,3 +1,4 @@
+openapi: 3.0.3
 info:
   title: Modello Dati FVOE e FVA - OpenAPI 3.0
   version: 1.0.0
@@ -6,23 +7,11 @@ info:
 components:
   schemas:
     StatoDocumentoEnum:
-      type: string
-      minimum: 1
-      enum: []
-      description: >
-         stato- Stato in cui si trova il documento
-    StatoRichiestaType:
-        type: string
-        minimum: 1
-        enum: []   
-        description: >
-          stato- Stato in cui si trova la Scheda
+      description: Stato in cui si trova il documento - fare riferimento ai valori contenuti nel file [statoDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoDocumento.json)
+    StatoRichiestaEnum:
+      description: Stato in cui si trova la richiesta di accesso al fvoe - fare riferimento ai valori contenuti nel file [statoRichiesta.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoRichiesta.json)
     TipoDocumentoEnum: 
-      type: string
-      minimum: 1
-      enum: [''] 
-      description: >
-        tipo oocumento- L' elenco dei tipi Documento
+      description: tipologie di documento - fare riferimento ai valori contenuti nel file [tipoDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoDocumento.json)
     FascicoloType: 
       description: Oggetto che riporta i dati del Fascicolo generico
       type: object
@@ -65,7 +54,7 @@ components:
       type: object
       additionalProperties: false
     RichiestaAccessoType:
-      description: Oggetto che riporta i dato della Richiesta di Accesso
+      description: Oggetto che riporta i dati della Richiesta di Accesso
       type: object
       additionalProperties: false
     AnagraficaType:
