@@ -1,0 +1,36 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Solo aggiudicazione",
+		"en": "Solo aggiudicazione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Aggiudicazione e stipula del contratto",
+		"en": "Aggiudicazione e stipula del contratto"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Aggiudicazione, stipula ed esecuzione del contratto",
+		"en": "Aggiudicazione, stipula ed esecuzione del contratto"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Proposta di aggiudicazione",
+		"en": "Proposta di aggiudicazione"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

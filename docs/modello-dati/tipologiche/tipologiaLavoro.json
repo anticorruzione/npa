@@ -1,0 +1,81 @@
+[{
+    "codice":"6",
+    "descrizione": {
+		"it": "Costruzione",
+		"en": "Costruzione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Demolizione",
+		"en": "Demolizione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Recupero",
+		"en": "Recupero"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Ristrutturazione",
+		"en": "Ristrutturazione"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"10",
+    "descrizione": {
+		"it": "Restauro",
+		"en": "Restauro"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Manutenzione",
+		"en": "Manutenzione"
+		},	
+    "datainizio":null,
+    "datafine":"2014-05-12T00:00:00Z"
+},
+{
+    "codice":"12",
+    "descrizione": {
+		"it": "Manutenzione ordinaria",
+		"en": "Manutenzione ordinaria"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"13",
+    "descrizione": {
+		"it": "Manutenzione straordinaria",
+		"en": "Manutenzione straordinaria"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"14",
+    "descrizione": {
+		"it": "Manutenzione ordinaria e straordinaria",
+		"en": "Manutenzione ordinaria e straordinaria"
+		},	
+    "datainizio":null,
+    "datafine":"2014-08-05T00:00:00Z"
+}]

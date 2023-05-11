@@ -1,0 +1,234 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Farmaci",
+		"en": "Farmaci"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Vaccini",
+		"en": "Vaccini"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Stent",
+		"en": "Stent"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Ausili per incontinenza (ospedalieri e territoriali)",
+		"en": "Ausili per incontinenza (ospedalieri e territoriali)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Protesi d'anca",
+		"en": "Protesi d'anca"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Medicazioni generali",
+		"en": "Medicazioni generali"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Defibrillatori",
+		"en": "Defibrillatori"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Pace-maker",
+		"en": "Pace-maker"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Aghi e siringhe",
+		"en": "Aghi e siringhe"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"10",
+    "descrizione": {
+		"it": "Servizi integrati per la gestione delle apparecchiature elettromedicali",
+		"en": "Servizi integrati per la gestione delle apparecchiature elettromedicali"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Servizi di pulizia per gli enti del Servizio Sanitario Nazionale",
+		"en": "Servizi di pulizia per gli enti del Servizio Sanitario Nazionale"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"12",
+    "descrizione": {
+		"it": "Servizi di ristorazione per gli enti del Servizio Sanitario Nazionale",
+		"en": "Servizi di ristorazione per gli enti del Servizio Sanitario Nazionale"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"13",
+    "descrizione": {
+		"it": "Servizi di lavanderia per gli enti del Servizio Sanitario Nazionale",
+		"en": "Servizi di lavanderia per gli enti del Servizio Sanitario Nazionale"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"14",
+    "descrizione": {
+		"it": "Servizi di smaltimento rifiuti sanitari",
+		"en": "Servizi di smaltimento rifiuti sanitari"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"15",
+    "descrizione": {
+		"it": "Vigilanza armata",
+		"en": "Vigilanza armata"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"16",
+    "descrizione": {
+		"it": "Facility management immobili",
+		"en": "Facility management immobili"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"17",
+    "descrizione": {
+		"it": "Pulizia immobili",
+		"en": "Pulizia immobili"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"18",
+    "descrizione": {
+		"it": "Guardiania",
+		"en": "Guardiania"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"19",
+    "descrizione": {
+		"it": "Manutenzione immobili e impianti",
+		"en": "Manutenzione immobili e impianti"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"20",
+    "descrizione": {
+		"it": "Guanti (chirurgici e non)",
+		"en": "Guanti (chirurgici e non)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"21",
+    "descrizione": {
+		"it": "Suture",
+		"en": "Suture"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"22",
+    "descrizione": {
+		"it": "Ossigenoterapia",
+		"en": "Ossigenoterapia"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"23",
+    "descrizione": {
+		"it": "Diabetologia territoriale",
+		"en": "Diabetologia territoriale"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"24",
+    "descrizione": {
+		"it": "Servizio di trasporto scolastico",
+		"en": "Servizio di trasporto scolastico"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"25",
+    "descrizione": {
+		"it": "Manutenzione strade (servizi e forniture)",
+		"en": "Manutenzione strade (servizi e forniture)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"999",
+    "descrizione": {
+		"it": "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015",
+		"en": "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015"
+		},
+    "datainizio":null,
+    "datafine":null
+}]

@@ -1,0 +1,27 @@
+[{
+    "codice":"res-ws",
+    "descrizione": {
+		"it": "Partecipazione riservata a laboratori protetti e ad operatori economici aventi per scopo l'integrazione sociale e professionale delle persone con disabilità o svantaggiate.",
+		"en": "Participation is reserved to sheltered workshops and economic operators aiming at the social and professional integration of disabled or disadvantaged persons."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"res-pub-ser",
+    "descrizione": {
+		"it": "Partecipazione riservata a organizzazioni aventi per scopo una missione di servizio pubblico e che soddisfano altre condizioni di legge pertinenti.",
+		"en": "Participation is reserved to organisations pursuing a public service mission and fulfilling other relevant conditions in the legislation."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"none",
+    "descrizione": {
+		"it": "Nulla",
+		"en": "None"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

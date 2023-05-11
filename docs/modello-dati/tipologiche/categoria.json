@@ -1,0 +1,891 @@
+[{
+    "codice":"999",
+    "descrizione": {
+		"it": "OO.CC. - Categoria non definita",
+		"en": "OO.CC. - Categoria non definita"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AA",
+    "descrizione": {
+		"it": "ALTRO (Stazioni appaltanti con sistema di qualificazione proprio)",
+		"en": "ALTRO (Stazioni appaltanti con sistema di qualificazione proprio)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"FB",
+    "descrizione": {
+		"it": "FORNITURA DI BENI",
+		"en": "FORNITURA DI BENI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"FS",
+    "descrizione": {
+		"it": "FORNITURA DI SERVIZI",
+		"en": "FORNITURA DI SERVIZI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 1",
+    "descrizione": {
+		"it": "OG 1 - EDIFICI CIVILI E INDUSTRIALI ",
+		"en": "OG 1 - EDIFICI CIVILI E INDUSTRIALI "
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 10",
+    "descrizione": {
+		"it": "OG 10 - IMPIANTI PER LA TRASFORMAZIONE ALTA/MEDIA TENSIONE E PER LA DISTRIBUZIONE DI ENERGIA ELETTRICA IN CORRENTE ALTERNATA E CONTINUA ED IMPIANTI DI PUBBLICA ILLUMINAZIONE",
+		"en": "OG 10 - IMPIANTI PER LA TRASFORMAZIONE ALTA/MEDIA TENSIONE E PER LA DISTRIBUZIONE DI ENERGIA ELETTRICA IN CORRENTE ALTERNATA E CONTINUA ED IMPIANTI DI PUBBLICA ILLUMINAZIONE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 11",
+    "descrizione": {
+		"it": "OG 11 - IMPIANTI TECNOLOGICI",
+		"en": "OG 11 - IMPIANTI TECNOLOGICI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 12",
+    "descrizione": {
+		"it": "OG 12 - OPERE ED IMPIANTI DI BONIFICA E PROTEZIONE AMBIENTALE",
+		"en": "OG 12 - OPERE ED IMPIANTI DI BONIFICA E PROTEZIONE AMBIENTALE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 13",
+    "descrizione": {
+		"it": "OG 13 - OPERE DI INGEGNERIA NATURALISTICA",
+		"en": "OG 13 - OPERE DI INGEGNERIA NATURALISTICA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 2",
+    "descrizione": {
+		"it": "OG 2 - RESTAURO E MANUTENZIONE DEI BENI IMMOBILI SOTTOPOSTI A TUTELA",
+		"en": "OG 2 - RESTAURO E MANUTENZIONE DEI BENI IMMOBILI SOTTOPOSTI A TUTELA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 3",
+    "descrizione": {
+		"it": "OG 3 - STRADE, AUTOSTRADE, PONTI, VIADOTTI, FERROVIE, METROPOLITANE",
+		"en": "OG 3 - STRADE, AUTOSTRADE, PONTI, VIADOTTI, FERROVIE, METROPOLITANE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 4",
+    "descrizione": {
+		"it": "OG 4 - OPERE D’ARTE NEL SOTTOSUOLO",
+		"en": "OG 4 - OPERE D’ARTE NEL SOTTOSUOLO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 5",
+    "descrizione": {
+		"it": "OG 5 - DIGHE",
+		"en": "OG 5 - DIGHE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 6",
+    "descrizione": {
+		"it": "OG 6 - ACQUEDOTTI, GASDOTTI , OLEODOTTI, OPERE DI IRRIGAZIONE E DI EVACUAZIONE",
+		"en": "OG 6 - ACQUEDOTTI, GASDOTTI , OLEODOTTI, OPERE DI IRRIGAZIONE E DI EVACUAZIONE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 7",
+    "descrizione": {
+		"it": "OG 7 - OPERE MARITTIME E LAVORI DI DRAGAGGIO",
+		"en": "OG 7 - OPERE MARITTIME E LAVORI DI DRAGAGGIO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 8",
+    "descrizione": {
+		"it": "OG 8 - OPERE FLUVIALI, DI DIFESA, DI SISTEMAZIONE IDRAULICA E DI BONIFICA",
+		"en": "OG 8 - OPERE FLUVIALI, DI DIFESA, DI SISTEMAZIONE IDRAULICA E DI BONIFICA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG 9",
+    "descrizione": {
+		"it": "OG 9 - IMPIANTI PER LA PRODUZIONE DI ENERGIA ELETTRICA",
+		"en": "OG 9 - IMPIANTI PER LA PRODUZIONE DI ENERGIA ELETTRICA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OG1",
+    "descrizione": {
+		"it": "OG1 - Edifici civili e industriali",
+		"en": "OG1 - Edifici civili e industriali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG10",
+    "descrizione": {
+		"it": "OG10 - Impianti per la trasformazione alta/media tensione e per la distribuzione di energia elettrica in corrente alternata e continua",
+		"en": "OG10 - Impianti per la trasformazione alta/media tensione e per la distribuzione di energia elettrica in corrente alternata e continua"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG11",
+    "descrizione": {
+		"it": "OG11 - Impianti tecnologici",
+		"en": "OG11 - Impianti tecnologici"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG12",
+    "descrizione": {
+		"it": "OG12 - Opere ed impianti di bonifica e protezione ambientale",
+		"en": "OG12 - Opere ed impianti di bonifica e protezione ambientale"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG13",
+    "descrizione": {
+		"it": "OG13 - Opere di ingegneria naturalistica",
+		"en": "OG13 - Opere di ingegneria naturalistica"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG2",
+    "descrizione": {
+		"it": "OG2 - Restauro e manutenzione dei beni immobili sottoposti a tutela ai sensi delle disposizioni in materia di beni culturali e ambientali",
+		"en": "OG2 - Restauro e manutenzione dei beni immobili sottoposti a tutela ai sensi delle disposizioni in materia di beni culturali e ambientali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG3",
+    "descrizione": {
+		"it": "OG3 - Strade, autostrade, ponti, viadotti, ferrovie, metropolitane, funicolari, piste aeroportuali e relative opere complementari",
+		"en": "OG3 - Strade, autostrade, ponti, viadotti, ferrovie, metropolitane, funicolari, piste aeroportuali e relative opere complementari"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG4",
+    "descrizione": {
+		"it": "OG4 - Opere d'arte nel sottosuolo",
+		"en": "OG4 - Opere d'arte nel sottosuolo"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG5",
+    "descrizione": {
+		"it": "OG5 - Dighe",
+		"en": "OG5 - Dighe"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG6",
+    "descrizione": {
+		"it": "OG6 - Acquedotti, gasdotti, oleodotti, opere di irrigazione e di evacuazione",
+		"en": "OG6 - Acquedotti, gasdotti, oleodotti, opere di irrigazione e di evacuazione"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG7",
+    "descrizione": {
+		"it": "OG7 - Opere marittime e lavori di dragaggio",
+		"en": "OG7 - Opere marittime e lavori di dragaggio"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG8",
+    "descrizione": {
+		"it": "OG8 - Opere fluviali, di difesa, di sistemazione idraulica e di bonifica",
+		"en": "OG8 - Opere fluviali, di difesa, di sistemazione idraulica e di bonifica"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OG9",
+    "descrizione": {
+		"it": "OG9 - Impianti per la produzione di energia elettrica",
+		"en": "OG9 - Impianti per la produzione di energia elettrica"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS 1",
+    "descrizione": {
+		"it": "OS 1 - LAVORI IN TERRA ",
+		"en": "OS 1 - LAVORI IN TERRA "
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 10",
+    "descrizione": {
+		"it": "OS 10 - SEGNALETICA STRADALE NON LUMINOSA",
+		"en": "OS 10 - SEGNALETICA STRADALE NON LUMINOSA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 11",
+    "descrizione": {
+		"it": "OS 11 - APPARECCHIATURE STRUTTURALI SPECIALI",
+		"en": "OS 11 - APPARECCHIATURE STRUTTURALI SPECIALI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 12-A",
+    "descrizione": {
+		"it": "OS 12-A - BARRIERE STRADALI DI SICUREZZA",
+		"en": "OS 12-A - BARRIERE STRADALI DI SICUREZZA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 12-B",
+    "descrizione": {
+		"it": "OS 12-B - BARRIERE PARAMASSI, FERMANEVE E SIMILI",
+		"en": "OS 12-B - BARRIERE PARAMASSI, FERMANEVE E SIMILI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 13",
+    "descrizione": {
+		"it": "OS 13 - STRUTTURE PREFABBRICATE IN CEMENTO ARMATO",
+		"en": "OS 13 - STRUTTURE PREFABBRICATE IN CEMENTO ARMATO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 14",
+    "descrizione": {
+		"it": "OS 14 - IMPIANTI DI SMALTIMENTO E RECUPERO RIFIUTI",
+		"en": "OS 14 - IMPIANTI DI SMALTIMENTO E RECUPERO RIFIUTI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 15",
+    "descrizione": {
+		"it": "OS 15 - PULIZIA DI ACQUE MARINE, LACUSTRI, FLUVIALI",
+		"en": "OS 15 - PULIZIA DI ACQUE MARINE, LACUSTRI, FLUVIALI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 16",
+    "descrizione": {
+		"it": "OS 16 - IMPIANTI PER CENTRALI PRODUZIONE ENERGIA ELETTRICA",
+		"en": "OS 16 - IMPIANTI PER CENTRALI PRODUZIONE ENERGIA ELETTRICA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 17",
+    "descrizione": {
+		"it": "OS 17 - LINEE TELEFONICHE ED IMPIANTI DI TELEFONIA",
+		"en": "OS 17 - LINEE TELEFONICHE ED IMPIANTI DI TELEFONIA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 18-A",
+    "descrizione": {
+		"it": "OS 18-A - COMPONENTI STRUTTURALI IN ACCIAIO",
+		"en": "OS 18-A - COMPONENTI STRUTTURALI IN ACCIAIO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 18-B",
+    "descrizione": {
+		"it": "OS 18-B - COMPONENTI PER FACCIATE CONTINUE",
+		"en": "OS 18-B - COMPONENTI PER FACCIATE CONTINUE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 19",
+    "descrizione": {
+		"it": "OS 19 - IMPIANTI DI RETI DI TELECOMUNICAZIONE E DI TRASMISSIONI E TRATTAMENTO",
+		"en": "OS 19 - IMPIANTI DI RETI DI TELECOMUNICAZIONE E DI TRASMISSIONI E TRATTAMENTO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 20-A",
+    "descrizione": {
+		"it": "OS 20-A - RILEVAMENTI TOPOGRAFICI",
+		"en": "OS 20-A - RILEVAMENTI TOPOGRAFICI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 20-B",
+    "descrizione": {
+		"it": "OS 20-B - INDAGINI GEOGNOSTICHE",
+		"en": "OS 20-B - INDAGINI GEOGNOSTICHE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 21",
+    "descrizione": {
+		"it": "OS 21 - OPERE STRUTTURALI SPECIALI",
+		"en": "OS 21 - OPERE STRUTTURALI SPECIALI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 22",
+    "descrizione": {
+		"it": "OS 22 - IMPIANTI DI POTABILIZZAZIONE E DEPURAZIONE",
+		"en": "OS 22 - IMPIANTI DI POTABILIZZAZIONE E DEPURAZIONE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 23",
+    "descrizione": {
+		"it": "OS 23 - DEMOLIZIONE DI OPERE",
+		"en": "OS 23 - DEMOLIZIONE DI OPERE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 24",
+    "descrizione": {
+		"it": "OS 24 - VERDE E ARREDO URBANO",
+		"en": "OS 24 - VERDE E ARREDO URBANO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 25",
+    "descrizione": {
+		"it": "OS 25 - SCAVI ARCHEOLOGICI",
+		"en": "OS 25 - SCAVI ARCHEOLOGICI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 26",
+    "descrizione": {
+		"it": "OS 26 - PAVIMENTAZIONI E SOVRASTRUTTURE SPECIALI",
+		"en": "OS 26 - PAVIMENTAZIONI E SOVRASTRUTTURE SPECIALI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 27",
+    "descrizione": {
+		"it": "OS 27 - IMPIANTI PER LA TRAZIONE ELETTRICA",
+		"en": "OS 27 - IMPIANTI PER LA TRAZIONE ELETTRICA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 28",
+    "descrizione": {
+		"it": "OS 28 - IMPIANTI TERMICI E DI CONDIZIONAMENTO",
+		"en": "OS 28 - IMPIANTI TERMICI E DI CONDIZIONAMENTO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 29",
+    "descrizione": {
+		"it": "OS 29 - ARMAMENTO FERROVIARIO",
+		"en": "OS 29 - ARMAMENTO FERROVIARIO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 2-A",
+    "descrizione": {
+		"it": "OS 2-A - SUPERFICI DECORATE DI BENI IMMOBILI DEL PATRIMONIO CULTURALE E BENI CULTURALI MOBILI DI INTERESSE STORICO, ARTISTICO, ARCHEOLOGICO ED ETNOANTROPOLOGICO",
+		"en": "OS 2-A - SUPERFICI DECORATE DI BENI IMMOBILI DEL PATRIMONIO CULTURALE E BENI CULTURALI MOBILI DI INTERESSE STORICO, ARTISTICO, ARCHEOLOGICO ED ETNOANTROPOLOGICO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 2-B",
+    "descrizione": {
+		"it": "OS 2-B - BENI CULTURALI MOBILI DI INTERESSE ARCHIVISTICO E LIBRARIO",
+		"en": "OS 2-B - BENI CULTURALI MOBILI DI INTERESSE ARCHIVISTICO E LIBRARIO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 3",
+    "descrizione": {
+		"it": "OS 3 - IMPIANTI IDRICO-SANITARIO, CUCINE, LAVANDERIE",
+		"en": "OS 3 - IMPIANTI IDRICO-SANITARIO, CUCINE, LAVANDERIE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 30",
+    "descrizione": {
+		"it": "OS 30 - IMPIANTI INTERNI ELETTRICI, TELEFONICI, RADIOTELEFONICI E TELEVISIVI",
+		"en": "OS 30 - IMPIANTI INTERNI ELETTRICI, TELEFONICI, RADIOTELEFONICI E TELEVISIVI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 31",
+    "descrizione": {
+		"it": "OS 31 - IMPIANTI PER LA MOBILITÀ SOSPESA",
+		"en": "OS 31 - IMPIANTI PER LA MOBILITÀ SOSPESA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 32",
+    "descrizione": {
+		"it": "OS 32 - STRUTTURE IN LEGNO",
+		"en": "OS 32 - STRUTTURE IN LEGNO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 33",
+    "descrizione": {
+		"it": "OS 33 - COPERTURE SPECIALI",
+		"en": "OS 33 - COPERTURE SPECIALI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 34",
+    "descrizione": {
+		"it": "OS 34 - SISTEMI ANTIRUMORE PER INFRASTRUTTURE DI MOBILITÀ",
+		"en": "OS 34 - SISTEMI ANTIRUMORE PER INFRASTRUTTURE DI MOBILITÀ"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 35",
+    "descrizione": {
+		"it": "OS 35 - INTERVENTI A BASSO IMPATTO AMBIENTALE",
+		"en": "OS 35 - INTERVENTI A BASSO IMPATTO AMBIENTALE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 4",
+    "descrizione": {
+		"it": "OS 4 - IMPIANTI ELETTROMECCANICI TRASPORTATORI",
+		"en": "OS 4 - IMPIANTI ELETTROMECCANICI TRASPORTATORI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 5",
+    "descrizione": {
+		"it": "OS 5 - IMPIANTI PNEUMATICI E ANTINTRUSIONE",
+		"en": "OS 5 - IMPIANTI PNEUMATICI E ANTINTRUSIONE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 6",
+    "descrizione": {
+		"it": "OS 6 - FINITURE DI OPERE GENERALI IN MATERIALI LIGNEI, PLASTICI, METALLICI E VETROSI",
+		"en": "OS 6 - FINITURE DI OPERE GENERALI IN MATERIALI LIGNEI, PLASTICI, METALLICI E VETROSI"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 7",
+    "descrizione": {
+		"it": "OS 7 - FINITURE DI OPERE GENERALI DI NATURA EDILE E TECNICA",
+		"en": "OS 7 - FINITURE DI OPERE GENERALI DI NATURA EDILE E TECNICA"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 8",
+    "descrizione": {
+		"it": "OS 8 - OPERE DI IMPERMEABILIZZAZIONE",
+		"en": "OS 8 - OPERE DI IMPERMEABILIZZAZIONE"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS 9",
+    "descrizione": {
+		"it": "OS 9 - IMPIANTI PER LA SEGNALETICA LUMINOSA E LA SICUREZZA DEL TRAFFICO",
+		"en": "OS 9 - IMPIANTI PER LA SEGNALETICA LUMINOSA E LA SICUREZZA DEL TRAFFICO"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"OS1",
+    "descrizione": {
+		"it": "OS1 - Lavori in terra",
+		"en": "OS1 - Lavori in terra"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS10",
+    "descrizione": {
+		"it": "OS10 - Segnaletica stradale non luminosa",
+		"en": "OS10 - Segnaletica stradale non luminosa"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS11",
+    "descrizione": {
+		"it": "OS11 - Apparecchiature strutturali speciali",
+		"en": "OS11 - Apparecchiature strutturali speciali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS12",
+    "descrizione": {
+		"it": "OS12 - Barriere e protezioni stradali",
+		"en": "OS12 - Barriere e protezioni stradali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS13",
+    "descrizione": {
+		"it": "OS13 - Strutture prefabbricate in cemento armato",
+		"en": "OS13 - Strutture prefabbricate in cemento armato"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS14",
+    "descrizione": {
+		"it": "OS14 - Impianti di smaltimento e recupero rifiuti",
+		"en": "OS14 - Impianti di smaltimento e recupero rifiuti"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS15",
+    "descrizione": {
+		"it": "OS15 - Pulizia di acque marine, lacustri, fluviali",
+		"en": "OS15 - Pulizia di acque marine, lacustri, fluviali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS16",
+    "descrizione": {
+		"it": "OS16 - Impianti per centrali produzione energia elettrica",
+		"en": "OS16 - Impianti per centrali produzione energia elettrica"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS17",
+    "descrizione": {
+		"it": "OS17 - Linee telefoniche ed impianti di telefonia",
+		"en": "OS17 - Linee telefoniche ed impianti di telefonia"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS18",
+    "descrizione": {
+		"it": "OS18 - Componenti strutturali in acciaio o metallo",
+		"en": "OS18 - Componenti strutturali in acciaio o metallo"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS19",
+    "descrizione": {
+		"it": "OS19 - Impianti di reti di telecomunicazione e di trasmissione dati",
+		"en": "OS19 - Impianti di reti di telecomunicazione e di trasmissione dati"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS2",
+    "descrizione": {
+		"it": "OS2 - Superfici decorate e beni mobili di interesse storico e artistico",
+		"en": "OS2 - Superfici decorate e beni mobili di interesse storico e artistico"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS20",
+    "descrizione": {
+		"it": "OS20 - Rilevamenti topografici",
+		"en": "OS20 - Rilevamenti topografici"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS21",
+    "descrizione": {
+		"it": "OS21 - Opere strutturali speciali",
+		"en": "OS21 - Opere strutturali speciali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS22",
+    "descrizione": {
+		"it": "OS22 - Impianti di potabilizzazione e depurazione",
+		"en": "OS22 - Impianti di potabilizzazione e depurazione"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS23",
+    "descrizione": {
+		"it": "OS23 - Demolizione di opere",
+		"en": "OS23 - Demolizione di opere"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS24",
+    "descrizione": {
+		"it": "OS24 - Verde e arredo urbano",
+		"en": "OS24 - Verde e arredo urbano"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS 29",
+    "descrizione": {
+		"it": "OS 29 - ARMAMENTO FERROVIARIO",
+		"en": "OS 29 - ARMAMENTO FERROVIARIO"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS25",
+    "descrizione": {
+		"it": "OS25 - Scavi archeologici",
+		"en": "OS25 - Scavi archeologici"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS26",
+    "descrizione": {
+		"it": "OS26 - Pavimentazioni e sovrastrutture speciali",
+		"en": "OS26 - Pavimentazioni e sovrastrutture speciali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS27",
+    "descrizione": {
+		"it": "OS27 - Impianti per la trazione elettrica",
+		"en": "OS27 - Impianti per la trazione elettrica"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS28",
+    "descrizione": {
+		"it": "OS28 - Impianti termici e di condizionamento",
+		"en": "OS28 - Impianti termici e di condizionamento"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS29",
+    "descrizione": {
+		"it": "OS29 - Armamento ferroviario",
+		"en": "OS29 - Armamento ferroviario"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS3",
+    "descrizione": {
+		"it": "OS3 - Impianti idrico - sanitario, cucine, lavanderie",
+		"en": "OS3 - Impianti idrico - sanitario, cucine, lavanderie"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS30",
+    "descrizione": {
+		"it": "OS30 - Impianti interni elettrici, telefonici, radiotelefonici e televisivi",
+		"en": "OS30 - Impianti interni elettrici, telefonici, radiotelefonici e televisivi"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS31",
+    "descrizione": {
+		"it": "OS31 - Impianti per la mobilita' sospesa",
+		"en": "OS31 - Impianti per la mobilita' sospesa"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS32",
+    "descrizione": {
+		"it": "OS32 - Strutture in legno",
+		"en": "OS32 - Strutture in legno"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS33",
+    "descrizione": {
+		"it": "OS33 - Coperture speciali",
+		"en": "OS33 - Coperture speciali"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS34",
+    "descrizione": {
+		"it": "OS34 - Sistemi antirumore per infrastrutture di mobilita'",
+		"en": "OS34 - Sistemi antirumore per infrastrutture di mobilita'"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+},
+{
+    "codice":"OS4",
+    "descrizione": {
+		"it": "OS4 - Impianti elettromeccanici trasportatori",
+		"en": "OS4 - Impianti elettromeccanici trasportatori"
+		},
+    "datainizio":null,
+    "datafine":"2012-12-04T00:00:00Z"
+}]

@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Sola esecuzione",
+		"en": "Sola esecuzione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Progettazione ed esecuzione",
+		"en": "Progettazione ed esecuzione "
+		},
+    "datainizio":null,
+    "datafine":null
+}]

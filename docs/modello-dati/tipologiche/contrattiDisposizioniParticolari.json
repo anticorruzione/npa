@@ -1,0 +1,126 @@
+[{
+    "codice":"37",
+    "descrizione": {
+		"it": "Servizi sociali e assimilati",
+		"en": "Servizi sociali e assimilati"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"38",
+    "descrizione": {
+		"it": "Concorsi di progettazione nei settori speciali",
+		"en": "Concorsi di progettazione nei settori speciali"
+		},
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"39",
+    "descrizione": {
+		"it": "Appalti riservati per determinati servizi sanitari, sociali e culturali di cui all’allegato XIV della direttiva 24/2014/UE",
+		"en": "Appalti riservati per determinati servizi sanitari, sociali e culturali di cui all’allegato XIV della direttiva 24/2014/UE"
+		},	
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"40",
+    "descrizione": {
+		"it": "Servizi di ristorazione",
+		"en": "Servizi di ristorazione"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"41",
+    "descrizione": {
+		"it": "Contratti nel settore dei beni culturali",
+		"en": "Contratti nel settore dei beni culturali"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"42",
+    "descrizione": {
+		"it": "Concorsi di progettazione e di idee",
+		"en": "Concorsi di progettazione e di idee"
+		},	
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"43",
+    "descrizione": {
+		"it": "Servizi di ricerca e sviluppo",
+		"en": "Servizi di ricerca e sviluppo"
+		},		
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"44",
+    "descrizione": {
+		"it": "Appalti nei settori della Difesa e della Sicurezza",
+		"en": "Appalti nei settori della Difesa e della Sicurezza"
+		},			    
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"45",
+    "descrizione": {
+		"it": "Contratti misti concernenti aspetti di difesa e sicurezza",
+		"en": "Contratti misti concernenti aspetti di difesa e sicurezza"
+		},	
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"46",
+    "descrizione": {
+		"it": "Contratti secretati",
+		"en": "Contratti secretati"
+		},	
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"48",
+    "descrizione": {
+		"it": "Contratti nel settore dell’acqua, dell’energia e dei trasporti",
+		"en": "Contratti nel settore dell’acqua, dell’energia e dei trasporti"
+		},	
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"49",
+    "descrizione": {
+		"it": "Contratti nei settori dei servizi postali ",
+		"en": "Contratti nei settori dei servizi postali "
+		},	
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"50",
+    "descrizione": {
+		"it": "Servizi di mensa",
+		"en": "Servizi di mensa"
+		},	
+    "datainizio":"2023-12-31T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"51",
+    "descrizione": {
+		"it": "Non applicabile",
+		"en": "Non applicabile"
+		},
+    "datainizio":"2023-12-31T00:00:00Z",
+    "datafine":null
+}]

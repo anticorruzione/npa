@@ -1,0 +1,27 @@
+[{
+    "codice":"inc",
+    "descrizione": {
+		"it": "Sono compresi criteri di accessibilità per le persone con disabilità",
+		"en": "Accessibility criteria for persons with disabilities are included"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"n-inc",
+    "descrizione": {
+		"it": "Non sono compresi criteri di accessibilità per le persone con disabilità perché l'oggetto dell'appalto non è destinato all'uso da parte di persone fisiche",
+		"en": "Accessibility criteria for persons with disabilities are not included because the procurement is not intended for use by natural persons"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"n-inc-just",
+    "descrizione": {
+		"it": "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente",
+		"en": "Accessibility criteria for persons with disabilities are not included with the following justification"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

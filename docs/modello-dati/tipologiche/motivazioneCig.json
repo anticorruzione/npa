@@ -1,0 +1,63 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Stazione appaltante non soggetta agli obblighi di cui al dPCM 24 dicembre 2015",
+		"en": "Stazione appaltante non soggetta agli obblighi di cui al dPCM 24 dicembre 2015"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Acquisto espletato mediante adesione a contratto di soggetto aggregatore iscritto nell'elenco di cui alla delibera dell'Autorita'Nazionale Anticorruzione n. 784 del 20 luglio 2016",
+		"en": "Acquisto espletato mediante adesione a contratto di soggetto aggregatore iscritto nell'elenco di cui alla delibera dell'Autorita'Nazionale Anticorruzione n. 784 del 20 luglio 2016"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Soggetto aggregatore iscritto nell'elenco di cui alla delibera dell'Autorita' Nazionale Anticorruzione n. 784 del 20 luglio 2016",
+		"en": "Soggetto aggregatore iscritto nell'elenco di cui alla delibera dell'Autorita' Nazionale Anticorruzione n. 784 del 20 luglio 2016"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Soglie massime annuali di cui all'art. 1 del dPCM 24 dicembre 2015 non raggiunte per la categoria merceologica d'interesse",
+		"en": "Soglie massime annuali di cui all'art. 1 del dPCM 24 dicembre 2015 non raggiunte per la categoria merceologica d'interesse"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Contratto non attivo presso il soggetto aggregatore (di cui all'art. 9, commi 1 e 2 del DL 66/2014) di riferimento o Consip e mancanza di accordi di collaborazione tra questi al momento della richiesta del rilascio del CIG",
+		"en": "Contratto non attivo presso il soggetto aggregatore (di cui all'art. 9, commi 1 e 2 del DL 66/2014) di riferimento o Consip e mancanza di accordi di collaborazione tra questi al momento della richiesta del rilascio del CIG"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Il fornitore non ha accettato ordinativi di importi minimi previsti dai contratti attivi",
+		"en": "Il fornitore non ha accettato ordinativi di importi minimi previsti dai contratti attivi"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Procedura avviata prima dell'entrata in vigore del DPCM 24 dicembre 2015",
+		"en": "Procedura avviata prima dell'entrata in vigore del DPCM 24 dicembre 2015"
+		},
+    "datainizio":null,
+    "datafine":null
+}]

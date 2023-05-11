@@ -1,0 +1,72 @@
+[{
+    "codice":"01",
+    "descrizione": {
+		"it": "Contratti e concorsi di progettazione aggiudicati in base a norme internazionali",
+		"en": "Contratti e concorsi di progettazione aggiudicati in base a norme internazionali"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"02",
+    "descrizione": {
+		"it": "appalti e concessioni  aggiudicati a un'impresa collegata",
+		"en": "appalti e concessioni  aggiudicati a un'impresa collegata"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"03",
+    "descrizione": {
+		"it": "appalti nei settori speciali e concessioni aggiudicati ad una joint-venture o ad un ente aggiudicatore facente parte di una joint venture",
+		"en": "appalti nei settori speciali e concessioni aggiudicati ad una joint-venture o ad un ente aggiudicatore facente parte di una joint venture"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"04",
+    "descrizione": {
+		"it": "appalti aventi ad oggetto l'acquisto di prodotti agricoli e alimentari fino a 20.000 euro annui da imprese agricole situate nei comuni individuati dal codice",
+		"en": "appalti aventi ad oggetto l'acquisto di prodotti agricoli e alimentari fino a 20.000 euro annui da imprese agricole situate nei comuni individuati dal codice"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"05",
+    "descrizione": {
+		"it": "appalti e concorsi di progettazione aggiudicati o organizzati per fini diversi dal perseguimento di un''attivita'' interessata o per l''esercizio di un''attivita'' in un paese terzo",
+		"en": "appalti e concorsi di progettazione aggiudicati o organizzati per fini diversi dal perseguimento di un''attivita'' interessata o per l''esercizio di un''attivita'' in un paese terzo"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"06",
+    "descrizione": {
+		"it": "contratti di acquisto e locazione di immobili",
+		"en": "contratti di acquisto e locazione di immobili"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"07",
+    "descrizione": {
+		"it": "Non rientrano nel campo di applicazione del presente codice gli istituti disciplinati dal Titolo VII del codice del Terzo settore, di cui al decreto legislativo n. 117 del 2017.",
+		"en": "Non rientrano nel campo di applicazione del presente codice gli istituti disciplinati dal Titolo VII del codice del Terzo settore, di cui al decreto legislativo n. 117 del 2017."
+		},		
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"08",
+    "descrizione": {
+		"it": "Contratti secretat",
+		"en": "Contratti secretat"
+		},			    
+    "datainizio":null,
+    "datafine":null
+}]

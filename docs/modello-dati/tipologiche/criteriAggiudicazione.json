@@ -1,0 +1,27 @@
+[{
+    "codice":"quality",
+    "descrizione": {
+		"it": "Qualità",
+		"en": "Quality"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"cost",
+    "descrizione": {
+		"it": "Costo",
+		"en": "Cost"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"price",
+    "descrizione": {
+		"it": "Prezzo",
+		"en": "Price"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

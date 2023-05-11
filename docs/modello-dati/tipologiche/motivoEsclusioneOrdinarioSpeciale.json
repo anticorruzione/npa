@@ -1,0 +1,333 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Art. 19 D.Lgs. 163/2006",
+		"en": "Art. 19 D.Lgs. 163/2006"
+		},
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Art. 20 D.Lgs. 163/2006",
+		"en": "Art. 20 D.Lgs. 163/2006"
+		},
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Art. 21 D.Lgs. 163/2006",
+		"en": "Art. 21 D.Lgs. 163/2006"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Art. 22 D.Lgs. 163/2006",
+		"en": "Art. 22 D.Lgs. 163/2006"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Art. 23 D.Lgs. 163/2006",
+		"en": "Art. 23 D.Lgs. 163/2006"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Art. 24 D.Lgs. 163/2006",
+		"en": "Art. 24 D.Lgs. 163/2006"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Art. 25 D.Lgs. 163/2006",
+		"en": "Art. 25 D.Lgs. 163/2006"
+		},		
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Art. 16 D.Lgs. 163/2006",
+		"en": "Art. 16 D.Lgs. 163/2006"
+		},			    
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Art. 17 D.Lgs. 163/2006",
+		"en": "Art. 17 D.Lgs. 163/2006"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"10",
+    "descrizione": {
+		"it": "Art. 18 D.Lgs. 163/2006",
+		"en": "Art. 18 D.Lgs. 163/2006"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Art. 26 D.Lgs. 163/2006",
+		"en": "Art. 26 D.Lgs. 163/2006"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"12",
+    "descrizione": {
+		"it": "Esclusione per OO.CC.",
+		"en": "Esclusione per OO.CC."
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"13",
+    "descrizione": {
+		"it": "Contratti nel settore dell’acqua, dell’energia e dei trasporti",
+		"en": "Contratti nel settore dell’acqua, dell’energia e dei trasporti"
+		},	
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"14",
+    "descrizione": {
+		"it": "Contratti nei settori dei servizi postali",
+		"en": "Contratti nei settori dei servizi postali"
+		},
+    "datainizio":null,
+    "datafine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"15",
+    "descrizione": {
+		"it": "Contratti nei settori delle comunicazioni elettroniche",
+		"en": "Contratti nei settori delle comunicazioni elettroniche"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"16",
+    "descrizione": {
+		"it": "Contratti e concorsi di progettazione aggiudicati in base a norme internazionali",
+		"en": "Contratti e concorsi di progettazione aggiudicati in base a norme internazionali"
+		},
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"17",
+    "descrizione": {
+		"it": "Contratti nei settori media audiovisi o radiofonici",
+		"en": "Contratti nei settori media audiovisi o radiofonici"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"18",
+    "descrizione": {
+		"it": "Servizi legali",
+		"en": "Servizi legali"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"19",
+    "descrizione": {
+		"it": "Acquisto titoli e strumenti finanziari",
+		"en": "Acquisto titoli e strumenti finanziari"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"20",
+    "descrizione": {
+		"it": "Prestiti",
+		"en": "Prestiti"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"21",
+    "descrizione": {
+		"it": "Servizi di difesa e protezione civile forniti da organizzazioni e associazioni senza scopo di lucro",
+		"en": "Servizi di difesa e protezione civile forniti da organizzazioni e associazioni senza scopo di lucro"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"22",
+    "descrizione": {
+		"it": "Servizi di trasporto pubblico di passeggeri per ferrovia o metropolitana ",
+		"en": "Servizi di trasporto pubblico di passeggeri per ferrovia o metropolitana "
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"23",
+    "descrizione": {
+		"it": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale",
+		"en": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"24",
+    "descrizione": {
+		"it": "Contratti di sponsorizzazione tecnica",
+		"en": "Contratti di sponsorizzazione tecnica"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"25",
+    "descrizione": {
+		"it": "Opera pubblica realizzata a spese del privato",
+		"en": "Opera pubblica realizzata a spese del privato"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"26",
+    "descrizione": {
+		"it": "concessioni, appalti pubblici e accordi tra enti e amministrazioni aggiudicatrici nell'ambito del settore  pubblico",
+		"en": "concessioni, appalti pubblici e accordi tra enti e amministrazioni aggiudicatrici nell'ambito del settore  pubblico"
+		},
+    "datainizio":null,
+    "datafine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"27",
+    "descrizione": {
+		"it": "appalti e concessioni  aggiudicati a un'impresa collegata",
+		"en": "appalti e concessioni  aggiudicati a un'impresa collegata"
+		},
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"28",
+    "descrizione": {
+		"it": "appalti nei settori speciali e concessioni aggiudicati ad una joint-venture o ad un ente aggiudicatore facente parte di una joint venture",
+		"en": "appalti nei settori speciali e concessioni aggiudicati ad una joint-venture o ad un ente aggiudicatore facente parte di una joint venture"
+		},
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"29",
+    "descrizione": {
+		"it": "contratti di servizi aggiudicati n base a un diritto esclusivo",
+		"en": "contratti di servizi aggiudicati n base a un diritto esclusivo"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"30",
+    "descrizione": {
+		"it": "appalti aggiudicati da particolari enti aggiudicatori per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia",
+		"en": "appalti aggiudicati da particolari enti aggiudicatori per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"31",
+    "descrizione": {
+		"it": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici",
+		"en": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"32",
+    "descrizione": {
+		"it": "servizi di arbitrato e di conciliazione",
+		"en": "servizi di arbitrato e di conciliazione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"33",
+    "descrizione": {
+		"it": "appalti aventi ad oggetto l'acquisto di prodotti agricoli e alimentari fino a 10.000 euro annui da imprese agricole situate nei comuni individuati dal codice",
+		"en": "appalti aventi ad oggetto l'acquisto di prodotti agricoli e alimentari fino a 10.000 euro annui da imprese agricole situate nei comuni individuati dal codice"
+		},
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"34",
+    "descrizione": {
+		"it": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007",
+		"en": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"35",
+    "descrizione": {
+		"it": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo",
+		"en": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"36",
+    "descrizione": {
+		"it": "Opere a scomputo",
+		"en": "Opere a scomputo"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"47",
+    "descrizione": {
+		"it": "Appalti nei settori speciali aggiudicati a scopo di rivendita o di locazione a terzi",
+		"en": "Appalti nei settori speciali aggiudicati a scopo di rivendita o di locazione a terzi"
+		},
+    "datainizio":"2020-05-12T00:00:00Z",
+    "datafine":null
+}]

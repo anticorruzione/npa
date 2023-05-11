@@ -1,0 +1,27 @@
+[{
+    "codice":"L",
+    "descrizione": {
+		"it": "Lavori",
+		"en": "Lavori"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"S",
+    "descrizione": {
+		"it": "Servizi",
+		"en": "Servizi"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"F",
+    "descrizione": {
+		"it": "Forniture",
+		"en": "Forniture"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

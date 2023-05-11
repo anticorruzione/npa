@@ -1,0 +1,126 @@
+[{
+    "codice":"A",
+    "descrizione": {
+		"it": "Fondi di bilancio della stazione appaltante",
+		"en": "Fondi di bilancio della stazione appaltante"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"B",
+    "descrizione": {
+		"it": "Fondi di bilancio dell'amministrazione competente",
+		"en": "Fondi di bilancio dell'amministrazione competente"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"C01",
+    "descrizione": {
+		"it": "Entrate con dest.vincolata - PUBBLICA COMUNITARIA",
+		"en": "Entrate con dest.vincolata - PUBBLICA COMUNITARIA"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"C02",
+    "descrizione": {
+		"it": "Entrate con dest.vincolata - PUBBLICA NAZIONALE CENTRALE",
+		"en": "Entrate con dest.vincolata - PUBBLICA NAZIONALE CENTRALE"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"C03",
+    "descrizione": {
+		"it": "Entrate con dest.vincolata - PUBBLICA NAZIONALE REGIONALE",
+		"en": "Entrate con dest.vincolata - PUBBLICA NAZIONALE REGIONALE"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"C04",
+    "descrizione": {
+		"it": "Entrate con dest.vincolata - PUBBLICA NAZIONALE LOCALE",
+		"en": "Entrate con dest.vincolata - PUBBLICA NAZIONALE LOCALE"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"C05",
+    "descrizione": {
+		"it": "Entrate con dest.vincolata - PUBBLICA NAZIONALE ALTRI",
+		"en": "Entrate con dest.vincolata - PUBBLICA NAZIONALE ALTRI"
+		},		
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"C06",
+    "descrizione": {
+		"it": "Entrate con dest.vincolata - PRIVATI",
+		"en": "Entrate con dest.vincolata - PRIVATI"
+		},			    
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"D",
+    "descrizione": {
+		"it": "Mutuo",
+		"en": "Mutuo"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"E",
+    "descrizione": {
+		"it": "Trasferimento di immobili",
+		"en": "Trasferimento di immobili"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"F",
+    "descrizione": {
+		"it": "Economia su stanziamenti non vincolati",
+		"en": "Economia su stanziamenti non vincolati"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"G",
+    "descrizione": {
+		"it": "Apporto di capitali privati",
+		"en": "Apporto di capitali privati"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"H",
+    "descrizione": {
+		"it": "Sfruttamento economico e funzionale del bene",
+		"en": "Sfruttamento economico e funzionale del bene"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"I",
+    "descrizione": {
+		"it": "Altro",
+		"en": "Altro"
+		},
+    "datainizio":null,
+    "datafine":null
+}]

@@ -1,0 +1,81 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "importo ridotto del contratto",
+		"en": "importo ridotto del contratto"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "mercato di riferimento",
+		"en": "mercato di riferimento"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "affidamento in somma urgenza o per esigenze di protezione civile",
+		"en": "affidamento in somma urgenza o per esigenze di protezione civile"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "adempimento clausola sociale di riassorbimento occupazionale",
+		"en": "adempimento clausola sociale di riassorbimento occupazionale"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "scarsa occupazione femminile nel settore",
+		"en": "scarsa occupazione femminile nel settore"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "necessità di esperienza o di particolari abilitazioni professionali",
+		"en": "necessità di esperienza o di particolari abilitazioni professionali"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "assunzione di un numero di lavoratori inferiori a tre",
+		"en": "assunzione di un numero di lavoratori inferiori a tre"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "altro",
+		"en": "altro"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "adesione ad AQ/Convenzione precedente alle linee guida DPO sull’articolo 47 del DL 77/2021 e ss.m.i.",
+		"en": "adesione ad AQ/Convenzione precedente alle linee guida DPO sull’articolo 47 del DL 77/2021 e ss.m.i."
+		},
+    "datainizio":null,
+    "datafine":null
+}]

@@ -1,0 +1,36 @@
+[{
+    "codice":"works",
+    "descrizione": {
+		"it": "Lavori",
+		"en": "Works"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"supplies",
+    "descrizione": {
+		"it": "Forniture",
+		"en": "Supplies"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"services",
+    "descrizione": {
+		"it": "Servizi",
+		"en": "Services"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"combined",
+    "descrizione": {
+		"it": "Appalti misti",
+		"en": "Combined"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]
