@@ -938,8 +938,8 @@ components:
   schemas:
     StatoDocumentoEnum:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoDocumentoEnum'
-    StatoRichiestaType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoRichiestaType'
+    StatoRichiestaEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoRichiestaEnum'
     TipoDocumentoEnum: 
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoDocumentoEnum'
     AnagraficaOEType:
@@ -1091,7 +1091,7 @@ components:
         - $ref: '#/components/schemas/BaseResponse'
       properties:
         stato:
-          $ref: '#/components/schemas/StatoRichiestaType'
+          $ref: '#/components/schemas/StatoRichiestaEnum'
     FVAListaResponse :
       allOf: # estende la classe BaseResponse e PaginazioneType
         - $ref: '#/components/schemas/BaseResponse'

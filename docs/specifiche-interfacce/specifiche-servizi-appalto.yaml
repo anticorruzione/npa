@@ -105,7 +105,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DatiPianoRequest'
+              $ref: '#/components/schemas/CreaPianoRequest'
         required: true
       responses:
         '200':
@@ -388,7 +388,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DatiAppaltoRequest'
+              $ref: '#/components/schemas/CreaAppaltoRequest'
         required: true
       responses:
         '200':
@@ -527,7 +527,7 @@ paths:
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         - in: query
           name: CIG
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC
+          description: Identificativo univoco Appalto-Lotto rilasciato da ANAC
           schema:
             type: string
             example: 9050626CD6
@@ -1137,7 +1137,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SchedaRequest'
+              $ref: '#/components/schemas/CreaSchedaRequest'
         required: true
       responses:
         '200':
@@ -1168,7 +1168,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SchedaRequest'
+              $ref: '#/components/schemas/DatiSchedaRequest'
         required: true
       responses:
         '200':
@@ -1212,7 +1212,7 @@ paths:
                   maxLength: 200
                   example: 'Errore inserimento dati'
               required:
-                - idAppalto
+                - idScheda
         required: true
       responses:
         '200':
@@ -1355,6 +1355,7 @@ paths:
         - in: query
           name: idScheda
           description: identificativo univoco della Scheda definito da ANAC. (A UUID specified by RFC4122)
+          required: true
           schema:
             type: string
             format: uuid
@@ -1498,6 +1499,174 @@ paths:
                   $ref: '#/components/schemas/ErrorResponse'
       security:
         - apiKeyAuth: []
+  /recupera-elenco-tipologiche:
+    get:
+      tags:
+        - serviziComuni
+      summary: API Rest per il recupero dell'elenco delle tipologiche disponibili. SINCRONO
+      description: Il servizio restituiti un'elenco delle tipologiche disponibili. SINCRONO
+      operationId: idRecuperaElencoTipologiche
+      responses:
+        '200':
+          description: Operazione terminato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TipologicaListaResponse' 
+            application/xml:
+              schema:
+                description: Risposta generica servizio
+                type: object
+                additionalProperties: false
+                properties:
+                  code:
+                    description: codice di ritorno dell'operazione 
+                    type: integer
+                    format: int32
+                    example: 200
+                  type:
+                    description: descrizione dell'esito dell'operazione eseguita
+                    type: string
+                    example: operazione terminata con successo
+                  message:
+                    description: messaggio di errore in caso di operazione non venga eseguita correttamente  
+                    type: string
+                xml:
+                  name: '##default'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: [] 
+  /recupera-tipologica:
+    get:
+      tags:
+        - serviziComuni
+      summary: API Rest per il recupero di una specifica tipologica. SINCRONO
+      description: Il servizio restituiti l'elenco di una singola tipologica. SINCRONO
+      operationId: idRecuperaTipologica
+      parameters:
+        - in: query
+          name: idTipologica
+          description: Identificativo univoco della tipologica
+          schema:
+            type: string
+            format: uuid
+          required: true
+        - in: query
+          name: dataInizio
+          description: Data di inizio (A datetime specified by RF3339)
+          schema:
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'
+        - in: query
+          name: dataFine
+          description: Data di fine (A datetime specified by RF3339)
+          schema:
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'
+      responses:
+        '200':
+          description: Operazione terminato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TipologicaResponse' 
+            application/xml:
+              schema:
+                description: Risposta generica servizio
+                type: object
+                additionalProperties: false
+                properties:
+                  code:
+                    description: codice di ritorno dell'operazione 
+                    type: integer
+                    format: int32
+                    example: 200
+                  type:
+                    description: descrizione dell'esito dell'operazione eseguita
+                    type: string
+                    example: operazione terminata con successo
+                  message:
+                    description: messaggio di errore in caso di operazione non venga eseguita correttamente  
+                    type: string
+                xml:
+                  name: '##default'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []
+  /recupera-valore-tipologica:
+    get:
+      tags:
+        - serviziComuni
+      summary: API Rest per il recupero di un singolo item di una tipologica. SINCRONO
+      description: Il servizio restituiti il valore di un singolo item che si vuole recuperare dalla tipologica. SINCRONO
+      operationId: idRecuperaItemTipologica
+      parameters:
+        - in: query
+          name: idTipologica
+          description: Identificativo univoco della tipologica
+          schema:
+            type: string
+            format: uuid
+          required: true
+        - in: query
+          name: codice
+          description: Codice del valore che si vuole recuperare dalla tipologica
+          schema:
+            type: string
+          required: true          
+      responses:
+        '200':
+          description: Operazione terminato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TipologicaItemResponse' 
+            application/xml:
+              schema:
+                description: Risposta generica servizio
+                type: object
+                additionalProperties: false
+                properties:
+                  code:
+                    description: codice di ritorno dell'operazione 
+                    type: integer
+                    format: int32
+                    example: 200
+                  type:
+                    description: descrizione dell'esito dell'operazione eseguita
+                    type: string
+                    example: operazione terminata con successo
+                  message:
+                    description: messaggio di errore in caso di operazione non venga eseguita correttamente  
+                    type: string
+                xml:
+                  name: '##default'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []        
   /presa-carico:
     post:
       tags:
@@ -1565,15 +1734,20 @@ paths:
             type: string
             example: 'RSSMRA94E07A511G'
         - in: query
-          name: funzione
-          description: tipo funzione del soggetto
-          schema:
-            $ref: '#/components/schemas/TipoFunzioneEnum'
-        - in: query
           name: ruolo
-          description: tipo ruolo del soggetto
+          description: ruolo del soggetto
           schema:
             $ref: '#/components/schemas/TipoRuoloEnum' 
+        - in: query
+          name: servizio
+          description: servizio delegato al soggetto
+          schema:
+            $ref: '#/components/schemas/TipoServizioSoggettoEnum'
+        - in: query
+          name: operazione
+          description: operazione delegata al soggetto
+          schema:
+            $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'            
         - in: query
           name: dataInizioDa
           description: Data inizio incarico soggetto - intervallo successivo (A datetime specified by RF3339)
@@ -1818,18 +1992,14 @@ components:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoSchedaEnum'
     TipoOperazioneEnum:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoOperazioneEnum'
-    TipoFunzioneEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoFunzioneEnum'
+    TipoServizioSoggettoEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoServizioSoggettoEnum'
+    TipoOperazioneSoggettoEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoOperazioneSoggettoEnum'      
     TipoRuoloEnum:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoRuoloEnum'
     AppaltoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AppaltoType'
-    EspdRequestType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/EspdRequestType'
-    EFormType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/EFormType'
-    AFormType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AFormType'
     PianoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PianoType'
     AnagraficaSoggettoType:
@@ -1838,30 +2008,38 @@ components:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PaginazioneType'
     AvvisoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoType'
+    DatiAvvisoType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAvvisoType'
     CigType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/CigType'
-    SchedaType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaType'
+    DatiAppaltoBaseType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoBaseType'    
     DatiAppaltoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoType'
+    DatiSchedaBaseType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaBaseType'    
+    DatiSchedaType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaType'
+    DatiPianoBaseType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoBaseType'      
     DatiPianoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoType'
     ContentDocumentType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/ContentDocumentType'
     EsitoOperazioneType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/EsitoOperazioneType'
+    TipologicaBaseType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipologicaBaseType'      
+    TipologicaType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipologicaType'
+    DatiTipologicaType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiTipologicaType'
     ConsultaAppaltoResponse :
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:  
         appalto:
-          $ref: '#/components/schemas/AppaltoType'
-        espdRequest:
-          $ref: '#/components/schemas/EspdRequestType'
-        eForm:
-          $ref: '#/components/schemas/EFormType'
-        anacForm:
-          $ref: '#/components/schemas/AFormType'     
+          $ref: '#/components/schemas/DatiAppaltoType'
     CreaPianoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -2048,6 +2226,30 @@ components:
               CIG: 'EF89908H45' 
             - progressivoLotto: '0003'
               CIG: 'EF90908G67' 
+    TipologicaResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        tipologica:  
+          $ref: '#/components/schemas/TipologicaType'   
+    TipologicaItemResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        tipologica:  
+          $ref: '#/components/schemas/DatiTipologicaType'       
+    TipologicaListaResponse:
+      allOf: # estende la classe PaginazioneType
+        - $ref: '#/components/schemas/PaginazioneType'
+      description: Oggetto generico di ritorno di una risposta con paginazione
+      type: object
+      additionalProperties: false
+      properties:
+        result: 
+          description: Elenco di tutte le tipologiche
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologicaBaseType' 
     SchedaListaResponse:
       allOf: # estende la classe PaginazioneType
           - $ref: '#/components/schemas/PaginazioneType'
@@ -2059,10 +2261,16 @@ components:
           description: Lista di ritorno con la sintesi dei dati delle schede
           type: array
           items:
-            $ref: '#/components/schemas/SchedaType'
+            $ref: '#/components/schemas/DatiSchedaType'
+    CreaAppaltoRequest:
+      allOf: # estende la classe DatiAppaltoBaseType
+        - $ref: '#/components/schemas/DatiAppaltoBaseType'
     DatiAppaltoRequest:
       allOf: # estende la classe DatiAppaltoType
         - $ref: '#/components/schemas/DatiAppaltoType'
+    CreaPianoRequest:
+      allOf: # estende la classe DatiPianoType
+        - $ref: '#/components/schemas/DatiPianoBaseType'
     DatiPianoRequest:
       allOf: # estende la classe DatiPianoType
         - $ref: '#/components/schemas/DatiPianoType'
@@ -2085,8 +2293,10 @@ components:
           example: "9050626CD6"
         ruolo:  
           $ref: '#/components/schemas/TipoRuoloEnum'
-        funzione:  
-          $ref: '#/components/schemas/TipoFunzioneEnum'
+        servizio:  
+          $ref: '#/components/schemas/TipoServizioSoggettoEnum'
+        operazione:  
+          $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'          
         dataInizio: 
           description: Data di inizio (A datetime specified by RF3339)
           type: string
@@ -2096,34 +2306,22 @@ components:
           description: Data di fine (A datetime specified by RF3339)
           type: string
           format: datetime
-          example: '2022-01-23T12:02:05Z'  
-    SchedaRequest:
-      allOf: # estende la classe SchedaType
-        - $ref: '#/components/schemas/SchedaType' 
+          example: '2022-01-23T12:02:05Z'
+    CreaSchedaRequest:
+      allOf: # estende la classe DatiSchedaType
+        - $ref: '#/components/schemas/DatiSchedaBaseType'
+    DatiSchedaRequest:
+      allOf: # estende la classe DatiSchedaType
+        - $ref: '#/components/schemas/DatiSchedaType'
     AvvisoRequest:
-      type: object
-      additionalProperties: false
-      required:  # List the required properties here
-        - idAvviso
-      properties:
-        idAvviso:
-          description: identificativo univoco dell'Avviso generato da ANAC.
-          type: string
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-      oneOf:
-        - $ref: '#/components/schemas/DatiAppaltoRequest'
-        - $ref: '#/components/schemas/SchedaRequest'
+      allOf: # estende la classe DatiAvvisoType
+        - $ref: '#/components/schemas/DatiAvvisoType'
     ConsultaAvvisoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
         avviso:
           $ref: '#/components/schemas/AvvisoType'
-        eForm:
-          $ref: '#/components/schemas/EFormType'
-        anacForm:
-          $ref: '#/components/schemas/AFormType'
     RenderingAvvisoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -2148,7 +2346,7 @@ components:
         - $ref: '#/components/schemas/BaseResponse'
       properties:
         scheda:
-          $ref: '#/components/schemas/SchedaType'
+          $ref: '#/components/schemas/DatiSchedaType'
     EsitoOperazioneListaResponse:
       type: object
       additionalProperties: false
@@ -2168,14 +2366,6 @@ components:
       type: object
       additionalProperties: false
       properties:
-          detail:
-              description: |
-                A human readable explanation specific to this occurrence of the
-                problem.
-              maxLength: 4096
-              pattern: ^.{0,1024}$
-              type: string
-              example: 'Request took too long to complete.'
           instance:
               description: |
                 An absolute URI that identifies the specific occurrence of the
@@ -2194,7 +2384,7 @@ components:
               maximum: 600
               minimum: 100
               type: integer
-              example: 503
+              example: 400
           title:
               description: |
                 A short, summary of the problem type. Written in english and
@@ -2204,7 +2394,15 @@ components:
               maxLength: 64
               pattern: ^[ -~]{0,64}$
               type: string
-              example: 'Service Unavailable'
+              example: 'There was a validation error'
+          detail:
+              description: |
+                A human readable explanation specific to this occurrence of the
+                problem.
+              maxLength: 4096
+              pattern: ^.{0,1024}$
+              type: string
+              example: 'Object Validation Error'
           type:
               description: |
                 An absolute URI that identifies the problem type. When
@@ -2216,7 +2414,19 @@ components:
               format: uri
               maxLength: 2048
               type: string
-              example: 'https://tools.ietf.org/html/rfc7231#section-6.6.4'  
+              example: 'https://tools.ietf.org/html/rfc7231#section-6.6.4'
+          errori:
+            description: elenco degli errori
+            type: object
+            properties:
+              codice:
+                type: string
+                example: '001'
+              descrizione:
+                maxLength: 4096
+                pattern: ^.{0,1024}$
+                type: string
+                example: 'Non è stato indicato il campo Motivazione richiesta CIG.'
     ErrorResponse:
       allOf: # estende la classe BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
