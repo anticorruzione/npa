@@ -219,6 +219,22 @@ components:
           $ref: '#/components/schemas/TipoFinanziamentoEnum'
         importo:
           $ref: '#/components/schemas/ImportoType'
+    InvitatoType:
+      description: Dati dell'invitato
+      type: object
+      #required: []
+      additionalProperties: false
+      properties:
+        cf:
+          description: codice fiscale del soggetto interessato
+          type: string
+        denominazione: 
+          description: denominazione del soggetto interessato
+          type: string  
+        ruolo: 
+          $ref: '#/components/schemas/RuoloOEEnum'
+        tipo: 
+          $ref: '#/components/schemas/TipoOEEnum'          
     StazioneAppaltanteType:
       description: Stazione Appaltante e ruoli ricoperti nell'appalto
       type: object
