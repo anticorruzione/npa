@@ -28,12 +28,22 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType' 
     AnacFormP2.17Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K — direttiva settoriale, regime ordinario. Articolo 69 della direttiva 2014/25/UE 
-      allOf: # estende la classe AnacFormP1.17Type
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.17.yaml#/components/schemas/AnacFormP1.17Type' 
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'      
       - $ref: '#/components/schemas/AnacFormP2.17DatiBaseType'
       type: object
       additionalProperties: false
-      required: [finanziamenti,opzioni/rinnovi, appalto]
+      required: [finanziamenti,opzioni/rinnovi, appalto,lotti]
+      properties:      
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.17Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.17Type'    
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'       
     SchedaP2.17Type:
       description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando di gara — direttiva settoriale, regime ordinario. Articolo 69 della direttiva 2014/25/UE
       type: object

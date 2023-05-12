@@ -4,56 +4,6 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AppaltoP.13Type:
-      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
-      allOf: # estende la classe AppaltoBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoBaseType'
-      type: object
-      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione]
-      additionalProperties: false
-      properties:
-        motivoUrgenza:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoUrgenzaEnum'       
-        linkDocumenti:
-          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
-          type: string
-          format: url   
-        servizioPubblicoLocale:
-          description: Flag servizio pubblico locale
-          type: boolean   
-        ripetizioniEConsegneComplementari:
-          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
-          type: boolean 
-    LottoP.13Type:
-      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
-      allOf: # estende la classe LottoBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoBaseType'
-      type: object
-      required: [contrattiDisposizioniParticolari,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione]
-      additionalProperties: false
-      properties:
-        lavoroOAcquistoPrevistoInProgrammazione:
-          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
-          type: boolean 
-        cui:
-          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
-          type: string
-          example: ''       
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean          
-        opzioni/rinnovi:
-          description: L’appalto prevede opzioni/rinnovi?
-          type: boolean  
-        ipotesiCollegamento:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IpotesiCollegamentoType'
-        categoria:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
-        paritaDiGenereGenerazionale:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType' 
     AnacFormP1.13Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia  — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera b), della direttiva 2014/25/UE
       allOf: # estende la classe AnacFormBaseType
@@ -63,12 +13,12 @@ components:
       required: [finanziamenti,opzioni/rinnovi, appalto,lotti]
       properties:  
         appalto:
-          $ref: '#/components/schemas/AppaltoP.13Type' 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.13Type' 
         lotti:
           description: Dati relativi ai lotti
           type: array
           items:
-            $ref: '#/components/schemas/LottoP.13Type'           
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.13Type'           
         quadroEconomicoStandard:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'  
     SchedaP1.13Type:

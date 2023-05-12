@@ -450,6 +450,233 @@ components:
         servizioPubblicoLocale:
           description: Flag servizio pubblico locale
           type: boolean          
+    AppaltoP.10Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+        - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,ripetizioniEConsegneComplementari, prestazioniComprese]
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url      
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean
+        prestazioniComprese:
+          $ref: '#/components/schemas/PrestazioniEnum'
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean                  
+    AppaltoP.11Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,ripetizioniEConsegneComplementari,prestazioniComprese]
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url      
+        prestazioniComprese:
+          $ref: '#/components/schemas/PrestazioniEnum'
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean   
+    AppaltoP.12Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,contrattiDisposizioniParticolari, servizioPubblicoLocale,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione]
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url      
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean  
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean           
+    AppaltoP.13Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione]
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url   
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean   
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean           
+    AppaltoP.14Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione]
+      additionalProperties: false
+      properties:
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean            
+    AppaltoP.16Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,prestazioniComprese]
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'  
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url           
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean
+        prestazioniComprese:
+          $ref: '#/components/schemas/PrestazioniEnum'
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean           
+    AppaltoP.17Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,prestazioniComprese] 
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url           
+        prestazioniComprese:
+          $ref: '#/components/schemas/PrestazioniEnum'
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean          
+    AppaltoP.18Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      type: object
+      required: [idAppalto,cfSA,denominazioneSA]
+      additionalProperties: false    
+      properties:
+        idAppalto:
+          description: Codice univoco dell'appalto
+          type: string 
+        cfSA: 
+          description: Codice fiscale SA
+          type: string
+        denominazioneSA: 
+          description: Denominazione SA
+          type: string            
+    AppaltoP.19Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR] 
+      additionalProperties: false
+      properties:
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean          
+    AppaltoP.20Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [
+        categorieMerceologiche,servizioPubblicoLocale,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione]       
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url      
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean           
+    AppaltoP.21Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe AppaltoBaseType
+      - $ref: '#/components/schemas/AppaltoBaseType'
+      type: object
+      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione] 
+      additionalProperties: false
+      properties:
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url      
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean          
+    AppaltoP.23Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      type: object
+      additionalProperties: false
+      required: [idAppalto]
+      properties:
+        idAppalto:
+          description: Codice univoco dell'appalto
+          type: string         
+        strumentiSvolgimentoProcedure: 
+          $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'  
+        contrattiDisposizioniParticolari:
+          $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'           
+    AppaltoP.24Type:
+      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      type: object
+      additionalProperties: false
+      required: [idAppalto]
+      properties:
+        idAppalto:
+          description: Codice univoco dell'appalto
+          type: string         
+        strumentiSvolgimentoProcedure: 
+          $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'            
     LottoBaseType:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione
       type: object
@@ -484,6 +711,411 @@ components:
           $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
         oggettoPrincipaleContratto:
           $ref: '#/components/schemas/OggettoPrincipaleContrattoEnum'
+    LottoP.10Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+        - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [regimeParticolare,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean  
+        regimeParticolare:
+          description: Contratto regime particolare di appalto (speciale o alleggerito)
+          type: boolean          
+        strumentiElettroniciSpecifici:
+          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          type: boolean
+        tipologiaLavoro:
+          $ref: '#/components/schemas/TipologiaLavoroType'
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean 
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP.11Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [regimeParticolare,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean     
+        regimeParticolare:
+          description: Contratto regime particolare di appalto (speciale o alleggerito)
+          type: boolean          
+        strumentiElettroniciSpecifici:
+          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          type: boolean
+        tipologiaLavoro:
+          $ref: '#/components/schemas/TipologiaLavoroType'
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean 
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP.12Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,contrattiDisposizioniParticolari]
+      additionalProperties: false
+      properties:
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean  
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''       
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean          
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP.13Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [contrattiDisposizioniParticolari,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione]
+      additionalProperties: false
+      properties:
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean 
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''       
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean          
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'           
+    LottoP.14Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [contrattiDisposizioniParticolari,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione]
+      additionalProperties: false
+      properties:
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean  
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''       
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean          
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean 
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP.16Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [lavoroOAcquistoPrevistoInProgrammazione,contrattiDisposizioniParticolari,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean  
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''        
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean          
+        strumentiElettroniciSpecifici:
+          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          type: boolean
+        tipologiaLavoro:
+          $ref: '#/components/schemas/TipologiaLavoroType'
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'            
+    LottoP.17Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [lavoroOAcquistoPrevistoInProgrammazione,contrattiDisposizioniParticolari,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean  
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''        
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean          
+        strumentiElettroniciSpecifici:
+          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          type: boolean
+        tipologiaLavoro:
+          $ref: '#/components/schemas/TipologiaLavoroType'
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'            
+    LottoP.18Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      type: object
+      required: [lotIdentifier, categoria,sceltaContraente,oggettoLotto]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 9050626CD6
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string      
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        oggettoLotto:
+          description: oggetto del lotto
+          type: string          
+        sceltaContraente:
+          $ref: '#/components/schemas/SceltaContraenteEnum'            
+    LottoP.19Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [lavoroOAcquistoPrevistoInProgrammazione,contrattiDisposizioniParticolari,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean          
+        strumentiElettroniciSpecifici:
+          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          type: boolean
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean         
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''           
+        tipologiaLavoro:
+          $ref: '#/components/schemas/TipologiaLavoroType'
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean 
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP.20Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [modalitaAcquisizione,contrattiDisposizioniParticolari,lavoroOAcquistoPrevistoInProgrammazione,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean         
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean         
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''           
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP.21Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      allOf: # estende la classe LottoBaseType
+      - $ref: '#/components/schemas/LottoBaseType'
+      type: object
+      required: [modalitaAcquisizione,contrattiDisposizioniParticolari,lavoroOAcquistoPrevistoInProgrammazione,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        saNonSoggettaObblighi24Dicembre2015:
+          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
+          type: boolean
+        iniziativeNonSoddisfacenti:
+          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
+          type: boolean          
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean          
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''           
+        opzioni/rinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean  
+        ipotesiCollegamento:
+          $ref: '#/components/schemas/IpotesiCollegamentoType'
+        categoria:
+          $ref: '#/components/schemas/CategoriaEnum' 
+        paritaDiGenereGenerazionale:
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'          
+    LottoP.23Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      type: object
+      required: [categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria,lotIdentifier]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 9050626CD6
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
+        codIstat:
+          $ref: '#/components/schemas/CodIstatEnum'          
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean         
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''      
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items:
+            type: string  
+        motivoEsclusioneOrdinarioSpeciale:
+          $ref: '#/components/schemas/MotivoEsclusioneOrdinarioSpecialeEnum'           
+    LottoP.24Type:
+      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      type: object
+      required: [lotIdentifier,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 9050626CD6
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
+        codIstat:
+          $ref: '#/components/schemas/CodIstatEnum'          
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean          
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          example: ''      
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean
+        motivoEsclusioneOrdinarioSpeciale:
+          $ref: '#/components/schemas/MotivoEsclusioneOrdinarioSpecialeEnum'            
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items:
+            type: string   
+        contrattiDisposizioniParticolari:
+          $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'          
     LottoP3BaseType:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione
       type: object
@@ -773,6 +1405,20 @@ components:
           description: Importo stimato del servizio di progettazione successiva
           type: string
           format: decimal
+    QuadroEconomicoP.10Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      allOf: # estende la classe QuadroEconomicoBaseType
+        - $ref: '#/components/schemas/QuadroEconomicoBaseType'        
+      type: object
+      required: [sommeRipetizioni]
+      additionalProperties: false           
+    QuadroEconomicoP.11Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      allOf: # estende la classe QuadroEconomicoBaseType
+      - $ref: '#/components/schemas/QuadroEconomicoBaseType'        
+      type: object
+      required: [sommeRipetizioni]
+      additionalProperties: false           
     QuadroEconomicoP3ContrattiEsclusiType:
       description: Oggetto che riporta tutti i dati del quadro economico standard 
       type: object

@@ -40,12 +40,22 @@ components:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioP2.10Type'
     AnacFormP2.10Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE
-      allOf: # estende la classe AnacFormP1.10Type
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.10.yaml#/components/schemas/AnacFormP1.10Type'
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'      
       - $ref: '#/components/schemas/AnacFormP2.10DatiBaseType'
       type: object
       required: [categoria, finanziamenti, opzioni/rinnovi, appalto,lotti]
-      additionalProperties: false          
+      additionalProperties: false
+      properties:  
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.10Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.10Type'               
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoP.10Type'           
     SchedaP2.10Type:
       description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE
       type: object

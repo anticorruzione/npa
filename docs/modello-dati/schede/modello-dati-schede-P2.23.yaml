@@ -26,12 +26,22 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseImportoType'   
     AnacFormP2.23Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Avviso o bando di concorso di progettazione — direttiva generale, progettazione (appalto integrato). Articolo 79, paragrafo 1, della direttiva 2014/24/UE
-      allOf: # estende la classe AnacFormP1.23Type
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.23.yaml#/components/schemas/AnacFormP1.23Type' 
+      allOf:  
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'      
       - $ref: '#/components/schemas/AnacFormP2.23DatiBaseType'
       type: object
       additionalProperties: false
-      required: [finanziamenti,opzioni/rinnovi, appalto]  
+      required: [finanziamenti,opzioni/rinnovi, appalto,lotti]
+      properties:  
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.23Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.23Type'          
+        quadroEconomicoConcorsiProgettazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcorsiProgettazioneType'      
     SchedaP2.23Type:
       description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Avviso o bando di concorso di progettazione — direttiva generale, progettazione (appalto integrato). Articolo 79, paragrafo 1, della direttiva 2014/24/UE
       type: object

@@ -4,74 +4,21 @@ info:
   version: 1.0.0
 components:
   schemas:
-    LottoP.24Type:
-      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
-      type: object
-      required: [lotIdentifier,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria]
-      additionalProperties: false
-      properties:
-        cig:
-          description: codice identificativo lotto
-          type: string
-          example: 9050626CD6
-        lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
-          type: string
-        codIstat:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CodIstatEnum'          
-        lavoroOAcquistoPrevistoInProgrammazione:
-          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
-          type: boolean          
-        cui:
-          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
-          type: string
-          example: ''      
-        afferenteInvestimentiPNRR:
-          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
-          type: boolean
-        motivoEsclusioneOrdinarioSpeciale:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoEsclusioneOrdinarioSpecialeEnum'            
-        cupLotto:
-          description: Cup associati al lotto
-          type: array
-          items:
-            type: string   
-        contrattiDisposizioniParticolari:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ContrattiDisposizioniParticolariEnum'             
-    AppaltoP.24Type:
-      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
-      type: object
-      additionalProperties: false
-      required: [idAppalto]
-      properties:
-        idAppalto:
-          description: Codice univoco dell'appalto
-          type: string         
-        strumentiSvolgimentoProcedure: 
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/StrumentiSvolgimentoProcedureEnum'  
     AnacFormP1.24Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia 
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'   
       type: object
       required: [appalto, lotti, finanziamenti]
       additionalProperties: false
       properties:  
         appalto:
-          $ref: '#/components/schemas/AppaltoP.24Type'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.24Type'
         lotti:
           description: Dati relativi ai lotti
           type: array
           items:
-            $ref: '#/components/schemas/LottoP.24Type'          
-        stazioniAppaltanti:
-          description: Dati relativi alle stazioni appaltanti
-          type: array
-          items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/StazioneAppaltanteType'  
-        finanziamenti:
-          description: Dati relativi ai finanziamenti
-          type: array
-          items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/FinanziamentoType'          
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.24Type'
         quadroEconomicoConcorsiProgettazione:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcorsiProgettazioneType'     
     SchedaP1.24Type:

@@ -4,47 +4,6 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AppaltoP.14Type:
-      description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
-      allOf: # estende la classe AppaltoBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoBaseType'
-      type: object
-      required: [categorieMerceologiche,contrattiDisposizioniParticolari,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ripetizioniEConsegneComplementari, afferenteInvestimentiPNRR,modalitaAcquisizione]
-      additionalProperties: false
-      properties:
-        servizioPubblicoLocale:
-          description: Flag servizio pubblico locale
-          type: boolean     
-    LottoP.14Type:
-      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
-      allOf: # estende la classe LottoBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoBaseType'
-      type: object
-      required: [contrattiDisposizioniParticolari,categorieMerceologiche, afferenteInvestimentiPNRR,opzioni/rinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione]
-      additionalProperties: false
-      properties:
-        lavoroOAcquistoPrevistoInProgrammazione:
-          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
-          type: boolean  
-        cui:
-          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
-          type: string
-          example: ''       
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean          
-        opzioni/rinnovi:
-          description: L’appalto prevede opzioni/rinnovi?
-          type: boolean 
-        ipotesiCollegamento:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IpotesiCollegamentoType'
-        categoria:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
-        paritaDiGenereGenerazionale:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType'
     AnacFormP1.14Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia — direttiva sulle concessioni, regime alleggerito. Articolo 31, paragrafo 3, della direttiva 2014/23/UE 
       allOf: # estende la classe AnacFormBaseType
@@ -54,12 +13,12 @@ components:
       required: [finanziamenti,opzioni/rinnovi, appalto,lotti]
       properties:  
         appalto:
-          $ref: '#/components/schemas/AppaltoP.14Type'  
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.14Type'  
         lotti:
           description: Dati relativi ai lotti
           type: array
           items:
-            $ref: '#/components/schemas/LottoP.14Type' 
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.14Type' 
     SchedaP1.14Type:
       description: Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform14.
       type: object
