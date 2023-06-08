@@ -233,7 +233,7 @@ I servizi che devono essere obbligatoriamente richiamati per questo contesto del
 
 - **crea-piano**: servizio utile per l’inserimento in bozza di un avviso di preinformazione. 
 A seguito dell’invocazione di questo servizio, il Piano transita nello stato “IN LAVORAZIONE”;
-- **conferma-piano**: servizio che ha lo scopo di validare e confermare i dati del Piano. A seguito dell’invocazione di questo servizio, lo stato del Piano transita in “CONFERMATO”. Qualora il tipo di piano lo consente, il servizio restituisce l'identificativo dell'avviso ad esso assegnato che la SA potrà utilizzare per la successiva invocazione di pubblica-avviso. ASINCRONO - ASIMMETRICO
+- **conferma-piano**: servizio che ha lo scopo di validare e confermare i dati del Piano. A seguito dell’invocazione di questo servizio, lo stato del Piano transita in “CONFERMATO”. Qualora il tipo di piano lo consente, il servizio esito-operazione restituisce l'identificativo dell'avviso ad esso assegnato che la SA potrà utilizzare per la successiva invocazione di pubblica-avviso. ASINCRONO - ASIMMETRICO
 
 Servizi facoltativi, una volta richiamato il crea-piano, possono essere invocati i seguenti servizi:
 - modifica-piano: servizio che va a sostituire il Piano creato precedentemente con una nuova bozza. Solo l’ultima istanza ricevuta del piano sarà oggetto delle successive fasi del processo;
@@ -257,7 +257,7 @@ I servizi di seguito descritti potranno essere pertanto richiamati dalle SA fino
 
 I servizi che devono essere obbligatoriamente richiamati per questo contesto del ciclo di vita dell’Appalto sono i seguenti:
 -	**crea-appalto**: servizio che consente l’inserimento della prima istanza (in bozza) di un Appalto. A seguito dell’invocazione di questo servizio, l’Appalto transita in stato “IN LAVORAZIONE”;
--	**conferma-appalto**: tale servizio serve a confermare i dati dell’Appalto e ad assegnare i CIG.
+-	**conferma-appalto**: tale servizio serve a confermare i dati dell’Appalto, avvia la fase di validazione e assegnazione dei CIG ed inizializza il Fascicolo Virtuale dell'Appalto.
 
 Servizi facoltativi, una volta richiamato il crea-appalto, possono essere i seguenti:
 
@@ -291,7 +291,7 @@ Sarà possibile invocare anche i seguenti servizi facoltativi:
 -	cancella-avviso: servizio di sospensione di una richiesta di pubblicazione, sia nazionale sia europea, di un avviso non ancora pubblicato. L’Appalto transita nello stato “STOP PUBBLICAZIONE” e l’Avviso in “ANNULLA PUBBLICAZIONE”;
 -	modifica-avviso: servizio di creazione di un nuovo Avviso che sostituisce il precedente non ancora pubblicato. L’Appalto rimane in stato “IN ATTESA PUBBLICAZIONE” e l’avviso transita nello stato “IN ATTESA PUBBLICAZIONE”;
 -	rettifica-avviso: servizio utile alla creazione di un’avviso di rettifica in caso di pubblicazione già avvenuta; L’Appalto rimane nello stato “PUBBLICATO”, mentre lo stato dell’avviso transiterà in ”IN ATTESA PUBBLICAZIONE”.
--	stato-avviso: servizio tramite il quale avviene il recupero dello stato in cui si trova un Avviso;
+-	stato-avviso: servizio tramite il quale avviene il recupero dello stato in cui si trova un Avviso. Il compito dispositivo di aggiornare lo stato dell'avviso proveniente dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato NPA. Pertanto il recupero dello stato da parte del servizio insiste su uno stato avviso NPA che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni;
 -	recupera-cig: servizio per il recupero dei CIG generati e assegnati ai lotti dell’Appalto. Il servizio è il medesimo descritto nel contesto di comunicaAppalto;
 -	ricerca-avviso: servizio per la ricerca degli avvisi di un appalto in base ai criteri di input. 
 -	consulta-avviso: servizio per la consultazione delle informazioni di dettaglio di un Avviso 
@@ -331,7 +331,7 @@ I servizi che devono essere obbligatoriamente richiamati per questo contesto del
   - verifica se la scheda dati è coerente con lo stato dell’Appalto; 
   - effettua una validazione sintattica dei dati di input. 
 
-Nel caso in cui si tratti di una scheda che prevede la pubblicazione sulla Piattaforma nazionale o sul TED il sistema invocherà il servizio pubblica-avviso per completare la transizione allo stato successivo dell’Appalto o per poter confermare la scheda successiva in lavorazione. 
+Nel caso in cui si tratti di una scheda che prevede la pubblicazione sulla Piattaforma nazionale o sul TED il sistema invocherà il servizio pubblica-avviso per completare la transizione allo stato successivo dell’Appalto o per poter confermare la scheda successiva in lavorazione e, mediante la successiva invocazione al servizio esito-operazione sarà possibile recuperare l'idAvviso assegnato.
 
 Sarà possibile invocare anche i seguenti servizi facoltativi:
 - modifica-scheda: servizio generico che sostituisce integralmente la precedente scheda inviata con una nuova bozza. La scheda rimane nello stato “IN LAVORAZIONE” e  il servizio sarà invocabile ciclicamente finché non sarà invocato il servizio conferma-scheda;
@@ -404,13 +404,13 @@ Il modello dati del FVOE è descritto nel [file YAML](../modello-dati/modello-da
 
 In questo capitolo si riportano i servizi comuni, ossia quelli che possono essere richiamati dalle Stazioni appaltanti in più contesti dell’NPA e che forniranno una risposta diversa a seconda della fase in cui vengono invocati:
 - esito-operazione: tramite questo servizio è possibile recuperare l’esito di una determinata operazione;
-  - [SE il contesto è comunicaAppalto] recupero l’esito per le seguenti operazioni : “crea-appalto”, “modifica-appalto”, “cancella-appalto”, “conferma-appalto”, “verifica-appalto”.
-  - [SE il contesto è pubblicaAvviso] 
-    - [SE lo stato Avviso è “In attesa pubblicazione” su TED] chiama l’ API TED “search-esentool” per  l’esito di pubblicazione sul sistema europeo.
-    - [SE lo stato Avviso è “In attesa pubblicazione” su PPL-ANAC] chiama il servizio di back-end “ricerca-avviso-nazionale” per la verifica dell’esito di pubblicazione su PPL-ANAC.
-Ritorna l’esito per le seguenti operazioni: “pubblica-pvviso”, “modifica-avviso”, “cancella-avviso”, “rettifica-avviso”
-  - [SE il contesto è comunicaPostPubblicazione] recupero l’esito per le seguenti operazioni: “crea-scheda ”, “modifica-scheda”, “cancella-scheda”, “conferma-scheda”, “verifica-scheda”
--	stato-appalto: tramite questo servizio è possibile conoscere lo stato dell’Appalto in un determinato momento.
+  - [SE il contesto è comunicaAppalto] recupera l’esito per le seguenti operazioni : “crea-appalto”, “modifica-appalto”, “cancella-appalto”, “conferma-appalto”, “verifica-appalto”.
+  - [SE il contesto è pubblicaAvviso] recupera l’esito per le seguenti operazioni: “pubblica-avviso”, “modifica-avviso”, “cancella-avviso”, “rettifica-avviso”. Il compito dispositivo di aggiornare l'esito delle operazioni provenienti dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato NPA che:
+    - [SE lo stato Avviso è “In attesa pubblicazione” su TED] aggiorna l'esito operazione chiamando l’ API TED “search-esentool” in caso di pubblicazione sul sistema europeo.
+    - [SE lo stato Avviso è “In attesa pubblicazione” su PPL-ANAC] aggiorna l'esito operazione chiamando l’ API PPL-ANAC “ricerca-avviso-nazionale” in caso di pubblicazione nazionale. 
+  Pertanto il recupero dell'esito operazione da parte del servizio insiste su uno stato dell'esito NPA che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni.
+  - [SE il contesto è comunicaPostPubblicazione] recupera l’esito per le seguenti operazioni: “crea-scheda ”, “modifica-scheda”, “cancella-scheda”, “conferma-scheda”, “verifica-scheda”
+-	stato-appalto: tramite questo servizio è possibile conoscere lo stato dell'Appalto, del Lotto o del Contratto in un determinato momento. Il compito dispositivo di aggiornare lo stato proveniente dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato NPA. Pertanto il recupero dello stato da parte del servizio insiste su uno stato NPA che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni.
 -	recupera-elenco-tipologiche: tramite questo servizio è possibile recuperare l'elenco delle tipologiche disponibili.
 -	recupera-tipologica: tramite questo servizio è possibile recuperare l'elenco dei valori per una specifica tipologica.
 -	recupera-valore-tipologica: tramite questo servizio è possibile recuperare un valore puntuale per una specifica tipologica.

@@ -135,12 +135,20 @@ paths:
       operationId: idAccessoVerificaRichiestaFVOE
       parameters:
         - in: query
-          name: idRichiesta
-          description: identificativo univoco della Richiesta di accesso definito da ANAC. (A UUID specified by RFC4122)
+          name: codiceFiscale
+          description: codice fiscale dell'Operatore Economico. 
+          schema:
+            type: string
+            example: "MNNFRC78D14H501A"
+          required: true
+        - in: query
+          name: idAppalto
+          description: Identificativo univoco dell'Appalto
           schema:
             type: string
             format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+          required: true  
       responses:
         '200':
           description: Operazione terminato con successo
@@ -148,6 +156,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StatoRichiestaResponse'
+          links:
+            RicercaDocumentiFVOEIdLink:  
+              operationId: idDocumentiFVOERicerca
+              parameters:
+                chiaveAccesso: '$response.body#/autorizzazione.chiaveAccesso'
+              description: >
+                Il valore di `chiaveAccesso` restituito nella riposta può essere usato per richiamare `GET /ricerca-documenti-fvoe`.       
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -162,8 +177,8 @@ paths:
     post:
       tags:
          - OE
-      summary: API Rest per la conferma di accesso al FVOE. SINCRONO 
-      description: Il servizio permette all'OE di autorizzare l'accesso al FVOE da parte della SA. SINCRONO 
+      summary: API Rest per la conferma di accesso al FVOE. SINCRONO . RISERVATO USO INTERNO 
+      description: Il servizio permette all'OE di autorizzare l'accesso al FVOE da parte della SA utilizzando il nuovo FrontEnd di ANAC. SINCRONO 
       operationId: idAccessoAutorizza
       requestBody:
         description: Inserimento Autorizzazione 
@@ -194,55 +209,55 @@ paths:
     get:
       tags:
         - SA
-        - OE
-      summary: API Rest per la ricerca dei documenti di un FVOE. SINCRONO
-      description: viene recuperata la lista con i dati di sintesi dei documenti presenti nel Fascicolo Virtuale dell'Operatore Economico. SINCRONO
+      summary: API Rest per la ricerca dei documenti di un Fascicolo Virtuale dell'Operatore Economico. SINCRONO
+      description: viene recuperata la lista con i dati di sintesi dei documenti presenti nel Fascicolo Virtuale dell'Operatore Economico per un Appalto. SINCRONO
       operationId: idDocumentiFVOERicerca
       parameters:
         - in: query  
-          name: idFascicolo
-          description: identificativo univoco del Fascicolo dell'OE
+          name: chiaveAccesso
+          description: chiave dell'SA necessaria per accedere al FVOE
           schema:
             type: string
             example: "507f1f77bcf86cd799439011"
+          required: true  
         - in: query
           name: dataInserimentoDa
-          description: data di inserimento del documento - intervallo successivo (A datetime specified by RF3339)
+          description: data di inserimento del documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataInserimentoA
-          description: data di inserimento del documento - intervallo precedente (A datetime specified by RF3339)
+          description: data di inserimento del documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'  
         - in: query
           name: dataEmissioneDa
-          description: data di emissione del documento - intervallo successivo (A datetime specified by RF3339)
+          description: data di emissione del documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataEmissioneA
-          description: data di emissione del documento - intervallo precedente (A datetime specified by RF3339)
+          description: data di emissione del documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'          
         - in: query
           name: dataFineValiditaDa
-          description: data fine validità del documento - intervallo successivo (A datetime specified by RF3339)
+          description: data fine validità del documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataFineValiditaA
-          description: data fine validità del documento - intervallo precedente (A datetime specified by RF3339)
+          description: data fine validità del documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
@@ -255,28 +270,28 @@ paths:
             example: '2342344342'
         - in: query
           name: dataProtocolloDa
-          description: Data di protocollo dell'Documento - intervallo successivo (A datetime specified by RF3339)
+          description: Data di protocollo dell'Documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataProtocolloA
-          description: Data di protocollo dell'Documento - intervallo precedente (A datetime specified by RF3339)
+          description: Data di protocollo dell'Documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'          
         - in: query
           name: dataCreazioneDa
-          description: Data di creazione dell'Documento - intervallo successivo (A datetime specified by RF3339)
+          description: Data di creazione dell'Documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataCreazioneA
-          description: Data di creazione dell'Documento - intervallo precedente (A datetime specified by RF3339) 
+          description: Data di creazione dell'Documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339) 
           schema:
             type: string
             format: datetime
@@ -286,23 +301,37 @@ paths:
           description: stato del documento
           schema:
             $ref: '#/components/schemas/StatoDocumentoEnum'
+          example:
+            codice: "01"  
         - in: query  
           name: tipo  
           description: tipo del documento
           schema:
-            $ref: '#/components/schemas/TipoDocumentoEnum'            
+            $ref: '#/components/schemas/TipoDocumentoEnum'
+          example:
+            codice: "06"   
+        - in: query
+          name: datiAggiuntivi
+          description: dati aggiuntivi definiti dal Sistema proprietario del documento. Definiti in JSON
+          schema:
+            type: string
+          example: "{id=45, { persona{codice=45} } }"      
         - in: query
           name: page
-          description: numero di pagine da visualizzare
+          description: numero della pagina da visualizzare.
           schema:
             type: integer
             format: int32
+            minimum: 1
+            default: 1
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: numero di elementi per pagina.
           schema:
             type: integer
             format: int32
+            minimum: 1
+            default: 20
       responses:
         '200':
           description: Operazione terminato con successo
@@ -310,6 +339,40 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DocumentiListaResponse'
+              example:
+                status: 200
+                title: "Operazione terminata correttamente"
+                totRows: 2
+                totPages: 1
+                currentPage: 1
+                elementPage": 2
+                result: 
+                  - idDocumento: "507f1f77bcf86cd799439011"
+                    tipo: 
+                      codice: "01"
+                      descrizione: 
+                        it: "DURC"
+                    stato: 
+                      codice: "21"
+                      descrizione: 
+                        it: "IN LAVORAZIONE"
+                    oggetto: ""
+                    dataInserimento: "2014-02-28T18:07:17Z"
+                    fascicoli: 
+                      idFascicolo: "878g1j75bcf86cd799439022"
+                  - idDocumento: "507f1f77bcf86cd799888889"
+                    tipo: 
+                      codice: "01"
+                      descrizione: 
+                        it: "DURC"
+                    stato: 
+                      codice: "01"
+                      descrizione: 
+                        it: "IN LAVORAZIONE"
+                    oggetto: ""
+                    dataInserimento: "2014-02-28T18:07:17Z"
+                    fascicoli: 
+                      idFascicolo: "999f1f77cdf86cd799489011"  
           links:
             RecuperaDocumentoFVOEIdLink:  
               operationId: idDocumentoFVOEDettaglio
@@ -331,8 +394,7 @@ paths:
     get:
       tags:
         - SA
-        - OE
-      summary: API Rest per il recupero del documento dal FVOE. SINCRONO
+      summary: API Rest per il recupero del documento dal Fascicolo Virtuale dell'Operatore Economico. SINCRONO
       description: Viene resituita il Documento (Metadati e Binario). SINCRONO
       operationId: idDocumentoFVOEDettaglio
       parameters:
@@ -342,6 +404,7 @@ paths:
           schema:
             type: string
             example: "507f1f77bcf86cd799439011"
+          required: true  
       responses:
         '200':
           description: Operazione terminato con successo. Viene restituito il Documento del Fascicolo Virtuale dell'Operatore Economico
@@ -350,6 +413,34 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RecuperaDocumentoResponse'
+              example:
+                status: 200
+                title: "Operazione Effettuata"
+                documento:
+                  idDocumento: "775f1f88bcf86cd987639011"
+                  tipo: 
+                      codice: "01"
+                      descrizione: 
+                        it: "DURC"
+                  stato: 
+                      codice: "21"
+                      descrizione: 
+                        it: "IN LAVORAZIONE"
+                  dataInserimento: '2022-01-23T12:02:05Z' 
+                  dataEmissione: '2022-01-23T12:02:05Z' 
+                  dataFineValidita: '2022-01-23T12:02:05Z' 
+                  numeroProtocollo: '2342344342'
+                  dataProtocollo: '2022-01-23T12:02:05Z' 
+                  utenteCreazione: "UDI.8909"  
+                  dataCreazione: '2022-01-23T12:02:05Z'
+                  datiAggiuntivi: "{id=45, { persona{codice=45} } }"
+                  fascicoli: 
+                    idFascicolo: "890f1f77bcf86cd799888888"
+                  contenutoDocumento: 
+                    nomeFile: "Allegato8989.pdf"
+                    estensione: "PDF"
+                    size: 2313
+                    contenuto: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"                 
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -364,24 +455,33 @@ paths:
     get:
       tags:
         - SA
-      summary: API Rest per la richiesta del documento agli enti certificatori. ASINCRONO - ASIMMETRICO
-      description: viene richiesta la produzione di un nuovo documento agli enti certificatori.
-         ASINCRONO - ASIMMETRICO
+      summary: API Rest per la richiesta del documento agli enti certificatori. ASINCRONO - ASIMMETRICO.
+      description: viene richiesta la produzione di un nuovo documento agli enti certificatori. ASINCRONO - ASIMMETRICO.
       operationId: idDocumentoRichiedi
       parameters:
         - in: query
-          name: idFascicolo
-          description: identificativo univoco del FVOE.
+          name: chiaveAccesso
+          description: chiave dell'SA necessaria per accedere al FVOE.
           required: true
           schema:
             type: string
             example: "507f1f77bcf86cd799439011"
+        - in: query
+          name: codiceFiscaleSoggetti
+          description: la lista dei  cf. dei soggetto sui cui si rihiede il documento.
+          schema:
+            type: array
+            items:
+              description: il cf. dell' soggetto su cui si rihiede il documento.
+            example: "[80090909]"
         - in: query
           name: tipoDocumento
           description: tipologia del documento da richiedere.
           required: true
           schema:
             $ref: '#/components/schemas/TipoDocumentoEnum'
+          example:
+            codice: "01"
       responses:
         '200':
           description: Operazione terminato con successo
@@ -389,13 +489,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RichiediDocumentoResponse'
-          links:
-            RecuperaDocumentoFVOEIdLink:  
-              operationId: idDocumentoFVOEDettaglio
-              parameters:
-                idDocumento: '$response.body#/result.idDocumento'
-              description: >
-                Il valore di `idDocumento` restituito nella riposta può essere usato per richiamare `GET /recupera-documento-fvoe`.  
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -406,12 +499,52 @@ paths:
           $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
+  /verifica-stato-richiesta-documento:
+    get:
+      tags:
+        - SA
+      summary: API Rest per verificare lo stato della richiesta di generazione del documento. SINCRONO.
+      description: API Rest per il recupero dello stato in cui si trova il documento di cui si é richiesto la generazione dagli enti certificatori. SINCRONO.
+      operationId: idDocumentoVerificaRichiestaFVOE
+      parameters:
+        - in: query
+          name: idRichiesta
+          description: Identificativo univoco della richiesta definito da ANAC. (A UUID specified by RFC4122)
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      responses:
+        '200':
+          description: Operazione terminato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatoRichiestaDocumentoResponse'
+          links:
+            StatoRichiestaDocumentoFVOEIdLink:  
+              operationId: idDocumentoFVOEDettaglio
+              parameters:
+                idDocumento: '$response.body#/statoRichiestaDocumento.idDocumento'
+              description: >
+                Il valore di `idDocumento` restituito nella riposta può essere usato per richiamare `GET /recupera-documento-fvoe`.          
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+            $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []        
   /recupera-storico-documento-fvoe:
     get:
       tags:
         - SA
-      summary: API Rest per il recupero dello storico di un documento del FVOE. SINCRONO
-      description: viene resituito il dettaglio dello storico di un documento del FVOE.
+      summary: API Rest per il recupero dello storico di un documento del Fascicolo Virtuale dell'Operatore Economico. SINCRONO
+      description: viene resituito il dettaglio dello storico di un documento del Fascicolo Virtuale dell'Operatore Economico.
       operationId: idStoricoDocumentoFVOEDettaglio
       parameters:
         - in: query
@@ -420,6 +553,7 @@ paths:
           schema:
             type: string
             example: "507f1f77bcf86cd799439011"
+          required: true   
       responses:
         '200':
           description: Operazione terminato con successo
@@ -447,20 +581,20 @@ paths:
       parameters:
         - in: query
           name: codiceAppalto
-          description: il codice dell'Appalto         
+          description: il codice dell'Appalto. Valore obbligatorio se non sono presenti idAppalto, CID e idFascicolo.         
           schema:
-            type: integer
-            format: int32
+            type: string
         - in: query    
           name: idAppalto
-          description: Identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by FC4122).
+          description: Identificativo univoco dell'Appalto definito da ANAC (A UUID specified by FC4122).
+            Valore obbligatorio se non sono presenti codiceAppalto, CID e idFascicolo.
           schema:
             type: string
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         - in: query
           name: CIG
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC
+          description: Identificativo univoco Gara-Lotto rilasciato da ANAC. Valore obbligatorio se non sono presenti codiceAppalto, idAppalto e idFascicolo.
           schema:
             type: string
             example: 9050626CD6
@@ -472,42 +606,42 @@ paths:
             example: "507f1f77bcf86cd799439011"
         - in: query
           name: dataInserimentoDa
-          description: data di inserimento del documento - intervallo successivo (A datetime specified by RF3339)
+          description: data di inserimento del documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataInserimentoA
-          description: data di inserimento del documento - intervallo precedente (A datetime specified by RF3339)
+          description: data di inserimento del documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'  
         - in: query
           name: dataEmissioneDa
-          description: data di emissione del documento - intervallo successivo (A datetime specified by RF3339)
+          description: data di emissione del documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataEmissioneA
-          description: data di emissione del documento - intervallo precedente (A datetime specified by RF3339)
+          description: data di emissione del documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'          
         - in: query
           name: dataFineValiditaDa
-          description: data fine validità del documento - intervallo successivo (A datetime specified by RF3339)
+          description: data fine validità del documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataFineValiditaA
-          description: data fine validità del documento - intervallo precedente (A datetime specified by RF3339)
+          description: data fine validità del documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
@@ -520,28 +654,28 @@ paths:
             example: '2342344342'
         - in: query
           name: dataProtocolloDa
-          description: Data di protocollo dell'Documento - intervallo successivo (A datetime specified by RF3339)
+          description: Data di protocollo dell'Documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataProtocolloA
-          description: Data di protocollo dell'Documento - intervallo precedente (A datetime specified by RF3339)
+          description: Data di protocollo dell'Documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'          
         - in: query
           name: dataCreazioneDa
-          description: Data di creazione dell'Documento - intervallo successivo (A datetime specified by RF3339)
+          description: Data di creazione dell'Documento - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataCreazioneA
-          description: Data di creazione dell'Documento - intervallo precedente (A datetime specified by RF3339) 
+          description: Data di creazione dell'Documento - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339) 
           schema:
             type: string
             format: datetime
@@ -551,24 +685,37 @@ paths:
           description: stato del documento
           schema:
             $ref: '#/components/schemas/StatoDocumentoEnum'
+          example:
+            codice: "01"
         - in: query  
           name: tipo  
           description: tipo del documento
           schema:
-            $ref: '#/components/schemas/TipoDocumentoEnum' 
-          example: 'VISURA_CAMERALE' 
+            $ref: '#/components/schemas/TipoDocumentoEnum'
+          example:
+            codice: "13"  
+        - in: query
+          name: datiAggiuntivi
+          description: dati aggiuntivi del documento. Definiti in JSON
+          schema:
+            type: string
+          example: "{id=45, { persona{codice=45} } }"          
         - in: query
           name: page
-          description: numero di pagine da visualizzare
+          description: numero della pagina da visualizzare. 
           schema:
             type: integer
             format: int32
+            minimum: 1
+            default: 1
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: numero di elementi per pagina.
           schema:
             type: integer
             format: int32
+            minimum: 1
+            default: 20
       responses:
         '200':
           description: Operazione terminato con successo
@@ -576,6 +723,41 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DocumentiListaResponse' 
+              example:
+                status: 200
+                title: "Operazione terminata correttamente"
+                totRows: 2
+                totPages: 1
+                currentPage: 1
+                elementPage": 2
+                result: 
+                  - idDocumento: "507f1f77bcf86cd799439011"
+                    tipo: 
+                      codice: "01"
+                      descrizione: 
+                        it: "DURC"
+                    stato: 
+                      codice: "21"
+                      descrizione: 
+                        it: "IN LAVORAZIONE"
+                    oggetto: ""
+                    dataInserimento: "2014-02-28T18:07:17Z"
+                    fascicoli: 
+                      - idFascicolo: "507f1f77bcf86cd799439011"
+                      - idFascicolo: "507f1f77bcf86cd799439011"
+                  - idDocumento: "507f1f77bcf86cd799888889"
+                    tipo: 
+                      codice: "01"
+                      descrizione: 
+                        it: "DURC"
+                    stato: 
+                      codice: "21"
+                      descrizione: 
+                        it: "IN LAVORAZIONE"
+                    oggetto: ""
+                    dataInserimento: "2014-02-28T18:07:17Z"
+                    fascicoli: 
+                      - idFascicolo: "507f1f77cdf86cd799489011"      
           links:
             RecuperaDocumentoFVAIdLink:  
               operationId: idDocumentoFVADettaglio
@@ -589,8 +771,6 @@ paths:
             $ref: '#/components/responses/404NotFound'
         '429':
             $ref: '#/components/responses/429TooManyRequests'
-        '500':
-          $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
   /recupera-documento-fva:
@@ -607,6 +787,7 @@ paths:
           schema:
             type: string
             example: "507f1f77bcf86cd799439011"
+          required: true   
       responses:
         '200':
           description: Operazione terminato con successo. Viene restituito il Documento del Fascicolo Virtuale dell'Appalto
@@ -615,6 +796,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RecuperaDocumentoResponse'
+              example:
+                status: 200
+                title: "Operazione Effettuata"
+                documento:
+                  idDocumento: "775f1f88bcf86cd987639011"
+                  tipo: 
+                    codice: "01"
+                    descrizione: 
+                      it: "DURC"
+                  stato: 
+                    codice: "21"
+                    descrizione: 
+                      it : "IN LAVORAZIONE"
+                  dataInserimento: '2022-01-23T12:02:05Z' 
+                  dataEmissione: '2022-01-23T12:02:05Z' 
+                  dataFineValidita: '2022-01-23T12:02:05Z' 
+                  numeroProtocollo: '2342344342'
+                  dataProtocollo: '2022-01-23T12:02:05Z' 
+                  utenteCreazione: "UDI.8909"  
+                  dataCreazione: '2022-01-23T12:02:05Z'
+                  datiAggiuntivi: "{id=45, { persona{codice=45} } }"  
+                  fascicoli: 
+                    idFascicolo: "890f1f77bcf86cd799888888"
+                  contenutoDocumento: 
+                    nomeFile: "Allegato8989.pdf"
+                    estensione: "PDF"
+                    size: 2313
+                    contenuto: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+   
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -629,7 +839,6 @@ paths:
     get:
       tags:
         - SA
-        - OE
       summary: API Rest per il recupero dello storico di un documento del Fascicolo Virtuale dell'Appalto. SINCRONO
       description: viene resituito il dettaglio dello storico di un documento del Fascicolo Virtuale dell'Appalto.
       operationId: idStoricoDocumentoFVADettaglio
@@ -640,6 +849,7 @@ paths:
           schema:
             type: string
             example: "507f1f77bcf86cd799439011"
+          required: true   
       responses:
         '200':
           description: Operazione terminato con successo
@@ -661,62 +871,81 @@ paths:
     get:
       tags:
         -  SA
-      summary: API Rest per la ricerca dei fascicoli degli appalti. SINCRONO
+      summary: API Rest per la ricerca dei Fascicoli Virtuale degli Appalti. SINCRONO
       description: viene recuperata la lista con i dati di sintesi dei FVA. SINCRONO
       operationId: idFascicoliRicerca
       parameters:
         - in: query
-          name: codiceAppalto
-          description: il codice dell'Appalto         
-          schema:
-            type: integer
-            format: int32
-        - in: query    
-          name: idAppalto
-          description: Identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by FC4122).
+          name: codiceSA
+          description: Codice AUSA della Stazione Appaltante. Viene popolata solo se il chiamante é diverso dalla SA. 
           schema:
             type: string
-            format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
-        - in: query
-          name: CIG
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC
+          example: 'SDE3434DFS4'
+        - in: query  
+          name: stato  
+          description: stato del fascicolo
           schema:
-            type: string
-            example: 9050626CD6
+            $ref: '#/components/schemas/StatoFascicoloEnum'
+          example: 
+            codice: "01"
         - in: query
           name: dataCreazioneDa
-          description: Data di crezione del Fascicolo - intervallo successivo (A datetime specified by RF3339)
+          description: Data di crezione del Fascicolo - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: datetime
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataCreazioneA
-          description: Data di crezione del Fascicolo - intervallo precedente (A datetime specified by RF3339) 
+          description: Data di crezione del Fascicolo - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339) 
           schema:
             type: string
             format: datetime
-          example: '2015-05-28T14:07:17Z'  
+          example: '2015-05-28T14:07:17Z' 
+        - in: query
+          name: datiAggiuntivi
+          description: dati aggiuntivi definiti dal Sistema proprietario del documento. Definiti in JSON. Alternativo a tutti i campi filtro ad eccezione del codiceSA
+          schema:
+            type: string
+          example: "{id=45, { persona{codice=45} } }"    
         - in: query
           name: page
-          description: numero di pagine da visualizzare
+          description: numero della pagina da visualizzare.
           schema:
             type: integer
             format: int32
+            minimum: 1
+            default: 1
+          example: 2  
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: numero di elementi per pagina.
           schema:
             type: integer
             format: int32
+            minimum: 1
+            default: 20
+          example: 40  
       responses:
         '200':
           description: Operazione terminato con successo
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FVAListaResponse'          
+                $ref: '#/components/schemas/FVAListaResponse'    
+          links:
+            RecuperaStoricoFascicoloFVAIdLink: 
+              operationId: idStoricoFascicoloFVADettaglio
+              parameters:
+                idFascicolo: '$response.body#/result.idFascicolo'
+              description: >
+                Il valore di `idFascicolo` restituito nella riposta può essere usato per richiamare `GET /recupera-storico-fascicolo-fva`.
+            RecuperaDocumentoFVAIdLink:  
+              operationId: idDocumentoFVADettaglio
+              parameters:
+                idDocumento: '$response.body#/result/documenti.idDocumento'
+              description: >
+                Il valore di `idDocumento` restituito nella riposta può essere usato per richiamare `GET /recupera-documento-fva`.     
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -724,7 +953,7 @@ paths:
         '429':
             $ref: '#/components/responses/429TooManyRequests'
         '500':
-          $ref: '#/components/responses/500InternalServerError'
+            $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
   /recupera-fascicolo-fva:
@@ -733,21 +962,27 @@ paths:
          - SA
       summary: API Rest per la consultazione delle informazioni di dettaglio di un Fascicolo Virtuale dell'Appalto. SINCRONO
       description: vengono restituite le informazioni di dettaglio di un Fascicolo Virtuale dell'Appalto. SINCRONO
-      operationId: idFascicoloDettaglio
+      operationId: idFascicoloFVADettaglio
       parameters:
         - in: query
+          name: codiceAppalto
+          description: il codice dell'Appalto, alternativo all'idAppalto o al CIG         
+          schema:
+            type: string
+            example: "2397879"  
+        - in: query
           name: idAppalto
-          description: Id dell'Appalto, alternativo al CIG
+          description: Id dell'Appalto, alternativo al codiceAppalto o al CIG
           schema:
             type: string
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         - in: query
           name: CIG
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC, alternativo all'idAppalto
+          description: Identificativo univoco Gara-Lotto rilasciato da ANAC, alternativo al codiceAppalto o all'idAppalto
           schema:
             type: string
-            example: 9050626CD6
+            example: "9050626CD6"
       responses:
         '200':
           description: Operazione terminato con successo. Viene restituito il Fascicolo dell'Appalto
@@ -775,8 +1010,8 @@ paths:
       operationId: idStoricoFascicoloFVADettaglio
       parameters:
         - in: query
-          name: idDocumento
-          description: Identificato del Documento generato da ANAC
+          name: idFascicolo
+          description: Identificato del Fascicolo generato da ANAC
           schema:
             type: string
             example: "507f1f77bcf86cd799439011"
@@ -801,19 +1036,17 @@ paths:
     get:
       tags:
         - SA
-        - OE
       summary: API Rest per il recupero dell’anagrafica degli OE. SINCRONO
       description: vengono restituito i dati anagrafici dell'OE. SINCRONO
       operationId: idAnagraficaOERicerca
       parameters:
         - in: query    
           name: codiceFiscale
-          description: Codice Fiscale OE.
+          description: Codice Fiscale dell' Operatore Economico
           required: true
           schema:
             type: string
-            format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
+            example: "CCCNNN00A01A000A"  
       responses:
         '200':
           description: Operazione terminato con successo
@@ -902,6 +1135,10 @@ components:
         application/problem+json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
+          example:
+            detail: "File not found."
+            status: 404
+            title: "Oggetto non trovato."    
     429TooManyRequests:
       description: Limite di richieste raggiunto
       headers:
@@ -911,6 +1148,10 @@ components:
         application/problem+json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
+          example:
+            detail: "Request took too long to complete."
+            status: 503
+            title: "Hai superato la quota di richieste."  
     500InternalServerError:
       description: Errore generico. Operazione terminato con errore. Viene restituito il dettaglio dell'errore
       headers: *ratelimit_headers
@@ -936,49 +1177,50 @@ components:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
   schemas:
+    StatoFascicoloEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoFascicoloEnum'
     StatoDocumentoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoDocumentoEnum'
-    StatoRichiestaEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoRichiestaEnum'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoDocumentoEnum'
     TipoDocumentoEnum: 
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipoDocumentoEnum'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoDocumentoEnum'
     AnagraficaOEType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AnagraficaOEType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/AnagraficaOEType' 
     FVOEType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/FVOEType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/FVOEType' 
     FVAType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/FVAType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/FVAType'
     DocumentoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoType'
-    DocumentoOEType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoOEType'
-    DocumentoAType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DocumentoAType'
-    ContentDocumentType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/ContentDocumentType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoType'
     AutorizzazioneAccessoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AutorizzazioneAccessoType' 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/AutorizzazioneAccessoType' 
     RichiestaAccessoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/RichiestaAccessoType'
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/RichiestaAccessoType'
+    ContentDocumentType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType' 
+    StatoRichiestaDocumentoType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/StatoRichiestaDocumentoType'
     RichiestaAccessoRequest:
       allOf: # estende il modello dati RichiestaAccessoType
         - $ref: '#/components/schemas/RichiestaAccessoType'
       example:
-        dataCreazione: "2022-01-23T12:02:05Z"
-        dataScadenza: "2022-01-23T12:02:05Z"
-        anagraficaOE:
-            codice: "UI78588658"
-        lottoType:
-          CIG: "ACD4546346A"
+        dataInizioAutorizzazione: "2022-01-23T12:02:05Z"
+        dataFineAutorizzazione: "2023-01-23T12:02:05Z"
+        operatoriEconomici:
+          - codiceFiscale: "MFNFRC87D04H501C"
+          - codiceFiscale: "80140110588"
+        appalto:
+          idAppalto: "ACD4546346A"
     AutorizzaAccessoRequest:
       allOf: # estende il modello dati AutorizzaAccessoType
         - $ref: '#/components/schemas/AutorizzazioneAccessoType' 
       example:
-        stato: "AUTORIZZATO"
+        stato:
+          codice: "03"
+          descrizione: 
+            it: "AUTORIZZATO"
         dataScadenza: "2022-01-23T12:02:05Z"
         richiestaAccesso: 
           idRichiesta: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-
     PaginazioneType:
       description: Oggetto per la paginazione dei risultati
       type: object
@@ -1031,27 +1273,10 @@ components:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:  
-        document: 
-          oneOf:
-            - $ref: '#/components/schemas/DocumentoOEType'
-            - $ref: '#/components/schemas/DocumentoAType'
-          discriminator:
-            propertyName: tipoOggetto
-        content:
+        documento: 
+          $ref: '#/components/schemas/DocumentoType'
+        contenutoDocumento:
           $ref: '#/components/schemas/ContentDocumentType'
-      example:
-        status: 200
-        title: "Operazione Effettuata"
-        document:
-          idDocument: "507f1f88bcf86cd987639011"
-          tipoDcumento: "DURC"
-          statoDocumento: "IN LAVORAZIONE"
-          fascicoloOE:
-            idFascicolo: "507f1f77bcf86cd799439011"
-        content: 
-          estensione: "PDF"
-          size: 2313
-          content: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     RecuperaFascicoloResponse :
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -1067,7 +1292,60 @@ components:
         title: "Operazione Effettuata"
         fascicolo:
           idFascicolo: "507f1f77hcf86cd799765676"
-          stato: "IN LAVORAZIONE"
+          codiceFascicolo : "2397879"
+          stato : 
+            codice: "01"
+            descrizione: 
+              it: "Aperto"
+          dataCreazione : "2015-05-28T14:07:17Z"
+          appalto :
+            idAppalto : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          documenti :
+            - idDocumento : "c3425891-1e8c-42ba-a64e-4f0d77cf1f99"
+              tipo: 
+                codice: "01"
+                descrizione: 
+                  it: "DURC"
+              stato: 
+                codice: "01"
+                descrizione: 
+                  it: "Creato"
+              oggetto : ""
+              datacreazione : "2016-07-03T15:04:00Z"
+            - idDocumento : "24f209fb-5f48-4793-8e3f-45d9f57d1997"
+              tipo : 
+                codice: "01"
+                descrizione: 
+                  it: "Visura camerale"
+              stato : 
+                codice: "01"
+                descrizione: 
+                  it: "Creato"
+              oggetto : ""
+              datacreazione : "2016-07-03T15:04:00Z"
+          sottoFascicoli :
+            - idFascicolo : "c3425891-1e8c-42ba-a64e-4f0d77cf1f99"
+              tipo :
+                codice: "FVC"
+                descrizione: 
+                  it: "Fascicolo Virtuale del Concorrente"
+              stato: 
+                codice: "01"
+                descrizione: 
+                  it: "Creato"
+              oggetto : ""
+              datacreazione : "2016-07-03T15:04:00Z"
+            - idFascicolo : "24f209fb-5f48-4793-8e3f-45d9f57d1997"
+              tipo : 
+                codice: "FVC"
+                descrizione: 
+                  it: "Fascicolo Virtuale del Concorrente"
+              stato: 
+                codice: "01"
+                descrizione: 
+                  it: "Creato"
+              oggetto : ""
+              datacreazione : "2016-07-03T15:04:00Z"    
     ConsultaAnagraficaOEResponse :
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -1090,8 +1368,80 @@ components:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
-        stato:
-          $ref: '#/components/schemas/StatoRichiestaEnum'
+        autorizzazione:
+          $ref: '#/components/schemas/AutorizzazioneAccessoType'
+      example: 
+        status: 200
+        title: "Operazione Effettuata"
+        autorizzazione:
+            idAutorizzazione: "1789c793-bdbe-4e8c-aa7e-4117145c739b"
+            dataInizio: '2022-01-23T12:02:05Z'
+            dataFine: '2023-01-23T12:02:05Z'
+            operatoreEconomico:
+              codiceFiscale: "MFNFRC87D04H501C"
+            appalto:
+              idAppalto: "ACD4546346A"
+            stato: 
+              codice: "01"
+              descrizione: 
+                it: "Autorizzato"
+            motivo: ""
+            autorizzante:
+              codiceFiscale: "UI78588658"
+            richiestaAccesso:
+              idRichiesta: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+            chiaveAccesso:
+               "507f1f77bcf86cd799439011"
+    StatoRichiestaDocumentoResponse:
+      allOf: # estende lo schema dati di BaseResponse
+        - $ref: '#/components/schemas/BaseResponse'
+      description: Oggetto generico di ritorno di una risposta 
+      type: object
+      additionalProperties: false
+      properties:
+        result: 
+          description: risposta di una lista di oggetti stato richiesta documento specifica del servizio SINCRONO
+          type: array
+          items:
+            $ref: '#/components/schemas/StatoRichiestaDocumentoType'  
+      example: 
+        status: 200
+        title: "Operazione Effettuata"
+        result:
+          - statoRichiestaDocumento:
+              chiaveAccesso:
+                 "507f1f77bcf86cd799439011"
+              operatoreEconomico:
+                codiceFiscale: "MFNFRC87D04H501C"
+              soggetto:
+                codiceFiscale: "RSSCRL67E41C351E" 
+              tipoDocumento: 
+                codice: "01"
+                descrizione: 
+                  it: "DURC"
+              idRichiesta: "1789c793-bdbe-4e8c-aa7e-4117145c739b"            
+              stato: 
+                codice: "01"
+                descrizione: 
+                  it: "Risposta Inoltrata"
+              idDocumento:
+                 "507f1f77bcf86cd799439011"
+          - statoRichiestaDocumento:
+              chiaveAccesso:
+                 "507f1f77bcf86cd799439011"
+              operatoreEconomico:
+                codiceFiscale: "MFNFRC87D04H501C"
+              soggetto:
+                codiceFiscale: "VRDMRA69S15G478P" 
+              tipoDocumento: 
+                codice: "01"
+                descrizione: 
+                  it: "DURC"
+              idRichiesta: "1789c793-bdbe-4e8c-aa7e-4117145c739b"            
+              stato: 
+                codice: "01"
+                descrizione: 
+                  it: "Richiesta Inoltrata"
     FVAListaResponse :
       allOf: # estende la classe BaseResponse e PaginazioneType
         - $ref: '#/components/schemas/BaseResponse'
@@ -1104,7 +1454,37 @@ components:
           description: risposta di una lista di oggetti paginati specifica del servizio SINCRONO
           type: array
           items:
-            $ref: '#/components/schemas/FVAType'        
+            $ref: '#/components/schemas/FVAType' 
+      example:
+          status: 200
+          title: "Operazione terminata correttamente"
+          totRows: 500
+          totPages: 13
+          currentPage: 1
+          elementPage: 2
+          result: 
+              - idFascicolo: "45353@#sdF"
+                codiceFascicolo: "2397879"
+                stato: 
+                  codice: "01"
+                  descrizione: 
+                    it: "Aperto"
+                dataCreazione: "2015-05-28T14:07:17Z"
+                appalto:
+                  idAppalto: "y71d4fae-7dec-11d0-a765-00a0c93f6bf6"
+                numDocumenti: 24
+                numSottoFascicoli: 0
+              - idFascicolo: "453jkui853"
+                codiceFascicolo : "239786"
+                stato: 
+                  codice: "01"
+                  descrizione: 
+                    it: "Aperto"
+                dataCreazione: "2015-04-01T14:07:17Z"
+                appalto :
+                  idAppalto: "8a5cfb85-1013-4070-868a-52eebd5c77e6"
+                numDocumenti: 150  
+                numSottoFascicoli: 4
     DocumentiListaResponse :
       allOf: # estende la classe BaseResponse e PaginazioneType
         - $ref: '#/components/schemas/BaseResponse'
@@ -1118,22 +1498,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/DocumentoType'
-      example:
-        totRows: 2
-        totPages: 1
-        currentPage: 1
-        elementPage": 2
-        result: 
-          - idDocument: "507f1f77bcf86cd799439011"
-            tipoDcumento: "DURC"
-            statoDocumento: "IN LAVORAZIONE"
-            fascicoloOE: 
-              idFascicolo: "507f1f77bcf86cd799439011"
-          - idDocument: "507f1f77bcf86cd799888889"
-            tipoDcumento: "DURC"
-            statoDocumento: "IN LAVORAZIONE"
-            fascicoloOE: 
-              idFascicolo: "507f1f77cdf86cd799489011"
     ConsultaStoricoOEResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -1142,7 +1506,32 @@ components:
           description: Lista documenti
           type: array
           items:
-            $ref: '#/components/schemas/DocumentoOEType'
+            $ref: '#/components/schemas/DocumentoType'
+      example:
+        status: 200
+        title: "Operazione terminata correttamente"
+        result: 
+          - idDocumento: "45353@#sdF"
+            azione : 
+              codice: "01"
+              descrizione: 
+                it: "Aperto"
+            utenteCreazione: "X4563X"
+            dataCreazione: "2014-02-28T18:07:17Z"
+          - idDocumento: "45353@#sdF"
+            azione: 
+              codice: "04"
+              descrizione: 
+                it: "Aggiunto documento"
+            utenteCreazione : "X4578X"
+            dataCreazione : "2015-05-28T14:07:17Z"      
+          - idDocumento: "45353@#sdF"
+            azione : 
+              codice: "04"
+              descrizione: 
+                it: "Aggiunto documento"
+            utenteCreazione : "Y67854"
+            dataCreazione : "2016-07-12T14:07:17Z"         
     ConsultaStoricoAResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -1151,16 +1540,66 @@ components:
           description: Lista documenti
           type: array
           items:
-            $ref: '#/components/schemas/DocumentoAType'
+            $ref: '#/components/schemas/DocumentoType'
+      example:
+        status: 200
+        title: "Operazione terminata correttamente"
+        result: 
+          - idDocumento: "654g1f77bcf86cd799487678"
+            azione : 
+              codice: "01"
+              descrizione: 
+                it: "Aperto"
+            utenteCreazione : "X4563X"
+            dataCreazione : "2014-02-28T18:07:17Z"
+          - idDocumento: "120g1h67bcf86cd79909121"
+            azione : 
+              codice: "04"
+              descrizione: 
+                it: "Aggiunto documento"
+            utenteCreazione : "X4578X"
+            dataCreazione : "2015-05-28T14:07:17Z"      
+          - idDocumento: "430h1f77bcf86cd799480007"
+            azione : 
+              codice: "04"
+              descrizione: 
+                it: "Aggiunto documento"
+            utenteCreazione : "Y67854"
+            dataCreazione : "2016-07-12T14:07:17Z"              
     ConsultaStoricoFVAResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
-        documenti:
-          description: Lista documenti
+        fascicoli:
+          description: Lista Fascicoli
           type: array
           items:
-            $ref: '#/components/schemas/FVAType'          
+            $ref: '#/components/schemas/FVAType'
+      example:
+        status: 200
+        title: "Operazione terminata correttamente"
+        result: 
+          - idFascicolo: "807f1f77bcf86cd799439011"
+            azione : 
+              codice: "01"
+              descrizione: 
+                it: "Aperto"
+            utenteCreazione : "X4563X"
+            dataCreazione : "2014-02-28T18:07:17Z"
+          - idFascicolo: "507f191e810c19729de860ea"
+            azione : 
+              codice: "04"
+              descrizione: 
+                it: "Aggiunto documento"
+            utenteCreazione : "X4578X"
+            dataCreazione : "2015-05-28T14:07:17Z"      
+          - idFascicolo: "78600020f51bb4362eee2a4d"
+            azione : 
+              codice: "04"
+              descrizione: 
+                it: "Aggiunto documento"
+            utenteCreazione : "Y67854"
+            dataCreazione : "2016-07-12T14:07:17Z"        
     BaseResponse:
       type: object
       additionalProperties: false
@@ -1214,21 +1653,22 @@ components:
               maxLength: 2048
               type: string
               example: 'https://tools.ietf.org/html/rfc7231#section-6.6.4'
-          errori:
-            description: elenco degli errori
-            type: object
-            properties:
-              codice:
-                type: string
-                example: '001'
-              descrizione:
-                maxLength: 4096
-                pattern: ^.{0,1024}$
-                type: string
-                example: 'Non è stato indicato il campo Motivazione richiesta CIG.'
     ErrorResponse:
       allOf: # estende la classe BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
+      properties:
+        errori:
+          description: elenco degli errori
+          type: object
+          properties:
+            codice:
+              type: string
+              example: '001'
+            descrizione:
+              maxLength: 4096
+              pattern: ^.{0,1024}$
+              type: string
+              example: 'Non è stato indicato il campo Motivazione richiesta CIG.'
     AckResponse:
       allOf: # estende la classe BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
