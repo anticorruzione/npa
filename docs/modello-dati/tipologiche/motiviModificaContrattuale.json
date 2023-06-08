@@ -1,0 +1,63 @@
+[{
+    "codice":"add-wss",
+    "descrizione": {
+		"it": "Necessità di ulteriori lavori, forniture e servizi eseguiti dall'appaltatore originale.",
+		"en": "Need for additional works, services or supplies by the original contractor."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"mod-cir",
+    "descrizione": {
+		"it": "Necessità di modifiche dovute a circostante non prevedibili da un committente diligente.",
+		"en": "Need for modifications because of circumstances which a diligent buyer could not predict."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"other",
+    "descrizione": {
+		"it": "Altro",
+		"en": "Other"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"mod-rev",
+    "descrizione": {
+		"it": "Modifiche basate su clausole di revisione dei prezzi o opzioni.",
+		"en": "Modifications based on review clauses or options."
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"mod-repl",
+    "descrizione": {
+		"it": "Modifiche dovute al fatto che un nuovo contraente sostituisce l'aggiudicatario iniziale perché gli succede o perché il committente si assume gli obblighi del contraente principale nei confronti dei suoi subappaltatori.",
+		"en": "Modifications where a new contractor replaces an old contractor because of succession or when the buyer assumes the contractor’s obligations towards its subcontractors."
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"mod-nons",
+    "descrizione": {
+		"it": "Le modifiche non sono sostanziali.",
+		"en": "Modifications that are not substantial."
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"mod-minv",
+    "descrizione": {
+		"it": "Modifiche inferiori a una soglia minima ("de minimis").",
+		"en": "Modifications under a minimal value ("de minimis")."
+		},		
+    "datainizio":null,
+    "datafine":null
+}]

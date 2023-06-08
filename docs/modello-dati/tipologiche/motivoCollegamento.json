@@ -1,103 +1,101 @@
-[{
-    "codice":"1",
+[
+  {
+    "codice": "1",
     "descrizione": {
-		"it": "Ripetizione di lavori o servizi analoghi",
-		"en": "Ripetizione di lavori o servizi analoghi"
-		},
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"2",
+      "it": "Ripetizione di lavori o servizi analoghi",
+      "en": "Ripetizione di lavori o servizi analoghi"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "2",
     "descrizione": {
-		"it": "Consegne complementari",
-		"en": "Consegne complementari"
-		},
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"3",
+      "it": "Consegne complementari",
+      "en": "Consegne complementari"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "3",
     "descrizione": {
-		"it": "Lavori, servizi o forniture supplementari",
-		"en": "Lavori, servizi o forniture supplementari"
-		},	
-    "datainizio":null,
-    "datafine":"2020-05-12T00:00:00Z"
-},
-{
-    "codice":"4",
+      "it": "Lavori, servizi o forniture supplementari",
+      "en": "Lavori, servizi o forniture supplementari"
+    },
+    "datainizio": null,
+    "datafine": "2020-05-12T00:00:00Z"
+  },
+  {
+    "codice": "4",
     "descrizione": {
-		"it": "Procedura a seguito di precedente revoca di aggiudicazione o di rescissione contrattuale, 
-senza scorrimento graduatoria",
-		"en": "Procedura a seguito di precedente revoca di aggiudicazione o di rescissione contrattuale, 
-senza scorrimento graduatoria"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"5",
+      "it": "Procedura a seguito di precedente revoca di aggiudicazione o di rescissione contrattuale, senza scorrimento graduatoria",
+      "en": "Procedura a seguito di precedente revoca di aggiudicazione o di rescissione contrattuale, senza scorrimento graduatoria"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "5",
     "descrizione": {
-		"it": "Procedura a seguito di precedente gara annullata o deserta (senza esito)",
-		"en": "Procedura a seguito di precedente gara annullata o deserta (senza esito)"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"6",
+      "it": "Procedura a seguito di precedente gara annullata o deserta (senza esito)",
+      "en": "Procedura a seguito di precedente gara annullata o deserta (senza esito)"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "6",
     "descrizione": {
-		"it": "Affidamento dell’esecuzione o della progettazione dei lavori successiva a progettazione 
-o livello inferiore di progettazione",
-		"en": "Affidamento dell’esecuzione o della progettazione dei lavori successiva a progettazione 
-o livello inferiore di progettazione"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"7",
+      "it": "Affidamento dell’esecuzione o della progettazione dei lavori successiva a progettazione o livello inferiore di progettazione",
+      "en": "Affidamento dell’esecuzione o della progettazione dei lavori successiva a progettazione o livello inferiore di progettazione"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "7",
     "descrizione": {
-		"it": "Affidamento da parte di aggiudicatari di contratti di concessione o di project financing",
-		"en": "Affidamento da parte di aggiudicatari di contratti di concessione o di project financing"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"8",
+      "it": "Affidamento da parte di aggiudicatari di contratti di concessione o di project financing",
+      "en": "Affidamento da parte di aggiudicatari di contratti di concessione o di project financing"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "8",
     "descrizione": {
-		"it": "Modifiche contrattuali o varianti per le quali è necessaria una nuova procedura di affidamento",
-		"en": "Modifiche contrattuali o varianti per le quali è necessaria una nuova procedura di affidamento"
-		},	
-    "datainizio":"2019-10-21T00:00:00Z",
-    "datafine":null
-},
-{
-    "codice":"9",
+      "it": "Modifiche contrattuali o varianti per le quali è necessaria una nuova procedura di affidamento",
+      "en": "Modifiche contrattuali o varianti per le quali è necessaria una nuova procedura di affidamento"
+    },
+    "datainizio": "2019-10-21T00:00:00Z",
+    "datafine": null
+  },
+  {
+    "codice": "9",
     "descrizione": {
-		"it": "II fase Concorso di progettazione e idee",
-		"en": "II fase Concorso di progettazione e idee"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"10",
+      "it": "Servizio di progettazione discendente da concorso di progettazione e idee",
+      "en": "Servizio di progettazione discendente da concorso di progettazione e idee"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "10",
     "descrizione": {
-		"it": "No, nessuna ipotesi di collegamento",
-		"en": "No, nessuna ipotesi di collegamento"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"11",
+      "it": "No, nessuna ipotesi di collegamento",
+      "en": "No, nessuna ipotesi di collegamento"
+    },
+    "datainizio": null,
+    "datafine": null
+  },
+  {
+    "codice": "11",
     "descrizione": {
-		"it": "Affidamento a seguito di appalto pre-commerciale",
-		"en": "Affidamento a seguito di appalto pre-commerciale"
-		},	
-    "datainizio":"2021-05-19T00:00:00Z",
-    "datafine":null
-}]
+      "it": "Affidamento a seguito di appalto pre-commerciale",
+      "en": "Affidamento a seguito di appalto pre-commerciale"
+    },
+    "datainizio": "2021-05-19T00:00:00Z",
+    "datafine": null
+  }
+]

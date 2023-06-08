@@ -1,17 +1,17 @@
 [{
-    "codice":"1",
+    "codice":"R",
     "descrizione": {
-		"it": "Mandataria",
-		"en": "Mandataria"
+		"it": "ritardo",
+		"en": "ritardo"
 		},
     "datainizio":null,
     "datafine":null
 },
 {
-    "codice":"2",
+    "codice":"S",
     "descrizione": {
-		"it": "Mandante",
-		"en": "Mandante"
+		"it": "sospensione",
+		"en": "sospensione"
 		},
     "datainizio":null,
     "datafine":null

@@ -1,0 +1,25 @@
+[{
+    "codice":"GENERICO",
+    "descrizione": {
+		"it": "Documento generico.  Tipo DocumentoType",
+		"en": "Documento generico.  Tipo DocumentoType"
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"OE",
+    "descrizione": {
+		"it": "Documento dell'Operatore Economico. Tipo DocumentoOEType",
+		"en": "Documento dell'Operatore Economico. Tipo DocumentoOEType"
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"APPALTO",
+    "descrizione": {
+		"it": "Documento dell'Appalto. Tipo DocumentoAType",
+		"en": "Documento dell'Appalto. Tipo DocumentoAType"
+		},
+    "datainizio":null,
+    "datafine":null
+}]

@@ -23,7 +23,7 @@
 		"en": "Estrema urgenza settori speciali"
 		},	
     "datainizio":null,
-    "datafine":null
+    "datafine":"2023-12-31T00:00:00Z"
 },
 {
     "codice":"4",
@@ -51,4 +51,13 @@
 		},	
     "datainizio":"2022-03-03T00:00:00Z",
     "datafine":"2023-06-30T00:00:00Z"
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "no",
+		"en": "no"
+		},	
+    "datainizio":null,
+    "datafine":null
 }]

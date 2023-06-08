@@ -1,1 +1,54 @@
-TBD
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici",
+		"en": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "servizi di arbitrato e di conciliazione",
+		"en": "servizi di arbitrato e di conciliazione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007",
+		"en": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo",
+		"en": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Concessioni relative ad attività direttamente esposte alla concorrenza",
+		"en": "Concessioni relative ad attività direttamente esposte alla concorrenza"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Concessioni in materia di difesa o di sicurezza di cui al decreto legislativo 15 novembre 2011, n. 208",
+		"en": "Concessioni in materia di difesa o di sicurezza di cui al decreto legislativo 15 novembre 2011, n. 208"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

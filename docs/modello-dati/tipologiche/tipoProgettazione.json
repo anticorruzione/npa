@@ -1,8 +1,8 @@
 [{
     "codice":"1",
     "descrizione": {
-		"it": "Mandataria",
-		"en": "Mandataria"
+		"it": "Progetto di fattibilità tecnico-economica",
+		"en": "Progetto di fattibilità tecnico-economica"
 		},
     "datainizio":null,
     "datafine":null
@@ -10,8 +10,8 @@
 {
     "codice":"2",
     "descrizione": {
-		"it": "Mandante",
-		"en": "Mandante"
+		"it": "Progettazione esecutiva",
+		"en": "Progettazione esecutiva"
 		},
     "datainizio":null,
     "datafine":null

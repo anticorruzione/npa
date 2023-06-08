@@ -1,0 +1,1080 @@
+[{
+    "codice":"PL1.01",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform1.",
+		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform1."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.02",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform2.",
+		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform2."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.03",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3.",
+		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.04",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform4.",
+		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform4."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.05",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform5.",
+		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform5."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.06",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6.",
+		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.07",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.",
+		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.08",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8.",
+		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"PL1.09",
+    "descrizione": {
+		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9.",
+		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9."
+		},
+    "datainizio":null,
+    "datafine":null
+},{
+    "codice":"P1.10",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform10.",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform10."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.11",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform11.",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform11."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.12",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform12.",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform12."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.13",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform13.",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform13."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.14",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia regime alleggerito con invio al TED dell'eform14.",
+		"en": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia regime alleggerito con invio al TED dell'eform14."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.15.1",
+    "descrizione": {
+		"it": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15.",
+		"en": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.15.2",
+    "descrizione": {
+		"it": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15.",
+		"en": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.16",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform16.",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform16."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.17",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform17.",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform17."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.18",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform18.",
+		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform18."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.19",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia con invio al TED dell'eform19.",
+		"en": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia con invio al TED dell'eform19."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.20",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform20.",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform20."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.21",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform21.",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform21."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.23",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per settori ordinari pari /sopra soglia concorso progettazione con invio al TED dell'eform23.",
+		"en": "Scheda di pubblicazione avviso per settori ordinari pari /sopra soglia concorso progettazione con invio al TED dell'eform23."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P1.24",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per settori speciali pari /sopra soglia concorso progettazione con invio al TED dell'eform24.",
+		"en": "Scheda di pubblicazione avviso per settori speciali pari /sopra soglia concorso progettazione con invio al TED dell'eform24."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"PL2.1",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sotto soglia senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sotto soglia senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"PL2.2",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali sotto soglia senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali sotto soglia senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"PL2.3",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sotto soglia senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sotto soglia senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"PL2.7",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie (solo per: 1mln <= L< soglia) senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie (solo per: 1mln <= L< soglia) senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"PL2.8",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia  senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia  senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"PL2.9",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; procedure ordinarie (solo per: 1mln <L< soglia) senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; procedure ordinarie (solo per: 1mln <L< soglia) senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.10",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie; (solo per: 1mln <=L< soglia) senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie; (solo per: 1mln <=L< soglia) senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.11",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.12",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia regime alleggerito senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia regime alleggerito senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.13",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia regime alleggerito senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia regime alleggerito senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.14",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per concessioni sottosoglia regime alleggerito senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per concessioni sottosoglia regime alleggerito senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.16",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.17",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.18",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.19",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per concessioni sottosoglia senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per concessioni sottosoglia senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.20",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per settori ordinari sottosoglia regime alleggerito senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per settori ordinari sottosoglia regime alleggerito senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.21",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per settori speciali sottosoglia -  regime alleggerito senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per settori speciali sottosoglia -  regime alleggerito senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.23",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per settori ordinari sottosoglia concorsi di progettazione senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per settori ordinari sottosoglia concorsi di progettazione senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P2.24",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso per settori speciali sottosoglia concorsi di progettazione senza invio al ted",
+		"en": "Scheda di pubblicazione avviso per settori speciali sottosoglia concorsi di progettazione senza invio al ted"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P3.1",
+    "descrizione": {
+		"it": "Scheda di pubblicazione relativa ai contratti esclusi (generale o di tipo accordo quadro).",
+		"en": "Scheda di pubblicazione relativa ai contratti esclusi (generale o di tipo accordo quadro)."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P3.2",
+    "descrizione": {
+		"it": "Scheda di pubblicazione relativa ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ.",
+		"en": "Scheda di pubblicazione relativa ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P3.3",
+    "descrizione": {
+		"it": "Scheda di pubblicazione relativa ai contratti esclusi - adesione con confronto competitivo.",
+		"en": "Scheda di pubblicazione relativa ai contratti esclusi - adesione con confronto competitivo."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P3.4",
+    "descrizione": {
+		"it": "Scheda di pubblicazione relativa al contraente generale.",
+		"en": "Scheda di pubblicazione relativa al contraente generale."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P3.5",
+    "descrizione": {
+		"it": "Scheda di pubblicazione relativa alla scelta del socio privato nella società mista.",
+		"en": "Scheda di pubblicazione relativa alla scelta del socio privato nella società mista."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P4.1",
+    "descrizione": {
+		"it": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni)",
+		"en": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P4.2",
+    "descrizione": {
+		"it": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (ordinario/speciale)",
+		"en": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (ordinario/speciale)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P5",
+    "descrizione": {
+		"it": "Scheda relativa ad appalti soggetti a sola tracciabilità.",
+		"en": "Scheda relativa ad appalti soggetti a sola tracciabilità."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P6.1",
+    "descrizione": {
+		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto.",
+		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P6.2",
+    "descrizione": {
+		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Locazione Finanziaria",
+		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Locazione Finanziaria"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P6.3",
+    "descrizione": {
+		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità.",
+		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P6.4",
+    "descrizione": {
+		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC.",
+		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P6.5",
+    "descrizione": {
+		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione.",
+		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P6.6",
+    "descrizione": {
+		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratti di parternariato sociale.",
+		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratti di parternariato sociale."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P7.1",
+    "descrizione": {
+		"it": "Scheda relativa agli appalti e concessioni settori ordinari e speciali; appalti e concessioni settori ordinari e speciali regime alleggerito.",
+		"en": "Scheda relativa agli appalti e concessioni settori ordinari e speciali; appalti e concessioni settori ordinari e speciali regime alleggerito."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P7.2",
+    "descrizione": {
+		"it": "Scheda relativa agli appalti settori ordinari e speciali sottosoglia; appalti settori ordinari e speciali sottosoglia - regime alleggerito.",
+		"en": "Scheda relativa agli appalti settori ordinari e speciali sottosoglia; appalti settori ordinari e speciali sottosoglia - regime alleggerito."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"P7.3",
+    "descrizione": {
+		"it": "Scheda relativa ai settori ordianri e settori speciali.",
+		"en": "Scheda relativa ai settori ordianri e settori speciali."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"S1",
+    "descrizione": {
+		"it": "Scheda soggetti che hanno manifestato interesse nelle procedure a due fasi",
+		"en": "Scheda soggetti che hanno manifestato interesse nelle procedure a due fasi"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"S2",
+    "descrizione": {
+		"it": "Scheda relative alle offerte ricevute/OE invitati.",
+		"en": "Scheda relative alle offerte ricevute/OE invitati."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"S3",
+    "descrizione": {
+		"it": "Scheda relativa ai soggetti incaricati della progettazione.",
+		"en": "Scheda relativa ai soggetti incaricati della progettazione."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"S4",
+    "descrizione": {
+		"it": "Scheda relativa alla costituzione della società di scopo.",
+		"en": "Scheda relativa alla costituzione della società di scopo."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD1.25",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform25.",
+		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform25."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD1.26",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform26.",
+		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform26."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD1.27",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform27.",
+		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform27."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD1.28",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform28.",
+		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform28."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD2.25",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
+		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD2.26",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
+		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD2.27",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
+		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD2.28",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
+		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD3",
+    "descrizione": {
+		"it": "Scheda di affidamento diretto (EU), valida per affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED.",
+		"en": "Scheda di affidamento diretto (EU), valida per affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD4",
+    "descrizione": {
+		"it": "Scheda di adesione AQ/convenzione senza successivo confronto competitivo, senza invio al TED.",
+		"en": "Scheda di adesione AQ/convenzione senza successivo confronto competitivo, senza invio al TED."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"AD5",
+    "descrizione": {
+		"it": "Scheda relativa gli appalti di importo inferiore a 5K, senza invio al TED.",
+		"en": "Scheda relativa gli appalti di importo inferiore a 5K, senza invio al TED."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.29",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 29",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 29"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.30",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 30",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 30"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.31",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 31",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 31"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.32",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 32",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 32"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.33",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 33",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 33"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.34",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 34",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 34"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.35",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 35",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 35"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.36",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 36",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 36"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A1.37",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 37",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 37"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.29",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.30",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.31",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.32",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.33",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.34",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.35",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.36",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A2.37",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A3.1",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi (generale o di tipo accordo quadro)",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi (generale o di tipo accordo quadro)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A3.2",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A3.3",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A3.4",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa al contraente generale ",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa al contraente generale "
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A3.5",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa alla scelta del socio privato nella società mista",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa alla scelta del socio privato nella società mista"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A3.6",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ad affidamento a soc. inhouse",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ad affidamento a soc. inhouse"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A4.1",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto.",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A4.2",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Locazione finanziaria.",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Locazione finanziaria."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A4.3",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità.",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A4.4",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC.",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A4.5",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione.",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"A4.6",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Contratti di partenariato sociale.",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Contratti di partenariato sociale."
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"NAG1",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura europea",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura europea"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"NAG2",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura nazionale",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura nazionale"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"SC1",
+    "descrizione": {
+		"it": "Scheda di sottoscrizione del contratto",
+		"en": "Scheda di sottoscrizione del contratto"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"I1",
+    "descrizione": {
+		"it": "Scheda di inizio esecuzione",
+		"en": "Scheda di inizio esecuzione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"STAQ",
+    "descrizione": {
+		"it": "Scheda di stipula accordo quadro",
+		"en": "Scheda di stipula accordo quadro"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"M1.38",
+    "descrizione": {
+		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38",
+		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"M1.39",
+    "descrizione": {
+		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform39",
+		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform39"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"M1.40",
+    "descrizione": {
+		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform40",
+		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform40"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"M2.38",
+    "descrizione": {
+		"it": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED",
+		"en": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"M2.39",
+    "descrizione": {
+		"it": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED",
+		"en": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"M2.40",
+    "descrizione": {
+		"it": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED",
+		"en": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"SA1",
+    "descrizione": {
+		"it": "Scheda di stato avanzamento lavori",
+		"en": "Scheda di stato avanzamento lavori"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"SU1",
+    "descrizione": {
+		"it": "Scheda di richiesta subappalto",
+		"en": "Scheda di richiesta subappalto"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"SO1",
+    "descrizione": {
+		"it": "Scheda di sospensione",
+		"en": "Scheda di sospensione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"IR1",
+    "descrizione": {
+		"it": "Scheda di istanza di recesso",
+		"en": "Scheda di istanza di recesso"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"CL1",
+    "descrizione": {
+		"it": "Scheda di collaudo",
+		"en": "Scheda di collaudo"
+		},
+    "datainizio":null,
+    "datafine":null
+}]

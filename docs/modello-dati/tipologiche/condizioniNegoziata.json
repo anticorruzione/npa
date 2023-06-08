@@ -370,8 +370,8 @@
 {
     "codice":"42",
     "descrizione": {
-		"it": "II fase Concorso di progettazione e idee",
-		"en": "II fase Concorso di progettazione e idee"
+		"it": "Servizio di progettazione discendente da concorso di progettazione e idee",
+		"en": "Servizio di progettazione discendente da concorso di progettazione e idee"
 		},
     "datainizio":null,
     "datafine":null
@@ -390,6 +390,15 @@
     "descrizione": {
 		"it": "Procedura di affidamento a contraente vincolato da disposizioni sovraordinate",
 		"en": "Procedura di affidamento a contraente vincolato da disposizioni sovraordinate"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"45",
+    "descrizione": {
+		"it": "Procedura negoziata sottosoglia",
+		"en": "Procedura negoziata sottosoglia"
 		},
     "datainizio":null,
     "datafine":null

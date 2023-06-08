@@ -1,8 +1,8 @@
 [{
     "codice":"1",
     "descrizione": {
-		"it": "Mandataria",
-		"en": "Mandataria"
+		"it": "Contratto d'appalto",
+		"en": "Contratto d'appalto"
 		},
     "datainizio":null,
     "datafine":null
@@ -10,8 +10,8 @@
 {
     "codice":"2",
     "descrizione": {
-		"it": "Mandante",
-		"en": "Mandante"
+		"it": "Concessione",
+		"en": "Concessione"
 		},
     "datainizio":null,
     "datafine":null

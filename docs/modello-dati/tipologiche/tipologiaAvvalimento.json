@@ -1,8 +1,8 @@
 [{
     "codice":"1",
     "descrizione": {
-		"it": "Mandataria",
-		"en": "Mandataria"
+		"it": "Requisito",
+		"en": "Requisito"
 		},
     "datainizio":null,
     "datafine":null
@@ -10,8 +10,8 @@
 {
     "codice":"2",
     "descrizione": {
-		"it": "Mandante",
-		"en": "Mandante"
+		"it": "Miglioramento offerta",
+		"en": "Miglioramento offerta"
 		},
     "datainizio":null,
     "datafine":null

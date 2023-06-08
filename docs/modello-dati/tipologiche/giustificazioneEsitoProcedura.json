@@ -1,1 +1,99 @@
-TBD
+[{
+    "codice":"no-rece",
+    "descrizione": {
+		"it": "Non sono pervenuti offerte, domande di partecipazione o progetti",
+		"en": "No tenders, requests to participate or projects were received"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"all-rej",
+    "descrizione": {
+		"it": "Tutte le offerte, tutte le domande di partecipazione e tutti i progetti sono stati ritirati o ritenuti non ammissibili",
+		"en": "All tenders, requests to participate or projects were withdrawn or found inadmissible"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"no-signed",
+    "descrizione": {
+		"it": "L'offerente o gli offerenti meglio classificati hanno rifiutato di firmare il contratto",
+		"en": "The highest ranked tenderer(s) refused to sign the contract"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"ins-fund",
+    "descrizione": {
+		"it": "Decisione del committente dovuta a insufficiente disponibilità finanziaria",
+		"en": "Decision of the buyer, because of insufficient funds"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"chan-need",
+    "descrizione": {
+		"it": "Decisione del committente per sopravvenuti cambiamenti delle esigenze",
+		"en": "Decision of the buyer, because of a change in needs"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"tch-pr-error",
+    "descrizione": {
+		"it": "Decisione del committente non correlata a una richiesta dell'offerente di rivedere l'aggiudicazione a causa di errori tecnici o procedurali",
+		"en": "Decision of the buyer, not following a tenderer's request to review the award, because of technical or procedural errors"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"rev-buyer",
+    "descrizione": {
+		"it": "Decisione del committente correlata a una richiesta dell'offerente di rivedere l'aggiudicazione",
+		"en": "Decision of the buyer following a tenderer's request to review the award"
+		},		
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"rev-body",
+    "descrizione": {
+		"it": "Decisione dell'organismo competente per i ricorsi o di altra autorità giudiziaria",
+		"en": "Decision of a review body or another judicial body"
+		},			    
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"one-admis",
+    "descrizione": {
+		"it": "È stato ricevuto un solo progetto, una sola offerta o una sola domanda di partecipazione ammissibile",
+		"en": "Only one admissible tender, request to participate or project was received"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"other",
+    "descrizione": {
+		"it": "Altro",
+		"en": "Other"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"none-rej",
+    "descrizione": {
+		"it": "Non sono pervenute o sono state tutte respinte le offerte o domande di partecipazione",
+		"en": "No tenders or requests to participate were received or all were rejected"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

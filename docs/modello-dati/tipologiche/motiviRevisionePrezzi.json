@@ -1,0 +1,45 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Revisione dei prezzi sulla base di una clausola presente nel bando di gara",
+		"en": "Revisione dei prezzi sulla base di una clausola presente nel bando di gara"
+		},
+    "datainizio":"2016-04-10T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Revisione dei prezzi sulla base di disposizioni normative",
+		"en": "Revisione dei prezzi sulla base di disposizioni normative"
+		},
+    "datainizio":"2016-04-10T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Compensazioni per variazioni dei prezzi ",
+		"en": "Compensazioni per variazioni dei prezzi "
+		},	
+    "datainizio":"2016-04-10T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Eccessiva onerosità sopravvenuta contratti energia",
+		"en": "Eccessiva onerosità sopravvenuta contratti energia"
+		},	
+    "datainizio":"2016-04-10T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Altro",
+		"en": "Altro"
+		},	
+    "datainizio":"2016-04-10T00:00:00Z",
+    "datafine":null
+}]

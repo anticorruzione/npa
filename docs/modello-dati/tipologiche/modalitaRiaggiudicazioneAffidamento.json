@@ -1,0 +1,72 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "D.Lgs. 163/2006, art.113 c.4 e fattispecie consimili",
+		"en": "D.Lgs. 163/2006, art.113 c.4 e fattispecie consimili"
+		},
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "D.Lgs. 163/2006, art.140 c.1",
+		"en": "D.Lgs. 163/2006, art.140 c.1"
+		},
+    "datainizio":null,
+    "datafine":"2019-06-26T00:00:00Z"
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Liquidazione giudiziale, liquidazione coatta o concordato preventivo, insolvenza concorsuale o liquidazione dell’appaltatore",
+		"en": "Liquidazione giudiziale, liquidazione coatta o concordato preventivo, insolvenza concorsuale o liquidazione dell’appaltatore"
+		},	
+    "datainizio":"2019-06-26T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Risoluzione del contratto",
+		"en": "Risoluzione del contratto"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Recesso dal contratto (codice antimafia)",
+		"en": "Recesso dal contratto (codice antimafia)"
+		},	
+    "datainizio":"2019-06-26T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Recesso dal contratto su richiesta dell’appaltatore",
+		"en": "Recesso dal contratto su richiesta dell’appaltatore"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Dichiarazione giudiziale di inefficacia del contratto",
+		"en": "Dichiarazione giudiziale di inefficacia del contratto"
+		},		
+    "datainizio":"2019-06-26T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Revoca dell’aggiudicazione",
+		"en": "Revoca dell’aggiudicazione"
+		},			    
+    "datainizio":null,
+    "datafine":null
+}]

@@ -28,11 +28,11 @@
 {
     "codice":"4",
     "descrizione": {
-		"it": "",
-		"en": ""
+		"it": "Catalogo elettronico Art.57: richiesta di offerta",
+		"en": "Catalogo elettronico Art.57: richiesta di offerta"
 		},	
     "datainizio":null,
-    "datafine":null
+    "datafine":"2023-12-31T00:00:00Z"
 },
 {
     "codice":"5",

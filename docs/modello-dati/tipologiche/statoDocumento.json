@@ -1,1 +1,27 @@
-TBD
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Creato",
+		"en": "Create"
+		},
+    "datainizio":"2023-03-01T00:00:00Z",
+    "datafine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Aggiornato",
+		"en": "Updated"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Eliminato",
+		"en": "Deleted"
+		},
+    "datainizio":"2023-03-01T00:00:00Z",
+    "datafine":null
+}]

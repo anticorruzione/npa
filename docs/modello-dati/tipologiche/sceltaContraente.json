@@ -1,80 +1,98 @@
 [{
-    "codice":"open",
-    "descrizione": {
-		"it": "Aperta",
-		"en": "Open"
-		},
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"restricted",
-    "descrizione": {
-		"it": "Ristretta",
-		"en": "Restricted"
-		},
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"neg-w-call",
-    "descrizione": {
-		"it": "Negoziata con previa indizione di gara / competitiva con negoziazione",
-		"en": "Negotiated with prior publication of a call for competition / competitive with negotiation"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"neg-wo-call",
-    "descrizione": {
-		"it": "Negoziata senza previa indizione di gara",
-		"en": "Negotiated without prior call for competition"
-		},	
-    "datainizio":null,
-    "datafine":null
-},
-{
-    "codice":"comp-dial",
+    "codice":"1",
     "descrizione": {
 		"it": "Dialogo competitivo",
-		"en": "Competitive dialogue"
-		},	
+		"en": "Dialogo competitivo"
+		},
     "datainizio":null,
     "datafine":null
 },
 {
-    "codice":"innovation",
+    "codice":"2",
+    "descrizione": {
+		"it": "Procedura competitiva (per le concessioni)",
+		"en": "Procedura competitiva (per le concessioni)"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"3",
     "descrizione": {
 		"it": "Partenariato per l'innovazione",
-		"en": "Innovation partnership"
+		"en": "Partenariato per l'innovazione"
 		},	
     "datainizio":null,
     "datafine":null
 },
 {
-    "codice":"oth-single",
+    "codice":"4",
     "descrizione": {
-		"it": "Altra procedura a fase unica",
-		"en": "Other single stage procedure"
+		"it": "Negoziata con previa indizione di gara / competitiva con negoziazione",
+		"en": "Negoziata con previa indizione di gara / competitiva con negoziazione"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Negoziata senza previa indizione di gara",
+		"en": "Negoziata senza previa indizione di gara"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Aperta",
+		"en": "Aperta"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Altra procedura a più fasi",
+		"en": "Altra procedura a più fasi"
 		},		
     "datainizio":null,
     "datafine":null
 },
 {
-    "codice":"oth-mult",
+    "codice":"8",
     "descrizione": {
-		"it": "Altra procedura a più fasi",
-		"en": "Other multiple stage procedure"
+		"it": "Altra procedura a fase unica",
+		"en": "Altra procedura a fase unica"
 		},			    
     "datainizio":null,
     "datafine":null
 },
 {
-    "codice":"comp-tend",
+    "codice":"9",
     "descrizione": {
-		"it": "Procedura di gara",
-		"en": "Competitive tendering"
+		"it": "Ristretta",
+		"en": "Ristretta"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"10",
+    "descrizione": {
+		"it": "Affidamento diretto",
+		"en": "Affidamento diretto"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Affidamento diretto in adesione AQ/Convenzione",
+		"en": "Affidamento diretto in adesione AQ/Convenzione"
 		},	
     "datainizio":null,
     "datafine":null

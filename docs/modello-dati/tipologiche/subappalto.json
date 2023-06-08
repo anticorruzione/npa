@@ -1,0 +1,54 @@
+[{
+    "codice":"shar-subc",
+    "descrizione": {
+		"it": "Quota dell'appalto che l'offerente intende subappaltare",
+		"en": "The share of the contract that the tenderer intends to subcontract"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"subc-oblig",
+    "descrizione": {
+		"it": "Subappaltatori proposti la cui indicazione è necessaria per adempiere l'obbligo di subappaltare una percentuale minima dell'appalto",
+		"en": "The proposed subcontractor(s) necessary to fulfill the obligation to subcontract a minimum percentage of the contract"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"subc-noblig",
+    "descrizione": {
+		"it": "Subappaltatori proposti in eccesso rispetto all'obbligo di subappaltare una percentuale minima dell'appalto",
+		"en": "The proposed subcontractor(s) above any obligation to subcontract a minimum percentage of the contract"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"subj-oblig",
+    "descrizione": {
+		"it": "Oggetto dei subappalti la cui indicazione è necessaria per adempiere l'obbligo di subappaltare una percentuale minima dell'appalto",
+		"en": "The subject-matter of the subcontract(s) necessary to fulfill the obligation to subcontract a minimum percentage of the contract"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"subj-noblig",
+    "descrizione": {
+		"it": "Oggetto dei subappalti in eccesso rispetto all'obbligo di subappaltare una percentuale minima dell'appalto",
+		"en": "The subject-matter of the subcontract(s) above any obligation to subcontract a minimum percentage of the contract"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"none",
+    "descrizione": {
+		"it": "Nulla",
+		"en": "None"
+		},	
+    "datainizio":null,
+    "datafine":null
+}]

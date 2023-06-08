@@ -1,0 +1,171 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Progettista interno alla S.A.",
+		"en": "Progettista interno alla S.A."
+		},
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Progettista esterno alla S.A.",
+		"en": "Progettista esterno alla S.A."
+		},
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Aggiudicatario qualificato",
+		"en": "Aggiudicatario qualificato"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Progettista qualificato incaricato dall'aggiudicatario",
+		"en": "Progettista qualificato incaricato dall'aggiudicatario"
+		},	
+    "datainizio":null,
+    "datafine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Direttore Lavori",
+		"en": "Direttore Lavori"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Coordinatore della sicurezza in fase di progettazione",
+		"en": "Coordinatore della sicurezza in fase di progettazione"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Coordinatore della sicurezza in corso d'opera",
+		"en": "Coordinatore della sicurezza in corso d'opera"
+		},		
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Direttore dell'esecuzione del contratto",
+		"en": "Direttore dell'esecuzione del contratto"
+		},			    
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Responsabile subfase del procedimento",
+		"en": "Responsabile subfase del procedimento"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"10",
+    "descrizione": {
+		"it": "Collaudatore statico",
+		"en": "Collaudatore statico"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Redattore del certificato di regolare esecuzione",
+		"en": "Redattore del certificato di regolare esecuzione"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"12",
+    "descrizione": {
+		"it": "Redattore del certificato di regolare esecuzione",
+		"en": "Redattore del certificato di regolare esecuzione"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"13",
+    "descrizione": {
+		"it": "Componente Commissione di Collaudo",
+		"en": "Componente Commissione di Collaudo"
+		},	
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"14",
+    "descrizione": {
+		"it": "Responsabile Unico del progetto",
+		"en": "Responsabile Unico del progetto"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"15",
+    "descrizione": {
+		"it": "Responsabile fase progettazione/predisposizione documentazione tecnico-amministrativa",
+		"en": "Responsabile fase progettazione/predisposizione documentazione tecnico-amministrativa"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"16",
+    "descrizione": {
+		"it": "Responsabile fase di affidamento",
+		"en": "Responsabile fase di affidamento"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"17",
+    "descrizione": {
+		"it": "Responsabile fase di esecuzione",
+		"en": "Responsabile fase di esecuzione"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"18",
+    "descrizione": {
+		"it": "Referente della Stazione Appaltante",
+		"en": "Referente della Stazione Appaltante"
+		},
+    "datainizio":null,
+    "datafine":null
+},
+{
+    "codice":"19",
+    "descrizione": {
+		"it": "ATI",
+		"en": "ATI"
+		},
+    "datainizio":"2020-12-10T00:00:00Z",
+    "datafine":null
+}]
