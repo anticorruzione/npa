@@ -4,31 +4,42 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AnacFormA2.36DatiBaseType:
-      description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE.
+    AppaltoA2.36Type:
       type: object
-      required: [datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto]
-      additionalProperties: false 
-      properties:
+      additionalProperties: false
+      properties:  
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraType'       
+    AggiudicazioneA2.36Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1.36Type'
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneBaseType' 
+      type: object
+      additionalProperties: false
+      properties: 
         datiBaseRisultatoProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseRisultatoProceduraType'
         datiBaseAggiudicazioneAppalto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'
         datiBaseAccessibilita:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'              
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'      
     AnacFormA2.36Type:
       description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE.
-      allOf: 
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.36.yaml#/components/schemas/AnacFormA1.36Type'
-      - $ref: '#/components/schemas/AnacFormA2.36DatiBaseType'
       type: object
-      #required: []
-      additionalProperties: false       
+      required: [appalto,aggiudicazioni]
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoA2.36Type'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
+          type: array
+          items:
+            $ref: '#/components/schemas/AggiudicazioneA2.36Type'     
     SchedaA2.36Type:
       description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE.
       type: object
-      required: [anacFormA2]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormA2:
+        anacForm:
           $ref: '#/components/schemas/AnacFormA2.36Type'          

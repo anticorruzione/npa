@@ -17,8 +17,8 @@ components:
     SchedaS1Type:
       description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione
       type: object
-      #required: []
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormS1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormS1Type'         

@@ -19,15 +19,13 @@ components:
           type: array
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.24Type'
-        quadroEconomicoConcorsiProgettazione:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcorsiProgettazioneType'     
     SchedaP1.24Type:
       description: Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform24.
       type: object
-      required: [anacFormP1, eform,espd]
+      required: [anacForm, eform,espd]
       additionalProperties: false
       properties:
-        anacFormP1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormP1.24Type'
         eform:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'  

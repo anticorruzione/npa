@@ -1,25 +1,25 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda M1.40 - Scheda di modifica contrattuale con invio eform40.
+  title: Modello Dati - Scheda M1.40 - Scheda di modifica contrattuale con invio al TED - Avviso di modifica di un appalto — direttiva sulle concessioni - Articolo 43, paragrafo 1, della direttiva 2014/23/UE
   version: 1.0.0
 components:
   schemas:
-    ModificaContrattualeType:
-      description: Oggetto che riporta i dati della modifica contrattuale
-      type: object
-      additionalProperties: false
     AnacFormM1.40Type:
-      description: Contiene tutti i dati di modifica contrattuale
+      description: Contiene tutti i dati relativi alle modifiche contrattuali con invio al TED - Avviso di modifica di un appalto — direttiva sulle concessioni - Articolo 43, paragrafo 1, della direttiva 2014/23/UE
       type: object
-      additionalProperties: false
-      properties:  
-        esecuzione:
-          $ref: '#/components/schemas/ModificaContrattualeType'
-    SchedaM1.40Type:
-      description: Scheda di modifica contrattuale
-      type: object
-      required: [anacFormM1]
       additionalProperties: false
       properties:
-        anacFormM1:
+        modificheContrattuali:
+         type: array
+         items:          
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModificaContrattuale.40Type' 
+    SchedaM1.40Type:
+      description: Scheda di modifica contrattuale con invio al TED - Avviso di modifica di un appalto — direttiva sulle concessioni - Articolo 43, paragrafo 1, della direttiva 2014/23/UE
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
           $ref: '#/components/schemas/AnacFormM1.40Type'
+        eform:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'           

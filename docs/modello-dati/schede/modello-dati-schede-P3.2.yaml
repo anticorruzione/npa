@@ -14,6 +14,18 @@ components:
       properties:
         motivoEsclusioneConcessione: 
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoEsclusioneConcessioneEnum'  
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType' 
+        datiBaseCPV:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'   
+        datiBaseAggiudicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneP3ContrattiEsclusiType'  
+        datiBaseAggiuntivi:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiuntiviType'  
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType'          
     AppaltoP3.2Type:
       description: Oggetto che riporta i dati dell'appalto relativi ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
       allOf: # estende la classe AppaltoP3BaseType
@@ -21,12 +33,17 @@ components:
       type: object
       #required: []
       additionalProperties: false
+      properties:
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType'    
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraP3ContrattiEsclusiType'  
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraType'          
     AnacFormP3.2Type:
       description: Contiene i dati relativi ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
-      allOf: # estende la classe AnacFormP3ContrattiEsclusiDatiBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP3ContrattiEsclusiDatiBaseType'       
       type: object
-      required: [categoria, finanziamenti, appalto,lotti]
+      required: [categoria, appalto,lotti]
       additionalProperties: false
       properties:  
         appalto: 
@@ -41,18 +58,13 @@ components:
           type: array
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/StazioneAppaltanteType'    
-        finanziamenti:
-          description: Dati relativi ai finanziamenti
-          type: array
-          items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/FinanziamentoType'    
     SchedaP3.2Type:
       description: Scheda di pubblicazione relativa ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ
       type: object
-      required: [anacFormP3, anacFormP3DatiBase]
+      required: [anacForm, anacFormP3DatiBase]
       additionalProperties: false
       properties:
-        anacFormP3:
+        anacForm:
           $ref: '#/components/schemas/AnacFormP3.2Type' 
         espd:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'        

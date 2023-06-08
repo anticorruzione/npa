@@ -4,18 +4,24 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AnacFormP2.24DatiBaseType:
-      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni sottosoglia > 5K - Avviso di concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, primo comma, della direttiva 2014/25/UE
-      allOf: # estende la classe AnacFormP2DatiBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP2DatiBaseType' 
+    AppaltoP2.24Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.24Type'     
       type: object
-      #required: []
       additionalProperties: false
-      properties:
+      properties:   
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseP2.24Type'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoP2.24Type'
         datiBaseProcedura:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraType'      
+    LottoP2.24Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.24Type'      
+      type: object
+      additionalProperties: false
+      properties:  
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoP2.24Type'      
         datiBaseContratto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
         datiBaseAggiudicazione:
@@ -24,31 +30,32 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType' 
         datiBaseImporto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseImportoType'  
+        datiBaseCPV:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'       
     AnacFormP2.24Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Avviso di concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, primo comma, della direttiva 2014/25/UE
       allOf: 
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'      
-      - $ref: '#/components/schemas/AnacFormP2.24DatiBaseType'
       type: object
       additionalProperties: false
       required: [finanziamenti,opzioni/rinnovi, appalto,lotti]
       properties:  
         appalto:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP.24Type'
+          $ref: '#/components/schemas/AppaltoP2.24Type'
         lotti:
           description: Dati relativi ai lotti
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.24Type'
-        quadroEconomicoConcorsiProgettazione:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcorsiProgettazioneType'      
+            $ref: '#/components/schemas/LottoP2.24Type'
     SchedaP2.24Type:
       description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Avviso di concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, primo comma, della direttiva 2014/25/UE
       type: object
-      required: [anacFormP2,espd]
+      required: [anacForm,espd]
       additionalProperties: false
       properties:
-        anacFormP2:
+        anacForm:
           $ref: '#/components/schemas/AnacFormP2.24Type'          
         espd:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         

@@ -18,16 +18,14 @@ components:
           description: Dati relativi ai lotti
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.23Type'          
-        quadroEconomicoConcorsiProgettazione:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcorsiProgettazioneType'           
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP.23Type'    
     SchedaP1.23Type:
       description: Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform23.
       type: object
-      required: [anacFormP1, eform,espd]
+      required: [anacForm, eform,espd]
       additionalProperties: false
       properties:
-        anacFormP1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormP1.23Type'
         eform:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'  

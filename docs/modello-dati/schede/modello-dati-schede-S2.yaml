@@ -4,61 +4,63 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AnacFormS2.InvitatiType:
-      description: Elenco di soggetti invitati a presentare offerta.
+    InvitatiType:
+      description: Elenco di soggetti invitati che non hanno presentato offerta.
       type: object
       additionalProperties: false
-      properties:      
+      properties: 
+        cig:
+          description: codice identificativo lotto
+          type: string
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
         invitati:
-          description: Dati relativi ai soggetti invitati a presentare offerta
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/InvitatoType'
-    AnacFormS2.PartecipantiType:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/InvitatoType'  
+    PartecipantiType:
       description: Elenco di soggetti che hanno presentato offerta.
       type: object
       additionalProperties: false
       properties: 
+        cig:
+          description: codice identificativo lotto
+          type: string
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
         partecipanti:
-          description: Dati relativi ai partecipanti
           type: array
-          items:          
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'
-        numeroOfferteAmmesse:
-          description: numero di offerte ammesse
-          type: string
-          format: integer 
-        valoreSogliaAnomalia:
-          description: Valore soglia anomalia
-          type: string
-        nOfferte:
-          description: N.offerte >= soglia anomalia
-          type: string
-          format: integer
-        nImpreseEscluseAutomaticamente: 
-          description: Numero imprese escluse automaticamente
-          type: string
-          format: integer
-        nImpreseEscluseInsufficientiGiustificazioni: 
-          description: Numero imprese escluse per insufficienti giustificazioni
-          type: string
-          format: integer                          
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'              
     SchedaS2Type:
-      description: Elenco di soggetti invitati a presentare offerta o che hanno presentato offerta
+      description: Elenco di soggetti che hanno presentato offerta e di ulteriori invitati che non hanno presentato offerta.
       type: object
       additionalProperties: false
+      required: [anacForm]
       properties:
-        anacFormInvitati:
-          $ref: '#/components/schemas/AnacFormS2.InvitatiType'
-        anacFormPartecipanti:
-          $ref: '#/components/schemas/AnacFormS2.PartecipantiType'
-        dataInvito: 
-          description: Data della lettera di invito
-          type: string
-          format: datetime
-          example: '2022-01-23T12:02:05Z'
-        dataScadenzaPresentazioneOfferta: 
-          description: Data della scadenza di presentazione dell'offerta
-          type: string
-          format: datetime
-          example: '2022-01-23T12:02:05Z'            
+        anacForm:
+          type: object
+          additionalProperties: false
+          properties:
+            invitatiCheNonHannoPresentatoOfferta:
+              description: Dati relativi ai soggetti invitati che non hanno presentato offerta
+              type: array
+              items:
+                $ref: '#/components/schemas/InvitatiType'
+            partecipanti:
+              description: Dati relativi ai partecipanti
+              type: array
+              items:          
+                $ref: '#/components/schemas/PartecipantiType'              
+            dataInvito: 
+              description: Data della lettera di invito
+              type: string
+              format: datetime
+              example: '2022-01-23T12:02:05Z'
+            dataScadenzaPresentazioneOfferta: 
+              description: Data della scadenza di presentazione dell'offerta
+              type: string
+              format: datetime
+              example: '2022-01-23T12:02:05Z'            

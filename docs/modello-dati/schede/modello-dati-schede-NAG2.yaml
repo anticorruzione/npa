@@ -1,25 +1,23 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda NAG2 - Scheda di Mancata aggiudicazione procedura nazionale
+  title: Modello Dati - Scheda NAG2 - Scheda di mancata aggiudicazione della gara - sotto soglia europea
   version: 1.0.0
 components:
   schemas:
-    AggiudicazioneNAG2Type:
-      description: Oggetto che riporta i dati dell'aggiudicazione
-      type: object
-      additionalProperties: false
     AnacFormNAG2Type:
-      description: Contiene tutti i dati di Mancata aggiudicazione procedura nazionale
+      description: Contiene tutti i dati relativi alla mancata aggiudicazione della gara - sotto soglia europea
       type: object
-      additionalProperties: false
-      properties:  
-        aggiudicazione:
-          $ref: '#/components/schemas/AggiudicazioneNAG2Type'
-    SchedaNAG2Type:
-      description: Scheda di Mancata aggiudicazione procedura nazionale
-      type: object
-      required: [anacFormNAG]
       additionalProperties: false
       properties:
-        anacFormNAG:
-          $ref: '#/components/schemas/AnacFormNAG2Type'
+        datiBaseRisultatoProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseRisultatoProceduraNAGType'
+        esitoProceduraNag:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EsitoProceduraNagEnum'
+    SchedaNAG2Type:
+      description: Scheda di mancata aggiudicazione della gara - sotto soglia europea
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormNAG2Type' 

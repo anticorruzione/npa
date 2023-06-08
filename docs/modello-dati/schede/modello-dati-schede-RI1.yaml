@@ -18,8 +18,8 @@ components:
     SchedaRI1Type:
       description: Scheda di riavvio
       type: object
-      required: [anacFormRI1]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormRI1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormRI1Type'

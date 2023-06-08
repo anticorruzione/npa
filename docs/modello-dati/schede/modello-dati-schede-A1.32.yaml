@@ -4,53 +4,27 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AggiudicatarioA1.32Type:
-      description: Dati dell'aggiudicatario
-      allOf: # estende la classe AggiudicatarioType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioType'      
-      type: object
-      required: [importoAggiudicazioneAffidamento]
-      additionalProperties: false
-      properties:
-        importoAggiudicazioneAffidamento:
-          description: Importo di aggiudicazione/affidamento 
-          type: string
-          format: decimal 
-    AggiudicazioneA.32Type:
-      description: Oggetto che riporta i dati inerenti la fase di aggiudicazione sopra soglia e sotto soglia    
-      type: object
-      #required: []
-      additionalProperties: false
-      properties: 
-        modalitaRiaggiudicazioneAffidamento:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'          
     AnacFormA1.32Type:
       description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE
       type: object
-      required: [aggiudicazione]
+      required: [appalto,aggiudicazioni]
       additionalProperties: false
       properties:
-        aggiudicazione:
-          $ref: '#/components/schemas/AggiudicazioneA.32Type'
-        aggiudicatari:
-          description: Dati degli aggiudicatari
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoA1.32Type'      
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
           type: array
-          items: 
-            $ref: '#/components/schemas/AggiudicatarioA1.32Type'
-        incaricati:
-          description: dati degli incaricati
-          type: array
-          items: 
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IncaricatoType'   
-        quadroEconomicoConcessioni:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType' 
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1.32Type'
+ 
     SchedaA1.32Type:
       description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE con invio di eform32.
       type: object
-      required: [anacFormA1, eform]
+      required: [anacForm, eform]
       additionalProperties: false
       properties:
-        anacFormA1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormA1.32Type'
         eform:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'          

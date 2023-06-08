@@ -18,8 +18,8 @@ components:
     SchedaCO1Type:
       description: Scheda di conclusione
       type: object
-      required: [anacFormCO1]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormCO1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormCO1Type'

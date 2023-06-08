@@ -18,8 +18,8 @@ components:
     SchedaCL1Type:
       description: Scheda di collaudo
       type: object
-      required: [anacFormCL1]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormCL1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormCL1Type'

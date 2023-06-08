@@ -4,22 +4,55 @@ info:
   version: 1.0.0
 components:
   schemas:
-    EsecuzioneType:
-      description: Oggetto che riporta i dati del subappalto.
+    SubappaltoType:
+      description: Dati relativi ai subappalti
       type: object
+      required: [cfDitta,importoPresunto]
       additionalProperties: false
+      properties:    
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Inizio Lavori.
+          type: string      
+        cfDitta:
+          description: Codice fiscale ditta subappaltatrice
+          type: string
+        cfAggiudicatario:
+          description: Codice fiscale ditta aggiudicatrice nel caso di aggiudicatari multipli
+          type: string          
+        dataAutorizzazione: 
+          description: Data di autorizzazione subappalto
+          type: string
+          format: datetime
+        oggetto:
+          description: Lavoro/Servizio/Fornitura subappalto
+          type: string
+        importoPresunto:
+          description: Importo presunto Lavoro/ Servizio/Fornitura, subappalto
+          type: string
+          format: decimal
+        categoria:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
+        cpv:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CPVEnum'          
+        importoEffettivo:
+          description: Importo effettivo Lavoro/ Servizio/Fornitura, subappalto
+          type: string
+          format: decimal
     AnacFormSU1Type:
-      description: Contiene tutti i dati di subappalto
+      description: Contiene tutti i dati relativi alla scheda di Subappalto
       type: object
+      required: [subappalto]
       additionalProperties: false
-      properties:  
-        esecuzione:
-          $ref: '#/components/schemas/EsecuzioneType'
+      properties: 
+        subappalti:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubappaltoType'
     SchedaSU1Type:
       description: Scheda di subappalto
       type: object
-      required: [anacFormSU1]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormSU1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormSU1Type'

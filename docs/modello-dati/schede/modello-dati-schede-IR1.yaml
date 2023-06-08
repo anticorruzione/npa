@@ -4,22 +4,68 @@ info:
   version: 1.0.0
 components:
   schemas:
-    EsecuzioneType:
-      description: Oggetto che riporta i dati di istanza di recesso.
+    RitardoType:
+      description: Oggetto che riporta tutti i dati dell'istanza di recesso
       type: object
+      required: [dataTermine, tipoComunicazione, dataIstanzaRecesso,istanzaAccolta, istanzaTardiva, istanzaRipresa, istanzaRiserva,impSpese]
       additionalProperties: false
+      properties:
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Inizio Lavori.
+          type: string      
+        dataTermine: 
+          description: Termine previsto per la consegna
+          type: string
+          format: datetime
+        tipoComunicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/TipologiaComunicazioneEnum'  
+        durataSospensione: 
+          description: Durata della sospensione in giorni (in caso di sospensione)
+          type: string
+          format: integer
+        motivoSospensione:
+          description: Motivazione della sospensione/ritardo
+          type: string
+        dataIstanzaRecesso:
+          description: Data di presentazione dell’istanza di recesso
+          type: string
+          format: datetime
+        istanzaAccolta:
+          description: L'istanza di recesso è stata accolta
+          type: boolean           
+        istanzaTardiva:
+          description: Si è proceduto a consegna tardiva (in caso di ritardo)
+          type: boolean         
+        istanzaRipresa:
+          description: Si è proceduto alla ripresa dei lavori (in caso di sospensione)
+          type: boolean      
+        istanzaRiserva:
+          description: L’appaltatore ha formulato riserve
+          type: boolean   
+        impSpese:
+          description: Eventuale rimborso delle spese in €
+          type: string
+          format: decimal
+        impOneri:
+          description: Eventuale compenso degli oneri derivanti dal ritardo in €
+          type: string
+          format: decimal  
     AnacFormIR1Type:
-      description: Contiene tutti i dati di istanza di recesso
+      description: Contiene tutti i dati relativi alla scheda di Istanza di Recesso
       type: object
+      required: [ritardi]
       additionalProperties: false
-      properties:  
-        esecuzione:
-          $ref: '#/components/schemas/EsecuzioneType'
+      properties:
+         ritardi:
+          description: Ritardi
+          type: array
+          items:
+            $ref: '#/components/schemas/RitardoType'           
     SchedaIR1Type:
       description: Scheda di istanza di recesso
       type: object
-      required: [anacFormIR1]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormIR1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormIR1Type'

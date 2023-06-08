@@ -18,8 +18,7 @@ components:
    AnacFormP6.4Type:
       description: Contiene i dati per la scheda di Contratto EPC
       allOf: # estende la classe AnacFormBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType' 
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormP6DatiBaseType'      
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'       
       type: object
       required: [appalto,lotti] 
       additionalProperties: false
@@ -34,10 +33,10 @@ components:
    SchedaP6.4Type:
       description: Scheda di Contratto EPC.
       type: object
-      required: [anacFormP6]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormP6:
+        anacForm:
           $ref: '#/components/schemas/AnacFormP6.4Type' 
         espd:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          

@@ -1,25 +1,26 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda M1.38 - Scheda di modifica contrattuale con invio eform38.
+  title: Modello Dati - Scheda M1.38 - Scheda relativa alle modifiche contrattuali con invio al TED - Avviso di modifica di un appalto — direttiva generaleArticolo 72, paragrafo 1, della direttiva 2014/24/UE con invio di eform38.
   version: 1.0.0
 components:
   schemas:
-    ModificaContrattualeType:
-      description: Oggetto che riporta i dati della modifica contrattuale
-      type: object
-      additionalProperties: false
     AnacFormM1.38Type:
-      description: Contiene tutti i dati di modifica contrattuale
+      description: Contiene tutti i dati relativi alle modifiche contrattuali con invio al TED - Avviso di modifica di un appalto — direttiva generaleArticolo 72, paragrafo 1, della direttiva 2014/24/UE
       type: object
-      additionalProperties: false
-      properties:  
-        esecuzione:
-          $ref: '#/components/schemas/ModificaContrattualeType'
-    SchedaM1.38Type:
-      description: Scheda di modifica contrattuale
-      type: object
-      required: [anacFormM1]
+      required: [modificheContrattuali]
       additionalProperties: false
       properties:
-        anacFormM1:
+        modificheContrattuali:
+         type: array
+         items:          
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModificaContrattualeType' 
+    SchedaM1.38Type:
+      description: Scheda relativa alle modifiche contrattuali con invio al TED - Avviso di modifica di un appalto — direttiva generaleArticolo 72, paragrafo 1, della direttiva 2014/24/UE con invio di eform38.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
           $ref: '#/components/schemas/AnacFormM1.38Type'
+        eform:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'        

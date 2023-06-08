@@ -4,63 +4,24 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AggiudicatarioA1.31Type:
-      description: Dati dell'aggiudicatario
-      allOf: # estende la classe AggiudicatarioType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioType'      
-      type: object
-      required: [importoAggiudicazioneAffidamento]
-      additionalProperties: false
-      properties:
-        importoAggiudicazioneAffidamento:
-          description: Importo di aggiudicazione/affidamento 
-          type: string
-          format: decimal  
     AnacFormA1.31Type:
       description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE
       type: object
-      required: [aggiudicatari]
+      required: [aggiudicazioni]
       additionalProperties: false
       properties:
-        aggiudicatari:
-          description: Dati degli aggiudicatari
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
           type: array
-          items: 
-            $ref: '#/components/schemas/AggiudicatarioA1.31Type'
-        cfAggiudicatario:
-          description: Codice fiscale aggiudicatario
-          type: string 
-        identificativoCfEstero:
-          description: Identificativo codice fiscale estero
-          type: string            
-        ragioneSocialeAggiudicatario:
-          description: Ragione sociale aggiudicatario
-          type: string
-        ruolo: 
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/RuoloOEEnum' 
-        importoAggiudicazione:
-          description: Importo di aggiudicazione 
-          type: string
-          format: decimal   
-        dataInizio:
-          description: Data inizio
-          type: string
-          format: datetime
-        dataUltimazione:
-          description: Data ultimazione
-          type: string
-          format: datetime
-        impSommeLiquidate:
-          description: importo delle somme liquidate
-          type: string
-          format: decimal   
+          items:       
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1.31Type'      
     SchedaA1.31Type:
       description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE con invio di eform31.
       type: object
-      required: [anacFormA1, eform]
+      required: [anacForm, eform]
       additionalProperties: false
       properties:
-        anacFormA1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormA1.31Type'
         eform:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'         

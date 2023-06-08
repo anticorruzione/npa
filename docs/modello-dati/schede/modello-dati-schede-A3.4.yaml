@@ -4,22 +4,93 @@ info:
   version: 1.0.0
 components:
   schemas:
+    AppaltoA3.4Type:
+      type: object
+      additionalProperties: false
+      required: [relazioneUnicaSulleProcedure,preinformazione,termineRidottoAvvisoPreinformazione]      
+      properties:
+        relazioneUnicaSulleProcedure:
+          description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
+          type: boolean    
+        preinformazione:
+          description: E' stata effettuata la preinformazione?
+          type: boolean
+        termineRidottoAvvisoPreinformazione:
+          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
+          type: boolean           
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraA2Type'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraA3.4Type'  
+        datiBaseAggiudicazioneSubappalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoA3.4Type'           
     AggiudicazioneA3.4Type:
-      description: Oggetto che riporta i dati dell'aggiudicazione
+      description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
+      required: [numeroOfferteAmmesse,nImpreseEscluseInsufficientiGiustificazioni]
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string      
+        modalitaRiaggiudicazioneAffidamento:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'  
+        numeroOfferteAmmesse:
+          description: numero di offerte ammesse
+          type: string
+          format: integer 
+        valoreSogliaAnomalia:
+          description: Valore soglia anomalia
+          type: string
+        nOfferte:
+          description: N.offerte >= soglia anomalia
+          type: string
+          format: integer
+        nImpreseEscluseAutomaticamente: 
+          description: Numero imprese escluse automaticamente
+          type: string
+          format: integer
+        nImpreseEscluseInsufficientiGiustificazioni: 
+          description: Numero imprese escluse per insufficienti giustificazioni
+          type: string
+          format: integer  
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'
+        offertePresentate:
+          description: Dati degli aggiudicatari
+          type: array
+          items: 
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/OfferteType'          
+        datiBaseRisultatoProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseRisultatoProceduraType'  
+        datiBaseSottomissioniRicevute:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSottomissioniRicevuteType'         
+        datiBaseAggiudicazioneAppalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'  
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'
+
     AnacFormA3.4Type:
-      description: Contiene tutti i dati di aggiudicazione relativa al contraente generale
+      description: Contiene tutti i dati relativi al contraente generale
       type: object
-      additionalProperties: false
-      properties:  
-        aggiudicazione:
-          $ref: '#/components/schemas/AggiudicazioneA3.4Type'
+      required: [appalto,aggiudicazioni]
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoA3.4Type'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
+          type: array
+          items:
+            $ref: '#/components/schemas/AggiudicazioneA3.4Type' 
     SchedaA3.4Type:
       description: Scheda di aggiudicazione relativa al contraente generale
       type: object
-      required: [anacFormA3.4]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormA3:
+        anacForm:
           $ref: '#/components/schemas/AnacFormA3.4Type'

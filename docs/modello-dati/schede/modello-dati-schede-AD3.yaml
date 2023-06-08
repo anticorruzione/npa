@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda AD3 - Scheda di affidamento diretto (EU), valida per affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED.
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneAD3Type:
+      type: object
+      additionalProperties: false
+      properties: 
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example: 
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string      
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean 
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items: 
+            type: string  
+        paritaDiGenereGenerazionale:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType'
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType' 
+        aggiudicatari:
+          description: Aggiudicatari
+          type: array
+          items: 
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioType'          
+        datiBaseAggiudicazioneAppaltoType:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoAD3Type'
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'      
+    AppaltoAD3Type:
+      type: object
+      additionalProperties: false
+      properties:   
+        idAppalto:
+          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
+          type: string        
+        motivoUrgenza:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url  
+        relazioneUnicaSulleProcedure:
+          description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
+          type: boolean
+        opereUrbanizzazioneScomputo:
+          description: Opere di urbanizzazione a scomputo
+          type: boolean          
+        datiBaseSubappalti:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'
+    AnacFormAD3Type:
+      description: Contiene tutti i dati necessari per l'affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED.
+      type: object
+      required: [appalto,aggiudicazioni]
+      additionalProperties: false   
+      properties:  
+        appalto:
+          $ref: '#/components/schemas/AppaltoAD3Type'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
+          type: array
+          items:
+            $ref: '#/components/schemas/AggiudicazioneAD3Type'      
+    SchedaAD3Type:
+      description: Scheda di affidamento diretto (EU), valida per affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormAD3Type'
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          

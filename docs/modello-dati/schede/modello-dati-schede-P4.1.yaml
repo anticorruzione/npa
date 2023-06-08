@@ -7,8 +7,7 @@ components:
     AnacFormP4.1Type:
       description: Contiene i dati relativi alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni) - Articolo 31, paragrafo 3, della direttiva 2014/23/UE
       allOf: # estende la classe AnacFormBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType' 
-      - $ref: '#/components/schemas/AnacFormP4.1DatiBaseType'      
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'   
       type: object
       required: [categoria, finanziamenti, opzioni/rinnovi, appalto,lotti]
       additionalProperties: false
@@ -20,37 +19,13 @@ components:
           type: array
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP4BaseType'          
-    AnacFormP4.1DatiBaseType:
-      description: Oggetto che contiene gli oggetti comuni con il TED per le pubblicazioni delle adesione AQ/convenzione con successivo confronto competitivo
-      type: object
-      #required: []
-      additionalProperties: false
-      properties:
-        datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseP4.1Type'      
-        datiBaseAvviso:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAvvisoType'
-        datiBaseCPV:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
-        datiBaseContratto:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'
-        datiBaseProcedura:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraP4.1Type'
-        datiBaseAggiudicazione:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneP4.1Type'
-        datiBaseStrumentiProcedura:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraP4Type'
-        datiBaseTerminiInvio:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioP4Type'   
-        datiBaseAccessibilita:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'
     SchedaP4.1Type:
       description: Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni) - Articolo 31, paragrafo 3, della direttiva 2014/23/UE
       type: object
-      required: [anacFormP4,anacFormP4DatiBase]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormP4:
+        anacForm:
           $ref: '#/components/schemas/AnacFormP4.1Type'
         espd:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'             

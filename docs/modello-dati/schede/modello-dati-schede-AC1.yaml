@@ -4,22 +4,43 @@ info:
   version: 1.0.0
 components:
   schemas:
-    EsecuzioneType:
-      description: Oggetto che riporta i dati di accordo bonario.
+    AccordoBonarioType:
+      description: Oggetto che riporta tutti i dati degli accordi bonari
       type: object
+      required: [dataAccordo]
       additionalProperties: false
+      properties:
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Inizio Lavori.
+          type: string      
+        dataAccordo:
+          description: Data dell’accordo bonario
+          type: string
+          format: datetime
+        oneriDerivanti:
+          description: Oneri derivanti
+          type: string
+          format: decimal
+        numRiserve:
+          description: Numero di riserve transate
+          type: string
+          format: integer
     AnacFormAC1Type:
-      description: Contiene tutti i dati di accordo bonario
+      description: Contiene tutti i dati relativi alla scheda di Collaudo
       type: object
+      required: [accordiBonari]
       additionalProperties: false
-      properties:  
-        esecuzione:
-          $ref: '#/components/schemas/EsecuzioneType'
+      properties:
+         accordiBonari:
+          description: Accordi bonari
+          type: array
+          items:
+            $ref: '#/components/schemas/AccordoBonarioType' 
     SchedaAC1Type:
       description: Scheda di accordo bonario
       type: object
-      required: [anacFormAC1]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormAC1:
+        anacForm:
           $ref: '#/components/schemas/AnacFormAC1Type'

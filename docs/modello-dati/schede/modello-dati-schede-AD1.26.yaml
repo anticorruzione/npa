@@ -4,69 +4,28 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AggiudicazioneAD1.26Type:
-      description: Oggetto che riporta i dati inerenti la fase di aggiudicazione per l'affidamento diretto soprasoglia e sottosoglia con pubblicazione su TED - Avviso volontario per la trasparenza ex ante — direttiva settoriale - Articolo 3 bis della direttiva 92/13/CEE 
-      allOf: # estende la classe AggiudicazioneBaseType
-        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneBaseType'
-      type: object
-      required: [afferenteInvestimentiPNRR]
-      additionalProperties: false
-      properties: 
-        afferenteInvestimentiPNRR:
-          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
-          type: boolean 
-        cupLotto:
-          description: Cup associati al lotto
-          type: array
-          items: 
-            type: string          
-        relazioneUnicaSulleProcedure:
-          description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
-          type: boolean
-        opereUrbanizzazioneScomputo:
-          description: Opere di urbanizzazione a scomputo
-          type: boolean
-        preinformazione:
-          description: E' stata effettuata la preinformazione?
-          type: boolean
-        termineRidottoAvvisoPreinformazione:
-          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
-          type: boolean          
     AnacFormAD1.26Type:
       description: Contiene tutti i dati necessari per l'affidamento diretto soprasoglia e sottosoglia con invio al TED – Avviso volontario per la trasparenza ex ante — direttiva settoriale. Articolo 3 bis della direttiva 92/13/CEE 
-      allOf: # estende la classe AnacFormBaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType' 
       type: object
-      required: [aggiudicazione]
+      required: [appalto,aggiudicazioni]
       additionalProperties: false
       properties:  
-        aggiudicazione:
-          $ref: '#/components/schemas/AggiudicazioneAD1.26Type'
-        paritaDiGenereGenerazionale:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType'
-        quadroEconomicoStandard:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoADType' 
-        aggiudicatari:
-          description: Aggiudicatari
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoAD1.26Type'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
           type: array
-          items: 
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioType'   
-        incaricati:
-          description: dd
-          type: array
-          items: 
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IncaricatoType' 
-        quadroEconomicoConcessioni:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType'  
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneAD1.26Type'        
     SchedaAD1.26Type:
       description: Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform26.
       type: object
-      required: [anacFormAD1.26, eform]
+      required: [anacForm, eform]
       additionalProperties: false
       properties:
-        anacFormAD1.26:
+        anacForm:
           $ref: '#/components/schemas/AnacFormAD1.26Type'
         eform:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'          
-espd:
+        espd:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         

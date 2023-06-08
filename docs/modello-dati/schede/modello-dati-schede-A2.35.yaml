@@ -4,33 +4,42 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AnacFormA2.35DatiBaseType:
-      description: Oggetto che contiene gli oggetti comuni con il TED relativi alle aggiudicazioni sottosoglia - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE.
+    AppaltoA2.35Type:
       type: object
-      required: [datiBaseRisultatoProcedura]
       additionalProperties: false
-      properties:
+      properties: 
+        datiBaseAggiudicazioneSubappalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType'      
+    AggiudicazioneA2.35Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1.35Type'
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneBaseType' 
+      type: object
+      additionalProperties: false
+      properties:    
         datiBaseRisultatoProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseRisultatoProceduraType'
         datiBaseAggiudicazioneAppalto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'
         datiBaseAccessibilita:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'                    
-        datiBaseAggiudicazioneSubappalto:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType'  
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'
     AnacFormA2.35Type:
       description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE.
-      allOf: 
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.35.yaml#/components/schemas/AnacFormA1.35Type'
-      - $ref: '#/components/schemas/AnacFormA2.35DatiBaseType'
       type: object
-      #required: []
-      additionalProperties: false       
+      required: [appalto,aggiudicazioni]
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoA2.35Type'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
+          type: array
+          items:
+            $ref: '#/components/schemas/AggiudicazioneA2.35Type'     
     SchedaA2.35Type:
       description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE.
       type: object
-      required: [anacFormA2]
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormA2:
+        anacForm:
           $ref: '#/components/schemas/AnacFormA2.35Type'           

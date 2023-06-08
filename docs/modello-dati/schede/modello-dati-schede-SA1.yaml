@@ -4,22 +4,74 @@ info:
   version: 1.0.0
 components:
   schemas:
-    EsecuzioneType:
-      description: Oggetto che riporta i dati del SAL.
+    AvanzamentoType:
+      description: Oggetto che riporta tutti i dati di avanzamento del contratto 
       type: object
-      additionalProperties: false
-    AnacFormSA1Type:
-      description: Contiene tutti i dati di SAL
-      type: object
-      additionalProperties: false
-      properties:  
-        esecuzione:
-          $ref: '#/components/schemas/EsecuzioneType'
-    SchedaSA1Type:
-      description: Scheda di SAL
-      type: object
-      required: [anacFormSA1]
+      required: [dataAvanzamento,impSal,avanzamento,denominazioneAvanzamento]
       additionalProperties: false
       properties:
-        anacFormSA1:
-          $ref: '#/components/schemas/AnacFormSA1Type'
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Inizio Lavori.
+          type: string
+        statoAvanzamento:
+          description: Stato di avanzamento
+          type: string
+          format: number
+        denominazioneAvanzamento: 
+          description: Denominazione dello stato di avanzamento
+          type: string
+        modalitaPagamento:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaPagamentoEnum'
+        impAnticipazione:
+          description: Eventuale anticipazione 
+          type: string
+          format: decimal          
+        dataCertificatoAnticipazione:
+          description: Data del certificato di pagamento relativo all'anticipazione 
+          type: string
+          format: datetime
+        dataAvanzamento:
+          description: Data Stato di avanzamento
+          type: string
+          format: datetime
+        impSal:
+          description: Importo stato avanzamento progressivo (cumulato)
+          type: string
+          format: decimal
+        dataCertificatoMandatoPagamento:
+          description: Data di emissione del certificato/mandato di pagamento. Per lavori, indicare la data del certificato. Per servizi e forniture, indicare la data del mandato
+          type: string
+          format: datetime
+        impCertificatoMandatoPagamento:
+          description: Importo del certificato/mandato di pagamento. Per lavori, indicare l’importo del certificato. Per servizi e forniture, indicare l’importo del mandato
+          type: string
+          format: decimal
+        avanzamento:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AvanzamentoEnum'          
+        numGiorniScostamento:
+          description: Indicare lo scostamento registrato in numero di giorni
+          type: string
+          format: integer
+        numGiorniProroga:
+          description: Indicare il numero di giorni di proroga concessi (non conseguenti a modifiche contrattuali)
+          type: string
+          format: integer
+    AnacFormSA1Type:
+      description: Contiene tutti i dati relativi alla scheda di Avanzamenti
+      type: object
+      required: [avanzamenti]
+      additionalProperties: false
+      properties: 
+        avanzamenti:
+          description: dati di avanzamento
+          type: array
+          items:         
+           $ref: '#/components/schemas/AvanzamentoType'          
+    SchedaSA1Type:
+      description: Scheda di avanzamento
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormSA1Type'          

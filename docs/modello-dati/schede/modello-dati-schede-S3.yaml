@@ -1,21 +1,33 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda S3 - Scheda relativa alle prestazioni progettuali
+  title: Modello Dati - Scheda S3 - Scheda relativa agli incarichi tecnici e alle prestazioni progettuali.
   version: 1.0.0
 components:
   schemas:
     AnacFormS3Type:
-      description: Dati relativi alla prestazione progettuale.
+      description: Dati relativi agli incarichi tecnici e alle prestazioni progettuali.
       type: object
       additionalProperties: false
       properties:
-        prestazioneProgettuale:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PrestazioneProgettualeType'            
+        cig:
+          description: cig
+          type: string
+        lotIdentifier: 
+          description: id
+          type: string
+        prestazioni:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PrestazioneType'  
+        incarichi:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IncaricoType'            
     SchedaS3Type:
-      description: Scheda relativa alle prestazioni progettuali
+      description: Scheda relativa agli incarichi tecnici e alle prestazioni progettuali.
       type: object
-      #required: []
+      required: [anacForm]
       additionalProperties: false
       properties:
-        anacFormS3:
+        anacForm:
           $ref: '#/components/schemas/AnacFormS3Type'        
