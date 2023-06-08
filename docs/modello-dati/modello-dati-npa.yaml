@@ -8,23 +8,18 @@ components:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         type: object
         additionalProperties: false
+        required: [versione,codice]
         properties:
-          idScheda:
+          _idScheda:
             $ref: '#/components/schemas/IdSchedaType'
-          _idStatoScheda:
-            description: identificativo dello stato della Scheda 
-            type: string
-            example: '1'
-          _origineScheda:
-            description: origine Scheda 
-            type: string
-            example: ''          
-          _versione:
+          codice:
+            $ref: '#/components/schemas/CodiceSchedaEnum'           
+          versione:
             description: versione della scheda. necessaria al motore interno ANAC.
             type: string
-            example: '01.00.00'
-          dataCreazione:
-            description: data creazione della scheda (A datetime specified by RF3339)
+            example: '1.0'
+          _dataCreazione:
+            description: data creazione della scheda (A datetime specified by ISO 8601 as profiled by RFC 3339)
             type: string
             format: datetime
             example: '2022-01-23T12:02:05Z'
@@ -34,181 +29,144 @@ components:
           - $ref: '#/components/schemas/SchedaType'       
         type: object
         additionalProperties: false
-        #oneOf:
-          #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.10.yaml#/components/schemas/SchedaP1.10Type'
-          #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.11.yaml#/components/schemas/SchedaP1.11Type'
-          #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.12.yaml#/components/schemas/SchedaP1.12Type'
-          #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.13.yaml#/components/schemas/SchedaP1.13Type'
-          #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.14.yaml#/components/schemas/SchedaP1.14Type'
+        #properties:
+          #body:
+            #oneOf:
+              #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.10.yaml#/components/schemas/SchedaP1.10Type'
+              #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.11.yaml#/components/schemas/SchedaP1.11Type'
+              #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.12.yaml#/components/schemas/SchedaP1.12Type'
+              #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.13.yaml#/components/schemas/SchedaP1.13Type'
+              #- $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.14.yaml#/components/schemas/SchedaP1.14Type'
       SchedaComunicaAppaltoType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         allOf: # estende il modello dati SchedaType
           - $ref: '#/components/schemas/SchedaType'       
         type: object
         additionalProperties: false
-        oneOf:
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.10.yaml#/components/schemas/SchedaP1.10Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.11.yaml#/components/schemas/SchedaP1.11Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.12.yaml#/components/schemas/SchedaP1.12Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.13.yaml#/components/schemas/SchedaP1.13Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.14.yaml#/components/schemas/SchedaP1.14Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.15.yaml#/components/schemas/SchedaP1.15Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.16.yaml#/components/schemas/SchedaP1.16Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.17.yaml#/components/schemas/SchedaP1.17Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.18.yaml#/components/schemas/SchedaP1.18Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.19.yaml#/components/schemas/SchedaP1.19Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.20.yaml#/components/schemas/SchedaP1.20Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.21.yaml#/components/schemas/SchedaP1.21Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.23.yaml#/components/schemas/SchedaP1.23Type' 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.24.yaml#/components/schemas/SchedaP1.24Type'        
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.10.yaml#/components/schemas/SchedaP2.10Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.11.yaml#/components/schemas/SchedaP2.11Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.12.yaml#/components/schemas/SchedaP2.12Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.13.yaml#/components/schemas/SchedaP2.13Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.14.yaml#/components/schemas/SchedaP2.14Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.16.yaml#/components/schemas/SchedaP2.16Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.17.yaml#/components/schemas/SchedaP2.17Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.18.yaml#/components/schemas/SchedaP2.18Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.19.yaml#/components/schemas/SchedaP2.19Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.20.yaml#/components/schemas/SchedaP2.20Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.21.yaml#/components/schemas/SchedaP2.21Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.23.yaml#/components/schemas/SchedaP2.23Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.24.yaml#/components/schemas/SchedaP2.24Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.1.yaml#/components/schemas/SchedaP3.1Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.2.yaml#/components/schemas/SchedaP3.2Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.3.yaml#/components/schemas/SchedaP3.3Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.4.yaml#/components/schemas/SchedaP3.4Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.5.yaml#/components/schemas/SchedaP3.5Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P4.1.yaml#/components/schemas/SchedaP4.1Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P4.2.yaml#/components/schemas/SchedaP4.2Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P5.yaml#/components/schemas/SchedaP5Type'   
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.1.yaml#/components/schemas/SchedaP6.1Type'   
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.2.yaml#/components/schemas/SchedaP6.2Type'   
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.3.yaml#/components/schemas/SchedaP6.3Type'   
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.4.yaml#/components/schemas/SchedaP6.4Type'   
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.5.yaml#/components/schemas/SchedaP6.5Type'   
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.6.yaml#/components/schemas/SchedaP6.6Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S1.yaml#/components/schemas/SchedaS1Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S2.yaml#/components/schemas/SchedaS2Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S3.yaml#/components/schemas/SchedaS3Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.25.yaml#/components/schemas/SchedaAD1.25Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.26.yaml#/components/schemas/SchedaAD1.26Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.27.yaml#/components/schemas/SchedaAD1.27Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.28.yaml#/components/schemas/SchedaAD1.28Type'
+        properties:
+          body:
+            oneOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.10.yaml#/components/schemas/SchedaP1.10Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.11.yaml#/components/schemas/SchedaP1.11Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.12.yaml#/components/schemas/SchedaP1.12Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.13.yaml#/components/schemas/SchedaP1.13Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.14.yaml#/components/schemas/SchedaP1.14Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.15.yaml#/components/schemas/SchedaP1.15Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.16.yaml#/components/schemas/SchedaP1.16Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.17.yaml#/components/schemas/SchedaP1.17Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.18.yaml#/components/schemas/SchedaP1.18Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.19.yaml#/components/schemas/SchedaP1.19Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.20.yaml#/components/schemas/SchedaP1.20Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.21.yaml#/components/schemas/SchedaP1.21Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.23.yaml#/components/schemas/SchedaP1.23Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.24.yaml#/components/schemas/SchedaP1.24Type'        
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.10.yaml#/components/schemas/SchedaP2.10Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.11.yaml#/components/schemas/SchedaP2.11Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.12.yaml#/components/schemas/SchedaP2.12Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.13.yaml#/components/schemas/SchedaP2.13Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.14.yaml#/components/schemas/SchedaP2.14Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.16.yaml#/components/schemas/SchedaP2.16Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.17.yaml#/components/schemas/SchedaP2.17Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.18.yaml#/components/schemas/SchedaP2.18Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.19.yaml#/components/schemas/SchedaP2.19Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.20.yaml#/components/schemas/SchedaP2.20Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.21.yaml#/components/schemas/SchedaP2.21Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.23.yaml#/components/schemas/SchedaP2.23Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P2.24.yaml#/components/schemas/SchedaP2.24Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.1.yaml#/components/schemas/SchedaP3.1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.2.yaml#/components/schemas/SchedaP3.2Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.3.yaml#/components/schemas/SchedaP3.3Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.4.yaml#/components/schemas/SchedaP3.4Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P3.5.yaml#/components/schemas/SchedaP3.5Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P4.1.yaml#/components/schemas/SchedaP4.1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P4.2.yaml#/components/schemas/SchedaP4.2Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P5.yaml#/components/schemas/SchedaP5Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.1.yaml#/components/schemas/SchedaP6.1Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.2.yaml#/components/schemas/SchedaP6.2Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.3.yaml#/components/schemas/SchedaP6.3Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.4.yaml#/components/schemas/SchedaP6.4Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.5.yaml#/components/schemas/SchedaP6.5Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P6.6.yaml#/components/schemas/SchedaP6.6Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.25.yaml#/components/schemas/SchedaAD1.25Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.26.yaml#/components/schemas/SchedaAD1.26Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.27.yaml#/components/schemas/SchedaAD1.27Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.28.yaml#/components/schemas/SchedaAD1.28Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD2.25.yaml#/components/schemas/SchedaAD2.25Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD2.26.yaml#/components/schemas/SchedaAD2.26Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD2.27.yaml#/components/schemas/SchedaAD2.27Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD2.28.yaml#/components/schemas/SchedaAD2.28Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD3.yaml#/components/schemas/SchedaAD3Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD4.yaml#/components/schemas/SchedaAD4Type'   
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD5.yaml#/components/schemas/SchedaAD5Type'   
       SchedaPostPubblicazioneType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         allOf: # estende il modello dati SchedaType
           - $ref: '#/components/schemas/SchedaType'       
         type: object
         additionalProperties: false
-        oneOf:
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.29.yaml#/components/schemas/SchedaA1.29Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.30.yaml#/components/schemas/SchedaA1.30Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.31.yaml#/components/schemas/SchedaA1.31Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.32.yaml#/components/schemas/SchedaA1.32Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.33.yaml#/components/schemas/SchedaA1.33Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.34.yaml#/components/schemas/SchedaA1.34Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.35.yaml#/components/schemas/SchedaA1.35Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.36.yaml#/components/schemas/SchedaA1.36Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.37.yaml#/components/schemas/SchedaA1.37Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.29.yaml#/components/schemas/SchedaA2.29Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.30.yaml#/components/schemas/SchedaA2.30Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.31.yaml#/components/schemas/SchedaA2.31Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.32.yaml#/components/schemas/SchedaA2.32Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.33.yaml#/components/schemas/SchedaA2.33Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.34.yaml#/components/schemas/SchedaA2.34Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.35.yaml#/components/schemas/SchedaA2.35Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.36.yaml#/components/schemas/SchedaA2.36Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.37.yaml#/components/schemas/SchedaA2.37Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.1.yaml#/components/schemas/SchedaA3.1Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.2.yaml#/components/schemas/SchedaA3.2Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.3.yaml#/components/schemas/SchedaA3.3Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.4.yaml#/components/schemas/SchedaA3.4Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.5.yaml#/components/schemas/SchedaA3.5Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.6.yaml#/components/schemas/SchedaA3.6Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-NAG1.yaml#/components/schemas/SchedaNAG1Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-NAG2.yaml#/components/schemas/SchedaNAG2Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-I1.yaml#/components/schemas/SchedaI1Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M1.38.yaml#/components/schemas/SchedaM1.38Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M1.39.yaml#/components/schemas/SchedaM1.39Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M1.40.yaml#/components/schemas/SchedaM1.40Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.38.yaml#/components/schemas/SchedaM2.38Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.39.yaml#/components/schemas/SchedaM2.39Type'
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.40.yaml#/components/schemas/SchedaM2.40Type'  
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SA1.yaml#/components/schemas/SchedaSA1Type'  
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SU1.yaml#/components/schemas/SchedaSU1Type'  
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SO1.yaml#/components/schemas/SchedaSO1Type' 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-RI1.yaml#/components/schemas/SchedaRI1Type'  
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AC1.yaml#/components/schemas/SchedaAC1Type'  
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-IR1.yaml#/components/schemas/SchedaIR1Type' 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CO1.yaml#/components/schemas/SchedaCO1Type'  
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CL1.yaml#/components/schemas/SchedaCL1Type'  
+        properties:
+          body:
+            oneOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S1.yaml#/components/schemas/SchedaS1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S2.yaml#/components/schemas/SchedaS2Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S3.yaml#/components/schemas/SchedaS3Type'            
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.29.yaml#/components/schemas/SchedaA1.29Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.30.yaml#/components/schemas/SchedaA1.30Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.31.yaml#/components/schemas/SchedaA1.31Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.32.yaml#/components/schemas/SchedaA1.32Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.33.yaml#/components/schemas/SchedaA1.33Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.34.yaml#/components/schemas/SchedaA1.34Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.35.yaml#/components/schemas/SchedaA1.35Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.36.yaml#/components/schemas/SchedaA1.36Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.37.yaml#/components/schemas/SchedaA1.37Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.29.yaml#/components/schemas/SchedaA2.29Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.30.yaml#/components/schemas/SchedaA2.30Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.31.yaml#/components/schemas/SchedaA2.31Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.32.yaml#/components/schemas/SchedaA2.32Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.33.yaml#/components/schemas/SchedaA2.33Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.34.yaml#/components/schemas/SchedaA2.34Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.35.yaml#/components/schemas/SchedaA2.35Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.36.yaml#/components/schemas/SchedaA2.36Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A2.37.yaml#/components/schemas/SchedaA2.37Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.1.yaml#/components/schemas/SchedaA3.1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.2.yaml#/components/schemas/SchedaA3.2Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.3.yaml#/components/schemas/SchedaA3.3Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.4.yaml#/components/schemas/SchedaA3.4Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.5.yaml#/components/schemas/SchedaA3.5Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.6.yaml#/components/schemas/SchedaA3.6Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-NAG1.yaml#/components/schemas/SchedaNAG1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-NAG2.yaml#/components/schemas/SchedaNAG2Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-I1.yaml#/components/schemas/SchedaI1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M1.38.yaml#/components/schemas/SchedaM1.38Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M1.39.yaml#/components/schemas/SchedaM1.39Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M1.40.yaml#/components/schemas/SchedaM1.40Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.38.yaml#/components/schemas/SchedaM2.38Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.39.yaml#/components/schemas/SchedaM2.39Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.40.yaml#/components/schemas/SchedaM2.40Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SA1.yaml#/components/schemas/SchedaSA1Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SU1.yaml#/components/schemas/SchedaSU1Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SO1.yaml#/components/schemas/SchedaSO1Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-RI1.yaml#/components/schemas/SchedaRI1Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AC1.yaml#/components/schemas/SchedaAC1Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-IR1.yaml#/components/schemas/SchedaIR1Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CO1.yaml#/components/schemas/SchedaCO1Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CL1.yaml#/components/schemas/SchedaCL1Type'  
       IdSchedaType:
         description: Identificativo univoco della Scheda restituito da ANAC in fase di creazione Scheda
         type: string
         format: uuid
         example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-      StatoDocumentoEnum:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/StatoDocumentoEnum'
-      StatoRichiestaEnum:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/StatoRichiestaEnum'
-      TipoDocumentoEnum: 
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/TipoDocumentoEnum'
-      AnagraficaOEType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/AnagraficaOEType' 
-      FVOEType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/FVOEType' 
-      FVAType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/FVAType'
-      DocumentoType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoType'
-      DocumentoOEType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoOEType'
-      DocumentoAType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoAType'
-      ContentDocumentType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType' 
-      AutorizzazioneAccessoType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/AutorizzazioneAccessoType' 
-      RichiestaAccessoType:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/RichiestaAccessoType'
-      StatoSchedaEnum:
-        description: Stato della Scheda - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
-      TipoSchedaEnum:
-        description: Tipologia di Scheda - fare riferimento ai valori contenuti nel file [tipoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
-      TipoServizioSoggettoEnum:
-        description: Tipologia di Servizi delegabili ad un Soggetto - fare riferimento ai valori contenuti nel file [tipoFunzione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
-      TipoOperazioneSoggettoEnum:
-        description: Tipologia di Operazioni delegabili ad un Soggetto - fare riferimento ai valori contenuti nel file [tipoFunzione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazioneSoggetto.json)        
-      TipoOperazioneEnum:
-        description: Tipo Operazione di cui si richiedere l'esito dell'operazione - fare riferimento ai valori contenuti nel file [tipoOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazione.json)
-      TipoPianoEnum:
-        description: Tipo di pianificazione - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
-      TipoAzioneAvvisoEnum:
-        description: Tipo di azione dell'avviso - fare riferimento ai valori contenuti nel file [tipoAzioneAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneAvviso.json)
-      TipoAvvisoEnum:
-        description: Tipologia di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
-      TipoRuoloEnum:
-        description: Tipo di ruolo di un soggetto - fare riferimento ai valori contenuti nel file [tipoRuolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRuolo.json)
-      StatoPianoEnum:  
-        description: Stato della pianificazione - fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
-      StatoAppaltoEnum: 
-        description: Stato in cui si trova l' Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
-      StatoAvvisoEnum:
-        description: Stato in cui si trova l' Avviso - fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
-      StatoLottoEnum:
-        description: Stato in cui si trova il Lotto - fare riferimento ai valori contenuti nel file [statoLotto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoLotto.json)
       CigType:
-        description: coppia progressivoLotto-CIG
+        description: coppia lotIdentifier-cig
         type: object
         additionalProperties: false
-      I18NType:
-        type: object
         properties:
-          it:
+          cig:
+            description: codice identificativo lotto
             type: string
-          en:
-            type: string
+            example: '9050626CD6'
+          lotIdentifier:
+            description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
       TipologicaBaseType:
         description: Oggetto generico di una tipologica
         type: object
@@ -234,64 +192,185 @@ components:
             description: Elenco di una tipologica
             type: array
             items:
-              $ref: '#/components/schemas/DatiTipologicaType'
+              $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-common.yaml#/components/schemas/TipologicaSchemaType'
       DatiTipologicaType:
+        allOf: # estende lo schema dati di TipologicaType
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-common.yaml#/components/schemas/TipologicaSchemaType'
+      SoggettoType:
+        description: Oggetto generico del soggetto
         type: object
+        additionalProperties: false
         properties:
-          codice:
+          codiceFiscale:
+            description: Codice fiscale del soggetto
             type: string
-          descrizione:
-            $ref: '#/components/schemas/I18NType'
+            example: 'MRORSS77T05E472I'
+          ruolo:  
+            $ref: '#/components/schemas/TipoRuoloEnum'
+          servizio:
+            $ref: '#/components/schemas/TipoServizioSoggettoEnum'
+          operazione: 
+             $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'
           dataInizio:
-            description: data inizio (A datetime specified by RF3339)
+            description: data inizio incarico soggetto (A datetime specified by ISO 8601 as profiled by RFC 3339)
             type: string
             format: datetime
             example: '2022-01-23T12:02:05Z'
           dataFine:
-            description: data fine (A datetime specified by RF3339)
+            description: data fine incarico soggetto (A datetime specified by ISO 8601 as profiled by RFC 3339)
             type: string
             format: datetime
             example: '2022-01-23T12:02:05Z'
-      AnagraficaType:
-        description: oggetto generico dell'anagrafica
-        type: object
-        additionalProperties: false
       RuoloType:
         description: ruolo
         type: object
         additionalProperties: false
-      AnagraficaSoggettoType:
-        allOf: # estende la classe AnagraficaType
-          - $ref: '#/components/schemas/AnagraficaType'
-        description: Oggetto specifico dell'anagrafica
-        type: object
-        additionalProperties: false
       LottoType:
-        description: Oggetto che riporta tutti i dati del lotto
+        description: Oggetto che riporta i dati del lotto
         type: object
         additionalProperties: false
-      AppaltoType:
+        properties:
+          cig:
+            description: codice identificativo lotto
+            type: string
+            example: '9050626CD6'
+          lotIdentifier:
+            description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          oggetto:
+            description: descrizione del lotto
+            type: string
+            example: 'Servizio di assistenza e supporto specialistico per rilievo aereo ed elaborazione dati'
+          importo:
+            description: Importo lotto in €
+            type: string
+            format: decimal
+          oggettoPrincipaleContratto:
+            $ref: '#/components/schemas/OggettoPrincipaleContrattoEnum'
+          oggettoContratto:
+            $ref: '#/components/schemas/OggettoContrattoEnum'            
+          appalto:
+            $ref: '#/components/schemas/AppaltoBaseType' 
+          #avvisi: 
+            #type: array
+            #items:
+              #$ref: '#/components/schemas/DatiAvvisoType'
+      AppaltoBaseType:
         description: Oggetto che riporta tutti i dati dell'Appalto
         type: object
         additionalProperties: false
+        properties:
+          idAppalto:
+            description: identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"   
+          oggetto:
+            description: descrizione dell'appalto
+            type: string
+            example: Fornitura di strumento XX per XX
+          dataCreazione:
+            description: data creazione dell'appalto (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'       
+          stato:
+            $ref: '#/components/schemas/StatoAppaltoEnum'
+          #avviso:  
+            #$ref: '#/components/schemas/AvvisoType'
+      AppaltoType:
+        allOf: # estende la classe AppaltoBaseType
+          - $ref: '#/components/schemas/AppaltoBaseType'
+        properties:
+          idAppalto:
+            description: identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"   
+          oggetto:
+            description: descrizione dell'appalto
+            type: string
+            example: Fornitura di strumento XX per XX
+          dataCreazione:
+            description: data creazione dell'appalto (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'       
+          stato:
+            $ref: '#/components/schemas/StatoAppaltoEnum'
+          #avviso:  
+            #$ref: '#/components/schemas/DatiAvvisoType'
+          lotti:
+            type: array
+            items:
+              $ref: '#/components/schemas/LottoType'
       AvvisoType:
-        allOf: # estende la classe DatiAvvisoType
-          - $ref: '#/components/schemas/DatiAvvisoType'
-      DatiAvvisoType:
         type: object
         additionalProperties: false
         required:  # List the required properties here
           - idAvviso
+          - idAppalto
         properties:
           idAvviso:
             description: identificativo univoco dell'Avviso generato da ANAC.
             type: string
             format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+          idAppalto:
+            description: identificativo univoco dell'Avviso generato da ANAC.
+            type: string
+            format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-        oneOf:
-          - $ref: '#/components/schemas/DatiPianoType'
-          - $ref: '#/components/schemas/DatiAppaltoType'
-          - $ref: '#/components/schemas/DatiSchedaType'
+          scheda:
+            oneOf:
+              - $ref: '#/components/schemas/SchedaPianificazioneType'
+              - $ref: '#/components/schemas/SchedaComunicaAppaltoType'
+              - $ref: '#/components/schemas/SchedaPostPubblicazioneType'
+      DatiAvvisoType:
+        type: object
+        additionalProperties: false
+        properties:
+          idAvviso:
+            description: identificativo univoco dell'Avviso generato da ANAC.
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+          dataCreazione:
+            description: Data di crezione dell'Avviso  (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'
+          dataPubblicazione:
+            description: Data di pubblicazione dell'Avviso  (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'
+          stato:
+            $ref: '#/components/schemas/StatoAvvisoEnum'
+          tipo:
+            $ref: '#/components/schemas/TipoAvvisoEnum'
+          azione:
+            $ref: '#/components/schemas/TipoAzioneAvvisoEnum'            
+          appalto:
+            $ref: '#/components/schemas/AppaltoBaseType'
+          lotto:
+            $ref: '#/components/schemas/LottoType'
+          scheda:
+            oneOf:
+              - $ref: '#/components/schemas/SchedaPianificazioneType'
+              - $ref: '#/components/schemas/SchedaComunicaAppaltoType'
+              - $ref: '#/components/schemas/SchedaPostPubblicazioneType'
+        example:
+            idAvviso: 'f81d4fae-7dec-11d0-a765-00a0c91e6bf6'
+            dataCreazione: '2022-01-23T12:02:05Z'
+            dataPubblicazione: '2022-01-23T12:02:05Z'
+            stato: 'PUBBLICATO'
+            tipo: 'PUBBLICAZIONE GARA'
+            azione: 'RETTIFICA'
+            appalto: 
+              idAppalto: "ceb08609-1a78-4df6-ae8d-81b0516e6f71"
+              oggetto: 'Fornitura di strumento XX per XX'
+              dataCreazione: '2022-04-01T12:02:05Z'
+              stato: 'PUBBLICATO'
       PianoType:
         description: Oggetto che riporta tutti i dati della Pianificazione
         type: object
@@ -375,21 +454,155 @@ components:
             description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Pianificazione. (A UUID specified by RFC4122)
         required:
           - idPianificazione
+      StatoType:
+        type: object
+        additionalProperties: false
+        description: Stato dell'appalto, del lotto o del contratto
+        properties:
+          esitoStato:
+            oneOf:
+              - $ref: '#/components/schemas/StatoAppaltoType' 
+              - $ref: '#/components/schemas/StatoLottoType'      
+              - $ref: '#/components/schemas/StatoContrattoType'
+      StatoAppaltoType:
+        type: object
+        additionalProperties: false
+        description: Stato dell'appalto
+        properties:
+          idAppalto:
+            description: identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          dataControllo:
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A datetime specified by ISO 8601 as profiled by RFC 3339)            
+          stato:
+            $ref: '#/components/schemas/StatoAppaltoEnum'              
+      StatoLottoType:
+        type: object
+        additionalProperties: false
+        description: Stato del lotto
+        properties:
+          cig:
+            description: codice identificativo lotto
+            type: string
+            example: '9050626CD6'
+          dataControllo:
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A datetime specified by ISO 8601 as profiled by RFC 3339)             
+          stato:
+            $ref: '#/components/schemas/StatoLottoEnum' 
+      StatoContrattoType:
+        type: object
+        additionalProperties: false
+        description: Stato del contratto
+        properties:
+          idContratto:
+            description: identificativo univoco del Contratto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          dataControllo:
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A datetime specified by ISO 8601 as profiled by RFC 3339)             
+          stato:
+            $ref: '#/components/schemas/StatoContrattoEnum'            
+      StatoAvvisoType:
+        type: object
+        additionalProperties: false
+        properties:
+          idAvviso:
+            description: identificativo univoco dell'Avviso generato da ANAC.
+            type: string
+            format: uuid          
+          dataControllo:
+            description: data in cui è stato effettuato il controllo sullo stato dell'avviso (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          stato:  
+             $ref: '#/components/schemas/StatoAvvisoEnum'             
       EsitoOperazioneType:
+        type: object
+        additionalProperties: false
+        oneOf:
+          - $ref: '#/components/schemas/EsitoOperazioneBaseType' 
+          - $ref: '#/components/schemas/EsitoOperazioneAvvisoType'      
+          - $ref: '#/components/schemas/EsitoOperazioneContrattoType'      
+      EsitoOperazioneBaseType:
+        allOf: # estende la classe EsitoOperazioneEnum
+          - $ref: '#/components/schemas/EsitoOperazioneEnum'
         type: object
         additionalProperties: false
         required:  # List the required properties here
           - codice
           - descrizione
+          - esito
+          - dataControllo
         properties:
-          codice: 
-            description: codice dell'esito dell'operazione
+          esito:
+            $ref: '#/components/schemas/EsitoEnum'
+          dataControllo:
+            description: data in cui è stato effettuato il controllo dell'esito dell'operazione (A datetime specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            example: '01'
-          descrizione:
-            description: descrizione dell'esito dell'operazione
-            type: string
-            example: 'AVVISO PUBBLICATO'
+            format: datetime
+            example: '2022-01-23T12:02:05Z'
           dettaglio:
             description: descrizione dettagliata dell'esito dell'operazione
             type: string
+          errori:
+            description: elenco degli errori
+            type: object
+            properties:
+              codice:
+                type: string
+              descrizione:
+                maxLength: 4096
+                pattern: ^.{0,1024}$
+                type: string
+        example:
+            codice: '01'
+            descrizione: 
+              it: 'AVVISO PUBBLICATO'
+              en: 'AVVISO PUBBLICATO'
+            dataControllo: '2022-01-23T12:02:05Z'
+            esito: 'OK'
+      EsitoOperazioneAvvisoType:
+        allOf: # estende la classe EsitoOperazioneBaseType
+          - $ref: '#/components/schemas/EsitoOperazioneBaseType'
+        properties:
+          idAvviso:
+            description: identificativo univoco dell'Avviso generato da ANAC.
+            type: string
+            format: uuid
+      EsitoOperazioneContrattoType:
+        allOf: # estende la classe EsitoOperazioneBaseType
+          - $ref: '#/components/schemas/EsitoOperazioneBaseType'
+        properties:
+          idContratto:
+            description: identificativo univoco del Contratto generato da ANAC.
+            type: string
+            format: uuid
+      TipoAzioneAvvisoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAzioneAvvisoEnum'
+      TipoAvvisoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAvvisoEnum'
+      StatoAppaltoEnum: 
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAppaltoEnum'
+      StatoAvvisoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAvvisoEnum'
+      StatoLottoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoLottoEnum'
+      StatoContrattoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoContrattoEnum'    
+      OggettoPrincipaleContrattoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/OggettoPrincipaleContrattoEnum'
+      OggettoContrattoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/OggettoContrattoEnum'        
+      EsitoOperazioneEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/EsitoOperazioneEnum'        
+      EsitoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/EsitoEnum'
+      CodiceSchedaEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/CodiceSchedaEnum'   
+      TipoRuoloEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoRuoloEnum'
+      TipoServizioSoggettoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoServizioSoggettoEnum'
+      TipoOperazioneSoggettoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneSoggettoEnum'         

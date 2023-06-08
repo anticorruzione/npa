@@ -6,64 +6,316 @@ info:
    Vengono riportati gli oggetti usati dalle operazioni FVOE e FVA
 components:
   schemas:
+    StatoAutorizzazioneEnum:  
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAutorizzazioneEnum'
+    StatoFascicoloEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoFascicoloEnum'
     StatoDocumentoEnum:
-      description: Stato in cui si trova il documento - fare riferimento ai valori contenuti nel file [statoDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoDocumento.json)
-    StatoRichiestaEnum:
-      description: Stato in cui si trova la richiesta di accesso al fvoe - fare riferimento ai valori contenuti nel file [statoRichiesta.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoRichiesta.json)
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoDocumentoEnum'
     TipoDocumentoEnum: 
-      description: tipologie di documento - fare riferimento ai valori contenuti nel file [tipoDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoDocumento.json)
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoDocumentoEnum'
+    TipoFascicoloEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoFascicoloEnum'
+    TipoOggettoFascicoloEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOggettoFascicoloEnum'
+    TipoAzioneFascicoloEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAzioneFascicoloEnum'
+    TipoAzioneDocumentoEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAzioneDocumentoEnum'
+    AppaltoType : 
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AppaltoType'
+    StatoRichiestaDocumentoEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoRichiestaDocumentoEnum'
     FascicoloType: 
       description: Oggetto che riporta i dati del Fascicolo generico
       type: object
       additionalProperties: false
+      properties:
+        idFascicolo:
+          description: identificativo univoco del Fascicolo
+          type: string
+          example: "507f1f77bcf86cd799439011"
+        codiceFascicolo:
+          description: codice univoco esterno del Fascicolo . Se tipoFascicolo='FVA' é valorizzato con il codiceAppalto
+          type: string
+          example: "FAS_202301_45632342"  
+        tipoOggetto:
+          $ref: '#/components/schemas/TipoOggettoFascicoloEnum' 
+        tipoFascicolo:
+          $ref: '#/components/schemas/TipoFascicoloEnum'
+        stato:
+          $ref: '#/components/schemas/StatoFascicoloEnum' 
+        azione:
+          $ref: '#/components/schemas/TipoAzioneFascicoloEnum'  
+        utenteCreazione:
+          description: utente di registrazione del fascicolo 
+          type: string
+          example: "UDI.8909"
+        dataCreazione:
+          description: data di registrazione del fascicolo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: "2022-01-23T12:02:05Z"
+        numDocumenti:
+            description: numero della pagina da visualizzare.
+            type: integer
+            format: int32
+            minimum: 10
+            default: 0
+        documenti:
+          description: Lista documenti
+          type: array
+          items:
+            $ref: '#/components/schemas/DocumentoType'    
+        numSottoFascicoli:
+            description: numero della pagina da visualizzare.
+            type: integer
+            format: int32
+            minimum: 10
+            default: 0
+        sottoFascicoli:
+          description: Lista Sotto Fascicoli
+          type: array
+          items:
+            $ref: '#/components/schemas/FascicoloType' 
+        datiAggiuntivi:
+          description: dati aggiuntivi del Fascicolo. Definiti in JSON
+          type: string
+          example: "{appalto : {idAppalto: 35553535K},
+                      schede:[{
+                        id:566eb3c704c7b31facbb0007,
+                        nome:P1.10,
+                        dataInserimento:2015-05-28T14:07:17Z,
+                        idAppalto:35553535K,
+                        espd:54495ad94c934721ede76d90,
+                        eform:566eb3c704c7b31facbb0007}]}"    
     FVOEType:
       allOf: # estende lo schema dati di FascicoloType
         - $ref: '#/components/schemas/FascicoloType'
       description: Oggetto che riporta i dati del FVOE
       type: object
       additionalProperties: false
+      properties:
+        operatoreEconomico: 
+          $ref: '#/components/schemas/AnagraficaOEType'
     FVAType:
       allOf: # estende lo schema dati di FascicoloType
         - $ref: '#/components/schemas/FascicoloType'
       description: Oggetto che riporta i dati del FVA
       type: object
       additionalProperties: false
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoType'
     DocumentoType:
       description: Oggetto che riporta i dati del Documento
       type: object
       additionalProperties: false
-    DocumentoOEType:
-      description: Oggetto che riporta i dati del Documento dell'OE
-      allOf: # estende lo schema dati di DocumentoType
-        - $ref: '#/components/schemas/DocumentoType'
-      type: object
-      additionalProperties: false
-    DocumentoAType:
-      description: Oggetto che riporta i dati del Documento dell'Appalto
-      allOf: 
-        - $ref: '#/components/schemas/DocumentoType' # estende lo schema dati di DocumentoType
-        - $ref: '#/components/schemas/DocumentoOEType' #estende lo schema dati di DocumentoOE perché potrebbe essere un Documento dell' Operatore Economico
-      type: object
-      additionalProperties: false
+      properties:
+        idDocumento:
+          description: identificativo univoco del documento
+          type: string
+          example: "507f1f77bcf86cd799439011"
+        tipo:
+          $ref: '#/components/schemas/TipoDocumentoEnum'
+        stato:
+          $ref: '#/components/schemas/StatoDocumentoEnum'
+        dataInserimento:
+          description: data di inserimento del documento (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z' 
+        dataEmissione:
+          description: data di emissione del documento (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z' 
+        dataFineValidita:
+          description: data fine validità del documento(A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z' 
+        numeroProtocollo:
+          description: numero di registrazione del documento
+          type: string
+          example: '2342344342'
+        dataProtocollo:
+          description: data di registrazione del documento  (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z' 
+        azione:
+          $ref: '#/components/schemas/TipoAzioneDocumentoEnum'   
+        utenteCreazione:
+          description: utente di registrazione del documento
+          type: string
+          example: "UDI.8909"  
+        dataCreazione:
+          description: data di registrazione del documento  (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z' 
+        datiAggiuntivi:
+          description: dati aggiuntivi definiti dal Sistema proprietario del documento. Definiti in JSON
+          type: string
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        fascicoli: 
+          type: array
+          minItems: 0
+          items:
+            $ref: '#/components/schemas/FascicoloType'
     ContentDocumentType:
       description: Oggetto che riporta il contenuto del
       type: object
       additionalProperties: false
+      properties:
+        nomefile:
+          description: nomeFile originale
+          type: string
+          example: "Allegato5674.pdf"
+        estensione:
+          description: estensione file
+          type: string
+          example: "PDF"
+        dimensione:
+          description: grandezza del documento
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        contenuto:
+          description: Contenuto in formato Binario del documento
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
     AutorizzazioneAccessoType:
-      description: Oggetto che riporta tutti i dati della Pianificazione
+      description: Oggetto che descrive l'autorizzazione concessa dall' OE verso il SA per poter accedere al proprio FVOE
       type: object
       additionalProperties: false
+      required:
+        - dataInizio
+        - stato
+      properties:
+        idAutorizzazione:
+            description: identificativo univoco dell'Autorizzazione restituito da ANAC.
+            type: string
+            format: uui
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        operatoreEconomico:
+          $ref: '#/components/schemas/AnagraficaOEType'
+        appalto:
+          $ref: '#/components/schemas/AppaltoType'  
+        dataInizio:
+          description: data inizio autorizzazione (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z'
+        dataFine:
+          description: data fine autorizzazione (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z'  
+        stato:
+          $ref: '#/components/schemas/StatoAutorizzazioneEnum'
+        motivo:
+          description: motivo dell''autorizzazione o del rifiuto
+          type: string
+          maxLength: 255
+        autorizzante: 
+          $ref: '#/components/schemas/AnagraficaOEType'
+        richiestaAccesso:
+          $ref: '#/components/schemas/RichiestaAccessoType' 
+        chiaveAccesso:
+          description: chiave per accedere al Fascicolo Virtuale dell'OE
+          type: string
+          example: "507f1f77bcf86cd799439011"
     RichiestaAccessoType:
-      description: Oggetto che riporta i dati della Richiesta di Accesso
+      description: Oggetto che riporta i dati della Richiesta di Accesso al Fascicolo Virtuale dell'OE
       type: object
       additionalProperties: false
+      required:
+        - operatoriEconomici
+        - appalto
+        - dataInizioAutorizzazione
+      properties:
+        idRichiesta:
+            description: identificativo univoco della richiesta restituito da ANAC.
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        dataInizioAutorizzazione:
+          description: data richiesta dal SA per accedere al Fascicolo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z' 
+        dataFineAutorizzazione:
+          description: data richiesta dal SA come termine all' autorizzazione al Fascicolo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z'
+        operatoriEconomici: 
+          type: array
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/AnagraficaOEType' 
+        appalto:
+          $ref: '#/components/schemas/AppaltoType' 
+        richiedente: 
+          $ref: '#/components/schemas/AnagraficaSAType'   
     AnagraficaType:
       description: Oggetto generico dell'anagrafica
       type: object
       additionalProperties: false
+      properties:
+        codiceFiscale:
+          description: Codice fiscale dell'anagrafica 
+          type: string
+          example: 'MRORSS77T05E472I'
     AnagraficaOEType:
       allOf: # estende la classe AnagraficaType
         - $ref: '#/components/schemas/AnagraficaType'
       description: Oggetto specifico dell'anagrafica dell'OE
       type: object
       additionalProperties: false
+    AnagraficaSAType:
+      allOf: # estende la classe AnagraficaType
+        - $ref: '#/components/schemas/AnagraficaType'
+      description: Oggetto specifico dell'anagrafica dell'SA
+      type: object
+      additionalProperties: false
+      properties:
+        codiceAusa:
+          description: Codice univoco specifico dell'anagrafica dell'SA
+          type: string
+          pattern: '[0-9]{10}'
+          example: '0000247847'
+    StatoRichiestaDocumentoType: 
+      description: Oggetto che riporta i dati dello stato del documento di cui si é richiesta la produzione
+      type: object
+      additionalProperties: false
+      required:
+        - chiaveAccesso
+        - operatoreEconomico
+        - tipoDocumento
+        - idRichiesta
+        - stato
+      properties:
+        chiaveAccesso:
+          description: chiave di accesso del SA per accedere al FVOE
+          type: string
+          example: "507f1f77bcf86cd799439011"
+        operatoreEconomico:
+          $ref: '#/components/schemas/AnagraficaOEType' 
+        soggetto:
+          $ref: '#/components/schemas/AnagraficaOEType' 
+        tipoDocumento:
+          $ref: '#/components/schemas/TipoDocumentoEnum'
+        idRichiesta:
+          description: identificativo univoco della richiesta di recupero del documento 
+          type: string
+          example: "1789c793-bdbe-4e8c-aa7e-4117145c739b" 
+        stato:
+          $ref: '#/components/schemas/StatoRichiestaDocumentoEnum'  
+        idDocumento:
+          description: identificativo univoco del documento 
+          type: string
+          example: "507f1f77bcf86cd799439011"           

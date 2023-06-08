@@ -1,0 +1,148 @@
+openapi: 3.0.3
+info:
+  title: Modello Dati Tipologiche - OpenAPI 3.0
+  version: 1.0.0
+  description: |-
+   Vengono riportati gli oggetti delle tipologiche
+components:
+  schemas:
+    TipologicaSchemaType:
+        type: object
+        properties:
+          codice:
+            type: string
+          descrizione:
+            $ref: '#/components/schemas/I18NType'
+          dataInizio:
+            description: data inizio (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'
+          dataFine:
+            description: data fine (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: datetime
+            example: '2022-01-23T12:02:05Z'
+    I18NType:
+        type: object
+        properties:
+          it:
+            type: string
+          en:
+            type: string
+    StatoFascicoloEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'
+      description: Stato in cui si trova il fascicolo - fare riferimento ai valori contenuti nel file [statoFascicolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoFascicolo.json) 
+    StatoDocumentoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'
+      description: Stato in cui si trova il documento - fare riferimento ai valori contenuti nel file [statoDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoDocumento.json)
+    StatoRichiestaDocumentoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'   
+      description: Stato in cui si trova la richiesta di recupero del documento certificato del oe - fare riferimento ai valori contenuti nel file [statoRichiestaDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoRichiestaDocumento.json)
+    TipoDocumentoEnum: 
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: tipologie di documento - fare riferimento ai valori contenuti nel file [tipoDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoDocumento.jsoN)
+    StatoAutorizzazioneEnum:  
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'
+      description: Stato in cui si trova l'Autorizzazione - fare riferimento ai valori contenuti nel file [statoAutorizzazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAutorizzazione.json)
+    TipoFascicoloEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: tipologie di fascicolo - fare riferimento ai valori contenuti nel file [tipoFascicolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoFascicolo.json)
+    TipoOggettoFascicoloEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'    
+      description: tipologie dell''oggetto fascicolo - Identificativo per determinare il tipo di modello dati del Fascicolo- fare riferimento ai valori contenuti nel file [tipoOggettoFascicolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOggettoFascicolo.json)
+    TipoAzioneFascicoloEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'    
+      description: tipologie delle azioni eseguite sul fascicolo - fare riferimento ai valori contenuti nel file [tipoAzioneFascicolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneFascicolo.json)
+    TipoAzioneDocumentoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'    
+      description: tipologie delle azioni eseguite sul fascicolo - fare riferimento ai valori contenuti nel file [tipoAzioneDocumento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneDocumento.json)
+    StatoSchedaEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Stato della Scheda - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
+    TipoSchedaEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipologia di Scheda - fare riferimento ai valori contenuti nel file [tipoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
+    TipoServizioSoggettoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipologia di Servizi delegabili ad un Soggetto - fare riferimento ai valori contenuti nel file [tipoServizioSoggetto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoServizioSoggetto.json)
+    TipoOperazioneSoggettoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipologia di Operazioni delegabili ad un Soggetto - fare riferimento ai valori contenuti nel file [tipoOperazioneSoggetto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazioneSoggetto.json)        
+    TipoOperazioneEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipo Operazione di cui si richiedere l'esito dell'operazione - fare riferimento ai valori contenuti nel file [tipoOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazione.json)
+    TipoRicercaOperazioneEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipo di ricerca da eseguire - fare riferimento ai valori contenuti nel file [tipoRicercaOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRicercaOperazione.json)
+    TipoPianoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipo di pianificazione - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
+    TipoAzioneAvvisoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipo di azione dell'avviso - fare riferimento ai valori contenuti nel file [tipoAzioneAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneAvviso.json)
+    TipoAvvisoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipologia di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
+    TipoRuoloEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Tipo di ruolo di un soggetto - fare riferimento ai valori contenuti nel file [tipoRuolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRuolo.json)
+    StatoPianoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Stato della pianificazione - fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
+    StatoAppaltoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Stato in cui si trova l' Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+    StatoAvvisoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Stato in cui si trova l' Avviso - fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
+    StatoLottoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Stato in cui si trova il Lotto - fare riferimento ai valori contenuti nel file [statoLotto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoLotto.json)
+    StatoContrattoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description: Stato in cui si trova il Contratto - fare riferimento ai valori contenuti nel file [statoContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoContratto.json)        
+    OggettoPrincipaleContrattoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description:  Oggetto principale del contratto - fare riferimento ai valori contenuti nel file [oggettoPrincipaleContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoPrincipaleContratto.json)
+    OggettoContrattoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description:  Oggetto del contratto - fare riferimento ai valori contenuti nel file [oggettoContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoContratto.json)      
+    EsitoOperazioneEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'   
+      description:  Oggetto esito operazione - fare riferimento ai valori contenuti nel file [esitoOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoOperazione.json)    
+    EsitoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description:  Oggetto esito - fare riferimento ai valori contenuti nel file [esito.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esito.json)
+    CodiceSchedaEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      description:  Codice della scheda - fare riferimento ai valori contenuti nel file [codiceScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codiceScheda.json)    
