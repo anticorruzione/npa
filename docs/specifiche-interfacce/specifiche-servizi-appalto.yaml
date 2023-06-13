@@ -8,10 +8,10 @@ info:
 
       #### Documentazione
       La documentazione a supporto delle specifiche di interfaccia con i sistemi che interoperano con il nuovo sistema di digitalizzazione è redatta con il linguaggio di markup Markdown ed è presente al segunete url:
-        [documento-specifiche-servizi-npa](https://github.com/anticorruzione/npa/blob/main/docs/specifiche-interfacce/documento-specifiche-servizi-npa.md)
+        [documento-specifiche-servizi-npa](https://github.com/domaltomare/npa/blob/main/docs/specifiche-interfacce/documento-specifiche-servizi-npa.md)
     ```
   # I termini del servizio.
-  termsOfService: 'https://github.com/anticorruzione/npa/blob/main/README.md#termini-del-servizio'
+  termsOfService: 'https://github.com/domaltomare/npa/blob/main/README.md#termini-del-servizio'
   # Chi posso contattare per informazioni sul servizio e sul suo stato?
   contact:
     email: ufficio.uscp@anticorruzione.it
@@ -244,12 +244,12 @@ paths:
       parameters:
         - in: query
           name: stato
-          description: stato della Pianificazione - - fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
+          description: stato della Pianificazione - - fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
           schema:
             $ref: '#/components/schemas/StatoPianoEnum'
         - in: query
           name: tipo
-          description: tipologia della Pianificazione - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
+          description: tipologia della Pianificazione - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
           schema:
             $ref: '#/components/schemas/TipoPianoEnum'    
         - in: query
@@ -515,7 +515,7 @@ paths:
             type: string
         - in: query
           name: stato
-          description: Stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: Stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
             $ref: '#/components/schemas/StatoAppaltoEnum'
         - in: query
@@ -917,7 +917,7 @@ paths:
             example: 9050626CD6
         - in: query
           name: stato
-          description: stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
             $ref: '#/components/schemas/StatoAppaltoEnum'
         - in: query
@@ -936,17 +936,17 @@ paths:
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: statoAvviso
-          description: Stato in cui si trova l' Avviso - fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
+          description: Stato in cui si trova l' Avviso - fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
           schema:
             $ref: '#/components/schemas/StatoAvvisoEnum'
         - in: query
           name: tipoAvviso
-          description: Tipologia di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
+          description: Tipologia di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
           schema:
             $ref: '#/components/schemas/TipoAvvisoEnum'
         - in: query
           name: azioneAvviso
-          description: Tipo di azione dell'avviso - fare riferimento ai valori contenuti nel file [tipoAzioneAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneAvviso.json)
+          description: Tipo di azione dell'avviso - fare riferimento ai valori contenuti nel file [tipoAzioneAvviso.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoAzioneAvviso.json)
           schema:
             $ref: '#/components/schemas/TipoAzioneAvvisoEnum'
         - in: query
@@ -1223,7 +1223,7 @@ paths:
             example: 9050626CD6
         - in: query
           name: stato
-          description: stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
             $ref: '#/components/schemas/StatoAppaltoEnum'
         - in: query
@@ -1242,12 +1242,12 @@ paths:
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: tipoScheda
-          description: Tipologia di Scheda - fare riferimento ai valori contenuti nel file [tipoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
+          description: Tipologia di Scheda - fare riferimento ai valori contenuti nel file [tipoScheda.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
           schema:
             $ref: '#/components/schemas/TipoSchedaEnum'
         - in: query
           name: statoScheda
-          description: Stato della Scheda - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
+          description: Stato della Scheda - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
           schema:
             $ref: '#/components/schemas/StatoSchedaEnum'
         - in: query
@@ -1396,13 +1396,13 @@ paths:
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         - in: query
           name: tipoOperazione
-          description: Tipo operazione di cui si vuole conoscere l'esito - fare riferimento ai valori contenuti nel file [tipoOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazione.json)
+          description: Tipo operazione di cui si vuole conoscere l'esito - fare riferimento ai valori contenuti nel file [tipoOperazione.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoOperazione.json)
           required: true
           schema:
             $ref: '#/components/schemas/TipoOperazioneEnum'
         - in: query
           name: tipoRicerca
-          description: Tipo di ricerca da eseguire - fare riferimento ai valori contenuti nel file [tipoRicercaOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRicercaOperazione.json)
+          description: Tipo di ricerca da eseguire - fare riferimento ai valori contenuti nel file [tipoRicercaOperazione.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoRicercaOperazione.json)
           required: true
           schema:
             $ref: '#/components/schemas/TipoRicercaOperazioneEnum'
@@ -1636,17 +1636,17 @@ paths:
             example: 'RSSMRA94E07A511G'
         - in: query
           name: ruolo
-          description: Ruolo di un soggetto - fare riferimento ai valori contenuti nel file [tipoRuolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRuolo.json)
+          description: Ruolo di un soggetto - fare riferimento ai valori contenuti nel file [tipoRuolo.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoRuolo.json)
           schema:
             $ref: '#/components/schemas/TipoRuoloEnum' 
         - in: query
           name: servizio
-          description: servizio delegato al soggetto - fare riferimento ai valori contenuti nel file [tipoFunzione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
+          description: servizio delegato al soggetto - fare riferimento ai valori contenuti nel file [tipoFunzione.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
           schema:
             $ref: '#/components/schemas/TipoServizioSoggettoEnum'
         - in: query
           name: operazione
-          description: operazione delegata al soggetto - fare riferimento ai valori contenuti nel file [tipoOperazioneSoggetto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazioneSoggetto.json)        
+          description: operazione delegata al soggetto - fare riferimento ai valori contenuti nel file [tipoOperazioneSoggetto.json](https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/tipologiche/tipoOperazioneSoggetto.json)        
           schema:
             $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'            
         - in: query
@@ -1864,71 +1864,73 @@ components:
             $ref: '#/components/schemas/ErrorResponse'
   schemas:
     StatoAppaltoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAppaltoEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAppaltoEnum'
     StatoAvvisoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAvvisoEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAvvisoEnum'
     StatoPianoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoPianoEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoPianoEnum'
     TipoPianoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoPianoEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoPianoEnum'
     TipoAvvisoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAvvisoEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAvvisoEnum'
     TipoAzioneAvvisoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAzioneAvvisoEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAzioneAvvisoEnum'
     TipoSchedaEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoSchedaEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoSchedaEnum'
     StatoSchedaEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoSchedaEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoSchedaEnum'
     TipoOperazioneEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneEnum'
     TipoRicercaOperazioneEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoRicercaOperazioneEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoRicercaOperazioneEnum'
     TipoServizioSoggettoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoServizioSoggettoEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoServizioSoggettoEnum'
     TipoOperazioneSoggettoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneSoggettoEnum'      
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneSoggettoEnum'      
     TipoRuoloEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoRuoloEnum'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoRuoloEnum'
+    ErroriEnum:
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/ErroriEnum'      
     AppaltoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AppaltoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AppaltoType'
     PianoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PianoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PianoType'
     SoggettoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SoggettoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SoggettoType'
     PaginazioneType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PaginazioneType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PaginazioneType'
     AvvisoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoType'
     DatiAvvisoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAvvisoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAvvisoType'
     StatoAvvisoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoAvvisoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoAvvisoType'
     CigType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/CigType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/CigType'
     DatiAppaltoBaseType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoBaseType'    
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoBaseType'    
     DatiAppaltoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoType'
     DatiSchedaBaseType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaBaseType'    
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaBaseType'    
     DatiSchedaType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaType'
     DatiPianoBaseType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoBaseType'      
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoBaseType'      
     DatiPianoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoType'
     EsitoOperazioneType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/EsitoOperazioneType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/EsitoOperazioneType'
     StatoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoType'
     TipologicaBaseType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipologicaBaseType'      
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipologicaBaseType'      
     TipologicaType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipologicaType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/TipologicaType'
     DatiTipologicaType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiTipologicaType'
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiTipologicaType'
     ContentDocumentType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType'      
+      $ref: 'https://raw.githubusercontent.com/domaltomare/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType'      
     CreaAppaltoRequest:
       allOf: # estende la classe DatiAppaltoBaseType
         - $ref: '#/components/schemas/DatiAppaltoBaseType'
@@ -2295,18 +2297,11 @@ components:
       allOf: # estende la classe BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
-        errori:
+        errori: 
           description: elenco degli errori
-          type: object
-          properties:
-            codice:
-              type: string
-              example: '001'
-            descrizione:
-              maxLength: 4096
-              pattern: ^.{0,1024}$
-              type: string
-              example: 'Non è stato indicato il campo Motivazione richiesta CIG.'        
+          type: array
+          items:
+            $ref: '#/components/schemas/ErroriEnum'
     AckResponse:
       allOf: # estende la classe BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
