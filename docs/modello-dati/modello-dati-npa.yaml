@@ -192,10 +192,10 @@ components:
             description: Elenco di una tipologica
             type: array
             items:
-              $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-common.yaml#/components/schemas/TipologicaSchemaType'
+              $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'
       DatiTipologicaType:
         allOf: # estende lo schema dati di TipologicaType
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-common.yaml#/components/schemas/TipologicaSchemaType'
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'
       SoggettoType:
         description: Oggetto generico del soggetto
         type: object
@@ -525,14 +525,11 @@ components:
           - $ref: '#/components/schemas/EsitoOperazioneAvvisoType'      
           - $ref: '#/components/schemas/EsitoOperazioneContrattoType'      
       EsitoOperazioneBaseType:
-        allOf: # estende la classe EsitoOperazioneEnum
-          - $ref: '#/components/schemas/EsitoOperazioneEnum'
         type: object
         additionalProperties: false
         required:  # List the required properties here
-          - codice
-          - descrizione
           - esito
+          - dettaglio
           - dataControllo
         properties:
           esito:
@@ -544,24 +541,12 @@ components:
             example: '2022-01-23T12:02:05Z'
           dettaglio:
             description: descrizione dettagliata dell'esito dell'operazione
-            type: string
-          errori:
+            $ref: '#/components/schemas/EsitoOperazioneEnum'
+          errori: 
             description: elenco degli errori
-            type: object
-            properties:
-              codice:
-                type: string
-              descrizione:
-                maxLength: 4096
-                pattern: ^.{0,1024}$
-                type: string
-        example:
-            codice: '01'
-            descrizione: 
-              it: 'AVVISO PUBBLICATO'
-              en: 'AVVISO PUBBLICATO'
-            dataControllo: '2022-01-23T12:02:05Z'
-            esito: 'OK'
+            type: array
+            items:
+              $ref: '#/components/schemas/ErroriEnum'
       EsitoOperazioneAvvisoType:
         allOf: # estende la classe EsitoOperazioneBaseType
           - $ref: '#/components/schemas/EsitoOperazioneBaseType'
@@ -605,4 +590,6 @@ components:
       TipoServizioSoggettoEnum:
         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoServizioSoggettoEnum'
       TipoOperazioneSoggettoEnum:
-        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneSoggettoEnum'         
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneSoggettoEnum'
+      ErroriEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/ErroriEnum'        
