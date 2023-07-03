@@ -1,0 +1,18 @@
+[{
+    "codice":"R",
+    "descrizione": {
+		"it": "ritardo",
+		"en": "ritardo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"S",
+    "descrizione": {
+		"it": "sospensione",
+		"en": "sospensione"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Requisito",
+		"en": "Requisito"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Miglioramento offerta",
+		"en": "Miglioramento offerta"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Progetto di fattibilità tecnico-economica",
+		"en": "Progetto di fattibilità tecnico-economica"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Progettazione esecutiva",
+		"en": "Progettazione esecutiva"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

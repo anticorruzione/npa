@@ -1,0 +1,45 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Acquisto",
+		"en": "Acquisto"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Leasing",
+		"en": "Leasing"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Noleggio",
+		"en": "Noleggio"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Acquisto a riscatto",
+		"en": "Acquisto a riscatto"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Misto",
+		"en": "Misto"
+		},	
+    "dataInizio":null,
+    "dataFine":"2016-04-15T00:00:00Z"
+}]

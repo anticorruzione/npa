@@ -1,0 +1,72 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Accordo consensuale",
+		"en": "Accordo consensuale"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Grave inosservanza alle norme in materia di sicurezza",
+		"en": "Grave inosservanza alle norme in materia di sicurezza"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Reati accertati",
+		"en": "Reati accertati"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Grave inadempimento, grave irregolarità o grave ritardo",
+		"en": "Grave inadempimento, grave irregolarità o grave ritardo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Superamento delle soglie delle modifiche contrattuali",
+		"en": "Superamento delle soglie delle modifiche contrattuali"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Modifica sostanziale del contratto",
+		"en": "Modifica sostanziale del contratto"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Carenza dei requisiti al momento dell’aggiudicazione",
+		"en": "Carenza dei requisiti al momento dell’aggiudicazione"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Violazione degli obblighi derivanti dai trattati",
+		"en": "Violazione degli obblighi derivanti dai trattati"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

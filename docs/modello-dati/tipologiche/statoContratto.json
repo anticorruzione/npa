@@ -1,0 +1,45 @@
+[{
+    "codice":"INT_ANT",
+    "descrizione": {
+		"it": "Interruzione anticipata",
+		"en": "Interruzione anticipata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"IN_ESEC",
+    "descrizione": {
+		"it": "In esecuzione",
+		"en": "In esecuzione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SOSP",
+    "descrizione": {
+		"it": "Sospeso",
+		"en": "Sospeso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CONCL",
+    "descrizione": {
+		"it": "Concluso",
+		"en": "Concluso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"COLL",
+    "descrizione": {
+		"it": "Collaudato",
+		"en": "Collaudato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

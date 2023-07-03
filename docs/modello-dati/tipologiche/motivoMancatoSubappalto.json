@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Mancata approvazione",
+		"en": "Mancata approvazione"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Revoca della richiesta di subappalto",
+		"en": "Revoca della richiesta di subappalto"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

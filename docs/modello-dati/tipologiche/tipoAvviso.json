@@ -1,0 +1,108 @@
+[{
+    "codice":"AV1",
+    "descrizione": {
+		"it": "Preinformazione",
+		"en": "Preinformazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV2",
+    "descrizione": {
+		"it": "Pubblicazione bando",
+		"en": "Pubblicazione bando"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV3",
+    "descrizione": {
+		"it": "Pubblicazione avviso",
+		"en": "Pubblicazione avviso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV4",
+    "descrizione": {
+		"it": "Avvio dell'indagine di mercato",
+		"en": "Avvio dell'indagine di mercato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV5",
+    "descrizione": {
+		"it": "Costituzione elenco fornitori",
+		"en": "Costituzione elenco fornitori"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV6",
+    "descrizione": {
+		"it": "Affidamento diretto",
+		"en": "Affidamento diretto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV7",
+    "descrizione": {
+		"it": "Pubblicazione avviso di aggiudicazione soprasoglia",
+		"en": "Pubblicazione avviso di aggiudicazione soprasoglia"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV8",
+    "descrizione": {
+		"it": "Pubblicazione avviso di aggiudicazione sottosoglia",
+		"en": "Pubblicazione avviso di aggiudicazione sottosoglia"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV9",
+    "descrizione": {
+		"it": "Avviso di aggiudicazione sottosoglia",
+		"en": "Avviso di aggiudicazione sottosoglia"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV10",
+    "descrizione": {
+		"it": "Aggiudicazione",
+		"en": "Aggiudicazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV11",
+    "descrizione": {
+		"it": "Mancata aggiudicazione procedura europea",
+		"en": "Mancata aggiudicazione procedura europea"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV12",
+    "descrizione": {
+		"it": "Modifica contrattuale",
+		"en": "Modifica contrattuale"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

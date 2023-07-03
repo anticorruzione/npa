@@ -1,0 +1,27 @@
+[{
+    "codice":"0",
+    "descrizione": {
+		"it": "Senza Oneri",
+		"en": "Senza Oneri"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"1",
+    "descrizione": {
+		"it": "Riconoscimenti del mancato utile",
+		"en": "Riconoscimenti del mancato utile"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Addebito all’appaltatore delle maggiori spese sostenute",
+		"en": "Addebito all’appaltatore delle maggiori spese sostenute"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

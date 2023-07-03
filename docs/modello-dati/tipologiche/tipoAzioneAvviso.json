@@ -1,0 +1,27 @@
+[{
+    "codice":"AZ_PUBB",
+    "descrizione": {
+		"it": "Pubblicazione",
+		"en": "Pubblicazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AZ_MOD",
+    "descrizione": {
+		"it": "Modifica",
+		"en": "Modifica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AZ_RETT",
+    "descrizione": {
+		"it": "Rettifica",
+		"en": "Rettifica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

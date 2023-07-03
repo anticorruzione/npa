@@ -1,0 +1,47 @@
+[
+    {
+        "codice": "1",
+        "descrizione": {
+            "it": "Aperto",
+            "en": "Opened"
+        },
+    "dataInizio":"2023-03-01T00:00:00Z",
+    "dataFine":null
+    },
+    {
+        "codice": "2",
+        "descrizione": {
+            "it": "In Lavorazione",
+            "en": "Work in progress"
+        },
+    "dataInizio":null,
+    "dataFine":null
+    },
+    {
+        "codice": "3",
+        "descrizione": {
+            "it": "Chiuso",
+            "en": "Closed"
+        },
+    "dataInizio":null,
+    "dataFine":null
+    },
+    {
+        "codice": "4",
+        "descrizione": {
+            "it": "Archiviato",
+            "en": "Archived"
+        },
+    "dataInizio":null,
+    "dataFine":null
+    },
+    {
+        "codice": "5",
+        "descrizione": {
+            "it": "Eliminato",
+            "en": "Deleted"
+        },
+    "dataInizio":null,
+    "dataFine":null
+    }
+]

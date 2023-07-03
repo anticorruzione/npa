@@ -1,0 +1,36 @@
+[{
+    "codice":"fa-wo-rc",
+    "descrizione": {
+		"it": "Accordo quadro, senza riapertura della gara",
+		"en": "Framework agreement, without reopening of competition"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"fa-w-rc",
+    "descrizione": {
+		"it": "Accordo quadro, con riapertura della gara",
+		"en": "Framework agreement, with reopening of competition"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"fa-mix",
+    "descrizione": {
+		"it": "Accordo quadro, parzialmente senza riapertura della gara e parzialmente con riapertura della gara",
+		"en": "Framework agreement, partly without reopening and partly with reopening of competition"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"none",
+    "descrizione": {
+		"it": "Nulla",
+		"en": "None"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+}]

@@ -1,0 +1,27 @@
+[{
+    "codice":"OK",
+    "descrizione": {
+		"it": "SUCCESS",
+		"en": "SUCCESS"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"KO",
+    "descrizione": {
+		"it": "ERROR",
+		"en": "ERROR"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"WT",
+    "descrizione": {
+		"it": "IN ATTESA",
+		"en": "WAITING"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

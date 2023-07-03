@@ -1,0 +1,18 @@
+[{
+    "codice":"RP",
+    "descrizione": {
+		"it": "Responsabile del progetto",
+		"en": "Responsabile del progetto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"DRP",
+    "descrizione": {
+		"it": "Delegato dal responsabile del progetto",
+		"en": "Delegato dal responsabile del progetto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

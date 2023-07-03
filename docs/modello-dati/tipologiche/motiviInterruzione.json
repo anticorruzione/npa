@@ -1,0 +1,63 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Revoca dell'aggiudicazione definitiva",
+		"en": "Revoca dell'aggiudicazione definitiva"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Risoluzione contrattuale",
+		"en": "Risoluzione contrattuale"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Recesso della stazione appaltante",
+		"en": "Recesso della stazione appaltante"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Recesso dell'appaltatore",
+		"en": "Recesso dell'appaltatore"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Recesso dal contratto (codice antimafia)",
+		"en": "Recesso dal contratto (codice antimafia)"
+		},
+    "dataInizio":"2019-06-26T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Fallimento, liquidazione coatta o concordato preventivo, insolvenza concorsuale o liquidazione dell'appaltatore)",
+		"en": "Fallimento, liquidazione coatta o concordato preventivo, insolvenza concorsuale o liquidazione dell'appaltatore)"
+		},
+    "dataInizio":"2019-06-26T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Dichiarazione giudiziale di inefficacia del contratto",
+		"en": "Dichiarazione giudiziale di inefficacia del contratto"
+		},
+    "dataInizio":"2019-06-26T00:00:00Z",
+    "dataFine":null
+}]

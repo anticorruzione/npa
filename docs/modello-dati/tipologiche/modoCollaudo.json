@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Collaudo finale",
+		"en": "Collaudo finale"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Collaudo in corso d’opera",
+		"en": "Collaudo in corso d’opera"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

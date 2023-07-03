@@ -1,0 +1,27 @@
+[{
+    "codice":"IN_LAV",
+    "descrizione": {
+		"it": "In lavorazione",
+		"en": "In lavorazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CONF",
+    "descrizione": {
+		"it": "Confermato",
+		"en": "Confermato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CANC",
+    "descrizione": {
+		"it": "Cancellato",
+		"en": "Cancellato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

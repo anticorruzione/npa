@@ -1,0 +1,234 @@
+[{
+    "codice":"ENG",
+    "descrizione": {
+		"it": "inglese",
+		"en": "English"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AFR",
+    "descrizione": {
+		"it": "afrikaans",
+		"en": "Afrikaans"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AMH",
+    "descrizione": {
+		"it": "amarico",
+		"en": "Amharic"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ARA",
+    "descrizione": {
+		"it": "arabo",
+		"en": "Arabic"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ARO",
+    "descrizione": {
+		"it": "araona",
+		"en": "Araona"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AYM",
+    "descrizione": {
+		"it": "aymara",
+		"en": "Aymara"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AYO",
+    "descrizione": {
+		"it": "ayoreo",
+		"en": "Ayoreo"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AZE",
+    "descrizione": {
+		"it": "azerbaigiano",
+		"en": "Azerbaijani"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BEL",
+    "descrizione": {
+		"it": "bielorusso",
+		"en": "Belarusian"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BEN",
+    "descrizione": {
+		"it": "bengalese",
+		"en": "Bengali"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BIS",
+    "descrizione": {
+		"it": "bislama",
+		"en": "Bislama"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BOD",
+    "descrizione": {
+		"it": "tibetano",
+		"en": "Tibetan"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BOS",
+    "descrizione": {
+		"it": "bosniaco",
+		"en": "Bosnian"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BRE",
+    "descrizione": {
+		"it": "bretone",
+		"en": "Breton"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BRG",
+    "descrizione": {
+		"it": "baure",
+		"en": "Baure"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BUL",
+    "descrizione": {
+		"it": "bulgaro",
+		"en": "Bulgarian"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAL",
+    "descrizione": {
+		"it": "caroliniano",
+		"en": "Carolinian"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAO",
+    "descrizione": {
+		"it": "chácobo",
+		"en": "Chacobo"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAS",
+    "descrizione": {
+		"it": "tsimané",
+		"en": "Chimane"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAT",
+    "descrizione": {
+		"it": "catalano",
+		"en": "Catalan"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAV",
+    "descrizione": {
+		"it": "cavineño",
+		"en": "Cavineña"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAW",
+    "descrizione": {
+		"it": "kallawaya",
+		"en": "Kallawaya"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAX",
+    "descrizione": {
+		"it": "chiquitano",
+		"en": "Chiquitano"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CAZ",
+    "descrizione": {
+		"it": "canichana",
+		"en": "Canichana"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CES",
+    "descrizione": {
+		"it": "ceco",
+		"en": "Czech"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CHA",
+    "descrizione": {
+		"it": "chamorro",
+		"en": "Chamorro"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+}]

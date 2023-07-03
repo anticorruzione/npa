@@ -1,0 +1,45 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Progettista interno alla S.A.",
+		"en": "Progettista interno alla S.A."
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Progettista esterno alla S.A.",
+		"en": "Progettista esterno alla S.A."
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Aggiudicatario qualificato",
+		"en": "Aggiudicatario qualificato"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Progettista qualificato incaricato dall'aggiudicatario",
+		"en": "Progettista qualificato incaricato dall'aggiudicatario"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"19",
+    "descrizione": {
+		"it": "ATI",
+		"en": "ATI"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+}]

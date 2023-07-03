@@ -1,0 +1,73 @@
+[{
+    "codice":"GE_UT",
+    "descrizione": {
+		"it": "Gestione utenti",
+		"en": "Gestione utenti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_AP",
+    "descrizione": {
+		"it": "Pianificazione appalto",
+		"en": "Pianificazione appalto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CO_AP",
+    "descrizione": {
+		"it": "Comunica appalto",
+		"en": "Comunica appalto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PUB_AV",
+    "descrizione": {
+		"it": "Pubblica avviso",
+		"en": "Pubblica avviso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"POST_PUB",
+    "descrizione": {
+		"it": "Comunica post pubblicazione",
+		"en": "Comunica post pubblicazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SERV_COM",
+    "descrizione": {
+		"it": "Servizi comuni",
+		"en": "Servizi comuni"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVA",
+    "descrizione": {
+		"it": "Fascicolo Virtuale Appalto",
+		"en": "Fascicolo Virtuale Appalto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}
+,
+{
+    "codice":"FVOE",
+    "descrizione": {
+		"it": "Fascicolo Virtuale Operatore Econimico",
+		"en": "Fascicolo Virtuale Operatore Econimico"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

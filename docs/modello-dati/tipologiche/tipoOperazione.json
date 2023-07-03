@@ -1,0 +1,171 @@
+[{
+    "codice":"AP_CREA",
+    "descrizione": {
+        "it": "Crea appalto",
+        "en": "Crea appalto"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_MOD",
+    "descrizione": {
+        "it": "Modifica appalto",
+        "en": "Modifica appalto"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_CANC",
+    "descrizione": {
+        "it": "Cancella appalto",
+        "en": "Cancella appalto"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_VERIF",
+    "descrizione": {
+        "it": "Verifica appalto",
+        "en": "Verifica appalto"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_CONF",
+    "descrizione": {
+        "it": "Conferma appalto",
+        "en": "Conferma appalto"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_CREA",
+    "descrizione": {
+        "it": "Crea scheda",
+        "en": "Crea scheda"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_MOD",
+    "descrizione": {
+        "it": "Modifica scheda",
+        "en": "Modifica scheda"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_CANC",
+    "descrizione": {
+        "it": "Cancella scheda",
+        "en": "Cancella scheda"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_VERIF",
+    "descrizione": {
+        "it": "Verifica scheda",
+        "en": "Verifica scheda"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_CONF",
+    "descrizione": {
+        "it": "Conferma scheda",
+        "en": "Conferma scheda"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_CREA",
+    "descrizione": {
+        "it": "Crea piano",
+        "en": "Crea piano"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_MOD",
+    "descrizione": {
+        "it": "Modifica piano",
+        "en": "Modifica piano"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_CANC",
+    "descrizione": {
+        "it": "Cancella piano",
+        "en": "Cancella piano"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_VERIF",
+    "descrizione": {
+        "it": "Verifica piano",
+        "en": "Verifica piano"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_CONF",
+    "descrizione": {
+        "it": "Conferma piano",
+        "en": "Conferma piano"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_PUBB",
+    "descrizione": {
+        "it": "Pubblicazione avviso",
+        "en": "Pubblicazione avviso"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_MOD",
+    "descrizione": {
+        "it": "Modifica avviso",
+        "en": "Modifica avviso"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_RETT",
+    "descrizione": {
+        "it": "Rettifica avviso",
+        "en": "Rettifica avviso"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_SOSP",
+    "descrizione": {
+        "it": "Sospensione avviso",
+        "en": "Sospensione avviso"
+    },
+    "dataInizio":null,
+    "dataFine":null
+}]

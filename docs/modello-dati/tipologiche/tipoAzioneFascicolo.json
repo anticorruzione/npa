@@ -1,0 +1,41 @@
+[{
+    "codice":"01",
+    "descrizione": {
+		"it": "aggiornamento fascicolo",
+		"en": "aggiornamento fascicolo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"02",
+    "descrizione": {
+		"it": "chiusura fascicolo",
+		"en": "chiusura fascicolo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"03",
+    "descrizione": {
+		"it": "inserimento documento",
+		"en": "inserimento documento"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"04",
+    "descrizione": {
+		"it": "aggiornamento documento",
+		"en": "aggiornamento documento"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"05",
+    "descrizione": {
+		"it": "cancellazione documento",
+		"en": "cancellazione documento"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

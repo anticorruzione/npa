@@ -1,0 +1,18 @@
+[{
+    "codice":"ULTIMO_ESITO",
+    "descrizione": {
+		"it": "ultimo esito per l'operazione richiesta",
+		"en": "ultimo esito per l'operazione richiesta"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"TUTTI_ESITI",
+    "descrizione": {
+		"it": "tutti gli esiti per l'operazione richiesta ordinati per data creazione decrescente",
+		"en": "tutti gli esiti per l'operazione richiesta ordinati per data creazione decrescente"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

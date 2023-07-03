@@ -1,0 +1,33 @@
+[{
+    "codice":"00900",
+    "descrizione": {
+		"it": "espd-Request - European single procurement document - Request",
+		"en": "espd-Request - European single procurement document - Request"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"00901",
+    "descrizione": {
+		"it": "eform - Standard di notifica per le procedure di appalto pubblico nell'UE",
+		"en": "eForm - Notification standard for public procurement procedures in the EU"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"00902",
+    "descrizione": {
+		"it": "anacForm - Dati aggiuntivi richiesti da ANAC",
+		"en": "anacForm - Additional data requested by ANAC"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"00903",
+    "descrizione": {
+		"it": "scheda ANAC",
+		"en": "scheda ANAC"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

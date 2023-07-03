@@ -1,0 +1,27 @@
+[{
+    "codice":"9",
+    "descrizione": {
+		"it": "Puntuale",
+		"en": "Puntuale"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"10",
+    "descrizione": {
+		"it": "Anticipo",
+		"en": "Anticipo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Ritardo",
+		"en": "Ritardo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

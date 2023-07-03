@@ -1,0 +1,64 @@
+[
+  {
+    "codice": "1",
+    "descrizione": {
+      "it": "Cause di forza maggiore",
+      "en": "Cause di forza maggiore"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "2",
+    "descrizione": {
+      "it": "Interferenze di natura tecnica",
+      "en": "Interferenze di natura tecnica"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "3",
+    "descrizione": {
+      "it": "Interferenze di natura amministrativa",
+      "en": "Interferenze di natura amministrativa"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "4",
+    "descrizione": {
+      "it": "Redazione di varianti in corso di esecuzione",
+      "en": "Redazione di varianti in corso di esecuzione"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "5",
+    "descrizione": {
+      "it": "Intervento Autorità giudiziaria",
+      "en": "Intervento Autorità giudiziaria"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "6",
+    "descrizione": {
+      "it": "Avverse condizioni climatiche",
+      "en": "Avverse condizioni climatiche"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "7",
+    "descrizione": {
+      "it": "Pubblico interesse o necessità",
+      "en": "Pubblico interesse o necessità"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  }]

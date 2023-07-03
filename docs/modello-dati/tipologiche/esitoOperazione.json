@@ -1,0 +1,432 @@
+[{
+    "codice":"AP_CRE",
+    "descrizione": {
+		"it": "Appalto creato",
+		"en": "Appalto creato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_N_CRE",
+    "descrizione": {
+		"it": "Appalto non creato",
+		"en": "Appalto non creato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_MOD",
+    "descrizione": {
+		"it": "Appalto modificato",
+		"en": "Appalto modificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_N_MOD",
+    "descrizione": {
+		"it": "Appalto non modificato",
+		"en": "Appalto non modificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_CANC",
+    "descrizione": {
+		"it": "Appalto cancellato",
+		"en": "Appalto cancellato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_N_CANC",
+    "descrizione": {
+		"it": "Appalto non cancellato",
+		"en": "Appalto non cancellato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_VERIF",
+    "descrizione": {
+		"it": "Appalto verificato",
+		"en": "Appalto verificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_N_VERIF",
+    "descrizione": {
+		"it": "Appalto non verificato",
+		"en": "Appalto non verificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_IN_VERIF",
+    "descrizione": {
+		"it": "Appalto in verifica",
+		"en": "Appalto in verifica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_CONF",
+    "descrizione": {
+		"it": "Appalto confermato",
+		"en": "Appalto confermato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_IN_CONF",
+    "descrizione": {
+		"it": "Appalto in conferma",
+		"en": "Appalto in conferma"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AP_N_CONF",
+    "descrizione": {
+		"it": "Appalto non confermato",
+		"en": "Appalto non confermato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_CRE",
+    "descrizione": {
+		"it": "Scheda creata",
+		"en": "Scheda creata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_N_CRE",
+    "descrizione": {
+		"it": "Scheda non creata",
+		"en": "Scheda non creata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_MOD",
+    "descrizione": {
+		"it": "Scheda modificata",
+		"en": "Scheda modificata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_N_MOD",
+    "descrizione": {
+		"it": "Scheda non modificata",
+		"en": "Scheda non modificata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_CANC",
+    "descrizione": {
+		"it": "Scheda cancellata",
+		"en": "Scheda cancellata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_N_CANC",
+    "descrizione": {
+		"it": "Scheda non cancellata",
+		"en": "Scheda non cancellata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_VERIF",
+    "descrizione": {
+		"it": "Scheda verificata",
+		"en": "Scheda verificata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_IN_VERIF",
+    "descrizione": {
+		"it": "Scheda in verifica",
+		"en": "Scheda in verifica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_N_VERIF",
+    "descrizione": {
+		"it": "Scheda non verificata",
+		"en": "Scheda non verificata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_CONF",
+    "descrizione": {
+		"it": "Scheda confermata",
+		"en": "Scheda confermata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_IN_CONF",
+    "descrizione": {
+		"it": "Scheda in conferma",
+		"en": "Scheda in conferma"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_N_CONF",
+    "descrizione": {
+		"it": "Scheda non confermata",
+		"en": "Scheda non confermata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_CRE",
+    "descrizione": {
+		"it": "Piano creato",
+		"en": "Piano creato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_N_CRE",
+    "descrizione": {
+		"it": "Piano non creato",
+		"en": "Piano non creato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_MOD",
+    "descrizione": {
+		"it": "Piano modificato",
+		"en": "Piano modificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_N_MOD",
+    "descrizione": {
+		"it": "Piano non modificato",
+		"en": "Piano non modificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_CANC",
+    "descrizione": {
+		"it": "Piano cancellato",
+		"en": "Piano cancellato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_N_CANC",
+    "descrizione": {
+		"it": "Piano non cancellato",
+		"en": "Piano non cancellato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_VERIF",
+    "descrizione": {
+		"it": "Piano verificato",
+		"en": "Piano verificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_IN_VERIF",
+    "descrizione": {
+		"it": "Piano in verifica",
+		"en": "Piano in verifica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_N_VERIF",
+    "descrizione": {
+		"it": "Piano non verificato",
+		"en": "Piano non verificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_CONF",
+    "descrizione": {
+		"it": "Piano confermato",
+		"en": "Piano confermato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_IN_CONF",
+    "descrizione": {
+		"it": "Piano in conferma",
+		"en": "Piano in conferma"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PI_N_CONF",
+    "descrizione": {
+		"it": "Piano non confermato",
+		"en": "Piano non confermato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_PUBB",
+    "descrizione": {
+		"it": "Avviso pubblicato",
+		"en": "Avviso pubblicato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_IN_PUBB",
+    "descrizione": {
+		"it": "Avviso in pubblicazione",
+		"en": "Avviso in pubblicazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_N_PUBB",
+    "descrizione": {
+		"it": "Avviso non pubblicato",
+		"en": "Avviso non pubblicato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_MOD",
+    "descrizione": {
+		"it": "Avviso modificato",
+		"en": "Avviso modificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_IN_MOD",
+    "descrizione": {
+		"it": "Avviso in modifica",
+		"en": "Avviso in modifica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_N_MOD",
+    "descrizione": {
+		"it": "Avviso non modificato",
+		"en": "Avviso non modificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_RETT",
+    "descrizione": {
+		"it": "Avviso rettificato",
+		"en": "Avviso rettificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_IN_RETT",
+    "descrizione": {
+		"it": "Avviso in rettifica",
+		"en": "Avviso in rettifica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_N_RETT",
+    "descrizione": {
+		"it": "Avviso non rettificato",
+		"en": "Avviso non rettificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_SOSP",
+    "descrizione": {
+		"it": "Avviso sospeso",
+		"en": "Avviso sospeso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_IN_SOSP",
+    "descrizione": {
+		"it": "Avviso in sospensione",
+		"en": "Avviso in sospensione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_N_SOSP",
+    "descrizione": {
+		"it": "Avviso non sospeso",
+		"en": "Avviso non sospeso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

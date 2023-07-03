@@ -1,0 +1,63 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Procedura svolta in modalità tradizionale o “cartacea”",
+		"en": "Procedura svolta in modalità tradizionale o “cartacea”"
+		},
+    "dataInizio":null,
+    "dataFine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Asta elettronica ",
+		"en": "Asta elettronica "
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Mercato elettronico",
+		"en": "Mercato elettronico"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Catalogo elettronico Art.57: richiesta di offerta",
+		"en": "Catalogo elettronico Art.57: richiesta di offerta"
+		},	
+    "dataInizio":null,
+    "dataFine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Procedure svolte attraverso piattaforme telematiche di negoziazione ",
+		"en": "Procedure svolte attraverso piattaforme telematiche di negoziazione "
+		},	
+    "dataInizio":null,
+    "dataFine":"2023-12-31T00:00:00Z"
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Accordo quadro",
+		"en": "Accordo quadro"
+		},	
+    "dataInizio":"2020-05-12T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Sistema dinamico di acquisizione",
+		"en": "Sistema dinamico di acquisizione"
+		},		
+    "dataInizio":"2020-12-10T00:00:00Z",
+    "dataFine":null
+}]

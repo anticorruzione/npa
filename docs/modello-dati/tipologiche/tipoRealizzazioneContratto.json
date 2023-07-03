@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Contratto d'appalto",
+		"en": "Contratto d'appalto"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Concessione",
+		"en": "Concessione"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

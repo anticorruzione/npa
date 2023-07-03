@@ -1,0 +1,25 @@
+[{
+    "codice":"GENERICO",
+    "descrizione": {
+		"it": "Fascicolo Virtuale generico.  Tipo FascicoloType",
+		"en": "Fascicolo Virtuale generico.  Tipo FascicoloType"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"OE",
+    "descrizione": {
+		"it": "Fascicolo Virtuale dell' Operatore Economico. Tipo FVOEType",
+		"en": "Fascicolo Virtuale dell' Operatore Economico. Tipo FVOEType"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"APPALTO",
+    "descrizione": {
+		"it": "Fascicolo Virtuale dell' Appalto. Tipo FVAType",
+		"en": "Fascicolo Virtuale dell' Appalto. Tipo FVAType"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

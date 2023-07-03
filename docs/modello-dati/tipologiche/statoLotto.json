@@ -1,0 +1,36 @@
+[{
+    "codice":"AGG",
+    "descrizione": {
+		"it": "Aggiudicato",
+		"en": "Aggiudicato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ANN",
+    "descrizione": {
+		"it": "Annullato",
+		"en": "Annullato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SOTT_CONTR",
+    "descrizione": {
+		"it": "Sottoscrizione contratto",
+		"en": "Sottoscrizione contratto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CANC",
+	"descrizione": {
+		"it": "Cancellato",
+		"en": "Cancellato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

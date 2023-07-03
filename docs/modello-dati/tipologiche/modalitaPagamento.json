@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Somme in denaro",
+		"en": "Somme in denaro"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Trasferimento in proprietà  di  beni immobili",
+		"en": "Trasferimento in proprietà  di  beni immobili"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

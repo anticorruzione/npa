@@ -1,0 +1,41 @@
+[{
+    "codice":"001",
+    "descrizione": {
+		"it": "In Attesa",
+		"en": "In Waiting"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"002",
+    "descrizione": {
+		"it": "Richiesta Ricevuta",
+		"en": "Request Receipt"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"003",
+    "descrizione": {
+		"it": "Richiesta Inoltrata",
+		"en": "Request Submitted"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"004",
+    "descrizione": {
+		"it": "Risposta Inoltrata",
+		"en": "Response Submitted"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"005",
+    "descrizione": {
+		"it": "Esito Negativo Inoltrato",
+		"en": "Esito Negativo Inoltrato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

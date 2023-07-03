@@ -1,0 +1,64 @@
+[
+  {
+    "codice": "1",
+    "descrizione": {
+      "it": "Non applicabile",
+      "en": "Non applicabile"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "2",
+    "descrizione": {
+      "it": "Servizi sociali e altri servizi specifici di cui all’allegato XIV della direttiva 24/2014/UE, compresi servizi alla persona",
+      "en": "Servizi sociali e altri servizi specifici di cui all’allegato XIV della direttiva 24/2014/UE, compresi servizi alla persona"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "3",
+    "descrizione": {
+      "it": "servizi sanitari, sociali e culturali di cui all’allegato XIV della direttiva 24/2014/UE",
+      "en": "servizi sanitari, sociali e culturali di cui all’allegato XIV della direttiva 24/2014/UE"
+    },
+    "dataInizio": null,
+    "dataFine": "2020-05-12T00:00:00Z"
+  },
+  {
+    "codice": "4",
+    "descrizione": {
+      "it": "Servizi di ristorazione di cui all’allegato XIV della direttiva 24/2014/UE",
+      "en": "Servizi di ristorazione di cui all’allegato XIV della direttiva 24/2014/UE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "5",
+    "descrizione": {
+      "it": "Servizi di mensa di cui all’allegato XIV della direttiva 24/2014/UE",
+      "en": "Servizi di mensa di cui all’allegato XIV della direttiva 24/2014/UE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "6",
+    "descrizione": {
+      "it": "Contratti nel settore dei beni culturali",
+      "en": "Contratti nel settore dei beni culturali"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "7",
+    "descrizione": {
+      "it": "Servizi di ricerca e sviluppo ",
+      "en": "Servizi di ricerca e sviluppo "
+    },
+    "dataInizio": null,
+    "dataFine": null
+  }]
