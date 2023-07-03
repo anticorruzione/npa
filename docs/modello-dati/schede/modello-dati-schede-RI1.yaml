@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda RI1 - Scheda di ripresa prestazione.
+  version: 1.0.0
+components:
+  schemas:
+    SospensioneType:
+      description: Oggetto che riporta tutti i dati delle Sospensioni
+      type: object
+      required: [codContratto, superatoTempo, riserve, verbaleNonSottoscritto]
+      additionalProperties: false
+      properties:
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string 
+        dataVerbaleRipresa:
+          description: Data del verbale di ripresa
+          type: string
+          format: datetime
+        superatoTempo:
+          description: E’ stato superato il quarto del tempo contrattuale
+          type: boolean   
+        riserve:
+          description: Iscrizione di riserve dell’appaltatore nei verbali di sospensione e/o ripresa lavori 
+          type: boolean   
+        verbaleNonSottoscritto:
+          description: Verbale/i non sottoscritti dall’appaltatore
+          type: boolean
+    AnacFormRI1Type:
+      description: Contiene tutti i dati relativi alla scheda di ripresa prestazioni
+      type: object
+      required: [sospensioni]
+      additionalProperties: false
+      properties:
+         sospensioni:
+          description: Sospensioni
+          type: array
+          items:
+            $ref: '#/components/schemas/SospensioneType'           
+    SchedaRI1Type:
+      description: Scheda di ripresa prestazioni
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormRI1Type'

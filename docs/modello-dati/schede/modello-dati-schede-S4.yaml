@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda S4 - Scheda relativa alla Costituzione della società di scopo.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormS4Type:
+      description: Dati relativi alla Costituzione della società di scopo.
+      type: object
+      additionalProperties: false
+      properties:
+        cig:
+          description: cig
+          type: string
+        lotIdentifier: 
+          description: id
+          type: string
+        partecipante:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'
+        motivoVariazione: 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotiviVariazioneAnagraficaEnum'
+    SchedaS4Type:
+      description: Scheda relativa alla Costituzione della società di scopo.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormS4Type'        

@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda S1 - Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormS1Type:
+      description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione.
+      type: object
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string        
+        soggettiInteressati:
+          description: Dati relativi ai soggetti che hanno presentato manifestazione d'interesse
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SoggettoType'
+    SchedaS1Type:
+      description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormS1Type'         

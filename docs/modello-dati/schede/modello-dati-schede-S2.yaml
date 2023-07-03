@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda S2 - La scheda è valida sia per raccogliere l'elenco dei partecipanti che hanno presentato offerta e degli invitati che non hanno presentato offerta per le procedure a doppia fase, che l'elenco dei partecipanti per le procedure a fase unica.
+  version: 1.0.0
+components:
+  schemas:
+    InvitatiType:
+      description: Elenco di soggetti invitati che non hanno presentato offerta.
+      type: object
+      additionalProperties: false
+      properties: 
+        cig:
+          description: codice identificativo lotto
+          type: string
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
+        invitati:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/InvitatoType'  
+    PartecipantiType:
+      description: Elenco di soggetti che hanno presentato offerta.
+      type: object
+      additionalProperties: false
+      properties: 
+        cig:
+          description: codice identificativo lotto
+          type: string
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string
+        partecipanti:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'              
+    SchedaS2Type:
+      description: Elenco di soggetti che hanno presentato offerta e di ulteriori invitati che non hanno presentato offerta.
+      type: object
+      additionalProperties: false
+      required: [anacForm]
+      properties:
+        anacForm:
+          type: object
+          additionalProperties: false
+          required: [dataScadenzaPresentazioneOfferta]
+          properties:
+            invitatiCheNonHannoPresentatoOfferta:
+              description: Dati relativi ai soggetti invitati che non hanno presentato offerta
+              type: array
+              items:
+                $ref: '#/components/schemas/InvitatiType'
+            partecipanti:
+              description: Dati relativi ai partecipanti
+              type: array
+              items:          
+                $ref: '#/components/schemas/PartecipantiType'              
+            dataInvito: 
+              description: Data della lettera di invito
+              type: string
+              format: datetime
+              example: '2022-01-23T12:02:05Z'
+            dataScadenzaPresentazioneOfferta: 
+              description: Data della scadenza di presentazione dell'offerta
+              type: string
+              format: datetime
+              example: '2022-01-23T12:02:05Z'            
