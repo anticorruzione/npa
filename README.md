@@ -12,40 +12,54 @@ Il modello dati di NPA rappresenta l'insieme di informazioni oggetto del monitor
 La superclasse dalla quale derivano tutte le schede è riportata di seguito: 
 
 ```shell
-  AvvisoRequest{
-    idAvviso	[...]
-    oneOf ->	
-      DatiPianoType{
-        idPianificazione	{...}
-        scheda	SchedaPianificazioneType{
-          oneOf ->	
-            SchedaPIN.1Type{...}
-            SchedaPIN.2Type{...}
-            ...
+AvvisoRequest{
+  idAvviso* [...],
+  idAppalto* [...],
+    scheda SchedaGroupType{
+      oneOf ->	
+        SchedaPianificazioneType{
+          _idScheda {...},
+          codice* {...},
+          versione* [...],
+          _stato {...},
+          _dataCreazione {...},
+          body	{
+            oneOf ->	
+              SchedaPIN_1Type {...}
+              SchedaPIN_2Type {...}
+              ...
+            }
         }
+        SchedaComunicaAppaltoType{
+          _idScheda {...},
+          codice* {...},
+          versione* [...],
+          _stato {...},
+          _dataCreazione {...},
+          body	{
+            oneOf ->	
+              SchedaP1_10Type {...}
+              SchedaP1_11Type {...}
+              SchedaP1_12Type {...}
+              SchedaP1_13Type {...}
+              ...
+          }
+       }
+       SchedaPostPubblicazioneType{
+         _idScheda {...},
+         codice* {...},
+         versione* [...],
+         _stato {...},
+         _dataCreazione {...},
+         body	{
+           oneOf ->	
+              SchedaA1_29Type {...}
+              SchedaA1_30Type {...}
+              ...
+         }
       }
-      DatiAppaltoType{
-        idAppalto	[...]
-        scheda	SchedaComunicaAppaltoType{
-          oneOf ->	
-            SchedaP1.10Type{...}
-            SchedaP1.11Type{...}
-            SchedaP1.12Type{...}
-            SchedaP1.13Type{...}
-            ...
-        }
-      }
-      DatiSchedaType{
-        idAppalto	[...]
-        idScheda	[...]
-        scheda	SchedaPostPubblicazioneType{
-          oneOf ->	
-            SchedaA1.29Type{...}
-            SchedaA1.30Type{...}
-            ...
-        }
-     }
-  }
+   }
+ }
  ```
 Durante l'esercizio della piattaforma NPA il processo di aggiornamento del modello dati sarà continuo, gli aggiornamenti verranno riportati nel presente repository e la loro efficacia è regolata secondo le specifiche del paragrafo [Termini del servizio](#termini-del-servizio). Le piattaforme interoperabili con NPA sono tenute all'aggiornamento del payload inviato entro i tempi previsti.
 
@@ -63,6 +77,9 @@ Il modulo di ochestrazione è un componente di backend che non espone servizi in
  - In caso non siano rilevate anomalie, far avanzare il processo allo stato successivo.
 
 Lo schema delle regole di orchestrazione è consultabile nella cartella [orchestratore](/docs/orchestratore/). Le piattaforme fruitrici dei servizi di NPA sono tenute ad adeguare la sequenza di invio delle informazioni al flusso descritto.
+
+Le regole di validazione sintattica (tipo e obbligatorietà del campo) sono definite nelle specifiche dei servizi dettagliate al paragrafo [specifiche-delle-interfacce](#specifiche-delle-interfacce). 
+La validazione sintattico/semantica è completata tramite regole espresse con annotazione DMN, definite nella cartella [regole](/docs/modello-dati/regole/), leggibili attraverso un qualunque interprete DMN come ad esempio [demo.bpmn.io](https://demo.bpmn.io/)
 
 Al pari del modello dati le regole che gestiscono il flusso delle informazioni sono soggette a variazioni continue in adeguamento alla normativa di settore, gli aggiornamenti verranno riportati nel presente repository e la loro efficacia è regolata secondo le specifiche del paragrafo [Termini del servizio](#termini-del-servizio). Le piattaforme interoperabili con NPA sono tenute all'aggiornamento del flusso di lavoro entro i tempi previsti.
 
