@@ -298,16 +298,16 @@ paths:
           example: '2015-05-28T14:07:17Z'  
         - in: query  
           name: stato  
-          description: stato del documento
+          description: stato del documento nel formato json come riportato in '#/components/schemas/StatoDocumentoEnum'
           schema:
-            $ref: '#/components/schemas/StatoDocumentoEnum'
+            type: string
           example:
             codice: "01"  
         - in: query  
           name: tipo  
-          description: tipo del documento
+          description: tipo del documento  nel formato json come riportato in '#/components/schemas/TipoDocumentoEnum'
           schema:
-            $ref: '#/components/schemas/TipoDocumentoEnum'
+            type: string
           example:
             codice: "06"   
         - in: query
@@ -473,13 +473,14 @@ paths:
             type: array
             items:
               description: il cf. dell' soggetto su cui si rihiede il documento.
+              type: string
             example: "[80090909]"
         - in: query
           name: tipoDocumento
-          description: tipologia del documento da richiedere.
+          description: tipologia del documento da richiedere nel formato json come riportato in '#/components/schemas/TipoDocumentoEnum'.
           required: true
           schema:
-            $ref: '#/components/schemas/TipoDocumentoEnum'
+            type: string
           example:
             codice: "01"
       responses:
@@ -682,18 +683,18 @@ paths:
           example: '2015-05-28T14:07:17Z' 
         - in: query  
           name: stato  
-          description: stato del documento
+          description: stato del documento nel formato json come riportato in '#/components/schemas/StatoDocumentoEnum'
           schema:
-            $ref: '#/components/schemas/StatoDocumentoEnum'
+            type: string
           example:
-            codice: "01"
+            codice: "01"  
         - in: query  
           name: tipo  
-          description: tipo del documento
+          description: tipo del documento  nel formato json come riportato in '#/components/schemas/TipoDocumentoEnum'
           schema:
-            $ref: '#/components/schemas/TipoDocumentoEnum'
+            type: string
           example:
-            codice: "13"  
+            codice: "13"      
         - in: query
           name: datiAggiuntivi
           description: dati aggiuntivi del documento. Definiti in JSON
@@ -883,11 +884,11 @@ paths:
           example: 'SDE3434DFS4'
         - in: query  
           name: stato  
-          description: stato del fascicolo
+          description: stato del fascicolo nel formato json come riportato in '#/components/schemas/StatoFascicoloEnum'
           schema:
-            $ref: '#/components/schemas/StatoFascicoloEnum'
-          example: 
-            codice: "01"
+            type: string
+          example:
+            codice: "01"       
         - in: query
           name: dataCreazioneDa
           description: Data di crezione del Fascicolo - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
@@ -1650,7 +1651,6 @@ components:
                 it SHOULD provide human-readable documentation for the problem
                 type
                 (e.g., using HTML).
-              default: about:blank
               format: uri
               maxLength: 2048
               type: string
