@@ -1,0 +1,26 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A4_3 - Scheda di aggiudicazione relativa al contratto di disponibilità.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormA4_3Type:
+      description: Contiene i dati per la scheda di aggiudicazione relativa al contratto di disponibilità.
+      type: object
+      required: [appalto,aggiudicazioni] 
+      additionalProperties: false
+      properties:
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoA4Type'
+        aggiudicazioni:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA4Type'    
+    SchedaA4_3Type:
+      description: Scheda di aggiudicazione relativa al contratto di disponibilità.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormA4_3Type'          

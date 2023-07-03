@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A2_37 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, secondo comma, della direttiva 2014/25/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AppaltoA2_37Type:
+      type: object
+      additionalProperties: false
+      properties:   
+        datiBaseProcedura:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraType' 
+          required: [tipoProcedura]
+    AggiudicazioneA2_37Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneBaseType' 
+      type: object
+      additionalProperties: false
+      properties:     
+        datiBaseRisultatoProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'       
+        datiBaseAggiudicazioneAppalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType' 
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'       
+    AnacFormA2_37Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, secondo comma, della direttiva 2014/25/UE.
+      required: [appalto,aggiudicazioni]
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoA2_37Type'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
+          type: array
+          items:
+            $ref: '#/components/schemas/AggiudicazioneA2_37Type'   
+    SchedaA2_37Type:
+      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, secondo comma, della direttiva 2014/25/UE.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormA2_37Type'          

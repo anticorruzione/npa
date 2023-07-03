@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda AC1 - Scheda di accordo bonario.
+  version: 1.0.0
+components:
+  schemas:
+    AccordoBonarioType:
+      description: Oggetto che riporta tutti i dati degli accordi bonari
+      type: object
+      required: [dataAccordo]
+      additionalProperties: false
+      properties:
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string          
+        dataAccordo:
+          description: Data dell’accordo bonario
+          type: string
+          format: datetime
+        oneriDerivanti:
+          description: Oneri derivanti
+          type: number
+          format: double
+        numeroRiserve:
+          description: Numero di riserve transate
+          type: number
+          format: integer
+    AnacFormAC1Type:
+      description: Contiene tutti i dati relativi alla scheda di Collaudo
+      type: object
+      required: [accordiBonari]
+      additionalProperties: false
+      properties:
+         accordiBonari:
+          description: Accordi bonari
+          type: array
+          items:
+            $ref: '#/components/schemas/AccordoBonarioType' 
+    SchedaAC1Type:
+      description: Scheda di accordo bonario
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormAC1Type'

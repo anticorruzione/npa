@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda A3_3 - Scheda di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo
+  version: 1.0.0
+components:
+  schemas:
+    AppaltoA3_3Type:
+      type: object
+      additionalProperties: false
+      properties:  
+        cigAccordoQuadro:
+          description: CIG relativo all’accordo quadro/convenzione cui si aderisce
+          type: string      
+        modalitaRiaggiudicazioneAffidamento:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'      
+        datiBaseAggiudicazioneSubappalto:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType' 
+          required: [subAppalto]     
+    AggiudicazioneA3_3Type:
+      description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
+      type: object
+      additionalProperties: false
+      required: [cig, dataAdesione]
+      properties: 
+        cig:
+          description: codice identificativo lotto
+          type: string
+          example:       
+        dataAdesione: 
+          description: Data di adesione all'accordo quadro/convenzione
+          type: string
+          format: datetime 
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'
+        offertePresentate:
+          description: Dati degli aggiudicatari
+          type: array
+          items: 
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/OfferteType'
+        quadroEconomicoConcessioni:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType'   
+        datiBaseRisultatoProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'  
+        datiBaseAggiudicazioneAppalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'         
+    AnacFormA3_3Type:
+      description: Contiene tutti i dati relativi all'aggiudicazione per i contratti esclusi - Adesione senza confronto competitivo
+      type: object
+      required: [appalto,aggiudicazioni]
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoA3_3Type'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
+          type: array
+          items:
+            $ref: '#/components/schemas/AggiudicazioneA3_3Type'
+    SchedaA3_3Type:
+      description: Scheda di aggiudicazione relativa ai contratti esclusi - Adesione senza confronto competitivo
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormA3_3Type'
