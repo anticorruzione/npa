@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P6_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+  <decision id="P6_2" name="P6_2">
+    <informationRequirement id="InformationRequirement_P6_2_01">
+      <requiredInput href="#InputData_appalto_P6_2" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_P6_2_02">
+      <requiredInput href="#InputData_lotti_P6_2" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_P6_2_03">
+      <requiredInput href="#InputData_stazioniAppaltanti_P6_2" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_12j8w8d">
+      <requiredInput href="#InputData_1mfloyl" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_10yx1q6">
+      <requiredInput href="#InputData_0y8jvh8" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0ugurwb">
+      <requiredInput href="#InputData_1srkbir" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_P6_2" hitPolicy="ANY">
+      <input id="appalto_P6_2">
+        <inputExpression id="LiteralExpression_appalto_P6_2" typeRef="string">
+          <text>appalto</text>
+        </inputExpression>
+      </input>
+      <input id="lotti_P6_2" biodi:width="272">
+        <inputExpression id="LiteralExpression_lotti_P6_2" typeRef="string">
+          <text>lotti</text>
+        </inputExpression>
+      </input>
+      <input id="stazioniAppaltanti_P6_2" biodi:width="170">
+        <inputExpression id="LiteralExpression_stazioniAppaltanti_P6_2" typeRef="string">
+          <text>stazioniAppaltanti</text>
+        </inputExpression>
+      </input>
+      <output id="Errore_P6_2" name="Errore" typeRef="string" biodi:width="269" />
+      <rule id="DecisionRule_P6_2_0007">
+        <description>REG2: E' stata indicata la funzione ma non è stato indicato il codice fiscale della stazione appaltante</description>
+        <inputEntry id="UnaryTests_P6_2_0019">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0020">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0021">
+          <text>some stazioneAppaltante in stazioniAppaltanti
+satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.codiceFiscale=null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0007">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG2\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0019">
+        <description>REG3: i codici fiscali nella lista delle stazioni appaltanti devono essere diversi</description>
+        <inputEntry id="UnaryTests_P6_2_0058">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0059">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0060">
+          <text>count(stazioniAppaltanti.codiceFiscale) &gt; count(distinct values(stazioniAppaltanti.codiceFiscale))</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0020">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG3\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0015">
+        <description>REG10: Servizio Pubblico Locale: il campo è obbligatorio solo se l'oggetto del contratto = servizi</description>
+        <inputEntry id="UnaryTests_P6_2_0046">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0047">
+          <text>some lotto in lotti
+satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.servizioPubblicoLocale = null</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0048">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0016">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG10\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0016">
+        <description>REG11: Cui: Obbligatorio se Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione</description>
+        <inputEntry id="UnaryTests_P6_2_0049">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0050">
+          <text>some lotto in lotti
+satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0051">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0017">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG11\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0021">
+        <description>REG14: Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </description>
+        <inputEntry id="UnaryTests_P6_2_0064">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0065">
+          <text>some lotto in lotti
+satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != "10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0066">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0022">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG14\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0022">
+        <description>REG15: Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato oppure se Ripetizione di precedente contratto e' valorizzato a SI</description>
+        <inputEntry id="UnaryTests_P6_2_0067">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0068">
+          <text>some lotto in lotti
+satisfies (lotto.ripetizioniEConsegneComplementari or lotto.ipotesiCollegamento.motivoCollegamento.codice != "10") and lotto.ipotesiCollegamento.cigCollegato = null</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0069">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0023">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG15\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0003">
+        <description>REG16: Cig collegato: se Motivo di collegamento CIG è valorizzato a '1: Ripetizione di lavori o servizi analoghi' il cig collegato deve prevedere ripetizioni.</description>
+        <inputEntry id="UnaryTests_P6_2_0007">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0008">
+          <text>some lotto in lotti
+satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice = "1"
+and count(lotto.ipotesiCollegamento.cigCollegato) &lt;2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0009">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0003">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG16\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0023">
+        <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
+        <inputEntry id="UnaryTests_P6_2_0070">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0071">
+          <text>some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0072">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0024">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG18\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0024">
+        <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
+- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Servizi’ o ‘Forniture’
+- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Lavori” e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto principale del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
+        <inputEntry id="UnaryTests_P6_2_0073">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0074">
+          <text>some lotto in lotti
+satisfies lotto.acquisizioneCup=false and lotto.oggettoPrincipaleContratto.codice="L" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0075">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0025">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG20\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0031">
+        <description>REG29: Modalità Acquisizione: il campo è obbligatorio se l'oggetto principale del contratto è 'Servizi' o 'Forniture'.</description>
+        <inputEntry id="UnaryTests_P6_2_0094">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0095">
+          <text>some lotto in lotti
+satisfies (lotto.oggettoPrincipaleContratto.codice = "S" or lotto.oggettoPrincipaleContratto.codice = "F") and lotto.modalitaAcquisizione = null</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0096">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0032">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG29\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0014">
+        <description>REG31: Oggetto Principale del Contratto: deve essere calcolato dal campo oggetto contratto del ted. Altrimenti deve essere inserito esplicitamente. È obbligatorio.</description>
+        <inputEntry id="UnaryTests_P6_2_0043">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0044">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "combined" and lotto.oggettoPrincipaleContratto = null</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0045">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0015">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG31\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0033">
+        <description>REG32: Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</description>
+        <inputEntry id="UnaryTests_P6_2_0100">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0101">
+          <text>some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0102">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0034">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG32\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0034">
+        <description>REG33: Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</description>
+        <inputEntry id="UnaryTests_P6_2_0103">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0104">
+          <text>some lotto in lotti
+satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and lotto.datiBaseAccessibilita.giustificazione = null)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0105">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0035">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG33\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0008">
+        <description>REG34: Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_P6_2_0022">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0023">
+          <text>some lotto in lotti
+satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.quadroEconomicoStandard.impLavori = null or number(lotto.quadroEconomicoStandard.impLavori) = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0024">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0008">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG34\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0009">
+        <description>REG35: Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_P6_2_0025">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0026">
+          <text>some lotto in lotti
+satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.quadroEconomicoStandard.impServizi = null or number(lotto.quadroEconomicoStandard.impServizi) = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0027">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0009">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG35\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0010">
+        <description>REG36: Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_P6_2_0028">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0029">
+          <text>some lotto in lotti
+satisfies lotto.oggettoPrincipaleContratto.codice = "F" and lotto.quadroEconomicoStandard.impForniture = null or number(lotto.quadroEconomicoStandard.impForniture) = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0030">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0010">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG36\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0011">
+        <description>REG37: Somme opzioni e rinnovi: se l’appalto prevede opzioni/rinnovi deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_P6_2_0031">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0032">
+          <text>some lotto in lotti
+satisfies lotto.opzioniRinnovi and lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or number(lotto.quadroEconomicoStandard.sommeOpzioniRinnovi) = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0033">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0011">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG37\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0012">
+        <description>REG38: Somme ripetizione: se l’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_P6_2_0034">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0035">
+          <text>some lotto in lotti
+satisfies lotto.ripetizioniEConsegneComplementari and lotto.quadroEconomicoStandard.sommeRipetizioni = null or number(lotto.quadroEconomicoStandard.sommeRipetizioni) = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0036">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0012">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG38\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0036">
+        <description>REG65: CPV Secondarie: l'elenco delle cpv secondarie non deve contenere il valore indicato come cpv prevalente.</description>
+        <inputEntry id="UnaryTests_P6_2_0109">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0110">
+          <text>some lotto in lotti
+satisfies list contains(lotto.datiBaseCPV.cpvSecondarie.codice, lotto.datiBaseCPV.cpvPrevalente.codice)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0111">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0037">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG65\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0037">
+        <description>REG66: CPV Secondarie: l'elenco delle cpv secondarie non deve contenere valori replicati.</description>
+        <inputEntry id="UnaryTests_P6_2_0112">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0113">
+          <text>some lotto in lotti
+satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct values(lotto.datiBaseCPV.cpvSecondarie.codice))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0114">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0038">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG66\"}}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P6_2_0038">
+        <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
+        <inputEntry id="UnaryTests_P6_2_0115">
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0116">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P6_2_0117">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_P6_2_0039">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG67\"}}"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1mfloyl" name="lotti" />
+  <inputData id="InputData_0y8jvh8" name="stazioniAppaltanti" />
+  <inputData id="InputData_1srkbir" name="appalto" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
+      <dmndi:DMNShape id="DMNShape_P6_2" dmnElementRef="P6_2">
+        <dc:Bounds height="80" width="180" x="230" y="50" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1l6jpk7" dmnElementRef="InputData_1mfloyl">
+        <dc:Bounds height="45" width="125" x="257" y="257" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_12t8evc" dmnElementRef="InformationRequirement_12j8w8d">
+        <di:waypoint x="320" y="257" />
+        <di:waypoint x="320" y="150" />
+        <di:waypoint x="320" y="130" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_14fjtp4" dmnElementRef="InputData_0y8jvh8">
+        <dc:Bounds height="45" width="125" x="347" y="187" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1u2ihgl" dmnElementRef="InformationRequirement_10yx1q6">
+        <di:waypoint x="410" y="187" />
+        <di:waypoint x="365" y="150" />
+        <di:waypoint x="365" y="130" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1ttigji" dmnElementRef="InputData_1srkbir">
+        <dc:Bounds height="45" width="125" x="167" y="187" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1bp2wo6" dmnElementRef="InformationRequirement_0ugurwb">
+        <di:waypoint x="230" y="187" />
+        <di:waypoint x="275" y="150" />
+        <di:waypoint x="275" y="130" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
