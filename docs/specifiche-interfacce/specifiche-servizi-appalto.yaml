@@ -443,10 +443,10 @@ paths:
       parameters:
         - in: query
           name: codiceAppalto
-          description: il codice dell'Appalto         
+          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           schema:
-            type: integer
-            format: int32
+            type: string
+            maxLength: 64
         - in: query
           name: cig
           description: Identificativo univoco Appalto-Lotto rilasciato da ANAC
