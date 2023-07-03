@@ -168,21 +168,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idPianificazione:
-                  description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
-                  type: string
-                  format: uuid
-                  example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-                motivo:  
-                  description: descrizione del motivo della richiesta di cancellazione
-                  type: string
-                  maxLength: 200
-                  example: 'Pianificazione non approvata'
-              required:
-                - idPianificazione
+              $ref: '#/components/schemas/CancellaPianoRequest'
         required: true
       responses:
         '200':
@@ -213,6 +199,7 @@ paths:
         - in: query
           name: idPianificazione
           description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
+          required: true
           schema:
             type: string
             format: uuid
@@ -239,19 +226,21 @@ paths:
       tags:
         -  pianificazioneAppalto
       summary: API Rest per la ricerca delle Pianificazioni. SINCRONO
-      description: Viene recuperata la lista con i dati di sintesi delle Pianificazioni.Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base alla competenza della SA che sta operando SINCRONO
+      description: Viene recuperata la lista con i dati di sintesi delle Pianificazioni.Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base alla competenza della SA che sta operando. Almeno un filtro di ricerca deve essere valorizzato. SINCRONO
       operationId: idPianoRicerca
       parameters:
         - in: query
           name: stato
-          description: stato della Pianificazione - - fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
+          description: Codice stato della Pianificazione - se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro -  fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
           schema:
-            $ref: '#/components/schemas/StatoPianoEnum'
+            type: string
+            example: 'IN_LAV'
         - in: query
           name: tipo
-          description: tipologia della Pianificazione - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
+          description: Codice tipologia della Pianificazione - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
           schema:
-            $ref: '#/components/schemas/TipoPianoEnum'    
+            type: string
+            example: 'PREINFORMAZIONE'  
         - in: query
           name: dataCreazioneDa
           description: Data di crezione della Pianificazione - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
@@ -304,14 +293,12 @@ paths:
       summary: API Rest per la validazione della Pianificazione. ASINCRONO - ASIMMETRICO
       description: L'ultima istanza della Pianificazione inviata viene validata. In base alla tipologia della Pianificazione viene eseguita una validazione sintattica dei dati di input. ASINCRONO - ASIMMETRICO
       operationId: idPianoVerifica
-      parameters:
-        - in: query
-          name: idPianificazione
-          description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
-          schema:
-            type: string
-            format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VerificaPianoRequest'
+        required: true
       responses:
         '200':
             $ref: '#/components/responses/200AckResponse'       
@@ -330,22 +317,13 @@ paths:
       tags:
         - pianificazioneAppalto
       summary: API Rest per la conferma dei dati inviati per una specifica Pianificazione. ASINCRONO - ASIMMETRICO
-      description: Il servizio consente di confermare i dati inviati per una specifica Pianificazione. Qualora il tipo di piano lo consente, il servizio esito-operazione restituisce l'identificativo dell'avviso ad esso assegnato che la SA potrà utilizzare per la successiva invocazione di pubblica-avviso. ASINCRONO - ASIMMETRICO
+      description: Il servizio consente di confermare i dati inviati per una specifica Pianificazione e, qualora il tipo di scheda lo consente, avvia la fase di pubblicazione dell'avviso. Con la successiva chiamata al servizio esito-operazione è possibile recuperare l'idAvviso assegnato. ASINCRONO - ASIMMETRICO
       operationId: idPianoConferma
       requestBody:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idPianificazione:
-                  description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
-                  type: string
-                  format: uuid
-                  example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-              required:
-                - idPianificazione
+              $ref: '#/components/schemas/ConfermaPianoRequest'
         required: true
       responses:
         '200':
@@ -382,25 +360,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreaAppaltoResponse'
-          links:
-            VerificaAppaltoIdLink:  
-              operationId: idAppaltoVerifica
-              parameters:
-                idAppalto: '$response.body#/idAppalto'
-              description: >
-                Il valore di `idAppalto` restituito nella riposta può essere usato per richiamare `GET /verifica-appalto`.
-            ConfermaAppaltoIdLink:  
-              operationId: idAppaltoConferma
-              parameters:
-                idAppalto: '$response.body#/idAppalto'
-              description: >
-                Il valore di `idAppalto` restituito nella riposta può essere usato per richiamare `GET /conferma-appalto`.
-            StatoAppaltoIdLink:  
-              operationId: idAppaltoStato
-              parameters:
-                idAppalto: '$response.body#/idAppalto'
-              description: >
-                Il valore di `idAppalto` restituito nella riposta può essere usato per richiamare `GET /stato-appalto`.    
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -454,21 +413,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idAppalto:
-                  description: identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
-                  type: string
-                  format: uuid
-                  example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-                motivo:  
-                  description: descrizione del motivo della richiesta di cancellazione
-                  type: string
-                  maxLength: 200
-                  example: 'Revoca delle procedure di gara'
-              required:
-                - idAppalto
+              $ref: '#/components/schemas/CancellaAppaltoRequest'
         required: true
       responses:
         '200':
@@ -493,7 +438,7 @@ paths:
       tags:
         -  comunicaAppalto
       summary: API Rest per la ricerca delle Gare-Lotto dell'Appalto. SINCRONO
-      description: Viene recuperata la lista con i dati di sintesi dell'Appalto e dei rispettivi lotti. Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base agli appalti di competenza dell' RP e della SA per la quale sta operando. SINCRONO
+      description: Viene recuperata la lista con i dati di sintesi dell'Appalto e dei rispettivi lotti. Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base agli appalti di competenza dell' RP e della SA per la quale sta operando. Almeno un filtro di ricerca deve essere valorizzato. SINCRONO
       operationId: idAppaltoRicerca
       parameters:
         - in: query
@@ -515,9 +460,10 @@ paths:
             type: string
         - in: query
           name: stato
-          description: Stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: Codice Stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
-            $ref: '#/components/schemas/StatoAppaltoEnum'
+            type: string
+            example: 'IN_LAV'
         - in: query
           name: dataCreazioneDa
           description: Data di crezione dell'Appalto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
@@ -613,16 +559,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idAppalto:
-                  description: identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
-                  type: string
-                  format: uuid
-                  example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-              required:
-                - idAppalto
+              $ref: '#/components/schemas/VerificaAppaltoRequest'
         required: true
       responses:
         '200':
@@ -642,22 +579,13 @@ paths:
       tags:
         - comunicaAppalto
       summary: API Rest per la conferma dei dati di Appalto propedeutica alla generazione dei CIG. ASINCRONO - ASIMMETRICO
-      description: Il servizio permette la conferma dei dati dell'Appalto inviati, avvia la fase di validazione e assegnazione dei CIG ed inizializza il Fascicolo Virtuale dell'Appalto. ASINCRONO - ASIMMETRICO 
+      description: Il servizio permette la conferma dei dati dell'Appalto inviati, avvia la fase di validazione e assegnazione dei CIG ed inizializza il Fascicolo Virtuale dell'Appalto. Con la successiva chiamata al servizio esito-operazione è possibile recuperare l'idAvviso per invocare il successivo servizio pubblica-avviso. ASINCRONO - ASIMMETRICO 
       operationId: idAppaltoConferma
       requestBody:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idAppalto:
-                  description: identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
-                  type: string
-                  format: uuid
-                  example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-              required:
-                - idAppalto
+              $ref: '#/components/schemas/ConfermaAppaltoRequest'
         required: true
       responses:
         '200':
@@ -682,20 +610,20 @@ paths:
       parameters:
         - in: query
           name: idAppalto
-          description: Identificativo univoco dell'Appalto definito da ANAC. Almeno un parametro di input deve essere valorizzato.
+          description: Identificativo univoco dell'Appalto definito da ANAC. Alternativo agli altri parametri di input.
           schema:
             type: string
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         - in: query
           name: cig
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC. Almeno un parametro di input deve essere valorizzato.
+          description: Identificativo univoco Gara-Lotto rilasciato da ANAC. Alternativo agli altri parametri di input.
           schema:
             type: string
             example: 9050626CD6
         - in: query
           name: idContratto
-          description: Identificativo univoco del Contratto definito da ANAC. Almeno un parametro di input deve essere valorizzato.
+          description: Identificativo univoco del Contratto definito da ANAC. Alternativo agli altri parametri di input.
           schema:
             type: string
             format: uuid
@@ -721,7 +649,6 @@ paths:
     get:
       tags:
         - comunicaAppalto
-        - pubblicaAvviso
       summary: API Rest per il recupero dei CIG generati da ANAC e assegnati ai lotti dell’Appalto. SINCRONO
       description: Per un Appalto il servizio restituiti le coppie Lotto - CIG. SINCRONO
       operationId: idCIGRecupera
@@ -772,15 +699,12 @@ paths:
       summary: API Rest per la richiesta di pubblicazione di un'avviso sia a livello nazionale sia europeo. ASINCRONO - ASIMMETRICO
       description: Il servizio avvia la richiesta di pubblicazione di un Avviso, a livello nazionale e/o europeo. A seguito della chiamata a questo servizio, l’avviso transita in stato “IN ATTESA PUBBLICAZIONE”. ASINCRONO - ASIMMETRICO  
       operationId: idAvvisoPubblica
-      parameters:
-        - in: query
-          name: idAvviso
-          description: identificativo univoco dell'Avviso definito da ANAC. (A UUID specified by RFC4122)
-          required: true
-          schema:
-            type: string
-            format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PubblicaAvvisoRequest'
+        required: true
       responses:
         '200':
             $ref: '#/components/responses/200AckResponse'        
@@ -799,7 +723,7 @@ paths:
       tags:
         - pubblicaAvviso
       summary: API Rest per la creazione di un avviso che sostituisce il precedente non ancora pubblicato sia a livello nazionale e sia europeo. ASINCRONO - ASIMMETRICO
-      description: API Rest per la richiesta di pubblicazione di un'avviso sia a livello nazionale sia europeo. L'avviso sostituisce il precedente non ancora pubblicato. Il servizio gestisce la pubblicazione europea mediante l'acquisizione di dati nel formato definito da TED (eForm) e, la pubblicazione nazionale mediante l'acquisizione di dati definiti dall'ESPD Request più dati aggiuntivi richiesti da ANAC. ASINCRONO ASIMMETRICO
+      description: API Rest per la richiesta di pubblicazione di un'avviso sia a livello nazionale sia europeo. L'avviso sostituisce il precedente non ancora pubblicato. Il servizio gestisce la pubblicazione europea mediante l'acquisizione di dati nel formato definito da TED (eForm) e, la pubblicazione nazionale mediante l'acquisizione di dati definiti dall'ESPD Request più dati aggiuntivi richiesti da ANAC. Con la successiva chiamata al servizio esito-operazione è possibile recuperare l'idAvviso di modifica assegnato. ASINCRONO ASIMMETRICO
       operationId: idAvvisoModifica
       requestBody:
         description: Inserimento Avviso con gli oggetti specifici per la pubblicazione in TED o in ambito Nazionale
@@ -826,7 +750,7 @@ paths:
       tags:
         - pubblicaAvviso
       summary: API Rest per la creazione di un avviso che rettifica il precedente pubblicato sia a livello nazionale e sia europeo. ASINCRONO - ASIMMETRICO
-      description: API Rest per la richiesta di pubblicazione di un'avviso di rettifica sia a livello nazionale sia europeo. L'avviso rettifica il precedente già pubblicato. Il servizio gestisce la pubblicazione europea mediante l'acquisizione di dati nel formato definito da TED (eForm) e, la pubblicazione nazionale mediante l'acquisizione di dati definiti dall'ESPD Request più dati aggiuntivi richiesti da ANAC. ASINCRONO ASIMMETRICO
+      description: API Rest per la richiesta di pubblicazione di un'avviso di rettifica sia a livello nazionale sia europeo. L'avviso rettifica il precedente già pubblicato. Il servizio gestisce la pubblicazione europea mediante l'acquisizione di dati nel formato definito da TED (eForm) e, la pubblicazione nazionale mediante l'acquisizione di dati definiti dall'ESPD Request più dati aggiuntivi richiesti da ANAC. Con la successiva chiamata al servizio esito-operazione è possibile recuperare l'idAvviso di rettifica assegnato. ASINCRONO ASIMMETRICO
       operationId: idAvvisoRettifica
       requestBody:
         description: Inserimento Avviso con gli oggetti specifici per la pubblicazione in TED o in ambito Nazionale
@@ -859,21 +783,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idAvviso:
-                  description: identificativo univoco dell'Avviso definito da ANAC. (A UUID specified by RFC4122)
-                  type: string
-                  format: uuid
-                  example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-                motivo:  
-                  description: descrizione del motivo della richiesta di cancellazione
-                  type: string
-                  maxLength: 200
-                  example: 'Revoca delle procedure di gara'
-              required:
-                - idAvviso
+              $ref: '#/components/schemas/CancellaAvvisoRequest'
         required: true
       responses:
         '200':
@@ -893,7 +803,7 @@ paths:
       tags:
         - pubblicaAvviso
       summary: API Rest per la ricerca degli avvisi dell'appalto. SINCRONO
-      description: Viene recuperata la lista con i dati di sintesi degli Avvisi. Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base agli appalti di competenza dell' RP e della SA per la quale sta operando. SINCRONO
+      description: Viene recuperata la lista con i dati di sintesi degli Avvisi. Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base agli appalti di competenza dell' RP e della SA per la quale sta operando. Almeno un filtro di ricerca deve essere valorizzato. SINCRONO
       operationId: idAvvisoRicerca
       parameters:
         - in: query
@@ -917,9 +827,10 @@ paths:
             example: 9050626CD6
         - in: query
           name: stato
-          description: stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: Codice Stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro -fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
-            $ref: '#/components/schemas/StatoAppaltoEnum'
+            type: string
+            example: 'IN_ATT_PUBB'
         - in: query
           name: dataCreazioneDa
           description: Data di crezione dell'Appalto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
@@ -936,19 +847,22 @@ paths:
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: statoAvviso
-          description: Stato in cui si trova l' Avviso - fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
+          description: Codice Stato in cui si trova l' Avviso - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro -  fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
           schema:
-            $ref: '#/components/schemas/StatoAvvisoEnum'
+            type: string
+            example: 'IN_ATT_PUBB'
         - in: query
           name: tipoAvviso
-          description: Tipologia di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
+          description: Codice Tipologia di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
           schema:
-            $ref: '#/components/schemas/TipoAvvisoEnum'
+            type: string
+            example: 'AV2'
         - in: query
           name: azioneAvviso
-          description: Tipo di azione dell'avviso - fare riferimento ai valori contenuti nel file [tipoAzioneAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneAvviso.json)
+          description: Codice Tipo di azione dell'avviso - fare riferimento ai valori contenuti nel file [tipoAzioneAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneAvviso.json)
           schema:
-            $ref: '#/components/schemas/TipoAzioneAvvisoEnum'
+            type: string
+            example: 'AZ_PUBB'
         - in: query
           name: dataCreazioneAvvisoDa
           description: Data di crezione dell'Avviso - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
@@ -1166,21 +1080,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idScheda:
-                  description: identificativo univoco della scheda definita da ANAC. (A UUID specified by RFC4122).
-                  type: string
-                  format: uuid
-                  example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce"  
-                motivo:  
-                  description: descrizione del motivo della richiesta di cancellazione
-                  type: string
-                  maxLength: 200
-                  example: 'Errore inserimento dati'
-              required:
-                - idScheda
+              $ref: '#/components/schemas/CancellaSchedaRequest'
         required: true
       responses:
         '200':
@@ -1205,7 +1105,7 @@ paths:
       tags:
         - comunicaPostPubblicazione
       summary: API Rest per la ricerca delle Schede dati inserite nelle fasi successive alla pubblicazione. SINCRONO
-      description: Viene recuperata la lista con i dati di sintesi delle schede.Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base agli appalti di competenza dell' RP e della SA per la quale sta operando. SINCRONO
+      description: Viene recuperata la lista con i dati di sintesi delle schede.Le informazioni restituite dal servizio saranno filtrate, oltre in base ai parametri di ricerca, anche in base agli appalti di competenza dell' RP e della SA per la quale sta operando. Almeno un filtro di ricerca deve essere valorizzato. SINCRONO
       operationId: idSchedaRicerca
       parameters:
         - in: query    
@@ -1223,9 +1123,10 @@ paths:
             example: 9050626CD6
         - in: query
           name: stato
-          description: stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: Codice stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
-            $ref: '#/components/schemas/StatoAppaltoEnum'
+            type: string
+            example: 'IN_ATT_PUBB'
         - in: query
           name: dataCreazioneDa
           description: Data di crezione dell'Appalto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
@@ -1241,15 +1142,17 @@ paths:
             format: datetime
           example: '2022-01-23T12:02:05Z'
         - in: query
-          name: tipoScheda
-          description: Tipologia di Scheda - fare riferimento ai valori contenuti nel file [tipoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
+          name: codiceScheda
+          description: Codice Scheda - fare riferimento ai valori contenuti nel file [codiceScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codiceScheda.json)
           schema:
-            $ref: '#/components/schemas/TipoSchedaEnum'
+            type: string
+            example: 'AD1_28'
         - in: query
           name: statoScheda
-          description: Stato della Scheda - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
+          description: Codice Stato della Scheda - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
           schema:
-            $ref: '#/components/schemas/StatoSchedaEnum'
+            type: string
+            example: 'IN_LAV'
         - in: query
           name: page
           description: numero della pagina da visualizzare
@@ -1321,15 +1224,12 @@ paths:
       summary: API Rest per la validazione di una Scheda dati. ASINCRONO - ASIMMETRICO
       description: L'ultimo istanza della Scheda inviata viene validata. La validazione è orchestrata da un Workflow Engine che, tramite il suo motore di regole, verifica sia se la scheda dati è coerente con lo stato dell’Appalto sia la correttezza sintattica dei dati di input.  ASINCRONO - ASIMMETRICO
       operationId: idSchedaVerifica
-      parameters:
-        - in: query
-          name: idScheda
-          description: identificativo univoco della Scheda definito da ANAC. (A UUID specified by RFC4122)
-          required: true
-          schema:
-            type: string
-            format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VerificaSchedaRequest'
+        required: true
       responses:
         '200':
             $ref: '#/components/responses/200AckResponse'       
@@ -1354,16 +1254,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              additionalProperties: false
-              properties:
-                idScheda:
-                  description: identificativo univoco della scheda definita da ANAC. (A UUID specified by RFC4122).
-                  type: string
-                  format: uuid
-                  example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce" 
-              required:
-                - idScheda
+              $ref: '#/components/schemas/ConfermaSchedaRequest'
         required: true
       responses:
         '200':
@@ -1399,13 +1290,21 @@ paths:
           description: Tipo operazione di cui si vuole conoscere l'esito - fare riferimento ai valori contenuti nel file [tipoOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazione.json)
           required: true
           schema:
-            $ref: '#/components/schemas/TipoOperazioneEnum'
+            type: string
+            example: "SC_VERIF"
         - in: query
           name: tipoRicerca
-          description: Tipo di ricerca da eseguire - fare riferimento ai valori contenuti nel file [tipoRicercaOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRicercaOperazione.json)
+          description: Codice Tipo di ricerca da eseguire - fare riferimento ai valori contenuti nel file [tipoRicercaOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRicercaOperazione.json)
           required: true
           schema:
-            $ref: '#/components/schemas/TipoRicercaOperazioneEnum'
+            type: string
+            example: "ULTIMO_ESITO"
+        - in: query
+          name: esito
+          description: Codice sintetico esito operazione - fare riferimento ai valori contenuti nel file [esito.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esito.json)
+          schema:
+            type: string
+            example: "OK"
       responses:
         '200':
           description: Esecuzione avvenuta con successo
@@ -1479,10 +1378,10 @@ paths:
       parameters:
         - in: query
           name: idTipologica
-          description: Identificativo univoco della tipologica
+          description: Identificativo della tipologica
           schema:
             type: string
-            format: uuid
+            example: 'CPV'
           required: true
         - in: query
           name: dataInizio
@@ -1539,16 +1438,17 @@ paths:
       parameters:
         - in: query
           name: idTipologica
-          description: Identificativo univoco della tipologica
+          description: Identificativo della tipologica
           schema:
             type: string
-            format: uuid
+            example: 'CPV'
           required: true
         - in: query
           name: codice
           description: Codice del valore che si vuole recuperare dalla tipologica
           schema:
             type: string
+            example: '001'
           required: true          
       responses:
         '200':
@@ -1574,20 +1474,13 @@ paths:
       summary: API Rest per l’associazione di un Responsabile di Progetto. SINCRONO 
       description: servizio utile per l’associazione di un responsabile di progetto. SINCRONO 
       operationId: idPresaCarico
-      parameters:
-        - in: query
-          name: idAppalto
-          description: Identificativo dell'Appalto generato da ANAC. Alternativo al CIG
-          schema:
-            type: string
-            format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-        - in: query
-          name: cig
-          description: Identificativo univoco Gara-Lotto generato da ANAC. Alternativo all'idAppalto
-          schema:
-            type: string
-            example: "9050626CD6"    
+      requestBody:
+        description: Oggetto generico in ingresso al servizio
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PresaCaricoRequest'
+        required: true
       responses:
         '200':
           description: Operazione terminato con successo.
@@ -1636,19 +1529,20 @@ paths:
             example: 'RSSMRA94E07A511G'
         - in: query
           name: ruolo
-          description: Ruolo di un soggetto - fare riferimento ai valori contenuti nel file [tipoRuolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRuolo.json)
+          description: Codice ruolo di un soggetto - fare riferimento ai valori contenuti nel file [tipoRuolo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRuolo.json)
           schema:
-            $ref: '#/components/schemas/TipoRuoloEnum' 
+            type: string
+            example: 'RP'
         - in: query
           name: servizio
-          description: servizio delegato al soggetto - fare riferimento ai valori contenuti nel file [tipoFunzione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
+          description: Non gestito nella prima release - Codice servizio delegato al soggetto - fare riferimento ai valori contenuti nel file [tipoServizioSoggetto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoServizioSoggetto.json)
           schema:
-            $ref: '#/components/schemas/TipoServizioSoggettoEnum'
+            type: string
         - in: query
           name: operazione
-          description: operazione delegata al soggetto - fare riferimento ai valori contenuti nel file [tipoOperazioneSoggetto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazioneSoggetto.json)        
+          description: Non gestito nella prima release - Codice operazione delegata al soggetto - fare riferimento ai valori contenuti nel file [tipoOperazioneSoggetto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazioneSoggetto.json)        
           schema:
-            $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'            
+            type: string           
         - in: query
           name: dataInizioDa
           description: Data inizio incarico soggetto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
@@ -1738,7 +1632,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SoggettoRequest'
+              $ref: '#/components/schemas/EliminaSoggettoRequest'
         required: true
       responses:
         '200':
@@ -1863,26 +1757,6 @@ components:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
   schemas:
-    StatoAppaltoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAppaltoEnum'
-    StatoAvvisoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoAvvisoEnum'
-    StatoPianoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoPianoEnum'
-    TipoPianoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoPianoEnum'
-    TipoAvvisoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAvvisoEnum'
-    TipoAzioneAvvisoEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAzioneAvvisoEnum'
-    TipoSchedaEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoSchedaEnum'
-    StatoSchedaEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoSchedaEnum'
-    TipoOperazioneEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoOperazioneEnum'
-    TipoRicercaOperazioneEnum:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoRicercaOperazioneEnum'
     TipoServizioSoggettoEnum:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoServizioSoggettoEnum'
     TipoOperazioneSoggettoEnum:
@@ -1893,32 +1767,34 @@ components:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/ErroriEnum'      
     AppaltoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AppaltoType'
-    PianoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PianoType'
+    DatiPianoType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoType'
+    DatiPianoBaseType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoBaseType'      
     SoggettoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SoggettoType'
     PaginazioneType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PaginazioneType'
+    SchedaGroupType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaGroupType'
     AvvisoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoType'
-    DatiAvvisoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAvvisoType'
+    AvvisoBaseType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoBaseType'      
     StatoAvvisoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/StatoAvvisoType'
     CigType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/CigType'
-    DatiAppaltoBaseType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoBaseType'    
     DatiAppaltoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiAppaltoType'
-    DatiSchedaBaseType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaBaseType'    
-    DatiSchedaType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaType'
-    DatiPianoBaseType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoBaseType'      
-    DatiPianoType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiPianoType'
+    SchedaPianificazioneType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaPianificazioneType'    
+    SchedaComunicaAppaltoType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaComunicaAppaltoType'
+    SchedaPostPubblicazioneType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaPostPubblicazioneType'
+    SchedaType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaType'
     EsitoOperazioneType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/EsitoOperazioneType'
     StatoType:
@@ -1932,32 +1808,195 @@ components:
     ContentDocumentType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType'      
     CreaAppaltoRequest:
-      allOf: # estende la classe DatiAppaltoBaseType
-        - $ref: '#/components/schemas/DatiAppaltoBaseType'
-    DatiAppaltoRequest:
-      allOf: # estende la classe DatiAppaltoType
-        - $ref: '#/components/schemas/DatiAppaltoType'
-    CreaPianoRequest:
-      allOf: # estende la classe DatiPianoType
-        - $ref: '#/components/schemas/DatiPianoBaseType'
-    DatiPianoRequest:
-      allOf: # estende la classe DatiPianoType
-        - $ref: '#/components/schemas/DatiPianoType'
-    SoggettoRequest:
-      description: Oggetto generico di ritorno di una risposta con paginazione
+      description: Oggetto in ingresso al servizio    
       type: object
       additionalProperties: false
+      properties:
+        scheda:
+          $ref: '#/components/schemas/SchedaComunicaAppaltoType'
+    DatiAppaltoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      required:  # List the required properties here
+        - idAppalto
+      properties:
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        scheda:
+          $ref: '#/components/schemas/SchedaComunicaAppaltoType'
+    CancellaAppaltoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idAppalto:
+          description: identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        motivo:  
+          description: descrizione del motivo della richiesta di cancellazione
+          type: string
+          maxLength: 200
+          example: 'Revoca delle procedure di gara'
+      required:
+        - idAppalto
+    VerificaAppaltoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idAppalto:
+          description: identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      required:
+        - idAppalto
+    ConfermaAppaltoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idAppalto:
+          description: identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      required:
+        - idAppalto        
+    CreaPianoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        scheda:
+          $ref: '#/components/schemas/SchedaPianificazioneType'
+    DatiPianoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      required:  # List the required properties here
+        - idPianificazione
+      properties:
+        idPianificazione:
+          description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Pianificazione. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        scheda:
+          $ref: '#/components/schemas/SchedaPianificazioneType'   
+    CancellaPianoRequest:     
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idPianificazione:
+          description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        motivo:  
+          description: descrizione del motivo della richiesta di cancellazione
+          type: string
+          maxLength: 200
+          example: 'Pianificazione non approvata'
+      required:
+        - idPianificazione
+    VerificaPianoRequest:     
+        description: Oggetto in ingresso al servizio    
+        type: object
+        additionalProperties: false
+        properties:
+          idPianificazione:
+            description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        required:
+          - idPianificazione
+    ConfermaPianoRequest:     
+        description: Oggetto in ingresso al servizio    
+        type: object
+        additionalProperties: false
+        properties:
+          idPianificazione:
+            description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        required:
+          - idPianificazione          
+    PresaCaricoRequest:
+      description: Oggetto in ingresso al servizio
+      type: object
+      additionalProperties: false
+      properties:
+        idAppalto:
+          description: Identificativo univoco dell'Appalto definito da ANAC. Alternativo al CIG
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        cig:
+          description: Identificativo univoco Gara-Lotto generato da ANAC. Alternativo all'idAppalto
+          type: string
+          example: "9050626CD6"    
+    SoggettoRequest:
+      description: Oggetto in ingresso al servizio
+      type: object
+      additionalProperties: false
+      required:
+        - idAppalto
+        - codiceFiscale
+        - ruolo
+        - dataInizio
       properties:
         codiceFiscale:
           description: codice fiscale del soggetto.
           type: string
           example: "AAA345FRT565"
         idAppalto:
-          description: Identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
+          description: Identificativo univoco dell'Appalto definito da ANAC.
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         cig:
-          description: Identificativo univoco Gara-Lotto generato da ANAC. Alternativo all'idAppalto
+          description: Identificativo univoco Gara-Lotto generato da ANAC.
+          type: string
+          example: "9050626CD6"
+        ruolo:  
+          $ref: '#/components/schemas/TipoRuoloEnum'
+        servizio: 
+          $ref: '#/components/schemas/TipoServizioSoggettoEnum'
+        operazione:
+          $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'      
+        dataInizio: 
+          description: Data di inizio (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z'
+        dataFine: 
+          description: Data di fine (A datetime specified by ISO 8601 as profiled by RFC 3339). Se il valore non è indicato la delega è a tempo indeterminato.
+          type: string
+          format: datetime
+          example: '2022-01-23T12:02:05Z'
+    EliminaSoggettoRequest:
+      description: Oggetto in ingresso al servizio
+      type: object
+      additionalProperties: false
+      properties:
+        codiceFiscale:
+          description: codice fiscale del soggetto. Obbligatorio se idAppalto e cig non sono stati valorizzati
+          type: string
+          example: "AAA345FRT565"
+        idAppalto:
+          description: Identificativo univoco dell'Appalto definito da ANAC. Obbligatorio se codiceFiscale e cig non sono stati valorizzati
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        cig:
+          description: Identificativo univoco Gara-Lotto generato da ANAC. Obbligatorio se idAppalto e codiceFiscale non sono stati valorizzati
           type: string
           example: "9050626CD6"
         ruolo:  
@@ -1975,16 +2014,131 @@ components:
           description: Data di fine (A datetime specified by ISO 8601 as profiled by RFC 3339)
           type: string
           format: datetime
-          example: '2022-01-23T12:02:05Z'
+          example: '2022-01-23T12:02:05Z'          
     CreaSchedaRequest:
-      allOf: # estende la classe DatiSchedaType
-        - $ref: '#/components/schemas/DatiSchedaBaseType'
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      required:  # List the required properties here
+        - idAppalto
+      properties:
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        scheda:
+          $ref: '#/components/schemas/SchedaPostPubblicazioneType' 
     DatiSchedaRequest:
-      allOf: # estende la classe DatiSchedaType
-        - $ref: '#/components/schemas/DatiSchedaType'
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      required:  # List the required properties here
+        - idScheda
+        - idAppalto
+      properties:
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        idScheda:
+          description: identificativo univoco della Scheda definito da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        scheda:
+          $ref: '#/components/schemas/SchedaPostPubblicazioneType' 
+    CancellaSchedaRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idScheda:
+          description: identificativo univoco della scheda definita da ANAC. (A UUID specified by RFC4122).
+          type: string
+          format: uuid
+          example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce"  
+        motivo:  
+          description: descrizione del motivo della richiesta di cancellazione
+          type: string
+          maxLength: 200
+          example: 'Errore inserimento dati'
+      required:
+        - idScheda
+    VerificaSchedaRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idScheda:
+          description: identificativo univoco della Scheda definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      required:
+        - idScheda
+    ConfermaSchedaRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idScheda:
+          description: identificativo univoco della scheda definita da ANAC. (A UUID specified by RFC4122).
+          type: string
+          format: uuid
+          example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce" 
+      required:
+        - idScheda        
     AvvisoRequest:
-      allOf: # estende la classe AvvisoType
-        - $ref: '#/components/schemas/AvvisoType'        
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      required:  # List the required properties here
+        - idAvviso
+        - idAppalto
+      properties:
+        idAvviso:
+          description: identificativo univoco dell'Avviso generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        scheda:
+           $ref: '#/components/schemas/SchedaGroupType'
+    PubblicaAvvisoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idAvviso:
+          description: identificativo univoco dell'Avviso definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+      required:  # List the required properties here
+        - idAvviso
+    CancellaAvvisoRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idAvviso:
+          description: identificativo univoco dell'Avviso definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        motivo:  
+          description: descrizione del motivo della richiesta di cancellazione
+          type: string
+          maxLength: 200
+          example: 'Revoca delle procedure di gara'
+      required:
+        - idAvviso
     ConsultaAppaltoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -2110,7 +2264,7 @@ components:
     SoggettoListaResponse :
       allOf: # estende la classe BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
-      description: Oggetto generico di ritorno di una risposta con paginazione
+      description: Oggetto generico di ritorno di una risposta
       type: object
       additionalProperties: false
       properties:
@@ -2119,6 +2273,12 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/SoggettoType'        
+    ConsultaPianoResponse:
+      allOf: # estende lo schema dati di BaseResponse
+        - $ref: '#/components/schemas/BaseResponse'
+      properties:
+        piano:
+          $ref: '#/components/schemas/DatiPianoType'
     PianoListaResponse:
       allOf: # estende la classe BaseResponse e PaginazioneType
         - $ref: '#/components/schemas/BaseResponse'
@@ -2131,7 +2291,7 @@ components:
           description: risposta di una lista di oggetti paginati specifica del servizio SINCRONO
           type: array
           items:
-            $ref: '#/components/schemas/PianoType'
+            $ref: '#/components/schemas/DatiPianoBaseType'
     AvvisoListaResponse:
       allOf: # estende la classe BaseResponse e PaginazioneType
         - $ref: '#/components/schemas/BaseResponse'
@@ -2144,7 +2304,7 @@ components:
           description: Lista di ritorno con la sintesi dei dati dell'Avviso
           type: array
           items:
-            $ref: '#/components/schemas/DatiAvvisoType'  
+            $ref: '#/components/schemas/AvvisoBaseType'  
     CigListaResponse:
       allOf: # estende la classe BaseResponse e PaginazioneType
         - $ref: '#/components/schemas/BaseResponse'
@@ -2195,13 +2355,13 @@ components:
           description: Lista di ritorno con la sintesi dei dati delle schede
           type: array
           items:
-            $ref: '#/components/schemas/DatiSchedaType'
+            $ref: '#/components/schemas/SchedaType'
     ConsultaAvvisoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
         avviso:
-          $ref: '#/components/schemas/DatiAvvisoType'
+          $ref: '#/components/schemas/AvvisoType'
     RenderingAvvisoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -2215,26 +2375,16 @@ components:
           estensione: "PDF"
           size: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
           content: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-    ConsultaPianoResponse:
-      allOf: # estende lo schema dati di BaseResponse
-        - $ref: '#/components/schemas/BaseResponse'
-      properties:
-        piano:
-          $ref: '#/components/schemas/DatiPianoType'
     ConsultaSchedaResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
         scheda:
-          $ref: '#/components/schemas/DatiSchedaType'
+          $ref: '#/components/schemas/SchedaPostPubblicazioneType'
     EsitoOperazioneListaResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
-        idAppalto:
-          description: Identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         listaEsiti:
           description: Lista di ritorno esiti operazione
           type: array
@@ -2334,7 +2484,7 @@ components:
         - idScheda
       properties:
         idScheda:
-          description: Identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
+          description: Identificativo univoco della scheda definito da ANAC. (A UUID specified by RFC4122)
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
       example:
