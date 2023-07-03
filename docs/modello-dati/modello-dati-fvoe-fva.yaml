@@ -56,6 +56,10 @@ components:
           type: string
           format: datetime
           example: "2022-01-23T12:02:05Z"
+        oggetto:
+          description: oggetto del Fascicolo
+          type: string 
+          maxLength: 4096
         numDocumenti:
             description: numero della pagina da visualizzare.
             type: integer
@@ -146,6 +150,10 @@ components:
           example: '2022-01-23T12:02:05Z' 
         azione:
           $ref: '#/components/schemas/TipoAzioneDocumentoEnum'   
+        oggetto:
+          description: oggetto del documento
+          type: string
+          maxLength: 4096
         utenteCreazione:
           description: utente di registrazione del documento
           type: string
@@ -179,14 +187,13 @@ components:
           example: "PDF"
         dimensione:
           description: grandezza del documento
-          type: string
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          type: integer
+          format: int32
+          example: 5565
         contenuto:
           description: Contenuto in formato Binario del documento
           type: string
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
+          format: binary    
     AutorizzazioneAccessoType:
       description: Oggetto che descrive l'autorizzazione concessa dall' OE verso il SA per poter accedere al proprio FVOE
       type: object
