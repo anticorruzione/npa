@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda NAG - Scheda di mancata aggiudicazione della gara
+  version: 1.0.0
+components:
+  schemas:
+    LottoNAGType:
+      description: dati relativi ai lotti
+      type: object
+      additionalProperties: false
+      properties: 
+        cig:
+          description: codice identificativo lotto
+          type: string      
+        datiBaseRisultatoProcedura:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseGiustificazioneRisultatoProceduraType'
+          required: [giustificazione]
+        esitoProceduraAnnullata:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EsitoProceduraAnnullataEnum'      
+    AnacFormNAGType:
+      description: Contiene tutti i dati relativi alla mancata aggiudicazione della gara - sotto soglia europea
+      type: object
+      additionalProperties: false
+      properties:
+        lotti: 
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoNAGType'          
+    SchedaNAGType:
+      description: Scheda di mancata aggiudicazione della gara
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormNAGType' 

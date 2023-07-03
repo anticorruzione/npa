@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P2_11 - Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Avviso periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime ordinario. Articolo 67, paragrafo 2, della direttiva 2014/25/UE.
+  version: 1.0.0
+components:
+  schemas:
+    AppaltoP2_11Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP_11Type'
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoBaseType'
+      type: object
+      additionalProperties: false
+      properties:  
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType'  
+        datiBaseProcedura:
+          allOf:
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraType'
+          required: [tipoProcedura]
+        datiBaseStrumentiProcedura:
+          allOf:
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraType'
+          required: [accordoQuadro,sistemaDinamicoAcquisizione]          
+    LottoP2_11Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP_11Type'
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoBaseType'      
+      type: object
+      additionalProperties: false
+      properties: 
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'   
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
+        datiBaseAggiuntivi:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiuntiviType'        
+        datiBaseAggiudicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'   
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioSoloScadenzaType'  
+        datiBaseCPV:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType' 
+        datiBaseDocumenti:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'          
+    AnacFormP2_11Type:
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Avviso periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime ordinario direttiva settoriale, regime ordinario. Articolo 67, paragrafo 2, della direttiva 2014/25/UE
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'    
+      type: object
+      additionalProperties: false
+      required: [appalto,lotti]  
+      properties:  
+        appalto:
+          $ref: '#/components/schemas/AppaltoP2_11Type' 
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoP2_11Type'                        
+    SchedaP2_11Type:
+      description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Avviso periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime ordinario. Articolo 67, paragrafo 2, della direttiva 2014/25/UE
+      type: object
+      required: [anacForm,espd]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormP2_11Type'
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         

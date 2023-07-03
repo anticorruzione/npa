@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda CSU1 - Scheda di conclusione subappalto.
+  version: 1.0.0
+components:
+  schemas:
+    SubappaltoType:
+      description: Dati relativi ai subappalti
+      type: object
+      required: [codContratto,importoEffettivo]
+      additionalProperties: false
+      properties:    
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string 
+        importoEffettivo: 
+          description: Importo effettivo Lavoro/ Servizio/Fornitura, subappalto
+          type: number
+          format: double
+        dataUltimazione: 
+          description: Termine di ultimazione della prestazione di subappalto
+          type: string
+          format: datetime
+    AnacFormCSU1Type:
+      description: Contiene tutti i dati relativi alla scheda di conclusione di subappalto
+      type: object
+      required: [subappalti]
+      additionalProperties: false
+      properties: 
+        subappalti:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubappaltoType'
+    SchedaCSU1Type:
+      description: Scheda di conclusione subappalto
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormCSU1Type'

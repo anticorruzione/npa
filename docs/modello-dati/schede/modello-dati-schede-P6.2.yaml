@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P6_2 - Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (es. proc. Negoziata) - Articolo 49 della direttiva 2014/24/UE e Articolo 69 della direttiva 2014/25/UE.
+  version: 1.0.0
+components:
+  schemas:
+    LottoP6_2Type:
+      description: Oggetto che riporta i dati del lotto per le adesioni AQ/convenzione con successivo confronto competitivo
+      allOf: # estende la classe LottoP6BaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP6BaseType'      
+      type: object
+      required: [ripetizioniEConsegneComplementari]
+      additionalProperties: false
+      properties:
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean    
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'          
+    AppaltoP6_2Type:
+      description: Oggetto che riporta i dati dell'appalto per le adesioni AQ/convenzione con successivo confronto competitivo   
+      allOf: # estende la classe AppaltoP6BaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP6BaseType'
+      type: object
+      additionalProperties: false
+    AnacFormP6_2Type:
+      description: Contiene i dati relativi alle adesioni AQ/convenzione con successivo confronto competitivo (ordinario/speciale) - Articolo 49 della direttiva 2014/24/UE e Articolo 69 della direttiva 2014/25/UE
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'       
+      type: object
+      required: [appalto,lotti]
+      additionalProperties: false
+      properties:  
+        appalto:
+          $ref: '#/components/schemas/AppaltoP6_2Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoP6_2Type'         
+    SchedaP6_2Type:
+      description: Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (es. proc. Negoziata) - Articolo 49 della direttiva 2014/24/UE e Articolo 69 della direttiva 2014/25/UE
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormP6_2Type'      
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         

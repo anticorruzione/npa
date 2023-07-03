@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda CO2 - Scheda di conclusione.
+  version: 1.0.0
+components:
+  schemas:
+    ConclusioneType:
+      description: Oggetto che riporta i dati di conclusione.
+      type: object
+      additionalProperties: false
+      required: [codContratto]
+      properties:
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string 
+        dataInizio:
+          description: Data di inizio
+          type: string
+          format: datetime
+        dataUltimazione:
+          description: Data di ultimazione
+          type: string
+          format: datetime
+        importo: 
+          description: Importo delle somme liquidate
+          type: number
+          format: double
+    AnacFormCO2Type:
+      description: Contiene tutti i dati di conclusione
+      type: object
+      additionalProperties: false
+      properties:  
+        conclusione:
+          $ref: '#/components/schemas/ConclusioneType'
+    SchedaCO2Type:
+      description: Scheda di conclusione
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormCO2Type'

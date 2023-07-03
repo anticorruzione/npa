@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda CO1 - Scheda di conclusione.
+  version: 1.0.0
+components:
+  schemas:
+    ConclusioneType:
+      description: Oggetto che riporta i dati di conclusione.
+      type: object
+      additionalProperties: false
+      required: [codContratto]
+      properties:
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string 
+        causaInterruzioneAnticipata:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotiviInterruzioneEnum'
+        dataInterruzioneAnticipata:
+          description: Data di interruzione anticipata
+          type: string
+          format: datetime
+        oneriEconomiciRisoluzioneRecesso:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/OneriEconomiciRisoluzioneRecessoEnum'      
+        importo: 
+          description: Importo
+          type: number
+          format: double
+        incamerataPolizza:
+          description: Incamerata polizza
+          type: boolean
+        dataUltimazione:
+          description: Data di ultimazione della prestazione
+          type: string
+          format: datetime          
+        numeroInfortuni:
+          description: Numero di infortuni
+          type: number
+          format: integer
+        diCuiPostumiPermanenti:
+          description: di cui con postumi permanenti
+          type: number
+          format: integer 
+        diCuiMortali:
+          description: di cui mortali
+          type: number
+          format: integer          
+    AnacFormCO1Type:
+      description: Contiene tutti i dati di conclusione
+      type: object
+      additionalProperties: false
+      properties:  
+        conclusione:
+          $ref: '#/components/schemas/ConclusioneType'
+    SchedaCO1Type:
+      description: Scheda di conclusione
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormCO1Type'

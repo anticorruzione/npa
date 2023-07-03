@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda ES1 - Scheda di esito subappalto.
+  version: 1.0.0
+components:
+  schemas:
+    SubappaltoType:
+      description: Dati relativi ai subappalti
+      type: object
+      required: [codContratto]
+      additionalProperties: false
+      properties:    
+        codContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string 
+        dataAutorizzazione: 
+          description: Data di autorizzazione del subappalto
+          type: string
+          format: datetime
+        motivoMancatoSubappalto: 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoMancatoSubappaltoEnum'
+    AnacFormES1Type:
+      description: Contiene tutti i dati relativi alla scheda di Richiesta di Subappalto
+      type: object
+      required: [subappalti]
+      additionalProperties: false
+      properties: 
+        subappalti:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubappaltoType'
+    SchedaES1Type:
+      description: Scheda di esito subappalto
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormES1Type'
