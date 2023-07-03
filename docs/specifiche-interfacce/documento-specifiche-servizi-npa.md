@@ -206,10 +206,10 @@ Nel seguente contesto della Nuova Piattaforma Appalti sono inclusi i servizi uti
 **Descrizione dei servizi**
 
 I servizi che devono essere obbligatoriamente richiamati per questo contesto del ciclo di vita dell’Appalto sono i seguenti:
-- **presa-carico**: servizio utile per l’associazione di un responsabile di progetto;
-- **aggiungi-soggetto**: servizio che ha lo scopo aggiungere l’istanza di un soggetto delegato.
+- **presa-carico**: servizio utile per l’associazione di un responsabile di progetto.
 
 Possono inoltre essere invocati i seguenti servizi facoltativi:
+- aggiungi-soggetto: servizio che ha lo scopo aggiungere l’istanza di un soggetto delegato;
 -	ricerca-soggetto: servizio che permette la ricerca di un soggetto sulla base dei criteri di input;
 -	elimina-soggetto: servizio di cancellazione logica di un soggetto. 
 
@@ -266,8 +266,8 @@ Servizi facoltativi, una volta richiamato il crea-appalto, possono essere i segu
   - eForms di gara: input obbligatorio in caso di pubblicazione europea. 
   - espdRequest: input obbligatorio 
   - anacForm: input obbligatorio 
-- cancella-appalto: servizio che consente, qualora lo stato dell’Appalto sia “IN LAVORAZIONE”, la cancellazione logica di un Appalto in bozza. a seguito dell’invocazione di questo servizio l’Appalto transita in stato “CANCELLATO”;
-- ricerca-appalto: servizio che permette la ricerca dell’Appalto sulla base dei criteri di input. Lo stato dell’Appalto, per poter invocare il servizio, dovrà essere “IN LAVORAZIONE”, ”CANCELLATO”, “CONFERMATO”;
+- cancella-appalto: servizio che consente, qualora lo stato dell’Appalto sia “IN LAVORAZIONE” o "CONFERMATO", la cancellazione logica di un Appalto in bozza. A seguito dell’invocazione di questo servizio l’Appalto transita in stato “CANCELLATO”;
+- ricerca-appalto: servizio che permette la ricerca dell’Appalto sulla base dei criteri di input;
 - consulta-appalto: servizio che consente la consultazione delle informazioni di dettaglio di un Appalto;
 - recupera-cig: servizio che consente il recupero dei CIG generati e assegnati ai lotti dell’Appalto. Lo stato dell’Appalto per poter richiamare tale servizio dovrà essere “CONFERMATO”.
 
