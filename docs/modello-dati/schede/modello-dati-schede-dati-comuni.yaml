@@ -2959,21 +2959,11 @@ components:
             $ref: '#/components/schemas/StazioneAppaltanteType'
     EformType:
       description: Eform codificato Base64 nel formato XML definito da TED
-      type: object
-      additionalProperties: false
-      properties:
-        body:
-          description: Eform codificato Base64 nel formato XML definito da TED
-          type: string
-          format: byte
-          example: U3dhZ2dlciByb2Nrcw==
+      type: string
+      format: byte
+      example: U3dhZ2dlciByb2Nrcw==
     EspdRequestType:
       description: Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)
-      type: object
-      additionalProperties: false
-      properties:
-        body:
-          description: ESPD Request codificato Base64 nel formato XML definito da TED
-          type: string
-          format: byte
-          example: U3dhZ2dlciByb2Nrcw==
+      type: string
+      format: byte
+      example: U3dhZ2dlciByb2Nrcw==
