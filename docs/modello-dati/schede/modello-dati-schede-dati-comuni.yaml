@@ -2960,10 +2960,8 @@ components:
     EformType:
       description: Eform codificato Base64 nel formato XML definito da TED
       type: string
-      format: byte
       example: U3dhZ2dlciByb2Nrcw==
     EspdRequestType:
       description: Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)
       type: string
-      format: byte
       example: U3dhZ2dlciByb2Nrcw==
