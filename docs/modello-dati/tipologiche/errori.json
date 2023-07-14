@@ -118,8 +118,8 @@
 {
     "codice":"ERR14",
     "descrizione": {
-		"it": "lotIdentifier duplicati nell'elendo dei lotti",
-		"en": "lotIdentifier duplicati nell'elendo dei lotti"
+		"it": "lotIdentifier duplicato nell'elendo dei lotti",
+		"en": "lotIdentifier duplicato nell'elendo dei lotti"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -322,6 +322,87 @@
     "dataInizio":null,
     "dataFine":null
 },
+{
+    "codice":"ERR37",
+    "descrizione": {
+		"it": "codiceAppalto obbligatorio",
+		"en": "codiceAppalto obbligatorio"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR38",
+    "descrizione": {
+		"it": "codiceAppalto già presente",
+		"en": "codiceAppalto già presente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR39",
+    "descrizione": {
+		"it": "idContratto non trovato",
+		"en": "idContratto non trovato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR40",
+    "descrizione": {
+		"it": "errore generico durante l'estrazione dei dati della scheda",
+		"en": "errore generico durante l'estrazione dei dati della scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR41",
+    "descrizione": {
+		"it": "errore generico durante la validazione dei dati della scheda",
+		"en": "errore generico durante la validazione dei dati della scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR42",
+    "descrizione": {
+		"it": "errore durante la validazione dei dati della scheda: scheda non trovata",
+		"en": "errore durante la validazione dei dati della scheda: scheda non trovata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR43",
+    "descrizione": {
+		"it": "errore durante la validazione dei dati della scheda: tabella DMN non trovata",
+		"en": "errore durante la validazione dei dati della scheda: tabella DMN non trovata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR44",
+    "descrizione": {
+		"it": "chiamata al servizio non ammessa: è in corso una richiesta di pubblicazione per l'avviso",
+		"en": "chiamata al servizio non ammessa: è in corso una richiesta di pubblicazione per l'avviso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR45",
+    "descrizione": {
+		"it": "avviso non ammesso in questa fase dell'appalto",
+		"en": "avviso non ammesso in questa fase dell'appalto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
 {
     "codice":"ERR9999",
     "descrizione": {
@@ -769,6 +850,465 @@
 		"it": "Non è stato indicato il valore dell’importo componente forniture nel quadro economico delle concessioni",
 		"en": "Non è stato indicato il valore dell’importo componente forniture nel quadro economico delle concessioni"
 	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AUT01",
+    "descrizione": {
+        "it": "l'utente non è presente tra le stazioni appaltanti",
+        "en": "l'utente non è presente tra le stazioni appaltanti"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT02",
+    "descrizione": {
+        "it": "appalto non trovato per l'id passato in input",
+        "en": "appalto non trovato per l'id passato in input"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT03",
+    "descrizione": {
+        "it": "lotto non trovato per il cig passato in input",
+        "en": "lotto non trovato per il cig passato in input"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT04",
+    "descrizione": {
+        "it": "popolare alternativamente un parametro tra idAppalto e CIG",
+        "en": "popolare alternativamente un parametro tra idAppalto e CIG"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT05",
+    "descrizione": {
+        "it": "uuid in input non formattato correttamente",
+        "en": "uuid in input non formattato correttamente"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT06",  
+    "descrizione": {
+        "it": "CIG non presente nell'Appalto",
+        "en": "CIG non presente nell'Appalto"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT07",  
+    "descrizione": {
+        "it": "tipo ruolo indicato non valido",
+        "en": "tipo ruolo indicato non valido"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT08",  
+    "descrizione": {
+        "it": "date in input non coerenti",
+        "en": "date in input non coerenti"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+    "codice":"AUT09",  
+    "descrizione": {
+        "it": "data in input non formattata correttamente",
+        "en": "data in input non formattata correttamente"
+    },
+    "dataInizio":null,
+    "dataFine":null    
+},
+{
+   "codice":"AUT10",
+   "descrizione": {
+       "it": "nessun soggetto attivo presente",
+       "en": "nessun soggetto attivo presente"
+   },
+   "dataInizio":null,
+   "dataFine":null    
+},
+{
+    "codice":"FVX01",
+    "descrizione": {
+		"it": "Documento non presente",
+		"en": "Documento non presente"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX02",
+    "descrizione": {
+		"it": "Fascicolo non presente",
+		"en": "Fascicolo non presente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX03",
+    "descrizione": {
+		"it": "Documenti non presenti",
+		"en": "Documenti non presenti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX04",
+    "descrizione": {
+		"it": "Fascicoli non presenti",
+		"en": "Fascicoli non presenti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX05",
+    "descrizione": {
+		"it": "Filtro non formattato correttamente",
+		"en": "Filtro non formattato correttamente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX06",
+    "descrizione": {
+		"it": "Filtro non valido",
+		"en": "Filtro non valido"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX07",
+    "descrizione": {
+		"it": "Filtro Stato non formattato correttamente",
+		"en": "Filtro Stato non formattato correttamente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX08",
+    "descrizione": {
+		"it": "Filtro Stato non valido",
+		"en": "Filtro Stato non valido"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX09",
+    "descrizione": {
+		"it": "Filtro Tipo non formattato correttamente",
+		"en": "Filtro Tipo non formattato correttamente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX10",
+    "descrizione": {
+		"it": "Filtro Tipo non valido",
+		"en": "Filtro Tipo non valido"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVA01",
+    "descrizione": {
+		"it": "Criteri di ricerca non ammessi, popolare in modo alternativo codiceAppalto, idAppalto, CIG",
+		"en": "Criteri di ricerca non ammessi, popolare in modo alternativo codiceAppalto, idAppalto, CIG"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVA02",
+    "descrizione": {
+		"it": "Criteri di ricerca non ammessi, popolare in modo alternativo datiAggiuntivi con gli altri campi",
+		"en": "Criteri di ricerca non ammessi, popolare in modo alternativo datiAggiuntivi con gli altri campi"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX11",
+    "descrizione": {
+		"it": "Le date inserite non sono coerenti",
+		"en": "Le date inserite non sono coerenti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVA03",
+    "descrizione": {
+		"it": "L'utente non è autorizzato ad accedere al FVA richiesto",
+		"en": "L'utente non è autorizzato ad accedere al FVA richiesto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}, 
+{
+    "codice":"FVA04",
+    "descrizione": {
+		"it": "Operazione non permessa. FVA non attivo",
+		"en": "Operazione non permessa. FVA non attivo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVA05",
+    "descrizione": {
+		"it": "Operazione non permessa. Fascicolo trovato non é di Appalto",
+		"en": "Operazione non permessa. Fascicolo trovato non é di Appalto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX12",
+    "descrizione": {
+		"it": "Trascodifica Fallita. Tipologica non presente",
+		"en": "Trascodifica Fallita. Tipologica non presente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX13",
+    "descrizione": {
+		"it": "Trascodifica Fallita. Codice non presente",
+		"en": "Trascodifica Fallita. Codice non presente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX14",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Ricerca Estensioni Documenti - Non Disponibile",
+		"en": "Errore Servizio esterno. Ricerca Estensioni Documenti - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX15",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Ricerca Documenti - Non Disponibile",
+		"en": "Errore Servizio esterno. Ricerca Documenti - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX16",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Ricerca Estensioni Fascicoli - Non Disponibile",
+		"en": "Errore Servizio esterno. Ricerca Estensioni Fascicoli - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX17",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Ricerca Fascicoli - Non Disponibile",
+		"en": "Errore Servizio esterno. Ricerca Fascicoli - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX18",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Inizializza Fascicoli - Non Disponibile",
+		"en": "Errore Servizio esterno. Inizializza Fascicoli - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX19",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Inserisci Documento - Non Disponibile",
+		"en": "Errore Servizio esterno. Inserisci Documento- Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX20",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Recupera Fascicolo - Non Disponibile",
+		"en": "Errore Servizio esterno. Recupera Fascicolo - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX21",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Recupera Documento - Non Disponibile",
+		"en": "Errore Servizio esterno. Recupera Documento - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX22",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Crea Documento - Non Disponibile",
+		"en": "Errore Servizio esterno. Crea Documento - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX23",
+    "descrizione": {
+		"it": "Errore Servizio esterno. Chiudi Fascicolo - Non Disponibile",
+		"en": "Errore Servizio esterno. Chiudi Fascicolo - Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX24",
+    "descrizione": {
+		"it": "Errore Conversione Json",
+		"en": "Errore Conversione Json"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX25",
+    "descrizione": {
+		"it": "Fascicolo mal formattato",
+		"en": "Fascicolo mal formattato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX26",
+    "descrizione": {
+		"it": "Estensione Dati mal formattato",
+		"en": "Estensione Dati mal formattato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX27",
+    "descrizione": {
+		"it": "Stanzioni Appaltanti mal formattato",
+		"en": "Stanzioni Appaltanti mal formattato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX28",
+    "descrizione": {
+		"it": "Stanzioni Appaltanti non presenti",
+		"en": "Stanzioni Appaltanti non presenti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVA06",
+    "descrizione": {
+		"it": "Dati trovati incongruenti. Fascicoli trovati >1",
+		"en": "Dati trovati incongruenti. Fascicoli trovati >1"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVX29",
+    "descrizione": {
+        "it": "Criteri di ricerca non ammessi, popolare in modo alternativo datiAggiuntivi con gli altri campi",
+        "en": "Criteri di ricerca non ammessi, popolare in modo alternativo datiAggiuntivi con gli altri campi"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVC04",
+    "descrizione": {
+        "it": "Richiesta accesso non trovata",
+        "en": "Richiesta accesso non trovata"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FVC05",
+    "descrizione": {
+        "it": "Richiesta Respinta. Una richiesta per lo stesso CF e tipo documento già presente",
+        "en": "Richiesta Respinta. Una richiesta per lo stesso CF e tipo documento già presente"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+   "codice":"AUT11",
+   "descrizione": {
+       "it": "Filtro non formattato correttamente",
+       "en": "Filtro non formattato correttamente"
+   },
+   "dataInizio":null,
+   "dataFine":null    
+},
+{
+   "codice":"AUT12",
+   "descrizione": {
+       "it": "Filtro non valido",
+       "en": "Filtro non valido"
+   },
+   "dataInizio":null,
+   "dataFine":null    
+},
+{
+    "codice":"AUT13",
+    "descrizione": {
+        "it": "Trascodifica Fallita. Tipologica non presente",
+        "en": "Trascodifica Fallita. Tipologica non presente"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AUT14",
+    "descrizione": {
+        "it": "Trascodifica Fallita. Codice non presente",
+        "en": "Trascodifica Fallita. Codice non presente"
+    },
     "dataInizio":null,
     "dataFine":null
 }]

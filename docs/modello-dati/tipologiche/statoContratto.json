@@ -1,4 +1,13 @@
 [{
+    "codice":"SOTT",
+    "descrizione": {
+		"it": "Sottoscritto",
+		"en": "Sottoscritto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"INT_ANT",
     "descrizione": {
 		"it": "Interruzione anticipata",

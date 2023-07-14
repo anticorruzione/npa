@@ -1,21 +1,21 @@
 [{
-    "codice":"PL1_01",
+    "codice":"PL1_1",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eforM1_",
-		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eforM1_"
+		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform1",
+		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform1"
 		},
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_02",
+    "codice":"PL1_2",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eforM2_",
-		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eforM2_"
+		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform2.",
+		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform2."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_03",
+    "codice":"PL1_3",
     "descrizione": {
 		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3.",
 		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3."
@@ -23,7 +23,7 @@
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_04",
+    "codice":"PL1_4",
     "descrizione": {
 		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform4.",
 		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform4."
@@ -31,7 +31,7 @@
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_05",
+    "codice":"PL1_5",
     "descrizione": {
 		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform5.",
 		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform5."
@@ -39,7 +39,7 @@
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_06",
+    "codice":"PL1_6",
     "descrizione": {
 		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6.",
 		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6."
@@ -47,7 +47,7 @@
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_07",
+    "codice":"PL1_7",
     "descrizione": {
 		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.",
 		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7."
@@ -55,7 +55,7 @@
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_08",
+    "codice":"PL1_8",
     "descrizione": {
 		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8.",
 		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8."
@@ -63,7 +63,7 @@
     "dataInizio":null,
     "dataFine":null
 },{
-    "codice":"PL1_09",
+    "codice":"PL1_9",
     "descrizione": {
 		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9.",
 		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9."
@@ -503,10 +503,28 @@
     "dataFine":null
 },
 {
-    "codice":"P7_1",
+    "codice":"P7_1_1",
     "descrizione": {
-		"it": "Scheda relativa agli appalti e concessioni settori ordinari e speciali; appalti e concessioni settori ordinari e speciali regime alleggerito.",
-		"en": "Scheda relativa agli appalti e concessioni settori ordinari e speciali; appalti e concessioni settori ordinari e speciali regime alleggerito."
+		"it": "Scheda di procedura negoziata senza bando pari o sopra soglia.",
+		"en": "Scheda di procedura negoziata senza bando pari o sopra soglia."
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"P7_1_2",
+    "descrizione": {
+		"it": "Scheda di procedura negoziata senza bando pari o sopra soglia.",
+		"en": "Scheda di procedura negoziata senza bando pari o sopra soglia."
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"P7_1_3",
+    "descrizione": {
+		"it": "Scheda di procedura negoziata senza bando sottosoglia.",
+		"en": "Scheda di procedura negoziata senza bando sottosoglia."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -514,8 +532,8 @@
 {
     "codice":"P7_2",
     "descrizione": {
-		"it": "Scheda relativa agli appalti settori ordinari e speciali sottosoglia; appalti settori ordinari e speciali sottosoglia - regime alleggerito.",
-		"en": "Scheda relativa agli appalti settori ordinari e speciali sottosoglia; appalti settori ordinari e speciali sottosoglia - regime alleggerito."
+		"it": "Scheda di procedura negoziata senza bando sottosoglia.",
+		"en": "Scheda di procedura negoziata senza bando sottosoglia."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -523,8 +541,8 @@
 {
     "codice":"P7_3",
     "descrizione": {
-		"it": "Scheda relativa ai settori ordianri e settori speciali.",
-		"en": "Scheda relativa ai settori ordianri e settori speciali."
+		"it": "Scheda di avviso per la costituzione elenco.",
+		"en": "Scheda di avviso per la costituzione elenco."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -935,10 +953,28 @@
     "dataFine":null
 },
 {
+    "codice":"A7_1_1",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"A7_1_2",
+    "descrizione": {
+		"it": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"NAG",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di mancata aggiudicazione della gara",
-		"en": "Scheda di pubblicazione avviso di mancata aggiudicazione della gara"
+		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura",
+		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -962,19 +998,10 @@
     "dataFine":null
 },
 {
-    "codice":"M1_38",
+    "codice":"M1",
     "descrizione": {
-		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38",
-		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38"
-		},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"M1_39",
-    "descrizione": {
-		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform39",
-		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform39"
+		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38 o eform39",
+		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38 o eform39"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -989,16 +1016,7 @@
     "dataFine":null
 },
 {
-    "codice":"M2_38",
-    "descrizione": {
-		"it": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED",
-		"en": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED"
-		},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"M2_39",
+    "codice":"M2",
     "descrizione": {
 		"it": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED",
 		"en": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED"
@@ -1025,7 +1043,7 @@
     "dataFine":null
 },
 {
-    "codice":"SU1",
+    "codice":"RSU1",
     "descrizione": {
 		"it": "Scheda di richiesta subappalto",
 		"en": "Scheda di richiesta subappalto"
@@ -1036,8 +1054,17 @@
 {
     "codice":"ES1",
     "descrizione": {
-		"it": "Scheda di esito subappalto",
-		"en": "Scheda di esito subappalto"
+		"it": "Scheda di esito richiesta subappalto",
+		"en": "Scheda di esito richiesta subappalto"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CS1",
+    "descrizione": {
+		"it": "Scheda di conclusione subappalto",
+		"en": "Scheda di conclusione subappalto"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1079,7 +1106,7 @@
     "dataFine":null
 },
 {
-    "codice":"CO1",
+    "codice":"C01",
     "descrizione": {
 		"it": "Scheda di conclusione",
 		"en": "Scheda di conclusione"
@@ -1088,10 +1115,10 @@
     "dataFine":null
 },
 {
-    "codice":"CO2",
+    "codice":"C02",
     "descrizione": {
-		"it": "Scheda di conclusione per importi<5K",
-		"en": "Scheda di conclusione per importi<5K"
+		"it": "Scheda di conclusione per flussi < 5K",
+		"en": "Scheda di conclusione per flussi < 5K"
 		},
     "dataInizio":null,
     "dataFine":null

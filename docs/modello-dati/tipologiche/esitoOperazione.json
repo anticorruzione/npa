@@ -350,6 +350,15 @@
     "dataFine":null
 },
 {
+    "codice":"AV_RICHIESTA_PUBB_IN_CORSO",
+    "descrizione": {
+		"it": "Richiesta pubblicazione avviso in corso",
+		"en": "Richiesta pubblicazione avviso in corso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
     "codice":"AV_MOD",
     "descrizione": {
 		"it": "Avviso modificato",
@@ -367,6 +376,15 @@
     "dataInizio":null,
     "dataFine":null
 },
+{
+    "codice":"AV_RICHIESTA_MOD_IN_CORSO",
+    "descrizione": {
+		"it": "Richiesta modifica avviso in corso",
+		"en": "Richiesta modifica avviso in corso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
 {
     "codice":"AV_N_MOD",
     "descrizione": {
@@ -395,6 +413,15 @@
     "dataFine":null
 },
 {
+    "codice":"AV_RICHIESTA_RETT_IN_CORSO",
+    "descrizione": {
+		"it": "Richiesta rettifica avviso in corso",
+		"en": "Richiesta rettifica avviso in corso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
     "codice":"AV_N_RETT",
     "descrizione": {
 		"it": "Avviso non rettificato",
@@ -421,6 +448,15 @@
     "dataInizio":null,
     "dataFine":null
 },
+{
+    "codice":"AV_RICHIESTA_SOSP_IN_CORSO",
+    "descrizione": {
+		"it": "Richiesta sospensione avviso in corso",
+		"en": "Richiesta sospensione avviso in corso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
 {
     "codice":"AV_N_SOSP",
     "descrizione": {

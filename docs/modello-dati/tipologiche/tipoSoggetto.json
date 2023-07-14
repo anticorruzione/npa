@@ -37,8 +37,8 @@
 {
     "codice":"19",
     "descrizione": {
-		"it": "ATI",
-		"en": "ATI"
+		"it": "RTI",
+		"en": "RTI"
 		},	
     "dataInizio":null,
     "dataFine":null

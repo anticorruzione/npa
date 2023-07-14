@@ -55,8 +55,8 @@
 {
     "codice":"7",
     "descrizione": {
-		"it": "no",
-		"en": "no"
+		"it": "non applicabile",
+		"en": "non applicabile"
 		},	
     "dataInizio":null,
     "dataFine":null
