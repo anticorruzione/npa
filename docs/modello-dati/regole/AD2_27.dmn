@@ -34,7 +34,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_27_10_0021">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG7\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG7\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_27_10_0006">
@@ -46,7 +46,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_27_10_0006">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG8\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_27_10_0034">
@@ -59,7 +59,7 @@
 satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_27_10_0035">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG33\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_04qnm12">
@@ -72,7 +72,7 @@ satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibil
 satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ieedei">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG52\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1v6xepx">
@@ -85,7 +85,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggi
 satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruolo.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0817065">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG53\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_27_10_0039">
@@ -97,7 +97,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_27_10_0040">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG68\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

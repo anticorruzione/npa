@@ -38,7 +38,7 @@
 satisfies lotto.datiBase.oggettoContratto.codice = "combined" and lotto.oggettoPrincipaleContratto = null</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P5_0034">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG31\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG31\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

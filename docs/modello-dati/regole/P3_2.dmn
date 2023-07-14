@@ -49,7 +49,7 @@
 satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.codiceFiscale=null</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0007">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG2\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG2\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0019">
@@ -64,7 +64,7 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text>count(stazioniAppaltanti.codiceFiscale) &gt; count(distinct values(stazioniAppaltanti.codiceFiscale))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0020">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG3\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0023">
@@ -81,7 +81,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0024">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG18\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0024">
@@ -100,7 +100,7 @@ satisfies lotto.acquisizioneCup=false and lotto.oggettoPrincipaleContratto.codic
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0025">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG20\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0025">
@@ -116,7 +116,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale 
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0026">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG21\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG21\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0026">
@@ -132,7 +132,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale 
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0027">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG22\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG22\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0027">
@@ -149,7 +149,7 @@ satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGene
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0028">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG23\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG23\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0028">
@@ -166,7 +166,7 @@ satisfies lotto.paritaDiGenereGenerazionale != null and number(lotto.paritaDiGen
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0029">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG24\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG24\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0029">
@@ -182,7 +182,7 @@ satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGen
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0030">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG27\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG27\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0030">
@@ -198,7 +198,7 @@ satisfies lotto.paritaDiGenereGenerazionale != null and lotto.afferenteInvestime
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0031">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG28\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG28\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0031">
@@ -214,7 +214,7 @@ satisfies (lotto.oggettoPrincipaleContratto.codice = "S" or lotto.oggettoPrincip
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0032">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG29\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG29\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0014">
@@ -230,7 +230,7 @@ satisfies lotto.datiBase.oggettoContratto.codice = "combined" and lotto.oggettoP
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0015">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG31\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG31\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0036">
@@ -246,7 +246,7 @@ satisfies list contains(lotto.datiBaseCPV.cpvSecondarie.codice, lotto.datiBaseCP
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0037">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG65\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG65\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0037">
@@ -262,7 +262,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0038">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG66\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_2_0038">
@@ -277,7 +277,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_2_0039">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG67\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

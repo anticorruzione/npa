@@ -30,7 +30,7 @@
 satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.acquisizioneCup=false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1uva6d0">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG18\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0s7bufy">
@@ -43,7 +43,7 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.acquisizio
 satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oerb6b">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG32\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_15yybxr">
@@ -56,7 +56,7 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAc
 satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rajwvu">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG33\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ye79l7">
@@ -69,7 +69,7 @@ satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibil
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoStandard.impLavori = null or number(aggiudicazione.quadroEconomicoStandard.impLavori) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1homh6v">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG34\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1c1lfik">
@@ -82,7 +82,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoStandard.impServizi = null or number(aggiudicazione.quadroEconomicoStandard.impServizi) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17vjfvq">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG35\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1eay078">
@@ -95,7 +95,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoStandard.impForniture = null or number(aggiudicazione.quadroEconomicoStandard.impForniture) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hyh5lh">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG36\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0rnx8fl">
@@ -108,7 +108,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazi
 satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0v7k8hx">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG52\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06v607c">
@@ -121,7 +121,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggi
 satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruolo.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vtb5ha">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG53\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18hx927">
@@ -134,7 +134,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoConcessioni.impLavori = null or number(aggiudicazione.quadroEconomicoConcessioni.impLavori) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1egndj9">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG69\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG69\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jy2sz9">
@@ -147,7 +147,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoConcessioni.impServizi = null or number(aggiudicazione.quadroEconomicoConcessioni.impServizi) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0g63tho">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG70\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG70\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1vm6uz1">
@@ -160,7 +160,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoConcessioni.impForniture = null or number(aggiudicazione.quadroEconomicoConcessioni.impForniture) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0d9k20z">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG71\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG71\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

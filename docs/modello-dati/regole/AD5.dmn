@@ -29,7 +29,7 @@
 satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0v7k8hx">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG52\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06v607c">
@@ -42,7 +42,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggi
 satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruolo.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vtb5ha">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG53\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

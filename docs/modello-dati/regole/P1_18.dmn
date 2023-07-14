@@ -38,7 +38,7 @@
 satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != "10"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_18_0022">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG14\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG14\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_18_0033">
@@ -51,7 +51,7 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
 satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_18_0034">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG32\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_18_0034">
@@ -64,7 +64,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.access
 satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and lotto.datiBaseAccessibilita.giustificazione = null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_18_0035">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG33\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_18_0036">
@@ -77,7 +77,7 @@ satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satis
 satisfies list contains(lotto.datiBaseCPV.cpvSecondarie.codice, lotto.datiBaseCPV.cpvPrevalente.codice)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_18_0037">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG65\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG65\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_18_0037">
@@ -90,7 +90,7 @@ satisfies list contains(lotto.datiBaseCPV.cpvSecondarie.codice, lotto.datiBaseCP
 satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct values(lotto.datiBaseCPV.cpvSecondarie.codice))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_18_0038">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG66\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_18_0038">
@@ -102,7 +102,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_18_0039">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG67\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

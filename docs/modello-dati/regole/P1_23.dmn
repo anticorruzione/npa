@@ -49,7 +49,7 @@ satisfies lotto.motivoEsclusioneOrdinarioSpeciale= "12"</text>
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0014">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG9\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG9\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0016">
@@ -65,7 +65,7 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0017">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG11\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0023">
@@ -82,7 +82,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0024">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG18\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0024">
@@ -101,7 +101,7 @@ satisfies lotto.acquisizioneCup=false and lotto.oggettoPrincipaleContratto.codic
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0025">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG20\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0033">
@@ -117,7 +117,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.access
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0034">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG32\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0034">
@@ -133,7 +133,7 @@ satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satis
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0035">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG33\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0035">
@@ -149,7 +149,7 @@ satisfies lotto.datiBaseImporto.contrattiSuccessivi and (lotto.quadroEconomicoCo
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0036">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG39\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG39\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0036">
@@ -165,7 +165,7 @@ satisfies list contains(lotto.datiBaseCPV.cpvSecondarie.codice, lotto.datiBaseCP
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0037">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG65\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG65\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0037">
@@ -181,7 +181,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0038">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG66\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_23_0038">
@@ -196,7 +196,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_23_0039">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG67\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

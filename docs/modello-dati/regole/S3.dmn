@@ -19,7 +19,7 @@
 satisfies prestazione.tipo.codice="2" and (prestazione.cig = null or length(prestazione.cig) = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1f0gjxc">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG40\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG40\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1jbkfx0">
@@ -29,7 +29,7 @@ satisfies prestazione.tipo.codice="2" and (prestazione.cig = null or length(pres
 satisfies prestazione.tipo.codice="2" and prestazione.dataAffidamentoIncarico = null</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nla2pg">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG41\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG41\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1t2h98u">
@@ -39,7 +39,7 @@ satisfies prestazione.tipo.codice="2" and prestazione.dataAffidamentoIncarico = 
 satisfies prestazione.tipo.codice="2" and prestazione.dataConsegna = null</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gdryta">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG42\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG42\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1alb175">
@@ -49,7 +49,7 @@ satisfies prestazione.tipo.codice="2" and prestazione.dataConsegna = null</text>
 satisfies prestazione.tipo.codice="1" and prestazione.tipoProgettazione = null</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1uo7xke">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG43\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG43\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

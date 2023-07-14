@@ -30,7 +30,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0021">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG7\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG7\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0006">
@@ -42,7 +42,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0006">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG8\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0023">
@@ -56,7 +56,7 @@
 satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.acquisizioneCup=false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0024">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG18\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0033">
@@ -69,7 +69,7 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.acquisizio
 satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0034">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG32\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0034">
@@ -82,7 +82,7 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAc
 satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0035">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG33\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0008">
@@ -95,7 +95,7 @@ satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibil
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoStandard.impLavori = null or number(aggiudicazione.quadroEconomicoStandard.impLavori) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0008">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG34\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0009">
@@ -108,7 +108,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoStandard.impServizi = null or number(aggiudicazione.quadroEconomicoStandard.impServizi) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0009">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG35\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0010">
@@ -121,7 +121,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
 satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoStandard.impForniture = null or number(aggiudicazione.quadroEconomicoStandard.impForniture) = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0010">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG36\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1evnvys">
@@ -134,7 +134,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazi
 satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vhcjuw">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG52\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1wa9das">
@@ -147,7 +147,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggi
 satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruolo.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1unf3ls">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG53\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD2_10_0039">
@@ -159,7 +159,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_10_0040">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG68\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
