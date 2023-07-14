@@ -23,19 +23,9 @@ components:
       properties:        
         valoreSogliaAnomalia:
           description: Valore soglia anomalia
-          type: string
-        nOfferteMaggioreSogliaAnomalia:
-          description: N.offerte >= soglia anomalia
           type: number
-          format: integer
-        nImpreseEscluseAutomaticamente: 
-          description: Numero imprese escluse automaticamente
-          type: number
-          format: integer
-        nImpreseEscluseInsufficientiGiustificazioni: 
-          description: Numero imprese escluse per insufficienti giustificazioni
-          type: number
-          format: integer           
+          format: double
+          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$          
         quadroEconomicoConcessioni:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType'         
         datiBaseAggiudicazioneAppalto:

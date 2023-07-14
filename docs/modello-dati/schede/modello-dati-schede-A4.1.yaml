@@ -23,4 +23,4 @@ components:
       additionalProperties: false
       properties:
         anacForm:
-          $ref: '#/components/schemas/AnacFormA4_1Type'          
+          $ref: '#/components/schemas/AnacFormA4_1Type'

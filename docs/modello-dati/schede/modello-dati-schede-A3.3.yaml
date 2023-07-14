@@ -25,8 +25,7 @@ components:
       properties: 
         cig:
           description: codice identificativo lotto
-          type: string
-          example:       
+          type: string      
         dataAdesione: 
           description: Data di adesione all'accordo quadro/convenzione
           type: string

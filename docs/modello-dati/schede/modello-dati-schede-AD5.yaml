@@ -7,7 +7,7 @@ components:
     AggiudicazioneAD5Type:
       type: object
       additionalProperties: false
-      required: [lotIdentifier,oggettoPrincipaleContratto,cup,sceltaContraente,partecipanti]
+      required: [lotIdentifier,oggettoPrincipaleContratto,cup,aggiudicatario]
       properties:  
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -17,12 +17,8 @@ components:
         cup:
           description: Cup
           type: string  
-        sceltaContraente:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SceltaContraenteEnum'           
-        partecipanti:
-          type: array
-          items: 
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteADType'    
+        aggiudicatario:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioAD5Type'    
     AppaltoAD5Type:
       type: object
       additionalProperties: false

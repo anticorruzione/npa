@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P1_15_2 - Scheda di pubblicazione avviso sull'esistenza di un sistema di qualificazione con indizione di procedura di scelta del contraente, con invio al TED dell'eform15.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormP1_15_2Type:
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un avviso sull'esistenza di un sistema di qualificazione con indizione di procedura di scelta del contraente. Articolo 68 della direttiva 2014/25/UE, articolo 92, paragrafo 1, lettera c), della direttiva 2014/25/UE; Articolo 155 comma 3 lettera b)  decreto legislativo 36/2023; Articolo 162 comma 2 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023
+      allOf: # estende la classe AnacFormBaseType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType' 
+      type: object
+      required: [appalto,lotti]
+      additionalProperties: false
+      properties:  
+        appalto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP_15Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP_15Type'  
+    SchedaP1_15_2Type:
+      description: Scheda di pubblicazione sull'esistenza di un sistema di qualificazione con indizione di procedura di scelta del contraente, con invio al TED dell'eform15. 
+      type: object
+      required: [eform, espd, anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormP1_15_2Type'
+        eform:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'         
+        espd:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         

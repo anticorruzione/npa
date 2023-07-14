@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda M2 - Scheda di modifica contrattuale - Avviso di modifica di un appalto — direttiva generaleArticolo 72, paragrafo 1, della direttiva 2014/24/UE
+  version: 1.0.0
+components:
+  schemas:
+    ModificaContrattualeType:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModificaContrattualeType'
+      type: object
+      additionalProperties: false
+      properties:    
+        datiBaseModificaContrattuale:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseModificaContrattualeType'      
+    AnacFormM2Type:
+      description: Contiene tutti i dati di modifica contrattuale
+      type: object
+      additionalProperties: false
+      required: [modificheContrattuali]
+      properties:
+        modificheContrattuali:
+         type: array
+         items:          
+          $ref: '#/components/schemas/ModificaContrattualeType' 
+          
+    SchedaM2Type:
+      description: Scheda relativa alle modifiche contrattuali senza invio al TED - Avviso di modifica di un appalto — direttiva generaleArticolo 72, paragrafo 1, della direttiva 2014/24/UE
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormM2Type'
+         

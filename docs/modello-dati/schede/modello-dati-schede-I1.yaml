@@ -8,11 +8,13 @@ components:
       description: Oggetto che riporta i dati di inizio prestazione
       type: object
       additionalProperties: false
-      required: [consegnaFrazionata,avvioPerFasi,consegnaSottoRiserva,dataEffettivoInizio,dataFinePrevista]
+      required: [consegnaFrazionata,avvioPerFasi,consegnaSottoRiserva,dataEffettivoInizio,dataFinePrevista, idContratto]
       properties:
-        codContratto:
+        idContratto:
           description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string      
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
         dataDisposizioneInzio:
           description: Data disposizione dell’inizio della prog. Esecutiva
           type: string

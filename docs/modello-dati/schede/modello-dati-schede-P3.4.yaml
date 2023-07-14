@@ -9,7 +9,7 @@ components:
       allOf: # estende la classe LottoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'    
       type: object
-      required: [afferenteInvestimentiPNRR,strumentiElettroniciSpecifici,lavoroOAcquistoPrevistoInProgrammazione, categoria,motivoEsclusioneOrdinarioSpeciale,servizioPubblicoLocale]
+      required: [afferenteInvestimentiPNRR,strumentiElettroniciSpecifici,lavoroOAcquistoPrevistoInProgrammazione, categoria,servizioPubblicoLocale,contrattiDisposizioniParticolari]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -51,6 +51,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP3BaseType'      
       type: object
       additionalProperties: false
+      required: [motivoUrgenza]
       properties:  
         motivoUrgenza:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoUrgenzaEnum'

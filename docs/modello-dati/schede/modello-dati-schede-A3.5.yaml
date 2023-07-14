@@ -7,19 +7,13 @@ components:
     AppaltoA3_5Type:
       type: object
       additionalProperties: false
-      required: [relazioneUnicaSulleProcedure,preinformazione,termineRidottoAvvisoPreinformazione]      
+      required: [relazioneUnicaSulleProcedure]      
       properties:
         modalitaRiaggiudicazioneAffidamento:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'       
         relazioneUnicaSulleProcedure:
           description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
-          type: boolean   
-        preinformazione:
-          description: E' stata effettuata la preinformazione?
-          type: boolean
-        termineRidottoAvvisoPreinformazione:
-          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
-          type: boolean           
+          type: boolean             
         datiBaseAggiudicazioneSubappalto:
           allOf: 
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType' 
@@ -28,24 +22,15 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [numeroOfferteAmmesse,lotIdentifier,nImpreseEscluseInsufficientiGiustificazioni]
+      required: [numeroOfferteAmmesse]
       properties: 
         cig:
           description: codice identificativo lotto
-          type: string
-          example:        
+          type: string       
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
           type: number
-          format: integer 
-        nImpreseEscluseAutomaticamente: 
-          description: Numero imprese escluse automaticamente
-          type: number
-          format: integer
-        nImpreseEscluseInsufficientiGiustificazioni: 
-          description: Numero imprese escluse per insufficienti giustificazioni
-          type: number
-          format: integer   
+          format: integer    
         offertePresentate:
           description: Dati degli aggiudicatari
           type: array

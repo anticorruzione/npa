@@ -8,11 +8,13 @@ components:
       description: Oggetto che riporta i dati di collaudo.
       type: object
       additionalProperties: false
-      required: [codContratto, esito]
+      required: [idContratto, esito]
       properties:
-        codContratto:
+        idContratto:
           description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         dataCollaudo:
           description: Data del collaudo statico (ove ricorra)
           type: string

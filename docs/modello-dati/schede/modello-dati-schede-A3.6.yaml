@@ -7,7 +7,7 @@ components:
     AppaltoA3_6Type:
       type: object
       additionalProperties: false
-      required: [relazioneUnicaSulleProcedure,preinformazione,termineRidottoAvvisoPreinformazione,codiceAppalto]      
+      required: [relazioneUnicaSulleProcedure,codiceAppalto]      
       properties: 
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
@@ -15,13 +15,7 @@ components:
           maxLength: 64      
         relazioneUnicaSulleProcedure:
           description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
-          type: boolean        
-        preinformazione:
-          description: E' stata effettuata la preinformazione?
-          type: boolean
-        termineRidottoAvvisoPreinformazione:
-          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
-          type: boolean             
+          type: boolean                     
     AggiudicazioneA3_6Type:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
@@ -30,8 +24,7 @@ components:
       properties: 
         cig:
           description: codice identificativo lotto
-          type: string
-          example:    
+          type: string   
         afferenteInvestimentiPNRR:
           description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
           type: boolean  
@@ -55,7 +48,7 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'
         datiBaseRisultatoProcedura:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'          
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'          
     AnacFormA3_6Type:
       description: Contiene tutti i dati relativi alle Società in-house.
       type: object
@@ -75,4 +68,4 @@ components:
       additionalProperties: false
       properties:
         anacForm:
-          $ref: '#/components/schemas/AnacFormA3_6Type' 
+          $ref: '#/components/schemas/AnacFormA3_6Type'

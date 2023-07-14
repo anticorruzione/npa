@@ -41,7 +41,9 @@ components:
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType' 
         datiBaseDocumenti:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'          
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType' 
+          required: [url]          
     AnacFormP2_23Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Avviso o bando di concorso di progettazione — direttiva generale, progettazione (appalto integrato). Articolo 79, paragrafo 1, della direttiva 2014/24/UE
       allOf:  

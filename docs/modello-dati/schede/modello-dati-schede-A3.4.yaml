@@ -7,19 +7,13 @@ components:
     AppaltoA3_4Type:
       type: object
       additionalProperties: false
-      required: [relazioneUnicaSulleProcedure,preinformazione,termineRidottoAvvisoPreinformazione]      
+      required: [relazioneUnicaSulleProcedure]      
       properties:
         modalitaRiaggiudicazioneAffidamento:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'      
         relazioneUnicaSulleProcedure:
           description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
-          type: boolean    
-        preinformazione:
-          description: E' stata effettuata la preinformazione?
-          type: boolean
-        termineRidottoAvvisoPreinformazione:
-          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
-          type: boolean           
+          type: boolean               
         datiBaseProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraAccelerataType'
         datiBaseStrumentiProcedura:
@@ -35,7 +29,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneCompletaType'      
       type: object
       additionalProperties: false
-      required: [numeroOfferteAmmesse,nImpreseEscluseInsufficientiGiustificazioni]
+      required: [numeroOfferteAmmesse]
       properties:         
         datiBaseRisultatoProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'  

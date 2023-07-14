@@ -42,8 +42,7 @@ components:
       properties:      
         cigAccordoQuadro:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
-          type: string
-          example: '' 
+          type: string 
         datiBase:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType' 
         datiBaseProcedura:

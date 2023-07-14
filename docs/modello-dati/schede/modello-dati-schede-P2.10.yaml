@@ -43,7 +43,9 @@ components:
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'
         datiBaseDocumenti:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType' 
+          required: [url]
     AnacFormP2_10Type:
       description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE
       allOf: 
