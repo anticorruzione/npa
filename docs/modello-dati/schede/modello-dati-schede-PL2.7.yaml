@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda PL2_7 - Scheda di pianificazione per appalti settori ordinari sottosoglia; procedure ordinarie (solo per 1mln <= L< soglia), senza invio al TED.
+  version: 1.0.0
+components:
+  schemas: 
+    AppaltoPL2_7Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoPLCompletoType'
+      type: object
+      additionalProperties: false
+      properties:  
+        datiBaseStrumentiProcedura:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraType'  
+          required: [accordoQuadro, sistemaDinamicoAcquisizione]
+    LottoPL2_7Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoPLCompletoType'      
+      type: object
+      additionalProperties: false
+      properties:   
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          type: string      
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType'   
+        datiBaseComunicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseComunicazioneType'        
+    AnacFormPL2_7Type:
+      description: Contiene tutti i dati necessari per la pianificazione per appalti settori ordinari sottosoglia; procedure ordinarie (solo per 1mln <= L< soglia) - Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — settori ordinari. Articolo 50 comma 1 lett. d) decreto legislativo 36/2023, Articolo 81 comma 1 decreto legislativo 36/2023
+      type: object
+      required: [appalto,lotti]
+      additionalProperties: false
+      properties:  
+        appalto:
+          $ref: '#/components/schemas/AppaltoPL2_7Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoPL2_7Type'   
+    SchedaPL2_7Type:
+      description: Scheda di pianificazione per appalti settori ordinari sottosoglia; procedure ordinarie (solo per 1mln <= L< soglia), senza invio al TED.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormPL2_7Type'  

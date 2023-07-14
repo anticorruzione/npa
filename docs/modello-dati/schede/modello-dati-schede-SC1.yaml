@@ -8,11 +8,13 @@ components:
       description: Oggetto che riporta i dati di sottoscrizione del contratto
       type: object
       additionalProperties: false
-      required: [importoCauzione,codiceAusa,idPartecipante,cig,dataDecorrenza,dataScadenza]
+      required: [importoCauzione,codiceAusa,idPartecipante,cig,dataDecorrenza,dataScadenza, idContratto]
       properties:
-        codContratto:
+        idContratto:
           description: identificativo del contratto restituito in response alla scheda di sottoscrizione del contratto.
-          type: string
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         codiceAusa:
           description: Amministrazione firmataria
           type: array

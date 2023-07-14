@@ -1,0 +1,15 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda PL2_2 - Scheda di pianificazione per appalti settori speciali sotto soglia, senza invio al TED.
+  version: 1.0.0
+components:
+  schemas: 
+    SchedaPL2_2Type:
+      description: Scheda di pianificazione per appalti settori speciali sotto soglia, senza invio al TED.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormPLBaseType'    

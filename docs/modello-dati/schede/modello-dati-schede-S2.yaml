@@ -59,9 +59,7 @@ components:
               description: Data della lettera di invito
               type: string
               format: datetime
-              example: '2022-01-23T12:02:05Z'
             dataScadenzaPresentazioneOfferta: 
               description: Data della scadenza di presentazione dell'offerta
               type: string
-              format: datetime
-              example: '2022-01-23T12:02:05Z'            
+              format: datetime            
