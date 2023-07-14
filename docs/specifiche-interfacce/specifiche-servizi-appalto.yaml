@@ -853,10 +853,10 @@ paths:
             example: 'IN_ATT_PUBB'
         - in: query
           name: tipoAvviso
-          description: Codice Tipologia di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
+          description: Codice Tipo di avviso - fare riferimento ai valori contenuti nel file [tipoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAvviso.json)
           schema:
             type: string
-            example: 'AV2'
+            example: 'IT'
         - in: query
           name: azioneAvviso
           description: Codice Tipo di azione dell'avviso - fare riferimento ai valori contenuti nel file [tipoAzioneAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoAzioneAvviso.json)
@@ -1517,7 +1517,7 @@ paths:
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         - in: query
           name: cig
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC
+          description: Non gestito nella prima release - Identificativo univoco Gara-Lotto rilasciato da ANAC
           schema:
             type: string
             example: '9050626CD6'
@@ -1935,13 +1935,16 @@ components:
       description: Oggetto in ingresso al servizio
       type: object
       additionalProperties: false
+      required:
+        - idAppalto
       properties:
         idAppalto:
           description: Identificativo univoco dell'Appalto definito da ANAC. Alternativo al CIG
+          type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         cig:
-          description: Identificativo univoco Gara-Lotto generato da ANAC. Alternativo all'idAppalto
+          description: Non gestito nella prima release - Identificativo univoco Gara-Lotto generato da ANAC. Alternativo all'idAppalto
           type: string
           example: "9050626CD6"    
     SoggettoRequest:
@@ -1960,10 +1963,11 @@ components:
           example: "AAA345FRT565"
         idAppalto:
           description: Identificativo univoco dell'Appalto definito da ANAC.
+          type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         cig:
-          description: Identificativo univoco Gara-Lotto generato da ANAC.
+          description: Non gestito nella prima release - Identificativo univoco Gara-Lotto generato da ANAC.
           type: string
           example: "9050626CD6"
         ruolo:  
@@ -1988,15 +1992,16 @@ components:
       additionalProperties: false
       properties:
         codiceFiscale:
-          description: codice fiscale del soggetto. Obbligatorio se idAppalto e cig non sono stati valorizzati
+          description: codice fiscale del soggetto. Obbligatorio se idAppalto non è stato valorizzato
           type: string
           example: "AAA345FRT565"
         idAppalto:
-          description: Identificativo univoco dell'Appalto definito da ANAC. Obbligatorio se codiceFiscale e cig non sono stati valorizzati
+          description: Identificativo univoco dell'Appalto definito da ANAC. Obbligatorio se codiceFiscale non è stato valorizzato
+          type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         cig:
-          description: Identificativo univoco Gara-Lotto generato da ANAC. Obbligatorio se idAppalto e codiceFiscale non sono stati valorizzati
+          description: Non gestito nella prima release - Identificativo univoco Gara-Lotto generato da ANAC.
           type: string
           example: "9050626CD6"
         ruolo:  
@@ -2150,8 +2155,6 @@ components:
         - $ref: '#/components/schemas/BaseResponse'
       description: Risposta generica servizio
       type: object
-      required:
-        - idPianificazione
       properties:
         idPianificazione:
           description: Identificativo univoco della pianificazione definito da ANAC. (A UUID specified by RFC4122)
@@ -2178,8 +2181,6 @@ components:
         - $ref: '#/components/schemas/BaseResponse'
       description: Risposta generica servizio
       type: object
-      required:
-        - idPianificazione
       properties:
         idPianificazione:
           description: Identificativo univoco della pianificazione definito da ANAC. (A UUID specified by RFC4122)
@@ -2198,8 +2199,6 @@ components:
         - $ref: '#/components/schemas/BaseResponse'
       description: Risposta generica servizio
       type: object
-      required:
-        - idAppalto
       properties:
         idAppalto:
           description: Identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
@@ -2209,24 +2208,16 @@ components:
         detail: "Creazione eseguita con successo"
         status: 200
         title: "Operazione Effettuata"
-        idAppalto: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     ModificaAppaltoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       description: Risposta generica servizio
       type: object
-      required:
-        - idAppalto
       properties:
         idAppalto:
           description: Identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
           format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
-      example:
-        detail: "Sostituzione eseguita con successo"
-        status: 200
-        title: "Operazione Effettuata"
-        idAppalto: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"    
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"   
     CancellaAppaltoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -2368,13 +2359,6 @@ components:
       properties:  
         content:
           $ref: '#/components/schemas/ContentDocumentType'
-      example:
-        status: 200
-        title: "Operazione Effettuata"
-        content: 
-          estensione: "PDF"
-          size: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-          content: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     ConsultaSchedaResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -2463,35 +2447,21 @@ components:
         - $ref: '#/components/schemas/BaseResponse'
       description: Risposta generica servizio
       type: object
-      required:
-        - idScheda
       properties:
         idScheda:
           description: Identificativo univoco della Scheda definito da ANAC. (A UUID specified by RFC4122)
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
-      example:
-        detail: "Creazione eseguita con successo"
-        status: 200
-        title: "Operazione Effettuata"
-        idScheda: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     ModificaSchedaResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       description: Risposta generica servizio
       type: object
-      required:
-        - idScheda
       properties:
         idScheda:
           description: Identificativo univoco della scheda definito da ANAC. (A UUID specified by RFC4122)
           format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
-      example:
-        detail: "Sostituzione eseguita con successo"
-        status: 200
-        title: "Operazione Effettuata"
-        idScheda: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     CancellaSchedaResponse:
       description: Risposta all'operazione Cancella Scheda
       allOf: # estende lo schema dati di BaseResponse
