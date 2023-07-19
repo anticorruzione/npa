@@ -2327,12 +2327,17 @@ components:
           items:
             $ref: '#/components/schemas/CigType' 
     TipologicaResponse:
+      allOf: # estende la classe BaseResponse e PaginazioneType
+        - $ref: '#/components/schemas/BaseResponse'
+        - $ref: '#/components/schemas/PaginazioneType'  
       type: object
       additionalProperties: false
       properties:
         tipologica:  
           $ref: '#/components/schemas/TipologicaType'   
     TipologicaItemResponse:
+      allOf: # estende la classe BaseResponse
+        - $ref: '#/components/schemas/BaseResponse'
       type: object
       additionalProperties: false
       properties:
