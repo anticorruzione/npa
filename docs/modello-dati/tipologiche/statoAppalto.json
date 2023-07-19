@@ -51,13 +51,4 @@
 	},
     "dataInizio":null,
     "dataFine":null
-},
-{
-    "codice":"NON_AGG",
-	"descrizione": {
-		"it": "Non aggiudicato",
-		"en": "Non aggiudicato"
-	},
-    "dataInizio":null,
-    "dataFine":null
 }]
