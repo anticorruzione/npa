@@ -193,6 +193,7 @@ components:
             example: '9050626CD6'
           lotIdentifier:
             description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+            type: string
       TipologicaBaseType:
         description: Oggetto generico di una tipologica
         type: object
