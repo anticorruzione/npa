@@ -1352,20 +1352,22 @@ paths:
       description: Il servizio restituiti un'elenco delle tipologiche disponibili. SINCRONO
       operationId: idRecuperaElencoTipologiche
       parameters:
-        - name: page
-          in: query
+        - in: query
+          name: page
+          description: numero della pagina da visualizzare
           required: false
           schema:
             type: integer
             format: int32
             default: 1
-        - name: size
-          in: query
+        - in: query
+          name: perPage
+          description: numero di elementi per pagina
           required: false
           schema:
             type: integer
             format: int32
-            default: 10      
+            default: 20     
       responses:
         '200':
           description: Operazione terminato con successo
