@@ -455,7 +455,7 @@ paths:
             example: 9050626CD6
         - in: query    
           name: lotIdentifier
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED.
+          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione del codiceAppalto o cig.
           schema:
             type: string
         - in: query
