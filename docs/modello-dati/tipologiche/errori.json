@@ -402,6 +402,15 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR46",
+    "descrizione": {
+		"it": "errore generico durante la validazione dell'eForm",
+		"en": "errore generico durante la validazione dell'eForm"
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
 {
     "codice":"ERR9999",
@@ -1283,7 +1292,7 @@
        "en": "Filtro non formattato correttamente"
    },
    "dataInizio":null,
-   "dataFine":null    
+   "dataFine":null
 },
 {
    "codice":"AUT12",
@@ -1292,7 +1301,7 @@
        "en": "Filtro non valido"
    },
    "dataInizio":null,
-   "dataFine":null    
+   "dataFine":null
 },
 {
     "codice":"AUT13",
@@ -1311,4 +1320,130 @@
     },
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"FVC03",
+    "descrizione": {
+		"it": "L'utente non è autorizzato ad accedere al FVA richiesto",
+		"en": "L'utente non è autorizzato ad accedere al FVA richiesto"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+   "codice":"SEC01",
+   "descrizione": {
+       "it": "Utente non presente nel sistema",
+       "en": "Utente non presente nel sistema"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC02",
+   "descrizione": {
+       "it": "Ruolo indicato non presente nel sistema",
+       "en": "Ruolo indicato non presente nel sistema"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC03",
+   "descrizione": {
+       "it": "Errore conversione Json",
+       "en": "Errore conversione Json"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC04",
+   "descrizione": {
+       "it": "Livello autorizzativo insufficiente",
+       "en": "Livello autorizzativo insufficiente"
+   },
+   "dataInizio":null,
+   "dataFine":null    
+},
+{
+   "codice":"SEC05",
+   "descrizione": {
+       "it": "Utente non autorizzato",
+       "en": "Utente non autorizzato"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC06",
+   "descrizione": {
+       "it": "Codice profilo utente non univoco",
+       "en": "Codice profilo utente non univoco"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC07",
+   "descrizione": {
+       "it": "Errore configurazione utente",
+       "en": "Errore configurazione utente"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC08",
+   "descrizione": {
+       "it": "Configurazione non presente nel sistema",
+       "en": "Configurazione non presente nel sistema"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC09",
+   "descrizione": {
+       "it": "Ruolo insufficiente per l'operazione",
+       "en": "Ruolo insufficiente per l'operazione"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC10",
+   "descrizione": {
+       "it": "Appalto non presente nel sistema",
+       "en": "Appalto non presente nel sistema"
+   },
+   "dataInizio":null,
+   "dataFine":null 
+},
+{
+   "codice":"SEC11",
+   "descrizione": {
+       "it": "LOA non formattato correttamente",
+       "en": "LOA non formattato correttamente"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC12",
+   "descrizione": {
+       "it": "Profili non censiti",
+       "en": "Profili non censiti"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"SEC13",
+   "descrizione": {
+       "it": "Dettagli profilo non corretti",
+       "en": "Dettagli profilo non corretti"
+   },
+   "dataInizio":null,
+   "dataFine":null   
 }]

@@ -8,6 +8,15 @@
     "dataFine":null
 },
 {
+    "codice":"CANC",
+    "descrizione": {
+		"it": "Cancellato",
+		"en": "Cancellato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"IN_ATT_PUBB",
     "descrizione": {
 		"it": "In attesa pubblicazione",
