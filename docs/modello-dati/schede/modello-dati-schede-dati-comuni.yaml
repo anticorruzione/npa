@@ -556,7 +556,9 @@ components:
           type: string
           maxLength: 64 
         categorieMerceologiche:
-          $ref: '#/components/schemas/CategorieMerceologicheType'
+          type: array
+          items:
+            $ref: '#/components/schemas/CategorieMerceologicheEnum'      
         motivazioneCIG:
           $ref: '#/components/schemas/MotivazioneCIGEnum'
         strumentiSvolgimentoProcedure:
@@ -703,7 +705,9 @@ components:
           description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
           type: boolean           
         categorieMerceologiche:
-          $ref: '#/components/schemas/CategorieMerceologicheType'
+          type: array
+          items:
+            $ref: '#/components/schemas/CategorieMerceologicheEnum'
         motivazioneCIG:
           $ref: '#/components/schemas/MotivazioneCIGEnum'
         strumentiSvolgimentoProcedure: 
@@ -942,7 +946,9 @@ components:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string
         categorieMerceologiche:
-          $ref: '#/components/schemas/CategorieMerceologicheType'
+          type: array
+          items:
+            $ref: '#/components/schemas/CategorieMerceologicheEnum'
         condizioniNegoziata:
           $ref: '#/components/schemas/CondizioniNegoziataType'
         contrattiDisposizioniParticolari:
@@ -1784,7 +1790,9 @@ components:
           description: Id univoco del lotto generato dalla stazione appaltante
           type: string 
         categorieMerceologiche:
-          $ref: '#/components/schemas/CategorieMerceologicheType' 
+          type: array
+          items:
+            $ref: '#/components/schemas/CategorieMerceologicheEnum' 
         saNonSoggettaObblighi24Dicembre2015:
           description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
           type: boolean
