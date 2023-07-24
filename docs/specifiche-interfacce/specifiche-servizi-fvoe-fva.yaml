@@ -474,7 +474,7 @@ paths:
             items:
               description: il cf. dell' soggetto su cui si rihiede il documento.
               type: string
-            example: "[80090909]"
+            example: "[GRNVNT78M43E472J]"
         - in: query
           name: tipoDocumento
           description: tipologia del documento da richiedere nel formato json come riportato in '#/components/schemas/TipoDocumentoEnum'.
@@ -483,6 +483,14 @@ paths:
             type: string
           example:
             codice: "01"
+        - in: query
+          name: datiRichiesta
+          description: dati necessari alla richiesta specifici per tipoDocumento inviati in formato json.
+          schema:
+            type: string
+          example:
+            nomeSoggetto: "MARIO"
+            cognomeSoggetto : "ROSSI"
       responses:
         '200':
           description: Operazione terminato con successo
@@ -1253,6 +1261,7 @@ components:
       properties:
         idRichiesta:
           description: Identificativo univoco della richiesta definito da ANAC. (A UUID specified by RFC4122)
+          type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
       example:
@@ -1270,6 +1279,7 @@ components:
       properties:
         idAutorizzazione:
           description: Identificativo univoco dell'autorizzazione definito da ANAC. (A UUID specified by RFC4122)
+          type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
     RecuperaDocumentoResponse :
