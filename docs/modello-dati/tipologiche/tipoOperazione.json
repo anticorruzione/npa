@@ -143,6 +143,24 @@
     "dataFine":null
 },
 {
+    "codice":"AV_PUBB_EU",
+    "descrizione": {
+        "it": "Pubblicazione avviso Europeo",
+        "en": "Pubblicazione avviso Europeo"
+    },
+    "dataInizio":null,
+    "dataFine":null
+}, 
+{
+    "codice":"AV_PUBB_IT",
+    "descrizione": {
+        "it": "Pubblicazione avviso nazionale",
+        "en": "Pubblicazione avviso nazionale"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},    
+{
     "codice":"AV_MOD",
     "descrizione": {
         "it": "Modifica avviso",
@@ -160,6 +178,24 @@
     "dataInizio":null,
     "dataFine":null
 },
+{
+    "codice":"AV_RETT_EU",
+    "descrizione": {
+        "it": "Rettifica avviso Europeo",
+        "en": "Rettifica avviso Europeo"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_RETT_IT",
+    "descrizione": {
+        "it": "Rettifica avviso nazionale",
+        "en": "Rettifica avviso nazionale"
+    },
+    "dataInizio":null,
+    "dataFine":null
+},    
 {
     "codice":"AV_SOSP",
     "descrizione": {

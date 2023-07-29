@@ -136,8 +136,8 @@
 {
     "codice":"ERR16",
     "descrizione": {
-		"it": "chiamata al servizio non ammessa per lo stato dell'appalto",
-		"en": "chiamata al servizio non ammessa per lo stato dell'appalto"
+		"it": "operazione non consentita per lo stato dell'appalto",
+		"en": "operazione non consentita per lo stato dell'appalto"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -145,8 +145,8 @@
 {
     "codice":"ERR17",
     "descrizione": {
-		"it": "chiamata al servizio non ammessa: è in corso una richiesta di verifica appalto",
-		"en": "chiamata al servizio non ammessa: è in corso una richiesta di verifica appalto"
+		"it": "operazione non consentita: è in corso una richiesta di verifica appalto",
+		"en": "operazione non consentita: è in corso una richiesta di verifica appalto"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -154,8 +154,8 @@
 {
     "codice":"ERR18",
     "descrizione": {
-		"it": "chiamata al servizio non ammessa: è in corso una richiesta di conferma appalto",
-		"en": "chiamata al servizio non ammessa: è in corso una richiesta di conferma appalto"
+		"it": "operazione non consentita: è in corso una richiesta di conferma appalto",
+		"en": "operazione non consentita: è in corso una richiesta di conferma appalto"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -411,6 +411,78 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR47",
+    "descrizione": {
+		"it": "errore generico durante la pubblicazione dell'avviso",
+		"en": "errore generico durante la pubblicazione dell'avviso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR48",
+    "descrizione": {
+		"it": "operazione non consentita per la tipologia di avviso nazionale",
+		"en": "operazione non consentita per la tipologia di avviso nazionale"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR49",
+    "descrizione": {
+		"it": "mancata coerenza tra idAppalto e idAvviso",
+		"en": "mancata coerenza tra idAppalto e idAvviso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR50",
+    "descrizione": {
+		"it": "operazione non consentita per lo stato dell'avviso",
+		"en": "operazione non consentita per lo stato dell'avviso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR51",
+    "descrizione": {
+		"it": "operazione non consentita per lo stato dell'avviso sul TED",
+		"en": "operazione non consentita per lo stato dell'avviso sul TED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR52",
+    "descrizione": {
+		"it": "errore generico durante il controllo dello stato avviso sul TED",
+		"en": "errore generico durante il controllo dello stato avviso sul TED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR53",
+    "descrizione": {
+		"it": "operazione non consentita per lo stato dell'avviso sulla PPL",
+		"en": "operazione non consentita per lo stato dell'avviso sulla PPL"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR54",
+    "descrizione": {
+		"it": "errore generico durante il controllo dello stato sulla PPL",
+		"en": "errore generico durante il controllo dello stato sulla PPL"
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
 {
     "codice":"ERR9999",
@@ -421,6 +493,42 @@
     "dataInizio":null,
     "dataFine":null
 },
+{
+    "codice":"TED_NOT_PUBLISHED",
+    "descrizione": {
+		"it": "errore durante la pubblicazione dell'avviso su TED: stato restituito NOT_PUBLISHED",
+		"en": "errore durante la pubblicazione dell'avviso su TED: stato restituito NOT_PUBLISHED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"TED_VALIDATION_FAILED",
+    "descrizione": {
+		"it": "errore durante la pubblicazione dell'avviso su TED: stato restituito VALIDATION_FAILED",
+		"en": "errore durante la pubblicazione dell'avviso su TED: stato restituito VALIDATION_FAILED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"TED_ARCHIVED",
+    "descrizione": {
+		"it": "errore durante la pubblicazione dell'avviso su TED: stato restituito ARCHIVED",
+		"en": "errore durante la pubblicazione dell'avviso su TED: stato restituito ARCHIVED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"TED_DELETED",
+    "descrizione": {
+		"it": "errore durante la pubblicazione dell'avviso su TED: stato restituito DELETED",
+		"en": "errore durante la pubblicazione dell'avviso su TED: stato restituito DELETED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
 {
     "codice":"REG1",
     "descrizione": {
@@ -1234,8 +1342,8 @@
 {
     "codice":"FVX27",
     "descrizione": {
-		"it": "Stanzioni Appaltanti mal formattato",
-		"en": "Stanzioni Appaltanti mal formattato"
+		"it": "Stazioni Appaltanti mal formattato",
+		"en": "Stazioni Appaltanti mal formattato"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1243,8 +1351,8 @@
 {
     "codice":"FVX28",
     "descrizione": {
-		"it": "Stanzioni Appaltanti non presenti",
-		"en": "Stanzioni Appaltanti non presenti"
+		"it": "Stazioni Appaltanti non presenti",
+		"en": "Stazioni Appaltanti non presenti"
 	},
     "dataInizio":null,
     "dataFine":null
