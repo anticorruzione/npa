@@ -2,9 +2,9 @@ openapi: 3.0.3
 info:
   title: Specifiche Servizi Appalto - OpenAPI 3.0
   x-summary: >-
-    Specifiche dei servizi esposti dalla Nuova Piattaforma Appalti (NPA), richiamabili dalle Stazioni Appaltanti, per la gestione e la raccolta delle informazioni rilevanti nei processi che compongono l’intero ciclo di vita degli appalti
+    Specifiche dei servizi esposti dalla Piattaforma Contratti Pubblici (PCP), richiamabili dalle Stazioni Appaltanti, per la gestione e la raccolta delle informazioni rilevanti nei processi che compongono l’intero ciclo di vita degli appalti
   description: |-
-    Sono descritte le specifiche dei servizi esposti dalla Nuova Piattaforma Appalti (NPA), richiamabili dalle Stazioni Appaltanti, per la gestione e la raccolta delle informazioni rilevanti nei processi che compongono l’intero ciclo di vita degli appalti.
+    Sono descritte le specifiche dei servizi esposti dalla Piattaforma Contratti Pubblici (PCP), richiamabili dalle Stazioni Appaltanti, per la gestione e la raccolta delle informazioni rilevanti nei processi che compongono l’intero ciclo di vita degli appalti.
 
       #### Documentazione
       La documentazione a supporto delle specifiche di interfaccia con i sistemi che interoperano con il nuovo sistema di digitalizzazione è redatta con il linguaggio di markup Markdown ed è presente al segunete url:
@@ -48,7 +48,7 @@ tags:
   - name: comunicaPostPubblicazione
     description: In questo contesto rientrano tutti i servizi richiamabili dalla SA finalizzati alla gestione delle fasi del ciclo di vita dell’Appalto successive alla pubblicazione di un bando di gara. I servizi permetteranno la creazione, l’invio e il recupero delle schede contenenti i dati necessari al monitoraggio delle fasi di aggiudicazione ed esecuzione di un appalto.
   - name: serviziComuni
-    description: In questo contesto si riportano i servizi comuni, ossia quelli che possono essere richiamati dalle Stazioni appaltanti in più contesti dell’NPA.
+    description: In questo contesto si riportano i servizi comuni, ossia quelli che possono essere richiamati dalle Stazioni appaltanti in più contesti della PCP.
   - name: serviziTecnici 
     description: Operazioni richiesti dalle linee guida sull'interoperabilità
 paths:
@@ -243,17 +243,17 @@ paths:
             example: 'PREINFORMAZIONE'  
         - in: query
           name: dataCreazioneDa
-          description: Data di crezione della Pianificazione - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione della Pianificazione - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataCreazioneA
-          description: Data di crezione della Pianificazione - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339) 
+          description: Data di crezione della Pianificazione - intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339) 
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'  
         - in: query
           name: page
@@ -466,17 +466,17 @@ paths:
             example: 'IN_LAV'
         - in: query
           name: dataCreazioneDa
-          description: Data di crezione dell'Appalto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione dell'Appalto - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataCreazioneA
-          description: Data di crezione dell'Appalto - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione dell'Appalto - intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'  
         - in: query
           name: page
@@ -605,7 +605,7 @@ paths:
       tags:
          - serviziComuni
       summary: API Rest per il recupero dello stato dell'Appalto, del Lotto o del Contratto. SINCRONO
-      description: Servizio per il recupero dello stato in cui si trova l’Appalto, il Lotto o il Contratto. Il compito dispositivo di aggiornare lo stato proveniente dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato NPA. Pertanto il recupero dello stato da parte del servizio insiste su uno stato NPA che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni. SINCRONO
+      description: Servizio per il recupero dello stato in cui si trova l’Appalto, il Lotto o il Contratto. Il compito dispositivo di aggiornare lo stato proveniente dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato PCP. Pertanto il recupero dello stato da parte del servizio insiste su uno stato PCP che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni. SINCRONO
       operationId: idAppaltoStato
       parameters:
         - in: query
@@ -808,46 +808,46 @@ paths:
       parameters:
         - in: query
           name: codiceAppalto
-          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
+          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante. Obbligatorio se idAppalto e cig non sono stati valorizzati.
           schema:
             type: string
             maxLength: 64
         - in: query    
           name: idAppalto
-          description: Identificativo univoco dell' Appalto definito da ANAC. (A UUID specified by FC4122).
+          description: Identificativo univoco dell' Appalto definito da ANAC. (A UUID specified by FC4122). Obbligatorio se codiceAppalto e cig non sono stati valorizzati.
           schema:
             type: string
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         - in: query
           name: cig
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC
+          description: Identificativo univoco Gara-Lotto rilasciato da ANAC. Obbligatorio se idAppalto e cig non sono stati valorizzati.
           schema:
             type: string
             example: 9050626CD6
         - in: query
           name: stato
-          description: Codice Stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro -fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: Codice Stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
             type: string
             example: 'IN_ATT_PUBB'
         - in: query
           name: dataCreazioneDa
-          description: Data di crezione dell'Appalto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione dell'Appalto - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: dataCreazioneA
-          description: Data di crezione della Appalto - intervallo precedente (A datetime specified by RF333)
+          description: Data di crezione della Appalto - intervallo precedente (A date-time specified by RF333)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: statoAvviso
-          description: Codice Stato in cui si trova l' Avviso - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro -  fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
+          description: Codice Stato in cui si trova l' Avviso - fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
           schema:
             type: string
             example: 'IN_ATT_PUBB'
@@ -865,17 +865,17 @@ paths:
             example: 'AZ_PUBB'
         - in: query
           name: dataCreazioneAvvisoDa
-          description: Data di crezione dell'Avviso - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione dell'Avviso - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: dataCreazioneAvvisoA
-          description: Data di crezione della Avviso - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione della Avviso - intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2022-01-23T12:02:05Z'    
         - in: query
           name: page
@@ -979,7 +979,7 @@ paths:
       tags:
          - pubblicaAvviso
       summary: API Rest per il recupero dello stato dell'Avviso. SINCRONO
-      description: Il compito dispositivo di aggiornare lo stato dell'avviso proveniente dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato NPA. Pertanto il recupero dello stato da parte del servizio insiste su uno stato avviso NPA che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni. SINCRONO
+      description: Il compito dispositivo di aggiornare lo stato dell'avviso proveniente dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato PCP. Pertanto il recupero dello stato da parte del servizio insiste su uno stato avviso PCP che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni. SINCRONO
       operationId: idAvvisoStato
       parameters:
         - in: query
@@ -1012,7 +1012,7 @@ paths:
       tags:
         - comunicaPostPubblicazione
       summary: API Rest generica per l'inserimento di una scheda dati per le fasi successive alla pubblicazione. SINCRONO
-      description: API Rest generica per l'inserimento delle schede dati delle fasi successive alla pubblicazione. A titolo esemplificativo si riportano di seguito alcuni eventi che determinano l'obbligo di invio dati alla NPA:Elenco Partecipanti, Aggiudicazione, Avvio Contratto, Avanzamento Contratto, Conclusione Contratto, Collaudo Contratto, Sospensione, Ripresa Esecuzione, Contratto, Risoluzione Contratto, Modifica Contratto, Subappalto, Recesso, Contenzioso, Accordo Quadro. SINCRONO
+      description: API Rest generica per l'inserimento delle schede dati delle fasi successive alla pubblicazione. A titolo esemplificativo si riportano di seguito alcuni eventi che determinano l'obbligo di invio dati alla PCP:Elenco Partecipanti, Aggiudicazione, Avvio Contratto, Avanzamento Contratto, Conclusione Contratto, Collaudo Contratto, Sospensione, Ripresa Esecuzione, Contratto, Risoluzione Contratto, Modifica Contratto, Subappalto, Recesso, Contenzioso, Accordo Quadro. SINCRONO
       operationId: idSchedaCrea
       requestBody:
         description: Oggetto in ingresso al servizio
@@ -1129,17 +1129,17 @@ paths:
             example: 'IN_ATT_PUBB'
         - in: query
           name: dataCreazioneDa
-          description: Data di crezione dell'Appalto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione dell'Appalto - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: dataCreazioneA
-          description: Data di crezione della Gara - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339) 
+          description: Data di crezione della Gara - intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339) 
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2022-01-23T12:02:05Z'
         - in: query
           name: codiceScheda
@@ -1274,7 +1274,7 @@ paths:
       tags:
         - serviziComuni
       summary: API Rest per il recupero dell'esito dell'operazione. SINCRONO
-      description: Il compito dispositivo di aggiornare l'esito delle operazioni provenienti dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato NPA. Pertanto il recupero dell'esito operazione da parte del servizio insiste su uno stato dell'esito NPA che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni. SINCRONO
+      description: Il compito dispositivo di aggiornare l'esito delle operazioni provenienti dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato PCP. Pertanto il recupero dell'esito operazione da parte del servizio insiste su uno stato dell'esito PCP che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni. SINCRONO
       operationId: idOperazioneEsito
       parameters:
         - in: query
@@ -1402,17 +1402,17 @@ paths:
           required: true
         - in: query
           name: dataInizio
-          description: Data di inizio (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di inizio (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
         - in: query
           name: dataFine
-          description: Data di fine (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di fine (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
         - in: query
           name: page
@@ -1562,31 +1562,31 @@ paths:
             type: string           
         - in: query
           name: dataInizioDa
-          description: Data inizio incarico soggetto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data inizio incarico soggetto - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataInizioA
-          description: Data inizio incarico soggetto - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data inizio incarico soggetto - intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataFineDa
-          description: Data fine incarico soggetto - intervallo successivo (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data fine incarico soggetto - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataFineA
-          description: data fine incarico soggetto - intervallo precedente (A datetime specified by ISO 8601 as profiled by RFC 3339) 
+          description: data fine incarico soggetto - intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339) 
           schema:
             type: string
-            format: datetime
+            format: date-time
           example: '2015-05-28T14:07:17Z'
       responses:
         '200':
@@ -1994,14 +1994,14 @@ components:
         operazione:
           $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'      
         dataInizio: 
-          description: Data di inizio (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di inizio (A date-time specified by ISO 8601 as profiled by RFC 3339)
           type: string
-          format: datetime
+          format: date-time
           example: '2022-01-23T12:02:05Z'
         dataFine: 
-          description: Data di fine (A datetime specified by ISO 8601 as profiled by RFC 3339). Se il valore non è indicato la delega è a tempo indeterminato.
+          description: Data di fine (A date-time specified by ISO 8601 as profiled by RFC 3339). Se il valore non è indicato la delega è a tempo indeterminato.
           type: string
-          format: datetime
+          format: date-time
           example: '2022-01-23T12:02:05Z'
     EliminaSoggettoRequest:
       description: Oggetto in ingresso al servizio
@@ -2028,14 +2028,14 @@ components:
         operazione:  
           $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'      
         dataInizio: 
-          description: Data di inizio (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di inizio (A date-time specified by ISO 8601 as profiled by RFC 3339)
           type: string
-          format: datetime
+          format: date-time
           example: '2022-01-23T12:02:05Z'
         dataFine: 
-          description: Data di fine (A datetime specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di fine (A date-time specified by ISO 8601 as profiled by RFC 3339)
           type: string
-          format: datetime
+          format: date-time
           example: '2022-01-23T12:02:05Z'          
     CreaSchedaRequest:
       description: Oggetto in ingresso al servizio    
@@ -2141,9 +2141,15 @@ components:
           description: identificativo univoco dell'Avviso definito da ANAC. (A UUID specified by RFC4122)
           type: string
           format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
       required:  # List the required properties here
         - idAvviso
+        - idAppalto
     CancellaAvvisoRequest:
       description: Oggetto in ingresso al servizio    
       type: object
@@ -2154,6 +2160,11 @@ components:
           type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
         motivo:  
           description: descrizione del motivo della richiesta di cancellazione
           type: string
@@ -2161,6 +2172,7 @@ components:
           example: 'Revoca delle procedure di gara'
       required:
         - idAvviso
+        - idAppalto
     ConsultaAppaltoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
