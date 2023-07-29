@@ -24,9 +24,9 @@ components:
           _stato:
             $ref: '#/components/schemas/StatoSchedaEnum' 
           _dataCreazione:
-            description: data creazione della scheda (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data creazione della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
       SchedaPianificazioneType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
@@ -238,14 +238,14 @@ components:
           operazione: 
              $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'
           dataInizio:
-            description: data inizio incarico soggetto (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data inizio incarico soggetto (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
           dataFine:
-            description: data fine incarico soggetto (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data fine incarico soggetto (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
       RuoloType:
         description: ruolo
@@ -296,9 +296,9 @@ components:
             type: string
             example: 'Fornitura di strumento XX per XX'
           dataCreazione:
-            description: data creazione dell'appalto (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data creazione dell'appalto (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'       
           stato:
             $ref: '#/components/schemas/StatoAppaltoEnum'
@@ -325,25 +325,32 @@ components:
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
           dataCreazione:
-            description: Data di crezione dell'Avviso  (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: Data di crezione dell'Avviso  (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
           dataPubblicazione:
-            description: Data di pubblicazione dell'Avviso  (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: Data di pubblicazione dell'Avviso. (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
+          dataControllo:
+            description: data in cui è stato effettuato il controllo dello stato avviso (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'            
           stato:
             $ref: '#/components/schemas/StatoAvvisoEnum'
-          tipo:
-            $ref: '#/components/schemas/TipoAvvisoEnum'    
+          azione:
+            $ref: '#/components/schemas/TipoAzioneAvvisoEnum'
+          datiPubblicazioneEU:
+            $ref: '#/components/schemas/DatiPubblicazioneEUType'
+          datiPubblicazioneIT:
+            $ref: '#/components/schemas/DatiPubblicazioneITType'            
       AvvisoType:
         allOf: # estende la classe AvvisoBaseType
           - $ref: '#/components/schemas/AvvisoBaseType'
         properties:
-          azione:
-            $ref: '#/components/schemas/TipoAzioneAvvisoEnum'            
           appalto:
             $ref: '#/components/schemas/AppaltoBaseType'
           scheda:
@@ -351,6 +358,64 @@ components:
               - $ref: '#/components/schemas/DatiPianoType'
               - $ref: '#/components/schemas/DatiAppaltoType'
               - $ref: '#/components/schemas/SchedaPostPubblicazioneType'
+      DatiPubblicazioneEUType:
+        type: object
+        additionalProperties: false
+        properties:
+          noticeId:
+            description: identificativo univoco dell'Avviso inviato al TED.
+            type: string
+            format: uuid
+          versionId:
+            description: versione dell'Avviso inviato al TED.
+            type: string
+          dataControllo:
+            description: data in cui è stato effettuato il controllo dello stato avviso sul TED (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          dataInoltroPubblicazione:
+            description: data in cui è stato effettuato l'invio dell'avviso al TED (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z' 
+          dataRicezionePubblicazione:
+            description: data in cui è stata confermata dal TED la ricezione dell'avviso (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'             
+          dataPubblicazione:
+            description: data di pubblicazione dell'Avviso comunicata dal TED (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          stato:
+            $ref: '#/components/schemas/StatoAvvisoEnum'
+          tipo:
+            $ref: '#/components/schemas/TipoAvvisoEnum'
+      DatiPubblicazioneITType:
+        type: object
+        additionalProperties: false
+        properties:
+          dataControllo:
+            description: data in cui è stato effettuato il controllo dello stato avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          dataInoltroPubblicazione:
+            description: data in cui è stato effettuato l'invio dell'avviso alla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'            
+          dataPubblicazione:
+            description: data di pubblicazione dell'Avviso comunicata dalla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          stato:
+            $ref: '#/components/schemas/StatoAvvisoEnum'
+          tipo:
+            $ref: '#/components/schemas/TipoAvvisoEnum'            
       PaginazioneType:
         description: Oggetto per la paginazione dei risultati
         type: object
@@ -421,7 +486,10 @@ components:
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
           dataControllo:
-            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A datetime specified by ISO 8601 as profiled by RFC 3339)            
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
           stato:
             $ref: '#/components/schemas/StatoAppaltoEnum'              
       StatoLottoType:
@@ -434,7 +502,10 @@ components:
             type: string
             example: '9050626CD6'
           dataControllo:
-            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A datetime specified by ISO 8601 as profiled by RFC 3339)             
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
           stato:
             $ref: '#/components/schemas/StatoLottoEnum' 
       StatoContrattoType:
@@ -448,7 +519,7 @@ components:
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
           dataControllo:
-            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A datetime specified by ISO 8601 as profiled by RFC 3339)             
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A date-time specified by ISO 8601 as profiled by RFC 3339)             
           stato:
             $ref: '#/components/schemas/StatoContrattoEnum'            
       StatoAvvisoType:
@@ -458,9 +529,17 @@ components:
           idAvviso:
             description: identificativo univoco dell'Avviso generato da ANAC.
             type: string
-            format: uuid          
+            format: uuid
+          idAppalto:
+            description: identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"            
           dataControllo:
-            description: data in cui è stato effettuato il controllo sullo stato dell'avviso (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data in cui è stato effettuato il controllo sullo stato dell'avviso (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
           stato:  
              $ref: '#/components/schemas/StatoAvvisoEnum'
       EsitoOperazioneType:
@@ -490,9 +569,9 @@ components:
           dettaglio:
             $ref: '#/components/schemas/DettaglioEsitoOperazioneEnum'
           dataControllo:
-            description: data in cui è stato effettuato il controllo dell'esito dell'operazione (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data in cui è stato effettuato il controllo dell'esito dell'operazione (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'            
           errori: 
             description: elenco degli errori

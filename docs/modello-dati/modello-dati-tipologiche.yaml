@@ -23,14 +23,14 @@ components:
           descrizione:
             $ref: '#/components/schemas/I18NType'
           dataInizio:
-            description: data inizio (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data inizio (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
           dataFine:
-            description: data fine (A datetime specified by ISO 8601 as profiled by RFC 3339)
+            description: data fine (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
-            format: datetime
+            format: date-time
             example: '2022-01-23T12:02:05Z'
     I18NType:
         type: object
