@@ -58,8 +58,8 @@ components:
             dataInvito: 
               description: Data della lettera di invito
               type: string
-              format: datetime
+              format: date-time
             dataScadenzaPresentazioneOfferta: 
               description: Data della scadenza di presentazione dell'offerta
               type: string
-              format: datetime            
+              format: date-time            

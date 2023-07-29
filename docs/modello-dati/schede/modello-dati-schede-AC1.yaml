@@ -18,7 +18,7 @@ components:
         dataAccordo:
           description: Data dell’accordo bonario
           type: string
-          format: datetime
+          format: date-time
         oneriDerivanti:
           description: Oneri derivanti
           type: number

@@ -21,7 +21,7 @@ components:
         dataVerbaleSospensione: 
           description: Data del verbale di sospensione
           type: string
-          format: datetime
+          format: date-time
         motivoSospensione:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoSospensioneEnum'
     AnacFormSO1Type:

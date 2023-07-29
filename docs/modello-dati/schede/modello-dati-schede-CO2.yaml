@@ -18,11 +18,11 @@ components:
         dataInizio:
           description: Data di inizio
           type: string
-          format: datetime
+          format: date-time
         dataUltimazione:
           description: Data di ultimazione
           type: string
-          format: datetime
+          format: date-time
         importo: 
           description: Importo delle somme liquidate
           type: number

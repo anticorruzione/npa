@@ -57,7 +57,7 @@ components:
         dataAdesione: 
           description: Data di adesione all'accordo quadro/convenzione
           type: string
-          format: datetime           
+          format: date-time           
         relazioneUnicaSulleProcedure:
           description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
           type: boolean

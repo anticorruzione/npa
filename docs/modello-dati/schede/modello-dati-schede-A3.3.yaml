@@ -29,7 +29,7 @@ components:
         dataAdesione: 
           description: Data di adesione all'accordo quadro/convenzione
           type: string
-          format: datetime 
+          format: date-time 
         quadroEconomicoStandard:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'
         offertePresentate:

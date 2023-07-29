@@ -16,7 +16,7 @@ components:
         dataTermine: 
           description: Termine previsto per la consegna
           type: string
-          format: datetime
+          format: date-time
         tipoComunicazione:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/TipologiaComunicazioneEnum'  
         durataSospensione: 
@@ -29,7 +29,7 @@ components:
         dataIstanzaRecesso:
           description: Data di presentazione dell’istanza di recesso
           type: string
-          format: datetime
+          format: date-time
         istanzaAccolta:
           description: L'istanza di recesso è stata accolta?
           type: boolean           

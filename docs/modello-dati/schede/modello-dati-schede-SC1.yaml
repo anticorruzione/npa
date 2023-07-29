@@ -31,19 +31,19 @@ components:
         dataStipula:
           description: Data stipula del contratto
           type: string
-          format: datetime            
+          format: date-time            
         dataEsecutivita:
           description: Data esecutività del contratto (ove prevista)
           type: string
-          format: datetime
+          format: date-time
         dataDecorrenza:
           description: Data di decorrenza contrattuale
           type: string
-          format: datetime 
+          format: date-time 
         dataScadenza:
           description: Data di scadenza contrattuale
           type: string
-          format: datetime          
+          format: date-time          
         importoCauzione:
           description: Importo cauzione definitiva in €
           type: string

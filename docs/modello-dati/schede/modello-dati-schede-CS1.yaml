@@ -22,7 +22,7 @@ components:
         dataUltimazione: 
           description: Termine di ultimazione della prestazione di subappalto
           type: string
-          format: datetime
+          format: date-time
     AnacFormCS1Type:
       description: Contiene tutti i dati relativi alla scheda di conclusione di subappalto
       type: object

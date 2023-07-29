@@ -27,11 +27,11 @@ components:
         dataCertificatoAnticipazione:
           description: Data del certificato di pagamento relativo all'anticipazione 
           type: string
-          format: datetime
+          format: date-time
         dataAvanzamento:
           description: Data Stato di avanzamento
           type: string
-          format: datetime
+          format: date-time
         impSal:
           description: Importo stato avanzamento progressivo (cumulato)
           type: number
@@ -39,7 +39,7 @@ components:
         dataCertificatoMandatoPagamento:
           description: Data di emissione del certificato/mandato di pagamento. Per lavori, indicare la data del certificato. Per servizi e forniture, indicare la data del mandato
           type: string
-          format: datetime
+          format: date-time
         impCertificatoMandatoPagamento:
           description: Importo del certificato/mandato di pagamento. Per lavori, indicare l’importo del certificato. Per servizi e forniture, indicare l’importo del mandato
           type: number

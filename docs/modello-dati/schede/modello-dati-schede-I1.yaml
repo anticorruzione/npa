@@ -18,11 +18,11 @@ components:
         dataDisposizioneInzio:
           description: Data disposizione dell’inizio della prog. Esecutiva
           type: string
-          format: datetime
+          format: date-time
         dataApprovazione:
           description: Data approvazione del  progetto Esecutivo
           type: string
-          format: datetime  
+          format: date-time  
         consegnaFrazionata:
           description: Consegna frazionata
           type: boolean
@@ -32,26 +32,26 @@ components:
         dataVerbalePrimaConsegna:
           description: Data verbale prima consegna lavori
           type: string
-          format: datetime
+          format: date-time
         dataAvvioPrimaFase:
           description: Data di avvio della prima fase dell'esecuzione del contratto
           type: string
-          format: datetime
+          format: date-time
         dataVerbaleConsegnaDefinitiva:
           description: Data verbale consegna definitiva
           type: string
-          format: datetime
+          format: date-time
         consegnaSottoRiserva:
           description: Consegna sotto riserva di legge?
           type: boolean
         dataEffettivoInizio:
           description: Data di effettivo inizio lavori/servizi/forniture (consegna completa/avvio di tutte le prestazioni del contratto)
           type: string
-          format: datetime
+          format: date-time
         dataFinePrevista:
           description: Data fine prevista per dare ultimazione ai lavori/servizi/forniture 
           type: string
-          format: datetime
+          format: date-time
     AnacFormI1Type:
       description: Contiene tutti i dati di inizio prestazione
       type: object
