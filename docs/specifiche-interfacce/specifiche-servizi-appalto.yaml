@@ -49,6 +49,8 @@ tags:
     description: In questo contesto rientrano tutti i servizi richiamabili dalla SA finalizzati alla gestione delle fasi del ciclo di vita dell’Appalto successive alla pubblicazione di un bando di gara. I servizi permetteranno la creazione, l’invio e il recupero delle schede contenenti i dati necessari al monitoraggio delle fasi di aggiudicazione ed esecuzione di un appalto.
   - name: serviziComuni
     description: In questo contesto si riportano i servizi comuni, ossia quelli che possono essere richiamati dalle Stazioni appaltanti in più contesti della PCP.
+  - name: codeList
+    description: In questo contesto si riportano i servizi per il recupero delle tipologiche.     
   - name: serviziTecnici 
     description: Operazioni richiesti dalle linee guida sull'interoperabilità
 paths:
@@ -1110,20 +1112,20 @@ paths:
       parameters:
         - in: query    
           name: idAppalto
-          description: Identificativo univoco della gara definito da ANAC. (A UUID specified by FC4122).
+          description: Identificativo univoco dell' Appalto definito da ANAC. (A UUID specified by FC4122). Obbligatorio se cig non è stato valorizzato.
           schema:
             type: string
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         - in: query
           name: cig
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC
+          description: Identificativo univoco Gara-Lotto rilasciato da ANAC. Obbligatorio se idAppalto non è stato valorizzato.
           schema:
             type: string
             example: 9050626CD6
         - in: query
           name: stato
-          description: Codice stato dell'Appalto - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
+          description: Codice stato dell'Appalto - fare riferimento ai valori contenuti nel file [statoAppalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAppalto.json)
           schema:
             type: string
             example: 'IN_ATT_PUBB'
@@ -1149,7 +1151,7 @@ paths:
             example: 'AD1_28'
         - in: query
           name: statoScheda
-          description: Codice Stato della Scheda - Se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
+          description: Codice Stato della Scheda - fare riferimento ai valori contenuti nel file [statoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoScheda.json)
           schema:
             type: string
             example: 'IN_LAV'
@@ -1347,7 +1349,7 @@ paths:
   /recupera-elenco-tipologiche:
     get:
       tags:
-        - serviziComuni
+        - codeList
       summary: API Rest per il recupero dell'elenco delle tipologiche disponibili. SINCRONO
       description: Il servizio restituiti un'elenco delle tipologiche disponibili. SINCRONO
       operationId: idRecuperaElencoTipologiche
@@ -1388,7 +1390,7 @@ paths:
   /recupera-tipologica:
     get:
       tags:
-        - serviziComuni
+        - codeList
       summary: API Rest per il recupero di una specifica tipologica. SINCRONO
       description: Il servizio restituiti l'elenco di una singola tipologica. SINCRONO
       operationId: idRecuperaTipologica
@@ -1448,7 +1450,7 @@ paths:
   /recupera-valore-tipologica:
     get:
       tags:
-        - serviziComuni
+        - codeList
       summary: API Rest per il recupero di un singolo item di una tipologica. SINCRONO
       description: Il servizio restituiti il valore di un singolo item che si vuole recuperare dalla tipologica. SINCRONO
       operationId: idRecuperaItemTipologica
@@ -2080,7 +2082,12 @@ components:
           description: identificativo univoco della scheda definita da ANAC. (A UUID specified by RFC4122).
           type: string
           format: uuid
-          example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce"  
+          example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce"
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
         motivo:  
           description: descrizione del motivo della richiesta di cancellazione
           type: string
@@ -2088,6 +2095,7 @@ components:
           example: 'Errore inserimento dati'
       required:
         - idScheda
+        - idAppalto
     VerificaSchedaRequest:
       description: Oggetto in ingresso al servizio    
       type: object
@@ -2098,8 +2106,14 @@ components:
           type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
       required:
         - idScheda
+        - idAppalto
     ConfermaSchedaRequest:
       description: Oggetto in ingresso al servizio    
       type: object
@@ -2109,9 +2123,15 @@ components:
           description: identificativo univoco della scheda definita da ANAC. (A UUID specified by RFC4122).
           type: string
           format: uuid
-          example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce" 
+          example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce"
+        idAppalto:
+          description: identificativo univoco dell'Appalto generato da ANAC.
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
       required:
-        - idScheda        
+        - idScheda 
+        - idAppalto
     AvvisoRequest:
       description: Oggetto in ingresso al servizio    
       type: object
