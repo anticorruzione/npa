@@ -52,6 +52,7 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-PL2.7.yaml#/components/schemas/SchedaPL2_7Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-PL2.8.yaml#/components/schemas/SchedaPL2_8Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-PL2.9.yaml#/components/schemas/SchedaPL2_9Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.15.1.yaml#/components/schemas/SchedaP1_15_1Type'
       SchedaComunicaAppaltoType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         allOf: # estende il modello dati SchedaType
@@ -66,7 +67,6 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.12.yaml#/components/schemas/SchedaP1_12Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.13.yaml#/components/schemas/SchedaP1_13Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.14.yaml#/components/schemas/SchedaP1_14Type'
-              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.15.1.yaml#/components/schemas/SchedaP1_15_1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.15.2.yaml#/components/schemas/SchedaP1_15_2Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.16.yaml#/components/schemas/SchedaP1_16Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.17.yaml#/components/schemas/SchedaP1_17Type'
