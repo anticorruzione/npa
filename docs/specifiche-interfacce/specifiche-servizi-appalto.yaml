@@ -2045,6 +2045,7 @@ components:
       additionalProperties: false
       required:  # List the required properties here
         - idAppalto
+        - scheda
       properties:
         idAppalto:
           description: identificativo univoco dell'Appalto generato da ANAC.
@@ -2060,6 +2061,7 @@ components:
       required:  # List the required properties here
         - idScheda
         - idAppalto
+        - scheda
       properties:
         idAppalto:
           description: identificativo univoco dell'Appalto generato da ANAC.
