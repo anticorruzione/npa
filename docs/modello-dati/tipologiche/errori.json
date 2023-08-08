@@ -91,8 +91,8 @@
 {
     "codice":"ERR11",
     "descrizione": {
-		"it": "tipo di eForm non ammesso in questa fase dell'appalto",
-		"en": "tipo di eForm non ammesso in questa fase dell'appalto"
+		"it": "tipo di eForm non coerente per la scheda",
+		"en": "tipo di eForm non coerente per la scheda"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -480,6 +480,78 @@
     "descrizione": {
 		"it": "errore generico durante il controllo dello stato sulla PPL",
 		"en": "errore generico durante il controllo dello stato sulla PPL"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR55",
+    "descrizione": {
+		"it": "cig duplicato nell'elenco dei lotti",
+		"en": "cig duplicato nell'elenco dei lotti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR56",
+    "descrizione": {
+		"it": "cig non coerenti nell'elenco dei lotti",
+		"en": "cig non coerenti nell'elenco dei lotti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR57",
+    "descrizione": {
+		"it": "mancata coerenza tra idAppalto e idScheda",
+		"en": "mancata coerenza tra idAppalto e idScheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR58",
+    "descrizione": {
+		"it": "operazione non consentita per lo stato della scheda",
+		"en": "operazione non consentita per lo stato della scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR59",
+    "descrizione": {
+		"it": "operazione non consentita: è in corso una richiesta di verifica scheda",
+		"en": "operazione non consentita: è in corso una richiesta di verifica scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR60",
+    "descrizione": {
+		"it": "operazione non consentita: è in corso una richiesta di conferma scheda",
+		"en": "operazione non consentita: è in corso una richiesta di conferma scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR61",
+    "descrizione": {
+		"it": "cig duplicato nell'elenco aggiudicazioni",
+		"en": "cig duplicato nell'elenco aggiudicazioni"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR62",
+    "descrizione": {
+		"it": "cig non coerenti nell'elenco aggiudicazioni",
+		"en": "cig non coerenti nell'elenco aggiudicazioni"
 	},
     "dataInizio":null,
     "dataFine":null
