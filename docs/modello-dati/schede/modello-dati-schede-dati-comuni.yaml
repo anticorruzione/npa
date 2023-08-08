@@ -837,7 +837,7 @@ components:
     AppaltoP_18Type:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       type: object
-      required: [idAppalto, codiceAppalto]
+      required: [codiceAppalto]
       additionalProperties: false    
       properties:
         idAppalto:
@@ -888,7 +888,7 @@ components:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       type: object
       additionalProperties: false
-      required: [idAppalto,codiceAppalto,contrattiDisposizioniParticolari]
+      required: [codiceAppalto,contrattiDisposizioniParticolari]
       properties:
         idAppalto:
           description: Codice univoco dell'appalto
@@ -914,7 +914,7 @@ components:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       type: object
       additionalProperties: false
-      required: [idAppalto,codiceAppalto]
+      required: [codiceAppalto]
       properties:
         idAppalto:
           description: Codice univoco dell'appalto
@@ -1903,7 +1903,7 @@ components:
         dataApprovazione:
           description: Data di approvazione della modifica contrattuale
           type: string
-          format: date-time
+          format: datetime
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
@@ -1931,7 +1931,7 @@ components:
         dataApprovazione:
           description: Data di approvazione della modifica contrattuale
           type: string
-          format: date-time
+          format: datetime
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
@@ -2050,11 +2050,11 @@ components:
         dataAffidamentoIncarico:
           description: Data di affidamento incarico (per progettazione esterna)
           type: string
-          format: date-time
+          format: datetime
         dataConsegna: 
           description: Data di consegna progetto (per progettazione esterna)
           type: string
-          format: date-time
+          format: datetime
     IncaricoType:
       description: Dati relativi agli incarichi tecnici
       type: object
@@ -2828,7 +2828,7 @@ components:
         dataAggiudicazione:
           description: Data della decisione ufficiale di selezione dell'offerta vincitrice - corrisponde al campo bt-1451 - Winner Decision Date del TED
           type: string
-          format: date-time 
+          format: datetime 
     DatiBaseAggiudicazioneSubappaltoType:
       description:  Dato in comune con il Business Group Subcontracting delle eforms
       additionalProperties: false
@@ -3017,7 +3017,7 @@ components:
         scadenzaPresentazioneInvito:
           description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
           type: string
-          format: date-time
+          format: datetime
         oraScadenzaPresentazioneOfferte: 
           description: Ora scadenza per la presentazione delle offerte (hh:mm) - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
@@ -3031,7 +3031,7 @@ components:
         scadenzaPresentazioneInvito:
           description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
           type: string
-          format: date-time          
+          format: datetime          
     DatiBaseTerminiInvioSoloOraType:
       description: Dato in comune con il Business Group Submission Terms delle eforms 
       required: [oraScadenzaPresentazioneOfferte]
@@ -3078,7 +3078,7 @@ components:
         dataSottoscrizione:
           description: Data sottoscrizione eventuale atto aggiuntivo/ sottomissione - corrisponde al campo bt-145 - Contract Conclusion Date del TED
           type: string
-          format: date-time  
+          format: datetime  
         motiviModifica:
           $ref: '#/components/schemas/MotiviModificaContrattualeEnum'
         causaModifica:
@@ -3091,7 +3091,7 @@ components:
         dataInvioInviti: 
           description: Data stimata dell'invio degli inviti a presentare le offerte - corrisponde al campo bt-130  - Dispatch Invitation Tender del TED
           type: string
-          format: date-time
+          format: datetime
     DatiBaseDocumentiType:
       description:  Dato in comune con il Business Group Procurement Documents delle eforms
       additionalProperties: false
@@ -3109,7 +3109,7 @@ components:
         dataInizio: 
           description: La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - corrisponde al campo bt-536 - Duration Start Date del TED
           type: string
-          format: date-time
+          format: datetime
         durata: 
           description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - corrisponde al campo bt-36 - Duration Period del TED
           type: string
@@ -3117,7 +3117,7 @@ components:
         dataFine: 
           description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - corrisponde al campo bt-537 - Duration End Date del TED
           type: string
-          format: date-time 
+          format: datetime 
         altraDurata: 
           $ref: '#/components/schemas/AltraDurataEnum'    
     AnacFormPLBaseType:

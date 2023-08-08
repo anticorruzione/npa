@@ -8,6 +8,7 @@ components:
       description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione.
       type: object
       additionalProperties: false
+      required: [cig]
       properties:
         cig:
           description: codice identificativo lotto

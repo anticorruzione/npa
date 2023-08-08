@@ -4,36 +4,6 @@ info:
   version: 1.0.0
 components:
   schemas:
-    InvitatiType:
-      description: Elenco di soggetti invitati che non hanno presentato offerta.
-      type: object
-      additionalProperties: false
-      properties: 
-        cig:
-          description: codice identificativo lotto
-          type: string
-        lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
-          type: string
-        invitati:
-          type: array
-          items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/InvitatoType'  
-    PartecipantiType:
-      description: Elenco di soggetti che hanno presentato offerta.
-      type: object
-      additionalProperties: false
-      properties: 
-        cig:
-          description: codice identificativo lotto
-          type: string
-        lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
-          type: string
-        partecipanti:
-          type: array
-          items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'              
     SchedaS2Type:
       description: Elenco di soggetti che hanno presentato offerta e di ulteriori invitati che non hanno presentato offerta.
       type: object
@@ -43,23 +13,26 @@ components:
         anacForm:
           type: object
           additionalProperties: false
-          required: [dataScadenzaPresentazioneOfferta]
+          required: [cig, dataScadenzaPresentazioneOfferta]
           properties:
+            cig:
+              description: codice identificativo lotto
+              type: string
             invitatiCheNonHannoPresentatoOfferta:
               description: Dati relativi ai soggetti invitati che non hanno presentato offerta
               type: array
               items:
-                $ref: '#/components/schemas/InvitatiType'
+                $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/InvitatoType'
             partecipanti:
               description: Dati relativi ai partecipanti
               type: array
-              items:          
-                $ref: '#/components/schemas/PartecipantiType'              
+              items:
+                $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'              
             dataInvito: 
               description: Data della lettera di invito
               type: string
-              format: date-time
+              format: datetime
             dataScadenzaPresentazioneOfferta: 
               description: Data della scadenza di presentazione dell'offerta
               type: string
-              format: date-time            
+              format: datetime            

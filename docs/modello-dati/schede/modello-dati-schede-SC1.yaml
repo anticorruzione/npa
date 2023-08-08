@@ -8,7 +8,7 @@ components:
       description: Oggetto che riporta i dati di sottoscrizione del contratto
       type: object
       additionalProperties: false
-      required: [importoCauzione,codiceAusa,idPartecipante,cig,dataDecorrenza,dataScadenza, idContratto]
+      required: [importoCauzione,codiceAusa,idPartecipante,cig,dataDecorrenza,dataScadenza]
       properties:
         idContratto:
           description: identificativo del contratto restituito in response alla scheda di sottoscrizione del contratto.
@@ -31,19 +31,19 @@ components:
         dataStipula:
           description: Data stipula del contratto
           type: string
-          format: date-time            
+          format: datetime            
         dataEsecutivita:
           description: Data esecutività del contratto (ove prevista)
           type: string
-          format: date-time
+          format: datetime
         dataDecorrenza:
           description: Data di decorrenza contrattuale
           type: string
-          format: date-time 
+          format: datetime 
         dataScadenza:
           description: Data di scadenza contrattuale
           type: string
-          format: date-time          
+          format: datetime          
         importoCauzione:
           description: Importo cauzione definitiva in €
           type: string
