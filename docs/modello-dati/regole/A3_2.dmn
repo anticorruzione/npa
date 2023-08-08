@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_A3_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+  <inputData id="InputData_aggiudicazioni" name="aggiudicazioni" />
+  <inputData id="InputData_appalto" name="appalto" />
+  <decision id="A3_2" name="A3_2">
+    <informationRequirement id="InformationRequirement_A3_2_02">
+      <requiredInput href="#InputData_aggiudicazioni" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_A3_2_01">
+      <requiredInput href="#InputData_appalto" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_A3_2" hitPolicy="COLLECT">
+      <input id="appalto_A3_2">
+        <inputExpression id="LiteralExpression_appalto_A3_2" typeRef="string">
+          <text>appalto</text>
+        </inputExpression>
+      </input>
+      <input id="lotti_P1_10" biodi:width="426">
+        <inputExpression id="LiteralExpression_aggiudicazioni_A3_2" typeRef="string">
+          <text>aggiudicazioni</text>
+        </inputExpression>
+      </input>
+      <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
+      <rule id="DecisionRule_1ub3t5l">
+        <inputEntry id="UnaryTests_17did8m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o5k2bd">
+          <text>aggiudicazioni = null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05255um">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
+      <dmndi:DMNShape id="DMNShape_aggiudicazioni" dmnElementRef="InputData_aggiudicazioni">
+        <dc:Bounds height="45" width="125" x="297" y="247" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_appalto" dmnElementRef="InputData_appalto">
+        <dc:Bounds height="45" width="125" x="157" y="247" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="A3_2">
+        <dc:Bounds height="80" width="180" x="200" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0d85lf4" dmnElementRef="InformationRequirement_A3_2_02">
+        <di:waypoint x="360" y="247" />
+        <di:waypoint x="320" y="180" />
+        <di:waypoint x="320" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0wwayvg" dmnElementRef="InformationRequirement_A3_2_01">
+        <di:waypoint x="220" y="247" />
+        <di:waypoint x="260" y="180" />
+        <di:waypoint x="260" y="160" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

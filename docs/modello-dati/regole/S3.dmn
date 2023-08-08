@@ -5,7 +5,7 @@
     <informationRequirement id="InformationRequirement_1jab8pk">
       <requiredInput href="#InputData_0b6hmk2" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_S3">
+    <decisionTable id="DecisionTable_S3" hitPolicy="COLLECT">
       <input id="InputClause_1j0zzmu" biodi:width="374.9921875">
         <inputExpression id="LiteralExpression_0foo7nh" typeRef="string">
           <text>prestazioni</text>

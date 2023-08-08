@@ -9,7 +9,7 @@
     <informationRequirement id="InformationRequirement_AD3_01">
       <requiredInput href="#InputData_appalto" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_AD3" hitPolicy="ANY">
+    <decisionTable id="DecisionTable_AD3" hitPolicy="COLLECT">
       <input id="appalto_AD3" biodi:width="322.9921875">
         <inputExpression id="LiteralExpression_appalto_AD3" typeRef="string">
           <text>appalto</text>

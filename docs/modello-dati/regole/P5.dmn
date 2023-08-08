@@ -16,7 +16,7 @@
     <informationRequirement id="InformationRequirement_0lvvrpj">
       <requiredInput href="#InputData_1nlo272" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_P5" hitPolicy="ANY">
+    <decisionTable id="DecisionTable_P5" hitPolicy="COLLECT">
       <input id="appalto_P5">
         <inputExpression id="LiteralExpression_appalto_P5" typeRef="string">
           <text>appalto</text>

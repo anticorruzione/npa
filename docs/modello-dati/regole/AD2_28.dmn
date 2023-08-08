@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD2_28" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
-  <decision id="Decision_1iwi9z8" name="AD2_28">
+  <decision id="AD2_28" name="AD2_28">
     <informationRequirement id="InformationRequirement_18mcapo">
       <requiredInput href="#InputData_0k6u5e5" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_182tifx">
       <requiredInput href="#InputData_15b23jq" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_139vsny" biodi:annotationsWidth="552">
+    <decisionTable id="DecisionTable_139vsny" hitPolicy="COLLECT" biodi:annotationsWidth="552">
       <input id="InputClause_0doc50a" biodi:width="241">
         <inputExpression id="LiteralExpression_0j2dtdc" typeRef="string">
           <text>appalto</text>

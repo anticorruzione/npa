@@ -13,7 +13,7 @@
     <informationRequirement id="InformationRequirement_P2_10_03">
       <requiredInput href="#InputData_stazioniAppaltanti_P2_10" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_P2_10" hitPolicy="ANY">
+    <decisionTable id="DecisionTable_P2_10" hitPolicy="COLLECT">
       <input id="appalto_P2_10">
         <inputExpression id="LiteralExpression_appalto_P2_10" typeRef="string">
           <text>appalto</text>
