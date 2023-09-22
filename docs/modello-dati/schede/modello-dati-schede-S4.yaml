@@ -8,12 +8,10 @@ components:
       description: Dati relativi alla Costituzione della società di scopo.
       type: object
       additionalProperties: false
+      required: [cig]
       properties:
         cig:
-          description: cig
-          type: string
-        lotIdentifier: 
-          description: id
+          description: codice identificativo lotto
           type: string
         partecipante:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'

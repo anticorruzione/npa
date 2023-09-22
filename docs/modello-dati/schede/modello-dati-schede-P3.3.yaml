@@ -40,7 +40,7 @@ components:
       required: [cigAccordoQuadro]
       additionalProperties: false
       properties:      
-        cigAccordoQuadro:
+        cigAccordoQuadroConvenzione:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string 
         datiBase:

@@ -7,14 +7,9 @@ components:
     SubappaltoType:
       description: Dati relativi ai subappalti
       type: object
-      required: [idContratto,codiceFiscaleDitta,impresaEstera,importoPresunto]
+      required: [codiceFiscaleDitta,impresaEstera,importoPresunto]
       additionalProperties: false
       properties:    
-        idContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         codiceFiscaleDitta:
           description: Codice fiscale ditta subappaltatrice
           type: string
@@ -38,13 +33,16 @@ components:
     AnacFormRSU1Type:
       description: Contiene tutti i dati relativi alla scheda di Richiesta di Subappalto
       type: object
-      required: [subappalti]
+      required: [subappalto,idContratto]
       additionalProperties: false
       properties: 
-        subappalti:
-          type: array
-          items:
-            $ref: '#/components/schemas/SubappaltoType'
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
+        subappalto:
+          $ref: '#/components/schemas/SubappaltoType'
     SchedaRSU1Type:
       description: Scheda di richiesta di subappalto
       type: object

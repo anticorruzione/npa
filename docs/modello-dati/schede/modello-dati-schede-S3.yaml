@@ -8,13 +8,11 @@ components:
       description: Dati relativi agli incarichi tecnici e alle prestazioni progettuali.
       type: object
       additionalProperties: false
+      required: [cig]
       properties:
         cig:
-          description: cig
-          type: string
-        lotIdentifier: 
-          description: id
-          type: string
+          description: codice identificativo lotto
+          type: string            
         prestazioni:
           type: array
           items:        

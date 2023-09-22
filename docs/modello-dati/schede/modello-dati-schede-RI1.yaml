@@ -7,18 +7,18 @@ components:
     SospensioneType:
       description: Oggetto che riporta tutti i dati delle Sospensioni
       type: object
-      required: [idContratto, superatoTempo, riserve, verbaleNonSottoscritto]
+      required: [superatoTempo, riserve, verbaleNonSottoscritto]
       additionalProperties: false
       properties:
-        idContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         dataVerbaleRipresa:
           description: Data del verbale di ripresa
           type: string
           format: date-time
+        incidenzaCronoprogramma: 
+          description: Incidenza sul croprogramma (nel caso di sospensione parziale)
+          type: number
+          format: double
+          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$     
         superatoTempo:
           description: E’ stato superato il quarto del tempo contrattuale
           type: boolean   
@@ -31,14 +31,16 @@ components:
     AnacFormRI1Type:
       description: Contiene tutti i dati relativi alla scheda di ripresa prestazioni
       type: object
-      required: [sospensioni]
+      required: [idScheda,sospensione]
       additionalProperties: false
       properties:
-         sospensioni:
-          description: Sospensioni
-          type: array
-          items:
-            $ref: '#/components/schemas/SospensioneType'           
+        idScheda: 
+          description: identificativo restituito dal servizio all’invio della scheda di sospensione
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
+        sospensione:
+          $ref: '#/components/schemas/SospensioneType'           
     SchedaRI1Type:
       description: Scheda di ripresa prestazioni
       type: object

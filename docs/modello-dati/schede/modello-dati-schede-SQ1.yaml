@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda SQ1 - Scheda di superamento del quarto del tempo contrattuale.
+  version: 1.0.0
+components:
+  schemas:
+    SospensioneType:
+      description: Oggetto che riporta tutti i dati delle Sospensioni
+      type: object
+      required: [dataSuperamento]
+      additionalProperties: false
+      properties:
+        dataSuperamento:
+          description: Data del superamento del quarto contrattuale
+          type: string
+          format: date-time
+    AnacFormSQ1Type:
+      description: Contiene tutti i dati relativi alla scheda di superamento del quarto del tempo contrattuale
+      type: object
+      required: [sospensione, idScheda]
+      additionalProperties: false
+      properties:
+        idScheda: 
+          description: identificativo restituito dal servizio all’invio della scheda di sospensione
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
+        sospensione:
+          $ref: '#/components/schemas/SospensioneType'           
+    SchedaSQ1Type:
+      description: Scheda di superamento del quarto del tempo contrattuale
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormSQ1Type'

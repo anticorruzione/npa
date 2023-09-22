@@ -7,14 +7,9 @@ components:
     AvanzamentoType:
       description: Oggetto che riporta tutti i dati di avanzamento del contratto 
       type: object
-      required: [idContratto,dataAvanzamento,impSal,denominazioneAvanzamento]
+      required: [dataAvanzamento,impSal,denominazioneAvanzamento]
       additionalProperties: false
       properties:
-        idContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         denominazioneAvanzamento: 
           description: Denominazione dello stato di avanzamento
           type: string
@@ -57,14 +52,16 @@ components:
     AnacFormSA1Type:
       description: Contiene tutti i dati relativi alla scheda di Avanzamenti
       type: object
-      required: [avanzamenti]
+      required: [avanzamento, idContratto]
       additionalProperties: false
       properties: 
-        avanzamenti:
-          description: dati di avanzamento
-          type: array
-          items:         
-           $ref: '#/components/schemas/AvanzamentoType'          
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
+        avanzamento:
+          $ref: '#/components/schemas/AvanzamentoType'          
     SchedaSA1Type:
       description: Scheda di avanzamento
       type: object

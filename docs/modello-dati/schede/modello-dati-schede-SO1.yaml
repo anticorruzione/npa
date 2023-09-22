@@ -7,14 +7,9 @@ components:
     SospensioneType:
       description: Oggetto che riporta tutti i dati delle Sospensioni
       type: object
-      required: [idContratto, dataVerbaleSospensione, motivoSospensione]
+      required: [dataVerbaleSospensione, motivoSospensione]
       additionalProperties: false
       properties:
-        idContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         sospensioneParziale: 
           description: La sospensione è parziale?
           type: boolean
@@ -27,14 +22,16 @@ components:
     AnacFormSO1Type:
       description: Contiene tutti i dati relativi alla scheda di Sospensione
       type: object
-      required: [sospensioni]
+      required: [sospensione, idContratto]
       additionalProperties: false
       properties:
-         sospensioni:
-          description: Sospensioni
-          type: array
-          items:
-            $ref: '#/components/schemas/SospensioneType'           
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
+        sospensione:
+          $ref: '#/components/schemas/SospensioneType'           
     SchedaSO1Type:
       description: Scheda di sospensione
       type: object
