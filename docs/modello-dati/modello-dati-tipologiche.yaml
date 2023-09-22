@@ -32,6 +32,18 @@ components:
             type: string
             format: date-time
             example: '2022-01-23T12:02:05Z'
+    TipologicaSchemaErroriType:
+        type: object
+        properties:
+          idTipologica:
+            type: string
+          codice:
+            type: string
+          dettaglio:
+            type: string            
+        required:
+          - idTipologica
+          - codice            
     I18NType:
         type: object
         properties:
@@ -152,6 +164,6 @@ components:
         - $ref: '#/components/schemas/TipologicaSchemaType'     
       description:  Codice della scheda - fare riferimento ai valori contenuti nel file [codiceScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codiceScheda.json)
     ErroriEnum:
-      allOf: # estende lo schema dati di TipologicaSchemaType
-        - $ref: '#/components/schemas/TipologicaSchemaType'     
+      allOf: # estende lo schema dati di TipologicaSchemaErroriType
+        - $ref: '#/components/schemas/TipologicaSchemaErroriType'     
       description:  Elenco Errori - fare riferimento ai valori contenuti nel file [errori.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/errori.json)

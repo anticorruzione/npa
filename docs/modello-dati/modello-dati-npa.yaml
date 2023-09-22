@@ -176,6 +176,7 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ES1.yaml#/components/schemas/SchedaES1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CS1.yaml#/components/schemas/SchedaCS1Type'              
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SO1.yaml#/components/schemas/SchedaSO1Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SQ1.yaml#/components/schemas/SchedaSQ1Type' 
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-RI1.yaml#/components/schemas/SchedaRI1Type'  
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AC1.yaml#/components/schemas/SchedaAC1Type'  
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-IR1.yaml#/components/schemas/SchedaIR1Type' 
@@ -554,10 +555,17 @@ components:
           idScheda:
             description: Identificativo univoco della Scheda definito da ANAC. (A UUID specified by RFC4122)
             format: uuid
+          idNuovaScheda:
+            description: Identificativo univoco della nuova Scheda definito da ANAC a seguito delle operazioni di modifica-avviso e rettifica-avviso. (A UUID specified by RFC4122)
+            format: uuid            
           idAvviso:
-            description: identificativo univoco dell'Avviso generato da ANAC, qualora il tipo di scheda lo consente, durante l'invocazione delle operazioni dispositive conferma-piano, conferma-appalto, conferma-scheda, modifica-avviso, rettifica-avviso.
+            description: identificativo univoco dell'Avviso generato da ANAC, qualora il tipo di scheda lo consente, durante l'invocazione delle operazioni dispositive conferma-piano, conferma-appalto, conferma-scheda.
             type: string
             format: uuid
+          idNuovoAvviso:
+            description: identificativo univoco del nuovo Avviso generato da ANAC a seguito delle operazioni di modifica-avviso e rettifica-avviso.
+            type: string
+            format: uuid            
           idContratto:
             description: identificativo univoco del Contratto generato da ANAC, qualora il tipo di scheda lo consente, durante l'invocazione dell' operazione dispositiva conferma-scheda.
             type: string
