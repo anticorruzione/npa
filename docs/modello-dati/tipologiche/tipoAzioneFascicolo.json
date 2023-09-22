@@ -1,40 +1,73 @@
 [{
     "codice":"01",
     "descrizione": {
-		"it": "aggiornamento fascicolo",
-		"en": "aggiornamento fascicolo"
+		"it": "Fascicolo aggiornato",
+		"en": "Fascicolo aggiornato"
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"02",
     "descrizione": {
-		"it": "chiusura fascicolo",
-		"en": "chiusura fascicolo"
+		"it": "Fascicolo chiuso",
+		"en": "Fascicolo chiuso"
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"03",
     "descrizione": {
-		"it": "inserimento documento",
-		"en": "inserimento documento"
+		"it": "Documento inserito",
+		"en": "Documento inserito"
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"04",
     "descrizione": {
-		"it": "aggiornamento documento",
-		"en": "aggiornamento documento"
+		"it": "SottoFascicolo Inserito",
+		"en": "SottoFascicolo Inserito"
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"05",
     "descrizione": {
-		"it": "cancellazione documento",
-		"en": "cancellazione documento"
+		"it": "Documento rimosso",
+		"en": "Documento rimosso"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"06",
+    "descrizione": {
+		"it": "Fascicolo inizializzato",
+		"en": "Fascicolo inizializzato"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"07",
+    "descrizione": {
+		"it": "SottoFascicolo Rimosso",
+		"en": "SottoFascicolo Rimosso"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"08",
+    "descrizione": {
+		"it": "FascicoloPadre Inserito",
+		"en": "FascicoloPadre Inserito"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"09",
+    "descrizione": {
+		"it": "FascicoloPadre Rimosso",
+		"en": "FascicoloPadre Rimosso"
 		},
     "dataInizio":null,
     "dataFine":null

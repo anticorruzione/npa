@@ -1,0 +1,49 @@
+[{
+    "codice":"001",
+    "descrizione": {
+		"it": "application/pdf",
+		"en": "application/pdf"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"002",
+    "descrizione": {
+		"it": "application/msword",
+ 		"en": "application/msword"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"003",
+    "descrizione": {
+		"it": "application/excel",
+ 		"en": "application/excel"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"004",
+    "descrizione": {
+		"it": "application/octet-stream",
+ 		"en": "application/octet-stream"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"005",
+    "descrizione": {
+		"it": "text/plain",
+ 		"en": "text/plain"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"006",
+    "descrizione": {
+		"it": "application/xml",
+ 		"en": "application/xml"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

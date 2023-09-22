@@ -298,8 +298,8 @@
 {
     "codice":"ERR34",
     "descrizione": {
-		"it": "valorizzare i parametri di ricerca obbligatori",
-		"en": "valorizzare i parametri di ricerca obbligatori"
+		"it": "verificare i criteri di ricerca",
+		"en": "verificare i criteri di ricerca"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -406,8 +406,8 @@
 {
     "codice":"ERR46",
     "descrizione": {
-		"it": "errore generico durante la validazione dell'eForm",
-		"en": "errore generico durante la validazione dell'eForm"
+		"it": "errore durante la validazione dell'eForm",
+		"en": "errore durante la validazione dell'eForm"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -555,6 +555,24 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR63",
+    "descrizione": {
+		"it": "tipologica non valida",
+		"en": "tipologica non valida"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR64",
+    "descrizione": {
+		"it": "errore TED",
+		"en": "errore TED"
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
 {
     "codice":"ERR9999",
@@ -676,8 +694,8 @@
 {
     "codice":"REG7",
     "descrizione": {
-		"it": "E’ stata selezionata la voce Somma urgenza e protezione civile di cui all’art. 163 co. 10 D. Lgs. 50/2016. E’ necessario valorizzare il campo linkDocumenti con la URL della sezione Bandi e Contratti dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC",
-		"en": "E’ stata selezionata la voce Somma urgenza e protezione civile di cui all’art. 163 co. 10 D. Lgs. 50/2016. E’ necessario valorizzare il campo linkDocumenti con la URL della sezione Bandi e Contratti dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC"
+		"it": "E’ stata selezionata la voce Somma urgenza e protezione civile di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il campo linkDocumenti con la URL della sezione Bandi e Contratti dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC",
+		"en": "E’ stata selezionata la voce Somma urgenza e protezione civile di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il campo linkDocumenti con la URL della sezione Bandi e Contratti dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -989,6 +1007,33 @@
     "dataFine":null
 },
 {
+    "codice":"REG47",
+    "descrizione": {
+		"it": "Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse",
+		"en": "Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG50",
+    "descrizione": {
+		"it": "Il valore del campo offertaEconomica non è coerente",
+		"en": "Il valore del campo offertaEconomica non è coerente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG51",
+    "descrizione": {
+		"it": "Richiesto almeno un valore tra offertaEconomica e offertaInAumento",
+		"en": "Richiesto almeno un valore tra offertaEconomica e offertaInAumento"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"REG52",
     "descrizione": {
 		"it": "Non è stato inserito l’importo dell’aggiudicatario",
@@ -1002,6 +1047,33 @@
     "descrizione": {
 		"it": "In caso di ditta mandante l’importo non è previsto",
 		"en": "In caso di ditta mandante l’importo non è previsto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG54",
+    "descrizione": {
+		"it": "Selezionare un motivo di revisione prezzi",
+		"en": "Selezionare un motivo di revisione prezzi"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG55",
+    "descrizione": {
+		"it": "In caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale",
+		"en": "In caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG56",
+    "descrizione": {
+		"it": "Il campo cignuovaProcedura non è previsto",
+		"en": "Il campo cignuovaProcedura non è previsto"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1038,6 +1110,15 @@
     "descrizione": {
 		"it": "Non è stato indicato il valore dell’importo componente forniture nel quadro economico delle concessioni",
 		"en": "Non è stato indicato il valore dell’importo componente forniture nel quadro economico delle concessioni"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG77",
+    "descrizione": {
+		"it": "La data di scadenza del contratto deve essere superiore alla data di stipula.",
+		"en": "La data di scadenza del contratto deve essere superiore alla data di stipula."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1626,4 +1707,13 @@
    },
    "dataInizio":null,
    "dataFine":null   
+},
+{
+   "codice":"FVX30",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Rimuovi Documento - Non Disponibile",
+       "en": "Errore Servizio esterno. Rimuovi Documento - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
 }]

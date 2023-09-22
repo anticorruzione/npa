@@ -1,1 +1,2124 @@
-Fare riferimento alla tabella di codifica della Nomenclatura delle unità territoriali per la Statistica elaborato da EUROSTAT e disponibile sul sito della comunità europea per il monitoraggio degli appalti (SIMAP)
+[{
+    "codice":"999",
+    "descrizione": {
+		"it": "NON CLASSIFICATO",
+		"en": "NON CLASSIFICATO"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AT",
+    "descrizione": {
+		"it": "AUSTRIA",
+		"en": "AUSTRIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BE",
+    "descrizione": {
+		"it": "BELGIO",
+		"en": "BELGIO"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"BG",
+    "descrizione": {
+		"it": "BULGARIA",
+		"en": "BULGARIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CH",
+    "descrizione": {
+		"it": "SVIZZERA",
+		"en": "SVIZZERA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CY",
+    "descrizione": {
+		"it": "CIPRO",
+		"en": "CIPRO"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CZ",
+    "descrizione": {
+		"it": "REPUBBLICA CECA",
+		"en": "REPUBBLICA CECA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"DE",
+    "descrizione": {
+		"it": "GERMANIA",
+		"en": "GERMANIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"DK",
+    "descrizione": {
+		"it": "DANIMARCA",
+		"en": "DANIMARCA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"EE",
+    "descrizione": {
+		"it": "ESTONIA",
+		"en": "ESTONIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ES",
+    "descrizione": {
+		"it": "SPAGNA",
+		"en": "SPAGNA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FI",
+    "descrizione": {
+		"it": "FINLANDIA",
+		"en": "FINLANDIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"FR",
+    "descrizione": {
+		"it": "FRANCIA",
+		"en": "FRANCIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"GB",
+    "descrizione": {
+		"it": "REGNO UNITO",
+		"en": "REGNO UNITO"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"GR",
+    "descrizione": {
+		"it": "GRECIA",
+		"en": "GRECIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"HR",
+    "descrizione": {
+		"it": "CROAZIA",
+		"en": "CROAZIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"HU",
+    "descrizione": {
+		"it": "UNGHERIA",
+		"en": "UNGHERIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"IE",
+    "descrizione": {
+		"it": "IRLANDA",
+		"en": "IRLANDA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"IS",
+    "descrizione": {
+		"it": "ISLANDA",
+		"en": "ISLANDA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"IT",
+    "descrizione": {
+		"it": "ITALIA",
+		"en": "ITALIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC",
+    "descrizione": {
+		"it": "NORD-OVEST",
+		"en": "NORD-OVEST"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC1",
+    "descrizione": {
+		"it": "Piemonte",
+		"en": "Piemonte"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC11",
+    "descrizione": {
+		"it": "Torino",
+		"en": "Torino"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC12",
+    "descrizione": {
+		"it": "Vercelli",
+		"en": "Vercelli"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC13",
+    "descrizione": {
+		"it": "Biella",
+		"en": "Biella"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC14",
+    "descrizione": {
+		"it": "Verbano-Cusio-Ossola",
+		"en": "Verbano-Cusio-Ossola"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC15",
+    "descrizione": {
+		"it": "Novara",
+		"en": "Novara"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC16",
+    "descrizione": {
+		"it": "Cuneo",
+		"en": "Cuneo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC17",
+    "descrizione": {
+		"it": "Asti",
+		"en": "Asti"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC18",
+    "descrizione": {
+		"it": "Alessandria",
+		"en": "Alessandria"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC2",
+    "descrizione": {
+		"it": "Valle d'Aosta/Vallée d'Aoste",
+		"en": "Valle d'Aosta/Vallée d'Aoste"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC20",
+    "descrizione": {
+		"it": "Valle d'Aosta/Vallée d'Aoste",
+		"en": "Valle d'Aosta/Vallée d'Aoste"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC3",
+    "descrizione": {
+		"it": "Liguria",
+		"en": "Liguria"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC31",
+    "descrizione": {
+		"it": "Imperia",
+		"en": "Imperia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC32",
+    "descrizione": {
+		"it": "Savona",
+		"en": "Savona"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC33",
+    "descrizione": {
+		"it": "Genova",
+		"en": "Genova"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC34",
+    "descrizione": {
+		"it": "La Spezia",
+		"en": "La Spezia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC4",
+    "descrizione": {
+		"it": "Lombardia",
+		"en": "Lombardia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC41",
+    "descrizione": {
+		"it": "Varese",
+		"en": "Varese"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC42",
+    "descrizione": {
+		"it": "Como",
+		"en": "Como"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC43",
+    "descrizione": {
+		"it": "Lecco",
+		"en": "Lecco"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC44",
+    "descrizione": {
+		"it": "Sondrio",
+		"en": "Sondrio"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC45",
+    "descrizione": {
+		"it": "Milano",
+		"en": "Milano"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITC46",
+    "descrizione": {
+		"it": "Bergamo",
+		"en": "Bergamo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC47",
+    "descrizione": {
+		"it": "Brescia",
+		"en": "Brescia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC48",
+    "descrizione": {
+		"it": "Pavia",
+		"en": "Pavia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC49",
+    "descrizione": {
+		"it": "Lodi",
+		"en": "Lodi"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC4A",
+    "descrizione": {
+		"it": "Cremona",
+		"en": "Cremona"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC4B",
+    "descrizione": {
+		"it": "Mantova",
+		"en": "Mantova"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITC4C",
+    "descrizione": {
+		"it": "Milano",
+		"en": "Milano"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITC4D",
+    "descrizione": {
+		"it": "Monza e della Brianza",
+		"en": "Monza e della Brianza"
+		},
+    "dataInizio":"2018-04-11T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITD",
+    "descrizione": {
+		"it": "NORD-EST",
+		"en": "NORD-EST"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD1",
+    "descrizione": {
+		"it": "Trentino-Alto Adige/Südtirol",
+		"en": "Trentino-Alto Adige/Südtirol"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD10",
+    "descrizione": {
+		"it": "Bolzano/Bozen",
+		"en": "Bolzano/Bozen"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD2",
+    "descrizione": {
+		"it": "Trentino-Alto Adige/Südtirol",
+		"en": "Trentino-Alto Adige/Südtirol"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD20",
+    "descrizione": {
+		"it": "Trento",
+		"en": "Trento"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD3",
+    "descrizione": {
+		"it": "Veneto",
+		"en": "Veneto"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD31",
+    "descrizione": {
+		"it": "Verona",
+		"en": "Verona"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD32",
+    "descrizione": {
+		"it": "Vicenza",
+		"en": "Vicenza"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD33",
+    "descrizione": {
+		"it": "Belluno",
+		"en": "Belluno"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD34",
+    "descrizione": {
+		"it": "Treviso",
+		"en": "Treviso"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD35",
+    "descrizione": {
+		"it": "Venezia",
+		"en": "Venezia"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD36",
+    "descrizione": {
+		"it": "Padova",
+		"en": "Padova"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD37",
+    "descrizione": {
+		"it": "Rovigo",
+		"en": "Rovigo"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD4",
+    "descrizione": {
+		"it": "Friuli-Venezia Giulia",
+		"en": "Friuli-Venezia Giulia"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD41",
+    "descrizione": {
+		"it": "Pordenone",
+		"en": "Pordenone"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD42",
+    "descrizione": {
+		"it": "Udine",
+		"en": "Udine"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD43",
+    "descrizione": {
+		"it": "Gorizia",
+		"en": "Gorizia"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD44",
+    "descrizione": {
+		"it": "Trieste",
+		"en": "Trieste"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD5",
+    "descrizione": {
+		"it": "Emilia-Romagna",
+		"en": "Emilia-Romagna"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD51",
+    "descrizione": {
+		"it": "Piacenza",
+		"en": "Piacenza"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD52",
+    "descrizione": {
+		"it": "Parma",
+		"en": "Parma"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD53",
+    "descrizione": {
+		"it": "Reggio nell'Emilia",
+		"en": "Reggio nell'Emilia"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD54",
+    "descrizione": {
+		"it": "Modena",
+		"en": "Modena"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD55",
+    "descrizione": {
+		"it": "Bologna",
+		"en": "Bologna"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD56",
+    "descrizione": {
+		"it": "Ferrara",
+		"en": "Ferrara"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD57",
+    "descrizione": {
+		"it": "Ravenna",
+		"en": "Ravenna"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD58",
+    "descrizione": {
+		"it": "Forlì-Cesena",
+		"en": "Forlì-Cesena"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITD59",
+    "descrizione": {
+		"it": "Rimini",
+		"en": "Rimini"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE",
+    "descrizione": {
+		"it": "Centro",
+		"en": "Centro"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE1",
+    "descrizione": {
+		"it": "Toscana",
+		"en": "Toscana"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE11",
+    "descrizione": {
+		"it": "Massa-Carrara",
+		"en": "Massa-Carrara"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE12",
+    "descrizione": {
+		"it": "Lucca",
+		"en": "Lucca"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE13",
+    "descrizione": {
+		"it": "Pistoia",
+		"en": "Pistoia"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE14",
+    "descrizione": {
+		"it": "Firenze",
+		"en": "Firenze"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE15",
+    "descrizione": {
+		"it": "Prato",
+		"en": "Prato"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE16",
+    "descrizione": {
+		"it": "Livorno",
+		"en": "Livorno"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE17",
+    "descrizione": {
+		"it": "Pisa",
+		"en": "Pisa"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE18",
+    "descrizione": {
+		"it": "Arezzo",
+		"en": "Arezzo"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE19",
+    "descrizione": {
+		"it": "Siena",
+		"en": "Siena"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE1A",
+    "descrizione": {
+		"it": "Grosseto",
+		"en": "Grosseto"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE2",
+    "descrizione": {
+		"it": "Umbria",
+		"en": "Umbria"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE21",
+    "descrizione": {
+		"it": "Perugia",
+		"en": "Perugia"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE22",
+    "descrizione": {
+		"it": "Terni",
+		"en": "Terni"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE3",
+    "descrizione": {
+		"it": "Marche",
+		"en": "Marche"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE31",
+    "descrizione": {
+		"it": "Pesaro e Urbino",
+		"en": "Pesaro e Urbino"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE32",
+    "descrizione": {
+		"it": "Ancona",
+		"en": "Ancona"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE33",
+    "descrizione": {
+		"it": "Macerata",
+		"en": "Macerata"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE34",
+    "descrizione": {
+		"it": "Ascoli Piceno",
+		"en": "Ascoli Piceno"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE4",
+    "descrizione": {
+		"it": "Lazio",
+		"en": "Lazio"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE41",
+    "descrizione": {
+		"it": "Viterbo",
+		"en": "Viterbo"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE42",
+    "descrizione": {
+		"it": "Rieti",
+		"en": "Rieti"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE43",
+    "descrizione": {
+		"it": "Roma",
+		"en": "Roma"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE44",
+    "descrizione": {
+		"it": "Latina",
+		"en": "Latina"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITE45",
+    "descrizione": {
+		"it": "Frosinone",
+		"en": "Frosinone"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITF",
+    "descrizione": {
+		"it": "SUD",
+		"en": "SUD"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF1",
+    "descrizione": {
+		"it": "Abruzzo",
+		"en": "Abruzzo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF11",
+    "descrizione": {
+		"it": "L'Aquila",
+		"en": "L'Aquila"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF12",
+    "descrizione": {
+		"it": "Teramo",
+		"en": "Teramo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF13",
+    "descrizione": {
+		"it": "Pescara",
+		"en": "Pescara"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF14",
+    "descrizione": {
+		"it": "Chieti",
+		"en": "Chieti"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF2",
+    "descrizione": {
+		"it": "Molise",
+		"en": "Molise"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF21",
+    "descrizione": {
+		"it": "Isernia",
+		"en": "Isernia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF22",
+    "descrizione": {
+		"it": "Campobasso",
+		"en": "Campobasso"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF3",
+    "descrizione": {
+		"it": "Campania",
+		"en": "Campania"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF31",
+    "descrizione": {
+		"it": "Caserta",
+		"en": "Caserta"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF32",
+    "descrizione": {
+		"it": "Benevento",
+		"en": "Benevento"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF33",
+    "descrizione": {
+		"it": "Napoli",
+		"en": "Napoli"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF34",
+    "descrizione": {
+		"it": "Avellino",
+		"en": "Avellino"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF35",
+    "descrizione": {
+		"it": "Salerno",
+		"en": "Salerno"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF4",
+    "descrizione": {
+		"it": "Puglia",
+		"en": "Puglia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF41",
+    "descrizione": {
+		"it": "Foggia",
+		"en": "Foggia"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITF42",
+    "descrizione": {
+		"it": "Bari",
+		"en": "Bari"
+		},
+    "dataInizio":null,
+    "dataFine":"2017-07-05T00:00:00Z"
+},
+{
+    "codice":"ITF43",
+    "descrizione": {
+		"it": "Taranto",
+		"en": "Taranto"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF44",
+    "descrizione": {
+		"it": "Brindisi",
+		"en": "Brindisi"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF45",
+    "descrizione": {
+		"it": "Lecce",
+		"en": "Lecce"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF46",
+    "descrizione": {
+		"it": "Foggia",
+		"en": "Foggia"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITF47",
+    "descrizione": {
+		"it": "Bari",
+		"en": "Bari"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITF48",
+    "descrizione": {
+		"it": "Barletta-Andria-Trani",
+		"en": "Barletta-Andria-Trani"
+		},
+    "dataInizio":"2018-04-11T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITF5",
+    "descrizione": {
+		"it": "Basilicata",
+		"en": "Basilicata"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF51",
+    "descrizione": {
+		"it": "Potenza",
+		"en": "Potenza"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF52",
+    "descrizione": {
+		"it": "Matera",
+		"en": "Matera"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF6",
+    "descrizione": {
+		"it": "Calabria",
+		"en": "Calabria"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF61",
+    "descrizione": {
+		"it": "Cosenza",
+		"en": "Cosenza"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF62",
+    "descrizione": {
+		"it": "Crotone",
+		"en": "Crotone"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF63",
+    "descrizione": {
+		"it": "Catanzaro",
+		"en": "Catanzaro"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF64",
+    "descrizione": {
+		"it": "Vibo Valentia",
+		"en": "Vibo Valentia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITF65",
+    "descrizione": {
+		"it": "Reggio Calabria",
+		"en": "Reggio Calabria"
+		},
+    "dataInizio":"1900-01-01T00:00:00Z",
+    "dataFine":"1900-01-01T00:00:00Z"
+},
+{
+    "codice":"ITG",
+    "descrizione": {
+		"it": "ISOLE",
+		"en": "ISOLE"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG1",
+    "descrizione": {
+		"it": "Sicilia",
+		"en": "Sicilia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG11",
+    "descrizione": {
+		"it": "Trapani",
+		"en": "Trapani"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG12",
+    "descrizione": {
+		"it": "Palermo",
+		"en": "Palermo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG13",
+    "descrizione": {
+		"it": "Messina",
+		"en": "Messina"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG14",
+    "descrizione": {
+		"it": "Agrigento",
+		"en": "Agrigento"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG15",
+    "descrizione": {
+		"it": "Caltanissetta",
+		"en": "Caltanissetta"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG16",
+    "descrizione": {
+		"it": "Enna",
+		"en": "Enna"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG17",
+    "descrizione": {
+		"it": "Catania",
+		"en": "Catania"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG18",
+    "descrizione": {
+		"it": "Ragusa",
+		"en": "Ragusa"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG19",
+    "descrizione": {
+		"it": "Siracusa",
+		"en": "Siracusa"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG2",
+    "descrizione": {
+		"it": "Sardegna",
+		"en": "Sardegna"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITG25",
+    "descrizione": {
+		"it": "Sassari",
+		"en": "Sassari"
+		},
+    "dataInizio":null,
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG26",
+    "descrizione": {
+		"it": "Nuoro",
+		"en": "Nuoro"
+		},
+    "dataInizio":null,
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG27",
+    "descrizione": {
+		"it": "Cagliari",
+		"en": "Cagliari"
+		},
+    "dataInizio":null,
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG28",
+    "descrizione": {
+		"it": "Oristano",
+		"en": "Oristano"
+		},
+    "dataInizio":null,
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG29",
+    "descrizione": {
+		"it": "Olbia-Tempio",
+		"en": "Olbia-Tempio"
+		},
+    "dataInizio":"2017-07-23T00:00:00Z",
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG2A",
+    "descrizione": {
+		"it": "Ogliastra",
+		"en": "Ogliastra"
+		},
+    "dataInizio":"2017-07-23T00:00:00Z",
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG2B",
+    "descrizione": {
+		"it": "Medio Campidano",
+		"en": "Medio Campidano"
+		},
+    "dataInizio":"2017-07-23T00:00:00Z",
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG2C",
+    "descrizione": {
+		"it": "Carbonia-Iglesias",
+		"en": "Carbonia-Iglesias"
+		},
+    "dataInizio":null,
+    "dataFine":"2021-07-05T00:00:00Z"
+},
+{
+    "codice":"ITG2D",
+    "descrizione": {
+		"it": "Sassari",
+		"en": "Sassari"
+		},
+    "dataInizio":"2021-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITG2E",
+    "descrizione": {
+		"it": "Nuoro",
+		"en": "Nuoro"
+		},
+    "dataInizio":"2021-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITG2F",
+    "descrizione": {
+		"it": "Cagliari",
+		"en": "Cagliari"
+		},
+    "dataInizio":"2021-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITG2G",
+    "descrizione": {
+		"it": "Oristano",
+		"en": "Oristano"
+		},
+    "dataInizio":"2021-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITG2H",
+    "descrizione": {
+		"it": "Sud Sardegna",
+		"en": "Sud Sardegna"
+		},
+    "dataInizio":"2021-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH",
+    "descrizione": {
+		"it": "NORD-EST",
+		"en": "NORD-EST"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH1",
+    "descrizione": {
+		"it": "Trentino-Alto Adige/Südtirol",
+		"en": "Trentino-Alto Adige/Südtirol"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":"1900-01-01T00:00:00Z"
+},
+{
+    "codice":"ITH10",
+    "descrizione": {
+		"it": "Bolzano/Bozen",
+		"en": "Bolzano/Bozen"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH2",
+    "descrizione": {
+		"it": "Trentino-Alto Adige/Südtirol",
+		"en": "Trentino-Alto Adige/Südtirol"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":"1900-01-01T00:00:00Z"
+},
+{
+    "codice":"ITH20",
+    "descrizione": {
+		"it": "Trento",
+		"en": "Trento"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH3",
+    "descrizione": {
+		"it": "Veneto",
+		"en": "Veneto"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH31",
+    "descrizione": {
+		"it": "Verona",
+		"en": "Verona"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH32",
+    "descrizione": {
+		"it": "Vicenza",
+		"en": "Vicenza"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH33",
+    "descrizione": {
+		"it": "Belluno",
+		"en": "Belluno"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH34",
+    "descrizione": {
+		"it": "Treviso",
+		"en": "Treviso"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH35",
+    "descrizione": {
+		"it": "Venezia",
+		"en": "Venezia"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH36",
+    "descrizione": {
+		"it": "Padova",
+		"en": "Padova"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH37",
+    "descrizione": {
+		"it": "Rovigo",
+		"en": "Rovigo"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH4",
+    "descrizione": {
+		"it": "Friuli-Venezia Giulia",
+		"en": "Friuli-Venezia Giulia"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH41",
+    "descrizione": {
+		"it": "Pordenone",
+		"en": "Pordenone"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH42",
+    "descrizione": {
+		"it": "Udine",
+		"en": "Udine"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH43",
+    "descrizione": {
+		"it": "Gorizia",
+		"en": "Gorizia"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH44",
+    "descrizione": {
+		"it": "Trieste",
+		"en": "Trieste"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH5",
+    "descrizione": {
+		"it": "Emilia-Romagna",
+		"en": "Emilia-Romagna"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH51",
+    "descrizione": {
+		"it": "Piacenza",
+		"en": "Piacenza"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH52",
+    "descrizione": {
+		"it": "Parma",
+		"en": "Parma"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH53",
+    "descrizione": {
+		"it": "Reggio nell'Emilia",
+		"en": "Reggio nell'Emilia"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH54",
+    "descrizione": {
+		"it": "Modena",
+		"en": "Modena"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH55",
+    "descrizione": {
+		"it": "Bologna",
+		"en": "Bologna"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH56",
+    "descrizione": {
+		"it": "Ferrara",
+		"en": "Ferrara"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH57",
+    "descrizione": {
+		"it": "Ravenna",
+		"en": "Ravenna"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH58",
+    "descrizione": {
+		"it": "Forlì-Cesena",
+		"en": "Forlì-Cesena"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITH59",
+    "descrizione": {
+		"it": "Rimini",
+		"en": "Rimini"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI",
+    "descrizione": {
+		"it": "Centro",
+		"en": "Centro"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI1",
+    "descrizione": {
+		"it": "Toscana",
+		"en": "Toscana"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI11",
+    "descrizione": {
+		"it": "Massa-Carrara",
+		"en": "Massa-Carrara"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI12",
+    "descrizione": {
+		"it": "Lucca",
+		"en": "Lucca"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI13",
+    "descrizione": {
+		"it": "Pistoia",
+		"en": "Pistoia"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI14",
+    "descrizione": {
+		"it": "Firenze",
+		"en": "Firenze"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI15",
+    "descrizione": {
+		"it": "Prato",
+		"en": "Prato"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI16",
+    "descrizione": {
+		"it": "Livorno",
+		"en": "Livorno"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI17",
+    "descrizione": {
+		"it": "Pisa",
+		"en": "Pisa"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI18",
+    "descrizione": {
+		"it": "Arezzo",
+		"en": "Arezzo"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI19",
+    "descrizione": {
+		"it": "Siena",
+		"en": "Siena"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI1A",
+    "descrizione": {
+		"it": "Grosseto",
+		"en": "Grosseto"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI2",
+    "descrizione": {
+		"it": "Umbria",
+		"en": "Umbria"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI21",
+    "descrizione": {
+		"it": "Perugia",
+		"en": "Perugia"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI22",
+    "descrizione": {
+		"it": "Terni",
+		"en": "Terni"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI3",
+    "descrizione": {
+		"it": "Marche",
+		"en": "Marche"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI31",
+    "descrizione": {
+		"it": "Pesaro e Urbino",
+		"en": "Pesaro e Urbino"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI32",
+    "descrizione": {
+		"it": "Ancona",
+		"en": "Ancona"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI33",
+    "descrizione": {
+		"it": "Macerata",
+		"en": "Macerata"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI34",
+    "descrizione": {
+		"it": "Ascoli Piceno",
+		"en": "Ascoli Piceno"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI35",
+    "descrizione": {
+		"it": "Fermo",
+		"en": "Fermo"
+		},
+    "dataInizio":"2018-04-11T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI4",
+    "descrizione": {
+		"it": "Lazio",
+		"en": "Lazio"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI41",
+    "descrizione": {
+		"it": "Viterbo",
+		"en": "Viterbo"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI42",
+    "descrizione": {
+		"it": "Rieti",
+		"en": "Rieti"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI43",
+    "descrizione": {
+		"it": "Roma",
+		"en": "Roma"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI44",
+    "descrizione": {
+		"it": "Latina",
+		"en": "Latina"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITI45",
+    "descrizione": {
+		"it": "Frosinone",
+		"en": "Frosinone"
+		},
+    "dataInizio":"2017-07-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"ITZ",
+    "descrizione": {
+		"it": "EXTRA-REGIO NUTS 1",
+		"en": "EXTRA-REGIO NUTS 1"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITZZ",
+    "descrizione": {
+		"it": "Extra-Regio NUTS 2",
+		"en": "Extra-Regio NUTS 2"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ITZZZ",
+    "descrizione": {
+		"it": "Extra-Regio NUTS 3",
+		"en": "Extra-Regio NUTS 3"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"LI",
+    "descrizione": {
+		"it": "LIECHTENSTEIN",
+		"en": "LIECHTENSTEIN"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"LT",
+    "descrizione": {
+		"it": "LITUANIA",
+		"en": "LITUANIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"LU",
+    "descrizione": {
+		"it": "LUSSEMBURGO",
+		"en": "LUSSEMBURGO"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"LV",
+    "descrizione": {
+		"it": "LETTONIA",
+		"en": "LETTONIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"MK",
+    "descrizione": {
+		"it": "MACEDONIA DEL NORD",
+		"en": "MACEDONIA DEL NORD"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"MT",
+    "descrizione": {
+		"it": "MALTA",
+		"en": "MALTA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"NL",
+    "descrizione": {
+		"it": "PAESI BASSI",
+		"en": "PAESI BASSI"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"NO",
+    "descrizione": {
+		"it": "NORVEGIA",
+		"en": "NORVEGIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PL",
+    "descrizione": {
+		"it": "POLONIA",
+		"en": "POLONIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PT",
+    "descrizione": {
+		"it": "PORTOGALLO",
+		"en": "PORTOGALLO"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"RO",
+    "descrizione": {
+		"it": "ROMANIA",
+		"en": "ROMANIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SE",
+    "descrizione": {
+		"it": "SVEZIA",
+		"en": "SVEZIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SI",
+    "descrizione": {
+		"it": "SLOVENIA",
+		"en": "SLOVENIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SK",
+    "descrizione": {
+		"it": "SLOVACCHIA",
+		"en": "SLOVACCHIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"TR",
+    "descrizione": {
+		"it": "TURCHIA",
+		"en": "TURCHIA"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

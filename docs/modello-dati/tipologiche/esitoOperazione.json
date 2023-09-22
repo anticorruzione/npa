@@ -368,28 +368,10 @@
     "dataFine":null
 },
 {
-    "codice":"AV_IN_MOD",
-    "descrizione": {
-		"it": "Avviso in modifica",
-		"en": "Avviso in modifica"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
     "codice":"AV_RICHIESTA_MOD_IN_CORSO",
     "descrizione": {
 		"it": "Richiesta modifica avviso in corso",
 		"en": "Richiesta modifica avviso in corso"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},	
-{
-    "codice":"AV_N_MOD",
-    "descrizione": {
-		"it": "Avviso non modificato",
-		"en": "Avviso non modificato"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -404,28 +386,10 @@
     "dataFine":null
 },
 {
-    "codice":"AV_IN_RETT",
-    "descrizione": {
-		"it": "Avviso in rettifica",
-		"en": "Avviso in rettifica"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
     "codice":"AV_RICHIESTA_RETT_IN_CORSO",
     "descrizione": {
 		"it": "Richiesta rettifica avviso in corso",
 		"en": "Richiesta rettifica avviso in corso"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},	
-{
-    "codice":"AV_N_RETT",
-    "descrizione": {
-		"it": "Avviso non rettificato",
-		"en": "Avviso non rettificato"
 	},
     "dataInizio":null,
     "dataFine":null

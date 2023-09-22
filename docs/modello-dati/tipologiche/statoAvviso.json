@@ -51,4 +51,22 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"MOD",
+    "descrizione": {
+		"it": "Modificato",
+		"en": "Modificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"RETT",
+    "descrizione": {
+		"it": "Rettificato",
+		"en": "Rettificato"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]
