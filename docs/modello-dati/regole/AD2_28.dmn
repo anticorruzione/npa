@@ -7,7 +7,7 @@
     <informationRequirement id="InformationRequirement_182tifx">
       <requiredInput href="#InputData_15b23jq" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_139vsny" hitPolicy="COLLECT" biodi:annotationsWidth="552">
+    <decisionTable id="DecisionTable_139vsny" biodi:annotationsWidth="552" hitPolicy="COLLECT">
       <input id="InputClause_0doc50a" biodi:width="241">
         <inputExpression id="LiteralExpression_0j2dtdc" typeRef="string">
           <text>appalto</text>
@@ -20,7 +20,7 @@
       </input>
       <output id="OutputClause_0ah2sls" name="Errore" typeRef="string" biodi:width="382" />
       <rule id="DecisionRule_1osq1ip">
-        <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 163 co. 10 D. Lgs. 50/2016. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
+        <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_0uj5s08">
           <text>appalto.motivoUrgenza.codice = "2"</text>
         </inputEntry>

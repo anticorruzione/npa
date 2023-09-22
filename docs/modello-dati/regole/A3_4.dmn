@@ -32,6 +32,125 @@
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1q1v8zv">
+        <description>REG32: Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</description>
+        <inputEntry id="UnaryTests_1cfv9sx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kofjli">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0toysl9">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mywbzz">
+        <description>REG33: Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</description>
+        <inputEntry id="UnaryTests_0p01pro">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c84e22">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sje13v">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09cj6b9">
+        <description>REG34: Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_0lfqk8m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0plzbdd">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoStandard.impLavori = null or number(aggiudicazione.quadroEconomicoStandard.impLavori) = 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dguq1d">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pi5m56">
+        <description>REG35: Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_1ofdv6c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_010adaz">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoStandard.impServizi = null or number(aggiudicazione.quadroEconomicoStandard.impServizi) = 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k5iekl">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q3e80r">
+        <description>REG36: Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_1wlr5kc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ppth6y">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoStandard.impForniture = null or number(aggiudicazione.quadroEconomicoStandard.impForniture) = 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mbddq9">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1375p7w">
+        <description>REG47: Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</description>
+        <inputEntry id="UnaryTests_0an2yyy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1extrxn">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOfferteAmmesse)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01kmogs">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG47\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mzon1b">
+        <description>REG50: Il valore del campo “offertaEconomica” non è coerente</description>
+        <inputEntry id="UnaryTests_0ogv8jb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x5logn">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (some offerta in aggiudicazione.offertePresentate 
+satisfies offerta.offertaEconomica &lt; 0 OR offerta.offertaEconomica &gt; 100) </text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aiqqkm">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG50\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0a8jibc">
+        <description>REG51: Richiesto almeno un valore tra offertaEconomica e offertaInAumento</description>
+        <inputEntry id="UnaryTests_0jr5sv8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_058nzm7">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (count(aggiudicazione.offertePresentate) = 1 AND some offerta in aggiudicazione.offertePresentate 
+satisfies offerta.offertaInAumento = 0 AND offerta.offertaEconomica = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rivwtj">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG51\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uku76x">
+        <description>REG52: Non è stato inserito l’importo dell’aggiudicatario</description>
+        <inputEntry id="UnaryTests_0zn2el7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h500t2">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ttgkpq">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

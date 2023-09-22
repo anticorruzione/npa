@@ -32,6 +32,45 @@
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1m88jp0">
+        <description>REG32: Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</description>
+        <inputEntry id="UnaryTests_0wvph7k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03vcwnf">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_018nd8u">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uzuuqy">
+        <description>REG33: Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</description>
+        <inputEntry id="UnaryTests_0h5ad7e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cn7le3">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00uhoql">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pvtsp0">
+        <description>REG52: Non è stato inserito l’importo dell’aggiudicatario</description>
+        <inputEntry id="UnaryTests_1jnwu59">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yzqoju">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ekmbnf">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

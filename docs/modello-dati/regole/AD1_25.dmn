@@ -22,7 +22,7 @@
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
       <rule id="DecisionRule_AD1_10_0020">
-        <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 163 co. 10 D. Lgs. 50/2016. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
+        <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_AD1_10_0061">
           <text>appalto.motivoUrgenza.codice = "2"</text>
         </inputEntry>
