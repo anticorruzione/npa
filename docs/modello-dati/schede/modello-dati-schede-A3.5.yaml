@@ -22,7 +22,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [numeroOfferteAmmesse]
+      required: [numeroOfferteAmmesse, cig]
       properties: 
         cig:
           description: codice identificativo lotto

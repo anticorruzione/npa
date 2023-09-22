@@ -8,6 +8,7 @@ components:
       description: dati relativi ai lotti
       type: object
       additionalProperties: false
+      required: [cig]
       properties: 
         cig:
           description: codice identificativo lotto
@@ -22,6 +23,7 @@ components:
       description: Contiene tutti i dati relativi alla mancata aggiudicazione della gara - sotto soglia europea
       type: object
       additionalProperties: false
+      required: [lotti]
       properties:
         lotti: 
           type: array

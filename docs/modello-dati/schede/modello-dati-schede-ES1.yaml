@@ -7,14 +7,8 @@ components:
     SubappaltoType:
       description: Dati relativi ai subappalti
       type: object
-      required: [idContratto]
       additionalProperties: false
       properties:    
-        idContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         dataAutorizzazione: 
           description: Data di autorizzazione del subappalto
           type: string
@@ -24,13 +18,16 @@ components:
     AnacFormES1Type:
       description: Contiene tutti i dati relativi alla scheda di Richiesta di Subappalto
       type: object
-      required: [subappalti]
+      required: [subappalto, idScheda]
       additionalProperties: false
       properties: 
-        subappalti:
-          type: array
-          items:
-            $ref: '#/components/schemas/SubappaltoType'
+        idScheda:
+          description: identificativo restituito dal servizio all’invio della scheda di richiesta di subappalto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
+        subappalto:
+          $ref: '#/components/schemas/SubappaltoType'
     SchedaES1Type:
       description: Scheda di esito subappalto
       type: object

@@ -21,6 +21,7 @@ components:
     AggiudicazioneA2_31Type: 
       type: object
       additionalProperties: false
+      required: [cig]
       properties:  
         cig:
           description: codice identificativo lotto

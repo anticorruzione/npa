@@ -11,7 +11,7 @@ components:
     FunzioniDelegateEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file [funzioniDelegate.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniDelegate.json)
+      description: Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file [funzioniSvolte.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json)
     CategorieMerceologicheEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'
@@ -31,7 +31,7 @@ components:
     PrestazioniEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Prestazioni comprese nell'appalto - fare riferimento ai valori contenuti nel file [prestazioni.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/prestazioni.json)
+      description: Prestazioni comprese nell'appalto - fare riferimento ai valori contenuti nel file [prestazioniComprese.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/prestazioniComprese.json)
     CondizioniNegoziataEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -39,7 +39,7 @@ components:
     GiustificazioneAggiudicazioneDirettaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Giustificazione del ricorso a una procedura che consente di aggiudicare appalti direttamente, vale a dire che non impone la pubblicazione di un avviso di indizione di gara nella Gazzetta ufficiale dell'Unione europea - corrisponde al campo bt-136 - Direct Award Justification Code del TED - fare riferimento ai valori contenuti nel file [giustificazioneAggiudicazioneDiretta.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioneAggiudicazioneDiretta.json) 
+      description: Giustificazione del ricorso a una procedura che consente di aggiudicare appalti direttamente, vale a dire che non impone la pubblicazione di un avviso di indizione di gara nella Gazzetta ufficiale dell'Unione europea - corrisponde al campo bt-136 - Direct Award Justification Code del TED - fare riferimento ai valori contenuti nel file [giustificazioniAggiudicazioneDiretta.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioniAggiudicazioneDiretta.json) 
     ContrattiDisposizioniParticolariEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -159,15 +159,15 @@ components:
     EsitoProceduraEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Esito procedura - corrisponde al campo bt-142 - Winner Chosen del TED - fare riferimento ai valori contenuti nel file [esitoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProcedura.json) 
+      description: Esito procedura - corrisponde al campo bt-142 - Winner Chosen del TED - fare riferimento ai valori contenuti nel file [esito.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esito.json) 
     GiustificazioneEsitoProceduraEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Giustificazione esito procedura - corrisponde al campo bt-144 - Not Awarded Reason del TED - fare riferimento ai valori contenuti nel file [giustificazioneEsitoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioneEsitoProcedura.json) 
+      description: Giustificazione esito procedura - corrisponde al campo bt-144 - Not Awarded Reason del TED - fare riferimento ai valori contenuti nel file [giustificazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazione.json) 
     MotiviModificaContrattualeEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Motivi modifica contrattuale - corrisponde al campo bt-200 - Modification Reason Code del TED - fare riferimento ai valori contenuti nel file [motiviModificaContrattuale.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviModificaContrattuale.json) 
+      description: Motivi modifica contrattuale - corrisponde al campo bt-200 - Modification Reason Code del TED - fare riferimento ai valori contenuti nel file [motiviModifica.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviModifica.json) 
     MotiviRevisionePrezziEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -175,7 +175,7 @@ components:
     TipoRealizzazioneContrattoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Tipo modalità di realizzazione contratto - fare riferimento ai valori contenuti nel file [tipoRealizzazioneContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRealizzazioneContratto.json) 
+      description: Tipo modalità di realizzazione contratto - fare riferimento ai valori contenuti nel file [tipoRealizzazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoRealizzazione.json) 
     EsitoProceduraAnnullataEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -191,7 +191,7 @@ components:
     TipologiaComunicazioneEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Tipologia di comunicazione - fare riferimento ai valori contenuti nel file [tipologiaComunicazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipologiaComunicazione.json) 
+      description: Tipologia di comunicazione - fare riferimento ai valori contenuti nel file [tipoComunicazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoComunicazione.json) 
     SubappaltoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -207,7 +207,7 @@ components:
     MotiviVariazioneAnagraficaEnum: 
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Motivi di variazione anagrafica - fare riferimento ai valori contenuti nel file [motiviVariazioneAnagrafica.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviVariazioneAnagrafica.json)       
+      description: Motivi di variazione anagrafica - fare riferimento ai valori contenuti nel file [motivoVariazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoVariazione.json)       
     LingueEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -223,7 +223,7 @@ components:
     MotiviInterruzioneEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
-      description: Motivi dell'interruzione - fare riferimento ai valori contenuti nel file [motiviInterruzione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviInterruzione.json)
+      description: Motivi dell'interruzione - fare riferimento ai valori contenuti nel file [causaInterruzioneAnticipata.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/causaInterruzioneAnticipata.json)
     MotiviRisoluzioneEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
@@ -236,18 +236,6 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
       description: Modalità del collaudo tecnico/amministrativo/ verifica di conformità - fare riferimento ai valori contenuti nel file [modoCollaudo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modoCollaudo.json)   
-    LingueType:
-      type: array
-      items:
-        $ref: '#/components/schemas/LingueEnum'    
-    MotivoDerogaType:
-      type: array
-      items:
-        $ref: '#/components/schemas/MotivoDerogaEnum'
-    MisurePremialiType:
-      type: array
-      items:
-        $ref: '#/components/schemas/MisurePremialiEnum'
     IpotesiCollegamentoType:
       description: ipotesi di collegamento
       type: object
@@ -262,18 +250,6 @@ components:
             type: string
         motivoCollegamento:
           $ref: '#/components/schemas/MotivoCollegamentoEnum'
-    TipologiaLavoroType:
-      type: array
-      items:
-        $ref: '#/components/schemas/TipologiaLavoroEnum'
-    CondizioniNegoziataType:
-      type: array
-      items:
-        $ref: '#/components/schemas/CondizioniNegoziataEnum'
-    CategorieMerceologicheType:
-      type: array
-      items:
-        $ref: '#/components/schemas/CategorieMerceologicheEnum'
     ImportoType:
       description: Importo
       type: number
@@ -286,7 +262,7 @@ components:
         - importo
       additionalProperties: false
       properties:
-        tipo:
+        tipoFinanziamento:
           $ref: '#/components/schemas/TipoFinanziamentoEnum'
         importo:
           $ref: '#/components/schemas/ImportoType'
@@ -302,14 +278,15 @@ components:
         denominazione: 
           description: denominazione del soggetto interessato
           type: string  
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'
-        tipo: 
+        tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum'          
     StazioneAppaltanteType:
       description: Stazione Appaltante e ruoli ricoperti nell'appalto
       type: object
       additionalProperties: false
+      required: [codiceFiscale,codiceAusa,codiceCentroCosto,saTitolare]
       properties:
         codiceFiscale:
           description: Codice fiscale della S.A.
@@ -350,9 +327,13 @@ components:
           format: double
           pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$
         motivoDeroga:
-          $ref: '#/components/schemas/MotivoDerogaType'
+          type: array
+          items:
+            $ref: '#/components/schemas/MotivoDerogaEnum'
         misurePremiali:
-          $ref: '#/components/schemas/MisurePremialiType'
+          type: array
+          items:
+            $ref: '#/components/schemas/MisurePremialiEnum'
     DatiPersonaFisicaType:
       description: Dati relativi alla persona fisica
       type: object
@@ -398,9 +379,9 @@ components:
         denominazione:
           description: Denominazione
           type: string
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'
-        tipo: 
+        tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum'
         idGruppo:
           description: id gruppo
@@ -415,12 +396,12 @@ components:
           $ref: '#/components/schemas/DatiPersonaFisicaType'
         datiPersonaGiuridica:
           $ref: '#/components/schemas/DatiPersonaGiuridicaType'          
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'  
     AggiudicatarioType:
       description: Dati dell'aggiudicatario
       type: object
-      required: [codiceFiscale,denominazione,ruolo,tipo,importo]
+      required: [codiceFiscale,denominazione,ruoloOE,tipo,importo]
       additionalProperties: false
       properties:
         codiceFiscale:
@@ -429,9 +410,9 @@ components:
         denominazione: 
           description: denominazione del soggetto interessato
           type: string  
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'
-        tipo: 
+        tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum'
         idGruppo:
           description: id gruppo
@@ -523,7 +504,7 @@ components:
     AggiudicatarioA1_35Type:
       description: Dati dell'aggiudicatario
       type: object
-      required: [codiceFiscale,denominazione,ruolo,tipo]
+      required: [codiceFiscale,denominazione,ruoloOE,tipo]
       additionalProperties: false
       properties:
         codiceFiscale:
@@ -532,9 +513,9 @@ components:
         denominazione: 
           description: denominazione del soggetto interessato
           type: string  
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'
-        tipo: 
+        tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum'
         idGruppo:
           description: id gruppo
@@ -650,7 +631,7 @@ components:
     AppaltoP4BaseType:
       description: Oggetto che riporta i dati dell'appalto
       type: object
-      required: [prelazionePromotore,codiceAppalto]
+      required: [prelazionePromotore,codiceAppalto,costituzioneSocietaDiScopo]
       additionalProperties: false
       properties:
         idAppalto:
@@ -673,7 +654,10 @@ components:
           format: uuid
         termineRidottoAvvisoPreinformazione:
           description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
-          type: boolean           
+          type: boolean 
+        costituzioneSocietaDiScopo:
+          description: Indicare se è prevista la costituzione di una società di scopo
+          type: boolean
         datiBase:
           $ref: '#/components/schemas/DatiBaseAppaltoType'
         datiBaseProcedura:
@@ -950,7 +934,9 @@ components:
           items:
             $ref: '#/components/schemas/CategorieMerceologicheEnum'
         condizioniNegoziata:
-          $ref: '#/components/schemas/CondizioniNegoziataType'
+          type: array
+          items:
+            $ref: '#/components/schemas/CondizioniNegoziataEnum'
         contrattiDisposizioniParticolari:
           $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'
         codIstat:
@@ -1033,7 +1019,9 @@ components:
           description: indicare il codice CNEL o non applicabile
           type: string
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         opzioniRinnovi:
           description: L’appalto prevede opzioni/rinnovi?
           type: boolean 
@@ -1071,7 +1059,9 @@ components:
           description: indicare il codice CNEL o non applicabile
           type: string          
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'          
         opzioniRinnovi:
           description: L’appalto prevede opzioni/rinnovi?
           type: boolean 
@@ -1261,7 +1251,9 @@ components:
           description: indicare il codice CNEL o non applicabile
           type: string   
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         modalitaAcquisizione:
           $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
         categoria:
@@ -1313,7 +1305,9 @@ components:
           description: indicare il codice CNEL o non applicabile
           type: string          
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         opzioniRinnovi:
           description: L’appalto prevede opzioni/rinnovi?
           type: boolean  
@@ -1361,7 +1355,9 @@ components:
           description: indicare il codice CNEL o non applicabile
           type: string          
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         opzioniRinnovi:
           description: L’appalto prevede opzioni/rinnovi?
           type: boolean  
@@ -1429,7 +1425,9 @@ components:
           description: indicare il codice CNEL o non applicabile
           type: string          
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         opzioniRinnovi:
           description: L’appalto prevede opzioni/rinnovi?
           type: boolean 
@@ -1627,7 +1625,9 @@ components:
         modalitaAcquisizione:
           $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         categoria:
           $ref: '#/components/schemas/CategoriaEnum'           
         oggettoPrincipaleContratto:
@@ -1679,7 +1679,9 @@ components:
         modalitaAcquisizione:
           $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         categoria:
           $ref: '#/components/schemas/CategoriaEnum'  
         oggettoPrincipaleContratto:
@@ -1720,7 +1722,9 @@ components:
             description: Id univoco del lotto generato dalla stazione appaltante
             type: string  
           condizioniNegoziata:
-            $ref: '#/components/schemas/CondizioniNegoziataType'  
+            type: array
+            items:
+              $ref: '#/components/schemas/CondizioniNegoziataEnum' 
           codIstat:
             $ref: '#/components/schemas/CodIstatEnum'      
           contrattiDisposizioniParticolari:
@@ -1754,7 +1758,9 @@ components:
           modalitaAcquisizione:
             $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
           tipologiaLavoro:
-            $ref: '#/components/schemas/TipologiaLavoroType'
+            type: array
+            items:
+              $ref: '#/components/schemas/TipologiaLavoroEnum'
           categoria:
             $ref: '#/components/schemas/CategoriaEnum' 
           finanziamenti:
@@ -1807,7 +1813,9 @@ components:
         motivoEsclusioneConcessione:
           $ref: '#/components/schemas/MotivoEsclusioneConcessioneEnum'
         condizioniNegoziata:
-          $ref: '#/components/schemas/CondizioniNegoziataType'  
+          type: array
+          items:
+            $ref: '#/components/schemas/CondizioniNegoziataEnum' 
         contrattiDisposizioniParticolari:
           $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'  
         codIstat:
@@ -1850,7 +1858,9 @@ components:
         modalitaAcquisizione:
           $ref: '#/components/schemas/ModalitaAcquisizioneEnum'
         tipologiaLavoro:
-          $ref: '#/components/schemas/TipologiaLavoroType'
+          type: array
+          items:
+            $ref: '#/components/schemas/TipologiaLavoroEnum'
         categoria:
           $ref: '#/components/schemas/CategoriaEnum' 
         prestazioniComprese:
@@ -1890,11 +1900,8 @@ components:
       description: Oggetto che riporta tutti i dati della modifica contrattuale
       type: object
       additionalProperties: false
-      required: [lotIdentifier,idContratto]
+      required: [idContratto]
       properties: 
-        lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
-          type: string 
         idContratto:
           description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
           type: string   
@@ -1903,7 +1910,7 @@ components:
         dataApprovazione:
           description: Data di approvazione della modifica contrattuale
           type: string
-          format: datetime
+          format: date-time
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
@@ -1918,11 +1925,8 @@ components:
       description: Oggetto che riporta tutti i dati della modifica contrattuale
       type: object
       additionalProperties: false
-      required: [lotIdentifier,idContratto]
+      required: [idContratto]
       properties: 
-        lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
-          type: string  
         idContratto:
           description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
           type: string   
@@ -1931,7 +1935,7 @@ components:
         dataApprovazione:
           description: Data di approvazione della modifica contrattuale
           type: string
-          format: datetime
+          format: date-time
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
@@ -1964,9 +1968,9 @@ components:
         denominazione: 
           description: Denominazione del soggetto interessato
           type: string  
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'
-        tipo: 
+        tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum' 
         idPartecipante: 
           description: id partecipante
@@ -1999,9 +2003,9 @@ components:
         denominazione: 
           description: Denominazione del soggetto interessato
           type: string  
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'
-        tipo: 
+        tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum' 
         idPartecipante: 
           description: id partecipante
@@ -2036,7 +2040,7 @@ components:
           description: La progettazione è interna o esterna? 
           type: string
           enum: ['interna', 'esterna']  
-        tipo:
+        tipoSoggetto:
           $ref: '#/components/schemas/TipoSoggettoEnum'
         datiPersonaFisica:
           $ref: '#/components/schemas/DatiPersonaFisicaType'
@@ -2050,11 +2054,11 @@ components:
         dataAffidamentoIncarico:
           description: Data di affidamento incarico (per progettazione esterna)
           type: string
-          format: datetime
+          format: date-time
         dataConsegna: 
           description: Data di consegna progetto (per progettazione esterna)
           type: string
-          format: datetime
+          format: date-time
     IncaricoType:
       description: Dati relativi agli incarichi tecnici
       type: object
@@ -2077,9 +2081,9 @@ components:
         denominazione: 
           description: denominazione del soggetto interessato
           type: string
-        ruolo: 
+        ruoloOE: 
           $ref: '#/components/schemas/RuoloOEEnum'
-        tipo: 
+        tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum'
         idGruppo:
           description: id gruppo
@@ -2415,6 +2419,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione sopra soglia e sotto soglia 
       type: object
       additionalProperties: false
+      required: [cig]
       properties: 
         cig:
           description: codice identificativo lotto
@@ -2557,11 +2562,11 @@ components:
     AggiudicazioneA7Type:
       description: Oggetto che riporta i dati di aggiudicazione per procedura negoziata senza bando pari o sopra soglia.
       type: object
-      required: [afferenteInvestimentiPNRR,lotIdentifier]
+      required: [afferenteInvestimentiPNRR,cig]
       properties:
-        lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
-          type: string      
+        cig:
+          description: CIG affidamento incarico esterno di progettazione (in caso di progettista esterno)
+          type: string              
         afferenteInvestimentiPNRR:
           description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
           type: boolean 
@@ -2596,11 +2601,6 @@ components:
       required: [motivoUrgenza]
       additionalProperties: false
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
         linkDocumenti:
@@ -2814,9 +2814,7 @@ components:
       additionalProperties: false
       properties:
         accessibilita:
-          type: array
-          items:        
-            $ref: '#/components/schemas/AccessibilitaEnum'
+          $ref: '#/components/schemas/AccessibilitaEnum'
         giustificazione:
           description: giustificazione
           type: string
@@ -2828,7 +2826,7 @@ components:
         dataAggiudicazione:
           description: Data della decisione ufficiale di selezione dell'offerta vincitrice - corrisponde al campo bt-1451 - Winner Decision Date del TED
           type: string
-          format: datetime 
+          format: date-time 
     DatiBaseAggiudicazioneSubappaltoType:
       description:  Dato in comune con il Business Group Subcontracting delle eforms
       additionalProperties: false
@@ -3015,13 +3013,13 @@ components:
       additionalProperties: false
       properties:
         scadenzaPresentazioneInvito:
-          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          description: Data e ora di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
           type: string
-          format: datetime
+          format: date-time
         oraScadenzaPresentazioneOfferte: 
-          description: Ora scadenza per la presentazione delle offerte (hh:mm) - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          description: Date e ora di scadenza per la presentazione delle offerte - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
-          format: time   
+          format: date-time   
     DatiBaseTerminiInvioSoloScadenzaType:
       description: Dato in comune con il Business Group Submission Terms delle eforms
       required:
@@ -3031,16 +3029,16 @@ components:
         scadenzaPresentazioneInvito:
           description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
           type: string
-          format: datetime          
+          format: date-time          
     DatiBaseTerminiInvioSoloOraType:
       description: Dato in comune con il Business Group Submission Terms delle eforms 
       required: [oraScadenzaPresentazioneOfferte]
       additionalProperties: false
       properties:
         oraScadenzaPresentazioneOfferte: 
-          description: Ora scadenza per la presentazione delle offerte (hh:mm) - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          description: Date e ora di scadenza per la presentazione delle offerte (hh:mm) - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
-          format: time            
+          format: date-time            
     DatiBaseImportoType:
       description: Dato in comune con il Business Group Prize delle eforms 
       additionalProperties: false
@@ -3078,7 +3076,7 @@ components:
         dataSottoscrizione:
           description: Data sottoscrizione eventuale atto aggiuntivo/ sottomissione - corrisponde al campo bt-145 - Contract Conclusion Date del TED
           type: string
-          format: datetime  
+          format: date-time  
         motiviModifica:
           $ref: '#/components/schemas/MotiviModificaContrattualeEnum'
         causaModifica:
@@ -3091,7 +3089,7 @@ components:
         dataInvioInviti: 
           description: Data stimata dell'invio degli inviti a presentare le offerte - corrisponde al campo bt-130  - Dispatch Invitation Tender del TED
           type: string
-          format: datetime
+          format: date-time
     DatiBaseDocumentiType:
       description:  Dato in comune con il Business Group Procurement Documents delle eforms
       additionalProperties: false
@@ -3101,7 +3099,9 @@ components:
           type: string
           format: url
         lingue:
-          $ref: '#/components/schemas/LingueType'
+          type: array
+          items:
+            $ref: '#/components/schemas/LingueEnum' 
     DatiBaseDurataType:
       description:  Dato in comune con il Business Group Duration delle eforms
       additionalProperties: false
@@ -3109,7 +3109,7 @@ components:
         dataInizio: 
           description: La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - corrisponde al campo bt-536 - Duration Start Date del TED
           type: string
-          format: datetime
+          format: date-time
         durata: 
           description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - corrisponde al campo bt-36 - Duration Period del TED
           type: string
@@ -3117,7 +3117,7 @@ components:
         dataFine: 
           description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - corrisponde al campo bt-537 - Duration End Date del TED
           type: string
-          format: datetime 
+          format: date-time 
         altraDurata: 
           $ref: '#/components/schemas/AltraDurataEnum'    
     AnacFormPLBaseType:

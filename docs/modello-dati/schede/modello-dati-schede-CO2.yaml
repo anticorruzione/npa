@@ -8,13 +8,7 @@ components:
       description: Oggetto che riporta i dati di conclusione.
       type: object
       additionalProperties: false
-      required: [idContratto]
       properties:
-        idContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         dataInizio:
           description: Data di inizio
           type: string
@@ -31,7 +25,13 @@ components:
       description: Contiene tutti i dati di conclusione
       type: object
       additionalProperties: false
-      properties:  
+      required: [idContratto, conclusione]      
+      properties: 
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
         conclusione:
           $ref: '#/components/schemas/ConclusioneType'
     SchedaCO2Type:

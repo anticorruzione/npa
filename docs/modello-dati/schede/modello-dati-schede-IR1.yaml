@@ -10,9 +10,6 @@ components:
       required: [dataTermine, tipoComunicazione, dataIstanzaRecesso,istanzaAccolta, istanzaTardiva, istanzaRipresa, istanzaRiserva,impSpese]
       additionalProperties: false
       properties:
-        codContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string         
         dataTermine: 
           description: Termine previsto per la consegna
           type: string
@@ -53,14 +50,16 @@ components:
     AnacFormIR1Type:
       description: Contiene tutti i dati relativi alla scheda di Istanza di Recesso
       type: object
-      required: [ritardi]
+      required: [ritardo, idContratto]
       additionalProperties: false
       properties:
-         ritardi:
-          description: Ritardi
-          type: array
-          items:
-            $ref: '#/components/schemas/RitardoType'           
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"        
+        ritardo:
+          $ref: '#/components/schemas/RitardoType'           
     SchedaIR1Type:
       description: Scheda di istanza di recesso
       type: object

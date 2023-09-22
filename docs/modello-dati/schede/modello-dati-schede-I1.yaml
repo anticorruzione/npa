@@ -8,13 +8,8 @@ components:
       description: Oggetto che riporta i dati di inizio prestazione
       type: object
       additionalProperties: false
-      required: [consegnaFrazionata,avvioPerFasi,consegnaSottoRiserva,dataEffettivoInizio,dataFinePrevista, idContratto]
+      required: [consegnaFrazionata,avvioPerFasi,consegnaSottoRiserva,dataEffettivoInizio,dataFinePrevista]
       properties:
-        idContratto:
-          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
         dataDisposizioneInzio:
           description: Data disposizione dell’inizio della prog. Esecutiva
           type: string
@@ -56,7 +51,13 @@ components:
       description: Contiene tutti i dati di inizio prestazione
       type: object
       additionalProperties: false
-      properties:  
+      required: [idContratto, datiInizio]
+      properties: 
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
         datiInizio:
           $ref: '#/components/schemas/DatiInizioType'
     SchedaI1Type:

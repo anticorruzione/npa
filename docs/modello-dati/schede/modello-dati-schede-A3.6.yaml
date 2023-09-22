@@ -20,7 +20,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [afferenteInvestimentiPNRR]
+      required: [afferenteInvestimentiPNRR, cig]
       properties: 
         cig:
           description: codice identificativo lotto
@@ -48,7 +48,7 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'
         datiBaseRisultatoProcedura:
           allOf: 
-            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'          
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'          
     AnacFormA3_6Type:
       description: Contiene tutti i dati relativi alle Società in-house.
       type: object
@@ -68,4 +68,4 @@ components:
       additionalProperties: false
       properties:
         anacForm:
-          $ref: '#/components/schemas/AnacFormA3_6Type'
+          $ref: '#/components/schemas/AnacFormA3_6Type' 
