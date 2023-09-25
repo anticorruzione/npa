@@ -7,6 +7,9 @@ Il repository contiene la documentazione tecnica dei servizi di cooperazione app
  - Il [file YAML](/docs/specifiche-interfacce/specifiche-servizi-fvoe-fva.yaml) relativo alle specifiche dei servizi esposti dalla NPA per la gestione del Fascicolo Virtuale dell'Operatore Economico e del Fascicolo Virtuale dell'Appalto
  - Il [documento](/docs/specifiche-interfacce/documento-specifiche-servizi-npa.md) di sintesi di Specifica delle Interfacce redatto utilizzando il linguaggio di markup Markdown
 
+## JWS
+ - Il [documento](/docs/specifiche-jws/jws.yaml) riporta la struttura del token JWS che deve essere generato dal fruitore per l'interazione con gli eService esposti da ANAC. Qui è consultabile [roadmap](/docs/specifiche-jws/roadmap.md) con la previsione dell'attivazione delle restrizioni all'accesso in seguito all'adozione del JWS.
+
 ## Modello dati
 Il modello dati di NPA rappresenta l'insieme di informazioni oggetto del monitoraggio dell'appalto. I dati che riguardano l'appalto sono organizzati in oggetti autoconsistenti denominati "Schede". Ogni evento significativo ai fini del monitoraggio di un appalto o ogni richiesta di azione (ad es la pubblicazione di un avviso) vengono notificati alla NPA tramite l'invio di una opportuna scheda.
 La superclasse dalla quale derivano tutte le schede è riportata di seguito: 
