@@ -1,3 +1,12 @@
+# Note di rilascio del 25/09/2023
+## JWS token 
+ref. /docs/specifiche-jws/
+
+* jws.yaml:
+  * creato un nuovo file con le specifiche openAPI 3 del modello dati dell'oggetto body del token
+* roadmap.md:
+  * creato un nuovo file con la roadmap prevista per l'attivazione dei controlli di correttezza formale e sostanziale del JWS token 
+
 # Note di rilascio del 22/09/2023
 
 ## Modello Dati
