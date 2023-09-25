@@ -1,0 +1,119 @@
+openapi: 3.0.3
+info:
+  title: Swagger JWS - OpenAPI 3.0
+  description: |-
+    Descrittore del body contenuto nel JWS ANAC per l'accesso ai servizi della piattaforma dei Contratti Pubblici via PDND secondo lo standard MODI audit_rest_01
+  version: 1.0.0
+externalDocs:
+  description: Ulteriori informazioni 
+  url: https://github.com/anticorruzione/npa
+components:
+  schemas:
+    body:
+      type: object
+      required:
+      - iat
+      - nbf
+      - exp
+      - jti
+      - aud
+      - userCodiceFiscale
+      - userRole
+      - userLoa
+      - userIdpType
+      - SAcodiceAUSA
+      - regCodicePiattaforma
+      - regCodiceComponente
+      - businessFlowID
+      - traceID
+      - spanID
+
+      properties:
+##### standard claims RFC 7915
+        iat:
+          description: issued at
+          type: number 
+          example: 1554382877
+        nbf:
+          description: Not Before
+          type: number 
+          example: 1554382877
+        exp:
+          description: Expiration Time
+          type: number 
+          example: 1554382877
+        jti:
+          description: JWT ID
+          type: string
+          format: uuid
+          example: "2628d6c3-a004-4789-b504-bced05081d6a"
+        aud:
+          description: Audience
+          type: string
+          example: "https://apigw-test.anticorruzione.it/modi/rest/ComunicaAppalto/v1"
+
+##### custom claims
+
+# blocco user. Dati identificativi e proprietà dell'utente connesso
+        userCodiceFiscale:
+          description: codice fiscale dell'utente connesso alla piattaforma e operante per conto della Stazione appaltante
+          type: string
+          example: "AAAAAA00A01H501Z"
+        userRole:
+          description: ruolo dell'utente. RP = Responsabile del Porgetto; DRP = Delegato del Responsabile del Porgetto
+          type: string
+          example: "RP"
+          enum:
+            - RP
+            - DRP
+        userLoa:
+          description: level of assurance adottato dalla piattaforma per l'identificazione dell'utente
+          type: string
+          example: "3"
+          enum:
+            - "3"
+            - "4"
+        userIdpType:
+          description: tipo di identity provider utilizzato per stabilire l'identità dell'utente.
+          type: string
+          example: "SPID"
+          enum:
+            - "SPID"
+            - "CIE"
+            - "CNS"
+            - "EIDAS"
+            - "CUSTOM" # sistema interno al gestore della piattaforma certificata 
+      
+# blocco SA, Stazione Appaltante. Dati identificativi della stazione appaltante alla quale afferisce l'utente connesso        
+        SACodiceFiscale:
+          description: codice Fiscale della stazione appaltante. Può essere nullo in caso di soggetti non dotati di personalità giuridica
+          type: string
+          example: "11111111115"
+        SAcodiceAUSA:  
+          description: codice ausa della stazione appaltante alla quale appartiene l'utente
+          type: string
+          example: "0000000000"
+
+# blocco registro, identità della piattaforma iscritta nel registro delle piattaforme ANAC
+        regCodicePiattaforma:
+          description:  codice identificativo della piattaforma
+          type: string
+          example: "0000001"
+        regCodiceComponente: 
+          description:  codice identificativo del componente client
+          type: string
+          example: "0000001"  
+          
+# blocco tracing, informazioni necessarie al tracciamento delle operazioni 
+        businessFlowID:
+          description: coincide con idAppalto. Assume valore "00000000-0000-0000-0000-000000000000" nella prima transazione (che è necessariamente comunicaAppalto.crea-appalto) In tutte le operazioni successive riconduce la transazione all’appalto
+          type: string
+          example: "8cc2d6ca-690d-4031-b75d-b0139b7ace39"
+        traceID:
+          description: identificativo univoco assegnato dalla piattaforma alla richiesta
+          type: string
+          example: "8cc2d6ca-690d-4031-b75d-b0139b7ace39"
+        spanID:
+          description: identificativo univoco assegnato dalla piattaforma (?) all'operazione iniziale richiesta dall'utente 
+          type: string
+          example: "8cc2d6ca-690d-4031-b75d-b0139b7ace39"
