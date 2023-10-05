@@ -1,4 +1,4 @@
-# FAQ per il progetto della Piattaforma Contratti Pubblici
+# FAQ per il Progetto di Digitalizzazione dei Contratti Pubblici
 
 ## PDND Interoperabilità
 
