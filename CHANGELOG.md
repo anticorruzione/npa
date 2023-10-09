@@ -1,13 +1,5 @@
-# Note di rilascio del 25/09/2023
-## JWS token 
-ref. /docs/specifiche-jws/
-
-* jws.yaml:
-  * creato un nuovo file con le specifiche openAPI 3 del modello dati dell'oggetto body del token
-* roadmap.md:
-  * creato un nuovo file con la roadmap prevista per l'attivazione dei controlli di correttezza formale e sostanziale del JWS token 
-
-# Note di rilascio del 22/09/2023
+<details>
+<summary><h1>Note di rilascio del 22/09/2023</h1></summary>
 
 ## Modello Dati
 * modello-dati-tipologiche.yaml:
@@ -170,3 +162,129 @@ ref. /docs/specifiche-jws/
 
 ## Documentazione
 * Nella sezione Standard adottati del file README.md è stata aggiornata la versione sdk dell'eForms da adottare (1.8.0).
+</details>
+
+<details>
+<summary><h1>Note di rilascio del 25/09/2023</h1></summary>
+
+## JWS token 
+ref. /docs/specifiche-jws/
+
+* jws.yaml:
+  * creato un nuovo file con le specifiche openAPI 3 del modello dati dell'oggetto body del token
+* roadmap.md:
+  * creato un nuovo file con la roadmap prevista per l'attivazione dei controlli di correttezza formale e sostanziale del JWS token 
+</details>
+
+# Note di rilascio del 9/10/2023
+
+## Modello Dati 
+
+### Regole
+* A3_1.dmn, A2_30.dmn, A2_33.dmn, A2_34.dmn,A3_2.dmn,A3_3.dmn,A3_4.dmn,A3_5.dmn,A3_6.dmn,A1_34.dmn,A1_33.dmn,A1_30.dmn,A1_32.dmn, A2_32.dmn,A1_35.dmn,A2_35.dmn, A2_29.dmn, A1_29.dmn: aggiornate regole
+
+### Schede
+* modello-dati-schede-P*.yaml, modello-dati-schede-PL*.yaml, modello-dati-schede-AD*.yaml, modello-dati-schede-A*.yaml, modello-dati-schede-M*.yaml, modello-dati-schede-SA1.yaml, modello-dati-schede-RSU1.yaml, modello-dati-schede-ES1.yaml, modello-dati-schede-CS1.yaml, modello-dati-schede-SO1.yaml, modello-dati-schede-SQ1.yaml, modello-dati-schede-RI1.yaml, modello-dati-schede-AC1.yaml, modello-dati-schede-CL1.yaml:
+  * modificata la descrizione della scheda
+
+* modello-dati-schede-dati-comuni.yaml:
+  * eliminato l'oggetto DatiBaseAggiudicazioneSubappaltoType
+  * modificato l'oggetto AggiudicazioneA4Type: rinominata la property datibaseSubappalti in datiBaseSubappalti
+  * modificato l'oggetto AppaltoBaseType rendendo obbligatorio il campo categorieMerceologiche.
+  * Rimosso il required del campo categorieMerceologiche dagli oggetti AppaltoP_10Type, AppaltoP_11Type, AppaltoP_12Type, AppaltoP_13Type, AppaltoP_14Type, AppaltoP_16Type, AppaltoP_17Type, AppaltoP_19Type, AppaltoP_20Type, AppaltoP_21Type. 
+  * modificato l'oggetto LottoBaseType:
+  	* resi obbligatori i campi categorieMerceologiche, afferenteInvestimentiPNRR, contrattiDisposizioniParticolari.
+  	* eliminato il campo modalitaAcquisizione.
+  * modificati gli oggetti LottoP_10Type, LottoP_11Type, LottoP_12Type, LottoP_13Type, LottoP_14Type, LottoP_16Type, LottoP_17Type, LottoP_19Type, LottoP_20Type, LottoP_21Type:
+  	* rimosso il required dei campi categorieMerceologiche, afferenteInvestimentiPNRR, contrattiDisposizioniParticolari
+  	* aggiunto il campo modalitaAcquisizione
+  * modificato l'oggetto DatiBaseProceduraType rendendo obbligatorio il campo tipoProcedura
+  * aggiunto l'oggetto DatiBaseProceduraOptionalType che non prevede il campo tipoProcedura obbligatorio
+  * modificato l'oggetto AppaltoPLCompletoType cambiando la reference da DatiBaseProceduraType a DatiBaseProceduraOptionalType
+  * modificato l'oggetto AppaltoP4BaseType: modificata la property datiBaseProcedura togliendo il required perché inserito nell'oggetto DatiBaseProceduraType referenziato 
+  * modificato l'oggetto AppaltoP7BaseType: modificata la property datiBaseProcedura togliendo il required perché inserito nell'oggetto DatiBaseProceduraType referenziato 
+  * modificato l'oggetto DatiBaseDocumentiType rendendo required la url
+  * modificati gli oggetti LottoP6BaseType e LottoP7BaseType: cambiata la reference del campo datiBaseDocumenti da DatiBaseDocumentiType a DatiBaseDocumentiOptionalType
+  * modificati gli oggetti LottoPLBase,LottoPLCompletoType,LottoP4BaseType: aggiunto il campo datiBaseDocumenti
+  * modificati gli oggetti DatiBaseAppaltoType,DatiBaseLottoType: aggiunto il required sull'importo
+  * aggiunti gli oggetti DatiBaseDocumentiOptionalType, DatiBaseAppaltoOptionalType,DatiBaseLottoOptionalType,DatiBaseAggiudicazioneOptionalType,LottoP7_2BaseType,DatiBaseLottoP7_3Type,DatiBaseCPVP7Type,DatiBaseCPVPLType,DatiBaseContrattoP7Type,DatiBaseProceduraADType, DatiBaseStrumentiProceduraAType, DatiBaseSubappaltiRequiredType
+  * modificati gli oggetti AppaltoP6BaseType,LottoP6BaseType: tolta la property datibase    
+  * LottoP3BaseType eliminati i campi afferenteInvestimentiPNRR, categoria.
+  * DatiBaseAggiudicazioneType: aggiunto il required
+  * modificato l'oggetto AppaltoAType: eliminato il campo relazioneUnicaSulleProcedure
+  * modificati gli oggetti AppaltoA1_29Type, AppaltoA1_30Type, AppaltoA1_33Type, AppaltoA1_34Type : aggiunto il campo relazioneUnicaSulleProcedure
+  * modificati gli oggetti AggiudicazioneCompletaType e AggiudicazioneBaseType: eliminato il campo numeroOfferteAmmesse
+  * modificati gli oggetti AggiudicazioneA1_29Type, AggiudicazioneA1_30Type, AggiudicazioneA1_32Type, AggiudicazioneA1_33Type, AggiudicazioneA1_34Type, AggiudicazioneA1_35Type, AggiudicazioneA1_36Type, AggiudicazioneA1_37Type, AggiudicazioneA4Type: aggiunto il campo numeroOfferteAmmesse
+  * modificati gli oggetti ModificaContrattualeType,ModificaContrattuale_40Type: tolta la property idcontratto
+
+* modello-dati-schede-A2.32.yaml, modello-dati-schede-A2.33.yaml, modello-dati-schede-A2.34.yaml, modello-dati-schede-A2.35.yaml:
+  * modificata la property datiBaseAggiudicazioneSubappalto: sostituito il puntamento all'oggetto DatiBaseAggiudicazioneSubappaltoType con DatiBaseSubappaltiType
+  * rinominata la property datibaseSubappalti in datiBaseSubappalti
+
+* modello-dati-schede-A2.29.yaml, modello-dati-schede-A2.30.yaml, modello-dati-schede-A2.31.yaml, modello-dati-schede-A7.1.2.yaml, modello-dati-schede-A3.1.yaml, modello-dati-schede-A3.2.yaml, modello-dati-schede-A3.3.yaml, modello-dati-schede-A3.4.yaml, modello-dati-schede-A3.5.yaml:
+	* rinominata la property datiBaseAggiudicazioneSubappalto in datiBaseSubappalti
+
+* modello-dati-schede-PL2.7.yaml,modello-dati-schede-PL2.8.yaml,modello-dati-schede-PL2.9.yaml:
+	* eliminati i required dei campi accordoQuadro, sistemaDinamicoAcquisizione dalla property datiBaseStrumentiProcedura
+
+* modello-dati-schede-A2.37.yaml,modello-dati-schede-A2.36.yaml:
+	* modificata la property datiBaseProcedura tolto il required perché inserito nell'oggetto DatiBaseProceduraType referenziato
+
+* modello-dati-schede-P3.5.yaml,modello-dati-schede-P3.4.yaml,modello-dati-schede-P3.3.yaml,modello-dati-schede-P3.2.yaml,modello-dati-schede-P3.1.yaml: 
+	* modificato l'oggetto lotti: 
+	 * cambiata la reference di datiBaseDocumenti da DatiBaseDocumentiType a DatiBaseDocumentiOptionalType
+	 * aggiunti i campi afferenteInvestimentiPNRR, categoria
+	 * aggiornata la reference di datiBase
+	 * eliminati i required da datiBase e DatiBaseAggiudicazioneType perché già presenti nell'oggetto referenziato
+
+* modello-dati-schede-P2.24.yaml,modello-dati-schede-P2.23.yaml,modello-dati-schede-P2.21.yaml,modello-dati-schede-P2.20.yaml,modello-dati-schede-P2.19.yaml,modello-dati-schede-P2.14.yaml,modello-dati-schede-P2.13.yaml,modello-dati-schede-P2.12.yaml,modello-dati-schede-P2.11.yaml,modello-dati-schede-P2.10.yaml:
+	* modificato l'oggetto appalto: modificate le property datiBaseProcedura e datiBase: tolto il required perché inserito inserito negli oggetti referenziati
+	* modificato l'oggetto lotti eliminando il required perché già presente nell'oggetto DatiBaseDocumentiType referenziato 
+
+* modello-dati-schede-P2.12.yaml:
+	* resa array la property lotti 
+
+* modello-dati-schede-P2.18.yaml,modello-dati-schede-P2.17.yaml,modello-dati-schede-P2.16.yaml:
+	* aggiunto l'oggetto DatiBaseStrumentiProceduraType con i required richiesti
+	* modificato l'oggetto appalto:		
+		modificata la property datiBaseStrumentiProcedura referenziando il nuovo oggetto DatiBaseStrumentiProceduraType
+		modificata la property datiBase aggiornando la reference all'oggetto DatiBaseAppaltoOptionalType
+	* modificato l'oggetto lotti:
+		modificato l'oggetto lotto eliminando il required perché già presente nell'oggetto DatiBaseDocumentiType referenziato
+		modificata la property datiBase aggiornando la reference all'oggetto DatiBaseLottoOptionalType
+
+* modello-dati-schede-P6.1.yaml:
+	* inseriti gli oggetti AppaltoP6_1Type, LottoP6_1Type 
+	* modello-dati-schede-P6.2.yaml:
+	* inserita la property datiBase negli oggetti AppaltoP6_2Type eLottoP6_2Type con i required opportuni
+
+* modello-dati-schede-P7.2.yaml:
+	* modificata la reference dell'oggetto LottoP7_2Type
+	* aggiunto l'oggetto QuadroEconomicoType
+
+* modello-dati-schede-P7.3.yaml: 
+	* modificata la reference all'oggetto datiBase e datiBaseDocumenti
+
+* modello-dati-schede-AD2_25.yaml, modello-dati-schede-AD2_26.yaml, modello-dati-schede-AD2_27.yaml, modello-dati-schede-AD2_28.yaml:
+	* modificata la reference dell'oggetto datiBaseProcedura
+
+* modello-dati-schede-A2_29.yaml,modello-dati-schede-A2_30.yaml,modello-dati-schede-A2_31.yaml,modello-dati-schede-A3_4.yaml:
+	* cambiata la reference degli oggetti datiBaseStrumentiProcedura e datiBaseSubappalti
+
+* modello-dati-schede-A7_1_2.yaml:
+	* cambiata la reference della property datibaseprocedura
+
+* modello-dati-schede-NAG.yaml:
+	* tolto il required dalla property datiBaseRisultatoProcedura
+
+* modello-dati-schede-M1.yaml,modello-dati-schede-M1.40.yaml,modello-dati-schede-M2.yaml,modello-dati-schede-M2.40.yaml:
+	* modificato l'array delle modifiche contrattuali in property singola.
+	* spostato l'idcontratto dalla property modifica all'anac form.
+   
+### Tipologiche
+* subappalto.json:
+  * modificati i valori secondo la codelist Applicability del TED
+* errori.json
+  * aggiornate descrizioni
+  * inserito nuovo messaggio di errore ERR65
+  * inserito nuovo messaggio di errore ERR66
