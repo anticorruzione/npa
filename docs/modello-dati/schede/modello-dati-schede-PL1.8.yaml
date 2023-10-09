@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda PL1_8 - Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8.
+  title: Modello Dati - Scheda PL1_8 - Scheda di programmazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8.
   version: 1.0.0
 components:
   schemas:          
     SchedaPL1_8Type:
-      description: Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8.
+      description: Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva settoriale. Articolo 45, paragrafo 2, della direttiva 2014/25/UE. Articolo 153 decreto legislativo 36/2023. Articolo 161 comma 2 decreto legislativo 36/2023. Articolo 164 decreto legislativo 36/2023.
       type: object
       required: [eform]
       additionalProperties: false

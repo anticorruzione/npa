@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda PL2_3 - Scheda di pianificazione per appalti settore difesa e sicurezza sotto soglia, senza invio al TED.
+  title: Modello Dati - Scheda PL2_3 - Scheda di pubblicazione per appalti settore difesa e sicurezza sotto soglia, senza invio al TED.
   version: 1.0.0
 components:
   schemas: 
     SchedaPL2_3Type:
-      description: Scheda di pianificazione per appalti settore difesa e sicurezza sotto soglia, senza invio al TED.
+      description: Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva per il settore della difesa. Articolo 31 decreto legislativo 208/2011. Articolo 50 decreto legislativo 36/2023. Articolo 81 comma 1 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

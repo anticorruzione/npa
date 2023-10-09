@@ -24,9 +24,8 @@ components:
         datiBase:
           allOf: 
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoPLType'
-          required: [oggetto]
     LottoP7_3Type:
-      description: Oggetto che riporta i dati del lotto all'interno della scheda di costituzione elenco fornitori sottosoglia.
+      description: Oggetto che riporta i dati del lotto
       type: object
       additionalProperties: false
       required: [lotIdentifier]
@@ -37,13 +36,11 @@ components:
         datiBase:
           allOf:
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoPLType'
-          required: [oggetto,oggettoContratto]  
         datiBaseCPV:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
-          required: [cpvPrevalente,cpvSecondarie]          
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVP7Type'          
         datiBaseDocumenti:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'
         datiBaseDurata:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDurataType'
     AnacFormP7_3Type:
@@ -60,7 +57,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP7_3Type'    
     SchedaP7_3Type:
-      description: Scheda relativa alla costituzione elenco fornitori.
+      description: Avviso per la costituzione elenco. Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023. Articolo 3 Allegato II.1. Articolo 31 decreto legislativo  208/2011.
       type: object
       required: [anacForm]
       additionalProperties: false

@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda PL2_2 - Scheda di pianificazione per appalti settori speciali sotto soglia, senza invio al TED.
+  title: Modello Dati - Scheda PL2_2 - Scheda di pubblicazione per appalti settori speciali sotto soglia, senza invio al TED.
   version: 1.0.0
 components:
   schemas: 
     SchedaPL2_2Type:
-      description: Scheda di pianificazione per appalti settori speciali sotto soglia, senza invio al TED.
+      description: Avviso di pubblicazione di un avviso periodico indicativo relativo al profilo di committente — settori speciali. Articolo 50 decreto legislativo 36/2023. Articolo 50 comma 5 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

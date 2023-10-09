@@ -5,7 +5,7 @@ info:
 components:
   schemas:
    AppaltoP5Type:
-      description: Oggetto che riporta i dati dell'appalto all'interno della scheda di tracciabilità
+      description: Oggetto che riporta i dati dell'appalto.
       type: object
       additionalProperties: false
       required: [codiceAppalto]
@@ -21,7 +21,7 @@ components:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string          
    LottoP5Type:
-      description: Oggetto che riporta i dati del lotto all'interno della scheda di tracciabilità
+      description: Oggetto che riporta i dati del lotto.
       type: object
       required: [lotIdentifier,importo,oggetto,sceltaContraente,oggettoPrincipaleContratto,fattispecieTracciabilita]
       additionalProperties: false
@@ -59,7 +59,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP5Type'       
    SchedaP5Type:
-      description: Scheda di tracciabilità.
+      description: Appalti soggetti a sola tracciabilità. Articoli 6, 139, 142, 143, 144 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

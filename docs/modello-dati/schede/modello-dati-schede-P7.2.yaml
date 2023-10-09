@@ -4,18 +4,61 @@ info:
   version: 1.0.0
 components:
   schemas:
+   QuadroEconomicoType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      type: object
+      required:
+        - sommeADisposizione
+        - sommeOpzioniRinnovi
+        - sommeRipetizioni
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in €
+          type: number
+          format: double
+        impServizi:
+          description: Importo componente servizi in €
+          type: number
+          format: double
+        impForniture:
+          description: Importo componente forniture in €
+          type: number
+          format: double
+        impTotaleSicurezza:
+          description: Importo totale per l'attuazione della sicurezza
+          type: number
+          format: double
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: number
+          format: double
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: number
+          format: double
+        sommeOpzioniRinnovi:
+          description: Somme per opzioni/rinnovi
+          type: number
+          format: double
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari
+          type: number
+          format: double
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: number
+          format: double  
    LottoP7_2Type:
-      description: Oggetto che riporta i dati del lotto all'interno della scheda di RDO da elenco fornitori
+      description: Oggetto che riporta i dati del lotto
       allOf: # estende la classe LottoP7BaseType
-      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP7BaseType'  
-      required: [ripetizioniEConsegneComplementari,opzioniRinnovi]
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP7_2BaseType'  
       type: object
       additionalProperties: false
       properties:
         quadroEconomicoStandard:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'  
-          required: [sommeOpzioniRinnovi,sommeRipetizioni]          
+          - $ref: '#/components/schemas/QuadroEconomicoType' 
         datiBaseTerminiInvio:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioSoloOraType'
    AnacFormP7_2Type:
@@ -34,7 +77,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP7_2Type'    
    SchedaP7_2Type:
-      description: Scheda relativa a RDO da elenco fornitori.
+      description: Procedura negoziata senza bando sottosoglia. Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023. Articolo 2 Allegato II.1. Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023. Articolo 31 decreto legislativo  208/2011. Articolo 127 decreto legislativo 36/2023. Articolo 128 comma 8 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

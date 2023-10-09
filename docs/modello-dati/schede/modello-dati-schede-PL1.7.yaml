@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda PL1_7 - Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.
+  title: Modello Dati - Scheda PL1_7 - Scheda di programmazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.
   version: 1.0.0
 components:
   schemas:          
     SchedaPL1_7Type:
-      description: Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.
+      description: Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva generale. Articolo 27, paragrafo 2, della direttiva 2014/24/UE, Articolo 28, paragrafo 3, della direttiva 2014/24/UE. Articolo 81 comma 1 decretolegislativo 36/2023.
       type: object
       required: [eform]
       additionalProperties: false

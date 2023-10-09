@@ -1,11 +1,29 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda P6_1 - Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni) - Articolo 31, paragrafo 3, della direttiva 2014/23/UE.
+  title: Modello Dati - Scheda P6_1 - Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni).
   version: 1.0.0
 components:
   schemas:
+    AppaltoP6_1Type:
+      description: Oggetto che riporta i dati dell'appalto
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP6BaseType'
+      type: object          
+      additionalProperties: false
+      properties:  
+        datiBase:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType' 
+    LottoP6_1Type:
+      description: Oggetto che riporta i dati del lotto
+      allOf: # estende la classe LottoP6BaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP6BaseType'      
+      type: object
+      additionalProperties: false
+      properties:  
+        datiBase:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'      
     AnacFormP6_1Type:
-      description: Contiene i dati relativi alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni) - Articolo 31, paragrafo 3, della direttiva 2014/23/UE
+      description: Contiene i dati relativi alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni).
       allOf: # estende la classe AnacFormBaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'   
       type: object
@@ -13,14 +31,14 @@ components:
       additionalProperties: false
       properties:  
         appalto:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP6BaseType'  
+          $ref: '#/components/schemas/AppaltoP6_1Type'  
         lotti:
           description: Dati relativi ai lotti
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP6BaseType'          
+            $ref: '#/components/schemas/LottoP6_1Type'          
     SchedaP6_1Type:
-      description: Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni) - Articolo 31, paragrafo 3, della direttiva 2014/23/UE
+      description: Adesione AQ/convenzione con successivo confronto competitivo (concessioni).
       type: object
       required: [anacForm]
       additionalProperties: false

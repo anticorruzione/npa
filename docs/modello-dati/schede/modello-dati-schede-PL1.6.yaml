@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda PL1_6 - Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6.
+  title: Modello Dati - Scheda PL1_6 - Scheda di programmazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6.
   version: 1.0.0
 components:
   schemas:          
     SchedaPL1_6Type:
-      description: Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6.
+      description: Avviso di preinformazione a fini unicamente informativi — direttiva per il settore della difesa. Articolo 30, paragrafo 1, della direttiva 2009/81/CE escluso/difesa. Articolo 21 decreto legislativo 208/2011. Articolo 81 comma 1 decreto legislativo 36/2023.
       type: object
       required: [eform]
       additionalProperties: false

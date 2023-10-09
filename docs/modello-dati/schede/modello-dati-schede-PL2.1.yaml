@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda PL2_1 - Scheda di pianificazione per appalti settori ordinari sotto soglia, senza invio al TED.
+  title: Modello Dati - Scheda PL2_1 - Scheda di pubblicazione per appalti settori ordinari sotto soglia, senza invio al TED.
   version: 1.0.0
 components:
   schemas: 
     SchedaPL2_1Type:
-      description: Scheda di pianificazione per appalti settori ordinari sotto soglia, senza invio al TED.
+      description: Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — settori ordinari. Articolo 50 decreto legislativo 36/2023. Articolo 81 comma 1 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

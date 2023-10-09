@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda PL1_9 - Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9.
+  title: Modello Dati - Scheda PL1_9 - Scheda di programmazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9.
   version: 1.0.0
 components:
   schemas:          
     SchedaPL1_9Type:
-      description: Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9.
+      description: Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva per il settore della difesa. Articolo 33, paragrafo 3, della direttiva 2009/81/CE. Articolo 21 comma 4 decretolegislativo 208/2011. Articolo 81 comma 1 decreto legislativo 36/2023.
       type: object
       required: [eform]
       additionalProperties: false
