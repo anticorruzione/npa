@@ -39,7 +39,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0plzbdd">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoStandard.impLavori = null or number(aggiudicazione.quadroEconomicoStandard.impLavori) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dguq1d">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
@@ -52,7 +52,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_010adaz">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoStandard.impServizi = null or number(aggiudicazione.quadroEconomicoStandard.impServizi) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1k5iekl">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
@@ -65,7 +65,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_0ppth6y">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoStandard.impForniture = null or number(aggiudicazione.quadroEconomicoStandard.impForniture) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1mbddq9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
@@ -79,7 +79,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazi
         <inputEntry id="UnaryTests_1x5logn">
           <text>some aggiudicazione in aggiudicazioni
 satisfies (some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaEconomica &lt; 0 OR offerta.offertaEconomica &gt; 100) </text>
+satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0aiqqkm">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG50\"}"</text>
@@ -92,8 +92,8 @@ satisfies offerta.offertaEconomica &lt; 0 OR offerta.offertaEconomica &gt; 100) 
         </inputEntry>
         <inputEntry id="UnaryTests_058nzm7">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) = 1 AND some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaInAumento = 0 AND offerta.offertaEconomica = 0)</text>
+satisfies (count(aggiudicazione.offertePresentate) = 1 and some offerta in aggiudicazione.offertePresentate 
+satisfies offerta.offertaInAumento = 0 and offerta.offertaEconomica = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rivwtj">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG51\"}"</text>
@@ -119,7 +119,7 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggi
         </inputEntry>
         <inputEntry id="UnaryTests_1wfojpv">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoConcessioni.impLavori = null or number(aggiudicazione.quadroEconomicoConcessioni.impLavori) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_194523j">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG69\"}"</text>
@@ -132,7 +132,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_1ptyss7">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoConcessioni.impServizi = null or number(aggiudicazione.quadroEconomicoConcessioni.impServizi) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hwa4ek">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG70\"}"</text>
@@ -145,7 +145,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_1t580vi">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoConcessioni.impForniture = null or number(aggiudicazione.quadroEconomicoConcessioni.impForniture) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10nwg5h">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG71\"}"</text>

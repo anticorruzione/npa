@@ -103,7 +103,7 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggi
         </inputEntry>
         <inputEntry id="UnaryTests_19dtiqj">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoConcessioni.impLavori = null or number(aggiudicazione.quadroEconomicoConcessioni.impLavori) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0imab6u">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG69\"}"</text>
@@ -116,7 +116,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_1wfzsmu">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoConcessioni.impServizi = null or number(aggiudicazione.quadroEconomicoConcessioni.impServizi) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13w8t5m">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG70\"}"</text>
@@ -129,7 +129,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_1vuojde">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoConcessioni.impForniture = null or number(aggiudicazione.quadroEconomicoConcessioni.impForniture) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tp0d1i">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG71\"}"</text>

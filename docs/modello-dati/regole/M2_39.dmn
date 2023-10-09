@@ -16,7 +16,7 @@
         <inputEntry id="UnaryTests_1s6uqok">
           <text>some modifica in modificheContrattuali
 satisfies modifica.datiBaseModificaContrattuale.motiviModifica.codice = "mod-rev"
-AND modifica.motivoRevisionePrezzi = null</text>
+and modifica.motivoRevisionePrezzi = null</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_057shie">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG54\"}"</text>

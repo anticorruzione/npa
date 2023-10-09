@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_A1_30" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_A1_30" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.4.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_aggiudicazioni" name="aggiudicazioni" />
   <inputData id="InputData_appalto" name="appalto" />
   <decision id="A1_30" name="A1_30">
@@ -89,7 +89,7 @@ satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibil
         </inputEntry>
         <inputEntry id="UnaryTests_02dubhc">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoStandard.impLavori = null or number(aggiudicazione.quadroEconomicoStandard.impLavori) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07p7zqb">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
@@ -102,7 +102,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_1ybaykj">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoStandard.impServizi = null or number(aggiudicazione.quadroEconomicoStandard.impServizi) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ikpecc">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
@@ -115,7 +115,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_0a0xtjm">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoStandard.impForniture = null or number(aggiudicazione.quadroEconomicoStandard.impForniture) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_117guh2">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
@@ -142,7 +142,7 @@ satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOff
         <inputEntry id="UnaryTests_17fhkb6">
           <text>some aggiudicazione in aggiudicazioni
 satisfies (some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaEconomica &lt; 0 OR offerta.offertaEconomica &gt; 100) </text>
+satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0poxjj2">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG50\"}"</text>
@@ -155,8 +155,8 @@ satisfies offerta.offertaEconomica &lt; 0 OR offerta.offertaEconomica &gt; 100) 
         </inputEntry>
         <inputEntry id="UnaryTests_0ehbnr7">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) = 1 AND some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaInAumento = 0 AND offerta.offertaEconomica = 0)</text>
+satisfies (count(aggiudicazione.offertePresentate) = 1 and (some offerta in aggiudicazione.offertePresentate 
+satisfies offerta.offertaInAumento = 0 and offerta.offertaEconomica = 0))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18911v9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG51\"}"</text>
@@ -169,7 +169,7 @@ satisfies offerta.offertaInAumento = 0 AND offerta.offertaEconomica = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yzqoju">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0)</text>
+satisfies count(aggiudicazione.offertePresentate)&gt;1 and ( every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ekmbnf">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>

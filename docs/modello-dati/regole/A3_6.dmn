@@ -66,7 +66,7 @@ satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibil
         </inputEntry>
         <inputEntry id="UnaryTests_19c8er9">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoStandard.impLavori = null or number(aggiudicazione.quadroEconomicoStandard.impLavori) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1homh6v">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
@@ -79,7 +79,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_0nhu6iu">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoStandard.impServizi = null or number(aggiudicazione.quadroEconomicoStandard.impServizi) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17vjfvq">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
@@ -92,7 +92,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_1g7jg4l">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoStandard.impForniture = null or number(aggiudicazione.quadroEconomicoStandard.impForniture) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hyh5lh">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
