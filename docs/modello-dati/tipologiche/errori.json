@@ -541,8 +541,8 @@
 {
     "codice":"ERR61",
     "descrizione": {
-		"it": "cig duplicato nell'elenco aggiudicazioni",
-		"en": "cig duplicato nell'elenco aggiudicazioni"
+		"it": "cig duplicato nell'elenco",
+		"en": "cig duplicato nell'elenco"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -550,8 +550,8 @@
 {
     "codice":"ERR62",
     "descrizione": {
-		"it": "cig non coerenti nell'elenco aggiudicazioni",
-		"en": "cig non coerenti nell'elenco aggiudicazioni"
+		"it": "cig non coerenti nell'elenco",
+		"en": "cig non coerenti nell'elenco"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -570,6 +570,24 @@
     "descrizione": {
 		"it": "errore TED",
 		"en": "errore TED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR65",
+    "descrizione": {
+		"it": "errore nell'estrazione dei lotti dall'eForm",
+		"en": "errore nell'estrazione dei lotti dall'eForm"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR66",
+    "descrizione": {
+		"it": "mancata coerenza tra idAppalto e cig",
+		"en": "mancata coerenza tra idAppalto e cig"
 	},
     "dataInizio":null,
     "dataFine":null
