@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A2_35 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE.
+  title: Modello Dati - Scheda A2_35 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED.
   version: 1.0.0
 components:
   schemas:
@@ -8,8 +8,8 @@ components:
       type: object
       additionalProperties: false
       properties: 
-        datiBaseAggiudicazioneSubappalto:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType'      
+        datiBaseSubappalti:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'      
     AggiudicazioneA2_35Type:
       allOf: 
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneBaseType' 
@@ -25,7 +25,7 @@ components:
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'
     AnacFormA2_35Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE.
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       required: [appalto,aggiudicazioni]
       properties:
@@ -37,7 +37,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA2_35Type'     
     SchedaA2_35Type:
-      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva sulle concessioni, regime alleggerito. Articolo 32, paragrafo 2 (riferimento all’allegato VIII), della direttiva 2014/23/UE.
+      description: Avviso di aggiudicazione di una concessione, direttiva concessioni, regime allegerito. Art. 187 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

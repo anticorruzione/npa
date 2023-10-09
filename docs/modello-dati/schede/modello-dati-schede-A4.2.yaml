@@ -17,7 +17,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA4Type'    
     SchedaA4_2Type:
-      description: Scheda di aggiudicazione relativa alla locazione finanziaria.
+      description: PPP - Locazione finanziaria. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

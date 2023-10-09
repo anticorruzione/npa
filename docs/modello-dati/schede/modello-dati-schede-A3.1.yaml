@@ -10,10 +10,9 @@ components:
       properties:  
         modalitaRiaggiudicazioneAffidamento:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'      
-        datiBaseAggiudicazioneSubappalto:
+        datiBaseSubappalti:
           allOf: 
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType' 
-          required: [subAppalto]
     AggiudicazioneA3_1Type:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       allOf: # estende la classe AggiudicazioneCompletaType
@@ -28,7 +27,7 @@ components:
         datiBaseSottomissioniRicevute:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSottomissioniRicevuteType'  
     AnacFormA3_1Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione per i contratti esclusi generali
+      description: Contiene tutti i dati relativi all'aggiudicazione
       type: object
       required: [appalto,aggiudicazioni]
       properties:
@@ -40,7 +39,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA3_1Type' 
     SchedaA3_1Type:
-      description: Scheda di aggiudicazione relativa ai contratti esclusi generali
+      description: Contratti esclusi (generale o di tipo accordo quadro) - Articolo 10 direttiva 2014/24/UE e articolo 21 direttiva 2014/25/UE.
       type: object
       required: [anacForm]
       additionalProperties: false

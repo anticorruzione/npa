@@ -17,7 +17,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA4Type'    
     SchedaA4_5Type:
-      description: Scheda di aggiudicazione relativa alla concessione di servizi e costruzione e gestione.
+      description: PPP - Concessione di servizi e costruzione e gestione. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

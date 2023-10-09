@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda M2_40 - Scheda di modifica contrattuale - Avviso di modifica di un appalto — direttiva sulle concessioni - Articolo 43, paragrafo 1, della direttiva 2014/23/UE
+  title: Modello Dati - Scheda M2_40 - Scheda di modifica contrattuale senza invio al TED.
   version: 1.0.0
 components:
   schemas:
@@ -16,11 +16,17 @@ components:
       description: Contiene tutti i dati di modifica contrattuale
       type: object
       additionalProperties: false
+      required: [idContratto,modificaContrattuale ]
       properties:  
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"        
         modificaContrattuale:
           $ref: '#/components/schemas/ModificaContrattualeType'       
     SchedaM2_40Type:
-      description: Scheda di modifica contrattuale - Avviso di modifica di un appalto — direttiva sulle concessioni - Articolo 43, paragrafo 1, della direttiva 2014/23/UE
+      description: Modifica contrattuale sottosoglia, concessioni. Articolo 187 comma 2 decreto legislativo 36/2023. Articolo 189 comma 5 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

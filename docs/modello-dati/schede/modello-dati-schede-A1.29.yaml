@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A1_29 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE con invio di eform29.
+  title: Modello Dati - Scheda A1_29 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED dell'eform29.
   version: 1.0.0
 components:
   schemas:
     AnacFormA1_29Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       required: [appalto,aggiudicazioni]
       additionalProperties: false
@@ -18,7 +18,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1_29Type'             
     SchedaA1_29Type:
-      description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso relativo all’appalto aggiudicato — direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE con invio di eform29.
+      description: Avviso aggiudicazione direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE. Articolo 111 decreto legislativo 36/2023.
       type: object
       required: [anacForm, eform]
       additionalProperties: false

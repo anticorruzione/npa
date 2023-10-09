@@ -62,7 +62,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA3_6Type'      
     SchedaA3_6Type:
-      description: Scheda di aggiudicazione relativa alle Società in-house
+      description: Affidamento a soc. inhouse. Articolo 7 decreto legislativo 36/2023. Articolo 120 comma 3 decreto legislativo 104/2010.
       type: object
       required: [anacForm]
       additionalProperties: false

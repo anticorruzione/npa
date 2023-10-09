@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda P1_15_1 - Scheda di pubblicazione avviso sull'esistenza di un sistema di qualificazione con indizione di procedura di scelta del contraente, con invio al TED dell'eform15.
+  title: Modello Dati - Scheda P1_15_1 - Scheda di pubblicazione avviso sull'esistenza di un sistema di qualificazione, con invio al TED dell'eform15.
   version: 1.0.0
 components:
   schemas:
     SchedaP1_15_1Type:
-      description: Scheda di pubblicazione avviso sull'esistenza di un sistema di qualificazione con indizione di procedura di scelta del contraente, con invio al TED dell'eform15. 
+      description: Avviso sull'esistenza di un sistema di qualificazione. Articolo 68 della direttiva 2014/25/UE, articolo 92, paragrafo 1, lettera c), della direttiva 2014/25/UE. Articolo 162 comma 1 decreto legislativo 36/2023. Articolo 164 decreto legislativo 36/2023.
       type: object
       required: [eform]
       additionalProperties: false

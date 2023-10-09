@@ -4,14 +4,34 @@ info:
   version: 1.0.0
 components:
   schemas:
+    DatiBaseProceduraCompletoType:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      required: [tipoProcedura,proceduraAccelerata]
+      additionalProperties: false
+      properties:
+        tipoProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/TipoProceduraEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioniAggiudicazioneDiretta:
+          type: array
+          items:        
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/GiustificazioneAggiudicazioneDirettaEnum'    
     LottoP3_4Type:
-      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      description: Oggetto che riporta i dati del lotto.
       allOf: # estende la classe LottoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'    
       type: object
       required: [afferenteInvestimentiPNRR,strumentiElettroniciSpecifici,lavoroOAcquistoPrevistoInProgrammazione, categoria,servizioPubblicoLocale,contrattiDisposizioniParticolari]
       additionalProperties: false
       properties:
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean       
+        categoria:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum'      
         servizioPubblicoLocale:
           description: Flag servizio pubblico locale
           type: boolean       
@@ -30,23 +50,22 @@ components:
         quadroEconomicoStandard:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'  
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoOptionalType'
         datiBaseCPV:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
         datiBaseContratto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
         datiBaseAggiudicazione:
           allOf: # estende la classe LottoP3BaseType
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType' 
-          required: [criteriAggiudicazione]  
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'            
         datiBaseTerminiInvio:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType' 
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'   
         datiBaseDocumenti:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'          
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'          
     AppaltoP3_4Type:
-      description: Oggetto che riporta i dati dell'appalto relativi al contraente generale
+      description: Oggetto che riporta i dati dell'appalto.
       allOf: # estende la classe AppaltoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP3BaseType'      
       type: object
@@ -60,11 +79,10 @@ components:
           type: string
           format: url  
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType'     
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoOptionalType'     
         datiBaseProcedura:
           allOf: # estende la classe LottoP3BaseType
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraCompletoType'
-          required: [tipoProcedura,proceduraAccelerata]
+          - $ref: '#/components/schemas/DatiBaseProceduraCompletoType'
         datiBaseStrumentiProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraAstaType'
     AnacFormP3_4Type:
@@ -86,7 +104,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/StazioneAppaltanteType'    
     SchedaP3_4Type:
-      description: Scheda di pubblicazione relativa al contraente generale
+      description: Affidamento a contraente generale. Artt. 204 decreto legislativo 36/2023. Articolo 205 comma 6 e comma 7 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

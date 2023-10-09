@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda M2 - Scheda di modifica contrattuale - Avviso di modifica di un appalto — direttiva generaleArticolo 72, paragrafo 1, della direttiva 2014/24/UE
+  title: Modello Dati - Scheda M2 - Scheda di modifica contrattuale senza invio al TED.
   version: 1.0.0
 components:
   schemas:
@@ -16,15 +16,18 @@ components:
       description: Contiene tutti i dati di modifica contrattuale
       type: object
       additionalProperties: false
-      required: [modificheContrattuali]
+      required: [idContratto,modificaContrattuale]
       properties:
-        modificheContrattuali:
-         type: array
-         items:          
-          $ref: '#/components/schemas/ModificaContrattualeType' 
+        idContratto:
+          description: identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"       
+        modificaContrattuale:
+         $ref: '#/components/schemas/ModificaContrattualeType' 
           
     SchedaM2Type:
-      description: Scheda relativa alle modifiche contrattuali senza invio al TED - Avviso di modifica di un appalto — direttiva generaleArticolo 72, paragrafo 1, della direttiva 2014/24/UE
+      description: Modifica contrattuale sottosoglia, generale. Articolo 72, paragrafo 1, della direttiva 2014/24/UE. Articolo 141 comma 3 lettera i) decreto o legislativo 36/2023. Articolo 120 comma 14 e comma 15 decreto legislativo 36/2023. Articolo 5 comma 11 e comma 12 Allegato II.14.
       type: object
       required: [anacForm]
       additionalProperties: false

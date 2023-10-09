@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A2_34 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE.
+  title: Modello Dati - Scheda A2_34 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED.
   version: 1.0.0
 components:
   schemas:
@@ -12,8 +12,8 @@ components:
       properties: 
         datiBaseProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraAType' 
-        datiBaseAggiudicazioneSubappalto:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneSubappaltoType'          
+        datiBaseSubappalti:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'          
     AggiudicazioneA2_34Type:
       allOf: 
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneCompletaType'
@@ -29,7 +29,7 @@ components:
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'      
     AnacFormA2_34Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE.
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       required: [appalto,aggiudicazioni]
       properties:
@@ -41,7 +41,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA2_34Type'  
     SchedaA2_34Type:
-      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE.
+      description: Avviso di aggiudicazione di un appalto, direttiva settoriale, regime allegerito. Articolo 50 comma 9 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

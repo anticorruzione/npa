@@ -5,13 +5,18 @@ info:
 components:
   schemas:
     LottoP3_5Type:
-      description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
+      description: Oggetto che riporta i dati del lotto.
       allOf: # estende la classe LottoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'    
       type: object
       required: [lavoroOAcquistoPrevistoInProgrammazione,afferenteInvestimentiPNRR,opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,contrattiDisposizioniParticolari]
       additionalProperties: false
       properties:
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean       
+        categoria:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum'      
         servizioPubblicoLocale:
           description: Flag servizio pubblico locale
           type: boolean       
@@ -45,24 +50,22 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType' 
         datiBase:
           allOf: # estende la classe LottoP3BaseType
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'
-          required: [oggetto,importo]
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'          
         datiBaseCPV:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
         datiBaseContratto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
         datiBaseAggiudicazione:
           allOf: # estende la classe LottoP3BaseType
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType' 
-          required: [criteriAggiudicazione]  
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'           
         datiBaseTerminiInvio:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType' 
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType' 
         datiBaseDocumenti:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'          
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'          
     AppaltoP3_5Type:
-      description: Oggetto che riporta i dati dell'appalto relativi alla scelta del socio privato nella società mista  
+      description: Oggetto che riporta i dati dell'appalto. 
       allOf: # estende la classe AppaltoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP3BaseType'
       type: object
@@ -71,11 +74,9 @@ components:
         datiBase:
           allOf: # estende la classe AppaltoP3BaseType
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType'    
-          required: [oggetto,importo]
         datiBaseProcedura:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraCompletoType' 
-          required: [tipoProcedura] 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraCompletoType'          
         datiBaseStrumentiProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraAstaType'          
     AnacFormP3_5Type:
@@ -97,7 +98,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/StazioneAppaltanteType'    
     SchedaP3_5Type:
-      description: Scheda di pubblicazione relativa alla scelta del socio privato nella società mista.
+      description: Scelta del socio privato nella società mista. Art. 13 comma 3 decreto legislativo 36/2023. Articolo 17 decreto legislativo 175/2016.
       type: object
       required: [anacForm]
       additionalProperties: false

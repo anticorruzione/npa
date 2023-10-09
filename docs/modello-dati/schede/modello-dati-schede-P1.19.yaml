@@ -5,7 +5,7 @@ info:
 components:
   schemas:
     AnacFormP1_19Type:
-      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia - direttiva sulle concessioni, regime ordinario. Articolo 31, paragrafo 1, della direttiva 2014/23/UE 
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale. 
       allOf: # estende la classe AnacFormBaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'   
       type: object
@@ -20,7 +20,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP_19Type'  
     SchedaP1_19Type:
-      description: Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform19.
+      description: Bando di concessione - direttiva sulle concessioni, regime ordinario, PPP. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
       type: object
       required: [anacForm, eform,espd]
       additionalProperties: false

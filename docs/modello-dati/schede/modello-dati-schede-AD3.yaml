@@ -77,7 +77,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneAD3Type'      
     SchedaAD3Type:
-      description: Scheda di affidamento diretto (EU), valida per affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED.
+      description: Affidamento diretto >= 5k € e entro i valori ammessi. Articolo 50 comma 9 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

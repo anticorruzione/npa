@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A1_34 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE con invio di eform34.
+  title: Modello Dati - Scheda A1_34 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED dell'eform34.
   version: 1.0.0
 components:
   schemas:
     AnacFormA1_34Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       required: [appalto,aggiudicazioni]
       additionalProperties: false
@@ -18,7 +18,7 @@ components:
           items:        
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1_34Type'
     SchedaA1_34Type:
-      description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE con invio di eform34.
+      description: Avviso di aggiudicazione di un appalto, direttiva settoriale, regime allegerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE. Articolo 173 decreto legislativo 36/2023. Articoo 127 comma 3 decreto legislativo 36/2023.
       type: object
       required: [anacForm, eform]
       additionalProperties: false

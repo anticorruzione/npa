@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A2_31 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE.
+  title: Modello Dati - Scheda A2_31 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED.
   version: 1.0.0
 components:
   schemas:
@@ -8,10 +8,9 @@ components:
       type: object
       additionalProperties: false
       properties: 
-        datiBaseAggiudicazioneSubappalto:
+        datiBaseSubappalti:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType' 
-          required: [subAppalto]
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiRequiredType'         
         datiBaseProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraCompletoType'
         datiBaseStrumentiProcedura:
@@ -39,7 +38,7 @@ components:
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'          
     AnacFormA2_31Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       required: [appalto,aggiudicazioni]
       properties:
@@ -51,7 +50,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA2_31Type'      
     SchedaA2_31Type:
-      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di una concessione — direttiva per il settore della difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE.
+      description: Avviso aggiudicazione, direttiva settore difesa. Articolo 31, decreto legislativo 208/2011. Articolo 50 comma 9 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

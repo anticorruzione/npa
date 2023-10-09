@@ -5,7 +5,7 @@ info:
 components:
   schemas:
    LottoP4_5Type:
-      description: Oggetto che riporta i dati del lotto all'interno della scheda di Concessione di servizi e costruzione e gestione
+      description: Oggetto che riporta i dati del lotto
       allOf: # estende la classe LottoP4BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP4BaseType'      
       type: object
@@ -30,7 +30,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP4_5Type'    
    SchedaP4_5Type:
-      description: Scheda di Concessione di servizi e costruzione e gestione.
+      description: Scheda di Concessione di servizi e costruzione e gestione. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 174 comma 3 decreto legislativo 36/2023. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

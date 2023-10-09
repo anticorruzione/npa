@@ -1,9 +1,21 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda P2_18 - Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE.
+  title: Modello Dati - Scheda P2_18 - Scheda di pubblicazione avviso per un bando di gara sottosoglia.
   version: 1.0.0
 components:
   schemas:
+    DatiBaseStrumentiProceduraType:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      required: [accordoQuadro,astaElettronica]      
+      properties:
+        accordoQuadro:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AccordoQuadroEnum'
+        sistemaDinamicoAcquisizione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean  
     AppaltoP2_18Type:
       allOf: 
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP_18Type'     
@@ -11,11 +23,10 @@ components:
       additionalProperties: false
       properties:  
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoOptionalType'
         datiBaseStrumentiProcedura:
           allOf:
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraType' 
-          required: [accordoQuadro,astaElettronica]
+          - $ref: '#/components/schemas/DatiBaseStrumentiProceduraType' 
         datiBaseProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraCompletoType'          
     LottoP2_18Type:
@@ -25,7 +36,7 @@ components:
       additionalProperties: false
       properties: 
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoOptionalType'
         datiBaseContratto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'  
         datiBaseAggiuntivi:
@@ -38,10 +49,9 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'      
         datiBaseDocumenti:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType' 
-          required: [url]          
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'                  
     AnacFormP2_18Type:
-      description: Contiene tutti i dati necessari per la pubblicazione nazionale di un bando di gara sottosoglia maggiore di 5K - Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE
+      description: Contiene tutti i dati necessari per la pubblicazione nazionale.
       type: object
       additionalProperties: false
       required: [appalto,lotti]
@@ -54,7 +64,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP2_18Type'         
     SchedaP2_18Type:
-      description: Scheda di pubblicazione avviso per un bando di gara sottosoglia maggiore di 5K - Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE
+      description: Bando di gara — settore della difesa. Articolo 31 decreto legislativo 208/2011. Articolo 50 comma 1 lettera d) decreto legislativo 36/2023.
       type: object
       required: [anacForm,espd]
       additionalProperties: false

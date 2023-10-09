@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A1_36 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE con invio di eform36. 
+  title: Modello Dati - Scheda A1_36 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED dell'eform36. 
   version: 1.0.0
 components:
   schemas:
     AnacFormA1_36Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       required: [aggiudicazioni]
       additionalProperties: false
@@ -16,7 +16,7 @@ components:
           items: 
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1_36Type'
     SchedaA1_36Type:
-      description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso sui risultati di un concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE con invio di eform36.
+      description: Avviso sui risultati di un concorso di progettazione, direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE. Articolo 46 decreto legislativo 36/2023.
       type: object
       required: [anacForm, eform]
       additionalProperties: false

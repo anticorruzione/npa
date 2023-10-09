@@ -18,7 +18,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA7Type'
     SchedaA7_1_1Type:
-      description: Scheda di aggiudicazione procedura negoziata senza bando pari o sopra soglia, con invio al TED di uno tra eform25, eform26,eform27,eform28.
+      description: aggiudicazione procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023. Articolo  158 decreto legislativo 36/2023. Articolo 18 decreto legislativo 208/2011. Articolo 127 decreto legislativo 36/2023. Articolo 128 decreto legislativo 36/2023.
       type: object
       required: [anacForm, eform]
       additionalProperties: false

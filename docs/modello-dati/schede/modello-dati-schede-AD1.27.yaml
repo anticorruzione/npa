@@ -5,7 +5,7 @@ info:
 components:
   schemas:
     AnacFormAD1_27Type:
-      description: Contiene tutti i dati necessari per l'affidamento diretto soprasoglia e sottosoglia con invio al TED – Avviso volontario per la trasparenza ex ante — direttiva per il settore della difesa. Articolo 64 della direttiva 2009/81/CE 
+      description: Contiene tutti i dati necessari per l'affidamento diretto.
       type: object
       required: [appalto,aggiudicazioni]
       additionalProperties: false
@@ -18,7 +18,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneAD1_27Type' 
     SchedaAD1_27Type:
-      description: Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform27.
+      description: Avviso per la trasparenza volontaria ex ante, direttiva difesa. Articolo 64 della direttiva 2009/81/CE.
       type: object
       required: [anacForm, eform]
       additionalProperties: false

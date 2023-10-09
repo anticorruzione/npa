@@ -14,10 +14,9 @@ components:
         relazioneUnicaSulleProcedure:
           description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
           type: boolean             
-        datiBaseAggiudicazioneSubappalto:
+        datiBaseSubappalti:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType' 
-          required: [subAppalto]      
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'                
     AggiudicazioneA3_5Type:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
@@ -41,7 +40,6 @@ components:
         datiBaseRisultatoProcedura:
           allOf: 
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType' 
-          required: [esito,giustificazione]
         datiBaseAggiudicazioneAppalto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'          
         datiBaseAccessibilita:
@@ -59,7 +57,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA3_5Type'
     SchedaA3_5Type:
-      description: Scheda di aggiudicazione relativa alla scelta del socio privato nella società mista.
+      description: Scelta del socio privato nella società mista. Articolo 13 c. 3 decreto legislativo 36/2023. Articolo 17 decretolegislativo 175/2016.
       type: object
       required: [anacForm]
       additionalProperties: false

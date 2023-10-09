@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A2_30 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE
+  title: Modello Dati - Scheda A2_30 - Scheda relativa all'aggiudicazione sottosoglia senza invio al TED.
   version: 1.0.0
 components:
   schemas:
@@ -10,16 +10,14 @@ components:
       type: object
       additionalProperties: false
       properties:   
-        datiBaseAggiudicazioneSubappalto:
+        datiBaseSubappalti:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType' 
-          required: [subAppalto]
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiRequiredType' 
         datiBaseProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraCompletoType'
         datiBaseStrumentiProcedura:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraType' 
-          required: [accordoQuadro,strumentiSvolgimentoProcedure,astaElettronica]          
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraAType' 
     AggiudicazioneA2_30Type:
       allOf: 
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneCompletaType'
@@ -35,7 +33,7 @@ components:
         datiBaseSottomissioniRicevute:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSottomissioniRicevuteType'          
     AnacFormA2_30Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       additionalProperties: false  
       required: [appalto,aggiudicazioni]
@@ -48,7 +46,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA2_30Type'        
     SchedaA2_30Type:
-      description: Scheda relativa all'aggiudicazione sottosoglia senza invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE
+      description: Avviso aggiudicazione direttiva settoriale, regime ordinario. Articolo 50 comma 9 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

@@ -51,7 +51,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneAD5Type'      
     SchedaAD5Type:
-      description: Scheda relativa gli appalti di importo inferiore a 5K, senza invio al TED.
+      description: Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

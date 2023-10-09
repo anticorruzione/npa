@@ -18,11 +18,10 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraAccelerataType'
         datiBaseStrumentiProcedura:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraType'
-          required: [accordoQuadro,sistemaDinamicoAcquisizione,astaElettronica]
-        datiBaseAggiudicazioneSubappalto:
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraAType'
+        datiBaseSubappalti:
           allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'            
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiRequiredType'            
     AggiudicazioneA3_4Type:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       allOf: # estende la classe AggiudicazioneCompletaType
@@ -30,7 +29,11 @@ components:
       type: object
       additionalProperties: false
       required: [numeroOfferteAmmesse]
-      properties:         
+      properties: 
+        numeroOfferteAmmesse:
+          description: numero di offerte ammesse
+          type: number
+          format: integer      
         datiBaseRisultatoProcedura:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseEsitoRisultatoProceduraType'  
         datiBaseSottomissioniRicevute:
@@ -53,7 +56,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneA3_4Type' 
     SchedaA3_4Type:
-      description: Scheda di aggiudicazione relativa al contraente generale
+      description: Contraente generale. Artt. 204 e 205 decreto legislativo 36/2023
       type: object
       required: [anacForm]
       additionalProperties: false

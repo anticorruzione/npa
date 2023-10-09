@@ -80,7 +80,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneAD4Type'      
     SchedaAD4Type:
-      description: Scheda di adesione AQ/convenzione senza successivo confronto competitivo, senza invio al TED.
+      description: Adesione ad accordo quadro/convenzione senza successivo confronto competitivo. 
       type: object
       required: [anacForm]
       additionalProperties: false

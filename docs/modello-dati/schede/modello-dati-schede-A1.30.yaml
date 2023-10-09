@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda A1_30 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE con invio di eform30.
+  title: Modello Dati - Scheda A1_30 - Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED dell'eform30.
   version: 1.0.0
 components:
   schemas:
     AnacFormA1_30Type:
-      description: Contiene tutti i dati relativi all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE
+      description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
       required: [appalto, aggiudicazioni]
       additionalProperties: false
@@ -18,7 +18,7 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneA1_30Type'
     SchedaA1_30Type:
-      description: Scheda relativa all'aggiudicazione soprasoglia e sottosoglia con invio al TED - Avviso di aggiudicazione di un appalto — direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE con invio di eform30.
+      description: Avviso aggiudicazione direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE. Articolo 163 comma 2 decreto legislativo 36/2023.
       type: object
       required: [anacForm, eform]
       additionalProperties: false
