@@ -1046,7 +1046,7 @@ paths:
       tags:
         - SA
       summary: API Rest per il recupero dell’anagrafica degli OE. SINCRONO
-      description: vengono restituito i dati anagrafici dell'OE. SINCRONO
+      description: vengono restituiti i dati anagrafici dell'OE. SINCRONO NB. i dati restituiti da questo servizio non hanno valore di certificazione fino all'istituzione dell'anagrafe degli operatori economici ex art. 31 D.Lgs 36/2023
       operationId: idAnagraficaOERicerca
       parameters:
         - in: query    
@@ -1371,6 +1371,7 @@ components:
       properties:
         idRichiesta:
           description: Identificativo univoco della richiesta definito da ANAC. (A UUID specified by RFC4122)
+          type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
       example:

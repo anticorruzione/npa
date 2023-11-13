@@ -200,7 +200,7 @@ paths:
       parameters:
         - in: query
           name: idPianificazione
-          description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
+          description: Identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
           required: true
           schema:
             type: string
@@ -233,26 +233,26 @@ paths:
       parameters:
         - in: query
           name: stato
-          description: Codice stato della Pianificazione - se valorizzato, il parametro richiedere obbligatoriamente la valorizzazione di almeno un altro parametro -  fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
+          description: Codice stato della Pianificazione - valorizzare almeno un parametro di ricerca - fare riferimento ai valori contenuti nel file [statoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoPiano.json)
           schema:
             type: string
             example: 'IN_LAV'
         - in: query
           name: tipo
-          description: Codice tipologia della Pianificazione - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
+          description: Codice tipologia della Pianificazione - valorizzare almeno un parametro di ricerca - fare riferimento ai valori contenuti nel file [tipoPiano.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPiano.json)
           schema:
             type: string
             example: 'PREINFORMAZIONE'  
         - in: query
           name: dataCreazioneDa
-          description: Data di crezione della Pianificazione - intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
+          description: Data di crezione della Pianificazione - valorizzare almeno un parametro di ricerca -  intervallo successivo (A date-time specified by ISO 8601 as profiled by RFC 3339)
           schema:
             type: string
             format: date-time
           example: '2015-05-28T14:07:17Z'
         - in: query
           name: dataCreazioneA
-          description: Data di crezione della Pianificazione - intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339) 
+          description: Data di crezione della Pianificazione - valorizzare almeno un parametro di ricerca -  intervallo precedente (A date-time specified by ISO 8601 as profiled by RFC 3339) 
           schema:
             type: string
             format: date-time
@@ -810,20 +810,20 @@ paths:
       parameters:
         - in: query
           name: codiceAppalto
-          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante. Obbligatorio se idAppalto e cig non sono stati valorizzati.
+          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante. Alternativo all' idPianificazione. Obbligatorio se idAppalto e cig non sono stati valorizzati.
           schema:
             type: string
             maxLength: 64
         - in: query    
           name: idAppalto
-          description: Identificativo univoco dell' Appalto definito da ANAC. (A UUID specified by FC4122). Obbligatorio se codiceAppalto e cig non sono stati valorizzati.
+          description: Identificativo univoco dell' Appalto definito da ANAC. (A UUID specified by FC4122).  Alternativo all' idPianificazione. Obbligatorio se codiceAppalto e cig non sono stati valorizzati.
           schema:
             type: string
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         - in: query
           name: cig
-          description: Identificativo univoco Gara-Lotto rilasciato da ANAC. Obbligatorio se idAppalto e cig non sono stati valorizzati.
+          description: Identificativo univoco Gara-Lotto rilasciato da ANAC. Alternativo all' idPianificazione. Obbligatorio se idAppalto e cig non sono stati valorizzati.
           schema:
             type: string
             example: 9050626CD6
@@ -847,6 +847,13 @@ paths:
             type: string
             format: date-time
           example: '2022-01-23T12:02:05Z'
+        - in: query    
+          name: idPianificazione
+          description: Identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by FC4122). Obbligatorio se codiceAppalto, idAppalto e cig non sono stati valorizzati.
+          schema:
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
         - in: query
           name: statoAvviso
           description: Codice Stato in cui si trova l' Avviso - fare riferimento ai valori contenuti nel file [statoAvviso.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoAvviso.json)
@@ -1281,12 +1288,18 @@ paths:
       parameters:
         - in: query
           name: idAppalto
-          description: identificativo univoco dell'Appalto definito da ANAC. (A UUID specified by RFC4122)
-          required: true
+          description: identificativo univoco dell'Appalto definito da ANAC. Obbligatorio se idPianificazione non è stato valorizzato (A UUID specified by RFC4122)
           schema:
             type: string
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        - in: query
+          name: idPianificazione
+          description: identificativo univoco della Pianificazione definito da ANAC. Obbligatorio se idAppalto non è stato valorizzato (A UUID specified by RFC4122)
+          schema:
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"            
         - in: query
           name: tipoOperazione
           description: Tipo operazione di cui si vuole conoscere l'esito - fare riferimento ai valori contenuti nel file [tipoOperazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOperazione.json)
@@ -1671,6 +1684,30 @@ paths:
           $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
+  /recupera-profilo:
+    get:
+      tags:
+        -  gestioneUtenti
+      summary: API Rest per il recupero del profilo utente. SINCRONO
+      description: Viene recuperata il profilo utente contenente i dati della stazione appaltante che viene rappresentata . SINCRONO
+      operationId: idProfiloRecupera  
+      responses:
+        '200':
+          description: Operazione terminato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecuperaProfiloResponse'          
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []
 components:
   headers:
     Retry-After:
@@ -1825,11 +1862,21 @@ components:
     DatiTipologicaType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiTipologicaType'
     ContentDocumentType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType'      
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType' 
+    ProfiloSAType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/ProfiloSAType'  
+    RecuperaProfiloResponse: 
+      allOf: # estende lo schema dati di BaseResponse
+        - $ref: '#/components/schemas/BaseResponse'
+      properties:  
+        profilo: 
+          $ref: '#/components/schemas/ProfiloSAType'
     CreaAppaltoRequest:
       description: Oggetto in ingresso al servizio    
       type: object
       additionalProperties: false
+      required:  # List the required properties here
+        - scheda
       properties:
         scheda:
           $ref: '#/components/schemas/SchedaComunicaAppaltoType'
@@ -1839,6 +1886,7 @@ components:
       additionalProperties: false
       required:  # List the required properties here
         - idAppalto
+        - scheda
       properties:
         idAppalto:
           description: identificativo univoco dell'Appalto generato da ANAC.
@@ -1892,6 +1940,8 @@ components:
       description: Oggetto in ingresso al servizio    
       type: object
       additionalProperties: false
+      required:
+        - scheda
       properties:
         scheda:
           $ref: '#/components/schemas/SchedaPianificazioneType'
@@ -1901,6 +1951,7 @@ components:
       additionalProperties: false
       required:  # List the required properties here
         - idPianificazione
+        - scheda
       properties:
         idPianificazione:
           description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Pianificazione. (A UUID specified by RFC4122)
@@ -2140,7 +2191,7 @@ components:
       additionalProperties: false
       required:  # List the required properties here
         - idAvviso
-        - idAppalto
+        - scheda
       properties:
         idAvviso:
           description: identificativo univoco dell'Avviso generato da ANAC.
@@ -2148,10 +2199,15 @@ components:
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         idAppalto:
-          description: identificativo univoco dell'Appalto generato da ANAC.
+          description: identificativo univoco dell'Appalto generato da ANAC. Obbligatorio se idPianificazione non è stato valorizzato
           type: string
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        idPianificazione:
+          description: identificativo univoco della Pianificazione definito da ANAC. Obbligatorio se idAppalto non è stato valorizzato
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
         scheda:
            $ref: '#/components/schemas/SchedaGroupType'
     PubblicaAvvisoRequest:
@@ -2183,10 +2239,15 @@ components:
           format: uuid
           example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         idAppalto:
-          description: identificativo univoco dell'Appalto generato da ANAC.
+          description: identificativo univoco dell'Appalto generato da ANAC. Obbligatorio se idPianificazione non è stato valorizzato
           type: string
           format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        idPianificazione:
+          description: identificativo univoco della Pianificazione definito da ANAC. Obbligatorio se idAppalto non è stato valorizzato
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         motivo:  
           description: descrizione del motivo della richiesta di cancellazione
           type: string
@@ -2194,7 +2255,6 @@ components:
           example: 'Revoca delle procedure di gara'
       required:
         - idAvviso
-        - idAppalto
     ConsultaAppaltoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'

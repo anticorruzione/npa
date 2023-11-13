@@ -126,7 +126,9 @@ Nella seguente [cartella](../diagrammi-drawio/), è consultabile il diagramma dr
 I servizi di NPA e dei componenti FVA e FVOE sono erogati B2B alle piattaforme di negoziazione e gestione dell'appalto. Gli utenti finali del sistema sono identificati dalla piattaforma fruitrice dei servizi (si faccia riferimento al paragrafo [Contesto di sicurezza](#14contesto-di-sicurezza) per i dettagli tecnici), tuttavia tali soggetti devono essere registrati sui sistemi ANAC e dotati di un ruolo opportuno per poter accedere ai servizi NPA.
 Il ruoli previsti sono i seguenti:
   - RP, responsabile del progetto
-  - DRP, delegato dal responsabile del progetto 
+  - DRP1, delegato dal responsabile del progetto per la fase di Programmazione
+  - DRP2, delegato dal responsabile del progetto per la fase di Affidamento
+  - DRP3, delegato dal responsabile del progetto per la fase di Esecuzione
 
 Il ruolo RP ha accesso a tutti i servizi e in via esclusiva alle operazioni:
   - presa-carico
@@ -135,7 +137,7 @@ Il ruolo RP ha accesso a tutti i servizi e in via esclusiva alle operazioni:
   - crea-piano
   - crea-appalto
 
-Il ruolo DRP viene attribuito dal RP ad altri utenti mediante il metodo aggiungiSoggetto indicando le operazioni associate alla delega. 
+I ruoli DRP vengono attribuiti dal RP ad altri utenti mediante il metodo aggiungiSoggetto indicando le operazioni associate alla delega. 
 Il DRP ha accesso esclusivamente alle operazioni per le quali ha ricevuto delega. La delega è valida all'interno del contesto di un appalto.
 
 ## 4.5	Servizi e ruoli
@@ -145,56 +147,56 @@ Nella tabella seguente si riporta l'elenco di tutti i servizi esposti, richiamab
 | Modulo | Contesto | Servizio | Ruolo | 
   |-------------|-------------| ------------- | ------------- |
   |**Modulo NPA**|**pianificazioneAppalto**| crea-piano  | RP |  
-  |**Modulo NPA**|**pianificazioneAppalto**| modifica-piano  | RP, DRP |
-  |**Modulo NPA**|**pianificazioneAppalto**| cancella-piano  | RP, DRP |  
-  |**Modulo NPA**|**pianificazioneAppalto**| ricerca-piano  | RP, DRP |
-  |**Modulo NPA**|**pianificazioneAppalto**| consulta-piano  | RP, DRP |
-  |**Modulo NPA**|**pianificazioneAppalto**| conferma-piano  | RP, DRP |
-  |**Modulo NPA**|**pianificazioneAppalto**| verifica-piano  | RP, DRP |
+  |**Modulo NPA**|**pianificazioneAppalto**| modifica-piano  | RP |
+  |**Modulo NPA**|**pianificazioneAppalto**| cancella-piano  | RP | 
+  |**Modulo NPA**|**pianificazioneAppalto**| ricerca-piano  | RP |
+  |**Modulo NPA**|**pianificazioneAppalto**| consulta-piano  | RP |
+  |**Modulo NPA**|**pianificazioneAppalto**| conferma-piano  | RP |
+  |**Modulo NPA**|**pianificazioneAppalto**| verifica-piano  | RP |
   |**Modulo NPA**|**gestioneUtenti**| presa-carico  | RP |
-  |**Modulo NPA**|**gestioneUtenti**| ricerca-soggetto  | RP, DRP |
+  |**Modulo NPA**|**gestioneUtenti**| ricerca-soggetto  | RP, DRP1, DRP2, DRP3 |
   |**Modulo NPA**|**gestioneUtenti**| aggiungi-soggetto  | RP |
   |**Modulo NPA**|**gestioneUtenti**| elimina-soggetto  | RP |
   |**Modulo NPA**|**comunicaAppalto**| crea-appalto  | RP |
-  |**Modulo NPA**|**comunicaAppalto**| modifica-appalto  | RP, DRP |
-  |**Modulo NPA**|**comunicaAppalto**| cancella-appalto  | RP, DRP |
-  |**Modulo NPA**|**comunicaAppalto**| ricerca-appalto  | RP, DRP |
-  |**Modulo NPA**|**comunicaAppalto**| consulta-appalto  | RP, DRP |
-  |**Modulo NPA**|**comunicaAppalto**| verifica-appalto  | RP, DRP |
-  |**Modulo NPA**|**comunicaAppalto**| conferma-appalto  | RP, DRP |
-  |**Modulo NPA**|**comunicaAppalto**| recupera-cig  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| pubblica-avviso  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| modifica-avviso  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| rettifica-avviso  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| cancella-avviso  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| ricerca-avviso  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| consulta-avviso  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| stato-avviso  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| recupera-cig  | RP, DRP |
-  |**Modulo NPA**|**pubblicaAvviso**| consulta-rendering-avviso  | RP, DRP |
-  |**Modulo NPA**|**comunicaPostPubblicazione**| crea-scheda  | RP, DRP |
-  |**Modulo NPA**|**comunicaPostPubblicazione**| modifica-scheda  | RP, DRP |
-  |**Modulo NPA**|**comunicaPostPubblicazione**| cancella-scheda  | RP, DRP |
-  |**Modulo NPA**|**comunicaPostPubblicazione**| ricerca-scheda  | RP, DRP |
-  |**Modulo NPA**|**comunicaPostPubblicazione**| consulta-scheda  | RP, DRP |
-  |**Modulo NPA**|**comunicaPostPubblicazione**| verifica-scheda  | RP, DRP |
-  |**Modulo NPA**|**comunicaPostPubblicazione**| conferma-scheda  | RP, DRP |
-  |**Modulo FVOE**|**FVOE**| richiesta-accesso-fvoe  | RP, DRP |
-  |**Modulo FVOE**|**FVOE**| verifica-richiesta-accesso-fvoe  | RP, DRP |
-  |**Modulo FVOE**|**FVOE**| ricerca-documenti-fvoe  | RP, DRP |
-  |**Modulo FVOE**|**FVOE**| recupera-documento-fvoe  | RP, DRP |
-  |**Modulo FVOE**|**FVOE**| richiedi-documenti  | RP, DRP |
-  |**Modulo FVOE**|**FVOE**| recupera-storico-documento-fvoe  | RP, DRP |
-  |**Modulo FVOE**|**FVOE**| recupero-anagrafica-oe  | RP, DRP |
+  |**Modulo NPA**|**comunicaAppalto**| modifica-appalto  | RP, DRP1 |
+  |**Modulo NPA**|**comunicaAppalto**| cancella-appalto  | RP, DRP1 |
+  |**Modulo NPA**|**comunicaAppalto**| ricerca-appalto  | RP, DRP1 |
+  |**Modulo NPA**|**comunicaAppalto**| consulta-appalto  | RP, DRP1 |
+  |**Modulo NPA**|**comunicaAppalto**| verifica-appalto  | RP, DRP1 |
+  |**Modulo NPA**|**comunicaAppalto**| conferma-appalto  | RP, DRP1 |
+  |**Modulo NPA**|**comunicaAppalto**| recupera-cig  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| pubblica-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| modifica-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| rettifica-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| cancella-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| ricerca-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| consulta-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| stato-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| recupera-cig  | RP, DRP1 |
+  |**Modulo NPA**|**pubblicaAvviso**| consulta-rendering-avviso  | RP, DRP1 |
+  |**Modulo NPA**|**comunicaPostPubblicazione**| crea-scheda  | RP, DRP2, DRP3 |
+  |**Modulo NPA**|**comunicaPostPubblicazione**| modifica-scheda  | RP, DRP2, DRP3 |
+  |**Modulo NPA**|**comunicaPostPubblicazione**| cancella-scheda  | RP, DRP2, DRP3 |
+  |**Modulo NPA**|**comunicaPostPubblicazione**| ricerca-scheda  | RP, DRP2, DRP3 |
+  |**Modulo NPA**|**comunicaPostPubblicazione**| consulta-scheda  | RP, DRP2, DRP3 |
+  |**Modulo NPA**|**comunicaPostPubblicazione**| verifica-scheda  | RP, DRP2, DRP3 |
+  |**Modulo NPA**|**comunicaPostPubblicazione**| conferma-scheda  | RP, DRP2, DRP3 |
+  |**Modulo FVOE**|**FVOE**| richiesta-accesso-fvoe  | RP,  DRP2, DRP3 |
+  |**Modulo FVOE**|**FVOE**| verifica-richiesta-accesso-fvoe  | RP, DRP2, DRP3 |
+  |**Modulo FVOE**|**FVOE**| ricerca-documenti-fvoe  | RP, DRP2, DRP3 |
+  |**Modulo FVOE**|**FVOE**| recupera-documento-fvoe  | RP, DRP2, DRP3 |
+  |**Modulo FVOE**|**FVOE**| richiedi-documenti  | RP, DRP2, DRP3 |
+  |**Modulo FVOE**|**FVOE**| recupera-storico-documento-fvoe  | RP, DRP2, DRP3 |
+  |**Modulo FVOE**|**FVOE**| recupero-anagrafica-oe  | RP, DRP2, DRP3 |
   |**Modulo FVOE**|**FVOE**| autorizza-accesso-fvoe  | *Non Applicabile* |
-  |**Modulo FVA**|**FVA**| ricerca-fascicoli-fva  | RP, DRP |
-  |**Modulo FVA**|**FVA**| recupera-fascicolo-fva  | RP, DRP |
-  |**Modulo FVA**|**FVA**| ricerca-documenti-fva  | RP, DRP |
-  |**Modulo FVA**|**FVA**| recupera-documento-fva  | RP, DRP |
-  |**Modulo FVA**|**FVA**| recupera-storico-fascicolo-fva  | RP, DRP |
-  |**Modulo FVA**|**FVA**| recupera-storico-documento-fva  | RP, DRP |
-  |**Modulo NPA**|**Servizi comuni**| stato-appalto  | RP, DRP |
-  |**Modulo NPA**|**Servizi comuni**| esito-operazione  | RP, DRP |
+  |**Modulo FVA**|**FVA**| ricerca-fascicoli-fva  | RP, DRP1, DRP2, DRP3  |
+  |**Modulo FVA**|**FVA**| recupera-fascicolo-fva  | RP, DRP1, DRP2, DRP3  |
+  |**Modulo FVA**|**FVA**| ricerca-documenti-fva  | RP, DRP1, DRP2, DRP3  |
+  |**Modulo FVA**|**FVA**| recupera-documento-fva  | RP, DRP1, DRP2, DRP3  |
+  |**Modulo FVA**|**FVA**| recupera-storico-fascicolo-fva  | RP, DRP1, DRP2, DRP3  |
+  |**Modulo FVA**|**FVA**| recupera-storico-documento-fva  | RP, DRP1, DRP2, DRP3  |
+  |**Modulo NPA**|**Servizi comuni**| stato-appalto  | RP, DRP1, DRP2, DRP3 |
+  |**Modulo NPA**|**Servizi comuni**| esito-operazione  | RP, DRP1, DRP2, DRP3 |
   |**Modulo NPA**|**Servizi comuni**| recupera-elenco-tipologiche  | * |
   |**Modulo NPA**|**Servizi comuni**| recupera-tipologica  | * |
   |**Modulo NPA**|**Servizi comuni**| recupera-valore-tipologica  | * |
@@ -233,7 +235,7 @@ I servizi che devono essere obbligatoriamente richiamati per questo contesto del
 
 - **crea-piano**: servizio utile per l’inserimento in bozza di un avviso di preinformazione. 
 A seguito dell’invocazione di questo servizio, il Piano transita nello stato “IN LAVORAZIONE”;
-- **conferma-piano**: servizio che ha lo scopo di validare e confermare i dati del Piano. A seguito dell’invocazione di questo servizio, lo stato del Piano transita in “CONFERMATO”. Qualora il tipo di piano lo consente, il servizio esito-operazione restituisce l'identificativo dell'avviso ad esso assegnato che la SA potrà utilizzare per la successiva invocazione di pubblica-avviso. ASINCRONO - ASIMMETRICO
+- **conferma-piano**: servizio che ha lo scopo di validare e confermare i dati del Piano. A seguito dell’invocazione di questo servizio, lo stato del Piano transita in “CONFERMATO” e, qualora il tipo di scheda lo consente, avvia la fase di pubblicazione dell'avviso. Mediante la successiva invocazione al servizio esito-operazione sarà possibile recuperare l'idAvviso assegnato. ASINCRONO - ASIMMETRICO
 
 Servizi facoltativi, una volta richiamato il crea-piano, possono essere invocati i seguenti servizi:
 - modifica-piano: servizio che va a sostituire il Piano creato precedentemente con una nuova bozza. Solo l’ultima istanza ricevuta del piano sarà oggetto delle successive fasi del processo;
@@ -351,7 +353,7 @@ Nella seguente [cartella](../diagrammi-drawio/), è consultabile il diagramma dr
 
 # 10	Contesto FVA
 All’interno della NPA è costituito e mantenuto il Fascicolo Virtuale dell’Appalto (FVA) che ha l’obiettivo di gestire le informazioni digitali relative agli atti e/o avvisi di pertinenza dell’Appalto. 
-Nell’FVA confluisce quindi tutto il corpus informativo della gara d’appalto, che si viene a costituire dalle prime fasi del ciclo di gara.
+Nell’FVA confluisce quindi tutto il corpus informativo della gara d’appalto, che si viene a costituire dalle prime fasi del ciclo di gara. Nell'FVA oltre ai documenti propri dell'appalto sono riportati i riferimenti di tutte le schede delle fasi della gara.
 
 **Descrizione dei servizi**
 
@@ -360,9 +362,8 @@ I servizi facoltativi che l’SA potrà invocare relativamente al Fascicolo dell
 -	recupera-fascicolo-fva: servizio che permette la consultazione delle informazioni di dettaglio di un fascicolo;
 -	ricerca-documenti-fva: servizio che permette la ricerca dei documenti di un Fascicolo sulla base dei criteri di input;
 -	recupera-documento-fva: servizio che permette la consultazione delle informazioni di dettaglio di un documento;
--	recupera-storico-fascicolo-fva: servizio che consente di recuperare la history e tutte le operazioni effettuate sul fascicolo;
--	recupera-storico-documento-fva: servizio che consente di recuperare la history e tutte le operazioni effettuate sul documento.
-
+-	recupera-storico-fascicolo-fva: servizio che permette la consultazione di tutte le operazioni effettuate sul fascicolo;
+-	recupera-storico-documento-fva: servizio che permette ia consultazione di tutte le operazioni effettuate sul documento;
 
 ## 10.1	Flusso di Interoperabilità
 Di seguito si riporta il diagramma di sequenza che illustra le interfacce dei vari servizi e le interazioni con i sistemi esterni:
