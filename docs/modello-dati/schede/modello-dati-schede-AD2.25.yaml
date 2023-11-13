@@ -29,6 +29,8 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'
     AnacFormAD2_25Type:
       description: Contiene tutti i dati necessari per l'affidamento diretto
+      allOf: # estende la classe AnacFormBaseType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'       
       type: object
       required: [appalto,aggiudicazioni]
       additionalProperties: false   

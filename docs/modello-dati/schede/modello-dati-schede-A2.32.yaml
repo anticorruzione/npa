@@ -21,7 +21,16 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneBaseType' 
       type: object
       additionalProperties: false
-      properties:            
+      required: [numeroOfferteAmmesse]
+      properties:   
+        numeroOfferteAmmesse:
+          description: numero di offerte ammesse
+          type: number
+          format: integer      
+        nImpreseEscluseInsufficientiGiustificazioni: 
+          description: Numero imprese escluse per insufficienti giustificazioni
+          type: number
+          format: integer      
         quadroEconomicoConcessioni:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType'      
         datiBaseRisultatoProcedura:

@@ -7,7 +7,7 @@ components:
     AggiudicazioneAD3Type:
       type: object
       additionalProperties: false
-      required: [lotIdentifier]
+      required: [lotIdentifier,partecipanti]
       properties:  
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -65,6 +65,8 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'
     AnacFormAD3Type:
       description: Contiene tutti i dati necessari per l'affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED.
+      allOf: # estende la classe AnacFormBaseType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'       
       type: object
       required: [appalto,aggiudicazioni]
       additionalProperties: false   

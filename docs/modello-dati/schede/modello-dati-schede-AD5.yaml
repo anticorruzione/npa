@@ -7,7 +7,7 @@ components:
     AggiudicazioneAD5Type:
       type: object
       additionalProperties: false
-      required: [lotIdentifier,oggettoPrincipaleContratto,cup,aggiudicatario]
+      required: [lotIdentifier,oggettoPrincipaleContratto,cup,partecipanti]
       properties:  
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -17,8 +17,10 @@ components:
         cup:
           description: Cup
           type: string  
-        aggiudicatario:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioAD5Type'    
+        partecipanti:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioAD5Type'    
     AppaltoAD5Type:
       type: object
       additionalProperties: false
@@ -39,6 +41,8 @@ components:
           type: string
     AnacFormAD5Type:
       description: Contiene tutti i dati relativi agli appalti di importo inferiore a 5K, senza invio al TED. 
+      allOf: # estende la classe AnacFormBaseType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'      
       type: object
       required: [appalto,aggiudicazioni]
       additionalProperties: false   

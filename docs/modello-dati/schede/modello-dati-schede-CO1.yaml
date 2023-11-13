@@ -11,6 +11,16 @@ components:
       properties:
         causaInterruzioneAnticipata:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotiviInterruzioneEnum'
+        motiviRisoluzione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotiviRisoluzioneEnum'
+        dataStipula:
+          description: Data stipula del contratto
+          type: string
+          format: date-time            
+        dataEsecutivita:
+          description: Data esecutività del contratto (ove prevista)
+          type: string
+          format: date-time          
         dataInterruzioneAnticipata:
           description: Data di interruzione anticipata
           type: string

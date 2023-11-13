@@ -19,7 +19,7 @@ components:
     MotivazioneCIGEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Motivazione richiesta CIG - fare riferimento ai valori contenuti nel file [motivazioneCig.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivazioneCig.json)
+      description: Motivazione richiesta CIG - fare riferimento ai valori contenuti nel file [motivazioneCIG.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivazioneCIG.json)
     StrumentiSvolgimentoProcedureEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -220,6 +220,10 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
       description: Motivo del mancato subappalto - fare riferimento ai valori contenuti nel file [motivoMancatoSubappalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoMancatoSubappalto.json)  
+    MotivoMancataEsecuzioneSubappaltoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Motivo della mancata esecuzione del subappalto - fare riferimento ai valori contenuti nel file [motivoMancataEsecuzioneSubappalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoMancataEsecuzioneSubappalto.json)    
     MotiviInterruzioneEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
@@ -315,7 +319,7 @@ components:
         quota30PerCento:
           description: Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)? Valori ammessi - SI/NO/SI quota inferiore
           type: string
-          enum: ['SI', 'NO', 'SI quota inferiore'] 
+          enum: ['SI', 'NO', 'SI QUOTA INFERIORE'] 
         quotaInferioreOccupFemminile:
           description: Previsione di una quota inferiore con riferimento all’occupazione femminile
           type: number
@@ -425,9 +429,14 @@ components:
     AggiudicatarioAD5Type:
       description: Dati dell'aggiudicatario
       type: object
-      required: [codiceFiscale,denominazione,importo]
+      required: [codiceFiscale,denominazione,importo,idPartecipante]
       additionalProperties: false
       properties:
+        idPartecipante: 
+          description: id partecipante
+          type: string  
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"       
         codiceFiscale:
           description: codice fiscale del soggetto interessato
           type: string
@@ -437,16 +446,18 @@ components:
         importo:
           description: Importo di aggiudicazione/affidamento/adesione AQ/premio erogato al netto di opzioni e rinnovi 
           type: number
-          format: double          
+          format: double 
     OfferteType:
       description: Dati delle offerte
       type: object
-      required: [importo,ccnl]
+      required: [importo,ccnl,idPartecipante]
       additionalProperties: false
       properties:
-        idPartecipante:
+        idPartecipante: 
           description: id partecipante
-          type: string 
+          type: string  
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         importo:
           description: Importo
           type: number
@@ -500,7 +511,15 @@ components:
         numeroRiserveDaDefinire:
           description: Numero riserve da definire
           type: number
-          format: integer          
+          format: integer
+        impTotaleRichiesto:
+          description: Importo totale richiesto
+          type: number
+          format: double
+        impTotaleDefinizione:
+          description: Importo totale eventuale definizione
+          type: number
+          format: double          
     AggiudicatarioA1_35Type:
       description: Dati dell'aggiudicatario
       type: object
@@ -544,8 +563,8 @@ components:
           $ref: '#/components/schemas/MotivazioneCIGEnum'
         strumentiSvolgimentoProcedure:
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'
-        idSchedaPreinformazione:
-          description: ID scheda preinformazione
+        idPianificazione:
+          description: ID pianificazione
           type: string  
           format: uuid
         termineRidottoAvvisoPreinformazione:
@@ -584,8 +603,8 @@ components:
           maxLength: 64            
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'
-        idSchedaPreinformazione:
-          description: ID scheda preinformazione
+        idPianificazione:
+          description: ID pianificazione
           type: string  
           format: uuid
         termineRidottoAvvisoPreinformazione:
@@ -611,8 +630,8 @@ components:
           type: string
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum' 
-        idSchedaPreinformazione:
-          description: ID scheda preinformazione
+        idPianificazione:
+          description: ID pianificazione
           type: string  
           format: uuid
         termineRidottoAvvisoPreinformazione:
@@ -644,8 +663,8 @@ components:
           type: boolean  
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'
-        idSchedaPreinformazione:
-          description: ID scheda preinformazione
+        idPianificazione:
+          description: ID pianificazione
           type: string  
           format: uuid
         termineRidottoAvvisoPreinformazione:
@@ -676,8 +695,8 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           maxLength: 64  
-        idSchedaPreinformazione:
-          description: ID scheda preinformazione
+        idPianificazione:
+          description: ID pianificazione
           type: string  
           format: uuid
         termineRidottoAvvisoPreinformazione:
@@ -878,8 +897,8 @@ components:
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'  
         contrattiDisposizioniParticolari:
           $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum' 
-        idSchedaPreinformazione:
-          description: ID scheda preinformazione
+        idPianificazione:
+          description: ID pianificazione
           type: string  
           format: uuid
         termineRidottoAvvisoPreinformazione:
@@ -902,8 +921,8 @@ components:
           maxLength: 64           
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum' 
-        idSchedaPreinformazione:
-          description: ID scheda preinformazione
+        idPianificazione:
+          description: ID pianificazione
           type: string  
           format: uuid
         termineRidottoAvvisoPreinformazione:
@@ -2056,6 +2075,7 @@ components:
       description: Dati del partecipante
       type: object
       additionalProperties: false
+      required: [codiceFiscale,denominazione,ruoloOE,tipoOE,idPartecipante,paeseOperatoreEconomico,avvalimento]
       properties:
         codiceFiscale:
           description: Codice fiscale del soggetto interessato
@@ -2069,11 +2089,9 @@ components:
           $ref: '#/components/schemas/TipoOEEnum' 
         idPartecipante: 
           description: id partecipante
-          type: string
-        idGruppo:
-          description: id gruppo
-          type: number
-          format: integer
+          type: string  
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         paeseOperatoreEconomico:
           description: Paese Operatore Economico
           type: string          
@@ -2091,6 +2109,7 @@ components:
       description: Dati del partecipante in caso di aggiudicazione diretta
       type: object
       additionalProperties: false
+      required: [idPartecipante]      
       properties:
         codiceFiscale:
           description: Codice fiscale del soggetto interessato
@@ -2104,11 +2123,9 @@ components:
           $ref: '#/components/schemas/TipoOEEnum' 
         idPartecipante: 
           description: id partecipante
-          type: string
-        idGruppo:
-          description: id gruppo
-          type: number
-          format: integer
+          type: string  
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         paeseOperatoreEconomico:
           description: Paese Operatore Economico
           type: string          
@@ -2134,13 +2151,15 @@ components:
         progettazioneInternaEsterna:
           description: La progettazione è interna o esterna? 
           type: string
-          enum: ['interna', 'esterna']  
+          enum: ['INTERNA', 'ESTERNA']  
         tipoSoggetto:
           $ref: '#/components/schemas/TipoSoggettoEnum'
         datiPersonaFisica:
           $ref: '#/components/schemas/DatiPersonaFisicaType'
         datiPersonaGiuridica:
-          $ref: '#/components/schemas/DatiPersonaGiuridicaType'
+          type: array
+          items:
+            $ref: '#/components/schemas/DatiPersonaGiuridicaType'
         tipoProgettazione:
           $ref: '#/components/schemas/TipoProgettazioneEnum'
         cig:
@@ -2164,11 +2183,14 @@ components:
         datiPersonaFisica:
           $ref: '#/components/schemas/DatiPersonaFisicaType'
         datiPersonaGiuridica:
-          $ref: '#/components/schemas/DatiPersonaGiuridicaType'
+          type: array
+          items:
+            $ref: '#/components/schemas/DatiPersonaGiuridicaType'
     SoggettoType:
       description: Dati del soggetto
       type: object
       additionalProperties: false
+      required: [codiceFiscale,denominazione,ruoloOE,tipoOE,idPartecipante]
       properties:
         codiceFiscale:
           description: codice fiscale del soggetto interessato
@@ -2180,15 +2202,16 @@ components:
           $ref: '#/components/schemas/RuoloOEEnum'
         tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum'
-        idGruppo:
-          description: id gruppo
-          type: number  
-          format: integer
+        idPartecipante: 
+          description: id partecipante
+          type: string  
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
     AggiudicazioneBaseType:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [cig]
+      required: [cig,offertePresentate]
       properties:
         cig:
           description: codice identificativo lotto
@@ -2201,7 +2224,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [cig]
+      required: [cig,offertePresentate]
       properties:
         cig:
           description: codice identificativo lotto
@@ -2234,7 +2257,7 @@ components:
     AggiudicazioneAD1_25Type:
       description: Oggetto che riporta i dati di aggiudicazione per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR,lotIdentifier]
+      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2297,7 +2320,7 @@ components:
     AggiudicazioneAD1_26Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR, lotIdentifier]
+      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2360,7 +2383,7 @@ components:
     AggiudicazioneAD1_27Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [lotIdentifier]
+      required: [lotIdentifier,partecipanti]
       properties:  
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2402,7 +2425,7 @@ components:
     AggiudicazioneAD1_28Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR,lotIdentifier]
+      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2678,25 +2701,21 @@ components:
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
           type: number
-          format: integer      
-        offertePresentate:
-          type: array
-          items: 
-            $ref: '#/components/schemas/OfferteType'          
+          format: integer               
         quadroEconomicoConcessioni:
           $ref: '#/components/schemas/QuadroEconomicoConcessioniType'          
         datiBaseRisultatoProcedura:
           $ref: '#/components/schemas/DatiBaseRisultatoProceduraType'
         datiBaseSubappalti:
           $ref: '#/components/schemas/DatiBaseSubappaltiType'
-        datibaseAggiudicazioneAppalto:
+        datiBaseAggiudicazioneAppalto:
           $ref: '#/components/schemas/DatiBaseAggiudicazioneAppaltoType' 
         datiBaseAccessibilita:
           $ref: '#/components/schemas/DatiBaseAccessibilitaType'
     AggiudicazioneA7Type:
       description: Oggetto che riporta i dati di aggiudicazione per procedura negoziata senza bando pari o sopra soglia.
       type: object
-      required: [afferenteInvestimentiPNRR,cig]
+      required: [afferenteInvestimentiPNRR,cig,partecipanti]
       properties:
         cig:
           description: CIG affidamento incarico esterno di progettazione (in caso di progettista esterno)

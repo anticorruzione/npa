@@ -29,6 +29,8 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseSubappaltiType'
     AnacFormAD2_27Type:
       description: Affidamento diretto sopra la soglia minima e sotto la soglia comunitaria, difesa. Articolo 31 decreto legislativo 208/2011. Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023. Articolo 50 comma 9 decreto legislativo 36/2023.
+      allOf: # estende la classe AnacFormBaseType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'       
       type: object
       required: [appalto,aggiudicazioni]
       additionalProperties: false   

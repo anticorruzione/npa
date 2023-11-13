@@ -8,6 +8,7 @@ components:
       description: Oggetto che riporta i dati di conclusione.
       type: object
       additionalProperties: false
+      required: [dataInizio,dataUltimazione,importo]
       properties:
         dataInizio:
           description: Data di inizio

@@ -39,7 +39,7 @@ components:
         esito:
           description: Esito del collaudo/ verifica di conformità
           type: string
-          enum: ['Positivo', 'Negativo'] 
+          enum: ['POSITIVO', 'NEGATIVO'] 
         quadroEconomicoStandard:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'
         quadroEconomicoConcessioni:

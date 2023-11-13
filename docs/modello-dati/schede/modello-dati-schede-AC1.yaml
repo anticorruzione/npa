@@ -23,7 +23,7 @@ components:
           type: number
           format: integer
     AnacFormAC1Type:
-      description: Contiene tutti i dati relativi alla scheda di Collaudo
+      description: Contiene tutti i dati relativi alla scheda di accordo bonario
       type: object
       required: [idContratto,accordoBonario]
       additionalProperties: false
@@ -36,7 +36,7 @@ components:
         accordoBonario:
           $ref: '#/components/schemas/AccordoBonarioType' 
     SchedaAC1Type:
-      description: Scheda di accordo bonario
+      description: Accordo bonario. Articoli 210 e 211 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false
