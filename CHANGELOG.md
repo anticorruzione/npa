@@ -155,7 +155,7 @@
   * tipologiaComunicazione.json
 * tipoContenuto.json: 
   * nuova tipologica ad uso interno
-    
+
 ## Orchestratore
 
 ## Specifiche Interfacce
@@ -176,7 +176,8 @@ ref. /docs/specifiche-jws/
   * creato un nuovo file con la roadmap prevista per l'attivazione dei controlli di correttezza formale e sostanziale del JWS token 
 </details>
 
-# Note di rilascio del 9/10/2023
+<details>
+<summary><h1>Note di rilascio del 09/10/2023</h1></summary>
 
 ## Modello Dati 
 
@@ -288,3 +289,108 @@ ref. /docs/specifiche-jws/
   * aggiornate descrizioni
   * inserito nuovo messaggio di errore ERR65
   * inserito nuovo messaggio di errore ERR66
+    
+</details>
+
+# Note di rilascio del 13/11/2023
+
+## Modello Dati 
+* modello-dati-fvoe-fva.yaml:
+  * modificato tipoDato idRichiesta di RichiediDocumentoResponse
+  * aggiunto attributo personaGiuridica in AnagraficaOEType utilizzato dall'operazione /recupera-anagrafica-oe
+* modello-dati-npa.yaml:
+  * aggiunto il type string per l'attributo lotIdentifier in LottoType
+  * aggiunto ProfiloSAType utilizzato dall'operazione /recupera-profilo
+  * aggiungo l'attributo idPianificazione all'oggetto EsitoOperazioneType
+  * aggiunto l'attributo tipo all'oggetto DatiPianoBaseType
+  * aggiunto l'attributo idPianificazione all'oggetto StatoAvvisoType
+  * AvvisoBaseType estende il nuovo oggetto AvvisoCommonType e aggiunge gli attributi idAppalto e idPianificazione
+  * AvvisoType estende il nuovo oggetto AvvisoCommonType e aggiunge l'attributo piano
+* modello-dati-persona-giuridica.yaml:
+  * nuovo file che riporta il modello dati della persona giuridica restituita dall'operazione /recupera-anagrafica-oe    
+    
+### Regole
+* P*.dmn, A*.dmn:
+	* revisionate le regole
+
+### Schede
+* modello-dati-schede-AC1.yaml:
+	* modificata descrizione scheda
+* modello-dati-schede-CS1.yaml:
+	* cambiato idcontratto con idscheda di esito subappalto
+ 	* aggiunto nuovo campo motivoMancataEsecuzioneSubappalto
+* modello-dati-schede-CO1.yaml:
+	* modificato l'oggetto ConclusioneType aggiungendo i campi motiviRisoluzione, dataStipula, dataEsecutivita.
+* modello-dati-schede-dati-comuni.yaml:
+	* modificato l'oggetto AggiudicazioneA4Type: corretta la label datiBaseAggiudicazioneAppalto
+ 	* ove presente sia idGruppo sia idPartecipante eliminato idGruppo in quanto sarà usato solo l’idPartecipante
+  	* aggiornato il riferimento alla tipologica motivazioneCIG.json
+  	* reso obbligatorio partecipanti negli oggetti usati dalle schede di affidamento diretto
+  	* aggiornato l'oggetto DefinizioneType utilizzato nella scheda di collaudo CL1
+  	* aggiunto l'enum MotivoMancataEsecuzioneSubappaltoEnum utilizzato nella scheda di conclusione subappalto CS1
+  	* riscritti gli enum in upper case
+* modello-dati-schede-S1.yaml:
+	* aggiunto l'oggetto anacForm.elencoSoggettiRichiedenti[] che ingloba l’attuale modello dati definito
+ 	* rinominato idGruppo dentro soggettiInteressati in idPartecipante
+* modello-dati-schede-S2.yaml:
+	* idPartecipante: da tipo string diventa tipo uuid
+ 	* aggiunto l'oggetto anacForm.elencoSoggetti[] che ingloba l’attuale modello dati definito
+ * modello-dati-schede-S3.yaml:
+	* aggiunto l'oggetto anacForm.elencoIncarichi[] che ingloba l’attuale modello dati definito
+	* modificato l’oggetto datiPersonaGiuridica dentro incarichi[] in un array datiPersonaGiuridica[]
+ 	* modificato l’oggetto datiPersonaGiuridica dentro prestazioni[] in un array datiPersonaGiuridica[]
+ * modello-dati-schede-A3_6.yaml, modello-dati-schede-AD*.yaml:
+ 	* aggiunto l'oggetto stazioniAppaltanti
+  	* modificato l'oggetto offertePresentate in partecipanti
+   	* modificato l'oggetto aggiudicatario in partecipanti
+* modello-dati-schede-P2*.yaml:
+	* eliminata la doppia reference agli oggetti AppaltoBaseType e LottoBaseType
+* modello-dati-schede-A*.yaml:
+	*  reso idPartecipante obbligatorio
+ 	*  reso offertePresentate obbligatorio
+* modello-dati-schede-P*.yaml:
+	* modificato il nome dell'attributo idSchedaPreinformazione in idPianificazione
+* modello-dati-schede-RSU1.yaml:
+	* aggiunto il campo codiceFiscaleDittaACascata
+ 	* reso il campo cpv array
+* modello-dati-schede-SC1.yaml:
+	* modificato il tipo del campo importoCauzione in number, double.
+* modello-dati-schede-CL1.yaml:
+	* riscritto enum in upper case.
+* modello-dati-schede-AD4.yaml:
+	* aggiornata reference verso PartecipanteADType 
+### Tipologiche
+* errori.json
+  * aggiunti i seguenti messaggi di errore: ERR67, ERR68, ERR69, ERR70, ERR71, ERR72, ERR73, ERR74, ERR75, ERR76, ERR77, ERR78, ERR79, ERR80, ERR81, ERR82, ERR83, ERR84, ERR85, ERR86, ERR87, ERR88, ERR89, ERR90, ERR91, ERR92, SEC14, SEC15, FVX31, FVX32, FVX33, FVX34, REG78
+* tipoRuolo.json
+  * aggiunti i nuovi valori DRP1, DRP2, DRP3 ed eliminato DRP
+* statoContratto.json
+  * aggiornati i valori della tipologica
+* tipoPiano.json
+  * aggiornati i valori della tipologica
+* tipoIncarico.json:
+  * eliminati i codici 9,11, 12, 14, 15, 16, 17 e 19
+* statoComprova.json
+  * nuova tipologica ad uso interno
+* statoUtilizzo.json
+  * nuova tipologica ad uso interno
+* motivazioneCig.json: rinominata in motivazioneCIG.json
+* motivoMancataEsecuzioneSubappalto.json
+	* nuova tipologica utilizzata nella scheda di conclusione di una richiesta di subappalto   
+
+## Orchestratore
+* Aggiornato il file schema-cronologia-schede.xlsx
+  
+## Specifiche Interfacce
+* specifiche-servizi-appalto.yaml:
+  * inserita operazione /recupera-profilo
+  * per l'operation /esito-operazione aggiunto in input idPianificazione
+  * per le operation /modifica-avviso, /rettifica-avviso, /cancella-avviso, /ricerca-avviso aggiunto in input idPianificazione
+* documento-specifiche-servizi-npa.md
+  * aggiornamento dei ruoli nei paragrafi 4.4 Utenti e ruoli e 4.5 Servizi e ruoli
+  * aggiornamento conferma-piano nel paragrafo 6 Contesto pianificazioneAppalto
+* specifiche-servizi-fvoe-fva.yaml
+  * modificata la descrizione per l'operation /recupero-anagrafica-oe
+    
+## Documentazione
+* Nella sezione Standard adottati del file README.md è stata aggiornata la versione sdk dell'eForms da adottare (1.9.0).
