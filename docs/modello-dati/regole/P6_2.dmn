@@ -255,7 +255,7 @@ satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satis
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0023">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.quadroEconomicoStandard.impLavori = null or number(lotto.quadroEconomicoStandard.impLavori) = 0</text>
+satisfies lotto.oggettoPrincipaleContratto.codice = "L" and (lotto.quadroEconomicoStandard.impLavori = null or lotto.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0024">
           <text></text>
@@ -271,7 +271,7 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.quadroEconomic
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0026">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.quadroEconomicoStandard.impServizi = null or number(lotto.quadroEconomicoStandard.impServizi) = 0</text>
+satisfies lotto.oggettoPrincipaleContratto.codice = "S" and (lotto.quadroEconomicoStandard.impServizi = null or lotto.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0027">
           <text></text>
@@ -287,7 +287,7 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.quadroEconomic
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0029">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "F" and lotto.quadroEconomicoStandard.impForniture = null or number(lotto.quadroEconomicoStandard.impForniture) = 0</text>
+satisfies lotto.oggettoPrincipaleContratto.codice = "F" and (lotto.quadroEconomicoStandard.impForniture = null or lotto.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0030">
           <text></text>
@@ -303,7 +303,7 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "F" and lotto.quadroEconomic
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0032">
           <text>some lotto in lotti
-satisfies lotto.opzioniRinnovi and lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or number(lotto.quadroEconomicoStandard.sommeOpzioniRinnovi) = 0</text>
+satisfies lotto.opzioniRinnovi and (lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0033">
           <text></text>
@@ -319,7 +319,7 @@ satisfies lotto.opzioniRinnovi and lotto.quadroEconomicoStandard.sommeOpzioniRin
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0035">
           <text>some lotto in lotti
-satisfies lotto.ripetizioniEConsegneComplementari and lotto.quadroEconomicoStandard.sommeRipetizioni = null or number(lotto.quadroEconomicoStandard.sommeRipetizioni) = 0</text>
+satisfies lotto.ripetizioniEConsegneComplementari and (lotto.quadroEconomicoStandard.sommeRipetizioni = null or lotto.quadroEconomicoStandard.sommeRipetizioni = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0036">
           <text></text>
@@ -363,7 +363,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
       <rule id="DecisionRule_P6_2_0038">
         <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_P6_2_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0116">
           <text></text>

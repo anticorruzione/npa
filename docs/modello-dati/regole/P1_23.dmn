@@ -43,7 +43,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_P1_23_0041">
           <text>some lotto in lotti
-satisfies lotto.motivoEsclusioneOrdinarioSpeciale= "12"</text>
+satisfies lotto.motivoEsclusioneOrdinarioSpeciale.codice= "12"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_23_0042">
           <text></text>
@@ -143,7 +143,7 @@ satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satis
         </inputEntry>
         <inputEntry id="UnaryTests_P1_23_0107">
           <text>some lotto in lotti
-satisfies lotto.datiBaseImporto.contrattiSuccessivi and (lotto.quadroEconomicoConcorsiProgettazione.impStimatoProgSuccessiva = null or number(lotto.quadroEconomicoConcorsiProgettazione.impStimatoProgSuccessiva) &lt;= 0)</text>
+satisfies lotto.datiBaseImporto.contrattiSuccessivi and (lotto.quadroEconomicoConcorsiProgettazione.impStimatoProgSuccessiva = null or lotto.quadroEconomicoConcorsiProgettazione.impStimatoProgSuccessiva &lt;= 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_23_0108">
           <text></text>
@@ -187,7 +187,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
       <rule id="DecisionRule_P1_23_0038">
         <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_P1_23_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_23_0116">
           <text></text>

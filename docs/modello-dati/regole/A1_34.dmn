@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_A1_34" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_A1_34" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_aggiudicazioni" name="aggiudicazioni" />
   <inputData id="InputData_appalto" name="appalto" />
   <decision id="A1_34" name="A1_34">
@@ -35,7 +35,7 @@
       <rule id="DecisionRule_0k3fhjq">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_15bqhiq">
-          <text>appalto.motivoUrgenza.codice = "2"</text>
+          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sg9mci">
           <text></text>
@@ -56,19 +56,6 @@
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1m88jp0">
-        <description>REG32: Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</description>
-        <inputEntry id="UnaryTests_0wvph7k">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03vcwnf">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_018nd8u">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1uzuuqy">
         <description>REG33: Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</description>
         <inputEntry id="UnaryTests_0h5ad7e">
@@ -80,45 +67,6 @@ satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibil
         </inputEntry>
         <outputEntry id="LiteralExpression_00uhoql">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_192tvlo">
-        <description>REG34: Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_0wpt5gz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02dubhc">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07p7zqb">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0s5f2aq">
-        <description>REG35: Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_1ajny4v">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ybaykj">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ikpecc">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_10rog2u">
-        <description>REG36: Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_0svrl4g">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0a0xtjm">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_117guh2">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0aqqlcc">
@@ -155,8 +103,8 @@ satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) 
         </inputEntry>
         <inputEntry id="UnaryTests_0ehbnr7">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) = 1 and some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaInAumento = 0 and offerta.offertaEconomica = 0)</text>
+satisfies (count(aggiudicazione.offertePresentate) = 1 and (some offerta in aggiudicazione.offertePresentate 
+satisfies offerta.offertaInAumento = 0 and offerta.offertaEconomica = 0))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18911v9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG51\"}"</text>
@@ -169,7 +117,7 @@ satisfies offerta.offertaInAumento = 0 and offerta.offertaEconomica = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yzqoju">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0)</text>
+satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ekmbnf">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
@@ -178,7 +126,7 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggi
       <rule id="DecisionRule_1i7ye0y">
         <description>REG68: il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_0qxk758">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wu0npq">
           <text></text>

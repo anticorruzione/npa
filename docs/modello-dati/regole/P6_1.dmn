@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P6_1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P6_1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P6_1" name="P6_1">
     <informationRequirement id="InformationRequirement_P6_1_01">
       <requiredInput href="#InputData_appalto_P6_1" />
@@ -81,54 +81,6 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.servizioPubbli
         </inputEntry>
         <outputEntry id="LiteralExpression_P6_1_0016">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG10\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P6_1_0016">
-        <description>REG11: Cui: Obbligatorio se Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione</description>
-        <inputEntry id="UnaryTests_P6_1_0049">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_1_0050">
-          <text>some lotto in lotti
-satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_1_0051">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P6_1_0017">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P6_1_0021">
-        <description>REG14: Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </description>
-        <inputEntry id="UnaryTests_P6_1_0064">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_1_0065">
-          <text>some lotto in lotti
-satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != "10"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_1_0066">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P6_1_0022">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG14\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P6_1_0022">
-        <description>REG15: Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato oppure se Ripetizione di precedente contratto e' valorizzato a SI</description>
-        <inputEntry id="UnaryTests_P6_1_0067">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_1_0068">
-          <text>some lotto in lotti
-satisfies (lotto.ripetizioniEConsegneComplementari or lotto.ipotesiCollegamento.motivoCollegamento.codice != "10") and lotto.ipotesiCollegamento.cigCollegato = null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_1_0069">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P6_1_0023">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG15\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P6_1_0003">
@@ -283,7 +235,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
       <rule id="DecisionRule_P6_1_0038">
         <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_P6_1_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_1_0116">
           <text></text>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD2_28" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD2_28" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="AD2_28" name="AD2_28">
     <informationRequirement id="InformationRequirement_18mcapo">
       <requiredInput href="#InputData_0k6u5e5" />
@@ -7,7 +7,7 @@
     <informationRequirement id="InformationRequirement_182tifx">
       <requiredInput href="#InputData_15b23jq" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_139vsny" biodi:annotationsWidth="552" hitPolicy="COLLECT">
+    <decisionTable id="DecisionTable_139vsny" hitPolicy="COLLECT" biodi:annotationsWidth="552">
       <input id="InputClause_0doc50a" biodi:width="241">
         <inputExpression id="LiteralExpression_0j2dtdc" typeRef="string">
           <text>appalto</text>
@@ -22,7 +22,7 @@
       <rule id="DecisionRule_1osq1ip">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_0uj5s08">
-          <text>appalto.motivoUrgenza.codice = "2"</text>
+          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1im8dyc">
           <text></text>
@@ -90,7 +90,7 @@ satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibil
         </inputEntry>
         <inputEntry id="UnaryTests_19c8er9">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoStandard.impLavori = null or number(aggiudicazione.quadroEconomicoStandard.impLavori) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1homh6v">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
@@ -103,7 +103,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_0nhu6iu">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoStandard.impServizi = null or number(aggiudicazione.quadroEconomicoStandard.impServizi) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17vjfvq">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
@@ -116,7 +116,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_1g7jg4l">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoStandard.impForniture = null or number(aggiudicazione.quadroEconomicoStandard.impForniture) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hyh5lh">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
@@ -129,7 +129,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_19btv0t">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.partecipanti)&gt;1 and every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0)</text>
+satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0v7k8hx">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
@@ -151,7 +151,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
       <rule id="DecisionRule_0f2k00t">
         <description>REG68: il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_06ezqke">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uvdogq">
           <text></text>
@@ -167,7 +167,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
         </inputEntry>
         <inputEntry id="UnaryTests_186vyy8">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazione.quadroEconomicoConcessioni.impLavori = null or number(aggiudicazione.quadroEconomicoConcessioni.impLavori) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1egndj9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG69\"}"</text>
@@ -180,7 +180,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_09p795t">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazione.quadroEconomicoConcessioni.impServizi = null or number(aggiudicazione.quadroEconomicoConcessioni.impServizi) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0g63tho">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG70\"}"</text>
@@ -193,10 +193,23 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and aggiudicazi
         </inputEntry>
         <inputEntry id="UnaryTests_0uw3fde">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazione.quadroEconomicoConcessioni.impForniture = null or number(aggiudicazione.quadroEconomicoConcessioni.impForniture) = 0</text>
+satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0d9k20z">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG71\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dnnx3r">
+        <description>REG78: Indicare almeno un partecipante</description>
+        <inputEntry id="UnaryTests_04ayg46">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13jx58l">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies count(aggiudicazione.partecipanti)=0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pjvs7a">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG78\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
@@ -205,7 +218,7 @@ satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and aggiudicazi
   <inputData id="InputData_15b23jq" name="aggiudicazioni" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
-      <dmndi:DMNShape id="DMNShape_0g7nmsp" dmnElementRef="Decision_1iwi9z8">
+      <dmndi:DMNShape id="DMNShape_0g7nmsp" dmnElementRef="AD2_28">
         <dc:Bounds height="80" width="180" x="240" y="80" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_19nzcho" dmnElementRef="InputData_0k6u5e5">

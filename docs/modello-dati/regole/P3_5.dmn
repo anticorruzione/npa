@@ -74,7 +74,7 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </inputEntry>
         <inputEntry id="UnaryTests_0jx53dd">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.strumentiElettroniciSpecifici=null and (number(lotto.quadroEconomicoStandard.impLavori) + number(lotto.quadroEconomicoStandard.impServizi) + number(lotto.quadroEconomicoStandard.impForniture) + number(lotto.quadroEconomicoStandard.impTotaleSicurezza) + number(lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso) + number(lotto.quadroEconomicoStandard.impProgettazione) + number(lotto.quadroEconomicoStandard.sommeOpzioniRinnovi) + number(lotto.quadroEconomicoStandard.sommeRipetizioni)) &gt; 5382000</text>
+satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 5382000</text>
         </inputEntry>
         <inputEntry id="UnaryTests_153ifcy">
           <text></text>
@@ -249,13 +249,13 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale 
       </rule>
       <rule id="DecisionRule_P3_5_0027">
         <description>REG23: Previsione di una quota
-inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI quota inferiore' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</description>
+inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI QUOTA INFERIORE' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</description>
         <inputEntry id="UnaryTests_P3_5_0082">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0083">
           <text>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI quota inferiore" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= "0" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile="0"</text>
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI QUOTA INFERIORE" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= "0" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile="0"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0084">
           <text></text>
@@ -272,7 +272,7 @@ occupazione giovanile, deve essere inferiore al 30%</description>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0086">
           <text>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and number(lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile) &gt;= 30 and number(lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile) &gt;= 30</text>
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile &gt;= 30 and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile &gt;= 30</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0087">
           <text></text>
@@ -282,13 +282,13 @@ satisfies lotto.paritaDiGenereGenerazionale != null and number(lotto.paritaDiGen
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_5_0029">
-        <description>REG27: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI quota inferiore' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</description>
+        <description>REG27: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI QUOTA INFERIORE' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</description>
         <inputEntry id="UnaryTests_P3_5_0088">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0089">
           <text>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI quota inferiore" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</text>
+satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI QUOTA INFERIORE" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0090">
           <text></text>
@@ -412,7 +412,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
       <rule id="DecisionRule_P3_5_0038">
         <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_P3_5_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0116">
           <text></text>

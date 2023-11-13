@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_A1_32" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_A1_32" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_aggiudicazioni" name="aggiudicazioni" />
   <inputData id="InputData_appalto" name="appalto" />
   <decision id="A1_32" name="A1_32">
@@ -30,19 +30,6 @@
         </inputEntry>
         <outputEntry id="LiteralExpression_05255um">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1uu16kv">
-        <description>REG32: Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</description>
-        <inputEntry id="UnaryTests_1x4akmc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1hn0qh7">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAccessibilita.accessibilita.codice != "inc"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1y9up30">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG32\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_14bikzh">
@@ -78,7 +65,7 @@ satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOff
         </inputEntry>
         <inputEntry id="UnaryTests_14iixdo">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0)</text>
+satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0einc5h">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
@@ -87,52 +74,13 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and every offerta in aggi
       <rule id="DecisionRule_16h8d10">
         <description>REG68: il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_09yt5xj">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c11u0n">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o5w8dt">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1hfrg4g">
-        <description>REG69: Quadro economico concessioni - Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_02gg6l7">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_19dtiqj">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori = 0)</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0imab6u">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG69\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0hnpod0">
-        <description>REG70: Quadro economico concessioni - Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_1cf6o85">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1wfzsmu">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_13w8t5m">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG70\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ans3d1">
-        <description>REG71: Quadro economico concessioni - Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_0v9epwf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1vuojde">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0tp0d1i">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG71\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

@@ -85,9 +85,9 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_17_0004">
-        <description>REG4_1: Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
+        <description>REG4_1: Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
         <inputEntry id="UnaryTests_P2_17_0010">
-          <text>(appalto.motivazioneCig.codice = null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999")</text>
+          <text>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice = null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0011">
           <text></text>
@@ -100,9 +100,9 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_17_0005">
-        <description>REG4_2: Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
+        <description>REG4_2: Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
         <inputEntry id="UnaryTests_P2_17_0013">
-          <text>(appalto.motivazioneCig.codice != null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice = "999")</text>
+          <text>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice != null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice = "999"))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0014">
           <text></text>
@@ -121,7 +121,7 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0038">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.strumentiElettroniciSpecifici=null and (number(lotto.quadroEconomicoStandard.impLavori) + number(lotto.quadroEconomicoStandard.impServizi) + number(lotto.quadroEconomicoStandard.impForniture) + number(lotto.quadroEconomicoStandard.impTotaleSicurezza) + number(lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso) + number(lotto.quadroEconomicoStandard.impProgettazione) + number(lotto.quadroEconomicoStandard.sommeOpzioniRinnovi) + number(lotto.quadroEconomicoStandard.sommeRipetizioni)) &gt; 5382000</text>
+satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 5382000</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0039">
           <text></text>
@@ -165,7 +165,7 @@ satisfies lotto.condizioniNegoziata != null</text>
       <rule id="DecisionRule_P2_17_0020">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_P2_17_0061">
-          <text>appalto.motivoUrgenza.codice = "2"</text>
+          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0062">
           <text></text>
@@ -359,13 +359,13 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale 
       </rule>
       <rule id="DecisionRule_P2_17_0027">
         <description>REG23: Previsione di una quota
-inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI quota inferiore' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</description>
+inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI QUOTA INFERIORE' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</description>
         <inputEntry id="UnaryTests_P2_17_0082">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0083">
           <text>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI quota inferiore" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= "0" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile="0"</text>
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI QUOTA INFERIORE" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= "0" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile="0"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0084">
           <text></text>
@@ -392,13 +392,13 @@ satisfies lotto.paritaDiGenereGenerazionale != null and number(lotto.paritaDiGen
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_17_0029">
-        <description>REG27: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI quota inferiore' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</description>
+        <description>REG27: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI QUOTA INFERIORE' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</description>
         <inputEntry id="UnaryTests_P2_17_0088">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0089">
           <text>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI quota inferiore" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</text>
+satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI QUOTA INFERIORE" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0090">
           <text></text>
@@ -618,7 +618,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
       <rule id="DecisionRule_P2_17_0038">
         <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_P2_17_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_17_0116">
           <text></text>
