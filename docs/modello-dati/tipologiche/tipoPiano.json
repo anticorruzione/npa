@@ -8,24 +8,6 @@
     "dataFine":null
 },
 {
-    "codice":"PUBB_AVVISO",
-    "descrizione": {
-		"it": "Pubblicazione avviso",
-		"en": "Pubblicazione avviso"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"BIENNALE",
-    "descrizione": {
-		"it": "Programma biennale",
-		"en": "Programma biennale"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
     "codice":"TRIENNALE",
     "descrizione": {
 		"it": "Programma triennale",

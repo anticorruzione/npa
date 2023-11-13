@@ -8,10 +8,28 @@
     "dataFine":null
 },
 {
-    "codice":"DRP",
+    "codice":"DRP1",
     "descrizione": {
-		"it": "Delegato dal responsabile del progetto",
-		"en": "Delegato dal responsabile del progetto"
+		"it": "Delegato dal responsabile del progetto per la fase di Programmazione",
+		"en": "Delegato dal responsabile del progetto per la fase di Programmazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"DRP2",
+    "descrizione": {
+		"it": "Delegato dal responsabile del progetto per la fase di Affidamento",
+		"en": "Delegato dal responsabile del progetto per la fase di Affidamento"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"DRP3",
+    "descrizione": {
+		"it": "Delegato dal responsabile del progetto per la fase di Esecuzione",
+		"en": "Delegato dal responsabile del progetto per la fase di Esecuzione"
 	},
     "dataInizio":null,
     "dataFine":null

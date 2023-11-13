@@ -1,0 +1,17 @@
+[{
+    "codice":"001",
+    "descrizione": {
+		"it": "Non Utilizzabile",
+		"en": "Non Utilizzabile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"002",
+    "descrizione": {
+		"it": "Utilizzabile",
+ 		"en": "Utilizzabile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

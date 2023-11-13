@@ -1,0 +1,41 @@
+[{
+    "codice":"001",
+    "descrizione": {
+		"it": "Non Disponibile",
+		"en": "Non Disponibile"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"002",
+    "descrizione": {
+		"it": "Non Significativo",
+ 		"en": "Non Significativo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"003",
+    "descrizione": {
+		"it": "Nulla Osta",
+ 		"en": "Nulla Osta"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"004",
+    "descrizione": {
+		"it": "Ostativo",
+ 		"en": "Ostativo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"005",
+    "descrizione": {
+		"it": "Soggetto a valutazione SA",
+ 		"en": "Soggetto a valutazione SA"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

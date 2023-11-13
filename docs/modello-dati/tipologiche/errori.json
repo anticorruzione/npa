@@ -591,7 +591,241 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR67",
+    "descrizione": {
+		"it": "errore generico durante la comunicazione con l'anagrafe AUSA",
+		"en": "errore generico durante la comunicazione con l'anagrafe AUSA"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR68",
+    "descrizione": {
+		"it": "l'anagrafica SA presente nella lista delle stazioni appaltanti non è coerente con l'anagrafe AUSA",
+		"en": "l'anagrafica SA presente nella lista delle stazioni appaltanti non è coerente con l'anagrafe AUSA"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR69",
+    "descrizione": {
+		"it": "il centro di costo SA presente nella lista delle stazioni appaltanti non è coerente con l'anagrafe AUSA",
+		"en": "il centro di costo SA presente nella lista delle stazioni appaltanti non è coerente con l'anagrafe AUSA"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR70",
+    "descrizione": {
+		"it": "la lista delle stazioni appaltanti nella scheda è vuota",
+		"en": "la lista delle stazioni appaltanti nella scheda è vuota"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR71",
+    "descrizione": {
+		"it": "operazione non consentita: la notice-id dell'eForm non coincide con quella inviata in precedenza",
+		"en": "operazione non consentita: la notice-id dell'eForm non coincide con quella inviata in precedenza"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR72",
+    "descrizione": {
+		"it": "operazione non consentita: la version-id dell'eForm coincide con quella inviata in precedenza",
+		"en": "operazione non consentita: la version-id dell'eForm coincide con quella inviata in precedenza"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR73",
+    "descrizione": {
+		"it": "operazione non consentita: il codiceAppalto indicato nella scheda non coincide con quello inviato in precedenza",
+		"en": "operazione non consentita: il codiceAppalto indicato nella scheda non coincide con quello inviato in precedenza"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR74",
+    "descrizione": {
+		"it": "codice fiscale duplicato nell'elenco partecipanti",
+		"en": "codice fiscale duplicato nell'elenco partecipanti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR75",
+    "descrizione": {
+		"it": "il codice fiscale non è autorizzato come soggetto delegato per le stazioni appaltanti presenti nella scheda",
+		"en": "il codice fiscale non è autorizzato come soggetto delegato per le stazioni appaltanti presenti nella scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR76",
+    "descrizione": {
+		"it": "non è possibile associare un soggetto delegato in quanto non è presente la lista delle stazioni appaltanti nella scheda",
+		"en": "non è possibile associare un soggetto delegato in quanto non è presente la lista delle stazioni appaltanti nella scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR77",
+    "descrizione": {
+		"it": "il partecipante non è valido per il lotto",
+		"en": "il partecipante non è valido per il lotto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR78",
+    "descrizione": {
+		"it": "il partecipante non è un soggetto aggiudicatario per il lotto",
+		"en": "il partecipante non è un soggetto aggiudicatario per il lotto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR79",
+    "descrizione": {
+		"it": "contratto già presente per il partecipante e lotto",
+		"en": "contratto già presente per il partecipante e lotto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+   "codice":"ERR80",
+   "descrizione": {
+       "it": "esiste già un soggetto delegato in corso di validità per il ruolo indicato",
+       "en": "esiste già un soggetto delegato in corso di validità per il ruolo indicato"
+   },
+   "dataInizio":null,
+   "dataFine":null   
+},
+{
+    "codice":"ERR81",
+    "descrizione": {
+		"it": "la scheda indicata nel body non è stata trovata",
+		"en": "la scheda indicata nel body non è stata trovata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR82",
+    "descrizione": {
+		"it": "la scheda indicata nel body è una scheda iniziale",
+		"en": "la scheda indicata nel body è una scheda iniziale"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR83",
+    "descrizione": {
+		"it": "mancata coerenza tra idAppalto e la scheda indicata nel body",
+		"en": "mancata coerenza tra idAppalto e la scheda indicata nel body"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR84",
+    "descrizione": {
+		"it": "la scheda indicata nel body non ha un contratto associato",
+		"en": "la scheda indicata nel body non ha un contratto associato"
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
+{
+    "codice":"ERR85",
+    "descrizione": {
+		"it": "il contratto associato alla scheda indicata nel body non è coerente con l'idAppalto",
+		"en": "il contratto associato alla scheda indicata nel body non è coerente con l'idAppalto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR86",
+    "descrizione": {
+		"it": "codiceAusa non presente nella lista delle stazioni appaltanti della scheda di indizione",
+		"en": "codiceAusa non presente nella lista delle stazioni appaltanti della scheda di indizione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR87",
+    "descrizione": {
+		"it": "idPartecipante duplicato per lo stesso lotto",
+		"en": "idPartecipante duplicato per lo stesso lotto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR88",
+    "descrizione": {
+		"it": "il codice della scheda indicata nel body non è valida secondo le regole di correlazione definite dall'orchestratore",
+		"en": "il codice della scheda indicata nel body non è valida secondo le regole di correlazione definite dall'orchestratore"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR89",
+    "descrizione": {
+		"it": "operazione non consentita: è in corso una richiesta di verifica piano",
+		"en": "operazione non consentita: è in corso una richiesta di verifica piano"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR90",
+    "descrizione": {
+		"it": "operazione non consentita: è in corso una richiesta di conferma piano",
+		"en": "operazione non consentita: è in corso una richiesta di conferma piano"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR91",
+    "descrizione": {
+		"it": "scheda non ammessa in questa fase del piano",
+		"en": "scheda non ammessa in questa fase del piano"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR92",
+    "descrizione": {
+		"it": "criteri di ricerca non ammessi: popolare in modo alternativo idAppalto e idPianificazione",
+		"en": "criteri di ricerca non ammessi: popolare in modo alternativo idAppalto e idPianificazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
 {
     "codice":"ERR9999",
     "descrizione": {
@@ -1137,6 +1371,15 @@
     "descrizione": {
 		"it": "La data di scadenza del contratto deve essere superiore alla data di stipula.",
 		"en": "La data di scadenza del contratto deve essere superiore alla data di stipula."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG78",
+    "descrizione": {
+		"it": "Indicare almeno un partecipante.",
+		"en": "Indicare almeno un partecipante."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1727,10 +1970,64 @@
    "dataFine":null   
 },
 {
+   "codice":"SEC14",
+   "descrizione": {
+       "it": "Token non valido",
+       "en": "Token non valido"
+   },
+   "dataInizio":null,
+   "dataFine":null   
+},
+{
+   "codice":"SEC15",
+   "descrizione": {
+       "it": "Soggetto Rappresentato non presente",
+       "en": "Soggetto Rappresentato non presente"
+   },
+   "dataInizio":null,
+   "dataFine":null   
+},	
+{
    "codice":"FVX30",
    "descrizione": {
        "it": "Errore Servizio esterno. Rimuovi Documento - Non Disponibile",
        "en": "Errore Servizio esterno. Rimuovi Documento - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},	
+{
+   "codice":"FVX31",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Configurazione Servizio - Non Disponibile",
+       "en": "Errore Servizio esterno. Configurazione Servizio - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX32",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Controllo Autorizzazione Servizio - Non Disponibile",
+       "en": "Errore Servizio esterno. Controllo Autorizzazione Servizio - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX33",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Persona Giuridica Servizio - Non Disponibile",
+       "en": "Errore Servizio esterno. Persona Giuridica Servizio - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},	
+{
+   "codice":"FVX34",
+   "descrizione": {
+       "it": "Anagrafica non presente",
+       "en": "Anagrafica non presente"
    },
    "dataInizio":null,
    "dataFine":null

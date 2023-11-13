@@ -8,28 +8,10 @@
     "dataFine":null
 },
 {
-    "codice":"INT_ANT",
-    "descrizione": {
-		"it": "Interruzione anticipata",
-		"en": "Interruzione anticipata"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
     "codice":"IN_ESEC",
     "descrizione": {
 		"it": "In esecuzione",
 		"en": "In esecuzione"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"SOSP",
-    "descrizione": {
-		"it": "Sospeso",
-		"en": "Sospeso"
 	},
     "dataInizio":null,
     "dataFine":null
