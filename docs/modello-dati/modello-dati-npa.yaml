@@ -263,6 +263,7 @@ components:
             example: '9050626CD6'
           lotIdentifier:
             description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+            type: string
           oggetto:
             description: descrizione del lotto
             type: string
@@ -319,12 +320,28 @@ components:
       AvvisoBaseType:
         type: object
         additionalProperties: false
+        allOf: # estende la classe AvvisoCommonType
+          - $ref: '#/components/schemas/AvvisoCommonType'
+        properties:
+          idAppalto:
+            description: identificativo univoco dell'Appalto generato da ANAC. Valorizzato se l'avviso è relativo ad un Appalto.
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+          idPianificazione:
+            description: identificativo univoco della Pianificazione generato da ANAC. Valorizzato se l'avviso è relativo ad un Piano.
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      AvvisoCommonType:
+        type: object
+        additionalProperties: false
         properties:
           idAvviso:
             description: identificativo univoco dell'Avviso generato da ANAC.
             type: string
             format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
           dataCreazione:
             description: Data di crezione dell'Avviso  (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
@@ -349,11 +366,13 @@ components:
           datiPubblicazioneIT:
             $ref: '#/components/schemas/DatiPubblicazioneITType'            
       AvvisoType:
-        allOf: # estende la classe AvvisoBaseType
-          - $ref: '#/components/schemas/AvvisoBaseType'
+        allOf: # estende la classe AvvisoCommonType
+          - $ref: '#/components/schemas/AvvisoCommonType'
         properties:
           appalto:
             $ref: '#/components/schemas/AppaltoBaseType'
+          piano:
+            $ref: '#/components/schemas/DatiPianoBaseType'            
           scheda:
             oneOf:
               - $ref: '#/components/schemas/DatiPianoType'
@@ -464,6 +483,8 @@ components:
         properties:
           idPianificazione:
             description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Pianificazione. (A UUID specified by RFC4122)
+          tipo: 
+            $ref: '#/components/schemas/TipoPianoEnum'
           stato:
             $ref: '#/components/schemas/StatoPianoEnum' 
       StatoType:
@@ -532,10 +553,15 @@ components:
             type: string
             format: uuid
           idAppalto:
-            description: identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
+            description: identificativo univoco dell'Appalto definito da ANAC. Valorizzato se l'avviso è relativo ad un Appalto. (A UUID specified by RFC4122)
             type: string
             format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"            
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+          idPianificazione:
+            description: identificativo univoco della Pianificazione definito da ANAC. Valorizzato se l'avviso è relativo ad un Piano. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"              
           dataControllo:
             description: data in cui è stato effettuato il controllo sullo stato dell'avviso (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
@@ -551,7 +577,12 @@ components:
             description: identificativo univoco dell'Appalto definito da ANAC. Restituito dall'operazione di creazione Appalto. (A UUID specified by RFC4122)
             type: string
             format: uuid
-            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"          
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          idPianificazione:
+            description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Piano. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"            
           idScheda:
             description: Identificativo univoco della Scheda definito da ANAC. (A UUID specified by RFC4122)
             format: uuid
@@ -586,6 +617,31 @@ components:
             type: array
             items:
               $ref: '#/components/schemas/ErroriEnum'
+      ProfiloSAType :
+        description: Proflio della SA
+        type: object
+        additionalProperties: false
+        properties:
+          codiceAusa:
+            description: codice Ausa della Stazione Appaltante. 
+            type: string
+            example: "0000322617"
+          codiceFiscale:
+            description: codice fiscale della Stazione Appaltante.
+            type: string
+            example: "80011600199"
+          denominazione:
+            description: denominazione della Stazione Appaltante.
+            type: string
+            example: "LICEO SCIENTIFICO STATALET.VAMINOPAVIA"
+          idCentroDiCosto:
+            description: Identificativo univo del centro di costo della Stazione Appaltante
+            type: string
+            example: "F4CBB277-C068-4CC8-B7EC-EE1222CDF911"  
+          centroDiCosto:
+            description: Denominazione del centro di costo della Stazione Appaltante
+            type: string
+            example: "LICEO SCIENTIFICO T. VAMINO - PAVIA"           
       TipoAzioneAvvisoEnum:
         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoAzioneAvvisoEnum'
       TipoAvvisoEnum:
@@ -622,3 +678,5 @@ components:
         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoSchedaEnum'
       StatoPianoEnum:
         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoPianoEnum'
+      TipoPianoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoPianoEnum'        

@@ -283,6 +283,11 @@ components:
       description: Oggetto specifico dell'anagrafica dell'OE
       type: object
       additionalProperties: false
+      properties:
+        personaGiuridica:
+          description: Anagrafica della persona giuridica in formato json. Per la struttura fare riferimento ai valori contenuti nel file [modello-dati-persona-giuridica.yaml](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-persona-giuridica.yaml) 
+          type: string
+          example: '{\"stato\":{\"stato\":\"ATTIVA\",\"data_inizio\":\"1968-10-26.....'
     AnagraficaSAType:
       allOf: # estende la classe AnagraficaType
         - $ref: '#/components/schemas/AnagraficaType'

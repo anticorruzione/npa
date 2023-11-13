@@ -1,0 +1,370 @@
+swagger: '2.0'
+info:
+  description: Modello Dati PERSONA GIURIDICA
+  version: 2.0.0
+  title: Vengono riportati gli oggetti utilizzati da PERSONA GIURIDICA REST API
+definitions:
+  CCIAA:
+    type: object
+    properties:
+      data_iscrizione_CCIAA:
+        type: string
+      numero_iscrizione_CCIAA:
+        type: string
+      provincia_iscrizione_CCIAA:
+        type: string
+    title: CCIAA
+  Carica:
+    type: object
+    properties:
+      data_fine_rapporto:
+        type: string
+      data_inizio_rapporto:
+        type: string
+      tipo_carica:
+        $ref: '#/definitions/TipoCarica'
+    title: Carica
+  Citta:
+    type: object
+    properties:
+      codice:
+        type: string
+      nome:
+        type: string
+    title: Citta
+  Classificazione:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: Classificazione
+  Componente:
+    type: object
+    properties:
+      data_fine_rapporto:
+        type: string
+      data_inizio_rapporto:
+        type: string
+      persona_giuridica:
+        $ref: '#/definitions/PersonaGiuridica'
+      tipo_rapporto:
+        $ref: '#/definitions/TipoRapporto'
+    title: Componente
+  Contatti:
+    type: object
+    properties:
+      EMAIL:
+        type: string
+      MAIL_PEC:
+        type: string
+      TELEFONO:
+        type: string
+    title: Contatti
+  Documento:
+    type: object
+    properties:
+      tipo:
+        type: string
+      versione:
+        type: string
+    title: Documento
+  GeoRef:
+    type: object
+    properties:
+      lat:
+        type: integer
+        format: int64
+      lon:
+        type: integer
+        format: int64
+    title: GeoRef
+  Indirizzo:
+    type: object
+    properties:
+      dug:
+        type: string
+      esponente:
+        type: string
+      numero_civico:
+        type: string
+      odonimo:
+        type: string
+    title: Indirizzo
+  InfoClassificazione:
+    type: object
+    properties:
+      classificazione:
+        type: array
+        items:
+          $ref: '#/definitions/Classificazione'
+      codice_codifica:
+        type: string
+      codifica:
+        type: string
+    title: InfoClassificazione
+  Localizzazione:
+    type: object
+    properties:
+      cap:
+        type: string
+      citta:
+        $ref: '#/definitions/Citta'
+      georef:
+        $ref: '#/definitions/GeoRef'
+      indirizzo:
+        $ref: '#/definitions/Indirizzo'
+      provincia:
+        $ref: '#/definitions/Provincia'
+      tipo_sede:
+        type: string
+    title: Localizzazione
+  NaturaGiuridica:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: NaturaGiuridica
+  PersonaFisica:
+    type: object
+    properties:
+      _acl:
+        type: array
+        items:
+          type: string
+      _check_ValPar:
+        type: string
+      _source:
+        type: string
+      dati_identificativi:
+        $ref: '#/definitions/PersonaFisicaScheda'
+      documento:
+        $ref: '#/definitions/Documento'
+      ts:
+        type: string
+    title: PersonaFisica
+  PersonaFisicaScheda:
+    type: object
+    properties:
+      codice_fiscale:
+        type: string
+      cognome:
+        type: string
+      contatti:
+        $ref: '#/definitions/Contatti'
+      nome:
+        type: string
+    title: PersonaFisicaScheda
+  PersonaGiuridica:
+    type: object
+    properties:
+      _acl:
+        type: array
+        items:
+          type: string
+      _check_ValPar:
+        type: string
+      _source:
+        type: string
+      classificazioni:
+        type: array
+        items:
+          $ref: '#/definitions/InfoClassificazione'
+      componenti:
+        type: array
+        items:
+          $ref: '#/definitions/Componente'
+      dati_identificativi:
+        $ref: '#/definitions/PersonaGiuridicaScheda'
+      documento:
+        $ref: '#/definitions/Documento'
+      ruoli:
+        $ref: '#/definitions/Ruoli'
+      stato:
+        $ref: '#/definitions/Stato'
+      tipoSoggetto:
+        $ref: '#/definitions/TipoSoggetto'
+      ts:
+        type: string
+    title: PersonaGiuridica
+  PersonaGiuridicaDTO:
+    type: object
+    properties:
+      _acl:
+        type: array
+        items:
+          type: string
+      _check_ValPar:
+        type: string
+      _source:
+        type: string
+      classificazioni:
+        type: array
+        items:
+          $ref: '#/definitions/InfoClassificazione'
+      componenti:
+        type: array
+        items:
+          $ref: '#/definitions/Componente'
+      dati_identificativi:
+        $ref: '#/definitions/PersonaGiuridicaScheda'
+      documento:
+        $ref: '#/definitions/Documento'
+      id:
+        type: string
+      ruoli:
+        $ref: '#/definitions/Ruoli'
+      stato:
+        $ref: '#/definitions/Stato'
+      tipoSoggetto:
+        $ref: '#/definitions/TipoSoggetto'
+      ts:
+        type: string
+    title: PersonaGiuridicaDTO
+  PersonaGiuridicaScheda:
+    type: object
+    properties:
+      cciaa:
+        $ref: '#/definitions/CCIAA'
+      codice_fiscale:
+        type: string
+      codice_fiscale_jammed:
+        type: string
+      contatti:
+        $ref: '#/definitions/Contatti'
+      denominazione:
+        type: string
+      localizzazione:
+        $ref: '#/definitions/Localizzazione'
+      natura_giuridica:
+        $ref: '#/definitions/NaturaGiuridica'
+      partita_iva:
+        type: string
+      soggetto_estero:
+        type: string
+    title: PersonaGiuridicaScheda
+  Provincia:
+    type: object
+    properties:
+      codice:
+        type: string
+      nome:
+        type: string
+    title: Provincia
+  RappresentanteLegalePersonaFisica:
+    type: object
+    properties:
+      data_fine_rapporto:
+        type: string
+      data_inizio_rapporto:
+        type: string
+      persona_fisica:
+        $ref: '#/definitions/PersonaFisica'
+    title: RappresentanteLegalePersonaFisica
+  RappresentanteLegalePersonaGiuridica:
+    type: object
+    properties:
+      data_fine_rapporto:
+        type: string
+      data_inizio_rapporto:
+        type: string
+      persona_giuridica:
+        $ref: '#/definitions/PersonaGiuridica'
+    title: RappresentanteLegalePersonaGiuridica
+  RappresentantiLegali:
+    type: object
+    properties:
+      rl_persone_fisiche:
+        type: array
+        items:
+          $ref: '#/definitions/RappresentanteLegalePersonaFisica'
+      rl_persone_giuridiche:
+        type: array
+        items:
+          $ref: '#/definitions/RappresentanteLegalePersonaGiuridica'
+    title: RappresentantiLegali
+  Ruoli:
+    type: object
+    properties:
+      direttori_tecnici:
+        type: array
+        items:
+          $ref: '#/definitions/SchedaDirettoreTecnico'
+      rappresentanti_legali:
+        $ref: '#/definitions/RappresentantiLegali'
+      soggetti:
+        type: array
+        items:
+          $ref: '#/definitions/Soggetto'
+    title: Ruoli
+  SchedaDirettoreTecnico:
+    type: object
+    properties:
+      data_fine_rapporto:
+        type: string
+      data_inizio_rapporto:
+        type: string
+      persona_fisica:
+        $ref: '#/definitions/PersonaFisica'
+      tipo_rapporto_direttore_tecnico:
+        $ref: '#/definitions/TipoRapportoDirettoreTecnico'
+    title: SchedaDirettoreTecnico
+  Soggetto:
+    type: object
+    properties:
+      cariche:
+        type: array
+        items:
+          $ref: '#/definitions/Carica'
+      persona_fisica:
+        $ref: '#/definitions/PersonaFisica'
+    title: Soggetto
+  Stato:
+    type: object
+    properties:
+      data_fine:
+        type: string
+      data_inizio:
+        type: string
+      stato:
+        type: string
+    title: Stato
+  TipoCarica:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: TipoCarica
+  TipoRapporto:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: TipoRapporto
+  TipoRapportoDirettoreTecnico:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: TipoRapportoDirettoreTecnico
+  TipoSoggetto:
+    type: object
+    properties:
+      flag_consorziata:
+        type: string
+      flag_inHouse:
+        type: string
+      flag_partecipata:
+        type: string
+      tipo_soggetto:
+        type: string
+    title: TipoSoggetto
