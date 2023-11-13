@@ -7,7 +7,7 @@ components:
     SubappaltoType:
       description: Dati relativi ai subappalti
       type: object
-      required: [codiceFiscaleDitta,impresaEstera,importoPresunto]
+      required: [codiceFiscaleDitta,impresaEstera,importoPresunto,categoria,cpv]
       additionalProperties: false
       properties:    
         codiceFiscaleDitta:
@@ -18,6 +18,9 @@ components:
           type: boolean
         codiceFiscaleAggiudicatario:
           description: Codice fiscale ditta aggiudicatrice nel caso di aggiudicatari multipli
+          type: string 
+        codiceFiscaleDittaACascata:
+          description: Codice fiscale ditta subappaltatrice
           type: string          
         oggetto:
           description: Lavoro/Servizio/Fornitura subappalto
@@ -29,7 +32,9 @@ components:
         categoria:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
         cpv:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CPVEnum'   
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CPVEnum'   
     AnacFormRSU1Type:
       description: Contiene tutti i dati relativi alla scheda di Richiesta di Subappalto
       type: object
@@ -44,7 +49,7 @@ components:
         subappalto:
           $ref: '#/components/schemas/SubappaltoType'
     SchedaRSU1Type:
-      description: Scheda di richiesta di subappalto
+      description: Comunicazione richiesta di subappalto per qualunque procedura.
       type: object
       required: [anacForm]
       additionalProperties: false

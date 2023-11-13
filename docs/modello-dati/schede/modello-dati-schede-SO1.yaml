@@ -7,7 +7,7 @@ components:
     SospensioneType:
       description: Oggetto che riporta tutti i dati delle Sospensioni
       type: object
-      required: [dataVerbaleSospensione, motivoSospensione]
+      required: [sospensioneParziale,dataVerbaleSospensione, motivoSospensione]
       additionalProperties: false
       properties:
         sospensioneParziale: 

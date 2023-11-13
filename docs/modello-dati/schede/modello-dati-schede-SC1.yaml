@@ -41,8 +41,8 @@ components:
           format: date-time          
         importoCauzione:
           description: Importo cauzione definitiva in €
-          type: string
-          format: decimal
+          type: number
+          format: double
     AnacFormSC1Type:
       description: Contiene tutti i dati di sottoscrizione del contratto
       type: object

@@ -4,11 +4,11 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AnacFormS1Type:
+    ElencoSoggettiRichiedentiType:
       description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione.
       type: object
       additionalProperties: false
-      required: [cig]
+      required: [cig,soggettiInteressati]
       properties:
         cig:
           description: codice identificativo lotto
@@ -17,7 +17,17 @@ components:
           description: Dati relativi ai soggetti che hanno presentato manifestazione d'interesse
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SoggettoType'
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SoggettoType'  
+    AnacFormS1Type:
+      description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione.
+      type: object
+      additionalProperties: false
+      required: [cig,elencoSoggettiRichiedenti]
+      properties:
+        elencoSoggettiRichiedenti:
+          type: array
+          items:
+            $ref: '#/components/schemas/ElencoSoggettiRichiedentiType'
     SchedaS1Type:
       description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione
       type: object

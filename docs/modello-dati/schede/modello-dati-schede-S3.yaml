@@ -4,8 +4,8 @@ info:
   version: 1.0.0
 components:
   schemas:
-    AnacFormS3Type:
-      description: Dati relativi agli incarichi tecnici e alle prestazioni progettuali.
+    ElencoIncarichiType:
+      description: Dati relativi agli incarichi.
       type: object
       additionalProperties: false
       required: [cig]
@@ -20,7 +20,17 @@ components:
         incarichi:
           type: array
           items:        
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IncaricoType'            
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IncaricoType'   
+    AnacFormS3Type:
+      description: Dati relativi agli incarichi tecnici e alle prestazioni progettuali.
+      type: object
+      additionalProperties: false
+      required: [elencoIncarichi]
+      properties:
+        elencoIncarichi:
+          type: array
+          items:        
+            $ref: '#/components/schemas/ElencoIncarichiType'  
     SchedaS3Type:
       description: Scheda relativa agli incarichi tecnici e alle prestazioni progettuali.
       type: object

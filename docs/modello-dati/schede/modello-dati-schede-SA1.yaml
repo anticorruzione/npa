@@ -7,7 +7,7 @@ components:
     AvanzamentoType:
       description: Oggetto che riporta tutti i dati di avanzamento del contratto 
       type: object
-      required: [dataAvanzamento,impSal,denominazioneAvanzamento]
+      required: [dataAvanzamento,impSal,denominazioneAvanzamento,modalitaPagamento,avanzamento]
       additionalProperties: false
       properties:
         denominazioneAvanzamento: 
