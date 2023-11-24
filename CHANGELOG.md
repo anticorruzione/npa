@@ -292,7 +292,8 @@ ref. /docs/specifiche-jws/
     
 </details>
 
-# Note di rilascio del 13/11/2023
+<details>
+<summary><h1> Note di rilascio del 13/11/2023</h1></summary>
 
 ## Modello Dati 
 * modello-dati-fvoe-fva.yaml:
@@ -306,12 +307,13 @@ ref. /docs/specifiche-jws/
   * aggiunto l'attributo idPianificazione all'oggetto StatoAvvisoType
   * AvvisoBaseType estende il nuovo oggetto AvvisoCommonType e aggiunge gli attributi idAppalto e idPianificazione
   * AvvisoType estende il nuovo oggetto AvvisoCommonType e aggiunge l'attributo piano
+  * spostata la scheda P7_3 nelle schede di pianificazione
 * modello-dati-persona-giuridica.yaml:
   * nuovo file che riporta il modello dati della persona giuridica restituita dall'operazione /recupera-anagrafica-oe    
     
 ### Regole
 * P*.dmn, A*.dmn:
-	* revisionate le regole
+	* revisionate le regole 
 
 ### Schede
 * modello-dati-schede-AC1.yaml:
@@ -394,3 +396,77 @@ ref. /docs/specifiche-jws/
     
 ## Documentazione
 * Nella sezione Standard adottati del file README.md è stata aggiornata la versione sdk dell'eForms da adottare (1.9.0).
+</details>
+
+# Note di rilascio del 24/11/2023
+
+## Modello Dati 
+* modello-dati-npa.yaml:
+  * eliminato attributo oggettoPrincipaleContratto in LottoType per adeguamento eform 1.9
+    
+### Regole
+* inserite le regole di esecuzione
+* AD*.dmn, P1*.dmn, P2*.dmn, P3_4.dmn, A1*.dmn, A2*.dmn:
+	* modificata la REG8
+
+### Schede
+* modello-dati-schede-AD*.yaml, modello-dati-schede-A3_6.yaml, modello-dati-schede-P7_1_1.yaml, modello-dati-schede-P7_1_2.yaml, modello-dati-schede-P7_1_3.yaml,modello-dati-schede-P7_2.yaml:
+	* inseriti gli attributi: importo, oggetto, oggetto contratto, codNuts, codIstat, categoria, ccnl
+* modello-dati-schede-AD*.yaml e modello-dati-schede-P7*.yaml:
+	* resa la cpv secondaria opzionale
+* modello-dati-schede-dati-comuni.yaml:
+	*  aggiunto l'oggetto MultilinguaType per l'invio dei dati in multilingua
+ 	* modificati gli oggetti DatiBaseAppaltoType,DatiBaseAppaltoOptionalType,DatiBaseAppaltoPLType,DatiBaseAppaltoADType,DatiBaseLottoType,DatiBaseLottoOptionalType,DatiBaseLottoPLType,DatiBaseLottoP7_3Type,DatiBaseLottoADType: aggiunto l'attributo oggettoMl per il multilingua
+  	* modificato l'oggetto DatiBaseAccessibilitaType: aggiunto l'attributo giustificazioneMl per il multilingua
+  	* modificato l'oggetto DatiBaseModificaContrattualeType: aggiunto l'attributo causaModificaMl per il multilingua
+  	* modificati gli oggetti PartecipanteType, PartecipanteADType: aggiunto l'attributo paeseOperatoreEconomicoMl per il multilingua
+  	* modificato l'oggetto DatiBaseProceduraCompletoType:
+  		* aggiunto l'attributo giustificazioneProceduraAccelerataMl per il multilingua
+  	 	* modificato il type dell'attributo giustificazioneProceduraAccelerata
+  	* aggiunto il campo array categoriaScorporabile per tutti gli oggetti lotto.
+  	* modificati gli oggetti DatiBaseRisultatoProceduraType e DatiBaseEsitoRisultatoProceduraType: cambiato il nome del campo esito in esitoProcedura
+  	* modificato l'oggetto PartecipanteType: eliminate le imprese ausiliarie
+  	* modificato l'oggetto PartecipanteADType:
+  		* eliminate le imprese ausiliarie.
+  	 	* aggiunte le obbligatorietà sui campi
+	* reso opzionale il campo tipologiaLavoro
+* modello-dati-schede-IR1.yaml:
+	* modificato l'oggetto RitardoType: aggiunto l'attributo motivoSospensioneMl per il multilingua
+* modello-dati-schede-P5.yaml:
+	* modificato l'oggetto LottoP5Type: aggiunto l'attributo oggettoMl per il multilingua
+ 	* aggiunto l'array delle stazioni appaltanti
+* modello-dati-schede-P7.3.yaml:
+	* aggiunto l'array delle stazioni appaltanti
+ 	* tolti gli attributi idSchedaPreinformazione e termineRidottoAvvisoPreinformazione
+* modello-dati-schede-RSU1.yaml:
+	* modificato l'oggetto SubappaltoType: aggiunto l'attributo oggettoMl per il multilingua
+* modello-dati-schede-SA1.yaml: 
+	* modificato l'oggetto AvanzamentoType: aggiunto l'attributo denominazioneAvanzamentoMl per il multilingua
+* modello-dati-schede-SC1.yaml:
+	* idPartecipante: da tipo string diventa tipo uuid
+* modello-dati-schede-I1.yaml:
+	* resi opzionali i campi consegnaFrazionata e avvioPerFasi
+* modello-dati-schede-AD5.yaml:
+	* tolti i campi codiceFiscaleSA e denominazioneSA dall'oggetto appalto.
+ 	* reso opzionale il campo cup
+* modello-dati-schede-P3*.yaml, modello-dati-schede-P6*.yaml, modello-dati-schede-P7_2.yaml, modello-dati-schede-AD*.yaml, modello-dati-schede-RSU1.yaml:
+	* reso obbligatorio il campo espd
+* adeguamento eform 1.9: eliminato l'attributo oggettoPrincipaleContratto in tutte le schede. Il campo per indicare l'oggetto del contratto è oggettoContratto e la tipologica di riferimento è la oggettoContratto.json con i valori previsti dal TED.
+* modello-dati-schede-P4_2.yaml,modello-dati-schede-P4_3.yaml,modello-dati-schede-P4_4.yaml,modello-dati-schede-P4_5.yaml,modello-dati-schede-P4_6.yaml, modello-dati-schede-M1.yaml, modello-dati-schede-M1.40.yaml:
+	* reso obbligatorio il campo eform
+* modello-dati-schede-P3*.yaml, modello-dati-schede-P2_18.yaml:
+	* reso obbligatorio il campo stazioniAppaltanti
+   
+### Tipologiche
+* statoPiano.json
+  * aggiunti i nuovi valori IN_ATT_PUBB, IN_STOP_PUBB e PUBB
+* errori.json
+  * aggiunti i seguenti messaggi di errore: ERR93, FVX36, FVX37, FVX38
+  * aggiunti i messaggi delle regole di esecuzione
+* esito.json: rinominata in esitoProcedura.json
+* accessibilita.json, accordoQuadro.json, affidamentiRiservati.json, criteriAggiudicazione.json, durata.json, esitoProcedura.json, giustificazione.json, giustificazioniAggiudicazioneDiretta.json, lingue.json, motiviModifica.json, oggettoContratto.json, sistemaDinamicoAcquisizione.json, subappalto.json, tipoClassificazione.json, tipoProcedura.json:
+	* inserite le descrizioni in tedesco
+* motiviRevisionePrezzi.json: rinominata in motivoRevisionePrezzi.json
+
+## Orchestratore
+* Aggiornato il file schema-cronologia-schede.xlsx
