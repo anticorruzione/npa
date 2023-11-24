@@ -24,7 +24,7 @@
       <rule id="DecisionRule_AD1_10_0020">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_AD1_10_0061">
-          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
+          <text>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0062">
           <text></text>
@@ -36,7 +36,7 @@
       <rule id="DecisionRule_AD1_10_0006">
         <description>REG8: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_AD1_10_0016">
-          <text>starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
+          <text>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0017">
           <text></text>
@@ -53,7 +53,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0071">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.acquisizioneCup=false</text>
+satisfies aggiudicazione.afferenteInvestimentiPNRR = true and (aggiudicazione.acquisizioneCup = null or aggiudicazione.acquisizioneCup=false)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0024">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
@@ -79,46 +79,46 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAc
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0104">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0035">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD1_10_0008">
-        <description>REG34: Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG34: Importo Lavori: se l'oggetto del contratto è "works" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_AD1_10_0022">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0023">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0008">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD1_10_0009">
-        <description>REG35: Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG35: Importo Servizi: se l'oggetto del contratto è "services" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_AD1_10_0025">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0026">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "services" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0009">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD1_10_0010">
-        <description>REG36: Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG36: Importo Forniture: se l'oggetto del contratto è "supplies" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_AD1_10_0028">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0029">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0010">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
@@ -144,7 +144,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in agg
         </inputEntry>
         <inputEntry id="UnaryTests_1ggxp4y">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruolo.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruoloOE.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1unf3ls">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>

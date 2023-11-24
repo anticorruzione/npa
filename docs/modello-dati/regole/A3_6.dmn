@@ -39,7 +39,7 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAc
         </inputEntry>
         <inputEntry id="UnaryTests_02znr4l">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rajwvu">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>

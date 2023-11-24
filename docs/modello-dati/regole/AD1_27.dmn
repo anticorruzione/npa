@@ -28,7 +28,7 @@
       <rule id="DecisionRule_AD1_27_10_0020">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_AD1_27_10_0061">
-          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
+          <text>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_27_10_0062">
           <text></text>
@@ -40,7 +40,7 @@
       <rule id="DecisionRule_AD1_27_10_0006">
         <description>REG8: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_AD1_27_10_0016">
-          <text>starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
+          <text>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_27_10_0017">
           <text></text>
@@ -56,7 +56,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_27_10_0104">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_27_10_0035">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
@@ -82,7 +82,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in agg
         </inputEntry>
         <inputEntry id="UnaryTests_1icqdub">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruolo.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruoloOE.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0817065">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>

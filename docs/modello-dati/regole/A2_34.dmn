@@ -21,21 +21,10 @@
         </inputExpression>
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
-      <rule id="DecisionRule_1ub3t5l">
-        <inputEntry id="UnaryTests_17did8m">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0o5k2bd">
-          <text>aggiudicazioni = null</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_05255um">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0k3fhjq">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_15bqhiq">
-          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
+          <text>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sg9mci">
           <text></text>
@@ -47,7 +36,7 @@
       <rule id="DecisionRule_17r7dw9">
         <description>REG8: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_0mbo78w">
-          <text>starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
+          <text>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00gtbiq">
           <text></text>
@@ -63,7 +52,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1cn7le3">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00uhoql">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>

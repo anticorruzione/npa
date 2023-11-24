@@ -21,17 +21,6 @@
         </inputExpression>
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
-      <rule id="DecisionRule_1ub3t5l">
-        <inputEntry id="UnaryTests_17did8m">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0o5k2bd">
-          <text>aggiudicazioni = null</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_05255um">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1p97dkb">
         <description>REG33: Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</description>
         <inputEntry id="UnaryTests_0yjonfs">
@@ -39,7 +28,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_09qsxuj">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14vf4zp">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>

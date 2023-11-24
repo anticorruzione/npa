@@ -21,17 +21,6 @@
         </inputExpression>
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
-      <rule id="DecisionRule_1ub3t5l">
-        <inputEntry id="UnaryTests_17did8m">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0o5k2bd">
-          <text>aggiudicazioni = null</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_05255um">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1375p7w">
         <description>REG47: Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</description>
         <inputEntry id="UnaryTests_0an2yyy">

@@ -22,7 +22,7 @@
       <rule id="DecisionRule_1osq1ip">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_0uj5s08">
-          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
+          <text>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1im8dyc">
           <text></text>
@@ -34,7 +34,7 @@
       <rule id="DecisionRule_118bhk8">
         <description>REG8: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_0tu71l5">
-          <text>starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
+          <text>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kh4588">
           <text></text>
@@ -51,7 +51,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0ywu49f">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.acquisizioneCup=false</text>
+satisfies aggiudicazione.afferenteInvestimentiPNRR = true and (aggiudicazione.acquisizioneCup = null or aggiudicazione.acquisizioneCup=false)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1uva6d0">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
@@ -77,46 +77,46 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.datiBaseAc
         </inputEntry>
         <inputEntry id="UnaryTests_02znr4l">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (some accessibilita in aggiudicazione.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and aggiudicazione.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rajwvu">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ye79l7">
-        <description>REG34: Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG34: Importo Lavori: se l'oggetto del contratto è "works" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_1et0397">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_19c8er9">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1homh6v">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG34\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1c1lfik">
-        <description>REG35: Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG35: Importo Servizi: se l'oggetto del contratto è "services" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_0zqh73a">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0nhu6iu">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "services" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17vjfvq">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG35\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1eay078">
-        <description>REG36: Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG36: Importo Forniture: se l'oggetto del contratto è "supplies" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_0p4dsvp">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1g7jg4l">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hyh5lh">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
@@ -142,7 +142,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in agg
         </inputEntry>
         <inputEntry id="UnaryTests_1c5y6uc">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruolo.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruoloOE.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vtb5ha">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>
@@ -161,39 +161,39 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18hx927">
-        <description>REG69: Quadro economico concessioni - Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG69: Quadro economico concessioni - Importo Lavori: se l'oggetto del contratto è "works" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_1jedlwh">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_186vyy8">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "L" and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1egndj9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG69\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jy2sz9">
-        <description>REG70: Quadro economico concessioni - Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG70: Quadro economico concessioni - Importo Servizi: se l'oggetto del contratto è "services" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_1aidm71">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_09p795t">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "S" and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "services" and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0g63tho">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG70\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1vm6uz1">
-        <description>REG71: Quadro economico concessioni - Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG71: Quadro economico concessioni - Importo Forniture: se l'oggetto del contratto è "supplies" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_0d5w0c7">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uw3fde">
           <text>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.oggettoPrincipaleContratto.codice = "F" and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</text>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0d9k20z">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG71\"}"</text>
