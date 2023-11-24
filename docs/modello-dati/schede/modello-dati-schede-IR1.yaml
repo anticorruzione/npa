@@ -23,13 +23,15 @@ components:
         motivoSospensione:
           description: Motivazione della sospensione/ritardo
           type: string
+        motivoSospensioneMl:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MultilinguaType'         
         dataIstanzaRecesso:
           description: Data di presentazione dell’istanza di recesso
           type: string
           format: date-time
         istanzaAccolta:
           description: L'istanza di recesso è stata accolta?
-          type: boolean           
+          type: boolean     
         istanzaTardiva:
           description: Si è proceduto a consegna tardiva (in caso di ritardo)
           type: boolean         

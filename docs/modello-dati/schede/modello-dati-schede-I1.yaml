@@ -8,7 +8,7 @@ components:
       description: Oggetto che riporta i dati di inizio prestazione
       type: object
       additionalProperties: false
-      required: [consegnaFrazionata,avvioPerFasi,consegnaSottoRiserva,dataEffettivoInizio,dataFinePrevista]
+      required: [consegnaSottoRiserva,dataEffettivoInizio,dataFinePrevista]
       properties:
         dataDisposizioneInzio:
           description: Data disposizione dell’inizio della prog. Esecutiva

@@ -22,7 +22,7 @@ components:
     SchedaAD1_28Type:
       description: Avviso per la trasparenza volontaria ex ante, direttiva concessioni. Articolo 3 bis delle direttive 89/665/CEE e 92/13/CEE. Articolo 86 decreto legislativo 36/2023.
       type: object
-      required: [anacForm, eform]
+      required: [anacForm, eform,espd]
       additionalProperties: false
       properties:
         anacForm:

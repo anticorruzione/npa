@@ -9,6 +9,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoA7Type'
       type: object
       additionalProperties: false
+      required: [datiBaseProcedura]
       properties: 
         datiBaseProcedura:
           allOf: 

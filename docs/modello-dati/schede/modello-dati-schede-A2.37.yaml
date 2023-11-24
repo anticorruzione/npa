@@ -7,6 +7,7 @@ components:
     AppaltoA2_37Type:
       type: object
       additionalProperties: false
+      required: [datiBaseProcedura]
       properties:   
         datiBaseProcedura:
           allOf: 

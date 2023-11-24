@@ -9,6 +9,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoA1_30Type'
       type: object
       additionalProperties: false
+      required: [datiBaseProcedura]
       properties:   
         datiBaseSubappalti:
           allOf: 

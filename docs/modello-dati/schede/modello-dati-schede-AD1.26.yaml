@@ -22,7 +22,7 @@ components:
     SchedaAD1_26Type:
       description: Avviso per la trasparenza volontaria ex ante, direttiva settoriale. Articolo 3 bis della direttiva 89/665/CEE. Articolo 86 decreto legislativo 36/2023.
       type: object
-      required: [anacForm, eform]
+      required: [anacForm, eform,espd]
       additionalProperties: false
       properties:
         anacForm:

@@ -20,7 +20,7 @@ components:
     SchedaM1_40Type:
       description: Modifica contrattuale, direttiva concessioni. Articolo 43, paragrafo 1, della direttiva 2014/23/UE. Articolo 189 comma 5 decreto legislativo 36/2023.
       type: object
-      required: [anacForm]
+      required: [anacForm,eform]
       additionalProperties: false
       properties:
         anacForm:
