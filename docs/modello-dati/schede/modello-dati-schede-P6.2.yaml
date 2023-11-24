@@ -9,7 +9,7 @@ components:
       allOf: # estende la classe LottoP6BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP6BaseType'      
       type: object
-      required: [ripetizioniEConsegneComplementari]
+      required: [ripetizioniEConsegneComplementari,datiBase]
       additionalProperties: false
       properties:
         ripetizioniEConsegneComplementari:
@@ -25,6 +25,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoP6BaseType'
       type: object
       additionalProperties: false
+      required: [datiBase]
       properties:
         datiBase:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoOptionalType'
@@ -46,7 +47,7 @@ components:
     SchedaP6_2Type:
       description: Adesione AQ/convenzione con successivo confronto competitivo (ordinario/speciale). Articolo 59 comma 4 lettere b) e c) decreto legislativo 36/2023; Articolo 154 decreto legislativo 36/2023.
       type: object
-      required: [anacForm]
+      required: [anacForm,espd]
       additionalProperties: false
       properties:
         anacForm:

@@ -13,6 +13,8 @@ components:
         denominazioneAvanzamento: 
           description: Denominazione dello stato di avanzamento
           type: string
+        denominazioneAvanzamentoMl:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MultilinguaType'          
         modalitaPagamento:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaPagamentoEnum'
         impAnticipazione:

@@ -25,12 +25,18 @@ components:
         oggetto:
           description: Lavoro/Servizio/Fornitura subappalto
           type: string
+        oggettoMl:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MultilinguaType'         
         importoPresunto:
           description: Importo presunto Lavoro/ Servizio/Fornitura, subappalto
           type: number
           format: double
         categoria:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
+        categoriaScorporabile:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum'          
         cpv:
           type: array
           items:
@@ -51,7 +57,7 @@ components:
     SchedaRSU1Type:
       description: Comunicazione richiesta di subappalto per qualunque procedura.
       type: object
-      required: [anacForm]
+      required: [anacForm,espd]
       additionalProperties: false
       properties:
         anacForm:

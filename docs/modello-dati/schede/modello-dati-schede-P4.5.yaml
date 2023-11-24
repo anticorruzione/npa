@@ -32,7 +32,7 @@ components:
    SchedaP4_5Type:
       description: Scheda di Concessione di servizi e costruzione e gestione. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 174 comma 3 decreto legislativo 36/2023. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
       type: object
-      required: [anacForm]
+      required: [anacForm,eform]
       additionalProperties: false
       properties:
         anacForm:

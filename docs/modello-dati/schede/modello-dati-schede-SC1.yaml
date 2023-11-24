@@ -15,9 +15,11 @@ components:
           type: array
           items: 
             type: string
-        idPartecipante:
+        idPartecipante: 
           description: id partecipante
           type: string  
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         cig:
           description: Lista dei lotti rientranti nel contratto
           type: array
