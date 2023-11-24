@@ -2,7 +2,8 @@
     "codice":"add-wss",
     "descrizione": {
 		"it": "Necessità di ulteriori lavori, forniture e servizi eseguiti dall'appaltatore originale.",
-		"en": "Need for additional works, services or supplies by the original contractor."
+		"en": "Need for additional works, services or supplies by the original contractor.",
+		"de": "Bedarf an zusätzlichen Bauleistungen, Dienstleistungen oder Lieferungen durch den ursprünglichen Auftragnehmer."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"mod-cir",
     "descrizione": {
 		"it": "Necessità di modifiche dovute a circostante non prevedibili da un committente diligente.",
-		"en": "Need for modifications because of circumstances which a diligent buyer could not predict."
+		"en": "Need for modifications because of circumstances which a diligent buyer could not predict.",
+		"de": "Änderungen aufgrund von Umständen, die bei aller Umsicht vom Beschaffer nicht vorhergesehen werden konnten, erforderlich."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -20,7 +22,8 @@
     "codice":"mod-minv",
     "descrizione": {
 		"it": "Modifiche inferiori a una soglia minima ('de minimis').",
-		"en": "Modifications under a minimal value ('de minimis')."
+		"en": "Modifications under a minimal value ('de minimis').",
+		"de": "Änderungen unterhalb eines bestimmten Mindestwertes."
 		},		
     "dataInizio":null,
     "dataFine":null
@@ -29,7 +32,8 @@
     "codice":"mod-nons",
     "descrizione": {
 		"it": "Le modifiche non sono sostanziali.",
-		"en": "Modifications that are not substantial."
+		"en": "Modifications that are not substantial.",
+		"de": "Nicht wesentliche Änderungen."
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -38,7 +42,8 @@
     "codice":"mod-repl",
     "descrizione": {
 		"it": "Modifiche dovute al fatto che un nuovo contraente sostituisce l'aggiudicatario iniziale perché gli succede o perché il committente si assume gli obblighi del contraente principale nei confronti dei suoi subappaltatori.",
-		"en": "Modifications where a new contractor replaces an old contractor because of succession or when the buyer assumes the contractor’s obligations towards its subcontractors."
+		"en": "Modifications where a new contractor replaces an old contractor because of succession or when the buyer assumes the contractor’s obligations towards its subcontractors.",
+		"de": "Änderungen, bei denen ein neuer Auftragnehmer an die Stelle des ursprünglichen tritt oder der Beschaffer selbst die Verpflichtungen des Auftragnehmers gegenüber seinen Unterauftragnehmern übernimmt."
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -47,16 +52,8 @@
     "codice":"mod-rev",
     "descrizione": {
 		"it": "Modifiche basate su clausole di revisione dei prezzi o opzioni.",
-		"en": "Modifications based on review clauses or options."
-		},	
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"other",
-    "descrizione": {
-		"it": "Altro.",
-		"en": "Other."
+		"en": "Modifications based on review clauses or options.",
+		"de": "Änderungen aufgrund von Überprüfungsklauseln oder Optionen."
 		},	
     "dataInizio":null,
     "dataFine":null

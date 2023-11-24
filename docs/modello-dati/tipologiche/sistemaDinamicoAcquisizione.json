@@ -2,7 +2,8 @@
     "codice":"dps-list",
     "descrizione": {
 		"it": "Sistema dinamico di acquisizione utilizzabile solo da committenti elencati nel presente avviso o bando",
-		"en": "Dynamic purchasing system, only usable by buyers listed in this notice"
+		"en": "Dynamic purchasing system, only usable by buyers listed in this notice",
+		"de": "Dynamisches Beschaffungssystem, ausschließlich von den in dieser Bekanntmachung aufgeführten Beschaffern zu verwenden"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"dps-nlist",
     "descrizione": {
 		"it": "Sistema dinamico di acquisizione utilizzabile anche da committenti non elencati nel presente avviso o bando",
-		"en": "Dynamic purchasing system, also usable by buyers not listed in this notice"
+		"en": "Dynamic purchasing system, also usable by buyers not listed in this notice",
+		"de": "Dynamisches Beschaffungssystem, auch von den nicht in dieser Bekanntmachung aufgeführten Beschaffern zu verwenden"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -19,8 +21,9 @@
 {
     "codice":"none",
     "descrizione": {
-		"it": "Nulla",
-		"en": "None"
+		"it": "Nessun sistema dinamico di acquisizione",
+		"en": "No dynamic purchase system",
+		"de": "Kein dynamisches Beschaffungssystem"
 		},	
     "dataInizio":null,
     "dataFine":null

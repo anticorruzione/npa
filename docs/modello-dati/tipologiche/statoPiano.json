@@ -24,4 +24,31 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"IN_ATT_PUBB",
+	"descrizione": {
+		"it": "In attesa pubblicazione",
+		"en": "In attesa pubblicazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"IN_STOP_PUBB",
+	"descrizione": {
+		"it": "In stop pubblicazione",
+		"en": "In stop pubblicazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"PUBB",
+	"descrizione": {
+		"it": "Pubblicato",
+		"en": "Pubblicato"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]

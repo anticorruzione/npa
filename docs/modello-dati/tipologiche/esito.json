@@ -1,26 +1,26 @@
 [{
-    "codice":"clos-nw",
+    "codice":"OK",
     "descrizione": {
-		"it": "Non è stato selezionato nessun vincitore e la gara è chiusa.",
-		"en": "No winner was chosen and the competition is closed."
-		},	
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"open-nw",
-    "descrizione": {
-		"it": "Non è ancora stato selezionato un vincitore ma la gara è ancora in corso.",
-		"en": "The winner was not yet chosen, but the competition is still ongoing."
+		"it": "SUCCESS",
+		"en": "SUCCESS"
 		},
     "dataInizio":null,
     "dataFine":null
 },
 {
-    "codice":"selec-w",
+    "codice":"KO",
     "descrizione": {
-		"it": "È stato selezionato almeno un vincitore.",
-		"en": "At least one winner was chosen."
+		"it": "ERROR",
+		"en": "ERROR"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"WT",
+    "descrizione": {
+		"it": "IN ATTESA",
+		"en": "WAITING"
 		},
     "dataInizio":null,
     "dataFine":null

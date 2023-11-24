@@ -2,7 +2,8 @@
     "codice":"yes",
     "descrizione": {
 		"it": "Sì",
-		"en": "Yes"
+		"en": "Yes",
+		"de": "Ja"
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"no",
     "descrizione": {
 		"it": "No",
-		"en": "No"
+		"en": "No",
+		"de": "Nein"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -20,7 +22,8 @@
     "codice":"not-known",
     "descrizione": {
 		"it": "Non ancora noto",
-		"en": "Not yet known"
+		"en": "Not yet known",
+		"de": "Noch nicht bekannt"
 		},	
     "dataInizio":null,
     "dataFine":null

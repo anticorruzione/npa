@@ -827,6 +827,15 @@
     "dataFine":null
 },
 {
+    "codice":"ERR93",
+    "descrizione": {
+		"it": "mancata coerenza tra idPianificazione e idAvviso",
+		"en": "mancata coerenza tra idPianificazione e idAvviso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
@@ -867,6 +876,15 @@
     "descrizione": {
 		"it": "errore durante la pubblicazione dell'avviso su TED: stato restituito DELETED",
 		"en": "errore durante la pubblicazione dell'avviso su TED: stato restituito DELETED"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"REG0",
+    "descrizione": {
+		"it": "Dati non presenti",
+		"en": "Dati non presenti"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -962,10 +980,28 @@
     "dataFine":null
 },
 {
+    "codice":"REG9",
+    "descrizione": {
+		"it": "Il campo ‘Esclusione o regime speciale’ non è richiesto",
+		"en": "Il campo ‘Esclusione o regime speciale’ non è richiesto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"REG10",
     "descrizione": {
 		"it": "Il campo servizioPubblicoLocale è obbligatorio",
 		"en": "Il campo servizioPubblicoLocale è obbligatorio"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG11",
+    "descrizione": {
+		"it": "Non è stato indicato il CUI",
+		"en": "Non è stato indicato il CUI"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1018,8 +1054,8 @@
 {
     "codice":"REG20",
     "descrizione": {
-		"it": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto principale del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria",
-		"en": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto principale del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria"
+		"it": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria",
+		"en": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1081,8 +1117,8 @@
 {
     "codice":"REG29",
     "descrizione": {
-		"it": "il campo modalitaAcquisizione è obbligatorio se l'oggetto principale del contratto è Servizi o Forniture",
-		"en": "il campo modalitaAcquisizione è obbligatorio se l'oggetto principale del contratto è Servizi o Forniture"
+		"it": "il campo modalitaAcquisizione è obbligatorio se l'oggetto del contratto è Servizi o Forniture",
+		"en": "il campo modalitaAcquisizione è obbligatorio se l'oggetto del contratto è Servizi o Forniture"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1090,17 +1126,8 @@
 {
     "codice":"REG30",
     "descrizione": {
-		"it": "il campo prestazioniComprese è obbligatorio se l'oggetto principale del contratto è Lavori",
-		"en": "il campo prestazioniComprese è obbligatorio se l'oggetto principale del contratto è Lavori"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"REG31",
-    "descrizione": {
-		"it": "Il campo oggettoPrincipaleContratto è obbligatorio",
-		"en": "Il campo oggettoPrincipaleContratto è obbligatorio"
+		"it": "il campo prestazioniComprese è obbligatorio se l'oggetto del contratto è Lavori",
+		"en": "il campo prestazioniComprese è obbligatorio se l'oggetto del contratto è Lavori"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1164,51 +1191,6 @@
     "descrizione": {
 		"it": "Non è stato indicato il valore relativo alle somme per ripetizione servizi,forniture,lavori analoghi e consegne complementari",
 		"en": "Non è stato indicato il valore relativo alle somme per ripetizione servizi,forniture,lavori analoghi e consegne complementari"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"REG65",
-    "descrizione": {
-		"it": "Cpv già inserita come cpv prevalente",
-		"en": "Cpv già inserita come cpv prevalente"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"REG66",
-    "descrizione": {
-		"it": "Cpv gia' inserita come cpv secondaria",
-		"en": "Cpv gia' inserita come cpv secondaria"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"REG67",
-    "descrizione": {
-		"it": "il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara",
-		"en": "il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"REG11",
-    "descrizione": {
-		"it": "Non è stato indicato il CUI",
-		"en": "Non è stato indicato il CUI"
-	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"REG9",
-    "descrizione": {
-		"it": "Il campo ‘Esclusione o regime speciale’ non è richiesto",
-		"en": "Il campo ‘Esclusione o regime speciale’ non è richiesto"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1324,8 +1306,107 @@
 {
     "codice":"REG56",
     "descrizione": {
-		"it": "Il campo cignuovaProcedura non è previsto",
-		"en": "Il campo cignuovaProcedura non è previsto"
+		"it": "CIG della nuova procedura avviata: campo non previsto",
+		"en": "CIG della nuova procedura avviata: campo non previsto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG57",
+    "descrizione": {
+		"it": "Data approvazione antecedente la data di inizio progettazione esecutiva",
+		"en": "Data approvazione antecedente la data di inizio progettazione esecutiva"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG58",
+    "descrizione": {
+		"it": "Indicare la data del verbale di prima consegna lavori",
+		"en": "Indicare la data del verbale di prima consegna lavori"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG59",
+    "descrizione": {
+		"it": "Indicare la data di avvio della prima fase dell'esecuzione del contratto",
+		"en": "Indicare la data di avvio della prima fase dell'esecuzione del contratto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG60",
+    "descrizione": {
+		"it": "Indicare la data del verbale di consegna definitiva",
+		"en": "Indicare la data del verbale di consegna definitiva"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG61",
+    "descrizione": {
+		"it": "Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d'opera eccede il 10 per cento dell'importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d'opera",
+		"en": "Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d'opera eccede il 10 per cento dell'importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d'opera"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG62",
+    "descrizione": {
+		"it": "In caso di Altre cause impreviste ed imprevedibili indicare una motivazione nel campo Cause della modifica contrattuale",
+		"en": "In caso di Altre cause impreviste ed imprevedibili indicare una motivazione nel campo Cause della modifica contrattuale"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG63",
+    "descrizione": {
+		"it": "Non è stato valorizzato il numero di giorni di proroga concessi,tempo aggiuntivo rispetto ai termini contrattuali",
+		"en": "Non è stato valorizzato il numero di giorni di proroga concessi,tempo aggiuntivo rispetto ai termini contrattuali"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG64",
+    "descrizione": {
+		"it": "Non è stata valorizzata la data del certificato di pagamento relativo all'anticipazione",
+		"en": "Non è stata valorizzata la data del certificato di pagamento relativo all'anticipazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG65",
+    "descrizione": {
+		"it": "Cpv già inserita come cpv prevalente",
+		"en": "Cpv già inserita come cpv prevalente"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG66",
+    "descrizione": {
+		"it": "Cpv gia' inserita come cpv secondaria",
+		"en": "Cpv gia' inserita come cpv secondaria"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG67",
+    "descrizione": {
+		"it": "il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara",
+		"en": "il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1367,6 +1448,51 @@
     "dataFine":null
 },
 {
+    "codice":"REG72",
+    "descrizione": {
+		"it": "Campo data del certificato di pagamento relativo all'anticipazione non previsto",
+		"en": "Campo data del certificato di pagamento relativo all'anticipazione non previsto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG73",
+    "descrizione": {
+		"it": "Valorizzare almeno uno dei due campi: Data di autorizzazione del subappalto, Motivo del mancato subappalto",
+		"en": "Valorizzare almeno uno dei due campi: Data di autorizzazione del subappalto, Motivo del mancato subappalto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG74",
+    "descrizione": {
+		"it": "Non è stato valorizzato il nuovo importo della sicurezza",
+		"en": "Non è stato valorizzato il nuovo importo della sicurezza"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG75",
+    "descrizione": {
+		"it": "Il campo motivi di risoluzione è obbligatorio in caso di interruzione anticipata per risoluzione contrattuale",
+		"en": "Il campo motivi di risoluzione è obbligatorio in caso di interruzione anticipata per risoluzione contrattuale"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG76",
+    "descrizione": {
+		"it": "Il campo oneri economici derivanti dalla risoluzione-recesso è obbligatorio in caso di: interruzione anticipata per risoluzione contrattuale, recesso della stazione appaltante, recesso dell'appaltatore",
+		"en": "Il campo oneri economici derivanti dalla risoluzione-recesso è obbligatorio in caso di: interruzione anticipata per risoluzione contrattuale, recesso della stazione appaltante, recesso dell'appaltatore"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"REG77",
     "descrizione": {
 		"it": "La data di scadenza del contratto deve essere superiore alla data di stipula.",
@@ -1380,6 +1506,150 @@
     "descrizione": {
 		"it": "Indicare almeno un partecipante.",
 		"en": "Indicare almeno un partecipante."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG79",
+    "descrizione": {
+		"it": "L'importo è obbligatorio se è valorizzato il campo oneri economici derivanti dalla risoluzione-recesso",
+		"en": "L'importo è obbligatorio se è valorizzato il campo oneri economici derivanti dalla risoluzione-recesso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG80",
+    "descrizione": {
+		"it": "Risoluzione/rescissione senza oneri, dunque non va indicato l'importo. Verificare.",
+		"en": "Risoluzione/rescissione senza oneri, dunque non va indicato l'importo. Verificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG81",
+    "descrizione": {
+		"it": "Non è stata indicata la data di ultimazione",
+		"en": "Non è stata indicata la data di ultimazione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG82",
+    "descrizione": {
+		"it": "Numero totale degli infortuni incoerente rispetto al numero degli infortuni mortali e con postumi permanenti",
+		"en": "Numero totale degli infortuni incoerente rispetto al numero degli infortuni mortali e con postumi permanenti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG83",
+    "descrizione": {
+		"it": "Il campo incamerata polizza è obbligatorio in caso di interruzione anticipata",
+		"en": "Il campo incamerata polizza è obbligatorio in caso di interruzione anticipata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG84",
+    "descrizione": {
+		"it": "il campo di cui postumi permanenti deve essere maggiore o uguale a 0",
+		"en": "il campo di cui postumi permanenti deve essere maggiore o uguale a 0"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG85",
+    "descrizione": {
+		"it": "il campo di cui mortali deve essere maggiore o uguale a 0",
+		"en": "il campo di cui mortali deve essere maggiore o uguale a 0"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG86",
+    "descrizione": {
+		"it": "Certificato di regolare esecuzione non previsto in caso di collaudo tecnico/amministrativo",
+		"en": "Certificato di regolare esecuzione non previsto in caso di collaudo tecnico/amministrativo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG87",
+    "descrizione": {
+		"it": "Specificare data del certificato di regolare esecuzione o le modalità del collaudo tecnico amministrativo",
+		"en": "Specificare data del certificato di regolare esecuzione o le modalità del collaudo tecnico amministrativo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG88",
+    "descrizione": {
+		"it": "Non è stata indicata la data di nomina del collaudatore, Commissione",
+		"en": "Non è stata indicata la data di nomina del collaudatore, Commissione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG89",
+    "descrizione": {
+		"it": "Non è stata indicata la data di inizio delle operazioni di collaudo",
+		"en": "Non è stata indicata la data di inizio delle operazioni di collaudo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG90",
+    "descrizione": {
+		"it": "Data inizio operazioni di collaudo antecedente la data  di nomina della commissione di collaudo/collaudatore",
+		"en": "Data inizio operazioni di collaudo antecedente la data  di nomina della commissione di collaudo/collaudatore"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG91",
+    "descrizione": {
+		"it": "Non è stata indicata la data di redazione del certificato di collaudo",
+		"en": "Non è stata indicata la data di redazione del certificato di collaudo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG92",
+    "descrizione": {
+		"it": "Data redazione certificato antecedente la data di inizio operazioni di collaudo",
+		"en": "Data redazione certificato antecedente la data di inizio operazioni di collaudo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG93",
+    "descrizione": {
+		"it": "Data delibera di ammissibilità antecedente la data di redazione del certificato di collaudo",
+		"en": "Data delibera di ammissibilità antecedente la data di redazione del certificato di collaudo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG94",
+    "descrizione": {
+		"it": "Oneri complessivi derivanti è obbligatorio se il numero totale riserve è maggiore di zero.",
+		"en": "Oneri complessivi derivanti è obbligatorio se il numero totale riserve è maggiore di zero."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2028,6 +2298,33 @@
    "descrizione": {
        "it": "Anagrafica non presente",
        "en": "Anagrafica non presente"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX36",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Servizio User Detail- Non Disponibile",
+       "en": "Errore Servizio esterno. Servizio User Detail- Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},	
+{
+   "codice":"FVX37",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Servizio Anagrafica SA - Non Disponibile",
+       "en": "Errore Servizio esterno. Servizio Anagrafica SA - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},	
+{
+   "codice":"FVX38",
+   "descrizione": {
+       "it": "Anagrafica Stazione Appaltante mal formattato",
+       "en": "Anagrafica Stazione Appaltante mal formattato"
    },
    "dataInizio":null,
    "dataFine":null

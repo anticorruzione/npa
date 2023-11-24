@@ -2,7 +2,8 @@
     "codice":"res-ws",
     "descrizione": {
 		"it": "Partecipazione riservata a laboratori protetti e ad operatori economici aventi per scopo l'integrazione sociale e professionale delle persone con disabilità o svantaggiate.",
-		"en": "Participation is reserved to sheltered workshops and economic operators aiming at the social and professional integration of disabled or disadvantaged persons."
+		"en": "Participation is reserved to sheltered workshops and economic operators aiming at the social and professional integration of disabled or disadvantaged persons.",
+		"de": "Die Teilnahme ist geschützten Werkstätten und Wirtschaftsteilnehmern, die auf die soziale und berufliche Integration von Menschen mit Behinderungen oder benachteiligten Personen abzielen, vorbehalten."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"res-pub-ser",
     "descrizione": {
 		"it": "Partecipazione riservata a organizzazioni aventi per scopo una missione di servizio pubblico e che soddisfano altre condizioni di legge pertinenti.",
-		"en": "Participation is reserved to organisations pursuing a public service mission and fulfilling other relevant conditions in the legislation."
+		"en": "Participation is reserved to organisations pursuing a public service mission and fulfilling other relevant conditions in the legislation.",
+		"de": "Die Teilnahme ist Organisationen vorbehalten, die zur Erfüllung von Gemeinwohlaufgaben tätig werden und andere einschlägige Bestimmungen der Rechtsvorschriften erfüllen."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -19,8 +21,9 @@
 {
     "codice":"none",
     "descrizione": {
-		"it": "Nulla",
-		"en": "None"
+		"it": "La partecipazione non è riservata.",
+		"en": "Participation is not reserved.",
+		"de": "Teilnahme ist nicht vorbehalten."
 		},	
     "dataInizio":null,
     "dataFine":null

@@ -1,0 +1,30 @@
+[{
+    "codice":"clos-nw",
+    "descrizione": {
+		"it": "Non è stato selezionato nessun vincitore e la gara è chiusa.",
+		"en": "No winner was chosen and the competition is closed.",
+		"de": "Es wurde kein Wettbewerbsgewinner ermittelt, und der Wettbewerb ist abgeschlossen."
+		},	
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"open-nw",
+    "descrizione": {
+		"it": "Non è ancora stato selezionato un vincitore ma la gara è ancora in corso.",
+		"en": "The winner was not yet chosen, but the competition is still ongoing.",
+		"de": "Ein Wettbewerbsgewinner wurde noch nicht ermittelt, der Wettbewerb ist noch nicht abgeschlossen."
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"selec-w",
+    "descrizione": {
+		"it": "È stato selezionato almeno un vincitore.",
+		"en": "At least one winner was chosen.",
+		"de": "Es wurde mindestens ein Gewinner ermittelt."
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]

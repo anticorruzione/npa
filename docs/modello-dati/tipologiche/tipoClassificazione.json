@@ -2,7 +2,8 @@
     "codice":"cpv",
     "descrizione": {
 		"it": "Common Procurement Vocabulary",
-		"en": "Common Procurement Vocabulary"
+		"en": "Common Procurement Vocabulary",
+		"de": "Gemeinsames Vokabular für öffentliche Aufträge"
 		},
     "dataInizio":null,
     "dataFine":null

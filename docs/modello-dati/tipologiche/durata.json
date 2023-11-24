@@ -1,8 +1,9 @@
 [{
     "codice":"UNKNOWN",
     "descrizione": {
-		"it": "ignoto",
-		"en": "Unknown"
+		"it": "Sconosciuto",
+		"en": "Unknown",
+		"de": "Unbekannt"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -10,8 +11,9 @@
 {
     "codice":"UNLIMITED",
     "descrizione": {
-		"it": "illimitato",
-		"en": "Unlimited"
+		"it": "Illimitato",
+		"en": "Unlimited",
+		"de": "Unbegrenzt"
 		},
     "dataInizio":null,
     "dataFine":null

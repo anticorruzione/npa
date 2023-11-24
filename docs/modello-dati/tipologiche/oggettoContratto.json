@@ -2,7 +2,8 @@
     "codice":"works",
     "descrizione": {
 		"it": "Lavori",
-		"en": "Works"
+		"en": "Works",
+		"de": "Bauleistung"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"supplies",
     "descrizione": {
 		"it": "Forniture",
-		"en": "Supplies"
+		"en": "Supplies",
+		"de": "Lieferungen"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -20,16 +22,8 @@
     "codice":"services",
     "descrizione": {
 		"it": "Servizi",
-		"en": "Services"
-		},	
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"combined",
-    "descrizione": {
-		"it": "Appalti misti",
-		"en": "Combined"
+		"en": "Services",
+		"de": "Dienstleistungen"
 		},	
     "dataInizio":null,
     "dataFine":null

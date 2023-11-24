@@ -2,7 +2,8 @@
     "codice":"fa-wo-rc",
     "descrizione": {
 		"it": "Accordo quadro, senza riapertura della gara",
-		"en": "Framework agreement, without reopening of competition"
+		"en": "Framework agreement, without reopening of competition",
+		"de": "Rahmenvereinbarung ohne erneuten Aufruf zum Wettbewerb"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"fa-w-rc",
     "descrizione": {
 		"it": "Accordo quadro, con riapertura della gara",
-		"en": "Framework agreement, with reopening of competition"
+		"en": "Framework agreement, with reopening of competition",
+		"de": "Rahmenvereinbarung mit erneutem Aufruf zum Wettbewerb"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -20,7 +22,8 @@
     "codice":"fa-mix",
     "descrizione": {
 		"it": "Accordo quadro, parzialmente senza riapertura della gara e parzialmente con riapertura della gara",
-		"en": "Framework agreement, partly without reopening and partly with reopening of competition"
+		"en": "Framework agreement, partly without reopening and partly with reopening of competition",
+		"de": "Rahmenvereinbarung, teilweise mit erneutem Aufruf zum Wettbewerb, teilweise ohne erneuten Aufruf zum Wettbewerb"
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -29,7 +32,8 @@
     "codice":"none",
     "descrizione": {
 		"it": "Nulla",
-		"en": "None"
+		"en": "None",
+		"de": "Keine Rahmenvereinbarung"
 		},	
     "dataInizio":null,
     "dataFine":null

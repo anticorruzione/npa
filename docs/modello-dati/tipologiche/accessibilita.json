@@ -2,7 +2,8 @@
     "codice":"inc",
     "descrizione": {
 		"it": "Sono compresi criteri di accessibilità per le persone con disabilità",
-		"en": "Accessibility criteria for persons with disabilities are included"
+		"en": "Accessibility criteria for persons with disabilities are included",
+		"de": "Zugänglichkeitskriterien für Menschen mit Behinderungen wurden berücksichtigt"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"n-inc",
     "descrizione": {
 		"it": "Non sono compresi criteri di accessibilità per le persone con disabilità perché l'oggetto dell'appalto non è destinato all'uso da parte di persone fisiche",
-		"en": "Accessibility criteria for persons with disabilities are not included because the procurement is not intended for use by natural persons"
+		"en": "Accessibility criteria for persons with disabilities are not included because the procurement is not intended for use by natural persons",
+		"de": "Kriterien für die Zugänglichkeit für Menschen mit Behinderungen wurden nicht berücksichtigt, da die Beschaffung nicht für die Nutzung durch natürliche Personen vorgesehen ist"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -20,7 +22,8 @@
     "codice":"n-inc-just",
     "descrizione": {
 		"it": "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente",
-		"en": "Accessibility criteria for persons with disabilities are not included with the following justification"
+		"en": "Accessibility criteria for persons with disabilities are not included with the following justification",
+		"de": "Zugänglichkeitskriterien für Menschen mit Behinderungen wurden mit folgender Begründung nicht berücksichtigt"
 		},	
     "dataInizio":null,
     "dataFine":null

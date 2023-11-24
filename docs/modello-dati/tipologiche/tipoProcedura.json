@@ -2,7 +2,8 @@
     "codice":"open",
     "descrizione": {
 		"it": "Aperta",
-		"en": "Open"
+		"en": "Open",
+		"de": "Offenes Verfahren"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"restricted",
     "descrizione": {
 		"it": "Ristretta",
-		"en": "Restricted"
+		"en": "Restricted",
+		"de": "Nichtoffenes Verfahren"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -20,7 +22,8 @@
     "codice":"neg-w-call",
     "descrizione": {
 		"it": "Negoziata con previa indizione di gara / competitiva con negoziazione",
-		"en": "Negotiated with prior publication of a call for competition / competitive with negotiation"
+		"en": "Negotiated with prior publication of a call for competition / competitive with negotiation",
+		"de": "Verhandlungsverfahren mit vorheriger Veröffentlichung eines Aufrufs zum Wettbewerb/Verhandlungsverfahren"
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -29,7 +32,8 @@
     "codice":"neg-wo-call",
     "descrizione": {
 		"it": "Negoziata senza previa indizione di gara",
-		"en": "Negotiated without prior call for competition"
+		"en": "Negotiated without prior call for competition",
+		"de": "Verhandlungsverfahren ohne Aufruf zum Wettbewerb"
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -38,7 +42,8 @@
     "codice":"comp-dial",
     "descrizione": {
 		"it": "Dialogo competitivo",
-		"en": "Competitive dialogue"
+		"en": "Competitive dialogue",
+		"de": "Wettbewerblicher Dialog"
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -47,7 +52,8 @@
     "codice":"innovation",
     "descrizione": {
 		"it": "Partenariato per l'innovazione",
-		"en": "Innovation partnership"
+		"en": "Innovation partnership",
+		"de": "Innovationspartnerschaften"
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -56,7 +62,8 @@
     "codice":"oth-single",
     "descrizione": {
 		"it": "Altra procedura a fase unica",
-		"en": "Other single stage procedure"
+		"en": "Other single stage procedure",
+		"de": "Sonstiges einstufiges Verfahren"
 		},		
     "dataInizio":null,
     "dataFine":null
@@ -65,7 +72,8 @@
     "codice":"oth-mult",
     "descrizione": {
 		"it": "Altra procedura a più fasi",
-		"en": "Other multiple stage procedure"
+		"en": "Other multiple stage procedure",
+		"de": "Sonstiges zweistufiges Verfahren"
 		},			    
     "dataInizio":null,
     "dataFine":null
@@ -75,6 +83,7 @@
     "descrizione": {
 		"it": "Procedura di gara",
 		"en": "Competitive tendering"
+		"de": "Wettbewerbliches Ausschreibungverfahren"
 		},	
     "dataInizio":null,
     "dataFine":null

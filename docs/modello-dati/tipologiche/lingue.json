@@ -2,7 +2,8 @@
     "codice":"ENG",
     "descrizione": {
 		"it": "inglese",
-		"en": "English"
+		"en": "English",
+		"de": "Englisch"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"DEU",
     "descrizione": {
 		"it": "tedesco",
-		"en": "German"
+		"en": "German",
+		"de": "Deutsch"
 		},	
     "dataInizio":null,
     "dataFine":null
@@ -20,7 +22,8 @@
     "codice":"ITA",
     "descrizione": {
 		"it": "italiano",
-		"en": "Italian"
+		"en": "Italian",
+		"de": "Italienisch"
 		},	
     "dataInizio":null,
     "dataFine":null
