@@ -74,7 +74,7 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0047">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.servizioPubblicoLocale = null</text>
+satisfies lotto.datiBase.oggettoContratto.codice="services" and lotto.servizioPubblicoLocale = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0048">
           <text></text>
@@ -156,7 +156,7 @@ and count(lotto.ipotesiCollegamento.cigCollegato) &lt;2</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0071">
           <text>some lotto in lotti
-satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
+satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0072">
           <text></text>
@@ -167,15 +167,15 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
       </rule>
       <rule id="DecisionRule_P6_2_0024">
         <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
-- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Servizi’ o ‘Forniture’
-- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Lavori” e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
-E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto principale del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
+- lotti.acquisizionecup=’N’ e oggettoContratto=’services’ o ‘supplies’
+- lotti.acquisizionecup=’N’ e oggettoContratto=’works” e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è works e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
         <inputEntry id="UnaryTests_P6_2_0073">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0074">
           <text>some lotto in lotti
-satisfies lotto.acquisizioneCup=false and lotto.oggettoPrincipaleContratto.codice="L" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
+satisfies lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0075">
           <text></text>
@@ -185,35 +185,19 @@ satisfies lotto.acquisizioneCup=false and lotto.oggettoPrincipaleContratto.codic
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P6_2_0031">
-        <description>REG29: Modalità Acquisizione: il campo è obbligatorio se l'oggetto principale del contratto è 'Servizi' o 'Forniture'.</description>
+        <description>REG29: Modalità Acquisizione: il campo è obbligatorio se l'oggetto del contratto è 'services' o 'supplies'.</description>
         <inputEntry id="UnaryTests_P6_2_0094">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0095">
           <text>some lotto in lotti
-satisfies (lotto.oggettoPrincipaleContratto.codice = "S" or lotto.oggettoPrincipaleContratto.codice = "F") and lotto.modalitaAcquisizione = null</text>
+satisfies (lotto.datiBase.oggettoContratto.codice = "services" or lotto.datiBase.oggettoContratto.codice = "supplies") and (lotto.modalitaAcquisizione = null or lotto.modalitaAcquisizione = "" or lotto.modalitaAcquisizione.codice = null or lotto.modalitaAcquisizione.codice = "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0096">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P6_2_0032">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG29\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P6_2_0014">
-        <description>REG31: Oggetto Principale del Contratto: deve essere calcolato dal campo oggetto contratto del ted. Altrimenti deve essere inserito esplicitamente. È obbligatorio.</description>
-        <inputEntry id="UnaryTests_P6_2_0043">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_2_0044">
-          <text>some lotto in lotti
-satisfies lotto.datiBase.oggettoContratto.codice = "combined" and lotto.oggettoPrincipaleContratto = null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_2_0045">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P6_2_0015">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG31\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P6_2_0033">
@@ -239,7 +223,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.access
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0104">
           <text>some lotto in lotti
-satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and lotto.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies lotto.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (lotto.datiBaseAccessibilita.giustificazione = null or lotto.datiBaseAccessibilita.giustificazione="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0105">
           <text></text>
@@ -249,13 +233,13 @@ satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satis
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P6_2_0008">
-        <description>REG34: Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG34: Importo Lavori: se l'oggetto del contratto è "works" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_P6_2_0022">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0023">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "L" and (lotto.quadroEconomicoStandard.impLavori = null or lotto.quadroEconomicoStandard.impLavori = 0)</text>
+satisfies lotto.datiBase.oggettoContratto.codice="works" and (lotto.quadroEconomicoStandard.impLavori = null or lotto.quadroEconomicoStandard.impLavori = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0024">
           <text></text>
@@ -265,13 +249,13 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "L" and (lotto.quadroEconomi
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P6_2_0009">
-        <description>REG35: Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG35: Importo Servizi: se l'oggetto del contratto è "services" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_P6_2_0025">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0026">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "S" and (lotto.quadroEconomicoStandard.impServizi = null or lotto.quadroEconomicoStandard.impServizi = 0)</text>
+satisfies lotto.datiBase.oggettoContratto.codice="services" and (lotto.quadroEconomicoStandard.impServizi = null or lotto.quadroEconomicoStandard.impServizi = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0027">
           <text></text>
@@ -281,13 +265,13 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "S" and (lotto.quadroEconomi
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P6_2_0010">
-        <description>REG36: Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG36: Importo Forniture: se l'oggetto del contratto è "supplies" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_P6_2_0028">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0029">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "F" and (lotto.quadroEconomicoStandard.impForniture = null or lotto.quadroEconomicoStandard.impForniture = 0)</text>
+satisfies lotto.datiBase.oggettoContratto.codice="supplies" and (lotto.quadroEconomicoStandard.impForniture = null or lotto.quadroEconomicoStandard.impForniture = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0030">
           <text></text>

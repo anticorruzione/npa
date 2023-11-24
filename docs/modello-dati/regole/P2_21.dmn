@@ -149,7 +149,7 @@ satisfies lotto.condizioniNegoziata != null</text>
       <rule id="DecisionRule_P2_21_0020">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_P2_21_0061">
-          <text>appalto.motivoUrgenza.codice = "2" and appalto.linkDocumenti = null</text>
+          <text>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0062">
           <text></text>
@@ -164,7 +164,7 @@ satisfies lotto.condizioniNegoziata != null</text>
       <rule id="DecisionRule_P2_21_0006">
         <description>REG8: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_P2_21_0016">
-          <text>starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
+          <text>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0017">
           <text></text>
@@ -183,7 +183,7 @@ satisfies lotto.condizioniNegoziata != null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0047">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.servizioPubblicoLocale = null</text>
+satisfies lotto.datiBase.oggettoContratto.codice = "services" and lotto.servizioPubblicoLocale = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0048">
           <text></text>
@@ -281,7 +281,7 @@ and count(lotto.ipotesiCollegamento.cigCollegato) &lt;2</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0071">
           <text>some lotto in lotti
-satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
+satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0072">
           <text></text>
@@ -292,15 +292,15 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
       </rule>
       <rule id="DecisionRule_P2_21_0024">
         <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
-- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Servizi’ o ‘Forniture’
-- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Lavori” e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
-E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto principale del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
+- lotti.acquisizionecup=’N’ e oggettoContratto="services" o ‘supplies’
+- lotti.acquisizionecup=’N’ e oggettoContratto="works" e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
         <inputEntry id="UnaryTests_P2_21_0073">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0074">
           <text>some lotto in lotti
-satisfies lotto.acquisizioneCup=false and lotto.oggettoPrincipaleContratto.codice="L" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
+satisfies lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0075">
           <text></text>
@@ -343,13 +343,13 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale 
       </rule>
       <rule id="DecisionRule_P2_21_0027">
         <description>REG23: Previsione di una quota
-inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI QUOTA INFERIORE' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</description>
+inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI_QUOTA_INFERIORE' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</description>
         <inputEntry id="UnaryTests_P2_21_0082">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0083">
           <text>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI QUOTA INFERIORE" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= "0" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile="0"</text>
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI_QUOTA_INFERIORE" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= "0" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile="0"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0084">
           <text></text>
@@ -376,13 +376,13 @@ satisfies lotto.paritaDiGenereGenerazionale != null and number(lotto.paritaDiGen
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_21_0029">
-        <description>REG27: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI QUOTA INFERIORE' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</description>
+        <description>REG27: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI_QUOTA_INFERIORE' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</description>
         <inputEntry id="UnaryTests_P2_21_0088">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0089">
           <text>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI QUOTA INFERIORE" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</text>
+satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI_QUOTA_INFERIORE" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0090">
           <text></text>
@@ -408,35 +408,19 @@ satisfies lotto.paritaDiGenereGenerazionale != null and lotto.afferenteInvestime
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_21_0031">
-        <description>REG29: Modalità Acquisizione: il campo è obbligatorio se l'oggetto principale del contratto è 'Servizi' o 'Forniture'.</description>
+        <description>REG29: Modalità Acquisizione: il campo è obbligatorio se l'oggetto del contratto è 'Servizi' o 'Forniture'.</description>
         <inputEntry id="UnaryTests_P2_21_0094">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0095">
           <text>some lotto in lotti
-satisfies (lotto.oggettoPrincipaleContratto.codice = "S" or lotto.oggettoPrincipaleContratto.codice = "F") and lotto.modalitaAcquisizione = null</text>
+satisfies (lotto.datiBase.oggettoContratto.codice = "services" or lotto.datiBase.oggettoContratto.codice = "supplies") and (lotto.modalitaAcquisizione = null or lotto.modalitaAcquisizione = "" or lotto.modalitaAcquisizione.codice = null or lotto.modalitaAcquisizione.codice = "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0096">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P2_21_0032">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG29\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P2_21_0014">
-        <description>REG31: Oggetto Principale del Contratto: deve essere calcolato dal campo oggetto contratto del ted. Altrimenti deve essere inserito esplicitamente. È obbligatorio.</description>
-        <inputEntry id="UnaryTests_P2_21_0043">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P2_21_0044">
-          <text>some lotto in lotti
-satisfies lotto.datiBase.oggettoContratto.codice = "combined" and lotto.oggettoPrincipaleContratto = null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P2_21_0045">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P2_21_0015">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG31\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_21_0033">
@@ -462,7 +446,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.access
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0104">
           <text>some lotto in lotti
-satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and lotto.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies lotto.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (lotto.datiBaseAccessibilita.giustificazione = null or lotto.datiBaseAccessibilita.giustificazione="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0105">
           <text></text>
@@ -472,13 +456,13 @@ satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satis
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_21_0008">
-        <description>REG34: Importo Lavori: se l'oggetto principale del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG34: Importo Lavori: se l'oggetto del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_P2_21_0022">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0023">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.quadroEconomicoStandard.impLavori = null or number(lotto.quadroEconomicoStandard.impLavori) = 0</text>
+satisfies lotto.datiBase.oggettoContratto.codice = "works" and lotto.quadroEconomicoStandard.impLavori = null or number(lotto.quadroEconomicoStandard.impLavori) = 0</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0024">
           <text></text>
@@ -488,13 +472,13 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "L" and lotto.quadroEconomic
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_21_0009">
-        <description>REG35: Importo Servizi: se l'oggetto principale del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG35: Importo Servizi: se l'oggetto del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_P2_21_0025">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0026">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.quadroEconomicoStandard.impServizi = null or number(lotto.quadroEconomicoStandard.impServizi) = 0</text>
+satisfies lotto.datiBase.oggettoContratto.codice = "services" and lotto.quadroEconomicoStandard.impServizi = null or number(lotto.quadroEconomicoStandard.impServizi) = 0</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0027">
           <text></text>
@@ -504,13 +488,13 @@ satisfies lotto.oggettoPrincipaleContratto.codice = "S" and lotto.quadroEconomic
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_21_0010">
-        <description>REG36: Importo Forniture: se l'oggetto principale del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
+        <description>REG36: Importo Forniture: se l'oggetto del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</description>
         <inputEntry id="UnaryTests_P2_21_0028">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0029">
           <text>some lotto in lotti
-satisfies lotto.oggettoPrincipaleContratto.codice = "F" and lotto.quadroEconomicoStandard.impForniture = null or number(lotto.quadroEconomicoStandard.impForniture) = 0</text>
+satisfies lotto.datiBase.oggettoContratto.codice = "supplies" and lotto.quadroEconomicoStandard.impForniture = null or number(lotto.quadroEconomicoStandard.impForniture) = 0</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_21_0030">
           <text></text>

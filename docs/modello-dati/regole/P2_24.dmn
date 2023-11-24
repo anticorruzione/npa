@@ -76,7 +76,7 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
         </inputEntry>
         <inputEntry id="UnaryTests_P2_24_0071">
           <text>some lotto in lotti
-satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
+satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_24_0072">
           <text></text>
@@ -87,15 +87,15 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.acquisizioneCup=false</text>
       </rule>
       <rule id="DecisionRule_P2_24_0024">
         <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
-- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Servizi’ o ‘Forniture’
-- lotti.acquisizionecup=’N’ e oggettoprincipaledelcontratto=’Lavori” e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
-E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto principale del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
+- lotti.acquisizionecup=’N’ e oggettoContratto="services" o ‘supplies’
+- lotti.acquisizionecup=’N’ e oggettoContratto="works" e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
         <inputEntry id="UnaryTests_P2_24_0073">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_24_0074">
           <text>some lotto in lotti
-satisfies lotto.acquisizioneCup=false and lotto.oggettoPrincipaleContratto.codice="L" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
+satisfies lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_24_0075">
           <text></text>
@@ -127,7 +127,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.access
         </inputEntry>
         <inputEntry id="UnaryTests_P2_24_0104">
           <text>some lotto in lotti
-satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and lotto.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies lotto.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (lotto.datiBaseAccessibilita.giustificazione = null or lotto.datiBaseAccessibilita.giustificazione="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_24_0105">
           <text></text>

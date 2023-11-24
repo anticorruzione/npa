@@ -18,7 +18,7 @@
           <text>soggettiInteressati = null</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1f0gjxc">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"ERR41\"}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG0\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

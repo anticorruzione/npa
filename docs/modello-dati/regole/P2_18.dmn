@@ -35,7 +35,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_P2_18_0104">
           <text>some lotto in lotti
-satisfies (some accessibilita in lotto.datiBaseAccessibilita.accessibilita satisfies accessibilita.codice = "n-inc-just" and lotto.datiBaseAccessibilita.giustificazione = null)</text>
+satisfies lotto.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (lotto.datiBaseAccessibilita.giustificazione = null or lotto.datiBaseAccessibilita.giustificazione="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P2_18_0035">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG33\"}"</text>
