@@ -7,7 +7,7 @@ components:
     AggiudicazioneAD3Type:
       type: object
       additionalProperties: false
-      required: [lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase,datiBaseAggiudicazioneAppalto]
+      required: [lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase,datiBaseAggiudicazioneAppalto,quadroEconomicoStandard]
       properties:  
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED

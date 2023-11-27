@@ -1019,7 +1019,7 @@ components:
       allOf: # estende la classe LottoBaseType
         - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl]
+      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         prestazioniComprese:
@@ -1068,7 +1068,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl]
+      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         prestazioniComprese:
@@ -1114,7 +1114,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl]
+      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1161,7 +1161,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl]
+      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1330,7 +1330,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl]
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         prestazioniComprese:
@@ -1386,7 +1386,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl]
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         prestazioniComprese:
@@ -1520,7 +1520,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [modalitaAcquisizione,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl]
+      required: [modalitaAcquisizione,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1567,7 +1567,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [modalitaAcquisizione,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl]
+      required: [modalitaAcquisizione,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -2318,7 +2318,7 @@ components:
     AggiudicazioneAD1_25Type:
       description: Oggetto che riporta i dati di aggiudicazione per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,ccnl,categoria,codIstat]
+      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2390,7 +2390,7 @@ components:
     AggiudicazioneAD1_26Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat]
+      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2515,7 +2515,7 @@ components:
     AggiudicazioneAD1_28Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,categoria,ccnl,codIstat]
+      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,categoria,ccnl,codIstat,quadroEconomicoStandard]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
