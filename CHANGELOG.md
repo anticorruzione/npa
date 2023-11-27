@@ -398,7 +398,8 @@ ref. /docs/specifiche-jws/
 * Nella sezione Standard adottati del file README.md è stata aggiornata la versione sdk dell'eForms da adottare (1.9.0).
 </details>
 
-# Note di rilascio del 24/11/2023
+<details>
+<summary><h1> Note di rilascio del 24/11/2023</h1></summary>
 
 ## Modello Dati 
 * modello-dati-npa.yaml:
@@ -470,3 +471,21 @@ ref. /docs/specifiche-jws/
 
 ## Orchestratore
 * Aggiornato il file schema-cronologia-schede.xlsx
+</details>
+
+# Note di rilascio del 27/11/2023
+
+## Modello Dati 
+
+    
+### Regole
+* AD5.dmn:
+	* eliminata la regola REG53 perché il modello dati non richiede il ruoloOE.
+* AD4.dmn:
+	* eliminate le regole REG34, REG35, REG36 perché non valide per questa scheda.
+
+### Schede
+* modello-dati-schede-A2_29.yaml, modello-dati-schede-A2_30.yaml, modello-dati-schede-A2_31.yaml:
+	* modificata la reference dell'oggetto datiBaseProcedura
+* modello-dati-schede-P1.10.yaml,modello-dati-schede-P1.11.yaml,modello-dati-schede-P1.12.yaml,modello-dati-schede-P1.13.yaml,modello-dati-schede-P1.16.yaml,modello-dati-schede-P1.17.yaml,modello-dati-schede-P1.20.yaml,modello-dati-schede-P1.21.yaml,modello-dati-schede-P2.10.yaml,modello-dati-schede-P2.11.yaml,modello-dati-schede-P2.12.yaml,modello-dati-schede-P2.13.yaml,modello-dati-schede-P2.16.yaml,modello-dati-schede-P2.17.yaml,modello-dati-schede-P2.20.yaml,modello-dati-schede-P2.21.yaml,modello-dati-schede-P3.1.yaml,modello-dati-schede-P3.3.yaml,modello-dati-schede-P3.4.yaml,modello-dati-schede-AD3.yaml,modello-dati-schede-AD1.25.yaml,modello-dati-schede-AD1.26.yaml,modello-dati-schede-AD1.28.yaml,modello-dati-schede-AD2.25.yaml,modello-dati-schede-AD2.26.yaml,modello-dati-schede-AD2.28.yaml
+	* reso obbligatorio l'attributo quadroEconomicoStandard
