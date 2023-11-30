@@ -1,0 +1,129 @@
+{
+  "idAppalto": "4f8f5660-87e8-4dbb-b325-17e216f4a519", 
+  "scheda": {
+    "codice": {
+      "idTipologica": "codiceScheda",
+      "codice": "S2"
+    },
+    "versione": "1.0",
+    "body": {
+      "anacForm": {
+		 "elencoSoggetti": [{
+			"cig": "K00003EC3A",
+			"invitatiCheNonHannoPresentatoOfferta": [
+			  {
+				"codiceFiscale": "111111111112",
+				"denominazione": "denominazione",
+				"ruoloOE": {
+					"idTipologica": "ruoloOE",
+					"codice": "1"
+					},
+				"tipoOE": {
+				  "idTipologica": "tipoOE",
+				  "codice": "1"
+				}
+			  }        
+			],
+			"partecipanti": [
+			  {
+				"codiceFiscale": "11111111113",
+				"denominazione": "denominazione",
+				"ruoloOE": {
+					"idTipologica": "ruoloOE",
+					"codice": "1"
+					},
+				"tipoOE": {
+				  "idTipologica": "tipoOE",
+				  "codice": "1"
+				},
+				"idPartecipante": "b62390a8-70f1-4740-adb3-6a416150b777",
+				"paeseOperatoreEconomico": "paese",
+				"avvalimento" : false,
+				"tipologiaAvvalimento":{
+					"idTipologica": "tipologiaAvvalimento",
+					"codice": "1"
+					}, 
+				"impreseAusiliarie": [
+				  {
+				  "codiceFiscale": "11111111114",
+				  "denominazione" : "denominazione"
+				  }
+				]
+			  }
+			],
+			"dataScadenzaPresentazioneOfferta": "2024-07-21T17:32:28Z"
+		},
+		{
+			"cig": "L00003DC3A",
+			"invitatiCheNonHannoPresentatoOfferta": [
+			  {
+				"codiceFiscale": "11111111116",
+				"denominazione": "denominazione",
+				"ruoloOE": {
+					"idTipologica": "ruoloOE",
+					"codice": "1"
+					},
+				"tipoOE": {
+				  "idTipologica": "tipoOE",
+				  "codice": "1"
+				}
+			  }        
+			],
+			"partecipanti": [
+			  {
+				"codiceFiscale": "11111111117",
+				"denominazione": "denominazione",
+				"ruoloOE": {
+					"idTipologica": "ruoloOE",
+					"codice": "1"
+					},
+				"tipoOE": {
+				  "idTipologica": "tipoOE",
+				  "codice": "1"
+				},
+				"idPartecipante": "b62390a8-70f1-4740-adb3-6a416150b666",
+				"paeseOperatoreEconomico": "paese",
+				"avvalimento" : false,
+				"tipologiaAvvalimento":{
+					"idTipologica": "tipologiaAvvalimento",
+					"codice": "1"
+					}, 
+				"impreseAusiliarie": [
+				  {
+				  "codiceFiscale": "11111111118",
+				  "denominazione" : "denominazione"
+				  }
+				]
+			  },
+			  {
+				"codiceFiscale": "11111111119",
+				"denominazione": "denominazione",
+				"ruoloOE": {
+					"idTipologica": "ruoloOE",
+					"codice": "1"
+					},
+				"tipoOE": {
+				  "idTipologica": "tipoOE",
+				  "codice": "1"
+				},
+				"idPartecipante": "b62390a8-70f1-4740-adb3-6a416150b666",
+				"paeseOperatoreEconomico": "paese",
+				"avvalimento" : false,
+				"tipologiaAvvalimento":{
+					"idTipologica": "tipologiaAvvalimento",
+					"codice": "1"
+					}, 
+				"impreseAusiliarie": [
+				  {
+				  "codiceFiscale": "11111111110",
+				  "denominazione" : "denominazione"
+				  }
+				]
+			  }			  
+			],
+			"dataScadenzaPresentazioneOfferta": "2024-07-21T17:32:28Z"
+		}] 
+      }
+    }
+  }
+}
