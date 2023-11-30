@@ -473,7 +473,8 @@ ref. /docs/specifiche-jws/
 * Aggiornato il file schema-cronologia-schede.xlsx
 </details>
 
-# Note di rilascio del 27/11/2023
+<details>
+<summary><h1> Note di rilascio del 27/11/2023</h1></summary>
 
 ## Modello Dati 
 
@@ -489,3 +490,12 @@ ref. /docs/specifiche-jws/
 	* modificata la reference dell'oggetto datiBaseProcedura
 * modello-dati-schede-P1.10.yaml,modello-dati-schede-P1.11.yaml,modello-dati-schede-P1.12.yaml,modello-dati-schede-P1.13.yaml,modello-dati-schede-P1.16.yaml,modello-dati-schede-P1.17.yaml,modello-dati-schede-P1.20.yaml,modello-dati-schede-P1.21.yaml,modello-dati-schede-P2.10.yaml,modello-dati-schede-P2.11.yaml,modello-dati-schede-P2.12.yaml,modello-dati-schede-P2.13.yaml,modello-dati-schede-P2.16.yaml,modello-dati-schede-P2.17.yaml,modello-dati-schede-P2.20.yaml,modello-dati-schede-P2.21.yaml,modello-dati-schede-P3.1.yaml,modello-dati-schede-P3.3.yaml,modello-dati-schede-P3.4.yaml,modello-dati-schede-AD3.yaml,modello-dati-schede-AD1.25.yaml,modello-dati-schede-AD1.26.yaml,modello-dati-schede-AD1.28.yaml,modello-dati-schede-AD2.25.yaml,modello-dati-schede-AD2.26.yaml,modello-dati-schede-AD2.28.yaml
 	* reso obbligatorio l'attributo quadroEconomicoStandard
+</details>
+
+# Note di rilascio del 30/11/2023
+
+## Scenari di esempio 
+* Aggiunta la cartella [scenari-di-esempio](docs/scenari-di-esempio) che riporta la sequenza di operazioni da eseguire per ottenere l'aggiudicazione di un appalto nel settore ordinario sopra soglia
+  
+## Documentazione
+* Nel file README.md è stato aggiunto il riferimento alla nuova sezione Scenari di esempio
