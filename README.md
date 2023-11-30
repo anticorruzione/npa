@@ -117,6 +117,9 @@ Nella tabella seguente sono disciplinati i tempi massimi e minimi per l'adozione
 ## Domande, chiarimenti e ulteriori infomazioni
 Il canale di comunicazione con ANAC è rappresentato dall'apposita sezione [Issues](https://github.com/anticorruzione/npa/issues) nella quale sarà possibile inserire una richiesta.
 
+## Scenari di esempio
+La cartella [scenari-di-esempio](docs/scenari-di-esempio) contiene una sequenza di operazioni da eseguire per ottenere l'aggiudicazione di un appalto
+
 ## Disclaimer
 L’Autorità Nazionale Anticorruzione si riserva la facoltà di non fornire risposta puntuale a tutte le issues ricevute ed è sollevata da eventuali responsabilità dovuta:
 - alla mancanza di risposta per richieste pervenute al di fuori dell'unico canale di comunicazione con ANAC rappresentato dalla sezione [Issues](https://github.com/anticorruzione/npa/issues)
