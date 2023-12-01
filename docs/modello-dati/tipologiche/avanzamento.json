@@ -3,7 +3,7 @@
     "descrizione": {
 		"it": "Puntuale",
 		"en": "Puntuale"
-		},
+	        "de": "Pünktlich"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -12,7 +12,7 @@
     "descrizione": {
 		"it": "Anticipo",
 		"en": "Anticipo"
-		},
+	        "de": "Vorzeitig"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -21,7 +21,7 @@
     "descrizione": {
 		"it": "Ritardo",
 		"en": "Ritardo"
-		},
+	        "de": "Verspätung"	},
     "dataInizio":null,
     "dataFine":null
 }]
