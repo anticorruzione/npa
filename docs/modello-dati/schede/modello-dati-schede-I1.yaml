@@ -10,7 +10,7 @@ components:
       additionalProperties: false
       required: [consegnaSottoRiserva,dataEffettivoInizio,dataFinePrevista]
       properties:
-        dataDisposizioneInzio:
+        dataDisposizioneInizio:
           description: Data disposizione dell’inizio della prog. Esecutiva
           type: string
           format: date-time
