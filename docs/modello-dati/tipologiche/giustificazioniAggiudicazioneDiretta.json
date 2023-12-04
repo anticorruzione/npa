@@ -92,7 +92,7 @@
     "codice":"defse-excl",
     "descrizione": {
 		"it": "Esclusioni specifiche nei settori della difesa e della sicurezza",
-		"en": "Defence-specific and security-specific exclusions"
+		"en": "Defence-specific and security-specific exclusions",
 		"de": "Ausnahmen bei Aufträgen, die Verteidigungs- und Sicherheitsaspekte beinhalten"
 		},
     "dataInizio":null,
@@ -172,7 +172,7 @@
     "codice":"in-house",
     "descrizione": {
 		"it": "Appalto pubblico tra enti nell'ambito del settore pubblico (appalto «in-house»), appalti aggiudicati a imprese collegate o appalti aggiudicati a una joint-venture o nell'ambito di una joint-venture",
-		"en": "Public contract between organisations within the public sector ('in-house'), contracts awarded to affiliated undertakings, or contracts awarded to a joint venture or within a joint venture"
+		"en": "Public contract between organisations within the public sector ('in-house'), contracts awarded to affiliated undertakings, or contracts awarded to a joint venture or within a joint venture",
 		"de": "Öffentliche Aufträge zwischen Einrichtungen des öffentlichen Sektors („intern“), Auftragsvergabe an verbundene Unternehmen oder Auftragsvergabe an ein Gemeinschaftsunternehmen oder innerhalb eines Gemeinschaftsunternehmens"
 		},
     "dataInizio":null,
