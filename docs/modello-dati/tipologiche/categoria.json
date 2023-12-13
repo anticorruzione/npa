@@ -3,7 +3,7 @@
     "descrizione": {
 		"it": "OO.CC. - Categoria non definita",
 		"en": "OO.CC. - Categoria non definita"
-		},
+	        "de": "OO.CC. - Nicht definierte Kategorie"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -12,7 +12,8 @@
     "descrizione": {
 		"it": "ALTRO (Stazioni appaltanti con sistema di qualificazione proprio)",
 		"en": "ALTRO (Stazioni appaltanti con sistema di qualificazione proprio)"
-		},
+		"de": "ANDERES (Vergabestellen mit eigenem Qualifizierungssystem)"
+	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -21,7 +22,7 @@
     "descrizione": {
 		"it": "FORNITURA DI BENI",
 		"en": "FORNITURA DI BENI"
-		},
+		"de": "LIEFERUNGEN VON GÜTERN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -30,7 +31,7 @@
     "descrizione": {
 		"it": "FORNITURA DI SERVIZI",
 		"en": "FORNITURA DI SERVIZI"
-		},
+	        "de": "LIEFERUNGEN VON DIENSTLEISUNGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -39,7 +40,7 @@
     "descrizione": {
 		"it": "OG 1 - EDIFICI CIVILI E INDUSTRIALI ",
 		"en": "OG 1 - EDIFICI CIVILI E INDUSTRIALI "
-		},
+		"de": "OG 1 - ZIVIL- UND INDUSTRIEBAUTEN "	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -48,7 +49,7 @@
     "descrizione": {
 		"it": "OG 10 - IMPIANTI PER LA TRASFORMAZIONE ALTA/MEDIA TENSIONE E PER LA DISTRIBUZIONE DI ENERGIA ELETTRICA IN CORRENTE ALTERNATA E CONTINUA ED IMPIANTI DI PUBBLICA ILLUMINAZIONE",
 		"en": "OG 10 - IMPIANTI PER LA TRASFORMAZIONE ALTA/MEDIA TENSIONE E PER LA DISTRIBUZIONE DI ENERGIA ELETTRICA IN CORRENTE ALTERNATA E CONTINUA ED IMPIANTI DI PUBBLICA ILLUMINAZIONE"
-		},
+		"de": "OG 10 - TRANSFORMATORENANALAGEN FÜR HOCH-UND MITTELSPANNUNG UND ANALGEN FÜR DIE VERTEILUNG VON GLEICH-UND WECHSELSTROM"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -57,7 +58,7 @@
     "descrizione": {
 		"it": "OG 11 - IMPIANTI TECNOLOGICI",
 		"en": "OG 11 - IMPIANTI TECNOLOGICI"
-		},
+		"de": "OG 11 - TECHNISCHE ANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -66,7 +67,7 @@
     "descrizione": {
 		"it": "OG 12 - OPERE ED IMPIANTI DI BONIFICA E PROTEZIONE AMBIENTALE",
 		"en": "OG 12 - OPERE ED IMPIANTI DI BONIFICA E PROTEZIONE AMBIENTALE"
-		},
+		"de": "OG 12 - BONIFIZIERUNGSANLAGEN UND UMWELTSCHUTZMASSNAHMEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -75,7 +76,7 @@
     "descrizione": {
 		"it": "OG 13 - OPERE DI INGEGNERIA NATURALISTICA",
 		"en": "OG 13 - OPERE DI INGEGNERIA NATURALISTICA"
-		},
+		"de": "OG 13 - INGENIEURBIOLOGISCHE MASSNAHMEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -84,7 +85,7 @@
     "descrizione": {
 		"it": "OG 2 - RESTAURO E MANUTENZIONE DEI BENI IMMOBILI SOTTOPOSTI A TUTELA",
 		"en": "OG 2 - RESTAURO E MANUTENZIONE DEI BENI IMMOBILI SOTTOPOSTI A TUTELA"
-		},
+		"de": "OG 2 - RESTAURIERUNG UND INSTANDHALTUNG VON DENKMALGESCHÜTZTEN LIEGENSCHAFTEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -93,7 +94,7 @@
     "descrizione": {
 		"it": "OG 3 - STRADE, AUTOSTRADE, PONTI, VIADOTTI, FERROVIE, METROPOLITANE",
 		"en": "OG 3 - STRADE, AUTOSTRADE, PONTI, VIADOTTI, FERROVIE, METROPOLITANE"
-		},
+		"de": "OG 3 - STRASSEN, AUTOBAHNEN, BRÜCKEN, VIADUKTE, EISENBAHNEN, U-BAHNEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -102,7 +103,7 @@
     "descrizione": {
 		"it": "OG 4 - OPERE D’ARTE NEL SOTTOSUOLO",
 		"en": "OG 4 - OPERE D’ARTE NEL SOTTOSUOLO"
-		},
+		"de": "OG 4 - KUNSTBAUTEN UNTER ERDE"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -111,7 +112,7 @@
     "descrizione": {
 		"it": "OG 5 - DIGHE",
 		"en": "OG 5 - DIGHE"
-		},
+		"de": "OG 5 - DÄMME"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -120,7 +121,7 @@
     "descrizione": {
 		"it": "OG 6 - ACQUEDOTTI, GASDOTTI , OLEODOTTI, OPERE DI IRRIGAZIONE E DI EVACUAZIONE",
 		"en": "OG 6 - ACQUEDOTTI, GASDOTTI , OLEODOTTI, OPERE DI IRRIGAZIONE E DI EVACUAZIONE"
-		},
+		"de": "OG 6 - WASSER-, GAS- UND ÖLLEITUNGEN, BEWÄSSERUNGSANLAGEN UND ABFLUSSLEITUNGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -129,7 +130,7 @@
     "descrizione": {
 		"it": "OG 7 - OPERE MARITTIME E LAVORI DI DRAGAGGIO",
 		"en": "OG 7 - OPERE MARITTIME E LAVORI DI DRAGAGGIO"
-		},
+		"de": "OG 7 - SEEBAUTEN UND NASSBAGGERUNGSARBEITEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -138,7 +139,7 @@
     "descrizione": {
 		"it": "OG 8 - OPERE FLUVIALI, DI DIFESA, DI SISTEMAZIONE IDRAULICA E DI BONIFICA",
 		"en": "OG 8 - OPERE FLUVIALI, DI DIFESA, DI SISTEMAZIONE IDRAULICA E DI BONIFICA"
-		},
+		"de": "OG 8 - FLUSS- UND SCHUTZBAUTEN, WILDBACHVERBAUUNGS- UND BONIFIZIERUNGSARBEITEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -147,7 +148,7 @@
     "descrizione": {
 		"it": "OG 9 - IMPIANTI PER LA PRODUZIONE DI ENERGIA ELETTRICA",
 		"en": "OG 9 - IMPIANTI PER LA PRODUZIONE DI ENERGIA ELETTRICA"
-		},
+		"de": "OG 9 - ANLAGEN FÜR DIE STROMERZEUGUNG"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -156,7 +157,7 @@
     "descrizione": {
 		"it": "OG1 - Edifici civili e industriali",
 		"en": "OG1 - Edifici civili e industriali"
-		},
+		"de": "OG1 - Zivil- und Industriebauten"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -165,7 +166,7 @@
     "descrizione": {
 		"it": "OG10 - Impianti per la trasformazione alta/media tensione e per la distribuzione di energia elettrica in corrente alternata e continua",
 		"en": "OG10 - Impianti per la trasformazione alta/media tensione e per la distribuzione di energia elettrica in corrente alternata e continua"
-		},
+		"de": "OG10 - Transformatoranlagen für Hoch- und Mittelspannung und Anlagen für die Verteilung von Gleich- und Wechselstrom"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -174,7 +175,8 @@
     "descrizione": {
 		"it": "OG11 - Impianti tecnologici",
 		"en": "OG11 - Impianti tecnologici"
-		},
+		"de": "OG11 - Technische Anlagen"	
+	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -183,7 +185,7 @@
     "descrizione": {
 		"it": "OG12 - Opere ed impianti di bonifica e protezione ambientale",
 		"en": "OG12 - Opere ed impianti di bonifica e protezione ambientale"
-		},
+		"de": "OG12 - Bonifizierungsanlagen und Umweltschutzmaßnahmen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -192,7 +194,8 @@
     "descrizione": {
 		"it": "OG13 - Opere di ingegneria naturalistica",
 		"en": "OG13 - Opere di ingegneria naturalistica"
-		},
+		"de": "OG13 - Ingenieurbiologische Maßnahmen
+"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -201,7 +204,7 @@
     "descrizione": {
 		"it": "OG2 - Restauro e manutenzione dei beni immobili sottoposti a tutela ai sensi delle disposizioni in materia di beni culturali e ambientali",
 		"en": "OG2 - Restauro e manutenzione dei beni immobili sottoposti a tutela ai sensi delle disposizioni in materia di beni culturali e ambientali"
-		},
+		"de": "OG2 - Restaurierung und Instandhaltung von denkmalgeschützten Liegenschaften"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -210,7 +213,7 @@
     "descrizione": {
 		"it": "OG3 - Strade, autostrade, ponti, viadotti, ferrovie, metropolitane, funicolari, piste aeroportuali e relative opere complementari",
 		"en": "OG3 - Strade, autostrade, ponti, viadotti, ferrovie, metropolitane, funicolari, piste aeroportuali e relative opere complementari"
-		},
+		"de": "OG3 - Straßen, Autobahnen, Brücken, Viadukte, Eisenbahnen, U-Bahnen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -219,7 +222,7 @@
     "descrizione": {
 		"it": "OG4 - Opere d'arte nel sottosuolo",
 		"en": "OG4 - Opere d'arte nel sottosuolo"
-		},
+		"de": "OG4 - Kunstbauten unter Erde"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -228,7 +231,7 @@
     "descrizione": {
 		"it": "OG5 - Dighe",
 		"en": "OG5 - Dighe"
-		},
+		"de": "OG5 - Dämme"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -237,7 +240,7 @@
     "descrizione": {
 		"it": "OG6 - Acquedotti, gasdotti, oleodotti, opere di irrigazione e di evacuazione",
 		"en": "OG6 - Acquedotti, gasdotti, oleodotti, opere di irrigazione e di evacuazione"
-		},
+		"de": "OG6 - Wasser-, Gas- und Ölleitungen, Bewässerungsanlagen und Abflussleitungen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -246,7 +249,7 @@
     "descrizione": {
 		"it": "OG7 - Opere marittime e lavori di dragaggio",
 		"en": "OG7 - Opere marittime e lavori di dragaggio"
-		},
+		"de": "OG7 - Seebauten und Nassbaggerungsarbeiten"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -255,7 +258,7 @@
     "descrizione": {
 		"it": "OG8 - Opere fluviali, di difesa, di sistemazione idraulica e di bonifica",
 		"en": "OG8 - Opere fluviali, di difesa, di sistemazione idraulica e di bonifica"
-		},
+		"de": "OG8 - Fluss- und Schutzbauten, Wildbachverbauungs- und Bonifizierungsarbeiten"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -264,7 +267,7 @@
     "descrizione": {
 		"it": "OG9 - Impianti per la produzione di energia elettrica",
 		"en": "OG9 - Impianti per la produzione di energia elettrica"
-		},
+		"de": "OG9 - Anlagen für die Stromerzeugung"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -273,7 +276,7 @@
     "descrizione": {
 		"it": "OS 1 - LAVORI IN TERRA ",
 		"en": "OS 1 - LAVORI IN TERRA "
-		},
+		"de": "OS 1 - ERDBEWEGUNGSARBEITEN "	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -282,7 +285,7 @@
     "descrizione": {
 		"it": "OS 10 - SEGNALETICA STRADALE NON LUMINOSA",
 		"en": "OS 10 - SEGNALETICA STRADALE NON LUMINOSA"
-		},
+		"de": "OS 10 - NICHT LEUCHTENDE VERKEHRSSCHILDER"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -291,7 +294,7 @@
     "descrizione": {
 		"it": "OS 11 - APPARECCHIATURE STRUTTURALI SPECIALI",
 		"en": "OS 11 - APPARECCHIATURE STRUTTURALI SPECIALI"
-		},
+		"de": "OS 11 - SPEZIALELEMENTE BEI TRAGKONSTRUKTIONEN"		},
     "dataInizio":null,
     "dataFine":null
 },
@@ -300,7 +303,7 @@
     "descrizione": {
 		"it": "OS 12-A - BARRIERE STRADALI DI SICUREZZA",
 		"en": "OS 12-A - BARRIERE STRADALI DI SICUREZZA"
-		},
+		"de": "OS 12-A - RÜCKHALTESYSTEME AN STRASSEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -309,7 +312,7 @@
     "descrizione": {
 		"it": "OS 12-B - BARRIERE PARAMASSI, FERMANEVE E SIMILI",
 		"en": "OS 12-B - BARRIERE PARAMASSI, FERMANEVE E SIMILI"
-		},
+		"de": "OS 12-B - STEINSCHLAG- UND LAWINENSCHUTZBAUTEN UND ÄHNLICHES"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -318,7 +321,7 @@
     "descrizione": {
 		"it": "OS 13 - STRUTTURE PREFABBRICATE IN CEMENTO ARMATO",
 		"en": "OS 13 - STRUTTURE PREFABBRICATE IN CEMENTO ARMATO"
-		},
+		"de": "OS 13 - SSTAHLBETONFERTIGTEILE FÜR TRAGWERKE"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -327,7 +330,7 @@
     "descrizione": {
 		"it": "OS 14 - IMPIANTI DI SMALTIMENTO E RECUPERO RIFIUTI",
 		"en": "OS 14 - IMPIANTI DI SMALTIMENTO E RECUPERO RIFIUTI"
-		},
+		"de": "OS 14 - IMÜLLENTSORGUNGS- UND ABFALLVERWERTUNGSANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -336,7 +339,7 @@
     "descrizione": {
 		"it": "OS 15 - PULIZIA DI ACQUE MARINE, LACUSTRI, FLUVIALI",
 		"en": "OS 15 - PULIZIA DI ACQUE MARINE, LACUSTRI, FLUVIALI"
-		},
+		"de": "OS 15 - PREINIGUNG DER MEER-, BINNENSEE- UND FLUSSGEWÄSSER"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -345,7 +348,7 @@
     "descrizione": {
 		"it": "OS 16 - IMPIANTI PER CENTRALI PRODUZIONE ENERGIA ELETTRICA",
 		"en": "OS 16 - IMPIANTI PER CENTRALI PRODUZIONE ENERGIA ELETTRICA"
-		},
+		"de": "OS 16 - ANLAGEN FÜR DIE STROMERZEUGUNG"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -354,7 +357,7 @@
     "descrizione": {
 		"it": "OS 17 - LINEE TELEFONICHE ED IMPIANTI DI TELEFONIA",
 		"en": "OS 17 - LINEE TELEFONICHE ED IMPIANTI DI TELEFONIA"
-		},
+		"de": "OS 17 - TELEFONLEITUNGEN UND HOCHFREQUENZ-FERNSPRECHANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -363,7 +366,7 @@
     "descrizione": {
 		"it": "OS 18-A - COMPONENTI STRUTTURALI IN ACCIAIO",
 		"en": "OS 18-A - COMPONENTI STRUTTURALI IN ACCIAIO"
-		},
+		"de": "OS 18-A - TRAGWERKSTEILE AUS STAHL"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -372,7 +375,7 @@
     "descrizione": {
 		"it": "OS 18-B - COMPONENTI PER FACCIATE CONTINUE",
 		"en": "OS 18-B - COMPONENTI PER FACCIATE CONTINUE"
-		},
+		"de": "OS 18-B - BESTANDTEILE FÜR DURCHGEHENDE FASSADEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -381,7 +384,7 @@
     "descrizione": {
 		"it": "OS 19 - IMPIANTI DI RETI DI TELECOMUNICAZIONE E DI TRASMISSIONI E TRATTAMENTO",
 		"en": "OS 19 - IMPIANTI DI RETI DI TELECOMUNICAZIONE E DI TRASMISSIONI E TRATTAMENTO"
-		},
+		"de": "OS 19 - DATENÜBERTRAGUNGS- UND FERNSPRECHNETZANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -390,7 +393,7 @@
     "descrizione": {
 		"it": "OS 20-A - RILEVAMENTI TOPOGRAFICI",
 		"en": "OS 20-A - RILEVAMENTI TOPOGRAFICI"
-		},
+		"de": "OS 20-A - TOPOGRAPHISCHE ERHEBUNGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
