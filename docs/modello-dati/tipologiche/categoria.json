@@ -408,7 +408,7 @@
     "descrizione": {
 		"it": "OS 21 - OPERE STRUTTURALI SPECIALI",
 		"en": "OS 21 - OPERE STRUTTURALI SPECIALI"
-		},
+		"de": "OS 21 - ARBEITEN FÜR SPEZIALTRAGWERKE"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -417,7 +417,7 @@
     "descrizione": {
 		"it": "OS 22 - IMPIANTI DI POTABILIZZAZIONE E DEPURAZIONE",
 		"en": "OS 22 - IMPIANTI DI POTABILIZZAZIONE E DEPURAZIONE"
-		},
+		"de": "OS 22 - ANLAGEN FÜR DIE WASSERAUFBEREITUNG UND ABWASSERREINIGUNG"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -426,7 +426,7 @@
     "descrizione": {
 		"it": "OS 23 - DEMOLIZIONE DI OPERE",
 		"en": "OS 23 - DEMOLIZIONE DI OPERE"
-		},
+		"de": "OS 23 - ABBRUCH VON BAUWERKEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -435,7 +435,7 @@
     "descrizione": {
 		"it": "OS 24 - VERDE E ARREDO URBANO",
 		"en": "OS 24 - VERDE E ARREDO URBANO"
-		},
+		"de": "OS 24 - ÖFFENTLICHE GRÜNANLAGEN UND DAZUGEHÖRIGE STÄDTEBAULICHE EINRICHTUNGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -444,7 +444,7 @@
     "descrizione": {
 		"it": "OS 25 - SCAVI ARCHEOLOGICI",
 		"en": "OS 25 - SCAVI ARCHEOLOGICI"
-		},
+		"de": "OS 25 - ARCHÄOLOGISCHE GRABUNGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -453,7 +453,7 @@
     "descrizione": {
 		"it": "OS 26 - PAVIMENTAZIONI E SOVRASTRUTTURE SPECIALI",
 		"en": "OS 26 - PAVIMENTAZIONI E SOVRASTRUTTURE SPECIALI"
-		},
+		"de": "OS 26 - SPEZIALBELÄGE UND OBERBAUTEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -462,7 +462,7 @@
     "descrizione": {
 		"it": "OS 27 - IMPIANTI PER LA TRAZIONE ELETTRICA",
 		"en": "OS 27 - IMPIANTI PER LA TRAZIONE ELETTRICA"
-		},
+		"de": "OS 27 - ANLAGEN FÜR DEN ELEKTRISCHEN ANTRIEB"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -471,7 +471,7 @@
     "descrizione": {
 		"it": "OS 28 - IMPIANTI TERMICI E DI CONDIZIONAMENTO",
 		"en": "OS 28 - IMPIANTI TERMICI E DI CONDIZIONAMENTO"
-		},
+		"de": "OS 28 - HEIZUNGS- UND KLIMAANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -480,7 +480,7 @@
     "descrizione": {
 		"it": "OS 29 - ARMAMENTO FERROVIARIO",
 		"en": "OS 29 - ARMAMENTO FERROVIARIO"
-		},
+		"de": "OS 29 - EISENBAHNOBERBAU"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -489,7 +489,7 @@
     "descrizione": {
 		"it": "OS 2-A - SUPERFICI DECORATE DI BENI IMMOBILI DEL PATRIMONIO CULTURALE E BENI CULTURALI MOBILI DI INTERESSE STORICO, ARTISTICO, ARCHEOLOGICO ED ETNOANTROPOLOGICO",
 		"en": "OS 2-A - SUPERFICI DECORATE DI BENI IMMOBILI DEL PATRIMONIO CULTURALE E BENI CULTURALI MOBILI DI INTERESSE STORICO, ARTISTICO, ARCHEOLOGICO ED ETNOANTROPOLOGICO"
-		},
+		"de": "OS 2-A - DEKORIERTE FLÄCHEN VON UNBEWEGLICHEN KULTURGÜTERN UND BEWEGLICHE KULTURGÜTER VON GESCHICHTLICHER, KÜNSTLERISCHER, ARCHÄOLOGISCHER UND VOLKSKUNDLICHER BEDEUTUNG"		},
     "dataInizio":null,
     "dataFine":null
 },
@@ -498,7 +498,7 @@
     "descrizione": {
 		"it": "OS 2-B - BENI CULTURALI MOBILI DI INTERESSE ARCHIVISTICO E LIBRARIO",
 		"en": "OS 2-B - BENI CULTURALI MOBILI DI INTERESSE ARCHIVISTICO E LIBRARIO"
-		},
+		"de": "OS 2-B - BEWEGLICHE KULTURGÜTER, DIE FÜR DAS ARCHIV- UND BUCHWESEN VON BEDEUTUNG SIND"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -507,7 +507,7 @@
     "descrizione": {
 		"it": "OS 3 - IMPIANTI IDRICO-SANITARIO, CUCINE, LAVANDERIE",
 		"en": "OS 3 - IMPIANTI IDRICO-SANITARIO, CUCINE, LAVANDERIE"
-		},
+		"de": "OS 3 - SANITÄR-, KÜCHEN- UND WASCHANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -516,7 +516,7 @@
     "descrizione": {
 		"it": "OS 30 - IMPIANTI INTERNI ELETTRICI, TELEFONICI, RADIOTELEFONICI E TELEVISIVI",
 		"en": "OS 30 - IMPIANTI INTERNI ELETTRICI, TELEFONICI, RADIOTELEFONICI E TELEVISIVI"
-		},
+		"de": "OS 30 - ELEKTRO-, TELEFON-, FUNKSPRECH- UND FERNSEHANLAGEN IM INNENBEREICH"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -525,7 +525,7 @@
     "descrizione": {
 		"it": "OS 31 - IMPIANTI PER LA MOBILITÀ SOSPESA",
 		"en": "OS 31 - IMPIANTI PER LA MOBILITÀ SOSPESA"
-		},
+		"de": "OS 31 - HEBE- UND FÖRDERANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -534,7 +534,7 @@
     "descrizione": {
 		"it": "OS 32 - STRUTTURE IN LEGNO",
 		"en": "OS 32 - STRUTTURE IN LEGNO"
-		},
+		"de": "OS 32 - HOLZKONSTRUKTIONEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -543,7 +543,7 @@
     "descrizione": {
 		"it": "OS 33 - COPERTURE SPECIALI",
 		"en": "OS 33 - COPERTURE SPECIALI"
-		},
+		"de": "OS 33 - SONDEREINDECKUNGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -552,7 +552,7 @@
     "descrizione": {
 		"it": "OS 34 - SISTEMI ANTIRUMORE PER INFRASTRUTTURE DI MOBILITÀ",
 		"en": "OS 34 - SISTEMI ANTIRUMORE PER INFRASTRUTTURE DI MOBILITÀ"
-		},
+		"de": "OS 34 - LÄRMSCHUTZEINRICHTUNGEN AN VERKEHRLICHEN INFRASTRUKTUREN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -561,7 +561,7 @@
     "descrizione": {
 		"it": "OS 35 - INTERVENTI A BASSO IMPATTO AMBIENTALE",
 		"en": "OS 35 - INTERVENTI A BASSO IMPATTO AMBIENTALE"
-		},
+		"de": "OS 35 - EINGRIFFE MIT GERINGER UMWELTBELASTUNG"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -570,7 +570,7 @@
     "descrizione": {
 		"it": "OS 4 - IMPIANTI ELETTROMECCANICI TRASPORTATORI",
 		"en": "OS 4 - IMPIANTI ELETTROMECCANICI TRASPORTATORI"
-		},
+		"de": "OS 4 - ELEKTROMECHANISCHE FÖRDERANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -579,7 +579,7 @@
     "descrizione": {
 		"it": "OS 5 - IMPIANTI PNEUMATICI E ANTINTRUSIONE",
 		"en": "OS 5 - IMPIANTI PNEUMATICI E ANTINTRUSIONE"
-		},
+		"de": "OS 5 - DRUCKLUFT- UND SICHERHEITSANLAGEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -588,7 +588,7 @@
     "descrizione": {
 		"it": "OS 6 - FINITURE DI OPERE GENERALI IN MATERIALI LIGNEI, PLASTICI, METALLICI E VETROSI",
 		"en": "OS 6 - FINITURE DI OPERE GENERALI IN MATERIALI LIGNEI, PLASTICI, METALLICI E VETROSI"
-		},
+		"de": "OS 6 - AUSBAUARBEITEN MIT HOLZ, KUNSTSTOFF, METALL UND GLAS"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -597,7 +597,7 @@
     "descrizione": {
 		"it": "OS 7 - FINITURE DI OPERE GENERALI DI NATURA EDILE E TECNICA",
 		"en": "OS 7 - FINITURE DI OPERE GENERALI DI NATURA EDILE E TECNICA"
-		},
+		"de": "OS 7 - AUSBAUARBEITEN MIT HOLZ, KUNSTSTOFF, METALL UND GLAS"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -606,7 +606,7 @@
     "descrizione": {
 		"it": "OS 8 - OPERE DI IMPERMEABILIZZAZIONE",
 		"en": "OS 8 - OPERE DI IMPERMEABILIZZAZIONE"
-		},
+		"de": "OS 8 - TECHNISCHE AUSBAUARBEITEN"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -615,7 +615,7 @@
     "descrizione": {
 		"it": "OS 9 - IMPIANTI PER LA SEGNALETICA LUMINOSA E LA SICUREZZA DEL TRAFFICO",
 		"en": "OS 9 - IMPIANTI PER LA SEGNALETICA LUMINOSA E LA SICUREZZA DEL TRAFFICO"
-		},
+		"de": "OS 9 - SIGNAL- UND AMPELANLAGEN FÜR DIE VERKEHRSSICHERHEIT"	},
     "dataInizio":null,
     "dataFine":null
 },
@@ -624,7 +624,7 @@
     "descrizione": {
 		"it": "OS1 - Lavori in terra",
 		"en": "OS1 - Lavori in terra"
-		},
+		"de": "OS1 - Erdbewegungsarbeiten"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -633,7 +633,7 @@
     "descrizione": {
 		"it": "OS10 - Segnaletica stradale non luminosa",
 		"en": "OS10 - Segnaletica stradale non luminosa"
-		},
+		"de": "OS10 - Nicht leuchtende Beschilderungen, Bodenmarkierungen für den Strassenverkehr "	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -642,7 +642,7 @@
     "descrizione": {
 		"it": "OS11 - Apparecchiature strutturali speciali",
 		"en": "OS11 - Apparecchiature strutturali speciali"
-		},
+		"de": "OS11 - Spezialelemente bei Tragkonstruktionen"		},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -651,7 +651,7 @@
     "descrizione": {
 		"it": "OS12 - Barriere e protezioni stradali",
 		"en": "OS12 - Barriere e protezioni stradali"
-		},
+		"de": "OS12 - Schutzbauten und Rückhaltesysteme an Straßen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -660,7 +660,7 @@
     "descrizione": {
 		"it": "OS13 - Strutture prefabbricate in cemento armato",
 		"en": "OS13 - Strutture prefabbricate in cemento armato"
-		},
+		"de": "OS13 - Stahlbetonfertigteile für Tragwerke"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -669,7 +669,7 @@
     "descrizione": {
 		"it": "OS14 - Impianti di smaltimento e recupero rifiuti",
 		"en": "OS14 - Impianti di smaltimento e recupero rifiuti"
-		},
+		"de": "OS14 - Müllentsorgungs- und Abfallverwertungsanlagen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -678,7 +678,7 @@
     "descrizione": {
 		"it": "OS15 - Pulizia di acque marine, lacustri, fluviali",
 		"en": "OS15 - Pulizia di acque marine, lacustri, fluviali"
-		},
+		"de": "OS15 - Reinigung der Meer-, Binnensee- und Flussgewässer	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -687,7 +687,7 @@
     "descrizione": {
 		"it": "OS16 - Impianti per centrali produzione energia elettrica",
 		"en": "OS16 - Impianti per centrali produzione energia elettrica"
-		},
+		"de": "OS16 - Anlagen für die Stromerzeugung"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -696,7 +696,7 @@
     "descrizione": {
 		"it": "OS17 - Linee telefoniche ed impianti di telefonia",
 		"en": "OS17 - Linee telefoniche ed impianti di telefonia"
-		},
+		"de": "OS17 - Telefonleitungen und Hochfrequenz-Fernsprechanlagen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -705,7 +705,7 @@
     "descrizione": {
 		"it": "OS18 - Componenti strutturali in acciaio o metallo",
 		"en": "OS18 - Componenti strutturali in acciaio o metallo"
-		},
+		"de": "OS18 - Tragwerksteile aus Stahl oder Metall"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -714,7 +714,7 @@
     "descrizione": {
 		"it": "OS19 - Impianti di reti di telecomunicazione e di trasmissione dati",
 		"en": "OS19 - Impianti di reti di telecomunicazione e di trasmissione dati"
-		},
+		"de": "OS19 - Datenübertragungs- und Fernsprechnetzanlagen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -723,7 +723,7 @@
     "descrizione": {
 		"it": "OS2 - Superfici decorate e beni mobili di interesse storico e artistico",
 		"en": "OS2 - Superfici decorate e beni mobili di interesse storico e artistico"
-		},
+		"de": "OS2 - Dekorierte Flächen und bewegliche Kulturgüter von geschichtlicher und künstlerischer Bedeutung"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -732,7 +732,7 @@
     "descrizione": {
 		"it": "OS20 - Rilevamenti topografici",
 		"en": "OS20 - Rilevamenti topografici"
-		},
+		"de: "OS20 - Topographische Erhebungen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -741,7 +741,7 @@
     "descrizione": {
 		"it": "OS21 - Opere strutturali speciali",
 		"en": "OS21 - Opere strutturali speciali"
-		},
+		"de": "OS21 - Arbeiten für Spezialtragwerke"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -750,7 +750,7 @@
     "descrizione": {
 		"it": "OS22 - Impianti di potabilizzazione e depurazione",
 		"en": "OS22 - Impianti di potabilizzazione e depurazione"
-		},
+		"de": "OS22 - Anlagen für die Wasseraufbereitung und Abwasserreinigung"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -759,7 +759,7 @@
     "descrizione": {
 		"it": "OS23 - Demolizione di opere",
 		"en": "OS23 - Demolizione di opere"
-		},
+		"de": "OS23 - Abbruch von Bauwerken"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -768,7 +768,7 @@
     "descrizione": {
 		"it": "OS24 - Verde e arredo urbano",
 		"en": "OS24 - Verde e arredo urbano"
-		},
+		"de": "OS24 - Öffentliche Grünanlagen und städtebauliche Einrichtungen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -777,7 +777,7 @@
     "descrizione": {
 		"it": "OS 29 - ARMAMENTO FERROVIARIO",
 		"en": "OS 29 - ARMAMENTO FERROVIARIO"
-		},
+		"de": "OS 29 - EISENBAHNOBERBAU"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -786,7 +786,7 @@
     "descrizione": {
 		"it": "OS25 - Scavi archeologici",
 		"en": "OS25 - Scavi archeologici"
-		},
+		"de": "OS25 - Archäologische Grabungen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -795,7 +795,7 @@
     "descrizione": {
 		"it": "OS26 - Pavimentazioni e sovrastrutture speciali",
 		"en": "OS26 - Pavimentazioni e sovrastrutture speciali"
-		},
+		"de": "OS26 - Spezialbeläge und Oberbauten"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -804,7 +804,7 @@
     "descrizione": {
 		"it": "OS27 - Impianti per la trazione elettrica",
 		"en": "OS27 - Impianti per la trazione elettrica"
-		},
+		"de": "OS27 - Anlagen für den elektrischen Antrieb"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -813,7 +813,7 @@
     "descrizione": {
 		"it": "OS28 - Impianti termici e di condizionamento",
 		"en": "OS28 - Impianti termici e di condizionamento"
-		},
+		"de": "OS28 - Heizungs- und Klimaanlagen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -822,7 +822,7 @@
     "descrizione": {
 		"it": "OS29 - Armamento ferroviario",
 		"en": "OS29 - Armamento ferroviario"
-		},
+		"de": "OS29 - Eisenbahnoberbau"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -831,7 +831,7 @@
     "descrizione": {
 		"it": "OS3 - Impianti idrico - sanitario, cucine, lavanderie",
 		"en": "OS3 - Impianti idrico - sanitario, cucine, lavanderie"
-		},
+		"de": "OS3 - Sanitär-, Küchen- und Waschanlagen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -840,7 +840,7 @@
     "descrizione": {
 		"it": "OS30 - Impianti interni elettrici, telefonici, radiotelefonici e televisivi",
 		"en": "OS30 - Impianti interni elettrici, telefonici, radiotelefonici e televisivi"
-		},
+		"de": "OS30 - Elektro-, Telefon-, Funksprech- und Fernsehanlagen im Innenbereich"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -849,7 +849,7 @@
     "descrizione": {
 		"it": "OS31 - Impianti per la mobilita' sospesa",
 		"en": "OS31 - Impianti per la mobilita' sospesa"
-		},
+		"de": "OS31 - Hebe- und Förderanlagen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -858,7 +858,7 @@
     "descrizione": {
 		"it": "OS32 - Strutture in legno",
 		"en": "OS32 - Strutture in legno"
-		},
+		"de": "OS32 - Holzkonstruktionen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -867,7 +867,7 @@
     "descrizione": {
 		"it": "OS33 - Coperture speciali",
 		"en": "OS33 - Coperture speciali"
-		},
+		"de": "OS33 - Sondereindeckungen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -876,7 +876,7 @@
     "descrizione": {
 		"it": "OS34 - Sistemi antirumore per infrastrutture di mobilita'",
 		"en": "OS34 - Sistemi antirumore per infrastrutture di mobilita'"
-		},
+		"de": "OS34 - Lärmschutzeinrichtungen an verkehrlichen Infrastrukturen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 },
@@ -885,7 +885,7 @@
     "descrizione": {
 		"it": "OS4 - Impianti elettromeccanici trasportatori",
 		"en": "OS4 - Impianti elettromeccanici trasportatori"
-		},
+		"de": "OS4 - elektromechanische Förderanlagen"	},
     "dataInizio":null,
     "dataFine":"2012-12-04T00:00:00Z"
 }]
