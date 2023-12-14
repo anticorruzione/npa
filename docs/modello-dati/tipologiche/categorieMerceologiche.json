@@ -2,7 +2,8 @@
     "codice":"1",
     "descrizione": {
 		"it": "Farmaci",
-		"en": "Farmaci"
+		"en": "Farmaci",
+	    	"de": "Arzneimittel"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -11,7 +12,8 @@
     "codice":"2",
     "descrizione": {
 		"it": "Vaccini",
-		"en": "Vaccini"
+		"en": "Vaccini",
+	    	"de": "Impfstoffe"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -20,7 +22,8 @@
     "codice":"3",
     "descrizione": {
 		"it": "Stent",
-		"en": "Stent"
+		"en": "Stent",
+	    	"de": "Stent"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -29,7 +32,8 @@
     "codice":"4",
     "descrizione": {
 		"it": "Ausili per incontinenza (ospedalieri e territoriali)",
-		"en": "Ausili per incontinenza (ospedalieri e territoriali)"
+		"en": "Ausili per incontinenza (ospedalieri e territoriali)",
+	    	"de": "Inkontinenzhilfen (klinisch oder territorial)"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -38,7 +42,8 @@
     "codice":"5",
     "descrizione": {
 		"it": "Protesi d'anca",
-		"en": "Protesi d'anca"
+		"en": "Protesi d'anca",
+	    	"de": "Hüftprothesen"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -47,7 +52,8 @@
     "codice":"6",
     "descrizione": {
 		"it": "Medicazioni generali",
-		"en": "Medicazioni generali"
+		"en": "Medicazioni generali",
+	    	"de": "Allgemeine ärztliche Bedarfsmaterialien"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -56,7 +62,8 @@
     "codice":"7",
     "descrizione": {
 		"it": "Defibrillatori",
-		"en": "Defibrillatori"
+		"en": "Defibrillatori",
+	    	"de": "Defribillatoren"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -65,7 +72,8 @@
     "codice":"8",
     "descrizione": {
 		"it": "Pace-maker",
-		"en": "Pace-maker"
+		"en": "Pace-maker",
+	    	"de": "Herzschrittmacher"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -74,7 +82,8 @@
     "codice":"9",
     "descrizione": {
 		"it": "Aghi e siringhe",
-		"en": "Aghi e siringhe"
+		"en": "Aghi e siringhe",
+	    	"de": "Nadeln und Spritzen"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -83,7 +92,8 @@
     "codice":"10",
     "descrizione": {
 		"it": "Servizi integrati per la gestione delle apparecchiature elettromedicali",
-		"en": "Servizi integrati per la gestione delle apparecchiature elettromedicali"
+		"en": "Servizi integrati per la gestione delle apparecchiature elettromedicali",
+	    	"de": "Integrierte Dienstleistungen für die Verwaltung von elektromedizinischen Geräten"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -92,7 +102,8 @@
     "codice":"11",
     "descrizione": {
 		"it": "Servizi di pulizia per gli enti del Servizio Sanitario Nazionale",
-		"en": "Servizi di pulizia per gli enti del Servizio Sanitario Nazionale"
+		"en": "Servizi di pulizia per gli enti del Servizio Sanitario Nazionale",
+	    	"de": "Reinigungsdienste für Einrichtungen des staatlichen Gesundheitsdienstes" 
 		},
     "dataInizio":null,
     "dataFine":null
@@ -101,7 +112,8 @@
     "codice":"12",
     "descrizione": {
 		"it": "Servizi di ristorazione per gli enti del Servizio Sanitario Nazionale",
-		"en": "Servizi di ristorazione per gli enti del Servizio Sanitario Nazionale"
+		"en": "Servizi di ristorazione per gli enti del Servizio Sanitario Nazionale",
+	    	"de": "Dienstleistungen im Gastgewerbe für Einrichtungen des staatlichen Gesundheitsdienstes"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -110,7 +122,8 @@
     "codice":"13",
     "descrizione": {
 		"it": "Servizi di lavanderia per gli enti del Servizio Sanitario Nazionale",
-		"en": "Servizi di lavanderia per gli enti del Servizio Sanitario Nazionale"
+		"en": "Servizi di lavanderia per gli enti del Servizio Sanitario Nazionale",
+	    	"de": "Wäscherei-Dienste für Einrichtungen des staatlichen Gesundheitsdienstes"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -119,7 +132,8 @@
     "codice":"14",
     "descrizione": {
 		"it": "Servizi di smaltimento rifiuti sanitari",
-		"en": "Servizi di smaltimento rifiuti sanitari"
+		"en": "Servizi di smaltimento rifiuti sanitari",
+	    	"de": "Dienstleistungen zur Entsorgung von medizinischen Abfällen"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -128,7 +142,8 @@
     "codice":"15",
     "descrizione": {
 		"it": "Vigilanza armata",
-		"en": "Vigilanza armata"
+		"en": "Vigilanza armata",
+	    	"de": "Bewaffneter Wachdienst"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -137,7 +152,8 @@
     "codice":"16",
     "descrizione": {
 		"it": "Facility management immobili",
-		"en": "Facility management immobili"
+		"en": "Facility management immobili",
+	    	"de": "Facility Management von Immobilien"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -146,7 +162,8 @@
     "codice":"17",
     "descrizione": {
 		"it": "Pulizia immobili",
-		"en": "Pulizia immobili"
+		"en": "Pulizia immobili",
+	    	"de": "Gebäudereinigung"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -155,7 +172,8 @@
     "codice":"18",
     "descrizione": {
 		"it": "Guardiania",
-		"en": "Guardiania"
+		"en": "Guardiania",
+	    	"de": "Bewachung"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -164,8 +182,9 @@
     "codice":"19",
     "descrizione": {
 		"it": "Manutenzione immobili e impianti",
-		"en": "Manutenzione immobili e impianti"
-		},
+		"en": "Manutenzione immobili e impianti",
+	    	"de": "Instandhaltung von Immobilien und Anlagen"
+	    			},
     "dataInizio":null,
     "dataFine":null
 },
@@ -173,7 +192,8 @@
     "codice":"20",
     "descrizione": {
 		"it": "Guanti (chirurgici e non)",
-		"en": "Guanti (chirurgici e non)"
+		"en": "Guanti (chirurgici e non)",
+	    	"de": "Chirurgische und nicht-chirurgische Handschuhe"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -182,7 +202,8 @@
     "codice":"21",
     "descrizione": {
 		"it": "Suture",
-		"en": "Suture"
+		"en": "Suture",
+	    	"de": "Nähte"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -191,7 +212,8 @@
     "codice":"22",
     "descrizione": {
 		"it": "Ossigenoterapia",
-		"en": "Ossigenoterapia"
+		"en": "Ossigenoterapia",
+	    	"de": "Sauerstofftherapie"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -200,7 +222,8 @@
     "codice":"23",
     "descrizione": {
 		"it": "Diabetologia territoriale",
-		"en": "Diabetologia territoriale"
+		"en": "Diabetologia territoriale",
+	    	"de": "Territoriale Diabetologie"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -209,7 +232,8 @@
     "codice":"24",
     "descrizione": {
 		"it": "Servizio di trasporto scolastico",
-		"en": "Servizio di trasporto scolastico"
+		"en": "Servizio di trasporto scolastico",
+	    	"de": "Schülerbeförderungsdienst"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -218,7 +242,8 @@
     "codice":"25",
     "descrizione": {
 		"it": "Manutenzione strade (servizi e forniture)",
-		"en": "Manutenzione strade (servizi e forniture)"
+		"en": "Manutenzione strade (servizi e forniture)",
+	    	"de": "Straßeninstandhaltung (Dienstleistungen und Lieferungen)"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -227,7 +252,8 @@
     "codice":"999",
     "descrizione": {
 		"it": "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015",
-		"en": "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015"
+		"en": "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015",
+	    	"de": "Arbeiten, Lieferungen oder Dienstleistungen, die nicht im Art. 1 des Dekrets des Präsidenten des Ministerrates 24/12/2015 aufgelistet sind"
 		},
     "dataInizio":null,
     "dataFine":null
