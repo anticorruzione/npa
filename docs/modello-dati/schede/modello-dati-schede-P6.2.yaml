@@ -47,7 +47,7 @@ components:
     SchedaP6_2Type:
       description: Adesione AQ/convenzione con successivo confronto competitivo (ordinario/speciale). Articolo 59 comma 4 lettere b) e c) decreto legislativo 36/2023; Articolo 154 decreto legislativo 36/2023.
       type: object
-      required: [anacForm,espd]
+      required: [anacForm]
       additionalProperties: false
       properties:
         anacForm:
