@@ -843,6 +843,15 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR95",
+    "descrizione": {
+		"it": "la notice deve avere come lingua principale ITA (campo eForm: <cbc:NoticeLanguageCode>)",
+		"en": "la notice deve avere come lingua principale ITA (campo eForm: <cbc:NoticeLanguageCode>)"
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
 {
     "codice":"ERR9999",
