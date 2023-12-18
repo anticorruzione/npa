@@ -502,8 +502,9 @@ ref. /docs/specifiche-jws/
 * Nel file README.md è stato aggiunto il riferimento alla nuova sezione Scenari di esempio
 </details>
 
-# Note di rilascio del 04/12/2023
-
+<details>
+<summary><h1> Note di rilascio del 04/12/2023</h1></summary>
+	
 ## Modello Dati 
 
 ### Regole
@@ -515,6 +516,36 @@ ref. /docs/specifiche-jws/
 ### Tipologiche
 * errori.json
   * aggiunti i seguenti messaggi di errore: ERR94
+* tipoSoggettoANAG.json
+  * nuova tipologica ad uso interno
+* naturaGiuridicaANAG.json
+  * nuova tipologica ad uso interno
+  
+## Orchestratore  
+* Aggiornato il file schema-cronologia-schede.xlsx
+</details>
+
+# Note di rilascio del 18/12/2023
+
+## Modello Dati 
+* modello-dati-npa.yaml:
+  * aggiunto idAvvisoPVL in DatiPubblicazioneITType
+  * aggiunti publicationId e publicationUrl in DatiPubblicazioneEUType
+  * aggiunti codiceScheda e codiceNuovaScheda in EsitoOperazioneType
+
+### Schede
+* modello-dati-schede-CSU1.yaml:
+  * eliminata perché non utlizzata
+* modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-P6.1.yaml, modello-dati-schede-P6.2.yaml, modello-dati-schede-P7.2.yaml:
+  * reso opzionale il campo espd
+* modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml,modello-dati-schede-AD4.yaml,modello-dati-schede-AD5.yaml:
+	* inserito l'oggetto datiBaseDocumenti
+    
+### Tipologiche
+* errori.json
+  * aggiunti i seguenti messaggi di errore: ERR95
+* CPV.json:
+  * eliminati i codici duplicati 
 
 ## Orchestratore  
 * Aggiornato il file schema-cronologia-schede.xlsx
