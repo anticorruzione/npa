@@ -9,8 +9,11 @@ jobs:
       - run: |
           MAX_NUM=$(gh issue list -R "${GITHUB_REPOSITORY}" --limit 1 --json number | jq ".[].number"); 
           echo $MAX_NUM
+          for n in $(seq 1 $MAX_NUM); 
+          do
+              gh issue view -R "${REPO}" $n --json assignees,author,body,closed,closedAt,comments,createdAt,id,labels,milestone,number,projectCards,reactionGroups,state,title,updatedAt,url >> github-dump.json; 
+          done
+                    
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OWNER: ${{ github.repository_owner }}
-          REPO: ${{ github.event.repository.name }}
         
