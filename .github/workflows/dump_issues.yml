@@ -1,0 +1,12 @@
+name: dump_issues
+run-name: ${{ github.actor }} is dumping issues
+on: workflow_dispatch
+jobs:
+  dump-all-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          MAX_NUM=$(gh issue list --limit 1 --json number | jq ".[].number"); 
+          echo $MAX_NUM
+        
