@@ -1,4 +1,14 @@
 # AVVISO:
+A tutti gli utenti dei servizi di interoperabilità della PCP
+
+Si comunica che i servizi della PCP in ambiente di esercizio, finora disponibili per i test di integrazione delle piattaforme certificate, saranno sospesi a partire dalle ore 17.00 di venerdi 29 dicembre per consentirne il passaggio all'esercizio definitivo. Contestualmente saranno eliminate dal database tutte le operazioni finora svolte in questo ambiente.
+
+A partire da martedi 2 gennaio 2024 i servizi saranno nuovamente disponibili per l'effettivo esercizio.
+
+Pertanto qualunque transazione operata in ambiente di esercizio a partire dal 2 gennaio è da considerarsi una transazione reale di esercizio e l'eventuale pubblicazione di bandi e avvisi avrà effetti legali sul Ted per gli appalti sopra soglia comunitaria e sulla piattaforma a valore legale di ANAC.
+
+
+# AVVISO:
 Come da [roadmap](https://github.com/anticorruzione/npa/blob/main/docs/specifiche-jws/roadmap.md), si ricorda a tutti i soggetti che sono stati autorizzati all’accesso temporaneo agli eService della Piattaforma Contratti Pubblici, che a partire dal 9 ottobre 2023, per poter accedere agli eService attualmente disponibili che implementano il contesto di sicurezza, dovranno effettuare l’onboarding su PDND attraverso la richiesta di iscrizione tra le piattaforme certificate come indicato nelle [regole tecniche](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) emanate da AgID 
 
 # Descrizione
