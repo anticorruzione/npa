@@ -1,5 +1,11 @@
 # AVVISO:
-Come da [roadmap](https://github.com/anticorruzione/npa/blob/main/docs/specifiche-jws/roadmap.md), si ricorda a tutti i soggetti che sono stati autorizzati all’accesso temporaneo agli eService della Piattaforma Contratti Pubblici, che a partire dal 9 ottobre 2023, per poter accedere agli eService attualmente disponibili che implementano il contesto di sicurezza, dovranno effettuare l’onboarding su PDND attraverso la richiesta di iscrizione tra le piattaforme certificate come indicato nelle [regole tecniche](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) emanate da AgID 
+A tutti gli utenti dei servizi di interoperabilità della PCP
+
+Si comunica che i servizi della PCP in ambiente di esercizio, finora disponibili per i test di integrazione delle piattaforme certificate, saranno sospesi a partire dalle ore 17.00 di venerdì 29 dicembre per consentirne il passaggio all'esercizio definitivo. Contestualmente saranno eliminate dal database tutte le operazioni finora svolte in questo ambiente.
+
+A partire da martedì 2 gennaio 2024 i servizi saranno nuovamente disponibili per l'effettivo esercizio. 
+
+Pertanto qualunque transazione operata in ambiente di esercizio a partire dal 2 gennaio è da considerarsi una transazione reale di esercizio e l'eventuale pubblicazione di bandi e avvisi avrà effetti legali sul TED per gli appalti sopra soglia comunitaria e sulla piattaforma a valore legale di ANAC. 
 
 # Descrizione
 Il repository contiene la documentazione tecnica dei servizi di cooperazione applicativa che **le stazioni appaltanti** possono utilizzare per integrarsi con la Nuova Piattaforma Appalti (NPA) e con il Fascicolo Virtuale dell'Operatore Economico (FVOE) messi a disposizione dall'Autorità Nazionale Anticorruzione (ANAC), per governare l'ecosistema nazionale di approvvigionamento digitale per la gestione degli appalti pubblici.
