@@ -372,10 +372,7 @@ components:
           piano:
             $ref: '#/components/schemas/DatiPianoBaseType'            
           scheda:
-            oneOf:
-              - $ref: '#/components/schemas/DatiPianoType'
-              - $ref: '#/components/schemas/DatiAppaltoType'
-              - $ref: '#/components/schemas/SchedaPostPubblicazioneType'
+            $ref: '#/components/schemas/SchedaGroupType'
       DatiPubblicazioneEUType:
         type: object
         additionalProperties: false
@@ -412,7 +409,7 @@ components:
             type: string
           publicationUrl:
             description: url di pubblicazione della notice ricevuto dal TED.
-            type: string
+            type: string            
           stato:
             $ref: '#/components/schemas/StatoAvvisoEnum'
           tipo:
@@ -424,19 +421,19 @@ components:
           idAvvisoPVL:
             description: identificativo univoco dell'Avviso restituito da PVL.
             type: string
-            format: uuid        
+            format: uuid          
           dataControllo:
             description: data in cui è stato effettuato il controllo dello stato avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
             format: date-time
             example: '2022-01-23T12:02:05Z'
           dataInoltroPubblicazione:
-            description: data in cui è stato effettuato l'invio dell'avviso alla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            description: data in cui è stato effettuato la richiesta di pubblicazione dell'avviso nazionale a PVL (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
             format: date-time
             example: '2022-01-23T12:02:05Z'            
           dataPubblicazione:
-            description: data di pubblicazione dell'Avviso comunicata dalla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            description: data di pubblicazione dell'Avviso nazionale comunicata da PVL (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string
             format: date-time
             example: '2022-01-23T12:02:05Z'
