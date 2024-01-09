@@ -20,7 +20,7 @@ components:
       additionalProperties: false
       properties:   
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string       
         datiBaseTerminiInvio:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType'   

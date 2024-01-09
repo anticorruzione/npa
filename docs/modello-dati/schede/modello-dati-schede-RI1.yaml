@@ -18,7 +18,8 @@ components:
           description: Incidenza sul croprogramma (nel caso di sospensione parziale)
           type: number
           format: double
-          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$     
+          minimum: 0
+          maximum: 100    
         superatoTempo:
           description: E’ stato superato il quarto del tempo contrattuale
           type: boolean   

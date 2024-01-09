@@ -7,12 +7,14 @@ components:
     SubappaltoType:
       description: Dati relativi ai subappalti
       type: object
-      required: [codiceFiscaleDitta,impresaEstera,importoPresunto,categoria,cpv]
+      required: [codiciFiscaliOE,impresaEstera,importoPresunto,categoria,cpv]
       additionalProperties: false
       properties:    
-        codiceFiscaleDitta:
-          description: Codice fiscale ditta subappaltatrice
-          type: string
+        codiciFiscaliOE:
+          description: Codici fiscali operatori economici
+          type: array
+          items:
+            type: string
         impresaEstera:
           description: Impresa estera?
           type: boolean
