@@ -39,7 +39,7 @@ components:
     GiustificazioneAggiudicazioneDirettaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Giustificazione del ricorso a una procedura che consente di aggiudicare appalti direttamente, vale a dire che non impone la pubblicazione di un avviso di indizione di gara nella Gazzetta ufficiale dell'Unione europea - corrisponde al campo bt-136 - Direct Award Justification Code del TED - fare riferimento ai valori contenuti nel file [giustificazioniAggiudicazioneDiretta.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioniAggiudicazioneDiretta.json) 
+      description: Giustificazione del ricorso a una procedura che consente di aggiudicare appalti direttamente, vale a dire che non impone la pubblicazione di un avviso di indizione di gara nella Gazzetta ufficiale dell'Unione europea - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-136 - Direct Award Justification Code del TED - fare riferimento ai valori contenuti nel file [giustificazioniAggiudicazioneDiretta.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioniAggiudicazioneDiretta.json) 
     ContrattiDisposizioniParticolariEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -51,7 +51,7 @@ components:
     CodNUTSEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Il luogo di esecuzione secondo la classificazione comune delle unità territoriali per la statistica (NUTS). Va indicato il codice di livello NUTS 3 - corrisponde al campo bt-5071 - Place Performance Country Subdivision del TED - fare riferimento ai valori contenuti nel file [codNUTS.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codNUTS.json)
+      description: Il luogo di esecuzione secondo la classificazione comune delle unità territoriali per la statistica (NUTS). Va indicato il codice di livello NUTS 3 - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-5071 - Place Performance Country Subdivision del TED - fare riferimento ai valori contenuti nel file [codNUTS.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codNUTS.json)
     RuoloOEEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -75,7 +75,7 @@ components:
     CategoriaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Categoria - fare riferimento ai valori contenuti nel file [categoria.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categoria.json) 
+      description: Categoria - fare riferimento ai valori contenuti nel file [categoria.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categoria.json)
     MotivoDerogaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -107,11 +107,11 @@ components:
     AccessibilitaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Richiamo nel bando di gara, nell’avviso o nell’invito alla necessità da parte del concorrente o dell’offerente di aver assolto, al momento della presentazione dell'offerta, agli obblighi in materia di lavoro delle persone con disabilità di cui alla legge 12 marzo 1999, n. 68 - corrisponde al campo bt-754 - Accessibility del TED - fare riferimento ai valori contenuti nel file [accessibilita.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accessibilita.json)
+      description: Richiamo nel bando di gara, nell’avviso o nell’invito alla necessità da parte del concorrente o dell’offerente di aver assolto, al momento della presentazione dell'offerta, agli obblighi in materia di lavoro delle persone con disabilità di cui alla legge 12 marzo 1999, n. 68 - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-754 - Accessibility del TED - fare riferimento ai valori contenuti nel file [accessibilita.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accessibilita.json)
     OggettoContrattoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Oggetto del contratto - corrisponde al campo bt-23 - Main Nature del TED - fare riferimento ai valori contenuti nel file [oggettoContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoContratto.json) 
+      description: Oggetto del contratto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-23 - Main Nature del TED - fare riferimento ai valori contenuti nel file [oggettoContratto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoContratto.json) 
     SceltaContraenteEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -119,23 +119,23 @@ components:
     TipoProceduraEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Il tipo di procedura di appalto (ad es. secondo i tipi indicati nelle direttive sugli appalti citate nei considerando del presente documento). - corrisponde al campo bt-105 - Procedure Type del TED - fare riferimento ai valori contenuti nel file [tipoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoProcedura.json) 
+      description: Il tipo di procedura di appalto (ad es. secondo i tipi indicati nelle direttive sugli appalti citate nei considerando del presente documento). - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-105 - Procedure Type del TED - fare riferimento ai valori contenuti nel file [tipoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoProcedura.json) 
     AffidamentiRiservatiEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Indicare se la partecipazione è riservata a specifiche organizzazioni (ad es. laboratori protetti, organizzazioni con missione di servizio pubblico) - corrisponde al campo bt-71 - Reserved Participation del TED - fare riferimento ai valori contenuti nel file [affidamentiRiservati.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/affidamentiRiservati.json) 
+      description: Indicare se la partecipazione è riservata a specifiche organizzazioni (ad es. laboratori protetti, organizzazioni con missione di servizio pubblico) - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-71 - Reserved Participation del TED - fare riferimento ai valori contenuti nel file [affidamentiRiservati.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/affidamentiRiservati.json) 
     CriteriAggiudicazioneEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: criteri di aggiudicazione - corrisponde al campo bt-539 - Award Criterion Type del TED - fare riferimento ai valori contenuti nel file [criteriAggiudicazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/criteriAggiudicazione.json) 
+      description: criteri di aggiudicazione - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-539 - Award Criterion Type del TED - fare riferimento ai valori contenuti nel file [criteriAggiudicazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/criteriAggiudicazione.json) 
     SistemaDinamicoAcquisizioneEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Sistema dinamico di acquisizione - corrisponde al campo bt-766 - Dynamic Purchasing System del TED  - fare riferimento ai valori contenuti nel file [sistemaDinamicoAcquisizione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/sistemaDinamicoAcquisizione.json)
+      description: Sistema dinamico di acquisizione - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-766 - Dynamic Purchasing System del TED  - fare riferimento ai valori contenuti nel file [sistemaDinamicoAcquisizione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/sistemaDinamicoAcquisizione.json)
     AccordoQuadroEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Accordo quadro - corrisponde al campo bt-765 - Framework agreement del TED  - fare riferimento ai valori contenuti nel file [accordoQuadro.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accordoQuadro.json) 
+      description: Accordo quadro - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-765 - Framework agreement del TED  - fare riferimento ai valori contenuti nel file [accordoQuadro.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accordoQuadro.json) 
     MotivoEsclusioneOrdinarioSpecialeEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -155,15 +155,15 @@ components:
     EsitoProceduraEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Esito procedura - corrisponde al campo bt-142 - Winner Chosen del TED - fare riferimento ai valori contenuti nel file [esitoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProcedura.json) 
+      description: Esito procedura - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-142 - Winner Chosen del TED - fare riferimento ai valori contenuti nel file [esitoProcedura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProcedura.json) 
     GiustificazioneEsitoProceduraEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Giustificazione esito procedura - corrisponde al campo bt-144 - Not Awarded Reason del TED - fare riferimento ai valori contenuti nel file [giustificazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazione.json) 
+      description: Giustificazione esito procedura - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-144 - Not Awarded Reason del TED - fare riferimento ai valori contenuti nel file [giustificazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazione.json) 
     MotiviModificaContrattualeEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Motivi modifica contrattuale - corrisponde al campo bt-200 - Modification Reason Code del TED - fare riferimento ai valori contenuti nel file [motiviModifica.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviModifica.json) 
+      description: Motivi modifica contrattuale - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-200 - Modification Reason Code del TED - fare riferimento ai valori contenuti nel file [motiviModifica.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviModifica.json) 
     MotiviRevisionePrezziEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -191,7 +191,7 @@ components:
     SubappaltoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Subappalto - corrisponde al campo bt-773 - Subcontracting del TED - fare riferimento ai valori contenuti nel file [subappalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/subappalto.json)  
+      description: Subappalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-773 - Subcontracting del TED - fare riferimento ai valori contenuti nel file [subappalto.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/subappalto.json)  
     MotivoSospensioneEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -207,11 +207,11 @@ components:
     LingueEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Lingue in cui i documenti di gara sono ufficialmente disponibili - corrisponde al campo bt-708 - Documents Official Language del TED - fare riferimento ai valori contenuti nel file [lingue.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/lingue.json)    
+      description: Lingue in cui i documenti di gara sono ufficialmente disponibili - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-708 - Documents Official Language del TED - fare riferimento ai valori contenuti nel file [lingue.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/lingue.json)    
     AltraDurataEnum: 
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
-      description: La durata è ignota, illimitata, ecc. - corrisponde al campo bt-537 - Duration End Date del TED - fare riferimento ai valori contenuti nel file [durata.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/durata.json)  
+      description: La durata è ignota, illimitata, ecc. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED - fare riferimento ai valori contenuti nel file [durata.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/durata.json)  
     MotivoMancatoSubappaltoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
@@ -331,12 +331,14 @@ components:
           description: Previsione di una quota inferiore con riferimento all’occupazione femminile
           type: number
           format: double
-          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$                    
+          minimum: 0
+          maximum: 100
         quotaInferioreOccupGiovanile:
           description: Previsione di una quota inferiore con riferimento all’occupazione giovanile
           type: number
           format: double
-          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$
+          minimum: 0
+          maximum: 100
         motivoDeroga:
           type: array
           items:
@@ -394,10 +396,11 @@ components:
           $ref: '#/components/schemas/RuoloOEEnum'
         tipoOE: 
           $ref: '#/components/schemas/TipoOEEnum'
-        idGruppo:
-          description: id gruppo
-          type: number  
-          format: integer
+        idPartecipante: 
+          description: id partecipante
+          type: string  
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     IncaricatoType:
       description: Anagrafica e riferimenti dei soggetti ai quali la stazione appaltante ha conferito incarichi
       type: object
@@ -457,7 +460,7 @@ components:
     OfferteType:
       description: Dati delle offerte
       type: object
-      required: [importo,ccnl,idPartecipante]
+      required: [importo,ccnl,idPartecipante,aggiudicatario]
       additionalProperties: false
       properties:
         idPartecipante: 
@@ -483,17 +486,20 @@ components:
           description: Offerta economica ribasso
           type: number
           format: double
-          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$
+          minimum: 0
+          maximum: 100
         offertaQualitativa:
           description: Offerta qualitativa
           type: number
           format: double
-          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$
+          minimum: 0
+          maximum: 100
         offertaInAumento:
           description: Offerta in aumento
           type: number
           format: double
-          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$  
+          minimum: 0
+          maximum: 100 
         offertaMaggioreSogliaAnomalia:
           description: L'offerta è maggiore della soglia di anomalia
           type: boolean
@@ -553,11 +559,6 @@ components:
       additionalProperties: false
       required: [codiceAppalto, categorieMerceologiche]
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -601,11 +602,6 @@ components:
       additionalProperties: false
       required: [codiceAppalto]
       properties:  
-        idAppalto:
-          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string 
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -625,11 +621,6 @@ components:
       required: [cigAccordoQuadro,codiceAppalto,datiBaseProcedura]
       additionalProperties: false
       properties:  
-        idAppalto:
-          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string  
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -658,11 +649,6 @@ components:
       required: [prelazionePromotore,codiceAppalto,costituzioneSocietaDiScopo,datiBase,datiBaseProcedura]
       additionalProperties: false
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -683,7 +669,7 @@ components:
           description: Indicare se è prevista la costituzione di una società di scopo
           type: boolean
         datiBase:
-          $ref: '#/components/schemas/DatiBaseAppaltoOptionalType'
+          $ref: '#/components/schemas/DatiBaseAppaltoType'
         datiBaseProcedura:
           allOf: 
           - $ref: '#/components/schemas/DatiBaseProceduraType'
@@ -695,11 +681,6 @@ components:
       required: [categorieMerceologiche,motivazioneCIG,strumentiSvolgimentoProcedure,codiceAppalto,datiBase,datiBaseProcedura]
       additionalProperties: false
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -799,11 +780,6 @@ components:
       additionalProperties: false
       required: [codiceAppalto]
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -844,11 +820,6 @@ components:
       required: [codiceAppalto]
       additionalProperties: false    
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto
-          type: string
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -893,11 +864,6 @@ components:
       additionalProperties: false
       required: [codiceAppalto,contrattiDisposizioniParticolari]
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto
-          type: string 
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -919,11 +885,6 @@ components:
       additionalProperties: false
       required: [codiceAppalto]
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto
-          type: string  
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -949,7 +910,7 @@ components:
         - contrattiDisposizioniParticolari
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string
         categorieMerceologiche:
           type: array
@@ -1262,7 +1223,7 @@ components:
         - prestazioniComprese
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
@@ -1444,7 +1405,7 @@ components:
       additionalProperties: false
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string      
         ipotesiCollegamento:
           $ref: '#/components/schemas/IpotesiCollegamentoType'
@@ -1616,7 +1577,7 @@ components:
       additionalProperties: false
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string
         codIstat:
           $ref: '#/components/schemas/CodIstatEnum'          
@@ -1655,7 +1616,7 @@ components:
       additionalProperties: false
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string
         codIstat:
           $ref: '#/components/schemas/CodIstatEnum'          
@@ -1696,7 +1657,7 @@ components:
       required: [lotIdentifier,codIstat]
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string
         codIstat:
           $ref: '#/components/schemas/CodIstatEnum'
@@ -1732,7 +1693,7 @@ components:
           description: Flag servizio pubblico locale
           type: boolean       
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string
         codIstat:
           $ref: '#/components/schemas/CodIstatEnum'      
@@ -1792,7 +1753,7 @@ components:
     LottoP4BaseType:
         description: Oggetto che riporta i dati del lotto
         type: object
-        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase]
+        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase,datiBaseDocumenti]
         additionalProperties: false
         properties:
           servizioPubblicoLocale:
@@ -1978,7 +1939,7 @@ components:
         datiBaseComunicazione:
           $ref: '#/components/schemas/DatiBaseComunicazioneType'  
         datiBaseDocumenti:
-          $ref: '#/components/schemas/DatiBaseDocumentiOptionalType'
+          $ref: '#/components/schemas/DatiBaseDocumentiType'
     LottoP7_2BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
@@ -2088,7 +2049,7 @@ components:
         datiBaseComunicazione:
           $ref: '#/components/schemas/DatiBaseComunicazioneType'  
         datiBaseDocumenti:
-          $ref: '#/components/schemas/DatiBaseDocumentiType'          
+          $ref: '#/components/schemas/DatiBaseDocumentiOptionalType'          
     ModificaContrattualeType: 
       description: Oggetto che riporta tutti i dati della modifica contrattuale
       type: object
@@ -2321,7 +2282,7 @@ components:
       required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard]
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string      
         afferenteInvestimentiPNRR:
           description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
@@ -2366,11 +2327,6 @@ components:
       required: [relazioneUnicaSulleProcedure,opereUrbanizzazioneScomputo,codiceAppalto,motivoUrgenza]
       additionalProperties: false
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string   
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -2393,7 +2349,7 @@ components:
       required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard]
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string      
         afferenteInvestimentiPNRR:
           description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
@@ -2438,11 +2394,6 @@ components:
       required: [relazioneUnicaSulleProcedure,opereUrbanizzazioneScomputo,codiceAppalto,motivoUrgenza]
       additionalProperties: false
       properties: 
-        idAppalto:
-          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string  
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -2465,7 +2416,7 @@ components:
       required: [lotIdentifier,partecipanti,ccnl,categoria,codIstat]
       properties:  
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string  
         ccnl:
           description: indicare il codice CNEL o non applicabile
@@ -2497,11 +2448,6 @@ components:
       additionalProperties: false 
       required: [codiceAppalto,motivoUrgenza]
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string     
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -2518,7 +2464,7 @@ components:
       required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,categoria,ccnl,codIstat,quadroEconomicoStandard]
       properties:
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string       
         afferenteInvestimentiPNRR:
           description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
@@ -2563,11 +2509,6 @@ components:
       required: [opereUrbanizzazioneScomputo,codiceAppalto,motivoUrgenza]
       additionalProperties: false
       properties:
-        idAppalto:
-          description: Codice univoco dell'appalto.il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string    
-          format: uuid
-          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
@@ -2639,7 +2580,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione sopra soglia e sotto soglia 
       type: object
       additionalProperties: false
-      required: [cig]
+      required: [cig,offertePresentate]
       properties: 
         cig:
           description: codice identificativo lotto
@@ -3052,10 +2993,10 @@ components:
           description: Il tipo di classificazione che descrive l'appalto (ad es. CPV).
           $ref: '#/components/schemas/TipoClassificazioneEnum'
         cpvPrevalente:
-          description: Il codice della classificazione che caratterizza meglio l'appalto - corrisponde al campo bt-262 - Main Classification Code del TED
+          description: Il codice della classificazione che caratterizza meglio l'appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-262 - Main Classification Code del TED
           $ref: '#/components/schemas/CPVEnum'
         cpvSecondarie:
-          description: Codice classificazione supplementare che caratterizza anch'esso l'appalto - corrisponde al campo bt-263 - Additional Classification Codes del TED
+          description: Codice classificazione supplementare che caratterizza anch'esso l'appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-263 - Additional Classification Codes del TED
           type: array
           items:
             $ref: '#/components/schemas/CPVEnum'     
@@ -3070,7 +3011,7 @@ components:
           description: Il tipo di classificazione che descrive l'appalto (ad es. CPV).
           $ref: '#/components/schemas/TipoClassificazioneEnum'
         cpvPrevalente:
-          description: Il codice della classificazione che caratterizza meglio l'appalto - corrisponde al campo bt-262 - Main Classification Code del TED
+          description: Il codice della classificazione che caratterizza meglio l'appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-262 - Main Classification Code del TED
           $ref: '#/components/schemas/CPVEnum'            
     DatiBaseCPVType:
       description: Dato in comune con il Business Group Classification delle eforms
@@ -3083,10 +3024,10 @@ components:
           description: Il tipo di classificazione che descrive l'appalto (ad es. CPV).
           $ref: '#/components/schemas/TipoClassificazioneEnum'
         cpvPrevalente:
-          description: Il codice della classificazione che caratterizza meglio l'appalto - corrisponde al campo bt-262 - Main Classification Code del TED
+          description: Il codice della classificazione che caratterizza meglio l'appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-262 - Main Classification Code del TED
           $ref: '#/components/schemas/CPVEnum'
         cpvSecondarie:
-          description: Codice classificazione supplementare che caratterizza anch'esso l'appalto - corrisponde al campo bt-263 - Additional Classification Codes del TED
+          description: Codice classificazione supplementare che caratterizza anch'esso l'appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-263 - Additional Classification Codes del TED
           type: array
           items:
             $ref: '#/components/schemas/CPVEnum'            
@@ -3107,7 +3048,7 @@ components:
       additionalProperties: false
       properties:
         dataAggiudicazione:
-          description: Data della decisione ufficiale di selezione dell'offerta vincitrice - corrisponde al campo bt-1451 - Winner Decision Date del TED
+          description: Data della decisione ufficiale di selezione dell'offerta vincitrice - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-1451 - Winner Decision Date del TED
           type: string
           format: date-time 
     DatiBaseSottomissioniRicevuteType:
@@ -3115,7 +3056,7 @@ components:
       additionalProperties: false
       properties:
         offertaMassimoRibasso:
-          description: Offerta di massimo ribasso - corrisponde ai campi bt-710 e bt-711 del TED.
+          description: Offerta di massimo ribasso - nei casi in cui la scheda preveda un eform, corrisponde ai campi bt-710 e bt-711 del TED.
           type: number
           format: double          
     DatiBaseSubappaltiType:
@@ -3140,12 +3081,12 @@ components:
       additionalProperties: false
       properties:
         oggetto:
-          description: Oggetto gara - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType' 
         importo:
-          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED
+          description: Importo gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-27 - Estimated Value del TED
           type: number
           format: double
     DatiBaseAppaltoOptionalType:
@@ -3156,12 +3097,12 @@ components:
       additionalProperties: false
       properties:
         oggetto:
-          description: Oggetto gara - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'          
         importo:
-          description: Importo gara - corrisponde al campo bt-27 - Estimated Value del TED
+          description: Importo gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-27 - Estimated Value del TED
           type: number
           format: double          
     DatiBaseAppaltoPLType:
@@ -3172,7 +3113,7 @@ components:
       additionalProperties: false
       properties:
         oggetto:
-          description: Oggetto gara - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'          
@@ -3184,7 +3125,7 @@ components:
       additionalProperties: false
       properties:
         oggetto:
-          description: Oggetto gara - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string  
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'          
@@ -3200,12 +3141,12 @@ components:
         oggettoContratto:
           $ref: '#/components/schemas/OggettoContrattoEnum'
         oggetto:
-          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'          
         importo:
-          description: Importo lotto - corrisponde al campo bt-27 - Estimated Value del TED 
+          description: Importo lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-27 - Estimated Value del TED 
           type: number
           format: double
     DatiBaseLottoOptionalType:
@@ -3219,12 +3160,12 @@ components:
         oggettoContratto:
           $ref: '#/components/schemas/OggettoContrattoEnum'
         oggetto:
-          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'           
         importo:
-          description: Importo lotto - corrisponde al campo bt-27 - Estimated Value del TED 
+          description: Importo lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-27 - Estimated Value del TED 
           type: number
           format: double          
     DatiBaseLottoPLType:
@@ -3238,7 +3179,7 @@ components:
         oggettoContratto:
           $ref: '#/components/schemas/OggettoContrattoEnum'
         oggetto:
-          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'            
@@ -3253,7 +3194,7 @@ components:
         oggettoContratto:
           $ref: '#/components/schemas/OggettoContrattoEnum'
         oggetto:
-          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string 
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'           
@@ -3268,7 +3209,7 @@ components:
         oggettoContratto:
           $ref: '#/components/schemas/OggettoContrattoEnum'
         oggetto:
-          description: Oggetto lotto - corrisponde al campo bt-24 - Description del TED
+          description: Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string 
         oggettoMl:
           $ref: '#/components/schemas/MultilinguaType'          
@@ -3293,7 +3234,7 @@ components:
       additionalProperties: false
       properties:
         proceduraAccelerata:
-          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-106 - Procedure Accelerated del TED 
           type: boolean          
     DatiBaseProceduraCompletoType:
       description: Dato in comune con il Business Group Procedure delle eforms 
@@ -3304,7 +3245,7 @@ components:
         tipoProcedura:
           $ref: '#/components/schemas/TipoProceduraEnum'
         proceduraAccelerata:
-          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-106 - Procedure Accelerated del TED 
           type: boolean
         giustificazioneProceduraAccelerata:
           description: Giustificazione procedura accelerata
@@ -3389,7 +3330,7 @@ components:
         sistemaDinamicoAcquisizione:
           $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
         astaElettronica:
-          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
           type: boolean
     DatiBaseStrumentiProceduraAType:
       description: Dato in comune con il Business Group Techniques delle eforms
@@ -3401,7 +3342,7 @@ components:
         sistemaDinamicoAcquisizione:
           $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
         astaElettronica:
-          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
           type: boolean          
     DatiBaseStrumentiProceduraSistemaDinamicoAstaType:
       description: Dato in comune con il Business Group Techniques delle eforms
@@ -3410,7 +3351,7 @@ components:
         sistemaDinamicoAcquisizione:
           $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
         astaElettronica:
-          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
           type: boolean          
     DatiBaseStrumentiProceduraAccordoQuadroAstaType:
       description: Dato in comune con il Business Group Techniques delle eforms 
@@ -3419,14 +3360,14 @@ components:
         accordoQuadro:
           $ref: '#/components/schemas/AccordoQuadroEnum'        
         astaElettronica:
-          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
           type: boolean                
     DatiBaseStrumentiProceduraAstaType:
       description: Dato in comune con il Business Group Techniques delle eforms 
       additionalProperties: false
       properties:
         astaElettronica:
-          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - corrisponde al campo bt-767 - Electronic Auction del TED
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
           type: boolean           
     DatiBaseStrumentiProceduraAccordoQuadroSistemaDinamicoType:
       description: Dato in comune con il Business Group Techniques delle eforms 
@@ -3441,11 +3382,11 @@ components:
       additionalProperties: false
       properties:
         scadenzaPresentazioneInvito:
-          description: Data e ora di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          description: Data e ora di scadenza per la presentazione della richiesta di invito - nei casi in cui la scheda preveda un eform, corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
           type: string
           format: date-time
         oraScadenzaPresentazioneOfferte: 
-          description: Date e ora di scadenza per la presentazione delle offerte - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
           format: date-time   
     DatiBaseTerminiInvioSoloScadenzaType:
@@ -3455,7 +3396,7 @@ components:
       additionalProperties: false
       properties:
         scadenzaPresentazioneInvito:
-          description: Data di scadenza per la presentazione della richiesta di invito - corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
+          description: Data di scadenza per la presentazione della richiesta di invito - nei casi in cui la scheda preveda un eform, corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
           type: string
           format: date-time          
     DatiBaseTerminiInvioSoloOraType:
@@ -3464,7 +3405,7 @@ components:
       additionalProperties: false
       properties:
         oraScadenzaPresentazioneOfferte: 
-          description: Date e ora di scadenza per la presentazione delle offerte (hh:mm) - corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          description: Date e ora di scadenza per la presentazione delle offerte (hh:mm) - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
           format: date-time            
     DatiBaseImportoType:
@@ -3473,7 +3414,7 @@ components:
       required: [contrattiSuccessivi]
       properties:
         contrattiSuccessivi:
-          description: contratti successivi - corrisponde al campo bt-41 - Following Contract del TED
+          description: contratti successivi - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-41 - Following Contract del TED
           type: boolean           
     DatiBaseRisultatoProceduraType:
       description:  Dato in comune con il Business Group Procedure Lot Result delle eforms
@@ -3504,7 +3445,7 @@ components:
       additionalProperties: false
       properties:
         dataSottoscrizione:
-          description: Data sottoscrizione eventuale atto aggiuntivo/ sottomissione - corrisponde al campo bt-145 - Contract Conclusion Date del TED
+          description: Data sottoscrizione eventuale atto aggiuntivo/ sottomissione - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-145 - Contract Conclusion Date del TED
           type: string
           format: date-time  
         motiviModifica:
@@ -3519,7 +3460,7 @@ components:
       additionalProperties: false
       properties: 
         dataInvioInviti: 
-          description: Data stimata dell'invio degli inviti a presentare le offerte - corrisponde al campo bt-130  - Dispatch Invitation Tender del TED
+          description: Data stimata dell'invio degli inviti a presentare le offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-130  - Dispatch Invitation Tender del TED
           type: string
           format: date-time
     DatiBaseDocumentiType:
@@ -3528,7 +3469,7 @@ components:
       required: [url]
       properties: 
         url: 
-          description: Indirizzo dei documenti di gara - corrisponde al campo bt-15 - Documents Lot Identifier del TED
+          description: Indirizzo dei documenti di gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-15 - Documents Lot Identifier del TED
           type: string
           format: url
         lingue:
@@ -3540,7 +3481,7 @@ components:
       additionalProperties: false
       properties: 
         url: 
-          description: Indirizzo dei documenti di gara - corrisponde al campo bt-15 - Documents Lot Identifier del TED
+          description: Indirizzo dei documenti di gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-15 - Documents Lot Identifier del TED
           type: string
           format: url
         lingue:
@@ -3552,15 +3493,15 @@ components:
       additionalProperties: false
       properties: 
         dataInizio: 
-          description: La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - corrisponde al campo bt-536 - Duration Start Date del TED
+          description: La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED
           type: string
           format: date-time
         durata: 
-          description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - corrisponde al campo bt-36 - Duration Period del TED
+          description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED
           type: string
           format: number
         dataFine: 
-          description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - corrisponde al campo bt-537 - Duration End Date del TED
+          description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED
           type: string
           format: date-time 
         altraDurata: 

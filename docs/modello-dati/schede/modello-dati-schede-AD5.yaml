@@ -10,7 +10,7 @@ components:
       required: [lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase]
       properties:  
         lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante - corrisponde al campo bt-137 - Purpose Lot Identifier del TED
+          description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
           type: string               
         cup:
           description: Cup
@@ -43,10 +43,7 @@ components:
       type: object
       additionalProperties: false
       required: [codiceAppalto,datiBase]
-      properties:   
-        idAppalto:
-          description: Codice univoco dell'appalto. il campo viene determinato da anac e restituito nelle response. viene dunque ignorato il valore inserito nelle put/post.
-          type: string  
+      properties:    
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
