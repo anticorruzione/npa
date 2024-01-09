@@ -1,8 +1,8 @@
 [{
     "codice":"1",
     "descrizione": {
-		"it": "Mandataria",
-		"en": "Mandataria"
+		"it": "Mandatario in RTI",
+		"en": "Mandatario in RTI"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -10,9 +10,100 @@
 {
     "codice":"2",
     "descrizione": {
+		"it": "Mandante in RTI",
+		"en": "Mandante in RTI"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Operatore Economico monosoggettivo",
+		"en": "Operatore Economico monosoggettivo"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"4",
+    "descrizione": {
+		"it": "Impresa Ausiliaria",
+		"en": "Impresa Ausiliaria"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Mandatario di GEIE",
+		"en": "Mandatario di GEIE"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"6",
+    "descrizione": {
+		"it": "Consorzio ordinario",
+		"en": "Consorzio ordinario"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Consorzio stabile",
+		"en": "Consorzio stabile"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Consorzio fra società cooperative di produzione e lavoro",
+		"en": "Consorzio fra società cooperative di produzione e lavoro"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Consorzio tra imprese artigiane",
+		"en": "Consorzio tra imprese artigiane"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"10",
+    "descrizione": {
 		"it": "Mandante",
 		"en": "Mandante"
 		},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Consorziato esecutore di un consorzio o consorziato non esecutore che fornisce requisiti al consorzio",
+		"en": "Consorziato esecutore di un consorzio o consorziato non esecutore che fornisce requisiti al consorzio"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"12",
+    "descrizione": {
+		"it": "Mandante di GEIE",
+		"en": "Mandante di GEIE"
+		},
+    "dataInizio":null,
+    "dataFine":null
 }]
+

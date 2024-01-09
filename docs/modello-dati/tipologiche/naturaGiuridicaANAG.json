@@ -1,0 +1,119 @@
+[{
+    "codice":"00",
+    "descrizione": {
+		"it": "Natura giuridica sconosciuta",
+		"en": "Legal nature unknown",
+		"de": "Rechtsnatur unbekannt"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"01",
+    "descrizione": {
+		"it": "Societa' in accomandita per azioni",
+		"en": "Limited partnership by shares",
+		"de": "Kommanditgesellschaft auf aktien"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"02",
+    "descrizione": {
+		"it": "Societa' a responsiabilita' limitata",
+		"en": "Limited liability company",
+		"de": "Gesellschaft mit beschränkter haftung"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"03",
+    "descrizione": {
+		"it": "Societa' per azioni",
+		"en": "Joint-stock company",
+		"de": "Aktiengesellschaft"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{	
+    "codice":"04",
+    "descrizione": {
+		"it": "Societa' cooperative e consorzi iscritti nei registri prefettizi",
+		"en": "Cooperative companies and consortia registered in the prefectural registers",
+		"de": "In den präfekturregistern eingetragene genossenschaften und konsortien"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{	
+    "codice":"05",
+    "descrizione": {
+		"it": "Altre societa' cooperative",
+		"en": "Other cooperative societies",
+		"de": "Andere genossenschaften"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{	
+    "codice":"06",
+    "descrizione": {
+		"it": "Mutue assicuratrici",
+		"en": "Mutual insurance companies",
+		"de": "Versicherungsgesellschaften auf gegenseitigkeit"
+		},
+    "dataInizio":null,
+    "dataFine":null
+
+},{	
+    "codice":"25",
+    "descrizione": {
+		"it": "Societa' in accomandita semplice",
+		"en": "Limited partnership",
+		"de": "Begrenzte partnerschaft"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{	
+    "codice":"50",
+    "descrizione": {
+		"it": "Consorzi ai sensi della L.142/90",
+		"en": "Consortia pursuant to L.142/90",
+		"de": "Konsortien gemäß L.142/90"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{	
+    "codice":"60",
+    "descrizione": {
+		"it": "Ditte individuali",
+		"en": "Individual companies",
+		"de": "Einzelne unternehmen"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{	
+    "codice":"65",
+    "descrizione": {
+		"it": "Enti ecclesiastici",
+		"en": "Ecclesiastical entities",
+		"de": "Kirchliche gremien"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{	
+    "codice":"67",
+    "descrizione": {
+		"it": "Societa' di armamento (non residenti)",
+		"en": "Armament company (non-residents)",
+		"de": "Reedereien (ausländer)"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"999",
+    "descrizione": {
+		"it": "Non classificato",
+		"en": "Not classified",
+		"de": "Nicht klassifiziert"
+		},
+    "dataInizio":null,
+    "dataFine":null
+}]
