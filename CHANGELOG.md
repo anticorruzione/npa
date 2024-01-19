@@ -554,7 +554,7 @@ ref. /docs/specifiche-jws/
 * Aggiornato il file schema-cronologia-schede.xlsx
 </details>
 
-# Note di rilascio del 08/02/2024
+# Note di rilascio del 31/01/2024 (esercizio 01/03/2024)
 
 ## Modello Dati 
 * modello-dati-npa.yaml:
