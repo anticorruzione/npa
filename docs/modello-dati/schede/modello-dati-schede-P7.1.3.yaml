@@ -10,6 +10,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP7BaseType'      
       type: object
       additionalProperties: false
+      required: [datiBaseTerminiInvio]
       properties:
         quadroEconomicoStandard:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'       

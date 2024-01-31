@@ -24,7 +24,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP_14Type'       
       type: object
       additionalProperties: false
-      required: [datiBase,datiBaseDocumenti]
+      required: [datiBase,datiBaseDocumenti,datiBaseTerminiInvio]
       properties: 
         datiBase:
           allOf:
