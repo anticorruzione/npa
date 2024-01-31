@@ -1,15 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_M1_40" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_M1_40" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="M1_40" name="M1_40">
+    <informationRequirement id="InformationRequirement_1j4weak">
+      <requiredInput href="#InputData_1h41ymf" />
+    </informationRequirement>
     <decisionTable id="DecisionTable_M1_40" hitPolicy="COLLECT">
+      <input id="appalto_M1_40" biodi:width="423">
+        <inputExpression id="LiteralExpression_appalto_M1_40" typeRef="string">
+          <text>modificaContrattuale</text>
+        </inputExpression>
+      </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
+      <rule id="DecisionRule_0iqdo0x">
+        <description>REG61: Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d’opera eccede il 10% dell’importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d’opera</description>
+        <inputEntry id="UnaryTests_05jv7oa">
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rzvsmj">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG61\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1utcmb5">
+        <description>REG54: Selezionare un motivo di revisione prezzi</description>
+        <inputEntry id="UnaryTests_1s6uqok">
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-rev" and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = "" or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_057shie">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG54\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q0i2i3">
+        <description>REG56: CIG della nuova procedura avviata: campo non previsto</description>
+        <inputEntry id="UnaryTests_1xob7ga">
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != "other" and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != ""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k14h6m">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG56\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eq7tlk">
+        <description>REG55: in caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale</description>
+        <inputEntry id="UnaryTests_0fk9vq3">
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = "") and (modificaContrattuale.causaModifica = null or modificaContrattuale.causaModifica = "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lsfylj">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG55\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03p0rou">
+        <description>REG62: in caso di ‘Altre cause impreviste ed imprevedibili’ indicare una motivazione nel campo ‘Cause della modifica contrattuale’</description>
+        <inputEntry id="UnaryTests_1i9l538">
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.causaModifica = null or modificaContrattuale.causaModifica = "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1khx8hp">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG62\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
+  <inputData id="InputData_1h41ymf" name="modificaContrattuale" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="M1_40">
         <dc:Bounds height="80" width="180" x="150" y="80" />
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1r60ze0" dmnElementRef="InputData_1h41ymf">
+        <dc:Bounds height="45" width="125" x="177" y="317" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_04vuu20" dmnElementRef="InformationRequirement_1j4weak">
+        <di:waypoint x="240" y="317" />
+        <di:waypoint x="240" y="180" />
+        <di:waypoint x="240" y="160" />
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>

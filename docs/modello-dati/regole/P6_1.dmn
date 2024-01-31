@@ -67,6 +67,21 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1t5ps76">
+        <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
+        <inputEntry id="UnaryTests_0v1qx7v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qy60fi">
+          <text>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != "" and starts with(lotto.datiBaseDocumenti.url,"http:") = false and starts with(lotto.datiBaseDocumenti.url,"https:") = false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wt1l1s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04cxsgw">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
+        </outputEntry>
+      </rule>	  
       <rule id="DecisionRule_P6_1_0015">
         <description>REG10: Servizio Pubblico Locale: il campo è obbligatorio solo se l'oggetto del contratto = servizi</description>
         <inputEntry id="UnaryTests_P6_1_0046">
@@ -119,8 +134,8 @@ satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = nu
       </rule>
       <rule id="DecisionRule_P6_1_0024">
         <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
-- lotti.acquisizionecup=’N’ e oggettoContratto=’services’ o ‘supplies’
-- lotti.acquisizionecup=’N’ e oggettoContratto=’works” e lotti.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+- lotto.acquisizionecup=’N’ e oggettoContratto=’services’ o ‘supplies’
+- lotto.acquisizionecup=’N’ e oggettoContratto=’works” e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
 E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è works e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
         <inputEntry id="UnaryTests_P6_1_0073">
           <text></text>
@@ -229,6 +244,37 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         </inputEntry>
         <outputEntry id="LiteralExpression_P6_1_0039">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
+        </outputEntry>
+      </rule>
+	   <rule id="DecisionRule_13m2iti">
+        <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
+        <inputEntry id="UnaryTests_1vksbpb">
+          <text>appalto.datiBase.importo = null or appalto.datiBase.importo = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1otf3ve">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gjmr71">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19yzvav">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG98\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05gn4js">
+        <description>REG99: L'importo indicato nell'oggetto lotto.datiBase.importo deve essere &gt; 0.</description>
+        <inputEntry id="UnaryTests_024uqji">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10zccl6">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wluzhx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pa9ymc">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
