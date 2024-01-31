@@ -1,15 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_CO1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_CO1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="CO1" name="CO1">
+    <informationRequirement id="InformationRequirement_00o5h7n">
+      <requiredInput href="#InputData_1vsdrei" />
+    </informationRequirement>
     <decisionTable id="DecisionTable_CO1" hitPolicy="COLLECT">
+      <input id="appalto_CO1" biodi:width="394">
+        <inputExpression id="LiteralExpression_appalto_CO1" typeRef="string">
+          <text>conclusione</text>
+        </inputExpression>
+      </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
+      <rule id="DecisionRule_0m0ht0d">
+        <description>REG75: Il campo motivi di risoluzione è obbligatorio in caso di interruzione anticipata per risoluzione contrattuale.</description>
+        <inputEntry id="UnaryTests_0qvvbpl">
+          <text>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != "" and conclusione.causaInterruzioneAnticipata.codice != null and conclusione.causaInterruzioneAnticipata.codice = "2" and (conclusione.motiviRisoluzione = null or conclusione.motiviRisoluzione = "" or conclusione.motiviRisoluzione.codice = null or conclusione.motiviRisoluzione.codice = "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nyzfph">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG75\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q11mnx">
+        <description>REG76: Il campo oneri economici derivanti dalla risoluzione-recesso è obbligatorio in caso di: interruzione anticipata per risoluzione contrattuale, recesso della stazione appaltante, recesso dell'appaltatore </description>
+        <inputEntry id="UnaryTests_1s5u6qo">
+          <text>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != "" and conclusione.causaInterruzioneAnticipata.codice != null and (conclusione.causaInterruzioneAnticipata.codice = "2" or conclusione.causaInterruzioneAnticipata.codice = "4" or conclusione.causaInterruzioneAnticipata.codice = "5") and (conclusione.oneriEconomiciRisoluzioneRecesso = null or conclusione.oneriEconomiciRisoluzioneRecesso = "" or conclusione.oneriEconomiciRisoluzioneRecesso.codice = null or conclusione.oneriEconomiciRisoluzioneRecesso.codice = "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hfwxaj">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG76\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k1i1w6">
+        <description>REG79: L'importo è obbligatorio se è valorizzato il campo oneri economici derivanti dalla risoluzione-recesso</description>
+        <inputEntry id="UnaryTests_00c5cu3">
+          <text>conclusione.oneriEconomiciRisoluzioneRecesso != null and conclusione.oneriEconomiciRisoluzioneRecesso != "" and conclusione.oneriEconomiciRisoluzioneRecesso.codice != null and conclusione.oneriEconomiciRisoluzioneRecesso.codice != "" and (conclusione.importo = null or conclusione.importo = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dv0eqi">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG79\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sqeo67">
+        <description>REG80: Risoluzione/rescissione senza oneri, dunque non va indicato l'importo. Verificare.</description>
+        <inputEntry id="UnaryTests_17tpxbn">
+          <text>conclusione.oneriEconomiciRisoluzioneRecesso != null and conclusione.oneriEconomiciRisoluzioneRecesso != "" and conclusione.oneriEconomiciRisoluzioneRecesso.codice != null and conclusione.oneriEconomiciRisoluzioneRecesso.codice = "0" and conclusione.importo != null and conclusione.importo &gt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02gqmyg">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG80\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t9mbk2">
+        <description>REG81: Non è stata indicata la data di ultimazione </description>
+        <inputEntry id="UnaryTests_0va9sdz">
+          <text>(conclusione.dataInterruzioneAnticipata = null or conclusione.dataInterruzioneAnticipata = "" ) and (conclusione.dataUltimazione = null or conclusione.dataUltimazione = "")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_071emyc">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG81\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03ebwta">
+        <description>REG82: Numero totale degli infortuni incoerente rispetto al numero degli infortuni mortali e con postumi permanenti</description>
+        <inputEntry id="UnaryTests_0euxlz0">
+          <text>conclusione.numeroInfortuni != null and conclusione.numeroInfortuni &lt; (conclusione.diCuiPostumiPermanenti + conclusione.diCuiMortali)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bv2v61">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG82\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bnxfjq">
+        <description>REG83: Il campo incamerata polizza è obbligatorio in caso di interruzione anticipata.</description>
+        <inputEntry id="UnaryTests_083n2oa">
+          <text>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != "" and conclusione.causaInterruzioneAnticipata.codice != null and conclusione.causaInterruzioneAnticipata.codice != "" and conclusione.incamerataPolizza = null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_000dndn">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG83\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hqmqnu">
+        <description>REG84: il campo di cui postumi permanenti deve essere &gt;=0</description>
+        <inputEntry id="UnaryTests_1b6vfpw">
+          <text>conclusione.diCuiPostumiPermanenti != null and conclusione.diCuiPostumiPermanenti &lt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t2bscj">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG84\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0owd8b4">
+        <description>REG85: il campo di cui mortali deve essere &gt;= 0</description>
+        <inputEntry id="UnaryTests_1q15r2j">
+          <text>conclusione.diCuiMortali != null and conclusione.diCuiMortali &lt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10ruv1k">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG85\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
+  <inputData id="InputData_1vsdrei" name="conclusione" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="CO1">
         <dc:Bounds height="80" width="180" x="150" y="110" />
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0je0q06" dmnElementRef="InputData_1vsdrei">
+        <dc:Bounds height="45" width="125" x="177" y="347" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0iatk2c" dmnElementRef="InformationRequirement_00o5h7n">
+        <di:waypoint x="240" y="347" />
+        <di:waypoint x="240" y="210" />
+        <di:waypoint x="240" y="190" />
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>
