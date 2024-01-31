@@ -1,0 +1,2090 @@
+[
+  {
+    "codice": "Z000",
+    "descrizione": {
+      "it": "ITALIA",
+      "en": "ITALIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z200",
+    "descrizione": {
+      "it": "AFGHANISTAN",
+      "en": "AFGHANISTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z100",
+    "descrizione": {
+      "it": "ALBANIA",
+      "en": "ALBANIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z301",
+    "descrizione": {
+      "it": "ALGERIA",
+      "en": "ALGERIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z101",
+    "descrizione": {
+      "it": "ANDORRA",
+      "en": "ANDORRA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z302",
+    "descrizione": {
+      "it": "ANGOLA",
+      "en": "ANGOLA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z529",
+    "descrizione": {
+      "it": "ANGUILLA",
+      "en": "ANGUILLA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z532",
+    "descrizione": {
+      "it": "ANTIGUA E BARBUDA",
+      "en": "ANTIGUA E BARBUDA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z500",
+    "descrizione": {
+      "it": "ANTILLE BRITANNICHE",
+      "en": "ANTILLE BRITANNICHE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z501",
+    "descrizione": {
+      "it": "ANTILLE OLANDESI",
+      "en": "ANTILLE OLANDESI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z203",
+    "descrizione": {
+      "it": "ARABIA SAUDITA",
+      "en": "ARABIA SAUDITA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z600",
+    "descrizione": {
+      "it": "ARGENTINA",
+      "en": "ARGENTINA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z252",
+    "descrizione": {
+      "it": "ARMENIA",
+      "en": "ARMENIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z700",
+    "descrizione": {
+      "it": "AUSTRALIA",
+      "en": "AUSTRALIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z102",
+    "descrizione": {
+      "it": "AUSTRIA",
+      "en": "AUSTRIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z253",
+    "descrizione": {
+      "it": "AZERBAIGIAN",
+      "en": "AZERBAIGIAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z502",
+    "descrizione": {
+      "it": "BAHAMAS",
+      "en": "BAHAMAS"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z204",
+    "descrizione": {
+      "it": "BAHREIN",
+      "en": "BAHREIN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z249",
+    "descrizione": {
+      "it": "BANGLADESH",
+      "en": "BANGLADESH"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z522",
+    "descrizione": {
+      "it": "BARBADOS",
+      "en": "BARBADOS"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z103",
+    "descrizione": {
+      "it": "BELGIO",
+      "en": "BELGIO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z512",
+    "descrizione": {
+      "it": "BELIZE",
+      "en": "BELIZE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z314",
+    "descrizione": {
+      "it": "BENIN",
+      "en": "BENIN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z400",
+    "descrizione": {
+      "it": "BERMUDA",
+      "en": "BERMUDA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z205",
+    "descrizione": {
+      "it": "BHUTAN",
+      "en": "BHUTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z139",
+    "descrizione": {
+      "it": "BIELORUSSIA",
+      "en": "BIELORUSSIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z601",
+    "descrizione": {
+      "it": "BOLIVIA",
+      "en": "BOLIVIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z153",
+    "descrizione": {
+      "it": "BOSNIA-ERZEGOVINA",
+      "en": "BOSNIA-ERZEGOVINA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z358",
+    "descrizione": {
+      "it": "BOTSWANA",
+      "en": "BOTSWANA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z602",
+    "descrizione": {
+      "it": "BRASILE",
+      "en": "BRASILE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z207",
+    "descrizione": {
+      "it": "BRUNEI",
+      "en": "BRUNEI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z104",
+    "descrizione": {
+      "it": "BULGARIA",
+      "en": "BULGARIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z354",
+    "descrizione": {
+      "it": "BURKINA FASO",
+      "en": "BURKINA FASO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z305",
+    "descrizione": {
+      "it": "BURUNDI",
+      "en": "BURUNDI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z208",
+    "descrizione": {
+      "it": "CAMBOGIA",
+      "en": "CAMBOGIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z306",
+    "descrizione": {
+      "it": "CAMERUN",
+      "en": "CAMERUN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z401",
+    "descrizione": {
+      "it": "CANADA",
+      "en": "CANADA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z307",
+    "descrizione": {
+      "it": "CAPO VERDE",
+      "en": "CAPO VERDE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z530",
+    "descrizione": {
+      "it": "CAYMAN",
+      "en": "CAYMAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z105",
+    "descrizione": {
+      "it": "CECOSLOVACCHIA",
+      "en": "CECOSLOVACCHIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z309",
+    "descrizione": {
+      "it": "CIAD",
+      "en": "CIAD"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z603",
+    "descrizione": {
+      "it": "CILE",
+      "en": "CILE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z210",
+    "descrizione": {
+      "it": "CINA",
+      "en": "CINA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z211",
+    "descrizione": {
+      "it": "CIPRO",
+      "en": "CIPRO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z106",
+    "descrizione": {
+      "it": "CITTA' DEL VATICANO",
+      "en": "CITTA' DEL VATICANO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z604",
+    "descrizione": {
+      "it": "COLOMBIA",
+      "en": "COLOMBIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z310",
+    "descrizione": {
+      "it": "COMORE",
+      "en": "COMORE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z311",
+    "descrizione": {
+      "it": "CONGO",
+      "en": "CONGO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z703",
+    "descrizione": {
+      "it": "COOK",
+      "en": "COOK"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z214",
+    "descrizione": {
+      "it": "COREA DEL NORD",
+      "en": "COREA DEL NORD"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z213",
+    "descrizione": {
+      "it": "COREA DEL SUD",
+      "en": "COREA DEL SUD"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z313",
+    "descrizione": {
+      "it": "COSTA D'AVORIO",
+      "en": "COSTA D'AVORIO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z503",
+    "descrizione": {
+      "it": "COSTARICA",
+      "en": "COSTARICA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z149",
+    "descrizione": {
+      "it": "CROAZIA",
+      "en": "CROAZIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z504",
+    "descrizione": {
+      "it": "CUBA",
+      "en": "CUBA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z107",
+    "descrizione": {
+      "it": "DANIMARCA",
+      "en": "DANIMARCA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z526",
+    "descrizione": {
+      "it": "DOMINICA",
+      "en": "DOMINICA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z605",
+    "descrizione": {
+      "it": "ECUADOR",
+      "en": "ECUADOR"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z336",
+    "descrizione": {
+      "it": "EGITTO",
+      "en": "EGITTO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z506",
+    "descrizione": {
+      "it": "EL SALVADOR",
+      "en": "EL SALVADOR"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z215",
+    "descrizione": {
+      "it": "EMIRATI ARABI UNITI",
+      "en": "EMIRATI ARABI UNITI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z368",
+    "descrizione": {
+      "it": "ERITREA",
+      "en": "ERITREA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z144",
+    "descrizione": {
+      "it": "ESTONIA",
+      "en": "ESTONIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z315",
+    "descrizione": {
+      "it": "ETIOPIA",
+      "en": "ETIOPIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z609",
+    "descrizione": {
+      "it": "FALKLAND",
+      "en": "FALKLAND"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z108",
+    "descrizione": {
+      "it": "FAROER",
+      "en": "FAROER"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z704",
+    "descrizione": {
+      "it": "FIJI",
+      "en": "FIJI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z216",
+    "descrizione": {
+      "it": "FILIPPINE",
+      "en": "FILIPPINE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z109",
+    "descrizione": {
+      "it": "FINLANDIA",
+      "en": "FINLANDIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z110",
+    "descrizione": {
+      "it": "FRANCIA",
+      "en": "FRANCIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z316",
+    "descrizione": {
+      "it": "GABON",
+      "en": "GABON"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z317",
+    "descrizione": {
+      "it": "GAMBIA",
+      "en": "GAMBIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z254",
+    "descrizione": {
+      "it": "GEORGIA",
+      "en": "GEORGIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z112",
+    "descrizione": {
+      "it": "GERMANIA",
+      "en": "GERMANIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z318",
+    "descrizione": {
+      "it": "GHANA",
+      "en": "GHANA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z507",
+    "descrizione": {
+      "it": "GIAMAICA",
+      "en": "GIAMAICA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z219",
+    "descrizione": {
+      "it": "GIAPPONE",
+      "en": "GIAPPONE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z113",
+    "descrizione": {
+      "it": "GIBILTERRA",
+      "en": "GIBILTERRA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z361",
+    "descrizione": {
+      "it": "GIBUTI",
+      "en": "GIBUTI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z220",
+    "descrizione": {
+      "it": "GIORDANIA",
+      "en": "GIORDANIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z114",
+    "descrizione": {
+      "it": "GRAN BRETAGNA",
+      "en": "GRAN BRETAGNA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z115",
+    "descrizione": {
+      "it": "GRECIA",
+      "en": "GRECIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z524",
+    "descrizione": {
+      "it": "GRENADA",
+      "en": "GRENADA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z508",
+    "descrizione": {
+      "it": "GUADALUPA",
+      "en": "GUADALUPA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z706",
+    "descrizione": {
+      "it": "GUAM",
+      "en": "GUAM"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z509",
+    "descrizione": {
+      "it": "GUATEMALA",
+      "en": "GUATEMALA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "ZAA2",
+    "descrizione": {
+      "it": "GUERNSEY",
+      "en": "GUERNSEY"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z319",
+    "descrizione": {
+      "it": "GUINEA",
+      "en": "GUINEA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z321",
+    "descrizione": {
+      "it": "GUINEA EQUATORIALE",
+      "en": "GUINEA EQUATORIALE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z320",
+    "descrizione": {
+      "it": "GUINEA-BISSAU",
+      "en": "GUINEA-BISSAU"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z606",
+    "descrizione": {
+      "it": "GUYANA",
+      "en": "GUYANA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z607",
+    "descrizione": {
+      "it": "GUYANA FRANCESE",
+      "en": "GUYANA FRANCESE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z510",
+    "descrizione": {
+      "it": "HAITI",
+      "en": "HAITI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z511",
+    "descrizione": {
+      "it": "HONDURAS",
+      "en": "HONDURAS"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z221",
+    "descrizione": {
+      "it": "HONG KONG",
+      "en": "HONG KONG"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z222",
+    "descrizione": {
+      "it": "INDIA",
+      "en": "INDIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z223",
+    "descrizione": {
+      "it": "INDONESIA",
+      "en": "INDONESIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z224",
+    "descrizione": {
+      "it": "IRAN",
+      "en": "IRAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z225",
+    "descrizione": {
+      "it": "IRAQ",
+      "en": "IRAQ"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z116",
+    "descrizione": {
+      "it": "IRLANDA",
+      "en": "IRLANDA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z117",
+    "descrizione": {
+      "it": "ISLANDA",
+      "en": "ISLANDA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z226",
+    "descrizione": {
+      "it": "ISRAELE",
+      "en": "ISRAELE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "ZAA1",
+    "descrizione": {
+      "it": "JERSEY",
+      "en": "JERSEY"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z118",
+    "descrizione": {
+      "it": "JUGOSLAVIA",
+      "en": "JUGOSLAVIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z255",
+    "descrizione": {
+      "it": "KAZAKISTAN",
+      "en": "KAZAKISTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z322",
+    "descrizione": {
+      "it": "KENIA",
+      "en": "KENIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z731",
+    "descrizione": {
+      "it": "KIRIBATI",
+      "en": "KIRIBATI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z160",
+    "descrizione": {
+      "it": "KOSOVO",
+      "en": "KOSOVO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z227",
+    "descrizione": {
+      "it": "KUWAIT",
+      "en": "KUWAIT"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z256",
+    "descrizione": {
+      "it": "KYRGHIZISTAN",
+      "en": "KYRGHIZISTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z228",
+    "descrizione": {
+      "it": "LAOS",
+      "en": "LAOS"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z359",
+    "descrizione": {
+      "it": "LESOTHO",
+      "en": "LESOTHO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z145",
+    "descrizione": {
+      "it": "LETTONIA",
+      "en": "LETTONIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z229",
+    "descrizione": {
+      "it": "LIBANO",
+      "en": "LIBANO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z325",
+    "descrizione": {
+      "it": "LIBERIA",
+      "en": "LIBERIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z326",
+    "descrizione": {
+      "it": "LIBIA",
+      "en": "LIBIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z119",
+    "descrizione": {
+      "it": "LIECHTENSTEIN",
+      "en": "LIECHTENSTEIN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z146",
+    "descrizione": {
+      "it": "LITUANIA",
+      "en": "LITUANIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "ZZZZ",
+    "descrizione": {
+      "it": "LUOGO SCONOSCIUTO",
+      "en": "LUOGO SCONOSCIUTO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z120",
+    "descrizione": {
+      "it": "LUSSEMBURGO",
+      "en": "LUSSEMBURGO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z231",
+    "descrizione": {
+      "it": "MACAO",
+      "en": "MACAO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z148",
+    "descrizione": {
+      "it": "MACEDONIA",
+      "en": "MACEDONIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z327",
+    "descrizione": {
+      "it": "MADAGASCAR",
+      "en": "MADAGASCAR"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z328",
+    "descrizione": {
+      "it": "MALAWI",
+      "en": "MALAWI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z230",
+    "descrizione": {
+      "it": "MALAYSIA",
+      "en": "MALAYSIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z232",
+    "descrizione": {
+      "it": "MALDIVE",
+      "en": "MALDIVE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z329",
+    "descrizione": {
+      "it": "MALI",
+      "en": "MALI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z121",
+    "descrizione": {
+      "it": "MALTA",
+      "en": "MALTA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z122",
+    "descrizione": {
+      "it": "MAN",
+      "en": "MAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z710",
+    "descrizione": {
+      "it": "MARIANNE SETTENTRIONALI",
+      "en": "MARIANNE SETTENTRIONALI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z330",
+    "descrizione": {
+      "it": "MAROCCO",
+      "en": "MAROCCO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z711",
+    "descrizione": {
+      "it": "MARSHALL",
+      "en": "MARSHALL"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z513",
+    "descrizione": {
+      "it": "MARTINICA",
+      "en": "MARTINICA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z331",
+    "descrizione": {
+      "it": "MAURITANIA",
+      "en": "MAURITANIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z332",
+    "descrizione": {
+      "it": "MAURITIUS",
+      "en": "MAURITIUS"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z514",
+    "descrizione": {
+      "it": "MESSICO",
+      "en": "MESSICO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z735",
+    "descrizione": {
+      "it": "MICRONESIA",
+      "en": "MICRONESIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z140",
+    "descrizione": {
+      "it": "MOLDAVIA",
+      "en": "MOLDAVIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z123",
+    "descrizione": {
+      "it": "MONACO",
+      "en": "MONACO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z233",
+    "descrizione": {
+      "it": "MONGOLIA",
+      "en": "MONGOLIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z159",
+    "descrizione": {
+      "it": "MONTENEGRO",
+      "en": "MONTENEGRO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z333",
+    "descrizione": {
+      "it": "MOZAMBICO",
+      "en": "MOZAMBICO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z206",
+    "descrizione": {
+      "it": "MYANMAR",
+      "en": "MYANMAR"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z300",
+    "descrizione": {
+      "it": "NAMIBIA",
+      "en": "NAMIBIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z713",
+    "descrizione": {
+      "it": "NAURU",
+      "en": "NAURU"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z234",
+    "descrizione": {
+      "it": "NEPAL",
+      "en": "NEPAL"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z515",
+    "descrizione": {
+      "it": "NICARAGUA",
+      "en": "NICARAGUA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z334",
+    "descrizione": {
+      "it": "NIGER",
+      "en": "NIGER"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z335",
+    "descrizione": {
+      "it": "NIGERIA",
+      "en": "NIGERIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z714",
+    "descrizione": {
+      "it": "NIUE",
+      "en": "NIUE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z125",
+    "descrizione": {
+      "it": "NORVEGIA",
+      "en": "NORVEGIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z716",
+    "descrizione": {
+      "it": "NUOVA CALEDONIA",
+      "en": "NUOVA CALEDONIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z719",
+    "descrizione": {
+      "it": "NUOVA ZELANDA",
+      "en": "NUOVA ZELANDA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z235",
+    "descrizione": {
+      "it": "OMAN",
+      "en": "OMAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z126",
+    "descrizione": {
+      "it": "PAESI BASSI",
+      "en": "PAESI BASSI"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z236",
+    "descrizione": {
+      "it": "PAKISTAN",
+      "en": "PAKISTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z734",
+    "descrizione": {
+      "it": "PALAU (OCEANIA)",
+      "en": "PALAU (OCEANIA)"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z161",
+    "descrizione": {
+      "it": "PALESTINA",
+      "en": "PALESTINA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z517",
+    "descrizione": {
+      "it": "PANAMA",
+      "en": "PANAMA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z730",
+    "descrizione": {
+      "it": "PAPUA-NUOVA GUINEA",
+      "en": "PAPUA-NUOVA GUINEA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z610",
+    "descrizione": {
+      "it": "PARAGUAY",
+      "en": "PARAGUAY"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z611",
+    "descrizione": {
+      "it": "PERU'",
+      "en": "PERU'"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z722",
+    "descrizione": {
+      "it": "PITCAIRN",
+      "en": "PITCAIRN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z723",
+    "descrizione": {
+      "it": "POLINESIA FRANCESE",
+      "en": "POLINESIA FRANCESE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z127",
+    "descrizione": {
+      "it": "POLONIA",
+      "en": "POLONIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z128",
+    "descrizione": {
+      "it": "PORTOGALLO",
+      "en": "PORTOGALLO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z518",
+    "descrizione": {
+      "it": "PORTORICO",
+      "en": "PORTORICO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z237",
+    "descrizione": {
+      "it": "QATAR",
+      "en": "QATAR"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z156",
+    "descrizione": {
+      "it": "REPUBBLICA CECA",
+      "en": "REPUBBLICA CECA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z308",
+    "descrizione": {
+      "it": "REPUBBLICA CENTRAFICANA",
+      "en": "REPUBBLICA CENTRAFICANA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z370",
+    "descrizione": {
+      "it": "REPUBBLICA DEMOCRATICA DEL CONGO",
+      "en": "REPUBBLICA DEMOCRATICA DEL CONGO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z505",
+    "descrizione": {
+      "it": "REPUBBLICA DOMINICANA",
+      "en": "REPUBBLICA DOMINICANA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z155",
+    "descrizione": {
+      "it": "REPUBBLICA SLOVACCA",
+      "en": "REPUBBLICA SLOVACCA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z324",
+    "descrizione": {
+      "it": "REUNION",
+      "en": "REUNION"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z129",
+    "descrizione": {
+      "it": "ROMANIA",
+      "en": "ROMANIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z338",
+    "descrizione": {
+      "it": "RUANDA",
+      "en": "RUANDA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z154",
+    "descrizione": {
+      "it": "RUSSIA",
+      "en": "RUSSIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z340",
+    "descrizione": {
+      "it": "S.ELENA",
+      "en": "S.ELENA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z339",
+    "descrizione": {
+      "it": "SAHARA",
+      "en": "SAHARA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z533",
+    "descrizione": {
+      "it": "SAINT KITTS E NEVIS",
+      "en": "SAINT KITTS E NEVIS"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z527",
+    "descrizione": {
+      "it": "SAINT LUCIA",
+      "en": "SAINT LUCIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z403",
+    "descrizione": {
+      "it": "SAINT PIERRE E MIQUELON",
+      "en": "SAINT PIERRE E MIQUELON"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z528",
+    "descrizione": {
+      "it": "SAINT VINCENT E GRENADINE",
+      "en": "SAINT VINCENT E GRENADINE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z724",
+    "descrizione": {
+      "it": "SALOMONE",
+      "en": "SALOMONE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z726",
+    "descrizione": {
+      "it": "SAMOA",
+      "en": "SAMOA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z725",
+    "descrizione": {
+      "it": "SAMOA AMERICANE",
+      "en": "SAMOA AMERICANE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z130",
+    "descrizione": {
+      "it": "SAN MARINO",
+      "en": "SAN MARINO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z341",
+    "descrizione": {
+      "it": "SAO' TOME E PRINCIPE",
+      "en": "SAO' TOME E PRINCIPE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z343",
+    "descrizione": {
+      "it": "SENEGAL",
+      "en": "SENEGAL"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z158",
+    "descrizione": {
+      "it": "SERBIA",
+      "en": "SERBIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z157",
+    "descrizione": {
+      "it": "SERBIA E MONTENEGRO",
+      "en": "SERBIA E MONTENEGRO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z342",
+    "descrizione": {
+      "it": "SEYCHELLES",
+      "en": "SEYCHELLES"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z344",
+    "descrizione": {
+      "it": "SIERRA LEONE",
+      "en": "SIERRA LEONE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z248",
+    "descrizione": {
+      "it": "SINGAPORE",
+      "en": "SINGAPORE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z240",
+    "descrizione": {
+      "it": "SIRIA",
+      "en": "SIRIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z150",
+    "descrizione": {
+      "it": "SLOVENIA",
+      "en": "SLOVENIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z345",
+    "descrizione": {
+      "it": "SOMALIA",
+      "en": "SOMALIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z131",
+    "descrizione": {
+      "it": "SPAGNA",
+      "en": "SPAGNA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z209",
+    "descrizione": {
+      "it": "SRI LANKA",
+      "en": "SRI LANKA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z404",
+    "descrizione": {
+      "it": "STATI UNITI D'AMERICA",
+      "en": "STATI UNITI D'AMERICA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z347",
+    "descrizione": {
+      "it": "SUD AFRICA",
+      "en": "SUD AFRICA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z348",
+    "descrizione": {
+      "it": "SUDAN",
+      "en": "SUDAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z608",
+    "descrizione": {
+      "it": "SURINAME",
+      "en": "SURINAME"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z132",
+    "descrizione": {
+      "it": "SVEZIA",
+      "en": "SVEZIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z133",
+    "descrizione": {
+      "it": "SVIZZERA",
+      "en": "SVIZZERA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z349",
+    "descrizione": {
+      "it": "SWAZILAND",
+      "en": "SWAZILAND"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z257",
+    "descrizione": {
+      "it": "TAGIKISTAN",
+      "en": "TAGIKISTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z217",
+    "descrizione": {
+      "it": "TAIWAN",
+      "en": "TAIWAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z357",
+    "descrizione": {
+      "it": "TANZANIA",
+      "en": "TANZANIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z241",
+    "descrizione": {
+      "it": "THAILANDIA",
+      "en": "THAILANDIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z351",
+    "descrizione": {
+      "it": "TOGO",
+      "en": "TOGO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z728",
+    "descrizione": {
+      "it": "TONGA",
+      "en": "TONGA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z612",
+    "descrizione": {
+      "it": "TRINIDAD E TOBAGO",
+      "en": "TRINIDAD E TOBAGO"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z352",
+    "descrizione": {
+      "it": "TUNISIA",
+      "en": "TUNISIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z243",
+    "descrizione": {
+      "it": "TURCHIA",
+      "en": "TURCHIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z258",
+    "descrizione": {
+      "it": "TURKMENISTAN",
+      "en": "TURKMENISTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z732",
+    "descrizione": {
+      "it": "TUVALU",
+      "en": "TUVALU"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z135",
+    "descrizione": {
+      "it": "U.R.S.S.",
+      "en": "U.R.S.S."
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z138",
+    "descrizione": {
+      "it": "UCRAINA",
+      "en": "UCRAINA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z353",
+    "descrizione": {
+      "it": "UGANDA",
+      "en": "UGANDA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z134",
+    "descrizione": {
+      "it": "UNGHERIA",
+      "en": "UNGHERIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z613",
+    "descrizione": {
+      "it": "URUGUAY",
+      "en": "URUGUAY"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z259",
+    "descrizione": {
+      "it": "UZBEKISTAN",
+      "en": "UZBEKISTAN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z733",
+    "descrizione": {
+      "it": "VANUATU",
+      "en": "VANUATU"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z614",
+    "descrizione": {
+      "it": "VENEZUELA",
+      "en": "VENEZUELA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z520",
+    "descrizione": {
+      "it": "VERGINI AMERICANE",
+      "en": "VERGINI AMERICANE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z525",
+    "descrizione": {
+      "it": "VERGINI BRITANNICHE",
+      "en": "VERGINI BRITANNICHE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z251",
+    "descrizione": {
+      "it": "VIETNAM",
+      "en": "VIETNAM"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z729",
+    "descrizione": {
+      "it": "WALLIS E FUTUNA",
+      "en": "WALLIS E FUTUNA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z246",
+    "descrizione": {
+      "it": "YEMEN",
+      "en": "YEMEN"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z355",
+    "descrizione": {
+      "it": "ZAMBIA",
+      "en": "ZAMBIA"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "Z337",
+    "descrizione": {
+      "it": "ZIMBABWE",
+      "en": "ZIMBABWE"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  }
+]
