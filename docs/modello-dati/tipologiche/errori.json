@@ -854,6 +854,42 @@
     "dataFine":null
 },	
 {
+    "codice":"ERR96",
+    "descrizione": {
+		"it": "importo differente per lo stesso idPartecipante",
+		"en": "importo differente per lo stesso idPartecipante"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR97",
+    "descrizione": {
+		"it": "errore durante la validazione del CUP",
+		"en": "errore durante la validazione del CUP"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR98",
+    "descrizione": {
+		"it": "errore durante la validazione del CIG negli accordi quadro",
+		"en": "errore durante la validazione del CIG negli accordi quadro"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR99",
+    "descrizione": {
+		"it": "popolare in modo alternativo idContratto o cig nel body della scheda",
+		"en": "popolare in modo alternativo idContratto o cig nel body della scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
@@ -991,8 +1027,8 @@
 {
     "codice":"REG8",
     "descrizione": {
-		"it": "Il campo deve essere una url valida e iniziare per http oppure per https.",
-		"en": "Il campo deve essere una url valida e iniziare per http oppure per https."
+		"it": "I campi contenente una url devono iniziare per http oppure per https. In presenza di eForm verificare anche la validità del link ai documenti di gara (BT-15).",
+		"en": "I campi contenente una url devono iniziare per http oppure per https. In presenza di eForm verificare anche la validità del link ai documenti di gara (BT-15)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1486,8 +1522,8 @@
 {
     "codice":"REG74",
     "descrizione": {
-		"it": "Non è stato valorizzato il nuovo importo della sicurezza",
-		"en": "Non è stato valorizzato il nuovo importo della sicurezza"
+		"it": "Non è stato valorizzato il campo oneri derivanti",
+		"en": "Non è stato valorizzato il campo oneri derivanti"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1668,6 +1704,51 @@
     "descrizione": {
 		"it": "Oneri complessivi derivanti è obbligatorio se il numero totale riserve è maggiore di zero.",
 		"en": "Oneri complessivi derivanti è obbligatorio se il numero totale riserve è maggiore di zero."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG95",
+    "descrizione": {
+		"it": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.",
+		"en": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG96",
+    "descrizione": {
+		"it": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.",
+		"en": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG97",
+    "descrizione": {
+		"it": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.",
+		"en": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG98",
+    "descrizione": {
+		"it": "L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.",
+		"en": "L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG99",
+    "descrizione": {
+		"it": "L'importo indicato nell'oggetto lotti.datiBase.importo deve essere > 0.",
+		"en": "L'importo indicato nell'oggetto lotti.datiBase.importo deve essere > 0."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2343,6 +2424,123 @@
    "descrizione": {
        "it": "Anagrafica Stazione Appaltante mal formattato",
        "en": "Anagrafica Stazione Appaltante mal formattato"
+   },
+   "dataInizio":null,
+   "dataFine":null
+   },
+{
+   "codice":"FVX39",
+   "descrizione": {
+       "it": "Anagrafica Stazione Appaltante non presente",
+       "en": "Anagrafica Stazione Appaltante non presente"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX40",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Inserisci Documento FVC - Non Disponibile",
+       "en": "Errore Servizio esterno. Inserisci Documento FVC - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX41",
+   "descrizione": {
+       "it": "Id documento non in formato UUID",
+       "en": "Id documento non in formato UUID"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX42",
+   "descrizione": {
+       "it": "Id fascicolo non in formato UUID",
+       "en": "Id fascicolo non in formato UUID"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX43",
+   "descrizione": {
+       "it": "Chiave Accesso non in formato UUID",
+       "en": "Chiave Accesso non in formato UUID"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX44",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Persona Fisica Servizio - Non Disponibile",
+       "en": "Errore Servizio esterno. Persona Fisica Servizio - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX45",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Richiedi Documento Servizio - Non Disponibile",
+       "en": "Errore Servizio esterno. Richiedi Documento Servizio - Non Disponibile"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX51",
+   "descrizione": {
+       "it": "Configurazione tipo documento non presente",
+       "en": "Configurazione tipo documento non presente"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX46",
+   "descrizione": {
+       "it": "Dati non validi",
+       "en": "Dati non validi"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX47",
+   "descrizione": {
+       "it": "Codice Fiscale Impresa non valido",
+       "en": "Codice Fiscale Impresa non valido"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX48",
+   "descrizione": {
+       "it": "Codice Fiscale Professionistra non valido",
+       "en": "Codice Fiscale Professionistra non valido"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX49",
+   "descrizione": {
+       "it": "Codice Fiscale Persona Fisica non valido",
+       "en": "Codice Fiscale Persona Fisica non valido"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX50",
+   "descrizione": {
+       "it": "Codice Fiscale Persona Non Fisica non valido",
+       "en": "Codice Fiscale Persona Non Fisica non valido"
    },
    "dataInizio":null,
    "dataFine":null

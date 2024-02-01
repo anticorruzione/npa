@@ -1,4 +1,132 @@
-[{
+[{      "codice": "00001",
+      "descrizione": {
+        "it": "Comunicazione antimafia",
+        "en": "Comunicazione antimafia"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00004",
+      "descrizione": {
+        "it": "Certificato integrale del casellario giudiziario",
+        "en": "Certificato integrale del casellario giudiziario"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00005",
+      "descrizione": {
+        "it": "Anagrafe delle sanzioni amministrative dipendenti da reato",
+        "en": "Anagrafe delle sanzioni amministrative dipendenti da reato"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00021",
+      "descrizione": {
+        "it": "Certificato regolarità fiscale violazioni definitive",
+        "en": "Certificato regolarità fiscale violazioni definitive"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},
+{
+      "codice": "00009",
+      "descrizione": {
+        "it": "Sanzioni sicurezza sul lavoro",
+        "en": "Sanzioni sicurezza sul lavoro"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00024",
+      "descrizione": {
+        "it": "DURC",
+        "en": "DURC"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00033",
+      "descrizione": {
+        "it": "Estratto del casellario informatico ANAC",
+        "en": "Estratto del casellario informatico ANAC"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00034",
+      "descrizione": {
+        "it": "Visura al registo delle imprese",
+        "en": "Visura al registo delle imprese"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00035",
+      "descrizione": {
+        "it": "Dati reddituali impresa individuale",
+        "en": "Dati reddituali impresa individuale"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00036",
+      "descrizione": {
+        "it": "Consistenza media personale",
+        "en": "Consistenza media personale"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00037",
+      "descrizione": {
+        "it": "Costo complessivo personale",
+        "en": "Costo complessivo personale"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00038",
+      "descrizione": {
+        "it": "DURC inarcassa professionista",
+        "en": "DURC inarcassa professionista"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00039",
+      "descrizione": {
+        "it": "DURC inarcassa impresa",
+        "en": "DURC inarcassa impresa"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00040",
+      "descrizione": {
+        "it": "DURC inarcassa professionisti",
+        "en": "DURC inarcassa professionisti"
+      },
+      "dataInizio": null,
+      "dataFine": null     
+},{
+      "codice": "00041",
+      "descrizione": {
+        "it": "Dati reddituali società di persone",
+        "en": "Dati reddituali società di persone"
+      },
+      "dataInizio": null,
+      "dataFine": null     
+},{
+      "codice": "00899",
+      "descrizione": {
+        "it": "Documento generico OE",
+        "en": "Documento generico OE"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
     "codice":"00900",
     "descrizione": {
 		"it": "espd-Request - European single procurement document - Request",

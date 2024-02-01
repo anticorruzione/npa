@@ -28,7 +28,22 @@
         </inputExpression>
       </input>
       <output id="Errore_P1_18" name="Errore" typeRef="string" biodi:width="269" />
-      <rule id="DecisionRule_P1_18_0034">
+      <rule id="DecisionRule_1t5ps76">
+        <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
+        <inputEntry id="UnaryTests_0v1qx7v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qy60fi">
+          <text>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != "" and starts with(lotto.datiBaseDocumenti.url,"http:") = false and starts with(lotto.datiBaseDocumenti.url,"https:") = false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wt1l1s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04cxsgw">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
+        </outputEntry>
+      </rule>      
+	  <rule id="DecisionRule_P1_18_0034">
         <description>REG33: Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</description>
         <inputEntry id="UnaryTests_P1_18_0103">
           <text></text>
@@ -77,6 +92,87 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_18_0039">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
+        </outputEntry>
+      </rule>
+	  <rule id="DecisionRule_1oiflb4">
+        <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</description>
+        <inputEntry id="UnaryTests_1bngedq">
+          <text>appalto.datiBaseProcedura.tipoProcedura.codice = "open" or appalto.datiBaseProcedura.tipoProcedura.codice = "oth-single"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jq49yh">
+          <text>some lotto in lotti
+satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_146yua6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0otk16x">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG95\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g72lga">
+        <description>REG96: E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
+        <inputEntry id="UnaryTests_1izcarr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bpo583">
+          <text>some lotto in lotti
+satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="") and
+(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = "")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0viirst">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00iukh1">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG96\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_117r61g">
+        <description>REG97: Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
+        <inputEntry id="UnaryTests_1pdxw01">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_050br9q">
+          <text>some lotto in lotti
+satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00w9vwt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r55cm1">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG97\"}"</text>
+        </outputEntry>
+      </rule>
+	   <rule id="DecisionRule_13m2iti">
+        <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
+        <inputEntry id="UnaryTests_1vksbpb">
+          <text>appalto.datiBase.importo = null or appalto.datiBase.importo = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1otf3ve">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gjmr71">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19yzvav">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG98\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05gn4js">
+        <description>REG99: L'importo indicato nell'oggetto lotto.datiBase.importo deve essere &gt; 0.</description>
+        <inputEntry id="UnaryTests_024uqji">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10zccl6">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wluzhx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pa9ymc">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

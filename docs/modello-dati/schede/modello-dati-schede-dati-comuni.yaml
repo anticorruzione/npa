@@ -1686,7 +1686,7 @@ components:
     LottoP6BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier, afferenteInvestimentiPNRR,opzioniRinnovi, categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari]
+      required: [lotIdentifier, afferenteInvestimentiPNRR,opzioniRinnovi, categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBaseTerminiInvio]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1753,7 +1753,7 @@ components:
     LottoP4BaseType:
         description: Oggetto che riporta i dati del lotto
         type: object
-        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase,datiBaseDocumenti]
+        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase,datiBaseDocumenti,datiBaseTerminiInvio]
         additionalProperties: false
         properties:
           servizioPubblicoLocale:
@@ -1833,7 +1833,7 @@ components:
     LottoP7BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,datiBase]
+      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,datiBase,datiBaseDocumenti]
       additionalProperties: false
       properties:
         lotIdentifier:

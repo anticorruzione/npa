@@ -554,48 +554,64 @@ ref. /docs/specifiche-jws/
 * Aggiornato il file schema-cronologia-schede.xlsx
 </details>
 
-# Note di rilascio del 08/02/2024
+# Note di rilascio del 31/01/2024 (esercizio 01/03/2024)
 
 ## Modello Dati 
 * modello-dati-npa.yaml:
   * modificato l'attributo $ref dell'oggetto scheda in AvvisoType
+    
+### Regole (IN ESERCIZIO IL 09/02/2024)
+* P1_16.dmn, P1_17.dmn, P1_18.dmn, P1_19.dmn, P1_20.dmn, P1_21.dmn, P1_23.dmn, P1_24.dmn,P2_16.dmn, P2_17.dmn, P2_18.dmn, P2_19.dmn, P2_20.dmn, P2_21.dmn, P2_23.dmn, P2_24.dmn, P3*.dmn, P4*.dmn:
+  * aggiunte le regole REG95, REG96, REG97 sulla data di scadenza presentazione offerte e data scadenza presentazione invito
 
 ### Schede
 * issue 712:
-	* modello-dati-schede-dati-comuni.yaml: oggetto DatiPersonaGiuridicaType: sostituito idgruppo con idPartecipante. 
+  * modello-dati-schede-dati-comuni.yaml: oggetto DatiPersonaGiuridicaType: sostituito idgruppo con idPartecipante. 
 * issue 694, 799:
-	* modello-dati-schede-dati-comuni.yaml: oggetto OfferteType: reso obbligatorio il campo aggiudicatario.
+  * modello-dati-schede-dati-comuni.yaml: oggetto OfferteType: reso obbligatorio il campo aggiudicatario.
 * issue 448,548,567,875:	
-	* modello-dati-schede-CO2.yaml: oggetto AnacFormCO2Type: inserito cig allo stesso livello dell’oggetto conclusione.
-	* modello-dati-schede-CO1.yaml: oggetto AnacFormCO1Type: inserita la doppia chiave: idContratto e cig
+  * modello-dati-schede-CO2.yaml: oggetto AnacFormCO2Type: inserito cig allo stesso livello dell’oggetto conclusione.
+  * modello-dati-schede-CO1.yaml: oggetto AnacFormCO1Type: inserita la doppia chiave: idContratto e cig
 * issue 796:
-	* modello-dati-schede-A3_6.yaml: eliminato l'oggetto datiBaseRisultatoProcedura da AggiudicazioneA3_6Type
+  * modello-dati-schede-A3_6.yaml: eliminato l'oggetto datiBaseRisultatoProcedura da AggiudicazioneA3_6Type
 * issue 599:
-	* modello-dati-schede-dati-comuni.yaml, modello-dati-schede-A3.6.yaml, modello-dati-schede-PL2.7.yaml, modello-dati-schede-PL2.8.yaml, modello-dati-schede-PL2.9.yaml, modello-dati-schede-P3.4.yaml, modello-dati-schede-P2.10.yaml, modello-dati-schede-P2.11.yaml, modello-dati-schede-P2.16.yaml, modello-dati-schede-P2.17.yaml, modello-dati-schede-P2.18.yaml, modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml: modificata la descrizione dei dati comuni con il ted
+  * modello-dati-schede-dati-comuni.yaml, modello-dati-schede-A3.6.yaml, modello-dati-schede-PL2.7.yaml, modello-dati-schede-PL2.8.yaml, modello-dati-schede-PL2.9.yaml, modello-dati-schede-P3.4.yaml, modello-dati-schede-P2.10.yaml, modello-dati-schede-P2.11.yaml, modello-dati-schede-P2.16.yaml, modello-dati-schede-P2.17.yaml, modello-dati-schede-P2.18.yaml, modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml: modificata la descrizione dei dati comuni con il ted
 * issue 308:
-	* modello-dati-schede-RSU1.yaml: modificata la cardinalità dell'oggetto codiceFiscaleDitta. Diventato array codiciFiscaliOE
+  * modello-dati-schede-RSU1.yaml: modificata la cardinalità dell'oggetto codiceFiscaleDitta. Diventato array codiciFiscaliOE
 * issue 850, 855, 912:
-	* reso offertePresentate obbligatorio nelle schede A1_31, A2_31, A3_5
+  * reso offertePresentate obbligatorio nelle schede A1_31, A2_31, A3_5
 * issue 854:
-	* reso offertePresentate obbligatorio nella scheda A3_3 
+  * reso offertePresentate obbligatorio nella scheda A3_3 
 * tolto il campo idAppalto da tutte le schede.
 * PL,P*,AD*: reso obbligatorio l'oggetto datiBaseDocumenti con il link SA su tutte le schede in cui il campo url è obbligatorio.
 * modello-dati-schede-P5.yaml:
-	* eliminati i campi oggetto, oggettoMl, oggettoContratto, importo da LottoP5Type e aggiunto il campo datiBase, contenenti i campi oggetto, oggettoMl, oggettoContratto, importo.
+  * eliminati i campi oggetto, oggettoMl, oggettoContratto, importo da LottoP5Type e aggiunto il campo datiBase, contenenti i campi oggetto, oggettoMl, oggettoContratto, importo.
  * modello-dati-schede-dati-comuni.yaml:
-   	* aggiunta obbligatorietà del campo datiBase.importo.
-   	* eliminato il pattern nei campi percentuale e inseriti gli attributi minimum =0 e maximum=100
-   	  
+   * aggiunta obbligatorietà del campo datiBase.importo.
+  * eliminato il pattern nei campi percentuale e inseriti gli attributi minimum =0 e maximum=100
+ * P2*,P3_4,P3_5,P4*,P6*,P7*,PL2_8:
+  * reso obbligatorio l'oggetto datiBaseTerminiInvio
+       
 ### Tipologiche
-* aggiornata ruoloOE.json
+* aggiornata tipoDocumento.json
 * aggiornata categoria.json: eliminate le voci non più valide
 * aggiornata codIstat.json: eliminate le voci non più valide, eliminata la voce "non classificato", corretti i codici inserendo la codifica a 9 cifre
 * aggiornata codNuts.json: eliminate le voci non più valide, eliminata la voce "non classificato"
-
+* tipoCatastoStato.json
+  * nuova tipologica utilizzabile per la compilazione della richiesta di documentazione 
+* tipoFormaGiuridica.json
+  * nuova tipologica utilizzabile per la compilazione della richiesta di documentazione
+* aggiornata errori.json
+  
 ## Orchestratore  
 * Modificata la colonna N "pubblicazioneNazionale": 
-	* scheda AD3: impostato pubblicazioneNazionale a SI
-	* schede A3_1, A3_2, A3_3: impostato pubblicazioneNazionale a NO (modifica già pubblicata)
+  * scheda AD3: impostato pubblicazioneNazionale a SI
+  * schede A3_1, A3_2, A3_3: impostato pubblicazioneNazionale a NO (modifica già pubblicata)
 * Modificata la colonna R "schedaSuccessiva": 
-	* scheda CO1: inclusa se stessa come scheda successiva
-	* scheda CO2: inclusa se stessa come scheda successiva
+  * scheda CO1: inclusa se stessa come scheda successiva
+  * scheda CO2: inclusa se stessa come scheda successiva
+  * per le schede di indizione sottosoglia:
+  	* dove prevista come scheda successiva S1,S2 diventa S1,S2,NAG
+  	* dove prevista come scheda successiva S2 diventa S2,NAG
+  	* dove prevista come scheda successiva S1 diventa S1,NAG
+  * per la scheda S1 diventa S2,NAG
