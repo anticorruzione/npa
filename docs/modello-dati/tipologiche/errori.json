@@ -890,6 +890,15 @@
     "dataFine":null
 },
 {
+    "codice":"ERR100",
+    "descrizione": {
+		"it": "Importo totale non consentito per l'Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.",
+		"en": "Importo totale non consentito per l'Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
@@ -1711,8 +1720,8 @@
 {
     "codice":"REG95",
     "descrizione": {
-		"it": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.",
-		"en": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio."
+		"it": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131).",
+		"en": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1720,8 +1729,8 @@
 {
     "codice":"REG96",
     "descrizione": {
-		"it": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.",
-		"en": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito."
+		"it": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).",
+		"en": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1729,8 +1738,8 @@
 {
     "codice":"REG97",
     "descrizione": {
-		"it": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.",
-		"en": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito."
+		"it": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).",
+		"en": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1738,8 +1747,8 @@
 {
     "codice":"REG98",
     "descrizione": {
-		"it": "L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.",
-		"en": "L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0."
+		"it": "L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0. In presenza di eForm verificare l'importo inserito nel campo EstimatedOverallContractAmount (BT-27).",
+		"en": "L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0. In presenza di eForm verificare l'importo inserito nel campo EstimatedOverallContractAmount (BT-27)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1747,8 +1756,8 @@
 {
     "codice":"REG99",
     "descrizione": {
-		"it": "L'importo indicato nell'oggetto lotti.datiBase.importo deve essere > 0.",
-		"en": "L'importo indicato nell'oggetto lotti.datiBase.importo deve essere > 0."
+		"it": "L'importo indicato nell'oggetto lotti.datiBase.importo deve essere > 0. In presenza di eForm verificare l'importo inserito nel campo EstimatedOverallContractAmount (BT-27).",
+		"en": "L'importo indicato nell'oggetto lotti.datiBase.importo deve essere > 0. In presenza di eForm verificare l'importo inserito nel campo EstimatedOverallContractAmount (BT-27)."
 	},
     "dataInizio":null,
     "dataFine":null
