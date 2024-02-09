@@ -357,7 +357,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_3_0038">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66"}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_3_0038">

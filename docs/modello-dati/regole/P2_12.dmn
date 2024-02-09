@@ -50,7 +50,7 @@ satisfies list contains(appalto.categorieMerceologiche, categoria))</text>
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P2_12_0019">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":{\"REG1\"}}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_12_0007">
@@ -262,7 +262,7 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
         </inputEntry>
         <inputEntry id="UnaryTests_P2_12_0068">
           <text>some lotto in lotti
-satisfies (lotto.ripetizioniEConsegneComplementari or lotto.ipotesiCollegamento.motivoCollegamento.codice != "10") and (lotto.ipotesiCollegamento.cigCollegato = null)</text>
+satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and lotto.ipotesiCollegamento.cigCollegato = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_12_0069">
           <text></text>

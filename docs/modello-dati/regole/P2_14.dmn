@@ -216,7 +216,7 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
         </inputEntry>
         <inputEntry id="UnaryTests_P2_14_0068">
           <text>some lotto in lotti
-satisfies (lotto.ripetizioniEConsegneComplementari or lotto.ipotesiCollegamento.motivoCollegamento.codice != "10") and lotto.ipotesiCollegamento.cigCollegato = null</text>
+satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and lotto.ipotesiCollegamento.cigCollegato = null</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P2_14_0069">
           <text></text>

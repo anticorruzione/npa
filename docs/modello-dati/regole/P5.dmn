@@ -6,10 +6,7 @@
     </informationRequirement>
     <informationRequirement id="InformationRequirement_P5_02">
       <requiredInput href="#InputData_lotti_P5" />
-    </informationRequirement>
-    <informationRequirement id="InformationRequirement_P5_03">
-      <requiredInput href="#InputData_stazioniAppaltanti_P5" />
-    </informationRequirement>
+    </informationRequirement>    
     <informationRequirement id="InformationRequirement_1b9q9eh">
       <requiredInput href="#InputData_166thjv" />
     </informationRequirement>
@@ -35,10 +32,7 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1otf3ve">
           <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0gjmr71">
-          <text></text>
-        </inputEntry>
+        </inputEntry>        
         <outputEntry id="LiteralExpression_19yzvav">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG98\"}"</text>
         </outputEntry>
@@ -51,9 +45,6 @@
         <inputEntry id="UnaryTests_10zccl6">
           <text>some lotto in lotti
 satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1wluzhx">
-          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pa9ymc">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
