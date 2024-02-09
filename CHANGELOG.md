@@ -554,7 +554,8 @@ ref. /docs/specifiche-jws/
 * Aggiornato il file schema-cronologia-schede.xlsx
 </details>
 
-# Note di rilascio del 31/01/2024 (esercizio 01/03/2024)
+<details>
+<summary><h1>Note di rilascio del 31/01/2024 (esercizio 01/03/2024)</h1></summary>
 
 ## Modello Dati 
 * modello-dati-npa.yaml:
@@ -594,6 +595,7 @@ ref. /docs/specifiche-jws/
        
 ### Tipologiche
 * aggiornata tipoDocumento.json
+* aggiornata ruoloOE.json
 * aggiornata categoria.json: eliminate le voci non più valide
 * aggiornata codIstat.json: eliminate le voci non più valide, eliminata la voce "non classificato", corretti i codici inserendo la codifica a 9 cifre
 * aggiornata codNuts.json: eliminate le voci non più valide, eliminata la voce "non classificato"
@@ -615,3 +617,19 @@ ref. /docs/specifiche-jws/
   	* dove prevista come scheda successiva S2 diventa S2,NAG
   	* dove prevista come scheda successiva S1 diventa S1,NAG
   * per la scheda S1 diventa S2,NAG
+</details>
+
+# Note di rilascio del 09/02/2024 (Segnalazioni chiuse in Esercizio)
+
+### Regole
+* Ticket#2024012460000868:
+  * AD4.dmn: eliminate le regole REG69, REG70, REG71
+* Issue 1010:
+  * AC1.dmn: corretto il messaggio di errore e modificata la REG74 perché accetti anche lo 0 nel campo oneriDerivanti. 
+* Issue 1076:
+  * P*.dmn: corretta la REG15
+* P1_18.dmn, P2_18.dmn, P5.dmn, A3_6.dmn: corretta la sintassi
+* AD5.dmn: aggiundo controllo su importo dati base
+
+### Tipologiche
+* aggiornata errori.json 
