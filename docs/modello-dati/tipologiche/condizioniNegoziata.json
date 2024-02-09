@@ -221,7 +221,7 @@
 		"en": "Altre motivazioni"
 		},
     "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
+    "dataFine":null
 },
 {
     "codice":"26",
@@ -399,6 +399,15 @@
     "descrizione": {
 		"it": "Procedura negoziata sottosoglia",
 		"en": "Procedura negoziata sottosoglia"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"46",
+    "descrizione": {
+		"it": "Appalto specifico nel Sistema dinamico di acquisizione",
+		"en": "Appalto specifico nel Sistema dinamico di acquisizione"
 		},
     "dataInizio":null,
     "dataFine":null
