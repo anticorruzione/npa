@@ -555,7 +555,10 @@ ref. /docs/specifiche-jws/
 </details>
 
 <details>
-<summary><h1>Note di rilascio del 31/01/2024 (esercizio 01/03/2024)</h1></summary>
+<summary><h1>Note di rilascio del 31/01/2024 (esercizio 01/03/2024 ore 13:00)</h1></summary>
+
+## Pianificazione orario
+Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di circa un'ora, durante la quale i servizi PCP non saranno raggiungibili.
 
 ## Modello Dati 
 * modello-dati-npa.yaml:
