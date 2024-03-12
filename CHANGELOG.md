@@ -649,4 +649,4 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
     
 ### Tipologiche
 * aggiornata errori.json
-* strumentiSvolgimentoProcedure.json: riattivata la voce con codice 5  (modifica già pubblicata in Esercizio) 
+* strumentiSvolgimentoProcedure.json: riattivata la voce con codice 5
