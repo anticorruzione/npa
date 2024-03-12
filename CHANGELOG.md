@@ -622,7 +622,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
   * per la scheda S1 diventa S2,NAG
 </details>
 
-# Note di rilascio del 09/02/2024 (Segnalazioni chiuse in Esercizio)
+<details>
+<summary><h1>Note di rilascio del 09/02/2024 (Segnalazioni chiuse in Esercizio)</h1></summary>
 
 ### Regole
 * Ticket#2024012460000868:
@@ -635,4 +636,17 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * AD5.dmn: aggiundo controllo su importo dati base
 
 ### Tipologiche
-* aggiornata errori.json 
+* aggiornata errori.json
+</details>
+
+# Note di rilascio del 12/03/2024 (Segnalazioni chiuse in Esercizio)
+
+### Segnalazioni
+* Issue 996, 1046, 1052, 1130, 1249:
+  * fix messaggio di errore troncato proveniente dal TED
+* Issue 1174, 1156, 1134:
+  * fix errore partecipante ERR77
+    
+### Tipologiche
+* aggiornata errori.json
+* strumentiSvolgimentoProcedure.json: riattivata la voce con codice 5  (modifica già pubblicata in Esercizio) 
