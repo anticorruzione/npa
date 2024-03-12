@@ -899,6 +899,87 @@
     "dataFine":null
 },
 {
+    "codice":"ERR101",
+    "descrizione": {
+		"it": "Il codice scheda in ingresso non è coerente con la scheda che si desidera rettificare.",
+		"en": "Il codice scheda in ingresso non è coerente con la scheda che si desidera rettificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR102",
+    "descrizione": {
+		"it": "La scheda non è rettificabile secondo le regole definite dall'orchestratore.",
+		"en": "La scheda non è rettificabile secondo le regole definite dall'orchestratore."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR103",
+    "descrizione": {
+		"it": "Il numero delle stazioni appaltanti deve restare invariato rispetto alla scheda che si desidera rettificare.",
+		"en": "Il numero delle stazioni appaltanti deve restare invariato rispetto alla scheda che si desidera rettificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR104",
+    "descrizione": {
+		"it": "Le stazioni appaltanti devono restare invariate rispetto alla scheda che si desidera rettificare.",
+		"en": "Le stazioni appaltanti devono restare invariate rispetto alla scheda che si desidera rettificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR105",
+    "descrizione": {
+		"it": "Il numero dei lotti deve restare invariato rispetto alla scheda che si desidera rettificare.",
+		"en": "Il numero dei lotti deve restare invariato rispetto alla scheda che si desidera rettificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR106",
+    "descrizione": {
+		"it": "Tutti i lotIdentifier devono coincidere con quelli della scheda che si desidera rettificare.",
+		"en": "Tutti i lotIdentifier devono coincidere con quelli della scheda che si desidera rettificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR107",
+    "descrizione": {
+		"it": "Tutti i cig devono coincidere con quelli della scheda che si desidera rettificare.",
+		"en": "Tutti i cig devono coincidere con quelli della scheda che si desidera rettificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR108",
+    "descrizione": {
+		"it": "idContratto deve coincidere con quello della scheda che si desidera rettificare.",
+		"en": "idContratto deve coincidere con quello della scheda che si desidera rettificare."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR109",
+    "descrizione": {
+		"it": "operazione non consentita: per l'appalto è in corso una richiesta di rettifica.",
+		"en": "operazione non consentita: per l'appalto è in corso una richiesta di rettifica."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
@@ -1763,6 +1844,51 @@
     "dataFine":null
 },
 {
+    "codice":"REG100",
+    "descrizione": {
+		"it": "Negli affidamenti diretti è consentito inserire un solo idPartecipante",
+		"en": "Negli affidamenti diretti è consentito inserire un solo idPartecipante"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG101",
+    "descrizione": {
+		"it": "Indicare uno dei motivi della comunicazione tra annullamento e comunicazioneNuovoImporto",
+		"en": "Indicare uno dei motivi della comunicazione tra annullamento e comunicazioneNuovoImporto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG102",
+    "descrizione": {
+		"it": "Indicare il nuovo importo",
+		"en": "Indicare il nuovo importo"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG103",
+    "descrizione": {
+		"it": "L'importo non può superare i 5K",
+		"en": "L'importo non può superare i 5K"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG104",
+    "descrizione": {
+		"it": "L'importo non può essere inferiore ai 5K",
+		"en": "L'importo non può essere inferiore ai 5K"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"AUT01",
     "descrizione": {
         "it": "l'utente non è presente tra le stazioni appaltanti",
@@ -2553,4 +2679,25 @@
    },
    "dataInizio":null,
    "dataFine":null
-}]
+},
+{
+   "codice":"FVX52",
+   "descrizione": {
+       "it": "Servizio esterno ricerca soggetti non disponibile",
+       "en": "External service searches for unavailable subjects",
+       "de": "Externer Dienst sucht nach nicht verfügbaren Themen"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+    "codice": "SCH01",
+    "descrizione": {
+     	"it": "Soggetto Non Presente Nelle Schede Inviate",
+        "en": "Subject not present in the cards sent",
+        "de": "Der Betreff ist in den versendeten Karten nicht enthalten"
+      },
+     "dataInizio": null,
+     "dataFine": null
+}
+]
