@@ -639,7 +639,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * aggiornata errori.json
 </details>
 
-# Note di rilascio del 12/03/2024 (Segnalazioni chiuse in Esercizio)
+<details>
+<summary><h1>Note di rilascio del 12/03/2024 (Segnalazioni chiuse in Esercizio)</h1></summary>
 
 ### Segnalazioni
 * Issue 996, 1046, 1052, 1130, 1249:
@@ -650,3 +651,10 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 ### Tipologiche
 * aggiornata errori.json
 * strumentiSvolgimentoProcedure.json: riattivata la voce con codice 5
+</details>
+
+# Note di rilascio del 15/03/2024 (in Esercizio)
+ 
+### Tipologiche
+* misurePremiali.json: inserita la voce con codice 13
+* fattispecieTracciabilita.json: inserita la voce con codice 11
