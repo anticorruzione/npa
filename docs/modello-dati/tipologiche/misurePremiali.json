@@ -105,4 +105,13 @@
 		},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"13",
+    "descrizione": {
+		"it": "Nessuna misura premiale",
+		"en": "Nessuna misura premiale"
+		},
+    "dataInizio":null,
+    "dataFine":null
 }]

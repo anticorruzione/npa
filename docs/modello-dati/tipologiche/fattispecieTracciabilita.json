@@ -87,4 +87,13 @@
 		},	
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Procedura ai sensi dei regolamenti degli organi costituzionali",
+		"en": "Procedura ai sensi dei regolamenti degli organi costituzionali"
+		},	
+    "dataInizio":null,
+    "dataFine":null
 }]
