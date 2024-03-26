@@ -653,8 +653,22 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * strumentiSvolgimentoProcedure.json: riattivata la voce con codice 5
 </details>
 
-# Note di rilascio del 15/03/2024 (in Esercizio)
+<details>
+<summary><h1>Note di rilascio del 15/03/2024 (in Esercizio)</h1></summary>
  
 ### Tipologiche
 * misurePremiali.json: inserita la voce con codice 13
 * fattispecieTracciabilita.json: inserita la voce con codice 11
+</details>
+
+# Note di rilascio del 26/03/2024 (in Esercizio)
+ 
+### Tipologiche
+* errori.json: aggiunti i valori REG105, REG106
+* codNUTS.json: aggiunti i valori per allineare la tipologica al TED
+
+### Regole
+* P1*,P2*,P3*,P4*, P6*, P7*, PL*: inserito controllo REG105 e REG106 sulla validità dei datiBaseTerminiInvio
+
+### Orchestratore  
+* Scheda S3: aggiornati i valori per la colonna "schedaSuccessiva"
