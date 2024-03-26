@@ -1889,6 +1889,24 @@
     "dataFine":null
 },
 {
+    "codice":"REG105",
+    "descrizione": {
+		"it": "La data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131).",
+		"en": "La data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131)."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG106",
+    "descrizione": {
+		"it": "La data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-1311, BT-630).",
+		"en": "La data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-1311, BT-630)."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"AUT01",
     "descrizione": {
         "it": "l'utente non è presente tra le stazioni appaltanti",
