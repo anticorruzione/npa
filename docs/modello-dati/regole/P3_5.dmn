@@ -161,23 +161,7 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
         <outputEntry id="LiteralExpression_P3_5_0017">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
         </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0iysq37">
-        <description>REG13: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari? se sì deve essere valorizzato a sì anche il campo 'L'appalto prevede opzioni/rinnovi?'</description>
-        <inputEntry id="UnaryTests_0jbjr43">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03ts4j6">
-          <text>some lotto in lotti
-satisfies lotto.ripetizioniEConsegneComplementari and lotto.opzioniRinnovi = false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1qkgtbu">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_06j1w37">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG13\"}"</text>
-        </outputEntry>
-      </rule>
+      </rule>      
       <rule id="DecisionRule_P3_5_0021">
         <description>REG14: Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </description>
         <inputEntry id="UnaryTests_P3_5_0064">
@@ -504,6 +488,40 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1qae09b">
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <inputEntry id="UnaryTests_0w0gf0l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xbdfzt">
+          <text>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibafgn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01bit47">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
+        </outputEntry>
+      </rule>
+	  <rule id="DecisionRule_1qae09c">
+        <description>REG106: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</description>
+        <inputEntry id="UnaryTests_0w0gf02">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xbdfzz">
+          <text>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) &lt;= date and time(string(today()))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibafgt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01bit43">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG106\"}"</text>
+        </outputEntry>
+      </rule>  
     </decisionTable>
   </decision>
   <inputData id="InputData_1e3bpcr" name="lotti" />

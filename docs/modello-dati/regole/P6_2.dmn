@@ -390,6 +390,23 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
         </outputEntry>
       </rule>
+	  <rule id="DecisionRule_1qae09b">
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <inputEntry id="UnaryTests_0w0gf0l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xbdfzt">
+          <text>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibafgn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01bit47">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_1mfloyl" name="lotti" />

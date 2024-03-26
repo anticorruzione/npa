@@ -1,40 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P7_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="15.0.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P7_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="15.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P7_2" name="P7_2">
-    <informationRequirement id="InformationRequirement_0tk2ukr">
-      <requiredInput href="#InputData_0gezuh9" />
+    <informationRequirement id="InformationRequirement_1ovi4jt">
+      <requiredInput href="#InputData_09c4xl3" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_00tytft">
+      <requiredInput href="#InputData_1uv2z7c" />
     </informationRequirement>
     <decisionTable id="DecisionTable_P7_2" hitPolicy="COLLECT">
-      <input id="InputClause_04j0a6h" label="lotti">
-        <inputExpression id="LiteralExpression_048vhdo" typeRef="string">
+      <input id="InputClause_0609wxu">
+        <inputExpression id="LiteralExpression_03xw5rj" typeRef="string">
+          <text>appalto</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1w7o2hj" label="lotti">
+        <inputExpression id="LiteralExpression_0m2yk58" typeRef="string">
           <text>lotti</text>
         </inputExpression>
       </input>
       <output id="Errore_AD1_10" label="Errore" typeRef="string" biodi:width="477" />
-      <rule id="DecisionRule_12b8irl">
+      <rule id="DecisionRule_1211n5w">
+        <description>REG4_1: Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
+        <inputEntry id="UnaryTests_0k6f521">
+          <text>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice = null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y6sd5n">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0b7jcfl">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_1\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gr22ks">
+        <description>REG4_2: Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
+        <inputEntry id="UnaryTests_07qrgaw">
+          <text>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice != null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice = "999"))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19ia9qm">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_153q3eb">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_2\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1p14lkf">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
-        <inputEntry id="UnaryTests_13x6yst">
+        <inputEntry id="UnaryTests_02rz0vc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nu2e5q">
           <text>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != "" and starts with(lotto.datiBaseDocumenti.url,"http:") = false and starts with(lotto.datiBaseDocumenti.url,"https:") = false</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0omaucx">
+        <outputEntry id="LiteralExpression_0fv31nb">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
         </outputEntry>
-      </rule>	  
+      </rule>
+      <rule id="DecisionRule_1ikxmb9">
+        <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
+        <inputEntry id="UnaryTests_0edphb3">
+          <text>appalto.datiBase.importo = null or appalto.datiBase.importo = 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ho4lba">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12iimnt">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG98\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kddl7g">
+        <description>REG99: L'importo indicato nell'oggetto lotto.datiBase.importo deve essere &gt; 0.</description>
+        <inputEntry id="UnaryTests_00kskfj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15nbq2i">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_165exuu">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
+        </outputEntry>
+      </rule>
+	  <rule id="DecisionRule_1qae09b">
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <inputEntry id="UnaryTests_0w0gf0l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xbdfzt">
+          <text>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibafgn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01bit47">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
-  <inputData id="InputData_0gezuh9" name="lotti" />
+  <inputData id="InputData_09c4xl3" name="lotti" />
+  <inputData id="InputData_1uv2z7c" name="appalto" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="P7_2">
         <dc:Bounds height="80" width="180" x="150" y="110" />
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="DMNShape_05xvrnr" dmnElementRef="InputData_0gezuh9">
-        <dc:Bounds height="45" width="125" x="177" y="347" />
+      <dmndi:DMNShape id="DMNShape_0j6pbbw" dmnElementRef="InputData_09c4xl3">
+        <dc:Bounds height="45" width="125" x="347" y="317" />
       </dmndi:DMNShape>
-      <dmndi:DMNEdge id="DMNEdge_1plndrq" dmnElementRef="InformationRequirement_0tk2ukr">
-        <di:waypoint x="240" y="347" />
-        <di:waypoint x="240" y="210" />
-        <di:waypoint x="240" y="190" />
+      <dmndi:DMNEdge id="DMNEdge_12thhzb" dmnElementRef="InformationRequirement_1ovi4jt">
+        <di:waypoint x="410" y="317" />
+        <di:waypoint x="270" y="210" />
+        <di:waypoint x="270" y="190" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_153wyui" dmnElementRef="InputData_1uv2z7c">
+        <dc:Bounds height="45" width="125" x="98" y="318" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1ltdwba" dmnElementRef="InformationRequirement_00tytft">
+        <di:waypoint x="161" y="318" />
+        <di:waypoint x="210" y="210" />
+        <di:waypoint x="210" y="190" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

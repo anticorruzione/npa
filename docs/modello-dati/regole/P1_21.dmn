@@ -222,23 +222,7 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
         <outputEntry id="LiteralExpression_P1_21_0017">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
         </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P1_21_0017">
-        <description>REG13: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari? se sì deve essere valorizzato a sì anche il campo 'L'appalto prevede opzioni/rinnovi?'</description>
-        <inputEntry id="UnaryTests_P1_21_0052">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_21_0053">
-          <text>some lotto in lotti
-satisfies lotto.ripetizioniEConsegneComplementari and lotto.opzioniRinnovi = false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_21_0054">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_21_0018">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG13\"}"</text>
-        </outputEntry>
-      </rule>
+      </rule>      
       <rule id="DecisionRule_P1_21_0021">
         <description>REG14: Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </description>
         <inputEntry id="UnaryTests_P1_21_0064">
@@ -525,7 +509,7 @@ satisfies lotto.datiBase.oggettoContratto.codice = "supplies" and (lotto.quadroE
         </inputEntry>
         <inputEntry id="UnaryTests_P1_21_0032">
           <text>some lotto in lotti
-satisfies lotto.opzioniRinnovi and lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = 0</text>
+satisfies lotto.opzioniRinnovi and (lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_21_0033">
           <text></text>
@@ -541,7 +525,7 @@ satisfies lotto.opzioniRinnovi and lotto.quadroEconomicoStandard.sommeOpzioniRin
         </inputEntry>
         <inputEntry id="UnaryTests_P1_21_0035">
           <text>some lotto in lotti
-satisfies lotto.ripetizioniEConsegneComplementari and lotto.quadroEconomicoStandard.sommeRipetizioni = null or lotto.quadroEconomicoStandard.sommeRipetizioni = 0</text>
+satisfies lotto.ripetizioniEConsegneComplementari and (lotto.quadroEconomicoStandard.sommeRipetizioni = null or lotto.quadroEconomicoStandard.sommeRipetizioni = 0)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_21_0036">
           <text></text>
@@ -581,22 +565,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         <outputEntry id="LiteralExpression_P1_21_0038">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P1_21_0038">
-        <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
-        <inputEntry id="UnaryTests_P1_21_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_21_0116">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_21_0117">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_21_0039">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
-        </outputEntry>
-      </rule>
+      </rule>      
 	  <rule id="DecisionRule_1oiflb4">
         <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</description>
         <inputEntry id="UnaryTests_1bngedq">
@@ -678,6 +647,40 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1qae09b">
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <inputEntry id="UnaryTests_0w0gf0l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xbdfzt">
+          <text>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibafgn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01bit47">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
+        </outputEntry>
+      </rule>
+	 <rule id="DecisionRule_1qae09c">
+        <description>REG106: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</description>
+        <inputEntry id="UnaryTests_0w0gf02">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xbdfzz">
+          <text>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) &lt;= date and time(string(today()))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibafgt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01bit43">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG106\"}"</text>
+        </outputEntry>
+      </rule>	  
     </decisionTable>
   </decision>
   <inputData id="InputData_06042w8" name="lotti" />

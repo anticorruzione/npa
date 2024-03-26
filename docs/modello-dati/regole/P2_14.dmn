@@ -455,22 +455,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         <outputEntry id="LiteralExpression_P2_14_0038">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P2_14_0038">
-        <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
-        <inputEntry id="UnaryTests_P2_14_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P2_14_0116">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P2_14_0117">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P2_14_0039">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
-        </outputEntry>
-      </rule>
+      </rule>      
 	   <rule id="DecisionRule_13m2iti">
         <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
         <inputEntry id="UnaryTests_1vksbpb">
@@ -500,6 +485,23 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pa9ymc">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
+        </outputEntry>
+      </rule>
+	  <rule id="DecisionRule_1qae09c">
+        <description>REG106: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</description>
+        <inputEntry id="UnaryTests_0w0gf02">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xbdfzz">
+          <text>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) &lt;= date and time(string(today()))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibafgt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01bit43">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG106\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
