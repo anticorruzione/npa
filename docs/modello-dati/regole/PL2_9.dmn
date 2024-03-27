@@ -68,9 +68,6 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
 satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
  date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()))</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0ibafgn">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_01bit47">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
         </outputEntry>
@@ -84,9 +81,6 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
           <text>some lotto in lotti
 satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
  date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) &lt;= date and time(string(today()))</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ibafgt">
-          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_01bit43">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG106\"}"</text>
