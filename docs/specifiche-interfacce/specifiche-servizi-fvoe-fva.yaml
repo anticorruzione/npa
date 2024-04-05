@@ -390,6 +390,35 @@ paths:
           $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
+  /richiedi-documenti: 
+   post:
+      tags:
+         - SA
+      summary: API Rest per la richiesta del documento agli enti certificatori. ASINCRONO - ASIMMETRICO.
+      description: viene richiesta la produzione di un nuovo documento agli enti certificatori. ASINCRONO - ASIMMETRICO.
+      operationId: idDocumentoRichiediPost
+      requestBody:
+        description: Inserimento Richiesta di Accesso
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RichiediDocumentiRequest'
+        required: true
+      responses:
+        '200':
+          description: Operazione terminato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RichiediDocumentoResponse'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
   /recupera-documento-fvoe:
     get:
       tags:
@@ -1232,6 +1261,18 @@ components:
         dataScadenza: "2022-01-23T12:02:05Z"
         richiestaAccesso: 
           idRichiesta: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+    RichiediDocumentiRequest:
+      allOf: # estende il modello dati DocumentoRichiediType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoRichiediType'
+      example:
+        chiaveAccesso: "2022-01-23T12:02:05Z"
+        tipoDocumento: 
+          idTipologica : "tipoDocumento"
+          codice : "00004"
+        datiRichiesta:
+          annoRiferimento : "2022"
+          domicilioFiscale:
+            codicecatastale: "I345"        
     PaginazioneType:
       description: Oggetto per la paginazione dei risultati
       type: object
