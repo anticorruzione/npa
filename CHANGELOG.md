@@ -661,7 +661,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * fattispecieTracciabilita.json: inserita la voce con codice 11
 </details>
 
-# Note di rilascio del 26/03/2024 (in Esercizio)
+<details>
+<summary><h1>Note di rilascio del 26/03/2024 (in Esercizio)</h1></summary>
  
 ### Tipologiche
 * errori.json: aggiunti i valori REG105, REG106
@@ -672,3 +673,24 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 
 ### Orchestratore  
 * Scheda S3: aggiornati i valori per la colonna "schedaSuccessiva"
+
+</details>
+
+# Note di rilascio del 05/04/2024
+
+**NOTA: La nuova operazione /richiedi-documenti sarà utilizzabile in ambiente di qualificazione a partire da una data successivamente comunicata.**
+
+## Modello Dati
+* modello-dati-fvoe-fva.yaml:
+  * creato un nuovo oggetto DatiSA_00004. Oggetto che riporta i dati per richiedere il documento CERTIFICATO DEL CASELLARIO GIUDIZIARIO (INTEGRALE).
+  * creato un nuovo oggetto DatiSA_00020. Oggetto che riporta i dati per richiedere il documento CERTIFICATO DELL'ANAGRAFE DELLE SANZIONI AMMINISTRATIVE DIPENDENTI DA REATO
+  * creato un nuovo oggetto DatiSA_00036. Oggetto che riporta i dati per richiedere il documento DATI REDDITUALI SOCIETA DI PERSONE e per il documento DATI REDDITUALI IMPRESA INDIVIDUALE
+  * creato un nuovo oggetto DatiSA_00047. Oggetto che riporta i dati per richiedere il documento CONSISTENZA MEDIA PERSONALE
+  * creato un nuovo oggetto DatiSA_00048. Oggetto che riporta i dati per richiedere il documento COSTO COMPLESSIVO PERSONALE
+  * creato un nuovo oggetto DatiSA_00050. Oggetto che riporta i dati per richiedere il documento COMUNICAZIONE ANTIMAFIA
+  * creato un nuovo oggetto DatiSA_00899. Oggetto che riporta i dati generici per richiedere il documento all' Operatore Economico
+  * creato un nuovo oggetto DocumentoRichiediType Oggetto che riporta i dati della Richiesta di Documentazione verso gli enti certificanti
+ 
+## Specifiche Interfacce
+* specifiche-servizi-fvoe-fva.yaml:
+  * inserita operazione richiedi-documenti
