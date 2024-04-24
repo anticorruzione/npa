@@ -694,3 +694,9 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 ## Specifiche Interfacce
 * specifiche-servizi-fvoe-fva.yaml:
   * inserita operazione richiedi-documenti
+
+# Aggiornamento documentazione del 24/04/2024
+## read.me
+* Pubblicazione ambiente ATTESTAZIONE
+## documento-specifiche-servizi-npa.md 
+* Aggiornamento descrizione servizio modifica-avviso
