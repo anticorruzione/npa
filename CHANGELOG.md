@@ -703,7 +703,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * Aggiornamento descrizione servizio modifica-avviso
 </details>
 
-# Note di rilascio del 15/05/2024
+# Note di rilascio del 15/05/2024 (in Esercizio)
 
 ### Tipologiche
 * errori.json: aggiunti gli errori ERR110, ERR111
