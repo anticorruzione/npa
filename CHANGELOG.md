@@ -707,3 +707,4 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 
 ### Tipologiche
 * errori.json: aggiunti gli errori ERR110, ERR111
+* motivoEsclusioneOrdinarioSpeciale: riattivato codice 24
