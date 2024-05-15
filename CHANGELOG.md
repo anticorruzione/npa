@@ -676,7 +676,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 
 </details>
 
-# Note di rilascio del 05/04/2024
+<details>
+<summary><h1>Note di rilascio del 05/04/2024 (in Esercizio)</h1></summary>
 
 **NOTA: La nuova operazione /richiedi-documenti sarà utilizzabile in ambiente di qualificazione a partire da una data successivamente comunicata.**
 
@@ -700,3 +701,9 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * Pubblicazione ambiente ATTESTAZIONE
 ## documento-specifiche-servizi-npa.md 
 * Aggiornamento descrizione servizio modifica-avviso
+</details>
+
+# Note di rilascio del 15/05/2024
+
+### Tipologiche
+* errori.json: aggiunti gli errori ERR110, ERR111
