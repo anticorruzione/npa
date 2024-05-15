@@ -978,6 +978,24 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR110",
+    "descrizione": {
+		"it": "stazione appaltante non qualificata",
+		"en": "stazione appaltante non qualificata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR111",
+    "descrizione": {
+		"it": "errore durante la comunicazione con il servizio di qualificazione delle stazioni appaltanti.",
+		"en": "errore durante la comunicazione con il servizio di qualificazione delle stazioni appaltanti."
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
 {
     "codice":"ERR9999",
