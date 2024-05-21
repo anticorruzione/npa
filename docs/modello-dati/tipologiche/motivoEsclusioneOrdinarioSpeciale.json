@@ -1,128 +1,11 @@
 [{
-    "codice":"1",
-    "descrizione": {
-		"it": "Art. 19 D.Lgs. 163/2006",
-		"en": "Art. 19 D.Lgs. 163/2006"
-		},
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"2",
-    "descrizione": {
-		"it": "Art. 20 D.Lgs. 163/2006",
-		"en": "Art. 20 D.Lgs. 163/2006"
-		},
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"3",
-    "descrizione": {
-		"it": "Art. 21 D.Lgs. 163/2006",
-		"en": "Art. 21 D.Lgs. 163/2006"
-		},	
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"4",
-    "descrizione": {
-		"it": "Art. 22 D.Lgs. 163/2006",
-		"en": "Art. 22 D.Lgs. 163/2006"
-		},	
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"5",
-    "descrizione": {
-		"it": "Art. 23 D.Lgs. 163/2006",
-		"en": "Art. 23 D.Lgs. 163/2006"
-		},	
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"6",
-    "descrizione": {
-		"it": "Art. 24 D.Lgs. 163/2006",
-		"en": "Art. 24 D.Lgs. 163/2006"
-		},	
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"7",
-    "descrizione": {
-		"it": "Art. 25 D.Lgs. 163/2006",
-		"en": "Art. 25 D.Lgs. 163/2006"
-		},		
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"8",
-    "descrizione": {
-		"it": "Art. 16 D.Lgs. 163/2006",
-		"en": "Art. 16 D.Lgs. 163/2006"
-		},			    
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"9",
-    "descrizione": {
-		"it": "Art. 17 D.Lgs. 163/2006",
-		"en": "Art. 17 D.Lgs. 163/2006"
-		},	
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"10",
-    "descrizione": {
-		"it": "Art. 18 D.Lgs. 163/2006",
-		"en": "Art. 18 D.Lgs. 163/2006"
-		},	
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
-    "codice":"11",
-    "descrizione": {
-		"it": "Art. 26 D.Lgs. 163/2006",
-		"en": "Art. 26 D.Lgs. 163/2006"
-		},	
-    "dataInizio":null,
-    "dataFine":"2019-06-26T00:00:00Z"
-},
-{
     "codice":"12",
     "descrizione": {
 		"it": "Esclusione per OO.CC.",
 		"en": "Esclusione per OO.CC."
 		},	
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":null
-},
-{
-    "codice":"13",
-    "descrizione": {
-		"it": "Contratti nel settore dell’acqua, dell’energia e dei trasporti",
-		"en": "Contratti nel settore dell’acqua, dell’energia e dei trasporti"
-		},	
-    "dataInizio":null,
-    "dataFine":"2021-07-05T00:00:00Z"
-},
-{
-    "codice":"14",
-    "descrizione": {
-		"it": "Contratti nei settori dei servizi postali",
-		"en": "Contratti nei settori dei servizi postali"
-		},
-    "dataInizio":null,
-    "dataFine":"2021-07-05T00:00:00Z"
 },
 {
     "codice":"15",
@@ -130,8 +13,8 @@
 		"it": "Contratti e concorsi di progettazione finalizzati a permettere alle stazioni appaltanti la messa a disposizione o la gestione di reti di telecomunicazioni o la prestazione di servizi di comunicazioni elettroniche",
 		"en": "Contratti e concorsi di progettazione finalizzati a permettere alle stazioni appaltanti la messa a disposizione o la gestione di reti di telecomunicazioni o la prestazione di servizi di comunicazioni elettroniche"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"16",
@@ -139,7 +22,7 @@
 		"it": "Contratti e concorsi di progettazione aggiudicati in base a norme/accordi internazionali o stabilite da un’organizzazione internazionale ",
 		"en": "Contratti e concorsi di progettazione aggiudicati in base a norme/accordi internazionali o stabilite da un’organizzazione internazionale "
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -148,8 +31,8 @@
 		"it": "Contratti nei settori media audiovisi o radiofonici",
 		"en": "Contratti nei settori media audiovisi o radiofonici"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"18",
@@ -157,8 +40,8 @@
 		"it": "Servizi legali (rappresentanza legale in un arbitrato o in una conciliazione, rappresentanza legale in giudizio, consulenza legale in vista di un giudizio, servizi di certificazione e autenticazione di documenti prestati da notai, servizi legali prestati da fiduciari o tutori designati da organi giurisdizionali o per legge, altri servizi legali connessi all’esercizio di pubblici poteri).",
 		"en": "Servizi legali (rappresentanza legale in un arbitrato o in una conciliazione, rappresentanza legale in giudizio, consulenza legale in vista di un giudizio, servizi di certificazione e autenticazione di documenti prestati da notai, servizi legali prestati da fiduciari o tutori designati da organi giurisdizionali o per legge, altri servizi legali connessi all’esercizio di pubblici poteri)."
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"19",
@@ -166,7 +49,7 @@
 		"it": "Acquisto titoli e strumenti finanziari ",
 		"en": "Acquisto titoli e strumenti finanziari"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -175,8 +58,8 @@
 		"it": "Prestiti",
 		"en": "Prestiti"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"21",
@@ -184,8 +67,8 @@
 		"it": "Servizi di difesa e protezione civile forniti da organizzazioni e associazioni senza scopo di lucro",
 		"en": "Servizi di difesa e protezione civile forniti da organizzazioni e associazioni senza scopo di lucro"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"22",
@@ -193,8 +76,8 @@
 		"it": "Servizi di trasporto pubblico di passeggeri per ferrovia o metropolitana ",
 		"en": "Servizi di trasporto pubblico di passeggeri per ferrovia o metropolitana "
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"23",
@@ -202,8 +85,8 @@
 		"it": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale",
 		"en": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"24",
@@ -211,8 +94,8 @@
 		"it": "Contratti di sponsorizzazione tecnica",
 		"en": "Contratti di sponsorizzazione tecnica"
 		},
-    "dataInizio":null,
-    "dataFine":"null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"25",
@@ -220,17 +103,8 @@
 		"it": "Convenzione con la quale un soggetto pubblico o privato si impegni a realizzare a sua totale cura e spese un’opera pubblica prevista negli strumenti o programmi urbanistici",
 		"en": "Convenzione con la quale un soggetto pubblico o privato si impegni a realizzare a sua totale cura e spese un’opera pubblica prevista negli strumenti o programmi urbanistici"
 		},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"26",
-    "descrizione": {
-		"it": "concessioni, appalti pubblici e accordi tra enti e amministrazioni aggiudicatrici nell'ambito del settore pubblico",
-		"en": "concessioni, appalti pubblici e accordi tra enti e amministrazioni aggiudicatrici nell'ambito del settore pubblico"
-		},
-    "dataInizio":null,
-    "dataFine":"2021-07-05T00:00:00Z"
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"27",
@@ -238,7 +112,7 @@
 		"it": "contratti aggiudicati a un'impresa collegata",
 		"en": "contratti aggiudicati a un'impresa collegata"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -247,7 +121,7 @@
 		"it": "contratti aggiudicati ad una joint-venture composta esclusivamente da più stazioni appaltanti o da una stazione appaltante alla joint venture di cui fa parte",
 		"en": "contratti aggiudicati ad una joint-venture composta esclusivamente da più stazioni appaltanti o da una stazione appaltante alla joint venture di cui fa parte"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -256,7 +130,7 @@
 		"it": "contratti di servizi aggiudicati da una stazione appaltante a un ente che sia stazione appaltante o un’associazione di stazioni appaltanti in base a un diritto esclusivo",
 		"en": "contratti di servizi aggiudicati da una stazione appaltante a un ente che sia stazione appaltante o un’associazione di stazioni appaltanti in base a un diritto esclusivo"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -265,8 +139,8 @@
 		"it": "appalti aggiudicati da particolari enti aggiudicatori per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia",
 		"en": "appalti aggiudicati da particolari enti aggiudicatori per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia"
 		},
-    "dataInizio":null,
-    "dataFine":"2023-12-31T00:00:00Z"
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"31",
@@ -274,7 +148,7 @@
 		"it": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici",
 		"en": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -283,8 +157,8 @@
 		"it": "servizi di arbitrato e di conciliazione",
 		"en": "servizi di arbitrato e di conciliazione"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"33",
@@ -292,7 +166,7 @@
 		"it": "appalti aventi ad oggetto l'acquisto di prodotti agricoli e alimentari fino a 10.000 euro annui da imprese agricole situate nei comuni individuati dal codice",
 		"en": "appalti aventi ad oggetto l'acquisto di prodotti agricoli e alimentari fino a 10.000 euro annui da imprese agricole situate nei comuni individuati dal codice"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -301,7 +175,7 @@
 		"it": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007",
 		"en": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -310,7 +184,7 @@
 		"it": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo",
 		"en": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
     "dataFine":"2023-12-31T00:00:00Z"
 },
 {
@@ -319,8 +193,8 @@
 		"it": "Opere a scomputo",
 		"en": "Opere a scomputo"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"47",
@@ -329,7 +203,7 @@
 		"en": "Appalti nei settori speciali aggiudicati a scopo di rivendita o di locazione a terzi"
 		},
     "dataInizio":"2020-05-12T00:00:00Z",
-    "dataFine":null
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"48",
@@ -337,8 +211,8 @@
 		"it": "Appalti pre-commerciali ex art 158 comma 2",
 		"en": "Appalti pre-commerciali ex art 158 comma 2"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"49",
@@ -346,6 +220,141 @@
 		"it": "Art. 5 L. 381/1991",
 		"en": "Art. 5 L. 381/1991"
 		},
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
+},
+{
+    "codice":"50",
+    "descrizione": {
+		"it": "Contratti nei settori delle comunicazioni elettroniche (art. 56, comma 1, lett. b) d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Contratti nei settori delle comunicazioni elettroniche (art. 56, comma 1, lett. b) d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"51",
+    "descrizione": {
+		"it": "Contratti nei settori media audiovisivi o radiofonici (art. 56 co. 1, lett. f) d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Contratti nei settori media audiovisivi o radiofonici (art. 56 co. 1, lett. f) d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"52",
+    "descrizione": {
+		"it": "Servizi legali esclusi dall’applicazione del codice (art. 56 comma 1 lett. h) d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Servizi legali esclusi dall’applicazione del codice (art. 56 comma 1 lett. h) d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"53",
+    "descrizione": {
+		"it": "Prestiti (art. 56 comma 1 lett. l) d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Prestiti (art. 56 comma 1 lett. l) d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"54",
+    "descrizione": {
+		"it": "Servizi di difesa e protezione civile e di prevenzione contro i pericoli forniti da organizzazioni e associazioni senza scopo di lucro (art. 56 comma 1 lett. n) d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Servizi di difesa e protezione civile e di prevenzione contro i pericoli forniti da organizzazioni e associazioni senza scopo di lucro (art. 56 comma 1 lett. n) d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"55",
+    "descrizione": {
+		"it": "Servizi di trasporto pubblico di passeggeri per ferrovia o metropolitana (art. 56, comma 1, lett. o) e art 149 comma 3 d. lgs. 36/2023)",
+		"en": "Servizi di trasporto pubblico di passeggeri per ferrovia o metropolitana (art. 56, comma 1, lett. o) e art 149 comma 3 d. lgs. 36/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"56",
+    "descrizione": {
+		"it": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale (art. 56 comma 1 lett. p) d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale (art. 56 comma 1 lett. p) d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"57",
+    "descrizione": {
+		"it": "Contratti di sponsorizzazione tecnica (art. 134 co. 4 d. lgs 36/2023)",
+		"en": "Contratti di sponsorizzazione tecnica (art. 134 co. 4 d. lgs 36/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"58",
+    "descrizione": {
+		"it": "Opera pubblica realizzata a spese del privato (art. 56 co. 2 d. lgs. 36/2023)",
+		"en": "Opera pubblica realizzata a spese del privato (art. 56 co. 2 d. lgs. 36/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"59",
+    "descrizione": {
+		"it": "appalti aggiudicati da particolari enti aggiudicatori per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia (art. 146 comma 3 e art 148 comma 4 d. lgs. 36/2023)",
+		"en": "appalti aggiudicati da particolari enti aggiudicatori per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia (art. 146 comma 3 e art 148 comma 4 d. lgs. 36/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"60",
+    "descrizione": {
+		"it": "servizi di arbitrato e di conciliazione (art. 56, comma 1, lett. g) d. lgs. 36/2023 altri in delibera 584/2023)",
+		"en": "servizi di arbitrato e di conciliazione (art. 56, comma 1, lett. g) d. lgs. 36/2023 altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"61",
+    "descrizione": {
+		"it": "Opere di urbanizzazione primaria di importo inferiore alla soglia funzionali all'intervento di trasformazione urbanistica del territorio (art. 13 comma 7 d. lgs. 36/2023 e allegato I.12, art. 5)",
+		"en": "Opere di urbanizzazione primaria di importo inferiore alla soglia funzionali all'intervento di trasformazione urbanistica del territorio (art. 13 comma 7 d. lgs. 36/2023 e allegato I.12, art. 5)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"62",
+    "descrizione": {
+		"it": "Appalti nei settori speciali aggiudicati a scopo di rivendita o di locazione a terzi (art 144 d. lgs. 36/2023)",
+		"en": "Appalti nei settori speciali aggiudicati a scopo di rivendita o di locazione a terzi (art 144 d. lgs. 36/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"63",
+    "descrizione": {
+		"it": "Appalti pre-commerciali (art 135 comma 3 d. lgs. 36/2023) ",
+		"en": "Appalti pre-commerciali (art 135 comma 3 d. lgs. 36/2023) "
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"64",
+    "descrizione": {
+		"it": "Art. 5 l. 381/91",
+		"en": "Art. 5 l. 381/91"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
     "dataFine":null
 }]

@@ -1140,4 +1140,31 @@
 		},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"CM1",
+    "descrizione": {
+		"it": "Scheda di comunicazione modifica dati della procedura per appalti sopra i 5K euro",
+		"en": "Scheda di comunicazione modifica dati della procedura per appalti sopra i 5K euro"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CM2",
+    "descrizione": {
+		"it": "Scheda di comunicazione modifica dati della procedura per appalti sotto i 5K euro",
+		"en": "Scheda di comunicazione modifica dati della procedura per appalti sotto i 5K euro"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ANN",
+    "descrizione": {
+		"it": "Scheda di annullamento affidamento",
+		"en": "Scheda di annullamento affidamento"
+		},
+    "dataInizio":null,
+    "dataFine":null
 }]

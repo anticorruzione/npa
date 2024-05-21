@@ -4,8 +4,8 @@
 		"it": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici",
 		"en": "concessioni nel settore idrico escluse dall'applicazione del codice dei contratti pubblici"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"2",
@@ -13,8 +13,8 @@
 		"it": "servizi di arbitrato e di conciliazione",
 		"en": "servizi di arbitrato e di conciliazione"
 		},
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"3",
@@ -22,8 +22,8 @@
 		"it": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007",
 		"en": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007"
 		},	
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"4",
@@ -31,8 +31,8 @@
 		"it": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo",
 		"en": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo"
 		},	
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"5",
@@ -40,8 +40,8 @@
 		"it": "Concessioni relative ad attività direttamente esposte alla concorrenza",
 		"en": "Concessioni relative ad attività direttamente esposte alla concorrenza"
 		},	
-    "dataInizio":null,
-    "dataFine":null
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
 },
 {
     "codice":"6",
@@ -49,6 +49,123 @@
 		"it": "Concessioni in materia di difesa o di sicurezza di cui al decreto legislativo 15 novembre 2011, n. 208",
 		"en": "Concessioni in materia di difesa o di sicurezza di cui al decreto legislativo 15 novembre 2011, n. 208"
 		},	
-    "dataInizio":null,
+    "dataInizio":"1970-01-01T00:00:00Z",
+    "dataFine":"2024-05-28T00:00:00Z"
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Esclusioni specifiche per le concessioni nel settore idrico (art. 148 commi 5, 6 e art. 181 comma 2 d. lgs. 36/2023 e art. 12 par. 1 Dir. 2014/23/UE)",
+		"en": "Esclusioni specifiche per le concessioni nel settore idrico (art. 148 commi 5, 6 e art. 181 comma 2 d. lgs. 36/2023 e art. 12 par. 1 Dir. 2014/23/UE)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "servizi di arbitrato e di conciliazione (art. 56, comma 1, lett. g) e art. 181 comma 2 d. lgs. 36/ e altri in delibera 584/2023)",
+		"en": "servizi di arbitrato e di conciliazione (art. 56, comma 1, lett. g) e art. 181 comma 2 d. lgs. 36/ e altri in delibera 584/2023)"
+		},
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007 (art. 149 comma 4 e Art. 181 comma 2 d. lgs. 36/2023 e art. 10 par 3 Dir. 2014/23/UE)",
+		"en": "concessioni di servizi di trasporto aereo a norma del regolamento CE n. 1008/2008 del parlamento europeo e concessioni di servizi di trasporto pubblico di passeggeri ai sensi del regolamento n. 1370/2007 (art. 149 comma 4 e Art. 181 comma 2 d. lgs. 36/2023 e art. 10 par 3 Dir. 2014/23/UE)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"10",
+    "descrizione": {
+		"it": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo (art. 181 comma 2 d. lgs. 36/2023 e art. 10 par 9 Dir. 2014/23/UE)",
+		"en": "concessioni di servizi di lotterie aggiudicate sulla base di un diritto esclusivo (art. 181 comma 2 d. lgs. 36/2023 e art. 10 par 9 Dir. 2014/23/UE)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"11",
+    "descrizione": {
+		"it": "Esclusione per OO.CC.",
+		"en": "Esclusione per OO.CC."
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"12",
+    "descrizione": {
+		"it": "Contratti finalizzati a permettere alle stazioni appaltanti la messa a disposizione o la gestione di reti di telecomunicazioni o la prestazione di servizi di comunicazioni elettroniche (art. 56, comma 1, lett. b) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Contratti finalizzati a permettere alle stazioni appaltanti la messa a disposizione o la gestione di reti di telecomunicazioni o la prestazione di servizi di comunicazioni elettroniche (art. 56, comma 1, lett. b) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"13",
+    "descrizione": {
+		"it": "Contratti nei settori media audiovisivi o radiofonici (art. 56 co. 1, lett. f) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Contratti nei settori media audiovisivi o radiofonici (art. 56 co. 1, lett. f) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"14",
+    "descrizione": {
+		"it": "Servizi legali esclusi dall’applicazione del codice (art. 56 comma 1 lett. h) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Servizi legali esclusi dall’applicazione del codice (art. 56 comma 1 lett. h) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"15",
+    "descrizione": {
+		"it": "Prestiti (art. 56 comma 1 lett. l) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Prestiti (art. 56 comma 1 lett. l) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"16",
+    "descrizione": {
+		"it": "Servizi di difesa e protezione civile e di prevenzione contro i pericoli forniti da organizzazioni e associazioni senza scopo di lucro (art. 56 comma 1 lett. n) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "Servizi di difesa e protezione civile e di prevenzione contro i pericoli forniti da organizzazioni e associazioni senza scopo di lucro (art. 56 comma 1 lett. n) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"17",
+    "descrizione": {
+		"it": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale (art. 56 comma 1 lett. p) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)",
+		"en": "servizi connessi a campagne politiche aggiudicati da un partito politico nel contesto di una campagna elettorale (art. 56 comma 1 lett. p) e 181 comma 2 d. lgs. 36/2023 e altri in delibera 584/2023)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"18",
+    "descrizione": {
+		"it": "concessioni aggiudicate da particolari enti concedenti per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia (art. 146 comma 3 e art 148 comma 4 d. lgs. 36/2023)",
+		"en": "concessioni aggiudicate da particolari enti concedenti per l'acquisto di acqua e per la fornitura di energia o di combustibili destinati alla produzione di energia (art. 146 comma 3 e art 148 comma 4 d. lgs. 36/2023)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"19",
+    "descrizione": {
+		"it": "Concessioni aggiudicate dagli enti aggiudicatori per l’esercizio delle loro attività in un paese terzo in circostanze che non comportino lo sfruttamento materiale di una rete o di un’area geografica all’interno dell’unione europea (art. 181 comma 2 e art. 10 par 10 Dir. 2014/23/UE)",
+		"en": "Concessioni aggiudicate dagli enti aggiudicatori per l’esercizio delle loro attività in un paese terzo in circostanze che non comportino lo sfruttamento materiale di una rete o di un’area geografica all’interno dell’unione europea (art. 181 comma 2 e art. 10 par 10 Dir. 2014/23/UE)"
+		},	
+    "dataInizio":"2024-05-28T00:00:00Z",
     "dataFine":null
 }]

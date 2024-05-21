@@ -1,0 +1,82 @@
+[
+    {
+      "codice": "INPS",
+      "descrizione": {
+        "it": "INPS",
+        "en": "INPS",
+	"de": "INPS"      
+      },
+      "dataInizio":null,
+      "dataFine":null
+    },
+    {
+      "codice": "MININT",
+      "descrizione": {
+        "it": "Min. Interno",
+        "en": "Ministry of Interior",
+	"de": "Ministerium des Innern"      
+      },
+	  "dataInizio":null,
+      "dataFine":null
+    },
+    {
+      "codice": "MINGIU",
+      "descrizione": {
+        "it": "Min. Giustizia",
+        "en": "Ministry of Justice",
+	"de": "Justizministerium"      
+      },
+      "dataInizio":null,
+      "dataFine":null
+    },
+	{
+      "codice": "INARCA",
+      "descrizione": {
+        "it": "Inarcassa",
+        "en": "Inarcassa",
+	"de": "Inarcassa"
+      },
+      "dataInizio":null,
+      "dataFine":null
+    },
+	{
+      "codice": "ADE",
+      "descrizione": {
+        "it": "Agenzia delle Entrate",
+        "en": "Revenue Agency",
+	"de": "Finanzamt"
+      },
+      "dataInizio":null,
+      "dataFine":null
+    },
+	{
+      "codice": "UNICAM",
+      "descrizione": {
+        "it": "Unioncamere",
+        "en": "Unioncamere",
+	"de": "Unioncamere"
+      },
+      "dataInizio":null,
+      "dataFine":null
+    },
+    {
+      "codice": "OE",
+      "descrizione": {
+        "it": "Operatore Economico",
+        "en": "Economic Operator",
+	"de": "Wirtschaftsbeteiligter"
+      },
+      "dataInizio":null,
+      "dataFine":null
+    },
+    {
+      "codice": "ANAC",
+      "descrizione": {
+        "it": "Autorità Nazionale Anticorruzione",
+        "en": "National Anti-Corruption Authority",
+	"de": "Nationale Antikorruptionsbehörde"
+      },
+      "dataInizio":null,
+      "dataFine":null
+    }
+  ]

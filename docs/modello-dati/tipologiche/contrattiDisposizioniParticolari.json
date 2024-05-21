@@ -5,7 +5,7 @@
       "it": "Non applicabile",
       "en": "Non applicabile"
     },
-    "dataInizio": null,
+    "dataInizio": "1970-01-01T00:00:00Z",
     "dataFine": null
   },
   {
@@ -14,17 +14,8 @@
       "it": "Servizi sociali e altri servizi specifici di cui all’allegato XIV della direttiva 24/2014/UE, compresi servizi alla persona",
       "en": "Servizi sociali e altri servizi specifici di cui all’allegato XIV della direttiva 24/2014/UE, compresi servizi alla persona"
     },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "3",
-    "descrizione": {
-      "it": "servizi sanitari, sociali e culturali di cui all’allegato XIV della direttiva 24/2014/UE",
-      "en": "servizi sanitari, sociali e culturali di cui all’allegato XIV della direttiva 24/2014/UE"
-    },
-    "dataInizio": null,
-    "dataFine": "2020-05-12T00:00:00Z"
+    "dataInizio": "1970-01-01T00:00:00Z",
+    "dataFine": "2024-05-28T00:00:00Z"
   },
   {
     "codice": "4",
@@ -32,8 +23,8 @@
       "it": "Servizi di ristorazione di cui all’allegato XIV della direttiva 24/2014/UE",
       "en": "Servizi di ristorazione di cui all’allegato XIV della direttiva 24/2014/UE"
     },
-    "dataInizio": null,
-    "dataFine": null
+    "dataInizio": "1970-01-01T00:00:00Z",
+    "dataFine": "2024-05-28T00:00:00Z"
   },
   {
     "codice": "5",
@@ -41,8 +32,8 @@
       "it": "Servizi di mensa di cui all’allegato XIV della direttiva 24/2014/UE",
       "en": "Servizi di mensa di cui all’allegato XIV della direttiva 24/2014/UE"
     },
-    "dataInizio": null,
-    "dataFine": null
+    "dataInizio": "1970-01-01T00:00:00Z",
+    "dataFine": "2024-05-28T00:00:00Z"
   },
   {
     "codice": "6",
@@ -50,7 +41,7 @@
       "it": "Contratti nel settore dei beni culturali",
       "en": "Contratti nel settore dei beni culturali"
     },
-    "dataInizio": null,
+    "dataInizio": "1970-01-01T00:00:00Z",
     "dataFine": null
   },
   {
@@ -59,6 +50,42 @@
       "it": "Servizi di ricerca e sviluppo ",
       "en": "Servizi di ricerca e sviluppo "
     },
-    "dataInizio": null,
+    "dataInizio": "1970-01-01T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "8",
+    "descrizione": {
+      "it": "Servizi sociali e assimilati",
+      "en": "Servizi sociali e assimilati"
+    },
+    "dataInizio": "2024-05-28T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "9",
+    "descrizione": {
+      "it": "Servizi di ristorazione",
+      "en": "Servizi di ristorazione"
+    },
+    "dataInizio": "2024-05-28T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "10",
+    "descrizione": {
+      "it": "Servizi di mensa",
+      "en": "Servizi di mensa"
+    },
+    "dataInizio": "2024-05-28T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "11",
+    "descrizione": {
+      "it": "Contratti nei settori della Difesa e della Sicurezza (diversi da quelli indicati all’art. 136 comma 1 lett. a) e lett. b) d. lgs. 36/2023)",
+      "en": "Contratti nei settori della Difesa e della Sicurezza (diversi da quelli indicati all’art. 136 comma 1 lett. a) e lett. b) d. lgs. 36/2023)"
+    },
+    "dataInizio": "2024-05-28T00:00:00Z",
     "dataFine": null
   }]
