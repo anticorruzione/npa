@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_24" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_24" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P1_24" name="P1_24">
     <informationRequirement id="InformationRequirement_P1_24_01">
       <requiredInput href="#InputData_appalto_P1_24" />
@@ -50,8 +50,8 @@
         <outputEntry id="LiteralExpression_04cxsgw">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
         </outputEntry>
-      </rule>      
-	  <rule id="DecisionRule_P1_24_0040">
+      </rule>
+      <rule id="DecisionRule_P1_24_0040">
         <description>REG9: Motivo Esclusione Settore Ordinario e Speciale: non è consensito per organi non costituzionali.</description>
         <inputEntry id="UnaryTests_P1_24_0040">
           <text></text>
@@ -198,8 +198,8 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         <outputEntry id="LiteralExpression_P1_24_0038">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
-      </rule>      
-	  <rule id="DecisionRule_1oiflb4">
+      </rule>
+      <rule id="DecisionRule_1oiflb4">
         <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</description>
         <inputEntry id="UnaryTests_1bngedq">
           <text>appalto.datiBaseProcedura.tipoProcedura.codice = "open" or appalto.datiBaseProcedura.tipoProcedura.codice = "oth-single"</text>
@@ -249,37 +249,6 @@ satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null an
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG97\"}"</text>
         </outputEntry>
       </rule>
-	   <rule id="DecisionRule_13m2iti">
-        <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
-        <inputEntry id="UnaryTests_1vksbpb">
-          <text>appalto.datiBase.importo = null or appalto.datiBase.importo = 0</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1otf3ve">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0gjmr71">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_19yzvav">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG98\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_05gn4js">
-        <description>REG99: L'importo indicato nell'oggetto lotto.datiBase.importo deve essere &gt; 0.</description>
-        <inputEntry id="UnaryTests_024uqji">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10zccl6">
-          <text>some lotto in lotti
-satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1wluzhx">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1pa9ymc">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1qae09b">
         <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf0l">
@@ -297,7 +266,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_1qae09c">
+      <rule id="DecisionRule_1qae09c">
         <description>REG106: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf02">
           <text></text>
@@ -313,7 +282,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
         <outputEntry id="LiteralExpression_01bit43">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG106\"}"</text>
         </outputEntry>
-      </rule>	  
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_0ozpxo5" name="lotti" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P2_16" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.1.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P2_16" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P2_16" name="P2_16">
     <informationRequirement id="InformationRequirement_P2_16_01">
       <requiredInput href="#InputData_appalto_P2_16" />
@@ -206,7 +206,7 @@ satisfies lotto.condizioniNegoziata != null</text>
         <outputEntry id="LiteralExpression_04cxsgw">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
         </outputEntry>
-      </rule>	  
+      </rule>
       <rule id="DecisionRule_P2_16_0015">
         <description>REG10: Servizio Pubblico Locale: il campo è obbligatorio solo se l'oggetto del contratto = servizi</description>
         <inputEntry id="UnaryTests_P2_16_0046">
@@ -238,7 +238,7 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
         <outputEntry id="LiteralExpression_P2_16_0017">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
         </outputEntry>
-      </rule>      
+      </rule>
       <rule id="DecisionRule_P2_16_0021">
         <description>REG14: Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </description>
         <inputEntry id="UnaryTests_P2_16_0064">
@@ -599,7 +599,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P2_16_0038">
-        <description>REG67: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
+        <description>REG67: il campo giustificazione procedura accelerata è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_P2_16_0115">
           <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
         </inputEntry>
@@ -613,7 +613,7 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG67\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_1oiflb4">
+      <rule id="DecisionRule_1oiflb4">
         <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</description>
         <inputEntry id="UnaryTests_1bngedq">
           <text>appalto.datiBaseProcedura.tipoProcedura.codice = "open" or appalto.datiBaseProcedura.tipoProcedura.codice = "oth-single"</text>
@@ -663,10 +663,10 @@ satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null an
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG97\"}"</text>
         </outputEntry>
       </rule>
-	   <rule id="DecisionRule_13m2iti">
+      <rule id="DecisionRule_13m2iti">
         <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
         <inputEntry id="UnaryTests_1vksbpb">
-          <text>appalto.datiBase.importo = null or appalto.datiBase.importo = 0</text>
+          <text>appalto.datiBase.importo = null or appalto.datiBase.importo &lt;= 0</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1otf3ve">
           <text></text>
@@ -685,7 +685,7 @@ satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null an
         </inputEntry>
         <inputEntry id="UnaryTests_10zccl6">
           <text>some lotto in lotti
-satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1wluzhx">
           <text></text>
@@ -711,7 +711,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
         </outputEntry>
       </rule>
-	 <rule id="DecisionRule_1qae09c">
+      <rule id="DecisionRule_1qae09c">
         <description>REG106: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf02">
           <text></text>
@@ -727,7 +727,22 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
         <outputEntry id="LiteralExpression_01bit43">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG106\"}"</text>
         </outputEntry>
-      </rule>	  
+      </rule>
+      <rule id="DecisionRule_1e04lfr">
+        <description>REG110: La somma degli importi indicati nei lotti deve essere compresa tra l'80% e il 100% dell'importo indicato nell'appalto. In presenza di eForm verificare gli importi inseriti nei campi EstimatedOverallContractAmount (BT-27).</description>
+        <inputEntry id="UnaryTests_0ijp7za">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09t9io2">
+          <text>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &lt; (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &gt; appalto.datiBase.importo)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uxqltr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14pmpvn">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_1xc4zxw" name="lotti" />
