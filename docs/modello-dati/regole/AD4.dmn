@@ -98,6 +98,18 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG78\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_16kuoqj">
+        <description>REG100: Negli affidamenti diretti è consentito inserire un solo idPartecipante</description>
+        <inputEntry id="UnaryTests_0muk6cx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02biuh5">
+          <text>some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17ppsx4">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG100\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_0k6u5e5" name="appalto" />
