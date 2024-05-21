@@ -695,16 +695,76 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 ## Specifiche Interfacce
 * specifiche-servizi-fvoe-fva.yaml:
   * inserita operazione richiedi-documenti
+</details>
 
-# Aggiornamento documentazione del 24/04/2024
+<details>
+<summary><h1>Aggiornamento documentazione del 24/04/2024</h1></summary>
+	
 ## read.me
 * Pubblicazione ambiente ATTESTAZIONE
+  
 ## documento-specifiche-servizi-npa.md 
 * Aggiornamento descrizione servizio modifica-avviso
 </details>
 
-# Note di rilascio del 15/05/2024 (in Esercizio)
+<details>
+<summary><h1>Note di rilascio del 15/05/2024 (in Esercizio)</h1></summary>
 
 ### Tipologiche
 * errori.json: aggiunti gli errori ERR110, ERR111
 * motivoEsclusioneOrdinarioSpeciale: riattivato codice 24
+</details>
+
+# Note di rilascio del 21/05/2024 (in Esercizio il 30/05/2024)
+
+### Schede 
+* modello-dati-schede-P2*.yaml, modello-dati-schede-P3*.yaml, modello-dati-schede-P7_3.yaml, modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-A3_6.yaml:
+	* reso obbligatorio l'oggetto datiBaseCPV e il campo cpvPrevalente
+ * **[PROCESSO DI ANNULLAMENTO PROCEDURA O COMUNICAZIONE NUOVO IMPORTO/CUP]** modello-dati-schede-CM1.yaml, modello-dati-schede-CM2.yaml, modello-dati-schede-ANN.yaml:
+ 	* Nuove schede CM1, CM2 e ANN per annullamento procedura (ANN) o comunicazione nuovo importo per appalti sopra (CM1) e sotto (CM2) i 5K euro.
+* modello-dati-schede-P7_1_1.yaml, modello-dati-schede-P7_1_2.yaml, modello-dati-schede-P7_1_3.yaml, modello-dati-schede-P7_2.yaml:
+	* eliminata l'obbligatorietà del campo motivazioneCIG
+* modello-dati-schede-P3_4.yaml, modello-dati-schede-P3_5.yaml, modello-dati-schede-P7_3.yaml:
+	* resi obbligatori l'oggetto datiBaseDocumenti e il campo url
+* modello-dati-schede-NAG.yaml: reso obbligatorio l'oggetto datiBaseRisultatoProcedura
+* modello-dati-schede-M2.yaml,modello-dati-schede-M2_40.yaml: reso obbligatorio l'oggetto datiBaseModificaContrattuale
+* modello-dati-schede-dati-comuni.yaml, modello-dati-schede-A3_6.yaml, modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-P5.yaml:
+	*  Impostata la minLength a 8 sul codiceAppalto
+  
+## Modello Dati
+ * **[PROCESSO DI ANNULLAMENTO PROCEDURA O COMUNICAZIONE NUOVO IMPORTO/CUP]** modello-dati-npa.yaml:
+	*  aggiunti i riferimenti alle nuove schede (CM1,CM2,ANN) nell'oggetto SchedaPostPubblicazioneType
+
+## Orchestratore
+* righe relative alle schede P3_1, P3_2, P3_3, P6_1, P6_2, P5, AD4: aggiornata la colonna scheda successiva per includere le nuove schede CM1, ANN
+* riga relativa alla scheda AD5: aggiornata la colonna scheda successiva per includere le nuove schede CM2, ANN
+* inserite nuove schede CM1, CM2, ANN
+
+### Regole
+* **[PROCESSO DI ANNULLAMENTO PROCEDURA O COMUNICAZIONE NUOVO IMPORTO/CUP]** CM1.dmn, CM2.dmn, ANN.dmn:
+  * regole relative alle nuove schede CM1, CM2 e ANN per annullamento procedura (ANN) o comunicazione nuovo importo o cup per appalti sopra (CM1) e sotto (CM2) i 5K euro.
+* AD*.dmn, A3_6.dmn:
+  * inserito controllo che ci sia un solo idPartecipante
+* **IN ESERCIZIO DAL 15/03/2024** P7_1*.dmn,P7_2.dmn,P6*.dmn,P1_10.dmn,P2_10.dmn,P1_11.dmn,P2_11.dmn,P1_12.dmn,P2_12.dmn,P1_13.dmn,P2_13.dmn,P1_14.dmn,P2_14.dmn,PL1_7.dmn,PL2_7.dmn,PL1_8.dmn,PL2_8.dmn,PL1_9.dmn,PL_2_9.dmn,P4*.dmn,P3*.dmn,P1_16.dmn,P2_16.dmn,P1_17.dmn,P2_17.dmn,P1_18.dmn,P2_18.dmn,P1_19.dmn,P2_19.dmn,P1_20.dmn,P2_20.dmn,P1_21.dmn,P2_21.dmn,P1_23.dmn,P2_23.dmn,P1_24.dmn,P2_24.dmn:
+  * inserite le regole di validazione REG105.dmn, REG106 per i campi scadenzaPresentazioneInvito e oraScadenzaPresentazioneOfferte
+* P1*.dmn, P2*.dmn, P3*.dmn, P4*.dmn,P5.dmn, P6*.dmn, P7_1*.dmn,P7_2.dmn;
+  * inserita la regola di validazione 110: somma dell'importo dei lotti compresa tra 80% e 100% dell'importo gara
+* **IN ESERCIZIO DAL 30/04/2024**
+  P1_23.dmn, P1_24.dmn;
+  * eliminate REG98 e REG99    
+
+### Tipologiche
+* aggiornata errori.json
+* aggiornata contrattiDisposizioniParticolari.json
+* aggiornata fattispecieTracciabilita.json
+* aggiornata motivoEsclusioneConcessione.json
+* aggiornata motivoEsclusioneOrdinarioSpeciale.json
+* aggiornata tipoFascicolo.json
+* aggiornata tipoDocumento.json
+* **[PROCESSO DI ANNULLAMENTO PROCEDURA O COMUNICAZIONE NUOVO IMPORTO/CUP]** motivoAnnullamento.json:
+  * nuova tipologica per annullamento procedura.
+* **[PROCESSO DI ANNULLAMENTO PROCEDURA O COMUNICAZIONE NUOVO IMPORTO/CUP]** motivoRichiestaModifica.json:
+  * nuova tipologica per comunicazione nuovo importo o cup per appalti sopra (CM1) e sotto (CM2) i 5K euro.
+* enteCertificante.json:
+  * nuova tipologica usata internamente dal FE della SA per la trascodfica.
+* aggiornata codiceScheda.json
