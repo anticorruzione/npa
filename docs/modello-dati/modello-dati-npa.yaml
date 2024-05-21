@@ -183,6 +183,9 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CO1.yaml#/components/schemas/SchedaCO1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CO2.yaml#/components/schemas/SchedaCO2Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CL1.yaml#/components/schemas/SchedaCL1Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CM1.yaml#/components/schemas/SchedaCM1Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CM2.yaml#/components/schemas/SchedaCM2Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ANN.yaml#/components/schemas/SchedaANNType' 
       CigType:
         description: coppia lotIdentifier-cig
         type: object
