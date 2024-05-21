@@ -8,7 +8,7 @@ components:
       description: dati relativi ai lotti
       type: object
       additionalProperties: false
-      required: [cig]
+      required: [cig,datiBaseRisultatoProcedura]
       properties: 
         cig:
           description: codice identificativo lotto

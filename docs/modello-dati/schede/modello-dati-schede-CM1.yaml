@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda CM1 - Scheda di comunicazione modifica dati della procedura per appalti sopra i 5K euro.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormCM1Type:
+      type: object
+      required: [cig,comunicazione]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string 
+        comunicazione:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ComunicazioneType'       
+    SchedaCM1Type:
+      description: Scheda di comunicazione modifica dati della procedura per appalti sopra i 5K euro.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormCM1Type'

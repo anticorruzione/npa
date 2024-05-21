@@ -17,7 +17,7 @@ components:
       description: Oggetto che riporta i dati del lotto
       type: object
       additionalProperties: false
-      required: [lotIdentifier,datiBase]
+      required: [lotIdentifier,datiBase,datiBaseCPV,datiBaseDocumenti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante
@@ -29,7 +29,7 @@ components:
           allOf: 
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'          
         datiBaseDocumenti:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'
         datiBaseDurata:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDurataType'
     AnacFormP7_3Type:

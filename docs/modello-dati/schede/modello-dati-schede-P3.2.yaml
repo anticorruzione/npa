@@ -9,7 +9,7 @@ components:
       allOf: # estende la classe LottoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'      
       type: object
-      required: [afferenteInvestimentiPNRR,motivoEsclusioneConcessione,datiBase]
+      required: [afferenteInvestimentiPNRR,motivoEsclusioneConcessione,datiBase,datiBaseCPV]
       additionalProperties: false
       properties:
         afferenteInvestimentiPNRR:

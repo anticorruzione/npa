@@ -9,6 +9,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModificaContrattualeType'
       type: object
       additionalProperties: false
+      required: [datiBaseModificaContrattuale]
       properties:    
         datiBaseModificaContrattuale:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseModificaContrattualeType'      

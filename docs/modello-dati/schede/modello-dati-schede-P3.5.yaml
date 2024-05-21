@@ -9,7 +9,7 @@ components:
       allOf: # estende la classe LottoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'    
       type: object
-      required: [lavoroOAcquistoPrevistoInProgrammazione,afferenteInvestimentiPNRR,opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,contrattiDisposizioniParticolari,datiBase,datiBaseTerminiInvio]
+      required: [lavoroOAcquistoPrevistoInProgrammazione,afferenteInvestimentiPNRR,opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,contrattiDisposizioniParticolari,datiBase,datiBaseTerminiInvio,datiBaseCPV,datiBaseDocumenti]
       additionalProperties: false
       properties:
         afferenteInvestimentiPNRR:
@@ -67,7 +67,7 @@ components:
         datiBaseAccessibilita:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType' 
         datiBaseDocumenti:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'          
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'          
     AppaltoP3_5Type:
       description: Oggetto che riporta i dati dell'appalto. 
       allOf: # estende la classe AppaltoP3BaseType

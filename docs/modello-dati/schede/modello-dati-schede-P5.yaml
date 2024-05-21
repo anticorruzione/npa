@@ -13,6 +13,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64          
         cigAccordoQuadro:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
@@ -36,7 +37,8 @@ components:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SceltaContraenteEnum'
         cup:
           description: Cup
-          type: string        
+          type: string
+          pattern: ^[a-zA-Z0-9]{15}$
    AnacFormP5Type:
       description: Contiene i dati per la tracciabilità
       allOf: # estende la classe AnacFormBaseType

@@ -12,6 +12,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64      
         relazioneUnicaSulleProcedure:
           description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
@@ -22,7 +23,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase]
+      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase,datiBaseCPV]
       properties: 
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED

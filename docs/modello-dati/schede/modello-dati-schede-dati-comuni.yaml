@@ -236,6 +236,38 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
       description: Modalità del collaudo tecnico/amministrativo/ verifica di conformità - fare riferimento ai valori contenuti nel file [modoCollaudo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modoCollaudo.json) 
+    MotivoRichiestaModificaEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Motivo di richiesta di modifica - fare riferimento ai valori contenuti nel file [motivoRichiestaModifica.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoRichiestaModifica.json)
+    AnnullamentoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Motivo di annullamento - fare riferimento ai valori contenuti nel file [motivoAnnullamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoAnnullamento.json) 
+    ComunicazioneType:
+      description: Oggetto utilizzato per modificare i dati di una procedura
+      type: object
+      additionalProperties: false
+      required: [motivoRichiestaModifica]      
+      properties:
+        motivoRichiestaModifica:
+          $ref: '#/components/schemas/MotivoRichiestaModificaEnum'
+        importo:
+          description: Importo
+          type: number
+          format: double
+        cup:
+          description: Cup
+          type: string
+          pattern: ^[a-zA-Z0-9]{15}$
+    AnnullamentoType:
+      description: Oggetto utilizzato per modificare i dati di una procedura
+      type: object
+      additionalProperties: false
+      required: [motivoAnnullamento]      
+      properties:
+        motivoAnnullamento:
+          $ref: '#/components/schemas/AnnullamentoEnum'          
     MultilinguaType:
       description: Oggetto utilizzato per la comunicazione dei dati in multilingua
       type: object
@@ -562,6 +594,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64 
         categorieMerceologiche:
           type: array
@@ -605,6 +638,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64            
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'
@@ -624,6 +658,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64            
         cigAccordoQuadro:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
@@ -652,6 +687,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64            
         prelazionePromotore:
           description: E' previsto il diritto di prelazione per il promotore?
@@ -678,12 +714,13 @@ components:
     AppaltoP7BaseType:
       description: Oggetto che riporta i dati dell'appalto
       type: object
-      required: [categorieMerceologiche,motivazioneCIG,strumentiSvolgimentoProcedure,codiceAppalto,datiBase,datiBaseProcedura]
+      required: [categorieMerceologiche,strumentiSvolgimentoProcedure,codiceAppalto,datiBase,datiBaseProcedura]
       additionalProperties: false
       properties:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64  
         idPianificazione:
           description: ID pianificazione
@@ -783,6 +820,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64 
         strumentiSvolgimentoProcedure:
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'
@@ -823,6 +861,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64            
     AppaltoP_19Type:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
@@ -867,6 +906,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64           
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'  
@@ -888,6 +928,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64           
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum' 
@@ -1686,7 +1727,7 @@ components:
     LottoP6BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier, afferenteInvestimentiPNRR,opzioniRinnovi, categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBaseTerminiInvio]
+      required: [lotIdentifier, afferenteInvestimentiPNRR,opzioniRinnovi, categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBaseTerminiInvio,datiBaseCPV]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1753,7 +1794,7 @@ components:
     LottoP4BaseType:
         description: Oggetto che riporta i dati del lotto
         type: object
-        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase,datiBaseDocumenti,datiBaseTerminiInvio]
+        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase,datiBaseDocumenti,datiBaseTerminiInvio,datiBaseCPV]
         additionalProperties: false
         properties:
           servizioPubblicoLocale:
@@ -1833,7 +1874,7 @@ components:
     LottoP7BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,datiBase,datiBaseDocumenti]
+      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,datiBase,datiBaseDocumenti,datiBaseCPV]
       additionalProperties: false
       properties:
         lotIdentifier:
@@ -1943,7 +1984,7 @@ components:
     LottoP7_2BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,ripetizioniEConsegneComplementari,opzioniRinnovi,datiBase]
+      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,ripetizioniEConsegneComplementari,opzioniRinnovi,datiBase,datiBaseCPV]
       additionalProperties: false
       properties:
         lotIdentifier:
@@ -2294,7 +2335,8 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string 
+            type: string
+            pattern: ^[a-zA-Z0-9]{15}$            
         ccnl:
           description: indicare il codice CNEL o non applicabile
           type: string  
@@ -2330,6 +2372,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64           
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
@@ -2361,7 +2404,8 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string  
+            type: string
+            pattern: ^[a-zA-Z0-9]{15}$
         ccnl:
           description: indicare il codice CNEL o non applicabile
           type: string  
@@ -2397,6 +2441,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64            
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
@@ -2451,6 +2496,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64            
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
@@ -2476,7 +2522,8 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string  
+            type: string
+            pattern: ^[a-zA-Z0-9]{15}$
         ccnl:
           description: indicare il codice CNEL o non applicabile
           type: string  
@@ -2512,6 +2559,7 @@ components:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
+          minLength: 8
           maxLength: 64            
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
@@ -2770,7 +2818,8 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string  
+            type: string
+            pattern: ^[a-zA-Z0-9]{15}$            
         paritaDiGenereGenerazionale:
           $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'
         quadroEconomicoStandard:
@@ -3019,6 +3068,7 @@ components:
       additionalProperties: false
       required:
         - tipoClassificazione
+        - cpvPrevalente
       properties:
         tipoClassificazione:
           description: Il tipo di classificazione che descrive l'appalto (ad es. CPV).
@@ -3499,7 +3549,6 @@ components:
         durata: 
           description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED
           type: string
-          format: number
         dataFine: 
           description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED
           type: string

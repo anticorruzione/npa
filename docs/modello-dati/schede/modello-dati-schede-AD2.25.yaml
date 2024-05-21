@@ -9,7 +9,7 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneAD1_25Type'     
       type: object
       additionalProperties: false
-      required: [datiBase,datiBaseAggiudicazioneAppalto,datiBaseDocumenti]
+      required: [datiBase,datiBaseAggiudicazioneAppalto,datiBaseDocumenti,datiBaseCPV]
       properties: 
         datiBase:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoADType'
