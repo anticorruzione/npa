@@ -1891,8 +1891,8 @@
 {
     "codice":"REG103",
     "descrizione": {
-		"it": "L'importo non può superare i 5K",
-		"en": "L'importo non può superare i 5K"
+		"it": "L'importo totale dei lotti non può superare i 5K",
+		"en": "L'importo totale dei lotti non può superare i 5K"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1900,8 +1900,8 @@
 {
     "codice":"REG104",
     "descrizione": {
-		"it": "L'importo non può essere inferiore ai 5K",
-		"en": "L'importo non può essere inferiore ai 5K"
+		"it": "L'importo totale dei lotti non può essere inferiore ai 5K",
+		"en": "L'importo totale dei lotti non può essere inferiore ai 5K"
 	},
     "dataInizio":null,
     "dataFine":null
