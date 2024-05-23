@@ -996,6 +996,15 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR112",
+    "descrizione": {
+		"it": "importo del lotto e/o oggetto principale del contratto non valorizzati.",
+		"en": "importo del lotto e/o oggetto principale del contratto non valorizzati."
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
 {
     "codice":"ERR9999",
