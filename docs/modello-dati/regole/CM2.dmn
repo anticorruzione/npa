@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_C1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="15.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_C1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.3.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="CM2" name="CM2">
     <informationRequirement id="InformationRequirement_0qk9zn8">
       <requiredInput href="#InputData_1gcht8t" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1d8smc7">
+      <requiredInput href="#InputData_024gamt" />
     </informationRequirement>
     <decisionTable id="DecisionTable_CM2" hitPolicy="COLLECT">
       <input id="comunicazione_CM2" biodi:width="394">
         <inputExpression id="LiteralExpression_comunicazione_CM2" typeRef="string">
           <text>comunicazione</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0hlm6pv">
+        <inputExpression id="LiteralExpression_0eifbvt" typeRef="string">
+          <text>nuovoImportoTotale</text>
         </inputExpression>
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
@@ -16,14 +24,20 @@
         <inputEntry id="UnaryTests_0qvvbpl">
           <text>(comunicazione.importo = null or comunicazione.importo = 0) and (comunicazione.cup = null or comunicazione.cup = "")</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1dzg4jh">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0nyzfph">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG101\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06ix323">
-        <description>REG103: L'importo non può superare i 5K</description>
+        <description>REG103: L'importo totale dei lotti non può superare i 5K</description>
         <inputEntry id="UnaryTests_1ydy3m2">
-          <text>comunicazione.importo != null and comunicazione.importo &gt;= 5000</text>
+          <text>comunicazione.importo != null and comunicazione.importo &gt; 0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bn2ik1">
+          <text>nuovoImportoTotale &gt; 5000</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ucjwgd">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG103\"}"</text>
@@ -32,6 +46,7 @@
     </decisionTable>
   </decision>
   <inputData id="InputData_1gcht8t" name="comunicazione" />
+  <inputData id="InputData_024gamt" name="nuovoImportoTotale" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="CM2">
@@ -42,8 +57,16 @@
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0h28df6" dmnElementRef="InformationRequirement_0qk9zn8">
         <di:waypoint x="241" y="268" />
-        <di:waypoint x="240" y="210" />
-        <di:waypoint x="240" y="190" />
+        <di:waypoint x="210" y="210" />
+        <di:waypoint x="210" y="190" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_06gw9n1" dmnElementRef="InputData_024gamt">
+        <dc:Bounds height="45" width="125" x="327" y="277" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_147syz1" dmnElementRef="InformationRequirement_1d8smc7">
+        <di:waypoint x="390" y="277" />
+        <di:waypoint x="270" y="210" />
+        <di:waypoint x="270" y="190" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
