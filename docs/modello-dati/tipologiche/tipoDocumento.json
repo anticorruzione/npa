@@ -158,4 +158,36 @@
 		},
     "dataInizio":null,
     "dataFine":null
+},{
+  "codice": "00700",
+  "descrizione": {
+    "it": "Altro",
+    "en": "Altro"
+  },
+  "dataInizio": null,
+  "dataFine": null
+},{
+  "codice": "00701",
+  "descrizione": {
+    "it": "Carta d'identità",
+    "en": "Carta d'identità"
+  },
+  "dataInizio": null,
+  "dataFine": null
+},{
+  "codice": "00702",
+  "descrizione": {
+    "it": "Autocertificazione",
+    "en": "Autocertificazione"
+  },
+  "dataInizio": null,
+  "dataFine": null
+},{
+  "codice": "00703",
+  "descrizione": {
+    "it": "Fonte dei poteri",
+    "en": "Fonte dei poteri"
+  },
+  "dataInizio": null,
+  "dataFine": null
 }]
