@@ -22,4 +22,12 @@
 		},
     "dataInizio":null,
     "dataFine":null
+},{
+    "codice":"FVUP",
+    "descrizione": {
+		"it": "Fascicolo Virtuale User Provisioning",
+		"en": "Fascicolo Virtuale User Provisioning"
+		},
+    "dataInizio":null,
+    "dataFine":null
 }]
