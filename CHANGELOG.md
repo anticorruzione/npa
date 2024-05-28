@@ -715,7 +715,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * motivoEsclusioneOrdinarioSpeciale: riattivato codice 24
 </details>
 
-# Note di rilascio del 21/05/2024 (in Esercizio il 30/05/2024)
+# Note di rilascio del 21/05/2024 (in qualificazione il 28/05/2024, nuova pianificazione rilascio in ambienti di attestazione ed esercizio disponibile a breve)
 
 ### Schede 
 * modello-dati-schede-P2*.yaml, modello-dati-schede-P3*.yaml, modello-dati-schede-P7_3.yaml, modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-A3_6.yaml:
