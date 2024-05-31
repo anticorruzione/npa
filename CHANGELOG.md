@@ -715,7 +715,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * motivoEsclusioneOrdinarioSpeciale: riattivato codice 24
 </details>
 
-# Note di rilascio del 21/05/2024 (in qualificazione il 28/05/2024, nuova pianificazione rilascio in ambienti di attestazione ed esercizio disponibile a breve)
+# Note di rilascio del 21/05/2024 (in qualificazione il 28/05/2024, in attestazione ed esercizio dal 10 giugno (attività pianificata nella fascia 13.00-14.00)
 
 ### Schede 
 * modello-dati-schede-P2*.yaml, modello-dati-schede-P3*.yaml, modello-dati-schede-P7_3.yaml, modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-A3_6.yaml, modello-dati-schede-dati-comuni.yaml:
@@ -729,7 +729,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * modello-dati-schede-NAG.yaml: reso obbligatorio l'oggetto datiBaseRisultatoProcedura
 * modello-dati-schede-M2.yaml,modello-dati-schede-M2_40.yaml: reso obbligatorio l'oggetto datiBaseModificaContrattuale
 * modello-dati-schede-dati-comuni.yaml, modello-dati-schede-A3_6.yaml, modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-P5.yaml:
-	*  Impostata la minLength a 8 sul codiceAppalto
+	*  Impostata la minLength a 8 sul codiceAppalto (si raccomanda l'adozione immediata per consentire l'enforcement rinviato a settembre)
   
 ## Modello Dati
  * **[PROCESSO DI ANNULLAMENTO PROCEDURA O COMUNICAZIONE NUOVO IMPORTO/CUP]** modello-dati-npa.yaml:
