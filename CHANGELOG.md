@@ -718,7 +718,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 # Note di rilascio del 21/05/2024 (in qualificazione il 28/05/2024, nuova pianificazione rilascio in ambienti di attestazione ed esercizio disponibile a breve)
 
 ### Schede 
-* modello-dati-schede-P2*.yaml, modello-dati-schede-P3*.yaml, modello-dati-schede-P7_3.yaml, modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-A3_6.yaml:
+* modello-dati-schede-P2*.yaml, modello-dati-schede-P3*.yaml, modello-dati-schede-P7_3.yaml, modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-A3_6.yaml, modello-dati-schede-dati-comuni.yaml:
 	* reso obbligatorio l'oggetto datiBaseCPV e il campo cpvPrevalente
  * **[PROCESSO DI ANNULLAMENTO PROCEDURA O COMUNICAZIONE NUOVO IMPORTO/CUP]** modello-dati-schede-CM1.yaml, modello-dati-schede-CM2.yaml, modello-dati-schede-ANN.yaml:
  	* Nuove schede CM1, CM2 e ANN per annullamento procedura (ANN) o comunicazione nuovo importo per appalti sopra (CM1) e sotto (CM2) i 5K euro.
