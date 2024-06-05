@@ -677,9 +677,9 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 </details>
 
 <details>
-<summary><h1>Note di rilascio del 05/04/2024 (in Esercizio)</h1></summary>
+<summary><h1>Note di rilascio del 05/04/2024</h1></summary>
 
-**NOTA: La nuova operazione /richiedi-documenti sarà utilizzabile in ambiente di qualificazione a partire da una data successivamente comunicata.**
+**NOTA: La nuova operazione /richiedi-documenti è utilizzabile in ambiente di qualificazione a partire dal 6 giugno**
 
 ## Modello Dati
 * modello-dati-fvoe-fva.yaml:
