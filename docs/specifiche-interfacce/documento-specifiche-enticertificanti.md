@@ -9,7 +9,7 @@ Nel presente documento vengono riportati i tipi documento e il rispettivo modell
 
 Vengono riportati per ogni tipologia di documento richiedibile all'ente certificante il modello dati che arricchisce le informazioni, dove non presente, le informazioni implicitamente passate nella richiesta (Esempio Denominazione OE, Sede Legale, ecc) sono esaustive per l'eleborazione della richiesta per l'ente cerificante.
 
-Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https://github.com/domaltomare/npa/tree/main/docs/modello-dati/modello-dati-fvoe-fva.yaml)
+Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https://github.com/anticorruzione/npa/tree/main/docs/modello-dati/modello-dati-fvoe-fva.yaml)
 
 
 °Note: La lista verrà aggiornata in base alle nuove integrazioni 
