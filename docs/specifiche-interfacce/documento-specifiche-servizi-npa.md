@@ -401,6 +401,9 @@ Nella seguente [cartella](../diagrammi-drawio/), è consultabile il diagramma dr
 ## 11.2	Modello dati
 Il modello dati del FVOE è descritto nel [file YAML](../modello-dati/modello-dati-fvoe-fva.yaml)
 
+## 11.3	Tipi documento richiedibili agli enti certificanti
+La lista dei tipi documento che si possono richiedere agli enti certificanti è descritto nel [documento](documento-specifiche-enticertificanti.md)
+
 # 12	Servizi comuni
 
 In questo capitolo si riportano i servizi comuni, ossia quelli che possono essere richiamati dalle Stazioni appaltanti in più contesti dell’NPA e che forniranno una risposta diversa a seconda della fase in cui vengono invocati:
