@@ -1,8 +1,16 @@
 # AVVISI:
 ## 1
-Come da [roadmap](/docs/specifiche-jws/roadmap.md), si ricorda a tutti i soggetti che sono stati autorizzati all’accesso temporaneo agli eService della Piattaforma Contratti Pubblici, che a partire dal 9 ottobre 2023, per poter accedere agli eService attualmente disponibili che implementano il contesto di sicurezza, dovranno effettuare l’onboarding su PDND attraverso la richiesta di iscrizione tra le piattaforme certificate come indicato nelle [regole tecniche](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) emanate da AgID 
+Aggiornamento certificato ssl per la fruizione dei servizi ANAC
+I certificati ssl saranno rinnovati in base al seguente calendario
+- 18 luglio 2024 ore 17.00 aggiornamento ambiente di qualificazione
+- 22 luglio 2024 ore 13.00 aggiornamento ambiente di esercizio
+
+I nuovi certificati sono disponibili nella sezione certificato SSL di questo repository ([/docs/certificato SSL](https://github.com/anticorruzione/npa/tree/main/docs/certificato%20SSL))
 
 ## 2
+Come da [roadmap](/docs/specifiche-jws/roadmap.md), si ricorda a tutti i soggetti che sono stati autorizzati all’accesso temporaneo agli eService della Piattaforma Contratti Pubblici, che a partire dal 9 ottobre 2023, per poter accedere agli eService attualmente disponibili che implementano il contesto di sicurezza, dovranno effettuare l’onboarding su PDND attraverso la richiesta di iscrizione tra le piattaforme certificate come indicato nelle [regole tecniche](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) emanate da AgID 
+
+## 3
 Attivato il nuovo ambiente di ATTESTAZIONE per le piattaforme.
 L'ambiente è destinato all'esecuzione di test funzionali per la verifica delle attività di MAC, è esposto su PDND e disponibile alle sole piattaforme certificate.
 ANAC non garantisce livelli di servizio sulla disponibilità dell'ambiente ed è ammesso un disallineamento temporaneo di versione tra tale ambiente e quello di esercizio in coincidenza con le operazioni di rilascio di MAC, MAD o MEV.
