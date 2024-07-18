@@ -715,7 +715,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * motivoEsclusioneOrdinarioSpeciale: riattivato codice 24
 </details>
 
-# Note di rilascio del 21/05/2024 (in qualificazione il 28/05/2024, in attestazione ed esercizio dal 10 giugno (attività pianificata nella fascia 13.00-14.00)
+<details>
+<summary><h1> Note di rilascio del 21/05/2024 (in Esercizio)</h1></summary>
 
 ### Schede 
 * modello-dati-schede-P2*.yaml, modello-dati-schede-P3*.yaml, modello-dati-schede-P7_3.yaml, modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-A3_6.yaml, modello-dati-schede-dati-comuni.yaml:
@@ -768,3 +769,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * enteCertificante.json:
   * nuova tipologica usata internamente dal FE della SA per la trascodfica.
 * aggiornata codiceScheda.json
+</details>
+
+<summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
+* Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
+Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio in ambiente di esercizio.
