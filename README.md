@@ -1,6 +1,6 @@
 # AVVISI:
 ## 1
-Aggiornamento certificato ssl per la fruizione dei servizi ANAC
+Aggiornamento certificato ssl per la fruizione dei servizi ANAC. </br>
 I certificati ssl saranno rinnovati in base al seguente calendario
 - 18 luglio 2024 ore 17.00 aggiornamento ambiente di qualificazione
 - 22 luglio 2024 ore 13.00 aggiornamento ambiente di esercizio
