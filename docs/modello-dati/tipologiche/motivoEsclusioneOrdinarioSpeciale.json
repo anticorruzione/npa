@@ -357,4 +357,13 @@
 		},
     "dataInizio":"2024-05-28T00:00:00Z",
     "dataFine":null
+},
+{
+    "codice":"65",
+    "descrizione": {
+		"it": "Appalti Difesa e Sicurezza soggetti al D. Lgs 208/2011",
+		"en": "Appalti Difesa e Sicurezza soggetti al D. Lgs 208/2011"
+		},
+    "dataInizio":"2024-08-02T00:00:00Z",
+    "dataFine":null
 }]

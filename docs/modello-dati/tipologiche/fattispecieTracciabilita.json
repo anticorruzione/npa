@@ -96,7 +96,7 @@
 		},	
     "dataInizio":"2024-03-15T00:00:00Z",
     "dataFine":null
-}	
+},	
 {
     "codice":"12",
     "descrizione": {
@@ -203,5 +203,14 @@
 		"en": "Contratti di cui all’articolo 13 comma 4 del d. lgs. 36/2023 nelle more dell’adozione del regolamento del Ministro degli affari esteri e della cooperazione internazionale"
 		},	
     "dataInizio":"2024-05-28T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"24",
+    "descrizione": {
+		"it": "Appalti Difesa e Sicurezza soggetti al D. Lgs 208/2011",
+		"en": "Appalti Difesa e Sicurezza soggetti al D. Lgs 208/2011"
+		},	
+    "dataInizio":"2024-08-02T00:00:00Z",
     "dataFine":null
 }]
