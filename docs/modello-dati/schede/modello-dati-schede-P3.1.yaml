@@ -76,10 +76,8 @@ components:
     SchedaP3_1Type:
       description: Contratti esclusi (generale o di tipo accordo quadro). Articolo 10 della direttiva 2014/24/UE e articolo 21 della direttiva 2014/25/UE.
       type: object
-      required: [anacForm,espd]
+      required: [anacForm]
       additionalProperties: false
       properties:
         anacForm:
-          $ref: '#/components/schemas/AnacFormP3_1Type' 
-        espd:
-         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'         
+          $ref: '#/components/schemas/AnacFormP3_1Type'        
