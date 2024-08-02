@@ -386,7 +386,8 @@ I servizi facoltativi che l’SA potrà invocare relativamente al Fascicolo dell
 -	verifica-richiesta-accesso-fvoe: servizio che permette di conoscere lo stato della richiesta di accesso al fascicolo inoltrata attraverso l’invocazione del servizio richiedi-accesso-fvoe;
 -	ricerca-documenti-fvoe: servizio che permette la ricerca dei documenti di un Fascicolo sulla base dei criteri di input;
 -	recupera-documento-fvoe: servizio che permette la consultazione delle informazioni di dettaglio di un documento;
--	richiedi-documento: servizio che consente di richiedere agli enti certificatori un documento specifico;
+-	richiedi-documento: servizio che consente di richiedere agli enti certificatori un documento specifico con parametri in GET (il servizio è deprecato e sostituito da richiedi-documenti perchè non funzionante in caso di dimensione del payload della richiesta superiore a quanto consentito dal metodo GET);
+-	richiedi-documenti: servizio che consente di richiedere agli enti certificatori un documento specifico con parametri in POST;
 -	recupera-documento-fvoe: servizio che consente di recuperare il documento richiesto;
 -	recupera-storico-documento-fvoe: attraverso l’invocazione di tale servizio sarà possibile recuperare la history e tutte le operazioni effettuate su quel documento;
 -	recupera-anagrafica-oe: tramite questo servizio sarà possibile recuperare l’anagrafica degli operatori economici immettendo come input il codice fiscale dell’OE.
