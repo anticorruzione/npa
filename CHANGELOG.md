@@ -771,7 +771,12 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * aggiornata codiceScheda.json
 </details>
 
-# Note di rilascio del 02/08/2024 
+# Note di rilascio del 02/08/2024 (Changelog-01)
+**NOTA**
+* Pubblicazione contenuti su GitHub: già pubblicati
+* Rilascio in Qualificazione: 07/08/2024
+* Rilascio in Esercizio: 08/08/2024
+  
 ### Tipologiche
 * motivoEsclusioneOrdinarioSpeciale.json, fattispecieTracciabilità.json, motivoEsclusioneConcessione.json:
 	* aggiunta la voce "Appalti Difesa e Sicurezza soggetti al D. Lgs 208/2011"
@@ -782,6 +787,157 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 	* rimossa la richiesta di ESPD
 ### Orchestratore
 * modificata la colonna includeESPD a "NO" per la scheda P3_1
+
+# Note di rilascio del 06/08/2024 (Changelog-02)
+**NOTA**
+* Pubblicazione contenuti su GitHub: 12/09/2024
+* Rilascio in Qualificazione: 24/09/2024
+* Rilascio in Esercizio: 24/10/2024
+  
+**la nota di rilascio potrà essere integrata successivamente**
+    
+## documento-specifiche-servizi-npa.md 
+* Inserito paragrafo 11.3 Lista tipi documento richiedibili agli enti certificanti
+  
+## Specifiche Interfacce
+* specifiche-servizi-fvoe-fva.yaml:
+  * modificato esempio operazione richiedi-documenti
+    
+### Tipologiche
+* statoAutorizzazione.json
+  * aggiunto il valore: 05
+* tipoDocumento.json:
+  * aggiunti i seguenti valori: 00008 00042 00010 e 00011
+* errori.json
+  * aggiunto il valore : FVX58, REG111
+* tipoPrefettura.json
+  * nuova tipologica utilizzata per la scelta della prefettura nella compilazione della richiesta del 00001-Comunicazione Antimafia
+* enteCertificante.json
+  * aggiunti i seguenti valori : MINLAV ISPLAV
+* erroriEC.json
+  * nuova tipologica utilizzata per la trascodifica degli errori provenienti dagli enti certificanti.
+    
+### Modello Dati 
+* modello-dati-fvoe-fva.yaml:
+  * modificato Soggetto_00050 - nel "luogo di nascita" inserita una regex per controllare i comuni italiani e gli stati esteri
+  * modificato DatiSA_00050 - Inserito il codice prefettura e altriSoggetti .
+  * modificato il nome dei modelli dati utlizzato per richiedere i documenti agli enti certificanti. Rimosso il carattere "_"
+* modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede ISDA1,ISDA2 nell'oggetto SchedaComunicaAppaltoType e S0,CSDA1,CSDA2 nell'oggetto SchedaPostPubblicazioneType
+  
+### Schede 
+* issue 853: 
+	* modello-dati-schede-P6.2.yaml: reso obbligatorio il quadroEconomicoStandard
+* issue 1151:
+	* modello-dati-schede-dati-comuni.yaml: per le schede P1_23 e P2_23 spostato il campo contrattiDisposizioniParticolari dall'oggetto appalto all'oggetto lotti, come per tutte le altre schede
+* modello-dati-schede-S4.yaml:
+	* modificata la descrizione della scheda
+* modello-dati-schede-PL1_*.yaml:
+	* aggiunta l'anacForm con l'oggetto stazioniAppaltanti.
+* modello-dati-schede-PL2_7.yaml, modello-dati-schede-PL2_8.yaml, modello-dati-schede-PL2_9.yaml, modello-dati-schede-dati-comuni.yaml:
+	* aggiunto l'oggetto stazioniAppaltanti in anacForm.
+* modello-dati-schede-AD5.yaml:
+	* eliminata l'obbligatorietà dell'oggetto datiBaseDocumenti e del campo url
+* modello-dati-schede-P2_19.yaml, modello-dati-schede-S2.yaml:
+	* aggiornata la descrizione della Scheda in coerenza con il file orchestratore.
+*  modello-dati-schede-dati-comuni.yaml:
+	* eliminati i campi saNonSoggettaObblighi24Dicembre2015 e iniziativeNonSoddisfacenti dall'oggetto lotto in tutte le schede
+ 	* Reso obbligatorio l'oggetto finanziamenti
+  	* Reso obbligatorio oggetto ipotesiCollegamento
+   	* Reso obbligatorio l'oggetto quadroEconomicoConcorsiProgettazione
+  	* Motivo deroga: corretta la descrizione del campo
+	* modalita acquisizione: resa facolativa nelle schede P_20 e P_21
+  	* aggiunto il campo costituzionesocietascopo nelle schede P1_14, P2_14 ,P1_19, P2_19
+   	* oggetto parita di genere: aggiunto il flag ulterioriMisurePremiali
+   	* Reso obbligatorio il campo quadroEconomicoStandardRideterminato dell'oggetto ModificaContrattualeType
+   	* Resi obbligatori gli importi del quadroEconomicoStandardRideterminato
+* modello-dati-schede-A3_6.yaml, modello-dati-schede-AD3.yaml:
+	* inserito il quadro economico delle concessioni
+* modello-dati-schede-AD1_28.yaml, modello-dati-schede-AD2_28.yaml:
+	* eliminato il quadro economico standard
+* modello-dati-schede-AD1_25.yaml, modello-dati-schede-AD2_25.yaml, modello-dati-schede-AD1_26.yaml, modello-dati-schede-AD2_26.yaml:
+	* eliminato il quadro economico delle concessioni
+* modello-dati-schede-AD1_27.yaml, modello-dati-schede-AD2_27.yaml:
+	* eliminati i quadri economici
+* modello-dati-schede-PL2_1.yaml,modello-dati-schede-PL2_2.yaml,modello-dati-schede-PL2_3.yaml:
+	* revisione schede: aggiunti nell'oggetto appalto i campi: importo, accordoQuadro, 	sistemaDinamicoAcquisizione,astaElettronica, fineSistemaDinamicoAcquisizione. Aggiunti nell'oggetto lotto i campi: lotidentifier, importo, cpv secondaria, criteriAggiudicazione, affidamentiRiservati, accessibilita, contrattiSuccessivi, dataInvioInviti. Eliminato il campo codNUTS.
+* modello-dati-schede-PL2_7.yaml,modello-dati-schede-PL2_8.yaml,modello-dati-schede-PL2_9.yaml:
+	* revisione schede: aggiunti nell'oggetto appalto i campi: proceduraAccelerata, giustificazioneProceduraAccelerata, giustificazioneProceduraAccelerataMl,fineSistemaDinamicoAcquisizione. Aggiunto nell'oggetto lotto il campo: contrattiSuccessivi
+* modello-dati-schede-P7_3.yaml:
+	* revisione schede: reso obbligatorio l'oggetto datiBaseDurata
+* modello-dati-schede-P2_10.yaml,modello-dati-schede-P2_11.yaml,modello-dati-schede-P2_16.yaml,modello-dati-schede-P2_17.yaml, modello-dati-schede-P2_18.yaml:
+	* revisione schede: resi obbligatori gli oggetti datiBaseAggiuntivi, datiBaseStrumentiProcedura
+* modello-dati-schede-P2_12.yaml,modello-dati-schede-P2_13.yaml,modello-dati-schede-P2_14.yaml,modello-dati-schede-P2_19.yaml,modello-dati-schede-P2_20.yaml,modello-dati-schede-P2_21.yaml:
+	* revisione schede: reso obbligatorio l'oggetto datiBaseAggiuntivi
+* modello-dati-schede-P2_23.yaml,modello-dati-schede-P2_24.yaml:
+	* revisione schede: reso obbligatorio l'oggetto datiBaseImporto
+* modello-dati-schede-P3_1.yaml,modello-dati-schede-P3_2.yaml,modello-dati-schede-P3_3.yaml:
+	* revisione schede: resi obbligatori gli oggetti datiBaseAggiuntivi,datiBaseAggiudicazione. Aggiunto nell'oggetto lotto il campo: ccnl
+* modello-dati-schede-P3_4.yaml:
+	* revisione schede: reso obbligatorio l'oggetto datiBaseAggiudicazione.
+* modello-dati-schede-P3_5.yaml:
+	* revisione schede: resi obbligatori gli oggetti: datiBaseAggiudicazione,tipoRealizzazione,ipotesiCollegamento
+* modello-dati-schede-P4*.yaml:
+	* revisione schede: resi obbligatori gli oggetti: ccnl,ipotesiCollegamento,datiBaseAggiuntivi
+* modello-dati-schede-P6*.yaml:
+	* revisione schede: resi obbligatori gli oggetti: datiBaseStrumentiProcedura,ipotesiCollegamento,datiBaseAggiudicazione
+* modello-dati-schede-P7_1_1.yaml, modello-dati-schede-P7_1_2.yaml, modello-dati-schede-P7_1_3.yaml, modello-dati-schede-P7_2.yaml:
+	* revisione schede:
+ 		* resi obbligatori gli oggetti: datiBaseContratto,datiBaseAggiudicazione,datiBaseAggiuntivi,contrattiDisposizioniParticolari.
+ 		* aggiunto l'oggetto datiBaseStrumentiProcedura
+* modello-dati-schede-AD2_25.yaml,modello-dati-schede-AD2_26.yaml,modello-dati-schede-AD2_27.yaml,modello-dati-schede-AD2_28.yaml, modello-dati-schede-AD4.yaml:
+	* revisione schede: reso obbligatorio l'oggetto datiBaseContratto
+* modello-dati-schede-AD3.yaml:
+	* revisione schede: resi obbligatori gli oggetti afferenteInvestimentiPNRR, datiBaseContratto.
+* modello-dati-schede-AD5.yaml:
+	* eliminati i campi ccnl, categoria e categoria scorporabile. Nell'oggetto datibasecontratto tolta l'obbligatorietà del campo codNuts.
+* modello-dati-schede-A3_6.yaml:
+	* revisione schede: resi obbligatori gli oggetti datiBaseContratto,datiBaseAggiudicazioneAppalto.
+* modello-dati-schede-A2_29.yaml,modello-dati-schede-A2_30.yaml,modello-dati-schede-A2_31.yaml:
+	* revisione schede: resi obbligatori gli oggetti datiBaseAggiudicazioneAppalto,datiBaseSubappalti, datiBaseRisultatoProcedura. aggiunti i campi offertaMinimoRibasso, proceduraAccelerata
+* modello-dati-schede-A_32,modello-dati-schede-A_35: resi obbligatori gli oggetti: datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto,quadroEconomicoConcessioni. Eliminato il campo nImpreseEscluseInsufficientiGiustificazioni. Aggiunto datiBaseProcedura
+* modello-dati-schede-A2_33.yaml,modello-dati-schede-A2_34.yaml,modello-dati-schede-A2_36.yaml,modello-dati-schede-A2_37.yaml,modello-dati-schede-A3_1.yaml,modello-dati-schede-A3_2.yaml,modello-dati-schede-A3_3.yaml,modello-dati-schede-A3_5.yaml: resi obbligatori gli oggetti: datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto
+* modello-dati-schede-A3_4.yaml: resi obbligatori gli oggetti: datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto,datiBaseStrumentiProcedura,datiBaseSubappalti
+* modello-dati-schede-A4.yaml: resi obbligatori gli oggetti: numeroOfferteAmmesse,datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto
+* modello-dati-schede-A7_1_2.yaml: reso obbligatorio l'oggetto: datiBaseAggiudicazioneAppalto
+* modello-dati-schede-ISDA1.yaml,modello-dati-schede-ISDA2.yaml,modello-dati-schede-S0.yaml,modello-dati-schede-CSDA1.yaml,modello-dati-schede-CSDA2.yaml: nuove schede per la gestione dello SDA
+* modello-dati-schede-P7_2.yaml: inserito identificativo per lo SDA
+* modello-dati-schede-CM1.yaml,modello-dati-schede-CM2.yaml,modello-dati-schede-AD5.yaml,modello-dati-schede-P5.yaml: modificata la cardinalità del campo cupLotto
+
+  
+## Orchestratore
+* modificata a sì la colonna includeAnacForm per le schede PL1_*.
+* inserite le informazioni per gestire il processo delle nuove schede SDA (ISDA1, ISDA2, S0, CSDA1, CSDA2)
+
+### Regole
+* issue 1145: eliminata la REG13 da tutte le schede
+* issue 1016, 1144, 1194, 1310: eliminata la REG67 dalle schede dove non è presente il campo giustificazioneProceduraAccelerata
+* P7_1_1.dmn, P7_1_2.dmn, P7_1_3.dmn, P7_2.dmn:
+	* inserito controllo sul campo motivazioneCIG
+* ISDA1.dmn, ISDA2.dmn, S0.dmn, CSDA1.dmn, CSDA2.dmn: nuove regole per la gestione dello SDA
+* CM1.dmn,CM2.dmn,AD5.dmn,P5.dmn: aggiornate le regole in coerenza con la nuova cardinalità del cupLotto
+
+# Note di rilascio del 06/08/2024 (Changelog-03)
+**NOTA**
+* Pubblicazione contenuti su GitHub: 02/10/2024
+* Rilascio in Qualificazione: 29/10/2024
+* Rilascio in Esercizio: 29/11/2024
+  
+**la nota di rilascio potrà essere integrata successivamente**
+    
+### Modello Dati 
+* modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede AOC nell'oggetto SchedaComunicaAppaltoType e RSOC, COOC nell'oggetto SchedaPostPubblicazioneType
+  
+### Schede 
+* modello-dati-schede-AOC.yaml,modello-dati-schede-RSOC.yaml,modello-dati-schede-COOC.yaml: nuove schede per la gestione degli OOCC
+* modello-dati-schede-A1*.yaml, modello-dati-schede-dati-comuni.yaml: reso facoltativo l'oggetto offertePresentate
+  
+## Orchestratore
+* inserite le informazioni per gestire il processo delle nuove schede OOCC (AOC, RSOC, COOC)
+* aggiornate le informazioni della S2 per gestire il nuovo flusso OOCC
+* aggiornato flusso di orchestrazione prevedendo per le P1* la possibilità di ammettere anche direttamente una A1*
+
+### Regole
+* AOC.dmn, RSOC.dmn, COOC.dmn: nuove regole per la gestione degli OOCC
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
