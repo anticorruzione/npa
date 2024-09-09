@@ -939,6 +939,25 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 ### Regole
 * AOC.dmn, RSOC.dmn, COOC.dmn: nuove regole per la gestione degli OOCC
 
+# Note di rilascio del 09/09/2024  (In Esercizio)
+
+## Modello Dati
+
+### Tipologiche
+* errori.json: Aggiunto errore REG112
+
+### Regole
+* ticket 55540: A1_32.dmn, A2_32.dmn, A1_35.dmn, A2_35.dmn: corretto errore di sintassi nella regola REG47
+* ticket 56076: P3_3.dmn, P3_4.dmn: eliminate le REG37 e REG38 perché i campi non sono presenti nel modello dati
+* ticket 56077: P6_2.dmn: eliminata la REG11 perché il campo non è presente nel modello dati
+* ticket 55503: P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P1_23.dmn,P1_24.dmn,P2_10.dmn,P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P2_23.dmn,P2_24.dmn,P3_1.dmn,P3_2.dmn,P3_3.dmn,P3_4.dmn,P3_5.dmn,P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn,P6_1.dmn,P6_2.dmn: corretto un errore di sintassi nella regola REG20
+* ticket 54713: 
+A1_29.dmn,A1_30.dmn,A1_31.dmn,A1_32.dmn,A1_33.dmn,A1_34.dmn,A1_35.dmn,A1_36.dmn,A1_37.dmn,A2_29.dmn,A2_30.dmn,A2_31.dmn,A2_32.dmn,A2_33.dmn,A2_34.dmn,A2_35.dmn,A2_36.dmn,A2_37.dmn,A3_1.dmn,A3_2.dmn,A3_3.dmn,A3_4.dmn,A3_5.dmn,A3_6.dmn,A4_1.dmn,A4_2.dmn,A4_3.dmn,A4_4.dmn,A4_5.dmn,A4_6.dmn,A7_1_1.dmn,A7_1_2.dmn,AD1_25.dmn,AD1_26.dmn,AD1_27.dmn,AD1_28.dmn,AD2_25.dmn,AD2_26.dmn,AD2_27.dmn,AD2_28.dmn,AD3.dmn, AD4.dmn, AD5.dmn: aggiunta la REG112 per verificare che le aggiudicazioni non siano vuote
+
+### Orchestratore
+* aggiunto il valore 713 nella colonna flussoAppartenenza
+
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.
+
