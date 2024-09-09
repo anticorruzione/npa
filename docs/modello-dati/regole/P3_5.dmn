@@ -205,7 +205,7 @@ E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'og
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0074">
           <text>some lotto in lotti
-satisfies lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P3_5_0075">
           <text></text>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P6_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P6_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.4.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P6_2" name="P6_2">
     <informationRequirement id="InformationRequirement_P6_2_01">
       <requiredInput href="#InputData_appalto_P6_2" />
@@ -83,22 +83,6 @@ satisfies lotto.datiBase.oggettoContratto.codice="services" and lotto.servizioPu
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG10\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P6_2_0016">
-        <description>REG11: Cui: Obbligatorio se Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione</description>
-        <inputEntry id="UnaryTests_P6_2_0049">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_2_0050">
-          <text>some lotto in lotti
-satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P6_2_0051">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P6_2_0017">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_P6_2_0021">
         <description>REG14: Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </description>
         <inputEntry id="UnaryTests_P6_2_0064">
@@ -175,7 +159,7 @@ E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'og
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0074">
           <text>some lotto in lotti
-satisfies lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and lotto.tipologiaLavoro.codice!="12" and lotto.cupLotto = null</text>
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P6_2_0075">
           <text></text>
