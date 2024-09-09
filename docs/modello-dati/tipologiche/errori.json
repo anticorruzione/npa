@@ -1970,6 +1970,24 @@
     "dataFine":null
 },
 {
+    "codice":"REG111",
+    "descrizione": {
+		"it": "Indicare il tipo di sistema dinamico di acquisizione. In presenza di eForm verificare il campo Dynamic Purchasing System (BT-766).",
+		"en": "Indicare il tipo di sistema dinamico di acquisizione. In presenza di eForm verificare il campo Dynamic Purchasing System (BT-766)."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG112",
+    "descrizione": {
+		"it": "Inserire almeno un elemento nella lista delle aggiudicazioni.",
+		"en": "Inserire almeno un elemento nella lista delle aggiudicazioni."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"AUT01",
     "descrizione": {
         "it": "l'utente non è presente tra le stazioni appaltanti",
@@ -2777,8 +2795,17 @@
      	"it": "Soggetto Non Presente Nelle Schede Inviate",
         "en": "Subject not present in the cards sent",
         "de": "Der Betreff ist in den versendeten Karten nicht enthalten"
-      },
+     },
      "dataInizio": null,
      "dataFine": null
-}
-]
+},
+{
+   "codice":"FVX58",
+   "descrizione": {
+       "it": "File Caricato Risulta Vuoto",
+       "en": "Uploaded File Appears Empty",
+       "de": "Die hochgeladene Datei erscheint leer"
+   },
+   "dataInizio":null,
+   "dataFine":null
+}]
