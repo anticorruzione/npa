@@ -36,6 +36,10 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
       description: Condizioni che giustificano il ricorso alla procedura negoziata senza previa pubblicazione di un bando oppure senza previa indizione di una gara - fare riferimento ai valori contenuti nel file [condizioniNegoziata.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/condizioniNegoziata.json) 
+    StatoSDAEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'
+      description: Stato dei partecipanti [statoSDA.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoSDA.json)
     GiustificazioneAggiudicazioneDirettaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -244,6 +248,10 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
       description: Motivo di annullamento - fare riferimento ai valori contenuti nel file [motivoAnnullamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoAnnullamento.json) 
+    OperazioneSDAEnum: 
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
+      description: operazione SDA - fare riferimento ai valori contenuti nel file [operazioneSDA.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/operazioneSDA.json)
     ComunicazioneType:
       description: Oggetto utilizzato per modificare i dati di una procedura
       type: object
@@ -258,8 +266,10 @@ components:
           format: double
         cup:
           description: Cup
-          type: string
-          pattern: ^[a-zA-Z0-9]{15}$
+          type: array
+          items:
+            type: string
+            pattern: ^[a-zA-Z0-9]{15}$
     AnnullamentoType:
       description: Oggetto utilizzato per modificare i dati di una procedura
       type: object
@@ -629,6 +639,21 @@ components:
           $ref: '#/components/schemas/DatiBaseAppaltoType'          
         datiBaseProcedura:
           $ref: '#/components/schemas/DatiBaseProceduraOptionalType'          
+    AppaltoISDABaseType:
+      description: Oggetto che riporta i dati dell'appalto per istituzione dello SDA
+      type: object
+      required: [codiceAppalto]
+      additionalProperties: false
+      properties:
+        codiceAppalto:
+          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
+          type: string
+          minLength: 8
+          maxLength: 64   
+        idAppalto:
+          description: Identificativo univoco dell' Appalto definito da ANAC. (A UUID specified by FC4122).
+          type: string
+          format: uuid       
     AppaltoP3BaseType:
       description: Oggetto che riporta i dati dell'appalto relativi ai contratti senza limiti di importo con obblighi di comunicazione.
       type: object
@@ -1015,7 +1040,16 @@ components:
         datiBaseAccessibilita:
           $ref: '#/components/schemas/DatiBaseAccessibilitaType'  
         datiBaseDocumenti:
-          $ref: '#/components/schemas/DatiBaseDocumentiOptionalType'          
+          $ref: '#/components/schemas/DatiBaseDocumentiOptionalType'  
+    LottoISDABaseType:
+      description: Oggetto che riporta i dati del lotto per istituzione dello SDA
+      type: object
+      additionalProperties: false
+      required: [lotIdentifier]
+      properties:
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante
+          type: string  
     LottoP_10Type:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       allOf: # estende la classe LottoBaseType
@@ -3554,7 +3588,34 @@ components:
           type: string
           format: date-time 
         altraDurata: 
-          $ref: '#/components/schemas/AltraDurataEnum'    
+          $ref: '#/components/schemas/AltraDurataEnum'  
+    DatiBaseStrumentiProceduraSDAType:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      required: [sistemaDinamicoAcquisizione,astaElettronica]
+      properties:
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean 
+    DatiBaseStrumentiProceduraCSDAType:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      required: [fineSistemaDinamicoAcquisizione]
+      properties:
+        fineSistemaDinamicoAcquisizione:
+          description: È stato posto termine al sistema dinamico di acquisizione. Non saranno aggiudicati altri appalti, oltre a quelli pubblicizzati nel presente avviso o bando, mediante il sistema dinamico di acquisizione. Questo campo può essere utilizzato anche se l'avviso di aggiudicazione non pubblica l'aggiudicazione di alcun appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-119 -  Dynamic Purchasing System Termination del TED
+          type: boolean     
+    DatiBaseDurataCSDAType:
+      description:  Dato in comune con il Business Group Duration delle eforms
+      additionalProperties: false
+      required: [dataFine]
+      properties: 
+        dataFine: 
+          description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED
+          type: string
+          format: date-time 
     AnacFormPLBaseType:
       description: Contiene i dati comuni per le schede relative alle pianificazioni
       type: object

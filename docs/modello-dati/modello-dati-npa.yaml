@@ -119,7 +119,9 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD3.yaml#/components/schemas/SchedaAD3Type'   
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD4.yaml#/components/schemas/SchedaAD4Type'   
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD5.yaml#/components/schemas/SchedaAD5Type' 
-              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.6.yaml#/components/schemas/SchedaA3_6Type'              
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A3.6.yaml#/components/schemas/SchedaA3_6Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ISDA1.yaml#/components/schemas/SchedaISDA1Type'      
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ISDA2.yaml#/components/schemas/SchedaISDA2Type'              
       SchedaPostPubblicazioneType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         allOf: # estende il modello dati SchedaType
@@ -185,7 +187,10 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CL1.yaml#/components/schemas/SchedaCL1Type' 
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CM1.yaml#/components/schemas/SchedaCM1Type' 
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CM2.yaml#/components/schemas/SchedaCM2Type' 
-              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ANN.yaml#/components/schemas/SchedaANNType' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ANN.yaml#/components/schemas/SchedaANNType'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S0.yaml#/components/schemas/SchedaS0Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CSDA1.yaml#/components/schemas/SchedaCSDA1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CSDA2.yaml#/components/schemas/SchedaCSDA2Type' 
       CigType:
         description: coppia lotIdentifier-cig
         type: object

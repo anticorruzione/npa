@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda CSDA2 - Conclusione Sistema Dinamico di Acquisizione Sotto soglia.
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormCSDA2Type:
+      description: Contiene i dati per la scheda di conclusione SDA.
+      type: object
+      required: [idAppalto,datiBaseStrumentiProcedura,datiBaseDurata] 
+      additionalProperties: false
+      properties:
+        idAppalto:
+          description: id restituito dal servizio all'invio della scheda di istituzione SDA
+          type: string        
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraCSDAType'
+        datiBaseDurata:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDurataCSDAType'
+    SchedaCSDA2Type:
+      description: Conclusione Sistema Dinamico di Acquisizione Sotto soglia.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormCSDA2Type'          

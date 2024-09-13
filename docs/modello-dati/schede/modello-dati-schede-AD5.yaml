@@ -14,7 +14,9 @@ components:
           type: string               
         cup:
           description: Cup
-          type: string  
+          type: array
+          items:
+            type: string 
         partecipanti:
           type: array
           items:

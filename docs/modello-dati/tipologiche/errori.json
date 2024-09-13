@@ -1988,6 +1988,15 @@
     "dataFine":null
 },
 {
+    "codice":"REG113",
+    "descrizione": {
+		"it": "Se il campo condizioniNegoziata.codice=46(SDA) allora il campo idAppalto rilasciato da ISDA1 e ISDA2 deve essere obbligatoriamente valorizzato.",
+		"en": "Se il campo condizioniNegoziata.codice=46(SDA) allora il campo idAppalto rilasciato da ISDA1 e ISDA2 deve essere obbligatoriamente valorizzato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"AUT01",
     "descrizione": {
         "it": "l'utente non è presente tra le stazioni appaltanti",

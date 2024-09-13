@@ -1,0 +1,27 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Richiesta di iscrizione",
+		"en": "Richiesta di iscrizione"
+		},
+    "dataInizio":"2024-04-20T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Iscritto",
+		"en": "Iscritto"
+		},
+    "dataInizio":"2024-04-20T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Cancellato",
+		"en": "Cancellato"
+		},
+    "dataInizio":"2024-04-20T00:00:00Z",
+    "dataFine":null
+}]

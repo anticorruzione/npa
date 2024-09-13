@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda ISDA2 - Istituzione Sistema Dinamico di Acquisizione Sotto soglia.
+  version: 1.0.0
+components:
+  schemas:
+    AppaltoSDAType:
+      description: Oggetto che riporta i dati dell'appalto
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AppaltoISDABaseType' 
+      type: object
+      additionalProperties: false
+      required: [datiBase,datiBaseStrumentiProcedura]
+      properties: 
+        datiBase:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoPLType'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraSDAType'          
+    LottoSDAType:
+      description: Oggetto che riporta i dati del lotto
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoISDABaseType' 
+      type: object
+      additionalProperties: false
+      required: [lotIdentifier,datiBase,datiBaseCPV,datiBaseDocumenti,datiBaseDurata]
+      properties:
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante
+          type: string      
+        datiBase:
+          allOf:
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoPLType'
+        datiBaseCPV:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'          
+        datiBaseDocumenti:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'
+        datiBaseDurata:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDurataSDAType'
+    AnacFormISDA2Type:
+      description: Contiene i dati per la scheda di istituzione SDA.
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'       
+      type: object
+      required: [appalto,lotti] 
+      additionalProperties: false
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoSDAType'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoSDAType'    
+    SchedaISDA2Type:
+      description: Istituzione Sistema Dinamico di Acquisizione Sotto soglia. Articolo 32 comma 2, 6 decreto legislativo 36/2023.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormISDA2Type'          
