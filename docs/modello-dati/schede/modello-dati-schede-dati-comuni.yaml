@@ -248,10 +248,6 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
       description: Motivo di annullamento - fare riferimento ai valori contenuti nel file [motivoAnnullamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoAnnullamento.json)
-    OperazioneSDAEnum: 
-      allOf: # estende lo schema dati di TipologicaSchemaType
-        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: operazione SDA - fare riferimento ai valori contenuti nel file [operazioneSDA.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/operazioneSDA.json)
     ComunicazioneType:
       description: Oggetto utilizzato per modificare i dati di una procedura
       type: object
