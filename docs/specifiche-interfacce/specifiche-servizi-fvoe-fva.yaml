@@ -1265,6 +1265,7 @@ components:
       allOf: # estende il modello dati DocumentoRichiediType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoRichiediType'
       example:
+        type: "DatiSA00036"
         chiaveAccesso: "2022-01-23T12:02:05Z"
         tipoDocumento: 
           idTipologica : "tipoDocumento"

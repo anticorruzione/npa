@@ -15,7 +15,7 @@ components:
           type: string
           minLength: 8
           maxLength: 64          
-        cigAccordoQuadro:
+        cigAccordoQuadroConvenzione:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string  
         datiBase:
@@ -23,7 +23,7 @@ components:
    LottoP5Type:
       description: Oggetto che riporta i dati del lotto.
       type: object
-      required: [lotIdentifier,datiBase,sceltaContraente,fattispecieTracciabilita]
+      required: [lotIdentifier,datiBase,sceltaContraente]
       additionalProperties: false
       properties:
         lotIdentifier:

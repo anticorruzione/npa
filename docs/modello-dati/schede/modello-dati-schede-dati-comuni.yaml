@@ -36,10 +36,10 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
       description: Condizioni che giustificano il ricorso alla procedura negoziata senza previa pubblicazione di un bando oppure senza previa indizione di una gara - fare riferimento ai valori contenuti nel file [condizioniNegoziata.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/condizioniNegoziata.json) 
-    StatoSDAEnum:
+    OperazioneSDAEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'
-      description: Stato dei partecipanti [statoSDA.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/statoSDA.json)
+      description: Azione richiesta dal partecipante [operazioneSDA.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/operazioneSDA.json)
     GiustificazioneAggiudicazioneDirettaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -83,7 +83,7 @@ components:
     MotivoDerogaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
-      description: Motivo deroga che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii. - fare riferimento ai valori contenuti nel file [motivoDeroga.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoDeroga.json) 
+      description: Motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile - fare riferimento ai valori contenuti nel file [motivoDeroga.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoDeroga.json) 
     MisurePremialiEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -239,7 +239,7 @@ components:
     ModoCollaudoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
-      description: Modalità del collaudo tecnico/amministrativo/ verifica di conformità - fare riferimento ai valori contenuti nel file [modoCollaudo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modoCollaudo.json) 
+      description: Modalità del collaudo tecnico/amministrativo/ verifica di conformità - fare riferimento ai valori contenuti nel file [modoCollaudo.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modoCollaudo.json)
     MotivoRichiestaModificaEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
@@ -247,7 +247,7 @@ components:
     AnnullamentoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
-      description: Motivo di annullamento - fare riferimento ai valori contenuti nel file [motivoAnnullamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoAnnullamento.json) 
+      description: Motivo di annullamento - fare riferimento ai valori contenuti nel file [motivoAnnullamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoAnnullamento.json)
     OperazioneSDAEnum: 
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'    
@@ -256,7 +256,7 @@ components:
       description: Oggetto utilizzato per modificare i dati di una procedura
       type: object
       additionalProperties: false
-      required: [motivoRichiestaModifica]      
+      required: [motivoRichiestaModifica]
       properties:
         motivoRichiestaModifica:
           $ref: '#/components/schemas/MotivoRichiestaModificaEnum'
@@ -274,7 +274,7 @@ components:
       description: Oggetto utilizzato per modificare i dati di una procedura
       type: object
       additionalProperties: false
-      required: [motivoAnnullamento]      
+      required: [motivoAnnullamento]
       properties:
         motivoAnnullamento:
           $ref: '#/components/schemas/AnnullamentoEnum'          
@@ -380,11 +380,14 @@ components:
           type: number
           format: double
           minimum: 0
-          maximum: 100
+          maximum: 100        
         motivoDeroga:
           type: array
           items:
             $ref: '#/components/schemas/MotivoDerogaEnum'
+        ulterioriMisurePremiali:
+          description: Previsione nel bando di gara, nell’avviso o nell’invito di ulteriori misure premiali che attribuiscono un punteggio aggiuntivo all’offerente o al candidato.
+          type: boolean          
         misurePremiali:
           type: array
           items:
@@ -502,7 +505,7 @@ components:
     OfferteType:
       description: Dati delle offerte
       type: object
-      required: [importo,ccnl,idPartecipante,aggiudicatario]
+      required: [importo,ccnl,idPartecipante,aggiudicatario,offertaAnomala]
       additionalProperties: false
       properties:
         idPartecipante: 
@@ -549,7 +552,7 @@ components:
           description: L'offerta è stata esclusa automaticamente?
           type: boolean
         offertaAnomala: 
-          description: L'offerta è anomale?
+          description: L'offerta è anomala?
           type: boolean          
     DefinizioneType:
       description: Dati delle modalità di definizione
@@ -574,7 +577,7 @@ components:
         impTotaleDefinizione:
           description: Importo totale eventuale definizione
           type: number
-          format: double          
+          format: double
     AggiudicatarioA1_35Type:
       description: Dati dell'aggiudicatario
       type: object
@@ -628,7 +631,9 @@ components:
       required: [datiBase]
       properties:
         datiBase:
-          $ref: '#/components/schemas/DatiBaseAppaltoPLType' 
+          $ref: '#/components/schemas/DatiBaseAppaltoType' 
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraCompletoType'          
     AppaltoPLCompletoType:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione
       type: object
@@ -636,9 +641,11 @@ components:
       required: [datiBase]
       properties:
         datiBase:
-          $ref: '#/components/schemas/DatiBaseAppaltoType'          
+          $ref: '#/components/schemas/DatiBaseAppaltoType' 
         datiBaseProcedura:
-          $ref: '#/components/schemas/DatiBaseProceduraOptionalType'          
+          $ref: '#/components/schemas/DatiBaseProceduraPLType'      
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraCompletoType'           
     AppaltoISDABaseType:
       description: Oggetto che riporta i dati dell'appalto per istituzione dello SDA
       type: object
@@ -649,11 +656,11 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64   
-        idAppalto:
-          description: Identificativo univoco dell' Appalto definito da ANAC. (A UUID specified by FC4122).
+          maxLength: 64      
+        idSDA:
+          description: Identificativo univoco dello SDA rilasciato da ANAC.
           type: string
-          format: uuid       
+          format: uuid 
     AppaltoP3BaseType:
       description: Oggetto che riporta i dati dell'appalto relativi ai contratti senza limiti di importo con obblighi di comunicazione.
       type: object
@@ -677,7 +684,7 @@ components:
     AppaltoP6BaseType:
       description: Oggetto che riporta i dati dell'appalto
       type: object
-      required: [cigAccordoQuadro,codiceAppalto,datiBaseProcedura]
+      required: [cigAccordoQuadroConvenzione,codiceAppalto,datiBaseProcedura,datiBaseStrumentiProcedura]
       additionalProperties: false
       properties:  
         codiceAppalto:
@@ -685,7 +692,7 @@ components:
           type: string
           minLength: 8
           maxLength: 64            
-        cigAccordoQuadro:
+        cigAccordoQuadroConvenzione:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string
         strumentiSvolgimentoProcedure: 
@@ -700,9 +707,7 @@ components:
         datiBaseProcedura:
           $ref: '#/components/schemas/DatiBaseProceduraCompletoType' 
         datiBaseStrumentiProcedura:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseStrumentiProceduraAccordoQuadroAstaType' 
-          required: [astaElettronica]
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraP6Type'           
     AppaltoP4BaseType:
       description: Oggetto che riporta i dati dell'appalto
       type: object
@@ -732,14 +737,13 @@ components:
         datiBase:
           $ref: '#/components/schemas/DatiBaseAppaltoType'
         datiBaseProcedura:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseProceduraType'
+          $ref: '#/components/schemas/DatiBaseProceduraType'
         datiBaseStrumentiProcedura:
           $ref: '#/components/schemas/DatiBaseStrumentiProceduraAstaType'  
     AppaltoP7BaseType:
       description: Oggetto che riporta i dati dell'appalto
       type: object
-      required: [categorieMerceologiche,strumentiSvolgimentoProcedure,codiceAppalto,datiBase,datiBaseProcedura]
+      required: [categorieMerceologiche,strumentiSvolgimentoProcedure,codiceAppalto,datiBase,datiBaseProcedura,datiBaseStrumentiProcedura]
       additionalProperties: false
       properties:
         codiceAppalto:
@@ -769,11 +773,49 @@ components:
           type: string
           format: url   
         datiBase:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseAppaltoType'
+          $ref: '#/components/schemas/DatiBaseAppaltoType'
         datiBaseProcedura:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseProceduraType'
+          $ref: '#/components/schemas/DatiBaseProceduraType'
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraP7Type'
+    AppaltoP7_2Type:
+      description: Oggetto che riporta i dati dell'appalto
+      type: object
+      required: [categorieMerceologiche,codiceAppalto,datiBase,datiBaseProcedura,datiBaseStrumentiProcedura]
+      additionalProperties: false
+      properties:
+        codiceAppalto:
+          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
+          type: string
+          minLength: 8
+          maxLength: 64  
+        idSDA:
+          $ref: '#/components/schemas/AppaltoISDABaseType'
+        idPianificazione:
+          description: ID pianificazione
+          type: string  
+          format: uuid
+        termineRidottoAvvisoPreinformazione:
+          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
+          type: boolean           
+        categorieMerceologiche:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategorieMerceologicheEnum'
+        motivazioneCIG:
+          $ref: '#/components/schemas/MotivazioneCIGEnum'  
+        motivoUrgenza:
+          $ref: '#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url   
+        datiBase:
+          $ref: '#/components/schemas/DatiBaseAppaltoType'
+        datiBaseProcedura:
+          $ref: '#/components/schemas/DatiBaseProceduraType'
+        datiBaseStrumentiProcedura:
+          $ref: '#/components/schemas/DatiBaseStrumentiProceduraP7_2Type'          
     AppaltoP_10Type:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       allOf: # estende la classe AppaltoBaseType
@@ -835,7 +877,12 @@ components:
       allOf: # estende la classe AppaltoBaseType
       - $ref: '#/components/schemas/AppaltoBaseType'
       type: object
+      required: [costituzioneSocietaDiScopo] 
       additionalProperties: false
+      properties:
+        costituzioneSocietaDiScopo:
+          description: Indicare se è prevista la costituzione di una società di scopo
+          type: boolean
     AppaltoP_15Type:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione
       type: object
@@ -893,7 +940,12 @@ components:
       allOf: # estende la classe AppaltoBaseType
       - $ref: '#/components/schemas/AppaltoBaseType'
       type: object 
+      required: [costituzioneSocietaDiScopo] 
       additionalProperties: false
+      properties:
+        costituzioneSocietaDiScopo:
+          description: Indicare se è prevista la costituzione di una società di scopo
+          type: boolean        
     AppaltoP_20Type:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       allOf: # estende la classe AppaltoBaseType
@@ -935,8 +987,6 @@ components:
           maxLength: 64           
         strumentiSvolgimentoProcedure: 
           $ref: '#/components/schemas/StrumentiSvolgimentoProcedureEnum'  
-        contrattiDisposizioniParticolari:
-          $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum' 
         idPianificazione:
           description: ID pianificazione
           type: string  
@@ -974,6 +1024,7 @@ components:
         - categorieMerceologiche
         - afferenteInvestimentiPNRR
         - contrattiDisposizioniParticolari
+        - finanziamenti
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -1011,22 +1062,36 @@ components:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pianificazione
       type: object
       additionalProperties: false
-      required: [datiBase]
+      required: [lotIdentifier,datiBase]
       properties:
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante
+          type: string      
         datiBase:
-          $ref: '#/components/schemas/DatiBaseLottoPLType'
+          $ref: '#/components/schemas/DatiBaseLottoType'
         datiBaseCPV:
-          $ref: '#/components/schemas/DatiBaseCPVPLBaseType'
-        datiBaseContratto:
-          $ref: '#/components/schemas/DatiBaseContrattoType'
+          $ref: '#/components/schemas/DatiBaseCPVPLType'
+        datiBaseAggiudicazione:
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneOptionalType'   
+        datiBaseAggiuntivi:
+          $ref: '#/components/schemas/DatiBaseAggiuntiviOptionalType'
+        datiBaseAccessibilita:
+          $ref: '#/components/schemas/DatiBaseAccessibilitaType'
+        datiBaseImporto:
+          $ref: '#/components/schemas/DatiBaseImportoOptionalType'
+        datiBaseComunicazione:
+          $ref: '#/components/schemas/DatiBaseComunicazioneType'          
         datiBaseDocumenti:
           $ref: '#/components/schemas/DatiBaseDocumentiOptionalType'          
     LottoPLCompletoType:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pianificazione
       type: object
       additionalProperties: false
-      required: [datiBase]
+      required: [lotIdentifier,datiBase]
       properties:
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante
+          type: string      
         datiBase:
           $ref: '#/components/schemas/DatiBaseLottoType'
         datiBaseCPV:
@@ -1036,11 +1101,15 @@ components:
         datiBaseAggiudicazione:
           $ref: '#/components/schemas/DatiBaseAggiudicazioneOptionalType' 
         datiBaseAggiuntivi:
-          $ref: '#/components/schemas/DatiBaseAggiuntiviType'
+          $ref: '#/components/schemas/DatiBaseAggiuntiviOptionalType'
         datiBaseAccessibilita:
-          $ref: '#/components/schemas/DatiBaseAccessibilitaType'  
+          $ref: '#/components/schemas/DatiBaseAccessibilitaType'
+        datiBaseImporto:
+          $ref: '#/components/schemas/DatiBaseImportoOptionalType'          
+        datiBaseComunicazione:
+          $ref: '#/components/schemas/DatiBaseComunicazioneType'          
         datiBaseDocumenti:
-          $ref: '#/components/schemas/DatiBaseDocumentiOptionalType'  
+          $ref: '#/components/schemas/DatiBaseDocumentiOptionalType'          
     LottoISDABaseType:
       description: Oggetto che riporta i dati del lotto per istituzione dello SDA
       type: object
@@ -1055,7 +1124,7 @@ components:
       allOf: # estende la classe LottoBaseType
         - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl,quadroEconomicoStandard]
+      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         prestazioniComprese:
@@ -1065,13 +1134,7 @@ components:
           type: boolean      
         ripetizioniEConsegneComplementari:
           description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
-          type: boolean      
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean  
+          type: boolean        
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean
@@ -1098,26 +1161,20 @@ components:
         paritaDiGenereGenerazionale:
           $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType' 
         quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoType'          
+          $ref: '#/components/schemas/QuadroEconomicoPType'          
     LottoP_11Type:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl,quadroEconomicoStandard]
+      required: [opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,prestazioniComprese,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         prestazioniComprese:
           $ref: '#/components/schemas/PrestazioniEnum'      
         ripetizioniEConsegneComplementari:
           description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
-          type: boolean        
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean     
+          type: boolean             
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean
@@ -1144,13 +1201,13 @@ components:
         paritaDiGenereGenerazionale:
           $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType' 
         quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoType'          
+          $ref: '#/components/schemas/QuadroEconomicoPType'          
     LottoP_12Type:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
+      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1165,13 +1222,7 @@ components:
         cui:
           description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
           type: string
-          pattern: ^[a-zA-Z0-9]{20,22}$
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean 
+          pattern: ^[a-zA-Z0-9]{20,22}$ 
         ccnl:
           description: indicare il codice CNEL o non applicabile
           type: string          
@@ -1197,7 +1248,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
+      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1212,13 +1263,7 @@ components:
         cui:
           description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
           type: string
-          pattern: ^[a-zA-Z0-9]{20,22}$          
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean 
+          pattern: ^[a-zA-Z0-9]{20,22}$           
         ccnl:
           description: indicare il codice CNEL o non applicabile
           type: string          
@@ -1244,7 +1289,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,servizioPubblicoLocale,ccnl]
+      required: [opzioniRinnovi, categoria,lavoroOAcquistoPrevistoInProgrammazione,modalitaAcquisizione,servizioPubblicoLocale,ccnl,ipotesiCollegamento]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1256,13 +1301,7 @@ components:
         cui:
           description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
           type: string
-          pattern: ^[a-zA-Z0-9]{20,22}$          
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean    
+          pattern: ^[a-zA-Z0-9]{20,22}$              
         ccnl:
           description: indicare il codice CNEL o non applicabile
           type: string          
@@ -1296,6 +1335,9 @@ components:
         - ccnl
         - categoria
         - prestazioniComprese
+        - finanziamenti
+        - ipotesiCollegamento
+        - quadroEconomicoStandard
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -1366,7 +1408,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl,quadroEconomicoStandard]
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         prestazioniComprese:
@@ -1383,13 +1425,7 @@ components:
         cui:
           description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
           type: string
-          pattern: ^[a-zA-Z0-9]{20,22}$          
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean          
+          pattern: ^[a-zA-Z0-9]{20,22}$                    
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean
@@ -1422,7 +1458,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl,quadroEconomicoStandard]
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,prestazioniComprese,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         prestazioniComprese:
@@ -1439,13 +1475,7 @@ components:
         cui:
           description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
           type: string
-          pattern: ^[a-zA-Z0-9]{20,22}$          
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean          
+          pattern: ^[a-zA-Z0-9]{20,22}$                    
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean
@@ -1476,7 +1506,7 @@ components:
     LottoP_18Type:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       type: object
-      required: [lotIdentifier, categoria,ccnl]
+      required: [lotIdentifier, categoria,ccnl,ipotesiCollegamento]
       additionalProperties: false
       properties:
         lotIdentifier:
@@ -1507,18 +1537,12 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,servizioPubblicoLocale,ccnl]
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,servizioPubblicoLocale,ccnl,ipotesiCollegamento]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
           description: Flag servizio pubblico locale
-          type: boolean       
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean          
+          type: boolean                
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean
@@ -1556,7 +1580,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [modalitaAcquisizione,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1564,13 +1588,7 @@ components:
           type: boolean      
         ripetizioniEConsegneComplementari:
           description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
-          type: boolean       
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean         
+          type: boolean                
         lavoroOAcquistoPrevistoInProgrammazione:
           description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
           type: boolean         
@@ -1603,7 +1621,7 @@ components:
       allOf: # estende la classe LottoBaseType
       - $ref: '#/components/schemas/LottoBaseType'
       type: object
-      required: [modalitaAcquisizione,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard]
+      required: [lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi, categoria,ripetizioniEConsegneComplementari,servizioPubblicoLocale,ccnl,quadroEconomicoStandard,ipotesiCollegamento]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1611,13 +1629,7 @@ components:
           type: boolean      
         ripetizioniEConsegneComplementari:
           description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
-          type: boolean        
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean          
+          type: boolean                  
         lavoroOAcquistoPrevistoInProgrammazione:
           description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
           type: boolean          
@@ -1648,7 +1660,7 @@ components:
     LottoP_23Type:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       type: object
-      required: [afferenteInvestimentiPNRR, lotIdentifier,acquisizioneCup,codIstat]
+      required: [afferenteInvestimentiPNRR, lotIdentifier,acquisizioneCup,codIstat,contrattiDisposizioniParticolari, finanziamenti,quadroEconomicoConcorsiProgettazione]
       additionalProperties: false
       properties:
         lotIdentifier:
@@ -1675,6 +1687,8 @@ components:
           items:
             type: string 
             pattern: ^[a-zA-Z0-9]{15}$
+        contrattiDisposizioniParticolari:
+          $ref: '#/components/schemas/ContrattiDisposizioniParticolariEnum'            
         motivoEsclusioneOrdinarioSpeciale:
           $ref: '#/components/schemas/MotivoEsclusioneOrdinarioSpecialeEnum' 
         finanziamenti:
@@ -1687,7 +1701,7 @@ components:
     LottoP_24Type:
       description: Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       type: object
-      required: [lotIdentifier, afferenteInvestimentiPNRR, acquisizioneCup,codIstat,contrattiDisposizioniParticolari]
+      required: [lotIdentifier, afferenteInvestimentiPNRR, acquisizioneCup,codIstat,contrattiDisposizioniParticolari,finanziamenti,quadroEconomicoConcorsiProgettazione]
       additionalProperties: false
       properties:
         lotIdentifier:
@@ -1729,7 +1743,7 @@ components:
       description: Oggetto che riporta i dati del lotto 
       type: object
       additionalProperties: false
-      required: [lotIdentifier,codIstat]
+      required: [lotIdentifier,codIstat,finanziamenti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -1761,7 +1775,7 @@ components:
     LottoP6BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier, afferenteInvestimentiPNRR,opzioniRinnovi, categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBaseTerminiInvio,datiBaseCPV]
+      required: [lotIdentifier, afferenteInvestimentiPNRR,opzioniRinnovi, categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBaseTerminiInvio,datiBaseCPV,finanziamenti,ipotesiCollegamento,datiBaseAggiudicazione]
       additionalProperties: false
       properties:
         servizioPubblicoLocale:
@@ -1817,8 +1831,7 @@ components:
         datiBaseContratto:
           $ref: '#/components/schemas/DatiBaseContrattoType'
         datiBaseAggiudicazione:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseAggiudicazioneType' 
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneType' 
         datiBaseTerminiInvio:
           $ref: '#/components/schemas/DatiBaseTerminiInvioSoloOraType'   
         datiBaseAccessibilita:
@@ -1828,7 +1841,7 @@ components:
     LottoP4BaseType:
         description: Oggetto che riporta i dati del lotto
         type: object
-        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase,datiBaseDocumenti,datiBaseTerminiInvio,datiBaseCPV]
+        required: [lotIdentifier,lavoroOAcquistoPrevistoInProgrammazione, opzioniRinnovi,afferenteInvestimentiPNRR,categoria,servizioPubblicoLocale,codIstat,contrattiDisposizioniParticolari,datiBase,datiBaseDocumenti,datiBaseTerminiInvio,datiBaseCPV,finanziamenti,ccnl,ipotesiCollegamento,datiBaseAggiuntivi]
         additionalProperties: false
         properties:
           servizioPubblicoLocale:
@@ -1836,7 +1849,10 @@ components:
             type: boolean        
           lotIdentifier:
             description: Id univoco del lotto generato dalla stazione appaltante
-            type: string  
+            type: string 
+          ccnl:
+            description: indicare il codice CNEL o non applicabile
+            type: string        
           condizioniNegoziata:
             type: array
             items:
@@ -1903,12 +1919,11 @@ components:
           datiBaseAccessibilita:
             $ref: '#/components/schemas/DatiBaseAccessibilitaType'              
           datiBaseDocumenti:
-            allOf: 
-             - $ref: '#/components/schemas/DatiBaseDocumentiType'           
+            $ref: '#/components/schemas/DatiBaseDocumentiType'           
     LottoP7BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,datiBase,datiBaseDocumenti,datiBaseCPV]
+      required: [lotIdentifier,categorieMerceologiche,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,datiBase,datiBaseDocumenti,datiBaseCPV,datiBaseContratto,datiBaseAggiudicazione,datiBaseAggiuntivi,contrattiDisposizioniParticolari]
       additionalProperties: false
       properties:
         lotIdentifier:
@@ -1917,13 +1932,7 @@ components:
         categorieMerceologiche:
           type: array
           items:
-            $ref: '#/components/schemas/CategorieMerceologicheEnum' 
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean   
+            $ref: '#/components/schemas/CategorieMerceologicheEnum'    
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean  
@@ -1996,17 +2005,13 @@ components:
         tipoRealizzazione:
           $ref: '#/components/schemas/TipoRealizzazioneContrattoEnum'            
         datiBase:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseLottoType'
+          $ref: '#/components/schemas/DatiBaseLottoType'
         datiBaseCPV:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseCPVType'
+          $ref: '#/components/schemas/DatiBaseCPVType'
         datiBaseContratto:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseContrattoP7Type'
+          $ref: '#/components/schemas/DatiBaseContrattoP7Type'
         datiBaseAggiudicazione:
-          allOf:
-          - $ref: '#/components/schemas/DatiBaseAggiudicazioneType'
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneType'
         datiBaseAggiuntivi:
           $ref: '#/components/schemas/DatiBaseAggiuntiviType'       
         datiBaseAccessibilita:
@@ -2018,7 +2023,7 @@ components:
     LottoP7_2BaseType:
       description: Oggetto che riporta i dati del lotto
       type: object
-      required: [lotIdentifier,categorieMerceologiche,saNonSoggettaObblighi24Dicembre2015,iniziativeNonSoddisfacenti,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,ripetizioniEConsegneComplementari,opzioniRinnovi,datiBase,datiBaseCPV]
+      required: [lotIdentifier,categorieMerceologiche,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,ripetizioniEConsegneComplementari,opzioniRinnovi,datiBase,datiBaseCPV,datiBaseContratto,contrattiDisposizioniParticolari,datiBaseAggiudicazione,datiBaseAggiuntivi]
       additionalProperties: false
       properties:
         lotIdentifier:
@@ -2027,13 +2032,7 @@ components:
         categorieMerceologiche:
           type: array
           items:
-            $ref: '#/components/schemas/CategorieMerceologicheEnum' 
-        saNonSoggettaObblighi24Dicembre2015:
-          description: Che questa stazione appaltante non è soggetta agli obblighi del DPCM 24 dicembre 2015 e ss.mm.ii.
-          type: boolean
-        iniziativeNonSoddisfacenti:
-          description: Che nessuna delle iniziative disponibili presso i soggetti aggregatori di riferimento ha caratteristiche in grado di soddisfare i fabbisogni di questa stazione appaltante
-          type: boolean   
+            $ref: '#/components/schemas/CategorieMerceologicheEnum'   
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean  
@@ -2106,17 +2105,13 @@ components:
         tipoRealizzazione:
           $ref: '#/components/schemas/TipoRealizzazioneContrattoEnum'            
         datiBase:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseLottoType'
+          $ref: '#/components/schemas/DatiBaseLottoType'
         datiBaseCPV:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseCPVType'
+          $ref: '#/components/schemas/DatiBaseCPVType'
         datiBaseContratto:
-          allOf: 
-          - $ref: '#/components/schemas/DatiBaseContrattoType'
+          $ref: '#/components/schemas/DatiBaseContrattoP7Type'
         datiBaseAggiudicazione:
-          allOf:
-          - $ref: '#/components/schemas/DatiBaseAggiudicazioneType'
+          $ref: '#/components/schemas/DatiBaseAggiudicazioneType'
         datiBaseAggiuntivi:
           $ref: '#/components/schemas/DatiBaseAggiuntiviType'       
         datiBaseAccessibilita:
@@ -2129,6 +2124,7 @@ components:
       description: Oggetto che riporta tutti i dati della modifica contrattuale
       type: object
       additionalProperties: false
+      required: [quadroEconomicoStandardRideterminato]
       properties: 
         dataApprovazione:
           description: Data di approvazione della modifica contrattuale
@@ -2330,9 +2326,7 @@ components:
           description: Valore soglia anomalia
           type: number
           format: double
-          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$          
-        quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoType'   
+          pattern: (^100([.]0{1,2})?)$|(^\d{1,2}([.]\d{0,5})?)$             
         offertePresentate:
           type: array
           items: 
@@ -2354,7 +2348,7 @@ components:
     AggiudicazioneAD1_25Type:
       description: Oggetto che riporta i dati di aggiudicazione per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard]
+      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard,finanziamenti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2369,8 +2363,8 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string
-            pattern: ^[a-zA-Z0-9]{15}$            
+            type: string 
+            pattern: ^[a-zA-Z0-9]{15}$
         ccnl:
           description: indicare il codice CNEL o non applicabile
           type: string  
@@ -2385,9 +2379,7 @@ components:
         paritaDiGenereGenerazionale:
           $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'
         quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoType'
-        quadroEconomicoConcessioni:
-          $ref: '#/components/schemas/QuadroEconomicoConcessioniType' 
+          $ref: '#/components/schemas/QuadroEconomicoP7Type' 
         partecipanti:
           type: array
           items: 
@@ -2423,7 +2415,7 @@ components:
     AggiudicazioneAD1_26Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard]
+      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,quadroEconomicoStandard,finanziamenti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2438,7 +2430,7 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string
+            type: string  
             pattern: ^[a-zA-Z0-9]{15}$
         ccnl:
           description: indicare il codice CNEL o non applicabile
@@ -2454,9 +2446,7 @@ components:
         paritaDiGenereGenerazionale:
           $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'   
         quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoType'
-        quadroEconomicoConcessioni:
-          $ref: '#/components/schemas/QuadroEconomicoConcessioniType'
+          $ref: '#/components/schemas/QuadroEconomicoP7Type'
         partecipanti:
           type: array
           items: 
@@ -2492,7 +2482,7 @@ components:
     AggiudicazioneAD1_27Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [lotIdentifier,partecipanti,ccnl,categoria,codIstat]
+      required: [lotIdentifier,partecipanti,ccnl,categoria,codIstat,finanziamenti]
       properties:  
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2516,11 +2506,7 @@ components:
         partecipanti:
           type: array
           items: 
-            $ref: '#/components/schemas/PartecipanteADType' 
-        quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoType'
-        quadroEconomicoConcessioni:
-          $ref: '#/components/schemas/QuadroEconomicoConcessioniType'            
+            $ref: '#/components/schemas/PartecipanteADType'             
     AppaltoAD1_27Type:
       description: Oggetto che riporta i dati inerenti l'affidamento diretto soprasoglia e sottosoglia con pubblicazione su TED - Avviso volontario per la trasparenza ex ante — direttiva per il settore della difesa - Articolo 64 della direttiva 2009/81/CE
       type: object
@@ -2541,7 +2527,7 @@ components:
     AggiudicazioneAD1_28Type:
       description: Oggetto che riporta i dati delle aggiudicazioni per gli affidamenti diretti.
       type: object
-      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,categoria,ccnl,codIstat,quadroEconomicoStandard]
+      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,categoria,ccnl,codIstat,finanziamenti]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -2556,7 +2542,7 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string
+            type: string  
             pattern: ^[a-zA-Z0-9]{15}$
         ccnl:
           description: indicare il codice CNEL o non applicabile
@@ -2571,8 +2557,6 @@ components:
           $ref: '#/components/schemas/CodIstatEnum'             
         paritaDiGenereGenerazionale:
           $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'  
-        quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoType'
         quadroEconomicoConcessioni:
           $ref: '#/components/schemas/QuadroEconomicoConcessioniType'          
         partecipanti:
@@ -2628,7 +2612,9 @@ components:
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
           type: number
-          format: integer      
+          format: integer 
+        quadroEconomicoStandard:
+          $ref: '#/components/schemas/QuadroEconomicoP7Type'          
         esitoProceduraAnnullata:
           $ref: '#/components/schemas/EsitoProceduraAnnullataEnum'      
     AppaltoA1_30Type:
@@ -2637,7 +2623,7 @@ components:
       - $ref: '#/components/schemas/AppaltoAType'      
       type: object
       additionalProperties: false
-      required: [relazioneUnicaSulleProcedure]
+      required: [relazioneUnicaSulleProcedure,opereUrbanizzazioneScomputo]
       properties:
         relazioneUnicaSulleProcedure:
           description: Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure
@@ -2655,7 +2641,9 @@ components:
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
           type: number
-          format: integer      
+          format: integer
+        quadroEconomicoStandard:
+          $ref: '#/components/schemas/QuadroEconomicoP7Type'          
         esitoProceduraAnnullata:
           $ref: '#/components/schemas/EsitoProceduraAnnullataEnum'    
     AggiudicazioneA1_31Type:
@@ -2685,17 +2673,13 @@ components:
       allOf: # estende la classe AggiudicazioneBaseType
       - $ref: '#/components/schemas/AggiudicazioneBaseType'      
       type: object
-      required: [numeroOfferteAmmesse]      
+      required: [numeroOfferteAmmesse,quadroEconomicoConcessioni]      
       additionalProperties: false
       properties: 
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
           type: number
-          format: integer      
-        nImpreseEscluseInsufficientiGiustificazioni: 
-          description: Numero imprese escluse per insufficienti giustificazioni
-          type: number
-          format: integer           
+          format: integer                 
         quadroEconomicoConcessioni:
           $ref: '#/components/schemas/QuadroEconomicoConcessioniType'
         esitoProceduraAnnullata:
@@ -2721,7 +2705,9 @@ components:
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
           type: number
-          format: integer      
+          format: integer  
+        quadroEconomicoStandard:
+          $ref: '#/components/schemas/QuadroEconomicoType'          
         esitoProceduraAnnullata:
           $ref: '#/components/schemas/EsitoProceduraAnnullataEnum'     
     AppaltoA1_34Type:
@@ -2747,6 +2733,8 @@ components:
           description: numero di offerte ammesse
           type: number
           format: integer      
+        quadroEconomicoStandard:
+          $ref: '#/components/schemas/QuadroEconomicoType'          
         esitoProceduraAnnullata:
           $ref: '#/components/schemas/EsitoProceduraAnnullataEnum'      
     AggiudicazioneA1_35Type:
@@ -2755,16 +2743,12 @@ components:
       - $ref: '#/components/schemas/AggiudicazioneBaseType' 
       type: object
       additionalProperties: false
-      required: [numeroOfferteAmmesse]      
+      required: [numeroOfferteAmmesse,quadroEconomicoConcessioni]      
       properties: 
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
           type: number
-          format: integer      
-        nImpreseEscluseInsufficientiGiustificazioni: 
-          description: Numero imprese escluse per insufficienti giustificazioni
-          type: number
-          format: integer  
+          format: integer        
         quadroEconomicoConcessioni:
           $ref: '#/components/schemas/QuadroEconomicoConcessioniType' 
         esitoProceduraAnnullata:
@@ -2813,12 +2797,15 @@ components:
           type: string
         modalitaRiaggiudicazioneAffidamento:
           $ref: '#/components/schemas/ModalitaRiaggiudicazioneAffidamentoEnum'
+        datiBaseSubappalti:
+          $ref: '#/components/schemas/DatiBaseSubappaltiType'          
     AggiudicazioneA4Type:
       description: Oggetto che riporta i dati del lotto
       allOf: # estende la classe AggiudicazioneBaseType
       - $ref: '#/components/schemas/AggiudicazioneBaseType' 
       type: object
       additionalProperties: false
+      required: [numeroOfferteAmmesse,datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto]
       properties:
         numeroOfferteAmmesse:
           description: numero di offerte ammesse
@@ -2827,9 +2814,7 @@ components:
         quadroEconomicoConcessioni:
           $ref: '#/components/schemas/QuadroEconomicoConcessioniType'          
         datiBaseRisultatoProcedura:
-          $ref: '#/components/schemas/DatiBaseRisultatoProceduraType'
-        datiBaseSubappalti:
-          $ref: '#/components/schemas/DatiBaseSubappaltiType'
+          $ref: '#/components/schemas/DatiBaseEsitoRisultatoProceduraType'
         datiBaseAggiudicazioneAppalto:
           $ref: '#/components/schemas/DatiBaseAggiudicazioneAppaltoType' 
         datiBaseAccessibilita:
@@ -2837,7 +2822,7 @@ components:
     AggiudicazioneA7Type:
       description: Oggetto che riporta i dati di aggiudicazione per procedura negoziata senza bando pari o sopra soglia.
       type: object
-      required: [afferenteInvestimentiPNRR,cig,partecipanti]
+      required: [afferenteInvestimentiPNRR,cig,partecipanti,finanziamenti]
       properties:
         cig:
           description: CIG affidamento incarico esterno di progettazione (in caso di progettista esterno)
@@ -2852,7 +2837,7 @@ components:
           description: Cup associati al lotto
           type: array
           items: 
-            type: string
+            type: string 
             pattern: ^[a-zA-Z0-9]{15}$            
         paritaDiGenereGenerazionale:
           $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'
@@ -2930,6 +2915,90 @@ components:
           description: Somme a disposizione - Iva e altre Imposte e tasse
           type: number
           format: double
+    QuadroEconomicoPType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      type: object
+      required:
+        - sommeRipetizioni      
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in €
+          type: number
+          format: double
+        impServizi:
+          description: Importo componente servizi in €
+          type: number
+          format: double
+        impForniture:
+          description: Importo componente forniture in €
+          type: number
+          format: double
+        impTotaleSicurezza:
+          description: Importo totale per l'attuazione della sicurezza
+          type: number
+          format: double
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: number
+          format: double
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: number
+          format: double
+        sommeOpzioniRinnovi:
+          description: Somme per opzioni/rinnovi
+          type: number
+          format: double
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari
+          type: number
+          format: double
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: number
+          format: double  
+    QuadroEconomicoP7Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      type: object      
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in €
+          type: number
+          format: double
+        impServizi:
+          description: Importo componente servizi in €
+          type: number
+          format: double
+        impForniture:
+          description: Importo componente forniture in €
+          type: number
+          format: double
+        impTotaleSicurezza:
+          description: Importo totale per l'attuazione della sicurezza
+          type: number
+          format: double
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: number
+          format: double
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: number
+          format: double
+        sommeOpzioniRinnovi:
+          description: Somme per opzioni/rinnovi
+          type: number
+          format: double
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari
+          type: number
+          format: double
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: number
+          format: double            
     QuadroEconomicoConcorsiProgettazioneType:
       description: Quadro economico concorsi progettazione
       type: object
@@ -2946,9 +3015,7 @@ components:
           format: double
     QuadroEconomicoP3ContrattiEsclusiType:
       description: Oggetto che riporta tutti i dati del quadro economico standard 
-      type: object
-      required:
-        - sommeADisposizione      
+      type: object      
       additionalProperties: false
       properties:
         impLavori:
@@ -2982,7 +3049,7 @@ components:
         sommeADisposizione:
           description: Somme a disposizione - Iva e altre Imposte e tasse
           type: number
-          format: double   
+          format: double     
     QuadroEconomicoConcessioniType:
       description: Oggetto che riporta tutti i dati del quadro economico per le concessioni. 
       type: object
@@ -3032,6 +3099,7 @@ components:
       description: Oggetto che riporta tutti i dati del quadro economico standard per la modifica contrattuale
       type: object
       additionalProperties: false
+      required: [impLavori,impServizi,impForniture]
       properties:
         impLavori:
           description: Importo contrattuale componente lavori in € (al netto dell’IVA e degli oneri di sicurezza)
@@ -3125,7 +3193,7 @@ components:
           description: giustificazione
           type: string
         giustificazioneMl:
-          $ref: '#/components/schemas/MultilinguaType'          
+          $ref: '#/components/schemas/MultilinguaType'  
     DatiBaseAggiudicazioneAppaltoType:
       description:  Dato in comune con il Business Group Contract delle eforms
       required: [dataAggiudicazione]
@@ -3139,8 +3207,12 @@ components:
       description:  Dato in comune con il Business Group Received Submissions delle eforms
       additionalProperties: false
       properties:
+        offertaMinimoRibasso:
+          description: Offerta di minimo ribasso - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-710 del TED.
+          type: number
+          format: double       
         offertaMassimoRibasso:
-          description: Offerta di massimo ribasso - nei casi in cui la scheda preveda un eform, corrisponde ai campi bt-710 e bt-711 del TED.
+          description: Offerta di massimo ribasso - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-711 del TED.
           type: number
           format: double          
     DatiBaseSubappaltiType:
@@ -3281,7 +3353,26 @@ components:
           description: Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
           type: string 
         oggettoMl:
-          $ref: '#/components/schemas/MultilinguaType'           
+          $ref: '#/components/schemas/MultilinguaType'
+    DatiBaseLottoSDAType:
+      description: Dato in comune con il Business Group Purpose delle eforms
+      type: object
+      required:
+        - oggetto
+        - importo
+      additionalProperties: false
+      properties:
+        oggettoContratto:
+          $ref: '#/components/schemas/OggettoContrattoEnum'
+        oggetto:
+          description: Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED
+          type: string 
+        oggettoMl:
+          $ref: '#/components/schemas/MultilinguaType'   
+        importo:
+          description: Importo lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-27 - Estimated Value del TED 
+          type: number
+          format: double          
     DatiBaseLottoADType:
       description: Dato in comune con il Business Group Purpose delle eforms
       type: object
@@ -3319,7 +3410,22 @@ components:
       properties:
         proceduraAccelerata:
           description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-106 - Procedure Accelerated del TED 
-          type: boolean          
+          type: boolean    
+    DatiBaseProceduraPLType:
+      description: Dato in comune con il Business Group Procedure delle eforms 
+      type: object
+      additionalProperties: false
+      properties:
+        tipoProcedura:
+          $ref: '#/components/schemas/TipoProceduraEnum'
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean
+        giustificazioneProceduraAccelerata:
+          description: Giustificazione procedura accelerata
+          type: string
+        giustificazioneProceduraAccelerataMl:
+          $ref: '#/components/schemas/MultilinguaType'          
     DatiBaseProceduraCompletoType:
       description: Dato in comune con il Business Group Procedure delle eforms 
       type: object
@@ -3347,6 +3453,21 @@ components:
           type: array
           items:        
             $ref: '#/components/schemas/GiustificazioneAggiudicazioneDirettaEnum'
+    DatiBaseProceduraACompletoType:
+      description: Dato in comune con il Business Group Procedure delle eforms
+      type: object
+      additionalProperties: false
+      required: [tipoProcedura]
+      properties:
+        tipoProcedura:
+          $ref: '#/components/schemas/TipoProceduraEnum' 
+        proceduraAccelerata:
+          description: E' stata utilizzata la procedura accelerata per ragioni di urgenza? - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-106 - Procedure Accelerated del TED 
+          type: boolean  
+        giustificazioniAggiudicazioneDiretta:
+          type: array
+          items:        
+            $ref: '#/components/schemas/GiustificazioneAggiudicazioneDirettaEnum'            
     DatiBaseProceduraADType:
       description: Dato in comune con il Business Group Procedure delle eforms
       type: object
@@ -3392,6 +3513,14 @@ components:
           type: array
           items:        
            $ref: '#/components/schemas/AffidamentiRiservatiEnum'
+    DatiBaseAggiuntiviOptionalType:
+      description: Dato in comune con il Business Group Other Requirements delle eforms
+      additionalProperties: false
+      properties:
+        affidamentiRiservati:
+          type: array
+          items:        
+           $ref: '#/components/schemas/AffidamentiRiservatiEnum'           
     DatiBaseAggiudicazioneType:
       description: Dato in comune con il Business Group Award Criterion delle eforms
       additionalProperties: false
@@ -3416,6 +3545,20 @@ components:
         astaElettronica:
           description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
           type: boolean
+    DatiBaseStrumentiProceduraCompletoType:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean 
+        fineSistemaDinamicoAcquisizione:
+          description: È stato posto termine al sistema dinamico di acquisizione. Non saranno aggiudicati altri appalti, oltre a quelli pubblicizzati nel presente avviso o bando, mediante il sistema dinamico di acquisizione. Questo campo può essere utilizzato anche se l'avviso di aggiudicazione non pubblica l'aggiudicazione di alcun appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-119 -  Dynamic Purchasing System Termination del TED
+          type: boolean          
     DatiBaseStrumentiProceduraAType:
       description: Dato in comune con il Business Group Techniques delle eforms
       additionalProperties: false
@@ -3436,7 +3579,41 @@ components:
           $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
         astaElettronica:
           description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
-          type: boolean          
+          type: boolean
+    DatiBaseStrumentiProceduraP3Type:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      properties:
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        fineSistemaDinamicoAcquisizione:
+          description: È stato posto termine al sistema dinamico di acquisizione. Non saranno aggiudicati altri appalti, oltre a quelli pubblicizzati nel presente avviso o bando, mediante il sistema dinamico di acquisizione. Questo campo può essere utilizzato anche se l'avviso di aggiudicazione non pubblica l'aggiudicazione di alcun appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-119 -  Dynamic Purchasing System Termination del TED
+          type: boolean   
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean 
+    DatiBaseStrumentiProceduraP7Type:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      required: [accordoQuadro,sistemaDinamicoAcquisizione,astaElettronica]
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean  
+    DatiBaseStrumentiProceduraP7_2Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      additionalProperties: false
+      required: [accordoQuadro,astaElettronica]
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'        
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean            
     DatiBaseStrumentiProceduraAccordoQuadroAstaType:
       description: Dato in comune con il Business Group Techniques delle eforms 
       additionalProperties: false
@@ -3445,14 +3622,42 @@ components:
           $ref: '#/components/schemas/AccordoQuadroEnum'        
         astaElettronica:
           description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
-          type: boolean                
+          type: boolean  
+    DatiBaseStrumentiProceduraP6Type:
+      description: Dato in comune con il Business Group Techniques delle eforms 
+      additionalProperties: false
+      required: [astaElettronica]
+      properties:
+        accordoQuadro:
+          $ref: '#/components/schemas/AccordoQuadroEnum'        
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean        
     DatiBaseStrumentiProceduraAstaType:
       description: Dato in comune con il Business Group Techniques delle eforms 
       additionalProperties: false
       properties:
         astaElettronica:
           description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
-          type: boolean           
+          type: boolean 
+    DatiBaseStrumentiProceduraSDAType:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      required: [sistemaDinamicoAcquisizione,astaElettronica]
+      properties:
+        sistemaDinamicoAcquisizione:
+          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
+        astaElettronica:
+          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
+          type: boolean 
+    DatiBaseStrumentiProceduraCSDAType:
+      description: Dato in comune con il Business Group Techniques delle eforms
+      additionalProperties: false
+      required: [fineSistemaDinamicoAcquisizione]
+      properties:
+        fineSistemaDinamicoAcquisizione:
+          description: È stato posto termine al sistema dinamico di acquisizione. Non saranno aggiudicati altri appalti, oltre a quelli pubblicizzati nel presente avviso o bando, mediante il sistema dinamico di acquisizione. Questo campo può essere utilizzato anche se l'avviso di aggiudicazione non pubblica l'aggiudicazione di alcun appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-119 -  Dynamic Purchasing System Termination del TED
+          type: boolean          
     DatiBaseStrumentiProceduraAccordoQuadroSistemaDinamicoType:
       description: Dato in comune con il Business Group Techniques delle eforms 
       additionalProperties: false
@@ -3489,7 +3694,7 @@ components:
       additionalProperties: false
       properties:
         oraScadenzaPresentazioneOfferte: 
-          description: Date e ora di scadenza per la presentazione delle offerte (hh:mm) - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
           format: date-time            
     DatiBaseImportoType:
@@ -3499,7 +3704,14 @@ components:
       properties:
         contrattiSuccessivi:
           description: contratti successivi - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-41 - Following Contract del TED
-          type: boolean           
+          type: boolean 
+    DatiBaseImportoOptionalType:
+      description: Dato in comune con il Business Group Prize delle eforms 
+      additionalProperties: false
+      properties:
+        contrattiSuccessivi:
+          description: contratti successivi - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-41 - Following Contract del TED
+          type: boolean            
     DatiBaseRisultatoProceduraType:
       description:  Dato in comune con il Business Group Procedure Lot Result delle eforms
       required: [esitoProcedura]
@@ -3589,24 +3801,24 @@ components:
           format: date-time 
         altraDurata: 
           $ref: '#/components/schemas/AltraDurataEnum'  
-    DatiBaseStrumentiProceduraSDAType:
-      description: Dato in comune con il Business Group Techniques delle eforms
+    DatiBaseDurataSDAType:
+      description:  Dato in comune con il Business Group Duration delle eforms
       additionalProperties: false
-      required: [sistemaDinamicoAcquisizione,astaElettronica]
-      properties:
-        sistemaDinamicoAcquisizione:
-          $ref: '#/components/schemas/SistemaDinamicoAcquisizioneEnum'
-        astaElettronica:
-          description: Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED
-          type: boolean 
-    DatiBaseStrumentiProceduraCSDAType:
-      description: Dato in comune con il Business Group Techniques delle eforms
-      additionalProperties: false
-      required: [fineSistemaDinamicoAcquisizione]
-      properties:
-        fineSistemaDinamicoAcquisizione:
-          description: È stato posto termine al sistema dinamico di acquisizione. Non saranno aggiudicati altri appalti, oltre a quelli pubblicizzati nel presente avviso o bando, mediante il sistema dinamico di acquisizione. Questo campo può essere utilizzato anche se l'avviso di aggiudicazione non pubblica l'aggiudicazione di alcun appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-119 -  Dynamic Purchasing System Termination del TED
-          type: boolean     
+      required: [dataInizio]
+      properties: 
+        dataInizio: 
+          description: La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED
+          type: string
+          format: date-time
+        durata: 
+          description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED
+          type: string
+        dataFine: 
+          description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED
+          type: string
+          format: date-time 
+        altraDurata: 
+          $ref: '#/components/schemas/AltraDurataEnum' 
     DatiBaseDurataCSDAType:
       description:  Dato in comune con il Business Group Duration delle eforms
       additionalProperties: false
@@ -3620,8 +3832,13 @@ components:
       description: Contiene i dati comuni per le schede relative alle pianificazioni
       type: object
       additionalProperties: false
-      required: [appalto,lotti]
+      required: [appalto,lotti,stazioniAppaltanti]
       properties:
+        stazioniAppaltanti:
+            description: Dati relativi alle stazioni appaltanti
+            type: array
+            items:
+              $ref: '#/components/schemas/StazioneAppaltanteType'
         appalto:
           $ref: '#/components/schemas/AppaltoPLBaseType'
         lotti:

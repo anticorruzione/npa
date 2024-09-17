@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda S2 - La scheda è valida sia per raccogliere l'elenco dei partecipanti che hanno presentato offerta e degli invitati che non hanno presentato offerta per le procedure a doppia fase, che l'elenco dei partecipanti per le procedure a fase unica.
+  title: Modello Dati - Scheda S2 - Per la procedura a fase unica è l'elenco dei soggetti che hanno presentato offerta. Per le procedure a due fasi è l'elenco dei soggetti invitati e di quelli che non hanno presentato offerta.
   version: 1.0.0
 components:
   schemas:
@@ -33,7 +33,7 @@ components:
           format: date-time        
       
     SchedaS2Type:
-      description: Elenco di soggetti che hanno presentato offerta e di ulteriori invitati che non hanno presentato offerta.
+      description: Per la procedura a fase unica è l'elenco dei soggetti che hanno presentato offerta. Per le procedure a due fasi è l'elenco dei soggetti invitati e di quelli che non hanno presentato offerta.
       type: object
       additionalProperties: false
       required: [anacForm]

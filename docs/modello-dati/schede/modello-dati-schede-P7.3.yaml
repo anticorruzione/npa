@@ -17,7 +17,7 @@ components:
       description: Oggetto che riporta i dati del lotto
       type: object
       additionalProperties: false
-      required: [lotIdentifier,datiBase,datiBaseCPV,datiBaseDocumenti]
+      required: [lotIdentifier,datiBase,datiBaseCPV,datiBaseDocumenti,datiBaseDurata]
       properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante

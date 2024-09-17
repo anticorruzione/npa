@@ -19,7 +19,14 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicazioneCompletaType'       
       type: object
       additionalProperties: false
-      properties:               
+      required: [datiBaseAggiudicazioneAppalto,datiBaseRisultatoProcedura]
+      properties:   
+        numeroOfferteAmmesse:
+          description: numero di offerte ammesse
+          type: number
+          format: integer        
+        quadroEconomicoStandard:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoP7Type'      
         datiBaseAggiudicazioneAppalto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneAppaltoType'     
         datiBaseRisultatoProcedura:

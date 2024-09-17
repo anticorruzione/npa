@@ -331,7 +331,7 @@ components:
           description: identificativo univoco del documento 
           type: string
           example: "507f1f77bcf86cd799439011"
-    Soggetto_00050:
+    Soggetto00050:
       description: Oggetto che riporta i dati del soggetto
       type: object
       additionalProperties: false
@@ -374,8 +374,9 @@ components:
           format: date-time
           example: '1980-02-01T00:00:00+01:00'
         LuogoNascita_Soggetto:
-          description: codice catastale del comune di nascita
+          description: codice catastale del comune di nascita/stato di nascita estero
           type: string
+          pattern: '^(([A-M]\d{3}$)|(Z(?!0{3})\d{3}))'
           example: H501
         Soggetto_daVerificare:
           description: >-
@@ -478,7 +479,7 @@ components:
                 essere impostato a true.
               type: boolean
               example: true
-    DatiSA_00004:
+    DatiSa00004:
       description: >-
         Oggetto che riporta i dati per richiedere il documento CERTIFICATO DEL
         CASELLARIO GIUDIZIARIO (INTEGRALE)
@@ -541,7 +542,7 @@ components:
               pattern: '^[A-Z]\d{3}$'
               maxLength: 4
               example: F205  
-    DatiSA_00020:
+    DatiSa00020:
       description: >-
         Oggetto che riporta i dati per richiedere il documento CERTIFICATO
         DELL'ANAGRAFE DELLE SANZIONI AMMINISTRATIVE DIPENDENTI DA REATO
@@ -565,7 +566,7 @@ components:
                 essere impostato a true.
               type: boolean
               example: true
-    DatiSA_00036:
+    DatiSa00036:
       description: >-
         Oggetto che riporta i dati per richiedere il documento DATI REDDITUALI SOCIETA DI PERSONE e per il documento DATI REDDITUALI IMPRESA INDIVIDUALE
       type: object
@@ -592,7 +593,7 @@ components:
               pattern: '^[A-M]\d{3}$'
               maxLength: 4
               example: I318
-    DatiSA_00047:
+    DatiSa00047:
       description: >-
         Oggetto che riporta i dati per richiedere il documento CONSISTENZA MEDIA
         PERSONALE
@@ -614,7 +615,7 @@ components:
           pattern: '^(19\d\d|20[0-9][0-9])$'
           maxLength: 4
           example: '2023'
-    DatiSA_00048:
+    DatiSa00048:
       description: >-
         Oggetto che riporta i dati per richiedere il documento COSTO COMPLESSIVO
         PERSONALE
@@ -636,22 +637,29 @@ components:
           pattern : '^(19\d\d|20[0-9][0-9])$'
           maxLength: 4
           example: '2023'
-    DatiSA_00050:
+    DatiSa00050:
       description: >-
-        Oggetto che riporta i dati per richiedere il documento COMUNICAZIONE
-        ANTIMAFIA
+        Oggetto che riporta i dati per richiedere il documento COMUNICAZIONE ANTIMAFIA
       type: object
       additionalProperties: false
       required:
-        - soggetto_da_verificare
+        - altrisoggetti
+        - prefettura
       properties:
+        prefettura:
+          description: Prefettura. Fare riferimento ai valori contenuti nel file [tipoPrefettura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPrefettura.json)
+          pattern: IT-(AG|AL|AN|AO|AR|AP|AT|AV|BA|BT|BL|BN|BG|BI|BO|BZ|BS|BR|CA|CL|CB|CI|CE|CT|CZ|CH|CO|CS|CR|KR|CN|EN|FM|FE|FI|FG|FC|FR|GE|GO|GR|IM|IS|SP|AQ|LT|LE|LC|LI|LO|LU|MC|MN|MS|MT|ME|MI|MO|MB|NA|NO|NU|OR|PD|PA|PR|PV|PG|PU|PE|PC|PI|PT|PN|PZ|PO|RG|RA|RC|RE|RI|RN|RM|RO|SA|SS|SV|SI|SR|SO|SU|TA|TE|TR|TO|TP|TN|TV|TS|UD|VA|VE|VB|VC|VR|VV|VI|VT)$
+          type: string
+        altrisoggetti:
+          type: boolean
+          description: Presenza di soggetti da verificare
         soggetto_da_verificare:
           description: Lista dei nominativi
           type: array
           minItems: 1
           items:
-            $ref: '#/components/schemas/Soggetto_00050'
-    DatiSA_00899:
+            $ref: '#/components/schemas/Soggetto00050'
+    DatiSa00899:
       description: >-
         Oggetto che riporta dati generici dell' Operatore Economico
       type: object
@@ -686,10 +694,10 @@ components:
         datiRichiesta:
           description: dati necessari alla richiesta specifici per tipoDocumento inviati in formato json.
           oneOf:
-            - $ref: '#/components/schemas/DatiSA_00004'
-            - $ref: '#/components/schemas/DatiSA_00020'
-            - $ref: '#/components/schemas/DatiSA_00036'
-            - $ref: '#/components/schemas/DatiSA_00047'
-            - $ref: '#/components/schemas/DatiSA_00048'
-            - $ref: '#/components/schemas/DatiSA_00050'
-            - $ref: '#/components/schemas/DatiSA_00899'        
+            - $ref: '#/components/schemas/DatiSa00004'
+            - $ref: '#/components/schemas/DatiSa00020'
+            - $ref: '#/components/schemas/DatiSa00036'
+            - $ref: '#/components/schemas/DatiSa00047'
+            - $ref: '#/components/schemas/DatiSa00048'
+            - $ref: '#/components/schemas/DatiSa00050'
+            - $ref: '#/components/schemas/DatiSa00899'        

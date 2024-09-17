@@ -78,5 +78,25 @@
       },
       "dataInizio":null,
       "dataFine":null
-    }
+    },
+    {
+      "codice": "MINLAV",
+      "descrizione": {
+        "it": "Ministero del Lavoro",
+        "en": "Ministry of labor",
+	"de": "Arbeitsministerium"
+      },
+      "dataInizio":null,
+      "dataFine":null
+    },
+    {
+      "codice": "ISPLAV",
+      "descrizione": {
+        "it": "Ispettorato Nazionale del Lavoro",
+        "en": "National labor inspectorate",
+	"de": "Nationale arbeitsinspektion"
+      },
+      "dataInizio":null,
+      "dataFine":null
+    }	
   ]

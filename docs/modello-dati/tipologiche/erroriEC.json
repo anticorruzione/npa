@@ -1,0 +1,78 @@
+[{
+    "codice":"PDR04",
+    "descrizione": {
+		"it": "Impossibile trovare la prefettura di destinazione",
+		"en": "The destination prefecture could not be found"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"INPS_001",
+    "descrizione": {
+		"it": "DURC regolare in corso di validità assente",
+		"en": "Regular DURC currently valid absent"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ADE_001",
+    "descrizione": {
+		"it": "",
+		"en": ""
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ADE_002",
+    "descrizione": {
+		"it": "Errore Nel Controllo Della Firma",
+		"en": "Signature Check Error"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ADE_003",
+    "descrizione": {
+		"it": "Errore Nella Decodifica Del File",
+		"en": "Error Decoding File"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ADE_004",
+    "descrizione": {
+		"it": "Codice Fiscale Soggetto non presente",
+		"en": "Tax Code Subject not present"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"ADE_005",
+    "descrizione": {
+		"it": "Errore Generico Servizio Atti",
+		"en": "Generic Deed Service Error"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"ADE_006",
+    "descrizione": {
+		"it": "Richiesta Con TXID Gia` Sottomessa",
+		"en": "Request With TXID Already Submitted"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"ADE_007",
+    "descrizione": {
+		"it": "Consenso Non Concesso",
+		"en": "Consent Not Granted"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

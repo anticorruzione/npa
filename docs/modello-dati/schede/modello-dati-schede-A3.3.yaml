@@ -7,8 +7,9 @@ components:
     AppaltoA3_3Type:
       type: object
       additionalProperties: false
+      required: [cigAccordoQuadroConvenzione]
       properties:  
-        cigAccordoQuadro:
+        cigAccordoQuadroConvenzione:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string      
         modalitaRiaggiudicazioneAffidamento:
@@ -20,7 +21,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [cig, dataAdesione, offertePresentate]
+      required: [cig, dataAdesione, offertePresentate,datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto]
       properties: 
         cig:
           description: codice identificativo lotto
@@ -30,7 +31,7 @@ components:
           type: string
           format: date-time 
         quadroEconomicoStandard:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoP7Type'
         offertePresentate:
           description: Dati degli aggiudicatari
           type: array

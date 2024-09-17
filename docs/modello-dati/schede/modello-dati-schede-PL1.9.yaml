@@ -7,9 +7,11 @@ components:
     SchedaPL1_9Type:
       description: Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva per il settore della difesa. Articolo 33, paragrafo 3, della direttiva 2009/81/CE. Articolo 21 comma 4 decretolegislativo 208/2011. Articolo 81 comma 1 decreto legislativo 36/2023.
       type: object
-      required: [eform]
+      required: [anacForm,eform]
       additionalProperties: false
       properties:
+        anacForm:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'
         eform:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EformType'            
          

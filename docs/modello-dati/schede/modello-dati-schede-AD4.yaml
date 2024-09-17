@@ -7,7 +7,7 @@ components:
     AggiudicazioneAD4Type:
       type: object
       additionalProperties: false
-      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase,datiBaseAggiudicazioneAppalto,datiBaseCPV]
+      required: [afferenteInvestimentiPNRR,lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase,datiBaseAggiudicazioneAppalto,datiBaseCPV,finanziamenti,datiBaseContratto]
       properties: 
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -37,7 +37,7 @@ components:
         paritaDiGenereGenerazionale:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType'
         quadroEconomicoStandard:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType' 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoP7Type' 
         quadroEconomicoConcessioni:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType'          
         finanziamenti:
@@ -65,14 +65,14 @@ components:
     AppaltoAD4Type:
       type: object
       additionalProperties: false
-      required: [cig,dataAdesione,relazioneUnicaSulleProcedure,opereUrbanizzazioneScomputo,codiceAppalto,datiBase]
+      required: [cigAccordoQuadroConvenzione,dataAdesione,relazioneUnicaSulleProcedure,opereUrbanizzazioneScomputo,codiceAppalto,datiBase]
       properties:   
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
           maxLength: 64          
-        cig:
+        cigAccordoQuadroConvenzione:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string
         dataAdesione: 

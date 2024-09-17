@@ -20,12 +20,53 @@ components:
           type: string
         giustificazioneProceduraAccelerataMl:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MultilinguaType'   
+    QuadroEconomicoP3_4Type:
+      description: Oggetto che riporta tutti i dati del quadro economico standard 
+      type: object      
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in € 
+          type: number
+          format: double
+        impServizi:
+          description: Importo componente servizi in € 
+          type: number
+          format: double
+        impForniture:
+          description: Importo componente forniture in €
+          type: number
+          format: double
+        impTotaleSicurezza: 
+          description: Importo totale per l'attuazione della sicurezza
+          type: number
+          format: double
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: number
+          format: double
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: number
+          format: double
+        sommeOpzioniRinnovi:
+          description: Somme per opzioni/rinnovi
+          type: number
+          format: double
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari 
+          type: number
+          format: double
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: number
+          format: double
     LottoP3_4Type:
       description: Oggetto che riporta i dati del lotto.
       allOf: # estende la classe LottoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'    
       type: object
-      required: [afferenteInvestimentiPNRR,strumentiElettroniciSpecifici,lavoroOAcquistoPrevistoInProgrammazione, categoria,servizioPubblicoLocale,contrattiDisposizioniParticolari,datiBase,quadroEconomicoStandard,datiBaseTerminiInvio,datiBaseCPV,datiBaseDocumenti]
+      required: [afferenteInvestimentiPNRR,strumentiElettroniciSpecifici,lavoroOAcquistoPrevistoInProgrammazione, categoria,servizioPubblicoLocale,contrattiDisposizioniParticolari,datiBase,quadroEconomicoStandard,datiBaseTerminiInvio,datiBaseCPV,datiBaseDocumenti,datiBaseAggiudicazione]
       additionalProperties: false
       properties:
         afferenteInvestimentiPNRR:
@@ -53,7 +94,7 @@ components:
           type: string
           pattern: ^[a-zA-Z0-9]{20,22}$              
         quadroEconomicoStandard:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'  
+          $ref: '#/components/schemas/QuadroEconomicoP3_4Type'  
         datiBase:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'
         datiBaseCPV:
@@ -61,7 +102,7 @@ components:
         datiBaseContratto:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType' 
         datiBaseAggiudicazione:
-          allOf: # estende la classe LottoP3BaseType
+          allOf: 
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'            
         datiBaseTerminiInvio:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiTerminiInvioType' 

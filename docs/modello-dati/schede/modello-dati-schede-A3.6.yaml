@@ -23,7 +23,7 @@ components:
       description: Oggetto che riporta i dati inerenti la fase di aggiudicazione
       type: object
       additionalProperties: false
-      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase,datiBaseCPV]
+      required: [afferenteInvestimentiPNRR, lotIdentifier,partecipanti,ccnl,categoria,codIstat,datiBase,datiBaseCPV,datiBaseContratto,datiBaseAggiudicazioneAppalto]
       properties: 
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
@@ -53,7 +53,9 @@ components:
         paritaDiGenereGenerazionale:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType'          
         quadroEconomicoStandard:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType'          
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoP7Type'   
+        quadroEconomicoConcessioni:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoConcessioniType'           
         partecipanti:
           type: array
           items:

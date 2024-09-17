@@ -13,7 +13,7 @@ components:
           description: codice identificativo lotto
           type: string 
         comunicazione:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ComunicazioneType'       
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ComunicazioneType'        
     SchedaCM1Type:
       description: Scheda di comunicazione modifica dati della procedura per appalti sopra i 5K euro.
       type: object
