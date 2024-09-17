@@ -817,7 +817,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
   * aggiunti i seguenti valori : MINLAV ISPLAV
 * erroriEC.json
   * nuova tipologica utilizzata per la trascodifica degli errori provenienti dagli enti certificanti.
-* aggiunta la tipologica statoSDA.json
+* aggiunta la tipologica operazioneSDA.json
     
 ### Modello Dati 
 * modello-dati-fvoe-fva.yaml:
@@ -852,7 +852,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
    	* oggetto parita di genere: aggiunto il flag ulterioriMisurePremiali
    	* Reso obbligatorio il campo quadroEconomicoStandardRideterminato dell'oggetto ModificaContrattualeType
    	* Resi obbligatori gli importi del quadroEconomicoStandardRideterminato
-  * aggiunto l'enum statoSDAEnum utilizzato nella scheda S0
+    * Reso obbligatorio il campo offertaAnomala in offerteType
   * aggiunto l'enum OperazioneSDAEnum utilizzato nella scheda S0
   * In ComunicazioneType modificata la cardinalità del campo cup
   * aggiunto l'oggetto AppaltoISDABaseType utilizzato nelle schede ISDA1 e ISDA2
@@ -860,7 +860,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
   * aggiunto l'oggetto DatiBaseStrumentiProceduraSDAType utilizzato nella scheda ISDA2
   * aggiunto l'oggetto DatiBaseStrumentiProceduraCSDAType utilizzato nella scheda CSDA2
   * aggiunto l'oggetto DatiBaseDurataCSDAType utilizzato nella scheda CSDA2
-  * modificato l'oggetto AppaltoP7BaseType: aggiunta la proprietà idAppalto
+  * modificato l'oggetto AppaltoP7_2Type: aggiunta la proprietà idSDA
 * modello-dati-schede-A3_6.yaml, modello-dati-schede-AD3.yaml:
 	* inserito il quadro economico delle concessioni
 * modello-dati-schede-AD1_28.yaml, modello-dati-schede-AD2_28.yaml:
