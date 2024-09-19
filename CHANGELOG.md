@@ -818,11 +818,12 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * erroriEC.json
   * nuova tipologica utilizzata per la trascodifica degli errori provenienti dagli enti certificanti.
 * aggiunta la tipologica operazioneSDA.json
+* codiceScheda.json: aggiunte le nuove schede per lo SDA: CSDA1, CSDA2, S0, ISDA1, ISDA2
     
 ### Modello Dati 
 * modello-dati-fvoe-fva.yaml:
   * modificato Soggetto_00050 - nel "luogo di nascita" inserita una regex per controllare i comuni italiani e gli stati esteri
-  * modificato DatiSA_00050 - Inserito il codice prefettura e altriSoggetti .
+  * modificato DatiSA_00050 - Inserito il codice prefettura e altriSoggetti . Modifica RegExp per codice comune di nascita
   * modificato il nome dei modelli dati utlizzato per richiedere i documenti agli enti certificanti. Rimosso il carattere "_"
 * modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede ISDA1,ISDA2 nell'oggetto SchedaComunicaAppaltoType e S0,CSDA1,CSDA2 nell'oggetto SchedaPostPubblicazioneType
   
@@ -905,13 +906,15 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 	* revisione schede: resi obbligatori gli oggetti datiBaseContratto,datiBaseAggiudicazioneAppalto.
 * modello-dati-schede-A2_29.yaml,modello-dati-schede-A2_30.yaml,modello-dati-schede-A2_31.yaml:
 	* revisione schede: resi obbligatori gli oggetti datiBaseAggiudicazioneAppalto,datiBaseSubappalti, datiBaseRisultatoProcedura. aggiunti i campi offertaMinimoRibasso, proceduraAccelerata
-* modello-dati-schede-A_32,modello-dati-schede-A_35: resi obbligatori gli oggetti: datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto,quadroEconomicoConcessioni. Eliminato il campo nImpreseEscluseInsufficientiGiustificazioni. Aggiunto datiBaseProcedura
+* modello-dati-schede-A2_32,modello-dati-schede-A2_35: resi obbligatori gli oggetti: datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto,quadroEconomicoConcessioni. Eliminato il campo nImpreseEscluseInsufficientiGiustificazioni. Aggiunto datiBaseProcedura
 * modello-dati-schede-A2_33.yaml,modello-dati-schede-A2_34.yaml,modello-dati-schede-A2_36.yaml,modello-dati-schede-A2_37.yaml,modello-dati-schede-A3_1.yaml,modello-dati-schede-A3_2.yaml,modello-dati-schede-A3_3.yaml,modello-dati-schede-A3_5.yaml: resi obbligatori gli oggetti: datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto
 * modello-dati-schede-A3_4.yaml: resi obbligatori gli oggetti: datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto,datiBaseStrumentiProcedura,datiBaseSubappalti
 * modello-dati-schede-A4.yaml: resi obbligatori gli oggetti: numeroOfferteAmmesse,datiBaseRisultatoProcedura,datiBaseAggiudicazioneAppalto
 * modello-dati-schede-A7_1_2.yaml: reso obbligatorio l'oggetto: datiBaseAggiudicazioneAppalto
 * modello-dati-schede-ISDA1.yaml,modello-dati-schede-ISDA2.yaml,modello-dati-schede-S0.yaml,modello-dati-schede-CSDA1.yaml,modello-dati-schede-CSDA2.yaml: nuove schede per la gestione dello SDA
-* modello-dati-schede-P7_2.yaml: inserito identificativo per lo SDA
+* modello-dati-schede-P7_2.yaml: 
+  * inserito identificativo per lo SDA
+  * all'interno della property "appalto" di AnacFormP7_2Type, è stato cambiato il riferimento adottato da AppaltoP7BaseType a AppaltoP7_2Type e perciò rimosso il campo "StrumentiSvolgimentoProcedure" dalla scheda P7_2 e sostituito con l'oggetto "datiBaseStrumentiProcedura"
 * #48952 modello-dati-schede-CM1.yaml,modello-dati-schede-CM2.yaml,modello-dati-schede-AD5.yaml,modello-dati-schede-P5.yaml: modificata la cardinalità del campo cupLotto e del campo cup
 
   
