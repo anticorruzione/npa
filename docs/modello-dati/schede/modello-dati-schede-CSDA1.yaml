@@ -7,12 +7,13 @@ components:
     AnacFormCSDA1Type:
       description: Contiene i dati per la scheda di conclusione SDA.
       type: object
-      required: [idAppalto] 
+      required: [idSDA] 
       additionalProperties: false
       properties:
-        idAppalto:
+        idSDA:
           description: id restituito dal servizio all'invio della scheda di istituzione SDA
           type: string  
+          format: uuid
     SchedaCSDA1Type:
       description: Conclusione Sistema Dinamico di Acquisizione Sopra soglia. 
       type: object

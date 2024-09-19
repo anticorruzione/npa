@@ -65,14 +65,14 @@ components:
     AppaltoAD4Type:
       type: object
       additionalProperties: false
-      required: [cigAccordoQuadroConvenzione,dataAdesione,relazioneUnicaSulleProcedure,opereUrbanizzazioneScomputo,codiceAppalto,datiBase]
+      required: [cig,dataAdesione,relazioneUnicaSulleProcedure,opereUrbanizzazioneScomputo,codiceAppalto,datiBase]
       properties:   
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
           maxLength: 64          
-        cigAccordoQuadroConvenzione:
+        cig:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string
         dataAdesione: 

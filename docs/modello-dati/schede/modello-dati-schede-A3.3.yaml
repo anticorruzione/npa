@@ -7,9 +7,9 @@ components:
     AppaltoA3_3Type:
       type: object
       additionalProperties: false
-      required: [cigAccordoQuadroConvenzione]
+      required: [cigAccordoQuadro]
       properties:  
-        cigAccordoQuadroConvenzione:
+        cigAccordoQuadro:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string      
         modalitaRiaggiudicazioneAffidamento:

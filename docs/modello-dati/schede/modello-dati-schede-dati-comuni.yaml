@@ -680,7 +680,7 @@ components:
     AppaltoP6BaseType:
       description: Oggetto che riporta i dati dell'appalto
       type: object
-      required: [cigAccordoQuadroConvenzione,codiceAppalto,datiBaseProcedura,datiBaseStrumentiProcedura]
+      required: [cigAccordoQuadro,codiceAppalto,datiBaseProcedura,datiBaseStrumentiProcedura]
       additionalProperties: false
       properties:  
         codiceAppalto:
@@ -688,7 +688,7 @@ components:
           type: string
           minLength: 8
           maxLength: 64            
-        cigAccordoQuadroConvenzione:
+        cigAccordoQuadro:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string
         strumentiSvolgimentoProcedure: 

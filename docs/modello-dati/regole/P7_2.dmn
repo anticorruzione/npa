@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P7_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P7_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.4.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P7_2" name="P7_2">
     <informationRequirement id="InformationRequirement_1ovi4jt">
       <requiredInput href="#InputData_09c4xl3" />
@@ -113,7 +113,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
         </inputEntry>
         <inputEntry id="UnaryTests_1i9g2da">
           <text>some lotto in lotti
-satisfies some condizioneNegoziata in lotto.condizioniNegoziata satisfies condizioneNegoziata.codice = 46 and (appalto.idSDA.idSDA = null or appalto.idSDA.idSDA = "")</text>
+satisfies some condizioneNegoziata in lotto.condizioniNegoziata satisfies condizioneNegoziata.codice = 46 and (appalto.idSDA = null or appalto.idSDA = "")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00y5kcb">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG113\"}"</text>
@@ -126,23 +126,23 @@ satisfies some condizioneNegoziata in lotto.condizioniNegoziata satisfies condiz
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="P7_2">
-        <dc:Bounds height="80" width="180" x="150" y="110" />
+        <dc:Bounds height="80" width="180" x="210" y="110" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_0j6pbbw" dmnElementRef="InputData_09c4xl3">
-        <dc:Bounds height="45" width="125" x="347" y="317" />
+        <dc:Bounds height="45" width="125" x="407" y="317" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_12thhzb" dmnElementRef="InformationRequirement_1ovi4jt">
-        <di:waypoint x="410" y="317" />
-        <di:waypoint x="270" y="210" />
-        <di:waypoint x="270" y="190" />
+        <di:waypoint x="470" y="317" />
+        <di:waypoint x="330" y="210" />
+        <di:waypoint x="330" y="190" />
       </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_153wyui" dmnElementRef="InputData_1uv2z7c">
-        <dc:Bounds height="45" width="125" x="98" y="318" />
+        <dc:Bounds height="45" width="125" x="158" y="318" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_1ltdwba" dmnElementRef="InformationRequirement_00tytft">
-        <di:waypoint x="161" y="318" />
-        <di:waypoint x="210" y="210" />
-        <di:waypoint x="210" y="190" />
+        <di:waypoint x="221" y="318" />
+        <di:waypoint x="270" y="210" />
+        <di:waypoint x="270" y="190" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
