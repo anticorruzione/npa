@@ -786,7 +786,9 @@ components:
           minLength: 8
           maxLength: 64  
         idSDA:
-          $ref: '#/components/schemas/AppaltoISDABaseType'
+          description: Identificativo univoco dello SDA rilasciato da ANAC.
+          type: string
+          format: uuid 
         idPianificazione:
           description: ID pianificazione
           type: string  
