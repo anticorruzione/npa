@@ -29,6 +29,8 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 | `23/01/2024`    | `00001` | `Comunicazione antimafia`  | `DatiSA_00050` | `Min. Interno` |
 | `23/01/2024`    | `00041` | `Dati reddituali società di persone` | `DatiSA_00036`| `Agenzia delle Entrate` |
 | `23/01/2024`    | `00899` | `Documento Generico OE`  | `DatiSA_00899` | `Operatore Econimico` |
-| `In Progress`   | `00006` | `Carichi Fiscali Pendenti` | `-` | `Agenzia delle Entrate` |
+| `16/09/2024`    | `00006` | `Carichi Fiscali Pendenti` | `-` | `Agenzia delle Entrate` |
 | `In Progress`   | `00007` | `Attestato WhiteList` | `-` | `Min. Interno` |
-| `In Progress`   | `00008` | `DURC emesso in corso di validità` | `-` | `Inps` |
+| `02/08/2024`    | `00008` | `DURC emesso in corso di validità` | `-` | `Inps` |
+| `25/09/2024`    | `00010` | `Verifica esistenza prospetto informativo disabili` | `-` | `Ministero del Lavoro` |
+| `25/09/2024`    | `00011` | `Verifica esistenza prospetto Rapporto situazione personale` | `-` | `Ministero del Lavoro` |
