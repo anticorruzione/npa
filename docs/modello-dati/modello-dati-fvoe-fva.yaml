@@ -452,7 +452,7 @@ components:
             CodiceCatastoComuneItaliano:
               description: codice catastale comune di nascita. Obbligatorio se CodiceCatastoStato:Z000
               type: string
-              pattern: '^[A-Z]\d{3}$'
+              pattern: '^[A-N]\d{3}$'
               maxLength: 4
               example: H501
     DatiAll_00004:
