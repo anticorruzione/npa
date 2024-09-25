@@ -809,8 +809,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * tipoDocumento.json:
   * aggiunti i seguenti valori: 00008 00042 00010 e 00011
 * errori.json
-  * aggiunto il valore : FVX58, REG111
-  * aggiunta la REG113
+  * aggiunto il valore : FVX58, REG111, REG113, FVC01, FVC02 FVX53, FVX54, FVX55, FVX56 e FVX57
 * tipoPrefettura.json
   * nuova tipologica utilizzata per la scelta della prefettura nella compilazione della richiesta del 00001-Comunicazione Antimafia
 * enteCertificante.json
@@ -824,6 +823,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * modello-dati-fvoe-fva.yaml:
   * modificato Soggetto_00050 - nel "luogo di nascita" inserita una regex per controllare i comuni italiani e gli stati esteri
   * modificato DatiSA_00050 - Inserito il codice prefettura e altriSoggetti . Modifica RegExp per codice comune di nascita
+  * modificato DatiNominativo_00004DatiNascita - nel "codice catasto comune italiano" modificata la regex per controllare i comuni italiani.
   * modificato il nome dei modelli dati utlizzato per richiedere i documenti agli enti certificanti. Rimosso il carattere "_"
 * modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede ISDA1,ISDA2 nell'oggetto SchedaComunicaAppaltoType e S0,CSDA1,CSDA2 nell'oggetto SchedaPostPubblicazioneType
   
