@@ -33,4 +33,4 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 | `In Progress`   | `00007` | `Iscrizione WhiteList antimafia` | `-` | `Min. Interno` |
 | `02/08/2024`    | `00008` | `DURC emesso in corso di validità` | `-` | `Inps` |
 | `25/09/2024`    | `00010` | `Verifica esistenza prospetto informativo disabili` | `-` | `Ministero del Lavoro` |
-| `25/09/2024`    | `00011` | `Verifica esistenza prospetto Rapporto parità di genere` | `-` | `Ministero del Lavoro` |
+| `25/09/2024`    | `00011` | `Verifica esistenza rapporto parità di genere` | `-` | `Ministero del Lavoro` |
