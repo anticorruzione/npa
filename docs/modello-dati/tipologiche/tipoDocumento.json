@@ -57,8 +57,8 @@
 },{
   "codice":"00011",
   "descrizione": {
-    "it": "Verifica esistenza prospetto Rapporto situazione personale",
-    "en": "Verifica esistenza prospetto Rapporto situazione personale"
+    "it": "Verifica esistenza rapporto parità di genere",
+    "en": "Verifica esistenza rapporto parità di genere"
 },
   "dataInizio":null,
   "dataFine":null
