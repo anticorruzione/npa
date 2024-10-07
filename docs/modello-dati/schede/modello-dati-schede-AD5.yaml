@@ -8,57 +8,57 @@ components:
       type: object
       additionalProperties: false
       required: [lotIdentifier,partecipanti,codIstat,datiBase,datiBaseCPV]
-      properties:  
+      properties:
         lotIdentifier:
           description: Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED
-          type: string               
+          type: string
         cup:
           description: Cup
           type: array
           items:
-            type: string 
+            type: string
         partecipanti:
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioAD5Type'           
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AggiudicatarioAD5Type'
         codIstat:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CodIstatEnum' 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CodIstatEnum'
         datiBase:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoADType'
         datiBaseCPV:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
         datiBaseContratto:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'    
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'
         datiBaseDocumenti:
-          allOf: 
-          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'           
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'
     AppaltoAD5Type:
       type: object
       additionalProperties: false
       required: [codiceAppalto,datiBase]
-      properties:    
+      properties:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64 
+          maxLength: 64
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoADType'           
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoADType'
     AnacFormAD5Type:
-      description: Contiene tutti i dati relativi agli appalti di importo inferiore a 5K, senza invio al TED. 
+      description: Contiene tutti i dati relativi agli appalti di importo inferiore a 5K, senza invio al TED.
       allOf: # estende la classe AnacFormBaseType
-        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'      
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'
       type: object
       required: [appalto,aggiudicazioni]
-      additionalProperties: false   
-      properties:  
+      additionalProperties: false
+      properties:
         appalto:
           $ref: '#/components/schemas/AppaltoAD5Type'
         aggiudicazioni:
           description: Dati relativi alle aggiudicazioni
           type: array
           items:
-            $ref: '#/components/schemas/AggiudicazioneAD5Type'      
+            $ref: '#/components/schemas/AggiudicazioneAD5Type'
     SchedaAD5Type:
       description: Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.
       type: object
@@ -68,4 +68,4 @@ components:
         anacForm:
           $ref: '#/components/schemas/AnacFormAD5Type'
         espd:
-         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'          
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'

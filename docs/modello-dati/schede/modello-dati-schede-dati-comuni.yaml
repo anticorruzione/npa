@@ -976,7 +976,7 @@ components:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia
       type: object
       additionalProperties: false
-      required: [codiceAppalto,contrattiDisposizioniParticolari]
+      required: [codiceAppalto]
       properties:
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante

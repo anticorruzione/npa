@@ -12,7 +12,7 @@ components:
         partecipante:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'
         operazione:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/OperazioneSDAEnum' 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/OperazioneSDAEnum'
     SchedaS0Type:
       description: Elenco richieste di adesione SDA. Articolo 32 comma 7 decreto legislativo 36/2023.
       type: object
@@ -22,7 +22,7 @@ components:
         anacForm:
           type: object
           additionalProperties: false
-          required: [idSDA,partecipanti,operazioneSDA]
+          required: [idSDA,partecipanti]
           properties:
             idSDA:
               description: id restituito dal servizio all'invio della scheda di istituzione SDA
