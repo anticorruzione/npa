@@ -89,8 +89,8 @@
 },{
       "codice": "00035",
       "descrizione": {
-        "it": "Dati reddituali impresa individuale",
-        "en": "Dati reddituali impresa individuale"
+        "it": "Dati reddituali società di persone",
+        "en": "Dati reddituali società di persone"
       },
       "dataInizio": null,
       "dataFine": null
@@ -137,8 +137,8 @@
 },{
       "codice": "00041",
       "descrizione": {
-        "it": "Dati reddituali società di persone",
-        "en": "Dati reddituali società di persone"
+        "it": "Dati reddituali impresa individuale",
+        "en": "Dati reddituali impresa individuale"
       },
       "dataInizio": null,
       "dataFine": null     
