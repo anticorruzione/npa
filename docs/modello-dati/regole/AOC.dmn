@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AOC" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.6.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+  <decision id="AOC" name="AOC">
+    <informationRequirement id="InformationRequirement_18mcapo">
+      <requiredInput href="#InputData_0k6u5e5" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_182tifx">
+      <requiredInput href="#InputData_15b23jq" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_139vsny" hitPolicy="COLLECT" biodi:annotationsWidth="552">
+      <input id="InputClause_0doc50a" biodi:width="241">
+        <inputExpression id="LiteralExpression_0j2dtdc" typeRef="string">
+          <text>appalto</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_16opgt5" biodi:width="405">
+        <inputExpression id="LiteralExpression_06u0hu9" typeRef="string">
+          <text>aggiudicazioni</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0ah2sls" name="Errore" typeRef="string" biodi:width="422" />
+      <rule id="DecisionRule_16k7di5">
+        <description>REG114: Indicare l'aggiudicatario.</description>
+        <inputEntry id="UnaryTests_159spzo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q85g7o">
+          <text>count(aggiudicazioni) &lt;= 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06r7al1">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG114\"}</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ghygb9">
+        <description>REG114_1: Deve essere indicato un solo aggiudicatario.</description>
+        <inputEntry id="UnaryTests_197x1nd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0avkz1u">
+          <text>count(aggiudicazioni) &gt; 1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xqsmy9">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG114_1\"}</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_155fqzq">
+        <description>REG115: Indicare una sola categoria di tipo prevalente</description>
+        <inputEntry id="UnaryTests_0a6cf6z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0txswp3">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (count(aggiudicazione.categoria.tipo = "PREVALENTE")= 0 or count(aggiudicazione.categoria.tipo = "PREVALENTE")&gt;1)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pbe4w6">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG115\"}</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mjokfn">
+        <description>REG116: Indicare una sola cpv di tipo prevalente</description>
+        <inputEntry id="UnaryTests_0tyer8q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j7k2ku">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (count(aggiudicazione.cpv.tipo = "PREVALENTE")= 0 or count(aggiudicazione.cpv.tipo = "PREVALENTE")&gt;1)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gsyyb4">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG116\"}</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13y0kv0">
+        <description>REG123: E’ obbligatorio indicare i cup associati al lotto se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
+        <inputEntry id="UnaryTests_00tvxli">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1euwt2z">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.afferenteInvestimentiPNRR = true and (is defined(aggiudicazione.cupLotto)=false or count(aggiudicazione.cupLotto) = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pnshr2">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG123\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mjiq71">
+        <description>REG124: Indicare almeno uno tra codice istat e codice nuts.</description>
+        <inputEntry id="UnaryTests_066ktkc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qmp1dc">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.codIstat = "" and aggiudicazione.datiBaseContratto.codNUTS.codice = ""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09z2d2o">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG124\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fws3we">
+        <description>REG125: Indicare solo uno tra codice istat e codice nuts.</description>
+        <inputEntry id="UnaryTests_1ru4b3p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05dunpq">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.codIstat != "" and aggiudicazione.datiBaseContratto.codNUTS.codice != ""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jgmwic">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG125\"}"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_0k6u5e5" name="appalto" />
+  <inputData id="InputData_15b23jq" name="aggiudicazioni" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
+      <dmndi:DMNShape id="DMNShape_0g7nmsp" dmnElementRef="AOC">
+        <dc:Bounds height="80" width="180" x="240" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_19nzcho" dmnElementRef="InputData_0k6u5e5">
+        <dc:Bounds height="45" width="125" x="177" y="207" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1cshdlb" dmnElementRef="InformationRequirement_18mcapo">
+        <di:waypoint x="240" y="207" />
+        <di:waypoint x="300" y="180" />
+        <di:waypoint x="300" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0zepln2" dmnElementRef="InputData_15b23jq">
+        <dc:Bounds height="45" width="125" x="337" y="207" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1kqu666" dmnElementRef="InformationRequirement_182tifx">
+        <di:waypoint x="400" y="207" />
+        <di:waypoint x="360" y="180" />
+        <di:waypoint x="360" y="160" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

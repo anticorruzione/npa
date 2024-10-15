@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda AOC - Scheda relativa agli organi costituzionali.
+  version: 1.0.0
+components:
+  schemas:
+    AggiudicazioneAOCType:
+      type: object
+      additionalProperties: false
+      required: [lotIdentifier,afferenteInvestimentiPNRR,partecipanti,datiBase,cpv,categoria,datiBaseTerminiInvio,tipologiaAffidamento]
+      properties:  
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante
+          type: string
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items:
+            type: string
+            pattern: ^[a-zA-Z0-9]{15}$
+        codIstat:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CodIstatEnum' 
+        tipologiaAffidamento:
+          description: Tipologia di affidamento
+          type: string
+          enum: ['DIRETTO', 'SENZA ESPLETAMENTO DI GARA']                 
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoADType'
+        categoria:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaType'
+        cpv:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CpvType'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoType'    
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioSoloOraType' 
+    AppaltoAOCType:
+      type: object
+      additionalProperties: false
+      required: [codiceAppalto,datiBase]
+      properties:    
+        codiceAppalto:
+          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
+          type: string
+          minLength: 8
+          maxLength: 64 
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoADType'           
+    AnacFormAOCType:
+      description: Contiene tutti i dati relativi agli organi costituzionali. 
+      allOf: # estende la classe AnacFormBaseType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'      
+      type: object
+      required: [appalto,aggiudicazioni]
+      additionalProperties: false   
+      properties:  
+        appalto:
+          $ref: '#/components/schemas/AppaltoAOCType'
+        aggiudicazioni:
+          description: Dati relativi alle aggiudicazioni
+          type: array
+          items:
+            $ref: '#/components/schemas/AggiudicazioneAOCType'      
+    SchedaAOCType:
+      description: Flusso Organi Costituzionali.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormAOCType'

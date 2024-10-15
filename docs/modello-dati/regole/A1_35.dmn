@@ -50,13 +50,25 @@ satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOff
       <rule id="DecisionRule_16h8d10">
         <description>REG68: il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_09yt5xj">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= "")</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != ""))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c11u0n">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o5w8dt">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fasj0m">
+        <description>REG68_1: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
+        <inputEntry id="UnaryTests_1dqy0ut">
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta = null or count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&lt;0 or (every giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice = ""))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nh7td2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14hw0tu">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1o6w118">

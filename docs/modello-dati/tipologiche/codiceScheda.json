@@ -1144,8 +1144,8 @@
 {
     "codice":"CM1",
     "descrizione": {
-		"it": "Scheda di comunicazione modifica dati della procedura per appalti sopra i 5K euro",
-		"en": "Scheda di comunicazione modifica dati della procedura per appalti sopra i 5K euro"
+		"it": "Scheda di comunicazione modifica dati della procedura per appalti sopra o pari a 5K euro",
+		"en": "Scheda di comunicazione modifica dati della procedura per appalti sopra o pari a 5K euro"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1160,10 +1160,72 @@
     "dataFine":null
 },
 {
+  "codice": "S0",
+  "descrizione": {
+    "it": " Elenco richieste di adesione SDA. Articolo 32 comma 7 decreto legislativo 36/2023.",
+    "en": " Elenco richieste di adesione SDA. Articolo 32 comma 7 decreto legislativo 36/2023."
+  }
+},
+{
+  "codice": "ISDA1",
+  "descrizione": {
+    "it": "Istituzione Sistema Dinamico di Acquisizione Sopra soglia. Articolo 32 comma 2, 6 decreto legislativo 36/2023.",
+    "en": "Istituzione Sistema Dinamico di Acquisizione Sopra soglia. Articolo 32 comma 2, 6 decreto legislativo 36/2023."
+  }
+},
+{
+  "codice": "ISDA2",
+  "descrizione": {
+    "it": "Istituzione Sistema Dinamico di Acquisizione Sotto soglia. Articolo 32 comma 2, 6 decreto legislativo 36/2023.",
+    "en": "Istituzione Sistema Dinamico di Acquisizione Sotto soglia. Articolo 32 comma 2, 6 decreto legislativo 36/2023."
+  }
+},
+{
+  "codice": "CSDA1",
+  "descrizione": {
+    "it": "Conclusione Sistema Dinamico di Acquisizione Sopra soglia.",
+    "en": "Conclusione Sistema Dinamico di Acquisizione Sopra soglia."
+  }
+},
+{
+  "codice": "CSDA2",
+  "descrizione": {
+    "it": "Conclusione Sistema Dinamico di Acquisizione Sotto soglia.",
+    "en": "Conclusione Sistema Dinamico di Acquisizione Sotto soglia."
+  }
+},
+{
     "codice":"ANN",
     "descrizione": {
 		"it": "Scheda di annullamento affidamento",
 		"en": "Scheda di annullamento affidamento"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AOC",
+    "descrizione": {
+		"it": "Scheda di indizione per gli Organi Costituzionali",
+		"en": "Scheda di indizione per gli Organi Costituzionali"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SOC",
+    "descrizione": {
+		"it": "Scheda di richiesta subappalto per gli Organi Costituzionali",
+		"en": "Scheda di richiesta subappalto per gli Organi Costituzionali"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"COC",
+    "descrizione": {
+		"it": "Scheda di conclusione per gli Organi Costituzionali",
+		"en": "Scheda di conclusione per gli Organi Costituzionali"
 		},
     "dataInizio":null,
     "dataFine":null

@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Ordinario",
+		"en": "Ordinario"
+		},
+    "dataInizio":"2024-11-15T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Speciale",
+		"en": "Speciale"
+		},
+    "dataInizio":"2024-11-15T00:00:00Z",
+    "dataFine":null
+}]

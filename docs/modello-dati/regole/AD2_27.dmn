@@ -91,13 +91,25 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
       <rule id="DecisionRule_AD2_27_10_0039">
         <description>REG68: il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_AD2_27_10_0118">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= "")</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != ""))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD2_27_10_0119">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD2_27_10_0040">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fiddu8">
+        <description>REG68_1: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
+        <inputEntry id="UnaryTests_165u5g7">
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta = null or count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&lt;0 or (every giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice = ""))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vocbba">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08zxr7o">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1m1b51o">

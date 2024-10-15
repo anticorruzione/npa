@@ -94,7 +94,9 @@ components:
           type: string
           pattern: ^[a-zA-Z0-9]{20,22}$              
         quadroEconomicoStandard:
-          $ref: '#/components/schemas/QuadroEconomicoP3_4Type'  
+          $ref: '#/components/schemas/QuadroEconomicoP3_4Type' 
+        derogaQualificazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoDerogaQlfEnum'
         datiBase:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'
         datiBaseCPV:
@@ -130,7 +132,7 @@ components:
           allOf: # estende la classe LottoP3BaseType
           - $ref: '#/components/schemas/DatiBaseProceduraCompletoType'
         datiBaseStrumentiProcedura:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraAstaType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraAccordoQuadroAstaType'
     AnacFormP3_4Type:
       description: Contiene i dati relativi al contraente generale.
       allOf: 

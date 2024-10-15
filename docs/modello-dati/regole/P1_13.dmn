@@ -44,7 +44,7 @@
         <inputEntry id="UnaryTests_P1_13_0056">
           <text>some lotto in lotti
 satisfies (some categoria in lotto.categorieMerceologiche
-satisfies list contains(appalto.categorieMerceologiche, categoria))</text>
+satisfies not(list contains(appalto.categorieMerceologiche, categoria)))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_13_0057">
           <text></text>
@@ -605,7 +605,7 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</text>
         <inputEntry id="UnaryTests_0xbdfzz">
           <text>some lotto in lotti
 satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) &lt;= date and time(string(today()))</text>
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ibafgt">
           <text></text>
@@ -627,6 +627,87 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
         </inputEntry>
         <outputEntry id="LiteralExpression_1g7rk1b">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
+        </outputEntry>
+      </rule>
+	  <rule id="DecisionRule_1cl23sc">
+        <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
+        <inputEntry id="UnaryTests_15v9bsf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xie47y">
+          <text>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.importo &gt; 215000) and lotto.derogaQualificazione.codice = "1")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kg1lwb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a6xrwb">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG118\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06nh7q5">
+        <description>REG119: Non è possibile inserire il codice 2 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 431000 €.</description>
+        <inputEntry id="UnaryTests_0eze93s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bifm37">
+          <text>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.importo &gt; 431000) and lotto.derogaQualificazione.codice = "2")
+</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wzxibt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kr5jcc">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG119\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0id2i58">
+        <description>REG120: Non è possibile inserire il codice 3 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da lavori o l'importo è superiore a 1 milione di euro.</description>
+        <inputEntry id="UnaryTests_1e09db2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kld8vi">
+          <text>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice != "works" or lotto.datiBase.importo &gt; 1000000) and lotto.derogaQualificazione.codice = "3")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19dgj14">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d2nfsz">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG120\"}</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1616upz">
+        <description>REG121: Non è possibile inserire il codice 4 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 750000 €.</description>
+        <inputEntry id="UnaryTests_1trf925">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cnjqkg">
+          <text>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo &gt; 750000) and lotto.derogaQualificazione.codice = "4")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r700ok">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t4rh9t">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG121\"}</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c7kgeb">
+        <description>REG122: Non è possibile inserire il codice 5 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 1 milione di euro.</description>
+        <inputEntry id="UnaryTests_038ngal">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jj4vf1">
+          <text>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo &gt; 1000000) and lotto.derogaQualificazione.codice = "5")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1svnbkv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i646y9">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}</text>
         </outputEntry>
       </rule>
     </decisionTable>

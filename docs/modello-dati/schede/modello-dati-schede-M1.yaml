@@ -18,7 +18,7 @@ components:
         modificaContrattuale:
          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModificaContrattualeType' 
     SchedaM1Type:
-      description: Modifica contrattuale, direttiva generale. Articolo 72, paragrafo 1, della direttiva 2014/24/UE. Articolo 89, paragrafo 1, della direttiva 2014/25/UE. Articolo 141 comma 3 lettera i) decreto legislativo 36/2023. Articolo 120 comma 14 e comma 15 decreto legislativo 36/2023. Articolo 5 comma 11 e comma 12 Allegato II.14.
+      description: Modifica contrattuale, direttiva generale e direttiva settoriale. Articolo 72, paragrafo 1, della direttiva 2014/24/UE. Articolo 89, paragrafo 1, della direttiva 2014/25/UE. Articolo 141 comma 3 lettera i) decreto legislativo 36/2023. Articolo 120 comma 14 e comma 15 decreto legislativo 36/2023. Articolo 5 comma 11 e comma 12 Allegato II.14.
       type: object
       required: [anacForm,eform]
       additionalProperties: false

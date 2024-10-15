@@ -8,13 +8,15 @@ components:
       description: Oggetto che riporta i dati dell'appalto.
       type: object
       additionalProperties: false
-      required: [codiceAppalto, datiBase]
+      required: [codiceAppalto, datiBase, settore]
       properties: 
         codiceAppalto:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64          
+          maxLength: 64
+        settore:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SettoreEnum'
         cigAccordoQuadro:
           description: CIG relativo all’accordo quadro/convenzione cui si aderisce
           type: string  

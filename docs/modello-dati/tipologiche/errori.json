@@ -1592,6 +1592,15 @@
     "dataFine":null
 },
 {
+    "codice":"REG68_1",
+    "descrizione": {
+		"it": "il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara",
+		"en": "il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"REG69",
     "descrizione": {
 		"it": "Non è stato indicato il valore dell’importo componente lavori nel quadro economico delle concessioni",
@@ -1992,6 +2001,137 @@
     "descrizione": {
 		"it": "Se il campo condizioniNegoziata.codice=46(SDA) allora il campo idSDA rilasciato da ISDA1 e ISDA2 deve essere obbligatoriamente valorizzato.",
 		"en": "Se il campo condizioniNegoziata.codice=46(SDA) allora il campo idSDA rilasciato da ISDA1 e ISDA2 deve essere obbligatoriamente valorizzato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG114",
+    "descrizione": {
+		"it": "Indicare l'aggiudicatario.",
+		"en": "Indicare l'aggiudicatario."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG114_1",
+    "descrizione": {
+		"it": "Deve essere indicato un solo aggiudicatario.",
+		"en": "Deve essere indicato un solo aggiudicatario."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG115",
+    "descrizione": {
+		"it": "Indicare una sola categoria di tipo prevalente.",
+		"en": "Indicare una sola categoria di tipo prevalente."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG116",
+    "descrizione": {
+		"it": "Indicare una sola cpv di tipo prevalente.",
+		"en": "Indicare una sola cpv di tipo prevalente."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG117",
+    "descrizione": {
+		"it": "Il campo importo cauzione deve essere >= 0.",
+		"en": "Il campo importo cauzione deve essere >= 0."
+	},
+    "dataInizio":null,
+    "dataFine":null
+}
+,
+{
+    "codice":"REG118",
+    "descrizione": {
+		"it": "Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.",
+		"en": "Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €."
+	},
+    "dataInizio":null,
+    "dataFine":null
+}
+,
+{
+    "codice":"REG119",
+    "descrizione": {
+		"it": "Non è possibile inserire il codice 2 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 431000 €.",
+		"en": "Non è possibile inserire il codice 2 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 431000 €."
+	},
+    "dataInizio":null,
+    "dataFine":null
+}
+,
+{
+    "codice":"REG120",
+    "descrizione": {
+		"it": "Non è possibile inserire il codice 3 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da lavori o l'importo è superiore a 1 milione di euro.",
+		"en": "Non è possibile inserire il codice 3 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da lavori o l'importo è superiore a 1 milione di euro."
+	},
+    "dataInizio":null,
+    "dataFine":null
+}
+,
+{
+    "codice":"REG121",
+    "descrizione": {
+		"it": "Non è possibile inserire il codice 4 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 750000 €.",
+		"en": "Non è possibile inserire il codice 4 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 750000 €."
+	},
+    "dataInizio":null,
+    "dataFine":null
+}
+,
+{
+    "codice":"REG122",
+    "descrizione": {
+		"it": "Non è possibile inserire il codice 5 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 1 milione di euro.",
+		"en": "Non è possibile inserire il codice 5 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 1 milione di euro."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG123",
+    "descrizione": {
+		"it": "E’ obbligatorio indicare i cup associati al lotto se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC.",
+		"en": "E’ obbligatorio indicare i cup associati al lotto se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG124",
+    "descrizione": {
+		"it": "Indicare almeno uno tra codice istat e codice nuts.",
+		"en": "Indicare almeno uno tra codice istat e codice nuts."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG125",
+    "descrizione": {
+		"it": "Indicare solo uno tra codice istat e codice nuts.",
+		"en": "Indicare solo uno tra codice istat e codice nuts."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG126",
+    "descrizione": {
+		"it": "L'importo indicato deve essere maggiore di zero.",
+		"en": "L'importo indicato deve essere maggiore di zero."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2893,6 +3033,76 @@
        "it": "Fascicolo duplicato",
        "en": "Duplicate file",
        "de": "Doppelte Datei"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX60",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Inizializza Sotto Fascicoli - Non Disponibile",
+       "en": "External Service Error. Initialize Under Issues - Not Available",
+       "de": "Externer Servicefehler. Unter „Probleme“ initialisieren – nicht verfügbar"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX61",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Richiedi Documento - Non Disponibile",
+       "en": "External Service Error. Request Document - Not Available",
+       "de": "Externer Servicefehler. Dokument anfordern – nicht verfügbar"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX62",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Inizializza Fascicoli FVQOE - Non Disponibile",
+       "en": "External Service Error. Initialize FVQOE Files - Not Available",
+       "de": "Externer Servicefehler. FVQOE-Dateien initialisieren – nicht verfügbar"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+	{
+   "codice":"FVX63",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Ricerca Richieste Documento - Non Disponibile",
+       "en": "External Service Error. Search Document Requests - Not Available",
+       "de": "Externer Servicefehler. Dokumentanfragen durchsuchen – nicht verfügbar"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX64",
+   "descrizione": {
+       "it": "Dati Richiesta non validi",
+       "en": "Invalid request data",
+       "de": "Ungültige anforderungsdaten"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX65",
+   "descrizione": {
+       "it": "Codice Dati Richiesta non supportati",
+       "en": "Code Request Data not supported",
+       "de": "Codeanforderungsdaten werden nicht unterstützt"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVX66",
+   "descrizione": {
+       "it": "Codice Tipo Documento non supportati",
+       "en": "Document Type Code not supported",
+       "de": "Dokumenttypcode wird nicht unterstützt"
    },
    "dataInizio":null,
    "dataFine":null

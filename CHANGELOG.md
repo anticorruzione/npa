@@ -933,28 +933,76 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 
 # Note di rilascio del 06/08/2024 (Changelog-03)
 **NOTA**
-* Pubblicazione contenuti su GitHub: 02/10/2024 (in attesa di ripianificazione)
-* Rilascio in Qualificazione: 29/10/2024 (in attesa di ripianificazione)
-* Rilascio in Esercizio: 29/11/2024 (in attesa di ripianificazione)
+* Pubblicazione contenuti su GitHub: 15/10/2024
+* Rilascio in Qualificazione: 15/11/2024
+* Rilascio in Esercizio: 16/12/2024
   
 **la nota di rilascio potrà essere integrata successivamente**
     
 ### Modello Dati 
-* modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede AOC nell'oggetto SchedaComunicaAppaltoType e RSOC, COOC nell'oggetto SchedaPostPubblicazioneType
+* modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede AOC nell'oggetto SchedaComunicaAppaltoType e SOC, COC nell'oggetto SchedaPostPubblicazioneType
   
 ### Schede 
-* modello-dati-schede-AOC.yaml,modello-dati-schede-RSOC.yaml,modello-dati-schede-COOC.yaml: nuove schede per la gestione degli OOCC
-* modello-dati-schede-A1*.yaml, modello-dati-schede-dati-comuni.yaml: reso facoltativo l'oggetto offertePresentate
+* modello-dati-schede-ANN.yaml, modello-dati-schede-CM1.yaml: modificata la descrizione in coerenza con l'orchestratore
+* modello-dati-schede-dati-comuni.yaml: 
+	* reso facoltativo il campo dataSottoscrizione dell'oggetto DatiBaseModificaContrattualeType utilizzato nelle schede M2 e M2_40
+	* aggiunti gli oggetti AggiudicazioneBaseSopraSogliaType e AggiudicazioneCompletaSopraSogliaType: reso offertePresentate facoltativo
+	* modificati gli oggetti AggiudicazioneA1_29Type, AggiudicazioneA1_30Type, AggiudicazioneA1_32Type, AggiudicazioneA1_33Type, AggiudicazioneA1_34Type, AggiudicazioneA1_35Type, AggiudicazioneA1_36Type, AggiudicazioneA1_37Type: aggiornate le reference ai nuovi oggetti creati
+	* modificato l'oggetto AggiudicazioneA1_31Type: reso offertePresentate facoltativo
+	* aggiunto l'oggetto SettoreEnum 
+	* aggiunto il campo obbligatorio contrattoDifesa agli oggetti AppaltoP7BaseType, AppaltoP7_2Type.
+	* aggiunto il campo obbligatorio settore agli oggetti AppaltoP3BaseType, AppaltoP4BaseType, AppaltoP7BaseType, AppaltoP7_2Type, AppaltoISDABaseType, AppaltoP_14Type, AppaltoP_19Type, AppaltoAD1_28Type
+	* aggiunto l'oggetto MotivoDerogaQlfEnum
+	* aggiunto il campo facoltativo derogaQualificazione agli oggetti LottoBaseType, LottoP4BaseType, LottoP6BaseType, LottoP7BaseType, LottoP7_2BaseType, AggiudicazioneAD1_25Type, AggiudicazioneAD1_26Type, AggiudicazioneAD1_28Type
+	* deprecato il campo strumentiSvolgimentoProcedura
+* modello-dati-schede-P7.3.yaml: aggiunti i campi obbligatori contrattoDifesa, settore all'oggetto AppaltoP7_3Type
+* modello-dati-schede-AD3.yaml: 
+	* aggiunti i campi obbligatori contrattoDifesa, settore all'oggetto AppaltoAD3Type
+	* aggiunto il flag accordoQuadro nell'oggetto AppaltoAD3Type
+* modello-dati-schede-P5.yaml: aggiunto il campo obbligatorio settore all'oggetto AppaltoP5Type
+* modello-dati-schede-A3_6.yaml: 
+	* aggiunto il campo obbligatorio settore all'oggetto AppaltoA3_6Type
+	* aggiunto il flag accordoQuadro nell'oggetto AppaltoA3_6Type
+* modello-dati-schede-AD5.yaml: aggiunto il campo obbligatorio settore all'oggetto AppaltoAD5Type
+* modello-dati-schede-P3_4.yaml: 
+	* aggiunto il campo facoltativo derogaQualificazione all'oggetto LottoP3_4Type
+	* aggiunto il campo accordoQuadro nell'oggetto appalto.datiBaseStrumentiProcedura
+* modello-dati-schede-P3_5.yaml: 
+	* aggiunto il campo facoltativo derogaQualificazione all'oggetto LottoP3_5Type
+	* aggiunto il campo accordoQuadro nell'oggetto appalto.datiBaseStrumentiProcedura
+* modello-dati-schede-AOC.yaml, modello-dati-schede-SOC.yaml, modello-dati-schede-COC.yaml: aggiunte le nuove schede per il flusso degli Organi Costituzionali
+
+### Tipologiche
+* errori.json: aggiunti gli errori REG117, REG118, REG119, REG120, REG121, REG122, REG123, REG124, REG125, REG126
+* codiceScheda.json: 
+	* aggiornate le descrizioni delle schede CM1, ANN
+	* aggiunte le nuove schede per gli Organi Costituzionali AOC, SOC, COC
+* settore.json: aggiunta per indicare il settore: ordinario/speciale
+* motivoDerogaQlf.json: aggiunta per indicare il motivo della deroga al servizio di qualificazioneSA
   
 ## Orchestratore
-* inserite le informazioni per gestire il processo delle nuove schede OOCC (AOC, RSOC, COOC)
-* aggiornate le informazioni della S2 per gestire il nuovo flusso OOCC
-* aggiornato flusso di orchestrazione prevedendo per le P1* la possibilità di ammettere anche direttamente una A1*
+* scheda M2: modificata la colonna flussoAppartenenza: aggiunti 30,61,62
+* scheda NAG: Rimozione flussi 71 e 73, Inserimento dei flussi 711, 712, 713, 61, 62
+* scheda CM1: 
+	* modificata la colonna settore-regime con appalti>= 5k, modificata la colonna schedaDescrizione con "Scheda di comunicazione modifica dati della procedura per appalti sopra o pari a 5K euro"
+	* modificata la colonna fase in "affidamento"
+* scheda CM2: modificata la colonna fase in "affidamento"
+* scheda ANN:
+	* modificata la colonna fase in "affidamento"
+	* modificata la colonna schedaDescrizione con "Annullamento affidamento"
+* scheda M1: modificata la colonna schedaDescrizione con "Modifica contrattuale, direttiva generale e direttiva settoriale"
+* scheda M2: modificata la colonna schedaDescrizione con "Modifica contrattuale sottosoglia, generale e settoriale"
+* schede A7_1_1, A7_1_2, A2_29, A2_30, A2_32, A2_33, A2_34, A2_35: inserito nella colonna ‘flussoAppartenenza’ il flusso 72
+* schede P1*: modificata la colonna schedaSuccessiva: aggiunte le A1.
+* aggiunte le tre nuove schede per gli Organi Costituzionali e aggiunta la scheda SOC come scheda successiva alla S2.
 
 ### Regole
-* AOC.dmn, RSOC.dmn, COOC.dmn: nuove regole per la gestione degli OOCC
+* SC1.dmn: aggiunta la regola REG117
+* P1_10.dmn, P1_11.dmn, P1_12.dmn, P1_13.dmn, P1_14.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn, P2_11.dmn, P2_12.dmn, P2_13.dmn, P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P3_4.dmn,P3_5.dmn,P4*.dmn,P6*.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn,AD1_25.dmn,AD2_25.dmn,AD1_26.dmn,AD2_26.dmn,AD1_28.dmn,AD2_28.dmn: aggiunte le regole REG118, REG119, REG120, REG121, REG122
+* AOC.dmn, SOC.dmn, COC.dmn: aggiunte le regole relative alle nuove schede per il flusso degli Organi Costituzionali
 
-# Note di rilascio del 09/09/2024  (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 09/09/2024  (In Esercizio)</h1></summary>
 
 ## Modello Dati
 
@@ -971,6 +1019,34 @@ A1_29.dmn,A1_30.dmn,A1_31.dmn,A1_32.dmn,A1_33.dmn,A1_34.dmn,A1_35.dmn,A1_36.dmn,
 
 ### Orchestratore
 * aggiunto il valore 713 nella colonna flussoAppartenenza
+</details>
+
+# Note di rilascio del 01/10/2024 (In Esercizio)
+
+## Modello Dati
+
+### Tipologiche
+* ticket 56624:
+errori.json: Aggiunto errore REG68_1
+
+### Regole
+* ticket 56624:
+  * AD1*.dmn, AD2*.dmn,A1_29.dmn,A1_30.dmn,A1_31.dmn,A1_32.dmn,A1_33.dmn,A1_34.dmn,A1_35.dmn,A2_29.dmn,A2_30.dmn,A2_31.dmn,A2_32.dmn,A2_33.dmn,A2_34.dmn,A2_35.dmn: corretta la sintassi della regola 68 e aggiunta la REG68_1
+* ticket 55651:
+  * P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P2_10.dmn,P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn: corretta la sintassi della regola REG106 per considerare anche l'orario
+  * P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P1_23.dmn,P1_24.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P2_23.dmn,P2_24.dmn,P3_1.dmn,P3_2.dmn,P3_3.dmn,P3_4.dmn,P3_5.dmn,P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn: corretta la sintassi delle regole REG105 e REG106 per considerare anche l'orario
+  * P6_1.dmn,P6_2.dmn: corretta la sintassi della regola REG105 per considerare anche l'orario
+ 
+# Note di rilascio del 10/03/2024 (In Esercizio)
+
+## Modello Dati
+
+### Regole
+* ticket 55650, 59540, 59541, 59556:
+  * P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn,P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn: corretta la sintassi della regola REG1
+
+* ticket 59350:
+  * P1_23.dmn,P1_24.dmn: eliminate le REG98 e REG99 inserite per errore nell'ultimo rilascio
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.

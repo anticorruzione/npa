@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ISDA1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.4.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ISDA1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.6.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="ISDA1" name="ISDA1">
     <informationRequirement id="InformationRequirement_0qk9zn8">
       <requiredInput href="#InputData_1gcht8t" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_15hg8fj">
+      <requiredInput href="#InputData_1j6ib16" />
     </informationRequirement>
     <decisionTable id="DecisionTable_ISDA1" hitPolicy="COLLECT">
       <input id="comunicazione_ISDA1" biodi:width="394">
         <inputExpression id="LiteralExpression_comunicazione_ISDA1" typeRef="string">
           <text>appalto</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1wh6053">
+        <inputExpression id="LiteralExpression_0d2n71t" typeRef="string">
+          <text>lotti</text>
         </inputExpression>
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
@@ -16,6 +24,9 @@
         <inputEntry id="UnaryTests_0qvvbpl">
           <text>appalto.datiBaseStrumentiProcedura.sistemaDinamicoAcquisizione.codice = "" or appalto.datiBaseStrumentiProcedura.sistemaDinamicoAcquisizione.codice = "none"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1ac22qj">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0nyzfph">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG111\"}"</text>
         </outputEntry>
@@ -23,18 +34,27 @@
     </decisionTable>
   </decision>
   <inputData id="InputData_1gcht8t" name="appalto" />
+  <inputData id="InputData_1j6ib16" name="lotti" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="ISDA1">
         <dc:Bounds height="80" width="180" x="150" y="110" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_0t2cycj" dmnElementRef="InputData_1gcht8t">
-        <dc:Bounds height="45" width="125" x="178" y="268" />
+        <dc:Bounds height="45" width="125" x="117" y="268" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0h28df6" dmnElementRef="InformationRequirement_0qk9zn8">
-        <di:waypoint x="241" y="268" />
-        <di:waypoint x="240" y="210" />
-        <di:waypoint x="240" y="190" />
+        <di:waypoint x="180" y="268" />
+        <di:waypoint x="210" y="210" />
+        <di:waypoint x="210" y="190" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_15u88q3" dmnElementRef="InputData_1j6ib16">
+        <dc:Bounds height="45" width="125" x="327" y="268" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_06tqjq4" dmnElementRef="InformationRequirement_15hg8fj">
+        <di:waypoint x="390" y="268" />
+        <di:waypoint x="270" y="210" />
+        <di:waypoint x="270" y="190" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

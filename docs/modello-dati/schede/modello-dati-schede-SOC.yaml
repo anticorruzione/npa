@@ -1,0 +1,55 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda SOC - Scheda di richiesta di subappalto per gli Organi Costituzionali.
+  version: 1.0.0
+components:
+  schemas:
+    SubappaltoType:
+      description: Dati relativi ai subappalti
+      type: object
+      required: [conferente,subappaltatore,impresaEstera,importoSubappalto,categoria,cpv,oggetto]
+      additionalProperties: false
+      properties:    
+        conferente:
+          description: Codice fiscale
+          type: string
+        subappaltatore: 
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'
+        oggetto:
+          description: Lavoro/Servizio/Fornitura subappalto
+          type: string
+        oggettoMl:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MultilinguaType'         
+        importoSubappalto:
+          description: Importo subappalto
+          type: number
+          format: double
+        categoria:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaType'
+        cpv:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CpvType'   
+    AnacFormSOCType:
+      description: Contiene tutti i dati relativi alla scheda di Richiesta di Subappalto
+      type: object
+      required: [cig, subappalto]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string 
+        subappalto:
+          $ref: '#/components/schemas/SubappaltoType'
+    SchedaSOCType:
+      description: Comunicazione richiesta di subappalto per gli Organi Costituzionali.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormSOCType'

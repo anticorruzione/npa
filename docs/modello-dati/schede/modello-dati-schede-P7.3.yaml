@@ -8,8 +8,13 @@ components:
       description: Oggetto che riporta i dati dell'appalto
       type: object
       additionalProperties: false
-      required: [datiBase]
+      required: [contrattoDifesa,settore,datiBase]
       properties: 
+        contrattoDifesa:
+          description: Contratto Difesa
+          type: boolean
+        settore: 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SettoreEnum' 
         datiBase:
           allOf: 
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoPLType'

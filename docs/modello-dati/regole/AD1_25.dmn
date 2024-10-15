@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD1_25" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.4.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD1_25" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.6.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_aggiudicazioni" name="aggiudicazioni" />
   <inputData id="InputData_appalto" name="appalto" />
   <decision id="AD1_25" name="AD1_25">
@@ -153,13 +153,25 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
       <rule id="DecisionRule_AD1_10_0039">
         <description>REG68: il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</description>
         <inputEntry id="UnaryTests_AD1_10_0118">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= null and appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta!= "")</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != ""))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0119">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0040">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hwc1kj">
+        <description>REG68_1: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
+        <inputEntry id="UnaryTests_0nnp0ko">
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta = null or count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&lt;0 or (every giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice = ""))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09tne6c">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pef9x3">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0gtca6d">
@@ -197,6 +209,72 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_19fecy2">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG112\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12xm90p">
+        <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
+        <inputEntry id="UnaryTests_0xe75lf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dmeobe">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies ((aggiudicazione.datiBase.oggettoContratto.codice = "works" or (some partecipante in aggiudicazione.partecipanti satisfies partecipante.importo &gt; 215000)) and aggiudicazione.derogaQualificazione.codice = "1")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1inhjdz">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG118\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1phah5a">
+        <description>REG119: Non è possibile inserire il codice 2 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 431000 €.</description>
+        <inputEntry id="UnaryTests_1c5jqg9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17y97yr">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies ((aggiudicazione.datiBase.oggettoContratto.codice = "works" or (some partecipante in aggiudicazione.partecipanti satisfies partecipante.importo &gt; 431000)) and aggiudicazione.derogaQualificazione.codice = "2")
+</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oml7mc">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG119\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0h38r0m">
+        <description>REG120: Non è possibile inserire il codice 3 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da lavori o l'importo è superiore a 1 milione di euro.</description>
+        <inputEntry id="UnaryTests_00yb8ds">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f4uui1">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "works" or (some partecipante in aggiudicazione.partecipanti satisfies partecipante.importo &gt; 1000000)) and aggiudicazione.derogaQualificazione.codice = "3")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07r6t88">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG120\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0s29oo5">
+        <description>REG121: Non è possibile inserire il codice 4 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 750000 €.</description>
+        <inputEntry id="UnaryTests_0wgwqjn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01sef66">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "services" or (some partecipante in aggiudicazione.partecipanti satisfies partecipante.importo &gt; 750000)) and aggiudicazione.derogaQualificazione.codice = "4")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gjwfyn">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG121\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06pzl7a">
+        <description>REG122: Non è possibile inserire il codice 5 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 1 milione di euro.</description>
+        <inputEntry id="UnaryTests_1v2yn7q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cp38aq">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "services" or (some partecipante in aggiudicazione.partecipanti satisfies partecipante.importo &gt; 1000000)) and aggiudicazione.derogaQualificazione.codice = "5")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nsca0v">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
