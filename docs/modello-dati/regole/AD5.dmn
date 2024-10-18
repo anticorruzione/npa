@@ -87,7 +87,8 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1a4e2bn">
-          <text>(aggiudicazioni.cup = null or aggiudicazioni.cup.isEmpty() or aggiudicazioni.cup.stream().allMatch(c -&gt; c = ""))</text>
+          <text>some aggiudicazione in aggiudicazioni
+satisfies count(aggiudicazione.cup)&gt;1 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jttif7">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG101\"}"</text>

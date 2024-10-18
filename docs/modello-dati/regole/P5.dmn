@@ -68,7 +68,8 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_06kmhwz">
-          <text>(lotti.cup = null or lotti.cup.isEmpty() or lotti.cup.stream().allMatch(c -&gt; c = ""))</text>
+          <text>some lotto in lotti
+satisfies count(lotto.cup)&gt;1 and (every c in lotto.cup satisfies (c = null or c = ""))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xgbqk9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG101\"}"</text>

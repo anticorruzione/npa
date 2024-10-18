@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_20" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_20" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.6.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P1_20" name="P1_20">
     <informationRequirement id="InformationRequirement_P1_20_01">
       <requiredInput href="#InputData_appalto_P1_20" />
@@ -406,22 +406,6 @@ satisfies lotto.paritaDiGenereGenerazionale != null and lotto.afferenteInvestime
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG28\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P1_20_0031">
-        <description>REG29: Modalità Acquisizione: il campo è obbligatorio se l'oggetto del contratto è 'Servizi' o 'Forniture'.</description>
-        <inputEntry id="UnaryTests_P1_20_0094">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_20_0095">
-          <text>some lotto in lotti
-satisfies (lotto.datiBase.oggettoContratto.codice = "services" or lotto.datiBase.oggettoContratto.codice = "supplies") and (lotto.modalitaAcquisizione = null or lotto.modalitaAcquisizione = "" or lotto.modalitaAcquisizione.codice = null or lotto.modalitaAcquisizione.codice = "")</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_20_0096">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_20_0032">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG29\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_P1_20_0033">
         <description>REG32: Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</description>
         <inputEntry id="UnaryTests_P1_20_0100">
@@ -696,7 +680,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_1cl23sc">
+      <rule id="DecisionRule_1cl23sc">
         <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
         <inputEntry id="UnaryTests_15v9bsf">
           <text></text>

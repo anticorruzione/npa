@@ -22,7 +22,7 @@
       <rule id="DecisionRule_0m0ht0d">
         <description>REG101: indicare almeno uno dei campi di cui si richiede la modifica</description>
         <inputEntry id="UnaryTests_0qvvbpl">
-          <text>(comunicazione.importo = null or comunicazione.importo = 0) and (comunicazione.cup = null or comunicazione.cup.isEmpty() or comunicazione.cup.stream().allMatch(c -&gt; c = ""))</text>
+          <text>(comunicazione.importo = null or comunicazione.importo = 0) and (count(comunicazione.cup)&gt;1 and (every c in comunicazione.cup satisfies (c = null or c = "")))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iw90f2">
           <text></text>
