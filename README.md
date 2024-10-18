@@ -1,7 +1,6 @@
 # AVVISI:
 ## 1
-7 OTTOBRE 2024 
-SERVIZI DI NUOVO DISPONIBILI. A CAUSA DELL'INTERRUZIONE IMPREVISTA DEL SERVIZIO DI CONNETTIVITA' INTERNET DI ANAC TUTTI I SERVIZI NON SONO STATI RAGGIUNGIBILI DALLE 7.50 ALLE 16.20 CIRCA DI LUNEDI 7 OTTOBRE
+E' stata pubblicata sulla PDND di attestazione e di esercizio la nuova versione dei servizi FVC che include il richiedi-documenti in POST
 
 ## 2
 Come da [roadmap](/docs/specifiche-jws/roadmap.md), si ricorda a tutti i soggetti che sono stati autorizzati all’accesso temporaneo agli eService della Piattaforma Contratti Pubblici, che a partire dal 9 ottobre 2023, per poter accedere agli eService attualmente disponibili che implementano il contesto di sicurezza, dovranno effettuare l’onboarding su PDND attraverso la richiesta di iscrizione tra le piattaforme certificate come indicato nelle [regole tecniche](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) emanate da AgID 
