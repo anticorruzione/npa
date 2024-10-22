@@ -1037,7 +1037,7 @@ errori.json: Aggiunto errore REG68_1
   * P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P1_23.dmn,P1_24.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P2_23.dmn,P2_24.dmn,P3_1.dmn,P3_2.dmn,P3_3.dmn,P3_4.dmn,P3_5.dmn,P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn: corretta la sintassi delle regole REG105 e REG106 per considerare anche l'orario
   * P6_1.dmn,P6_2.dmn: corretta la sintassi della regola REG105 per considerare anche l'orario
  
-# Note di rilascio del 10/03/2024 (In Esercizio)
+# Note di rilascio del 03/10/2024 (In Esercizio)
 
 ## Modello Dati
 
