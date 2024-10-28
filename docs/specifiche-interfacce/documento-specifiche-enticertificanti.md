@@ -34,3 +34,4 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 | `02/08/2024`    | `00008` | `DURC emesso in corso di validità` | `-` | `Inps` |
 | `25/09/2024`    | `00010` | `Verifica esistenza prospetto informativo disabili` | `-` | `Ministero del Lavoro` |
 | `25/09/2024`    | `00011` | `Verifica esistenza rapporto parità di genere` | `-` | `Ministero del Lavoro` |
+| `In Progress`   | `00009` | `Sanzioni Ispettorato del lavoro` | `-` | `Isp. Naz. Lavoro` |
