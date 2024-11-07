@@ -1005,7 +1005,16 @@
 	},
     "dataInizio":null,
     "dataFine":null
-},	
+},
+{
+    "codice":"ERR113",
+    "descrizione": {
+		"it": "espd obbligatorio nelle schede AD3 per importi superiori o pari a 40000 euro.",
+		"en": "espd obbligatorio nelle schede AD3 per importi superiori o pari a 40000 euro."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
 {
     "codice":"ERR9999",
     "descrizione": {

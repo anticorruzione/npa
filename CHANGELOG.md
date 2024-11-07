@@ -973,7 +973,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * modello-dati-schede-AOC.yaml, modello-dati-schede-SOC.yaml, modello-dati-schede-COC.yaml: aggiunte le nuove schede per il flusso degli Organi Costituzionali
 
 ### Tipologiche
-* errori.json: aggiunti gli errori REG117, REG118, REG119, REG120, REG121, REG122, REG123, REG124, REG125, REG126
+* errori.json: aggiunti gli errori REG117, REG118, REG119, REG120, REG121, REG122, REG123, REG124, REG125, REG126, ERR113
 * codiceScheda.json: 
 	* aggiornate le descrizioni delle schede CM1, ANN
 	* aggiunte le nuove schede per gli Organi Costituzionali AOC, SOC, COC
