@@ -67,7 +67,7 @@ satisfies (offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100)
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1o8ug">
-          <text>some aggiudicazione in aggiudicazioni satisfies (count(aggiudicazione.offertePresentate) = 1 and (some offerta in aggiudicazione.offertePresentate satisfies offerta.offertaInAumento = 0 and offerta.offertaEconomica = 0))</text>
+          <text>some aggiudicazione in aggiudicazioni satisfies (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = true and is defined(offerta.offertaEconomica) = true ) or (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = false and is defined(offerta.offertaEconomica) = false )))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08f5234">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG51\"}"</text>

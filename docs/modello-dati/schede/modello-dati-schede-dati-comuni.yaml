@@ -572,7 +572,6 @@ components:
           type: number
           format: double
           minimum: 0
-          maximum: 100 
         offertaMaggioreSogliaAnomalia:
           description: L'offerta è maggiore della soglia di anomalia
           type: boolean
