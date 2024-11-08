@@ -992,7 +992,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 	* modificata la colonna schedaDescrizione con "Annullamento affidamento"
 * scheda M1: modificata la colonna schedaDescrizione con "Modifica contrattuale, direttiva generale e direttiva settoriale"
 * scheda M2: modificata la colonna schedaDescrizione con "Modifica contrattuale sottosoglia, generale e settoriale"
-* schede A7_1_1, A7_1_2, A2_29, A2_30, A2_32, A2_33, A2_34, A2_35: inserito nella colonna ‘flussoAppartenenza’ il flusso 72
+* scheda A2_29: inserito nella colonna ‘flussoAppartenenza’ il flusso 72
 * schede P1*: modificata la colonna schedaSuccessiva: aggiunte le A1.
 * aggiunte le tre nuove schede per gli Organi Costituzionali e aggiunta la scheda SOC come scheda successiva alla S2.
 
