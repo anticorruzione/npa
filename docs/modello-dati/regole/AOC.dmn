@@ -28,7 +28,7 @@
           <text>count(aggiudicazioni) &lt;= 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06r7al1">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG114\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG114\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ghygb9">
@@ -40,7 +40,7 @@
           <text>count(aggiudicazioni) &gt; 1</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0xqsmy9">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG114_1\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG114_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_155fqzq">
@@ -53,7 +53,7 @@
 satisfies (count(aggiudicazione.categoria.tipo = "PREVALENTE")= 0 or count(aggiudicazione.categoria.tipo = "PREVALENTE")&gt;1)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pbe4w6">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG115\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG115\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0mjokfn">
@@ -66,7 +66,7 @@ satisfies (count(aggiudicazione.categoria.tipo = "PREVALENTE")= 0 or count(aggiu
 satisfies (count(aggiudicazione.cpv.tipo = "PREVALENTE")= 0 or count(aggiudicazione.cpv.tipo = "PREVALENTE")&gt;1)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gsyyb4">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG116\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG116\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_13y0kv0">
