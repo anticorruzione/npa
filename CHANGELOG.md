@@ -771,7 +771,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * aggiornata codiceScheda.json
 </details>
 
-# Note di rilascio del 02/08/2024 (Changelog-01)
+# Note di rilascio del 02/08/2024 (Changelog-01 In esercizio)
 **NOTA**
 * Pubblicazione contenuti su GitHub: già pubblicati
 * Rilascio in Qualificazione: 07/08/2024
