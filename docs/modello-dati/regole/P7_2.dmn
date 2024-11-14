@@ -106,19 +106,6 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1232tet">
-        <description>REG113: se il campo condizioniNegoziata.codice=46(SDA) allora il campo idSDA rilasciato da ISDA1 e ISDA2 deve essere obbligatoriamente valorizzato.</description>
-        <inputEntry id="UnaryTests_16cad0j">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1i9g2da">
-          <text>some lotto in lotti
-satisfies some condizioneNegoziata in lotto.condizioniNegoziata satisfies condizioneNegoziata.codice = 46 and (appalto.idSDA = null or appalto.idSDA = "")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_00y5kcb">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG113\"}"</text>
-        </outputEntry>
-      </rule>
 	  <rule id="DecisionRule_1cl23sc">
         <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
         <inputEntry id="UnaryTests_15v9bsf">

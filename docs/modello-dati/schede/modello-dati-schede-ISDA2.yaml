@@ -23,11 +23,8 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoISDABaseType' 
       type: object
       additionalProperties: false
-      required: [lotIdentifier,datiBase,datiBaseCPV,datiBaseDocumenti,datiBaseDurata]
+      required: [datiBase,datiBaseCPV,datiBaseDocumenti,datiBaseDurata]
       properties:
-        lotIdentifier:
-          description: Id univoco del lotto generato dalla stazione appaltante
-          type: string      
         datiBase:
           allOf:
           - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'

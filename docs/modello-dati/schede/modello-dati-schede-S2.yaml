@@ -33,7 +33,7 @@ components:
           format: date-time        
       
     SchedaS2Type:
-      description: Per la procedura a fase unica è l'elenco dei soggetti che hanno presentato offerta. Per le procedure a due fasi è l'elenco dei soggetti invitati e di quelli che non hanno presentato offerta.
+      description: "Per la procedura a fase unica: è l'elenco dei soggetti che hanno presentato offerta.Per le procedure a due fasi: è l'elenco dei soggetti invitati e di quelli che non hanno presentato offerta."
       type: object
       additionalProperties: false
       required: [anacForm]

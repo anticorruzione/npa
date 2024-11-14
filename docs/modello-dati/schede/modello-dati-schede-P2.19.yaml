@@ -57,7 +57,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP2_19Type'       
     SchedaP2_19Type:
-      description: Bando di concessione - direttiva sulle concessioni, regime ordinario, PPP. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
+      description: Bando di concessione - concessioni
       type: object
       required: [anacForm,espd]
       additionalProperties: false

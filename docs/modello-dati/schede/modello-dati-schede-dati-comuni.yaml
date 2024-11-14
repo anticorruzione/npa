@@ -683,11 +683,7 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64      
-        idSDA:
-          description: Identificativo univoco dello SDA rilasciato da ANAC.
-          type: string
-          format: uuid 
+          maxLength: 64
         settore: 
           $ref: '#/components/schemas/SettoreEnum' 
     AppaltoP3BaseType:
