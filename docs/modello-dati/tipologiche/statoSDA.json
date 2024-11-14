@@ -1,0 +1,32 @@
+[
+	{
+		"codice": "01",
+		"descrizione": {
+			"it": "In valutazione",
+			"en": "Under evaluation",
+			"de": "in evaluierung"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "02",
+		"descrizione": {
+			"it": "Iscritto",
+			"en": "Registered",
+			"de": "Eingetragen"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "03",
+		"descrizione": {
+			"it": "Cancellato",
+			"en": "Deleted",
+			"de": "Gelöscht"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	}
+]
