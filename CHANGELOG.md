@@ -788,7 +788,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 ### Orchestratore
 * modificata la colonna includeESPD a "NO" per la scheda P3_1
 
-# Note di rilascio del 06/08/2024 (Changelog-02)
+# Note di rilascio del 06/08/2024 (Changelog-02 - In esercizio)
 **NOTA**
 * Pubblicazione contenuti su GitHub: 12/09/2024
 * Rilascio in Qualificazione: 24/09/2024 (rilasciata il 27/09/2024)
