@@ -1,0 +1,54 @@
+[{
+		"codice":"001",
+		"descrizione": {
+			"it": "RICHIESTA AUTORIZZAZIONE",
+			"en": "RICHIESTA AUTORIZZAZIONE"
+		},
+		"dataInizio":null,
+    	"dataFine":null
+    },
+	{
+		"codice":"002",
+		"descrizione": {
+			"it": "RICHIESTA DOCUMENTAZIONE",
+			"en": "RICHIESTA DOCUMENTAZIONE"
+		},
+		"dataInizio":null,
+    	"dataFine":null
+	},
+	{
+		"codice":"003",
+		"descrizione": {
+			"it": "AGGIORNA DOCUMENTO",
+			"en": "AGGIORNA DOCUMENTO"
+		},
+		"dataInizio":null,
+    	"dataFine":null
+	},
+	{
+		"codice":"004",
+		"descrizione": {
+			"it": "RICHIESTA AGGIORNAMENTO",
+			"en": "RICHIESTA AGGIORNAMENTO"
+		},
+		"dataInizio":null,
+    	"dataFine":null
+	},
+	{
+		"codice":"008",
+		"descrizione": {
+			"it": "RICHIESTA AUTORIZZAZIONE SOA",
+			"en": "RICHIESTA AUTORIZZAZIONE SOA"
+		},
+		"dataInizio":null,
+    	"dataFine":null
+	},
+	{
+		"codice":"999",
+		"descrizione": {
+			"it": "AVVISO",
+			"en": "AVVISO"
+		},
+		"dataInizio":null,
+    	"dataFine":null
+	}]
