@@ -794,7 +794,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * Rilascio in Qualificazione: 24/09/2024 (rilasciata il 27/09/2024)
 * Rilascio in Esercizio: 14/11/2024 (ripianificata)
   
-**la nota di rilascio potrà essere integrata successivamente**
+**Disponibile in tutti gli ambienti**
     
 ## documento-specifiche-servizi-npa.md 
 * Inserito paragrafo 11.3 Lista tipi documento richiedibili agli enti certificanti
