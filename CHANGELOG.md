@@ -817,6 +817,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * erroriEC.json
   * nuova tipologica utilizzata per la trascodifica degli errori provenienti dagli enti certificanti.
 * aggiunta la tipologica operazioneSDA.json
+* aggiunta la tipologica statoSDA.json Tipologica ad uso intern utilizzata dalla gestione dei partecipanti della scheda S0 dal FVOE2.0
+* aggiunta la tipologica tipoNotifica.json Tipologica ad uso interno per la gestione delle notifiche inviate verso il RP e l'OE all'interno delle funzionalità del FVOE2.0
 * codiceScheda.json: aggiunte le nuove schede per lo SDA: CSDA1, CSDA2, S0, ISDA1, ISDA2
     
 ### Modello Dati 
