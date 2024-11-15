@@ -22,7 +22,7 @@ components:
         anacForm:
           type: object
           additionalProperties: false
-          required: [idSDA,partecipanti]
+          required: [idSDA,partecipanti,lotIdentifier]
           properties:
             idSDA:
               description: id restituito dal servizio all'invio della scheda di istituzione SDA
