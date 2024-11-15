@@ -936,7 +936,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 # Note di rilascio del 06/08/2024 (Changelog-03)
 **NOTA**
 * Pubblicazione contenuti su GitHub: 15/10/2024 (eseguita)
-* Rilascio in Qualificazione: 15/11/2024 (ripianificata)
+* Rilascio in Qualificazione: 15/11/2024 (eseguito)
 * Rilascio in Esercizio: 16/12/2024 (ripianificata)
   
 **la nota di rilascio potrà essere integrata successivamente**
