@@ -809,7 +809,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * tipoDocumento.json:
   * aggiunti i seguenti valori: 00008 00042 00010 e 00011
 * errori.json
-  * aggiunto il valore : FVX58, REG111, REG113, FVC01, FVC02 FVX53, FVX54, FVX55, FVX56 e FVX57
+  * aggiunto il valore : FVX58, REG111, REG113, FVC01, FVC02 FVX53, FVX54, FVX55, FVX56, FVX57, ERR114, ERR115, ERR116, ERR117, ERR118, ERR119, ERR120, ERR121, ERR122, ERR123
 * tipoPrefettura.json
   * nuova tipologica utilizzata per la scelta della prefettura nella compilazione della richiesta del 00001-Comunicazione Antimafia
 * enteCertificante.json
