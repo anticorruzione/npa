@@ -10,11 +10,11 @@
           <text>modificaContrattuale</text>
         </inputExpression>
       </input>
-      <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
+      <output id="Errore_M1" name="Errore" typeRef="string" biodi:width="477" />
       <rule id="DecisionRule_0iqdo0x">
         <description>REG61: Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d’opera eccede il 10% dell’importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d’opera</description>
         <inputEntry id="UnaryTests_05jv7oa">
-          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = "")</text>
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = "")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rzvsmj">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG61\"}"</text>
@@ -23,7 +23,7 @@
       <rule id="DecisionRule_1utcmb5">
         <description>REG54: Selezionare un motivo di revisione prezzi</description>
         <inputEntry id="UnaryTests_1s6uqok">
-          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-rev" and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = "" or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = "")</text>
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-rev" and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = "" or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = "")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_057shie">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG54\"}"</text>
@@ -32,7 +32,7 @@
       <rule id="DecisionRule_1q0i2i3">
         <description>REG56: CIG della nuova procedura avviata: campo non previsto</description>
         <inputEntry id="UnaryTests_1xob7ga">
-          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != "other" and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != ""</text>
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != "other" and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != ""</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1k14h6m">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG56\"}"</text>
@@ -41,7 +41,7 @@
       <rule id="DecisionRule_1eq7tlk">
         <description>REG55: in caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale</description>
         <inputEntry id="UnaryTests_0fk9vq3">
-          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = "") and (modificaContrattuale.causaModifica = null or modificaContrattuale.causaModifica = "")</text>
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = "") and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lsfylj">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG55\"}"</text>
@@ -50,7 +50,7 @@
       <rule id="DecisionRule_03p0rou">
         <description>REG62: in caso di ‘Altre cause impreviste ed imprevedibili’ indicare una motivazione nel campo ‘Cause della modifica contrattuale’</description>
         <inputEntry id="UnaryTests_1i9l538">
-          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.causaModifica = null or modificaContrattuale.causaModifica = "")</text>
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1khx8hp">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG62\"}"</text>
@@ -59,7 +59,7 @@
       <rule id="DecisionRule_1c2flst">
         <description>REG63: Non è stato valorizzato il numero di giorni di proroga concessi/tempo aggiuntivo rispetto ai termini contrattuali</description>
         <inputEntry id="UnaryTests_19mf1r6">
-          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale != "" and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.quadroEconomicoStandardRideterminato = null or modificaContrattuale.quadroEconomicoStandardRideterminato = "" or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = null or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = 0)</text>
+          <text>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.quadroEconomicoStandardRideterminato = null or modificaContrattuale.quadroEconomicoStandardRideterminato = "" or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = null or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hxxg0o">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG63\"}"</text>
