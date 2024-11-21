@@ -28,7 +28,7 @@ components:
           type: string
           enum: ['DIRETTO', 'SENZA ESPLETAMENTO DI GARA']                 
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoADType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'
         categoria:
           type: array
           items:
@@ -52,7 +52,7 @@ components:
           minLength: 8
           maxLength: 64 
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoADType'           
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType'
     AnacFormAOCType:
       description: Contiene tutti i dati relativi agli organi costituzionali. 
       allOf: # estende la classe AnacFormBaseType
