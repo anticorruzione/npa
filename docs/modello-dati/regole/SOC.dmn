@@ -14,7 +14,7 @@
       <rule id="DecisionRule_0m0ht0d">
         <description>REG115: Indicare una sola categoria di tipo prevalente</description>
         <inputEntry id="UnaryTests_0qvvbpl">
-          <text>count(subappalto.categoria.tipo = "PREVALENTE")= 0 or count(subappalto.categoria.tipo = "PREVALENTE")&gt;1</text>
+          <text>count(subappalto.categoriaOC[item.tipo = "PREVALENTE"])= 0 or count(subappalto.categoriaOC[item.tipo = "PREVALENTE"])&gt;1</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nyzfph">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG115\"}"</text>
@@ -23,7 +23,7 @@
       <rule id="DecisionRule_12eyuuu">
         <description>REG116: Indicare una sola cpv di tipo prevalente</description>
         <inputEntry id="UnaryTests_1av04ic">
-          <text>count(subappalto.cpv.tipo = "PREVALENTE")= 0 or count(subappalto.cpv.tipo = "PREVALENTE")&gt;1</text>
+		  <text>count(subappalto.cpvOC[item.tipo = "PREVALENTE"])= 0 or count(subappalto.cpvOC[item.tipo = "PREVALENTE"])&gt;1</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dll8zb">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG116\"}"</text>
