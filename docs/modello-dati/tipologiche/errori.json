@@ -1005,7 +1005,7 @@
 	},
     "dataInizio":null,
     "dataFine":null
-},
+},	
 {
     "codice":"ERR113",
     "descrizione": {
@@ -1014,96 +1014,96 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},	
+{
+    "codice":"ERR114",
+    "descrizione": {
+		"it": "Non si possono inserire più partecipanti con lo stesso codice fiscale.",
+		"en": "It is not possible to insert multiple participants with the same tax code."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR115",
+    "descrizione": {
+		"it": "In questa fase dello SDA è possibile inserire solo operazioni di Inserimento e Conferma.",
+		"en": "At this stage of the SDA, only Insert and Confirm operations can be performed."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR116",
+    "descrizione": {
+		"it": "Questo elenco dei partecipanti non è più attivo, quindi non è più possibile aggiornare o richiamare l'elenco.",
+		"en": "This participant list is no longer active, so it is no longer possible to update or retrieve the list."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR117",
+    "descrizione": {
+		"it": "Per un partecipante con stato In valutazione è possibile inserire solo operazioni di conferma e cancellazione.",
+		"en": "For a participant with status In evaluation, only Confirm and Delete operations can be performed."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR118",
+    "descrizione": {
+		"it": "Per un partecipante con stato Iscritto è possibile inserire solo operazioni di rivalutazione e cancellazione.",
+		"en": "For a participant with status Enrolled, only Re-evaluation and Delete operations can be performed."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR119",
+    "descrizione": {
+		"it": "Per un partecipante con stato Cancellato è possibile inserire solo operazioni di inserimento e conferma.",
+		"en": "For a participant with status Deleted, only Insert and Confirm operations can be performed"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR120",
+    "descrizione": {
+		"it": "Nessuna operazione inserita.",
+		"en": "No operation inserted."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR121",
+    "descrizione": {
+		"it": "lotIdentifier non trovato.",
+		"en": "lotIdentifier not found."
+	},
+    "dataInizio":null,
+    "dataFine":null
 },
 {
-  "codice":"ERR114",
-  "descrizione": {
-    "it": "Non si possono inserire più partecipanti con lo stesso codice fiscale.",
-    "en": "It is not possible to insert multiple participants with the same tax code."
-  },
-  "dataInizio":null,
-  "dataFine":null
+    "codice": "ERR122",
+    "descrizione": {
+      "it": "Elenco partecipanti SDA trovato non attivo",
+      "en": "SDA participant list found inactive"
+    },
+    "dataInizio":null,
+    "dataFine":null
 },
 {
-  "codice":"ERR115",
-  "descrizione": {
-    "it": "In questa fase dello SDA è possibile inserire solo operazioni di Inserimento e Conferma.",
-    "en": "At this stage of the SDA, only Insert and Confirm operations can be performed."
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice":"ERR116",
-  "descrizione": {
-    "it": "Questo elenco dei partecipanti non è più attivo, quindi non è più possibile aggiornare o richiamare l'elenco.",
-    "en": "This participant list is no longer active, so it is no longer possible to update or retrieve the list."
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice":"ERR117",
-  "descrizione": {
-    "it": "Per un partecipante con stato In valutazione è possibile inserire solo operazioni di conferma e cancellazione.",
-    "en": "For a participant with status In evaluation, only Confirm and Delete operations can be performed."
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice":"ERR118",
-  "descrizione": {
-    "it": "Per un partecipante con stato Iscritto è possibile inserire solo operazioni di rivalutazione e cancellazione.",
-    "en": "For a participant with status Enrolled, only Re-evaluation and Delete operations can be performed."
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice":"ERR119",
-  "descrizione": {
-    "it": "Per un partecipante con stato Cancellato è possibile inserire solo operazioni di inserimento e conferma.",
-    "en": "For a participant with status Deleted, only Insert and Confirm operations can be performed"
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice":"ERR120",
-  "descrizione": {
-    "it": "Nessuna operazione inserita.",
-    "en": "No operation inserted."
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice":"ERR121",
-  "descrizione": {
-    "it": "lotIdentifier non trovato.",
-    "en": "lotIdentifier not found."
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice": "ERR122",
-  "descrizione": {
-    "it": "Elenco partecipanti SDA trovato non attivo",
-    "en": "SDA participant list found inactive"
-  },
-  "dataInizio":null,
-  "dataFine":null
-},
-{
-  "codice": "ERR123",
-  "descrizione": {
-    "it": "idSDA non trovato",
-    "en": "idSDA not found"
-  },
-  "dataInizio":null,
-  "dataFine":null
+    "codice": "ERR123",
+    "descrizione": {
+      "it": "idSDA non trovato",
+      "en": "idSDA not found"
+    },
+    "dataInizio":null,
+    "dataFine":null
 },
 {
     "codice":"ERR9999",
@@ -1621,8 +1621,8 @@
 {
     "codice":"REG61",
     "descrizione": {
-		"it": "Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d'opera eccede il 10 per cento dell'importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d'opera",
-		"en": "Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d'opera eccede il 10 per cento dell'importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d'opera"
+		"it": "Il campo urlDocumentazione è obbligatorio se si seleziona come motivo di modifica la voce 'mod-cir', 'Necessità di modifiche dovute a circostante non prevedibili da un committente diligente'.",
+		"en": "Il campo urlDocumentazione è obbligatorio se si seleziona come motivo di modifica la voce 'mod-cir', 'Necessità di modifiche dovute a circostante non prevedibili da un committente diligente'."
 	},
     "dataInizio":null,
     "dataFine":null

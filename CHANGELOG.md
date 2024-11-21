@@ -828,6 +828,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
   * modificato DatiNominativo_00004DatiNascita - nel "codice catasto comune italiano" modificata la regex per controllare i comuni italiani.
   * modificato il nome dei modelli dati utlizzato per richiedere i documenti agli enti certificanti. Rimosso il carattere "_"
 * modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede ISDA1,ISDA2 nell'oggetto SchedaComunicaAppaltoType e S0,CSDA1,CSDA2 nell'oggetto SchedaPostPubblicazioneType
+* rimosso il campo idSDA dall'oggetto AppaltoISDABaseType
   
 ### Schede 
 * issue 853: 
@@ -918,6 +919,9 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
   * inserito identificativo per lo SDA
   * all'interno della property "appalto" di AnacFormP7_2Type, è stato cambiato il riferimento adottato da AppaltoP7BaseType a AppaltoP7_2Type e perciò rimosso il campo "StrumentiSvolgimentoProcedure" dalla scheda P7_2 e sostituito con l'oggetto "datiBaseStrumentiProcedura"
 * #48952 modello-dati-schede-CM1.yaml,modello-dati-schede-CM2.yaml,modello-dati-schede-AD5.yaml,modello-dati-schede-P5.yaml: modificata la cardinalità del campo cupLotto e del campo cup
+* modello-dati-schede-P2_19,S2 modificata la descrizione delle schede
+* modello-dati-schede-S0 Aggiunto il campo lotIdentier 
+* modello-dati-schede-ISDA2 rimosso il campo lotIdentifier dall'oggetto LottoSDAType
 
   
 ## Orchestratore
@@ -932,6 +936,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 	* inserito controllo sul campo motivazioneCIG
 * ISDA1.dmn, ISDA2.dmn, S0.dmn, CSDA1.dmn, CSDA2.dmn: nuove regole per la gestione dello SDA
 * CM1.dmn,CM2.dmn,AD5.dmn,P5.dmn: aggiornate le regole in coerenza con la nuova cardinalità del cupLotto
+* ISDA1.dmn: aggiunte le regole REG98 e REG99
+* ISDA2.dmn: aggiunte le regole REG98 e REG99
 
 # Note di rilascio del 06/08/2024 (Changelog-03)
 **NOTA**
@@ -1006,9 +1012,6 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * SC1.dmn: aggiunta la regola REG117
 * P1_10.dmn, P1_11.dmn, P1_12.dmn, P1_13.dmn, P1_14.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn, P2_11.dmn, P2_12.dmn, P2_13.dmn, P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P3_4.dmn,P3_5.dmn,P4*.dmn,P6*.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn,AD1_25.dmn,AD2_25.dmn,AD1_26.dmn,AD2_26.dmn,AD1_28.dmn,AD2_28.dmn: aggiunte le regole REG118, REG119, REG120, REG121, REG122
 * AOC.dmn, SOC.dmn, COC.dmn: aggiunte le regole relative alle nuove schede per il flusso degli Organi Costituzionali
-* A1_29.dmn,A1_30.dmn,A1_33.dmn,A1_34.dmn, A2_29.dmn, A2_30.dmn,A2_33.dmn,A2_34.dmn, A3*.dmn, A4*.dmn: modificata la REG51 perché sia accettato solo un valore non nullo tra offertePresentate.offertaEconomica e offertePresentate.offertaInAumento
-* ISDA1.dmn: aggiunte le regole REG98 e REG99
-* ISDA2.dmn: aggiunte le regole REG98 e REG99
 
 <details>
 <summary><h1>Note di rilascio del 09/09/2024  (In Esercizio)</h1></summary>
@@ -1056,6 +1059,42 @@ errori.json: Aggiunto errore REG68_1
 
 * ticket 59350:
   * P1_23.dmn,P1_24.dmn: eliminate le REG98 e REG99 inserite per errore nell'ultimo rilascio
+
+# Note di rilascio del 13/11/2024 (In Esercizio)
+
+## Modello Dati
+### Schede
+* ticket 59340:
+	* modello-dati-schede-dati-comuni.yaml: rimosso il maximum sul campo offertaInAumento dell'oggetto OfferteType
+
+### Regole
+* ticket 55651:
+	* P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn: corretta la sintassi della regola REG106 per considerare anche l'orario
+	* P7_2.dmn,PL1_8.dmn,PL2_8.dmn: corretta la sintassi della regola REG105 per considerare anche l'orario
+	* P1_18.dmn, P2_18.dmn, PL1_7.dmn, PL1_9.dmn, PL2_7.dmn, PL2_9.dmn: corretta la sintassi delle regole REG105 e REG106 per considerare anche l'orario
+* ticket 60341:
+ 	* P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn: inserito Output name "Errore"
+* ticket 55775:
+  * M1.dmn, M2.dmn: corretta la sintassi delle regole REG54, REG55, REG56, REG61, REG62, REG63
+  * M1_40.dmn, M2_40.dmn: corretta la sintassi delle regole REG54, REG55, REG56, REG61, REG62
+* ticket 60869:
+	* AD4.dmn: corretta la sintassi della regola REG53 per uniformarla alle altre AD*
+* ticket 59340:
+	* A1_29.dmn,A1_30.dmn,A1_33.dmn,A1_34.dmn, A2_29.dmn, A2_30.dmn,A2_33.dmn,A2_34.dmn, A3*.dmn, A4*.dmn: modificata la REG51 perché sia accettato solo un valore non nullo tra offertePresentate.offertaEconomica e offertePresentate.offertaInAumento 
+
+### Orchestratore
+* ticket 59196:
+	* corretto il riferimento alla scheda RSU1 per la scheda IR1
+
+### Tipologiche
+* ticket 57847:
+	* errori.json: modificato l'errore REG61
+* tipoPrefettura.json:
+  * corretta la sintassi del file
+  
+### Segnalazioni
+* ticket 61371:
+  * fix estrazione dati REG68_1
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.

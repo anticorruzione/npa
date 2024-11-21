@@ -8,10 +8,8 @@ info:
 
       #### Documentazione
       La documentazione a supporto delle specifiche di interfaccia con i sistemi che interoperano con il nuovo sistema di digitalizzazione è redatta con il linguaggio di markup Markdown ed è presente al segunete url:
-        [documento-specifiche-servizi-npa](https://github.com/anticorruzione/npa/blob/main/docs/specifiche-interfacce/documento-specifiche-servizi-npa.md)
     ```
   # I termini del servizio.
-  termsOfService: 'https://github.com/anticorruzione/npa/blob/main/README.md#termini-del-servizio'
   # Chi posso contattare per informazioni sul servizio e sul suo stato?
   contact:
     email: ufficio.uscp@anticorruzione.it
@@ -200,7 +198,7 @@ paths:
       parameters:
         - in: query
           name: idPianificazione
-          description: Identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
+          description: identificativo univoco della Pianificazione definito da ANAC. (A UUID specified by RFC4122)
           required: true
           schema:
             type: string

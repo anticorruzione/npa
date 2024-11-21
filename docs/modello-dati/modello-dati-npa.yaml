@@ -129,7 +129,7 @@ components:
           - $ref: '#/components/schemas/SchedaType'       
         type: object
         additionalProperties: false
-        properties:          
+        properties:
           _dataModifica:
             description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
             type: string

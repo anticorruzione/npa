@@ -8,6 +8,15 @@
     "dataFine":null
 },
 {
+    "codice":"PDR06",
+    "descrizione": {
+		"it": "Errore generico nel recupero dei dati",
+		"en": "Generic error in data recovery"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"INPS_001",
     "descrizione": {
 		"it": "DURC regolare in corso di validità assente",

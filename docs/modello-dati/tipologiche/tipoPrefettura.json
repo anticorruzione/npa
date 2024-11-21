@@ -1,1033 +1,1022 @@
-[{
-  "_id": {
-    "$binary": {
-      "base64": "DaJz70ZFSren6X6QuqHlPg==",
-      "subType": "04"
-    }
+[
+  {
+    "codice": "IT-AG",
+    "descrizione": {
+      "it": "Provincia di Agrigento",
+      "en": "Province of Agrigento",
+      "de": "Provinz von Agrigent"
+    },
+    "dataInizio": null,
+    "dataFine": null
   },
-  "idTipologica": "tipoPrefettura",
-  "descrizione": "tipoPrefettura",
-  "elenco": [
-    {
-      "codice": "IT-AG",
-      "descrizione": {
-        "it": "Provincia di Agrigento",
-        "en": "Province of Agrigento",
-        "de": "Provinz von Agrigent"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AL",
-      "descrizione": {
-        "it": "Provincia di Alessandria",
-        "en": "Province of Alexandria",
-        "de": "Provinz von Alexandria"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AN",
-      "descrizione": {
-        "it": "Provincia di Ancona",
-        "en": "Province of Ancona",
-        "de": "Provinz von Ancona"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AO",
-      "descrizione": {
-        "it": "Provincia di Aosta",
-        "en": "Province of Aosta",
-        "de": "Provinz von Aosta"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AR",
-      "descrizione": {
-        "it": "Provincia di Arezzo",
-        "en": "Province of Arezzo",
-        "de": "Provinz von Arezzo"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AP",
-      "descrizione": {
-        "it": "Provincia di Ascoli Piceno",
-        "en": "Province of Ascoli piceno",
-        "de": "Provinz von Ascoli piceno"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AT",
-      "descrizione": {
-        "it": "Provincia di Asti",
-        "en": "Province of Asti",
-        "de": "Provinz von Asti"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AV",
-      "descrizione": {
-        "it": "Provincia di Avellino",
-        "en": "Province of Avellino",
-        "de": "Provinz von Avellino"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BA",
-      "descrizione": {
-        "it": "Provincia di Bari",
-        "en": "Province of Bari",
-        "de": "Provinz von Bari"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BL",
-      "descrizione": {
-        "it": "Provincia di Belluno",
-        "en": "Province of Belluno",
-        "de": "Provinz von Belluno"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BN",
-      "descrizione": {
-        "it": "Provincia di Benevento",
-        "en": "Province of Benevento",
-        "de": "Provinz von Benevent"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BG",
-      "descrizione": {
-        "it": "Provincia di Bergamo",
-        "en": "Province of Bergamo",
-        "de": "Provinz von Bergamo"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BI",
-      "descrizione": {
-        "it": "Provincia di Biella",
-        "en": "Province of Biella",
-        "de": "Provinz von Biella"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BO",
-      "descrizione": {
-        "it": "Provincia di Bologna",
-        "en": "Province of Bologna",
-        "de": "Provinz von Bologna"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BZ",
-      "descrizione": {
-        "it": "Provincia di Bolzano",
-        "en": "Province of Bolzano",
-        "de": "Provinz von Bozen"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BS",
-      "descrizione": {
-        "it": "Provincia di Brescia",
-        "en": "Province of Brescia",
-        "de": "Provinz von Brescia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-BR",
-      "descrizione": {
-        "it": "Provincia di Brindisi",
-        "en": "Province of Toasts",
-        "de": "Provinz von Toasts"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CA",
-      "descrizione": {
-        "it": "Provincia di Cagliari",
-        "en": "Province of Cagliari",
-        "de": "Provinz von Cagliari"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CL",
-      "descrizione": {
-        "it": "Provincia di Caltanissetta",
-        "en": "Province of Caltanissetta",
-        "de": "Provinz von Caltanissetta"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CB",
-      "descrizione": {
-        "it": "Provincia di Campobasso",
-        "en": "Province of Campobasso",
-        "de": "Provinz von Campobasso"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CE",
-      "descrizione": {
-        "it": "Provincia di Caserta",
-        "en": "Province of Caserta",
-        "de": "Provinz von Caserta"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CT",
-      "descrizione": {
-        "it": "Provincia di Catania",
-        "en": "Province of Catania",
-        "de": "Provinz von Catania"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CZ",
-      "descrizione": {
-        "it": "Provincia di Catanzaro",
-        "en": "Province of Catanzaro",
-        "de": "Provinz von Catanzaro"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CH",
-      "descrizione": {
-        "it": "Provincia di Chieti",
-        "en": "Province of Chieti",
-        "de": "Provinz von Chieti"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CO",
-      "descrizione": {
-        "it": "Provincia di Como",
-        "en": "Province of How",
-        "de": "Provinz von Wie"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CS",
-      "descrizione": {
-        "it": "Provincia di Cosenza",
-        "en": "Province of Cosenza",
-        "de": "Provinz von Cosenza"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CR",
-      "descrizione": {
-        "it": "Provincia di Cremona",
-        "en": "Province of Cremona",
-        "de": "Provinz von Cremona"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-KR",
-      "descrizione": {
-        "it": "Provincia di Crotone",
-        "en": "Province of Crotone",
-        "de": "Provinz von Crotone"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-CN",
-      "descrizione": {
-        "it": "Provincia di Cuneo",
-        "en": "Province of Wedge",
-        "de": "Provinz von Keil"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-EN",
-      "descrizione": {
-        "it": "Provincia di Enna",
-        "en": "Province of Enna",
-        "de": "Provinz von Enna"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-FM",
-      "descrizione": {
-        "it": "Provincia di Fermo",
-        "en": "Province of Stopped",
-        "de": "Provinz von Gestoppt"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-FE",
-      "descrizione": {
-        "it": "Provincia di Ferrara",
-        "en": "Province of Ferrara",
-        "de": "Provinz von Ferrara"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-FI",
-      "descrizione": {
-        "it": "Provincia di Firenze",
-        "en": "Province of Florence",
-        "de": "Provinz von Florenz"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-FG",
-      "descrizione": {
-        "it": "Provincia di Foggia",
-        "en": "Province of Foggia",
-        "de": "Provinz von Foggia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-FR",
-      "descrizione": {
-        "it": "Provincia di Frosinone",
-        "en": "Province of Frosinone",
-        "de": "Provinz von Frosinon"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-GE",
-      "descrizione": {
-        "it": "Provincia di Genova",
-        "en": "Province of Genoa",
-        "de": "Provinz von Genua"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-GO",
-      "descrizione": {
-        "it": "Provincia di Gorizia",
-        "en": "Province of Gorizia",
-        "de": "Provinz von Görz"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-GR",
-      "descrizione": {
-        "it": "Provincia di Grosseto",
-        "en": "Province of Grosseto",
-        "de": "Provinz von Grosseto"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-IM",
-      "descrizione": {
-        "it": "Provincia di Imperia",
-        "en": "Province of Imperia",
-        "de": "Provinz von Imperia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-IS",
-      "descrizione": {
-        "it": "Provincia di Isernia",
-        "en": "Province of Isernia",
-        "de": "Provinz von Isernia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-AQ",
-      "descrizione": {
-        "it": "Provincia di L'Aquila",
-        "en": "Province of The eagle",
-        "de": "Provinz von Der adler"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-SP",
-      "descrizione": {
-        "it": "Provincia di La Spezia",
-        "en": "Province of Spice",
-        "de": "Provinz von Würzen"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-LT",
-      "descrizione": {
-        "it": "Provincia di Latina",
-        "en": "Province of Latin",
-        "de": "Provinz von Latein"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-LE",
-      "descrizione": {
-        "it": "Provincia di Lecce",
-        "en": "Province of Lecce",
-        "de": "Provinz von Lecce"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-LC",
-      "descrizione": {
-        "it": "Provincia di Lecco",
-        "en": "Province of Lecco",
-        "de": "Provinz von Lecco"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-LI",
-      "descrizione": {
-        "it": "Provincia di Livorno",
-        "en": "Province of Livorno",
-        "de": "Provinz von Livorno"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-LO",
-      "descrizione": {
-        "it": "Provincia di Lodi",
-        "en": "Province of Praises",
-        "de": "Provinz von Lob"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-LU",
-      "descrizione": {
-        "it": "Provincia di Lucca",
-        "en": "Province of Lucca",
-        "de": "Provinz von Lucca"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-MC",
-      "descrizione": {
-        "it": "Provincia di Macerata",
-        "en": "Province of Macerata",
-        "de": "Provinz von Macerata"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-MN",
-      "descrizione": {
-        "it": "Provincia di Mantova",
-        "en": "Province of Mantua",
-        "de": "Provinz von Mantua"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-MS",
-      "descrizione": {
-        "it": "Provincia di Massa-Carrara",
-        "en": "Province of Massa-carrara",
-        "de": "Provinz von Massa-carrara"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-MT",
-      "descrizione": {
-        "it": "Provincia di Matera",
-        "en": "Province of Matera",
-        "de": "Provinz von Matera"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-ME",
-      "descrizione": {
-        "it": "Provincia di Messina",
-        "en": "Province of Messina",
-        "de": "Provinz von Messina"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-MI",
-      "descrizione": {
-        "it": "Provincia di Milano",
-        "en": "Province of Milan",
-        "de": "Provinz von Mailand"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-MO",
-      "descrizione": {
-        "it": "Provincia di Modena",
-        "en": "Province of Modena",
-        "de": "Provinz von Modena"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-MB",
-      "descrizione": {
-        "it": "Provincia di Monza e Brianza",
-        "en": "Province of Monza and brianza",
-        "de": "Provinz von Monza und brianza"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-NA",
-      "descrizione": {
-        "it": "Provincia di Napoli",
-        "en": "Province of Naples",
-        "de": "Provinz von Neapel"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-NO",
-      "descrizione": {
-        "it": "Provincia di Novara",
-        "en": "Province of Novara",
-        "de": "Provinz von Novara"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-NU",
-      "descrizione": {
-        "it": "Provincia di Nuoro",
-        "en": "Province of Nuoro",
-        "de": "Provinz von Nuoro"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-OR",
-      "descrizione": {
-        "it": "Provincia di Oristano",
-        "en": "Province of Oristano",
-        "de": "Provinz von Oristano"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PD",
-      "descrizione": {
-        "it": "Provincia di Padova",
-        "en": "Province of Padua",
-        "de": "Provinz von Padua"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PA",
-      "descrizione": {
-        "it": "Provincia di Palermo",
-        "en": "Province of Palermo",
-        "de": "Provinz von Palermo"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PR",
-      "descrizione": {
-        "it": "Provincia di Parma",
-        "en": "Province of Parma",
-        "de": "Provinz von Parma"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PV",
-      "descrizione": {
-        "it": "Provincia di Pavia",
-        "en": "Province of Pavia",
-        "de": "Provinz von Pavia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PG",
-      "descrizione": {
-        "it": "Provincia di Perugia",
-        "en": "Province of Perugia",
-        "de": "Provinz von Perugia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PE",
-      "descrizione": {
-        "it": "Provincia di Pescara",
-        "en": "Province of Pescara",
-        "de": "Provinz von Pescara"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PC",
-      "descrizione": {
-        "it": "Provincia di Piacenza",
-        "en": "Province of Piacenza",
-        "de": "Provinz von Piacenza"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PI",
-      "descrizione": {
-        "it": "Provincia di Pisa",
-        "en": "Province of Pisa",
-        "de": "Provinz von Pisa"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PT",
-      "descrizione": {
-        "it": "Provincia di Pistoia",
-        "en": "Province of Pistoia",
-        "de": "Provinz von Pistoia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PN",
-      "descrizione": {
-        "it": "Provincia di Pordenone",
-        "en": "Province of Pordenone",
-        "de": "Provinz von Pordenone"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PZ",
-      "descrizione": {
-        "it": "Provincia di Potenza",
-        "en": "Province of Power",
-        "de": "Provinz von Leistung"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-PO",
-      "descrizione": {
-        "it": "Provincia di Prato",
-        "en": "Province of Lawn",
-        "de": "Provinz von Rasen"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RG",
-      "descrizione": {
-        "it": "Provincia di Ragusa",
-        "en": "Province of Ragusa",
-        "de": "Provinz von Ragusa"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RA",
-      "descrizione": {
-        "it": "Provincia di Ravenna",
-        "en": "Province of Ravenna",
-        "de": "Provinz von Ravenna"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RC",
-      "descrizione": {
-        "it": "Provincia di Reggio Calabria",
-        "en": "Province of Reggio calabria",
-        "de": "Provinz von Reggio kalabrien"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RE",
-      "descrizione": {
-        "it": "Provincia di Reggio Emilia",
-        "en": "Province of Reggio emilia",
-        "de": "Provinz von Reggio emilia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RI",
-      "descrizione": {
-        "it": "Provincia di Rieti",
-        "en": "Province of Rieti",
-        "de": "Provinz von Rieti"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RN",
-      "descrizione": {
-        "it": "Provincia di Rimini",
-        "en": "Province of Rimini",
-        "de": "Provinz von Rimini"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RM",
-      "descrizione": {
-        "it": "Provincia di Roma",
-        "en": "Province of Rome",
-        "de": "Provinz von Rom"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-RO",
-      "descrizione": {
-        "it": "Provincia di Rovigo",
-        "en": "Province of Rovigo",
-        "de": "Provinz von Rovigo"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-SA",
-      "descrizione": {
-        "it": "Provincia di Salerno",
-        "en": "Province of Salerno",
-        "de": "Provinz von Salerno"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-SS",
-      "descrizione": {
-        "it": "Provincia di Sassari",
-        "en": "Province of Sassari",
-        "de": "Provinz von Sassari"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-SV",
-      "descrizione": {
-        "it": "Provincia di Savona",
-        "en": "Province of Savona",
-        "de": "Provinz von Savona"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-SI",
-      "descrizione": {
-        "it": "Provincia di Siena",
-        "en": "Province of Siena",
-        "de": "Provinz von Siena"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-SR",
-      "descrizione": {
-        "it": "Provincia di Siracusa",
-        "en": "Province of Syracuse",
-        "de": "Provinz von Syrakus"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-SO",
-      "descrizione": {
-        "it": "Provincia di Sondrio",
-        "en": "Province of Sondrio",
-        "de": "Provinz von Sondrio"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TA",
-      "descrizione": {
-        "it": "Provincia di Taranto",
-        "en": "Province of Taranto",
-        "de": "Provinz von Tarent"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TE",
-      "descrizione": {
-        "it": "Provincia di Teramo",
-        "en": "Province of Teramo",
-        "de": "Provinz von Teramo"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TR",
-      "descrizione": {
-        "it": "Provincia di Terni",
-        "en": "Province of Terni",
-        "de": "Provinz von Terni"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TO",
-      "descrizione": {
-        "it": "Provincia di Torino",
-        "en": "Province of Turin",
-        "de": "Provinz von Turin"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TP",
-      "descrizione": {
-        "it": "Provincia di Trapani",
-        "en": "Province of Trapani",
-        "de": "Provinz von Trapani"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TN",
-      "descrizione": {
-        "it": "Provincia di Trento",
-        "en": "Province of Trent",
-        "de": "Provinz von Trent"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TV",
-      "descrizione": {
-        "it": "Provincia di Treviso",
-        "en": "Province of Treviso",
-        "de": "Provinz von Treviso"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-TS",
-      "descrizione": {
-        "it": "Provincia di Trieste",
-        "en": "Province of Trieste",
-        "de": "Provinz von Triest"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-UD",
-      "descrizione": {
-        "it": "Provincia di Udine",
-        "en": "Province of Udine",
-        "de": "Provinz von Udine"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-VA",
-      "descrizione": {
-        "it": "Provincia di Varese",
-        "en": "Province of Varese",
-        "de": "Provinz von Varese"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-VE",
-      "descrizione": {
-        "it": "Provincia di Venezia",
-        "en": "Province of Venice",
-        "de": "Provinz von Venedig"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-VC",
-      "descrizione": {
-        "it": "Provincia di Vercelli",
-        "en": "Province of Vercelli",
-        "de": "Provinz von Vercelli"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-VR",
-      "descrizione": {
-        "it": "Provincia di Verona",
-        "en": "Province of Verona",
-        "de": "Provinz von Verona"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-VV",
-      "descrizione": {
-        "it": "Provincia di Vibo Valentia",
-        "en": "Province of Vibo valentia",
-        "de": "Provinz von Vibo valentia"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-VI",
-      "descrizione": {
-        "it": "Provincia di Vicenza",
-        "en": "Province of Vicenza",
-        "de": "Provinz von Vicenza"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    },
-    {
-      "codice": "IT-VT",
-      "descrizione": {
-        "it": "Provincia di Viterbo",
-        "en": "Province of Viterbo",
-        "de": "Provinz von Viterbo"
-      },
-      "dataInizio": null,
-      "dataFine": null
-    }
-  ],
-  "_class": "it.anticorruzione.ms.npa.codelistsms.model.Tipologica"
-}]
+  {
+    "codice": "IT-AL",
+    "descrizione": {
+      "it": "Provincia di Alessandria",
+      "en": "Province of Alexandria",
+      "de": "Provinz von Alexandria"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-AN",
+    "descrizione": {
+      "it": "Provincia di Ancona",
+      "en": "Province of Ancona",
+      "de": "Provinz von Ancona"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-AO",
+    "descrizione": {
+      "it": "Provincia di Aosta",
+      "en": "Province of Aosta",
+      "de": "Provinz von Aosta"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-AR",
+    "descrizione": {
+      "it": "Provincia di Arezzo",
+      "en": "Province of Arezzo",
+      "de": "Provinz von Arezzo"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-AP",
+    "descrizione": {
+      "it": "Provincia di Ascoli Piceno",
+      "en": "Province of Ascoli piceno",
+      "de": "Provinz von Ascoli piceno"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-AT",
+    "descrizione": {
+      "it": "Provincia di Asti",
+      "en": "Province of Asti",
+      "de": "Provinz von Asti"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-AV",
+    "descrizione": {
+      "it": "Provincia di Avellino",
+      "en": "Province of Avellino",
+      "de": "Provinz von Avellino"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BA",
+    "descrizione": {
+      "it": "Provincia di Bari",
+      "en": "Province of Bari",
+      "de": "Provinz von Bari"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BL",
+    "descrizione": {
+      "it": "Provincia di Belluno",
+      "en": "Province of Belluno",
+      "de": "Provinz von Belluno"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BN",
+    "descrizione": {
+      "it": "Provincia di Benevento",
+      "en": "Province of Benevento",
+      "de": "Provinz von Benevent"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BG",
+    "descrizione": {
+      "it": "Provincia di Bergamo",
+      "en": "Province of Bergamo",
+      "de": "Provinz von Bergamo"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BI",
+    "descrizione": {
+      "it": "Provincia di Biella",
+      "en": "Province of Biella",
+      "de": "Provinz von Biella"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BO",
+    "descrizione": {
+      "it": "Provincia di Bologna",
+      "en": "Province of Bologna",
+      "de": "Provinz von Bologna"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BZ",
+    "descrizione": {
+      "it": "Provincia di Bolzano",
+      "en": "Province of Bolzano",
+      "de": "Provinz von Bozen"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BS",
+    "descrizione": {
+      "it": "Provincia di Brescia",
+      "en": "Province of Brescia",
+      "de": "Provinz von Brescia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-BR",
+    "descrizione": {
+      "it": "Provincia di Brindisi",
+      "en": "Province of Toasts",
+      "de": "Provinz von Toasts"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CA",
+    "descrizione": {
+      "it": "Provincia di Cagliari",
+      "en": "Province of Cagliari",
+      "de": "Provinz von Cagliari"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CL",
+    "descrizione": {
+      "it": "Provincia di Caltanissetta",
+      "en": "Province of Caltanissetta",
+      "de": "Provinz von Caltanissetta"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CB",
+    "descrizione": {
+      "it": "Provincia di Campobasso",
+      "en": "Province of Campobasso",
+      "de": "Provinz von Campobasso"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CE",
+    "descrizione": {
+      "it": "Provincia di Caserta",
+      "en": "Province of Caserta",
+      "de": "Provinz von Caserta"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CT",
+    "descrizione": {
+      "it": "Provincia di Catania",
+      "en": "Province of Catania",
+      "de": "Provinz von Catania"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CZ",
+    "descrizione": {
+      "it": "Provincia di Catanzaro",
+      "en": "Province of Catanzaro",
+      "de": "Provinz von Catanzaro"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CH",
+    "descrizione": {
+      "it": "Provincia di Chieti",
+      "en": "Province of Chieti",
+      "de": "Provinz von Chieti"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CO",
+    "descrizione": {
+      "it": "Provincia di Como",
+      "en": "Province of How",
+      "de": "Provinz von Wie"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CS",
+    "descrizione": {
+      "it": "Provincia di Cosenza",
+      "en": "Province of Cosenza",
+      "de": "Provinz von Cosenza"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CR",
+    "descrizione": {
+      "it": "Provincia di Cremona",
+      "en": "Province of Cremona",
+      "de": "Provinz von Cremona"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-KR",
+    "descrizione": {
+      "it": "Provincia di Crotone",
+      "en": "Province of Crotone",
+      "de": "Provinz von Crotone"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-CN",
+    "descrizione": {
+      "it": "Provincia di Cuneo",
+      "en": "Province of Wedge",
+      "de": "Provinz von Keil"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-EN",
+    "descrizione": {
+      "it": "Provincia di Enna",
+      "en": "Province of Enna",
+      "de": "Provinz von Enna"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-FM",
+    "descrizione": {
+      "it": "Provincia di Fermo",
+      "en": "Province of Stopped",
+      "de": "Provinz von Gestoppt"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-FE",
+    "descrizione": {
+      "it": "Provincia di Ferrara",
+      "en": "Province of Ferrara",
+      "de": "Provinz von Ferrara"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-FI",
+    "descrizione": {
+      "it": "Provincia di Firenze",
+      "en": "Province of Florence",
+      "de": "Provinz von Florenz"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-FG",
+    "descrizione": {
+      "it": "Provincia di Foggia",
+      "en": "Province of Foggia",
+      "de": "Provinz von Foggia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-FR",
+    "descrizione": {
+      "it": "Provincia di Frosinone",
+      "en": "Province of Frosinone",
+      "de": "Provinz von Frosinon"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-GE",
+    "descrizione": {
+      "it": "Provincia di Genova",
+      "en": "Province of Genoa",
+      "de": "Provinz von Genua"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-GO",
+    "descrizione": {
+      "it": "Provincia di Gorizia",
+      "en": "Province of Gorizia",
+      "de": "Provinz von Görz"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-GR",
+    "descrizione": {
+      "it": "Provincia di Grosseto",
+      "en": "Province of Grosseto",
+      "de": "Provinz von Grosseto"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-IM",
+    "descrizione": {
+      "it": "Provincia di Imperia",
+      "en": "Province of Imperia",
+      "de": "Provinz von Imperia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-IS",
+    "descrizione": {
+      "it": "Provincia di Isernia",
+      "en": "Province of Isernia",
+      "de": "Provinz von Isernia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-AQ",
+    "descrizione": {
+      "it": "Provincia di L'Aquila",
+      "en": "Province of The eagle",
+      "de": "Provinz von Der adler"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-SP",
+    "descrizione": {
+      "it": "Provincia di La Spezia",
+      "en": "Province of Spice",
+      "de": "Provinz von Würzen"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-LT",
+    "descrizione": {
+      "it": "Provincia di Latina",
+      "en": "Province of Latin",
+      "de": "Provinz von Latein"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-LE",
+    "descrizione": {
+      "it": "Provincia di Lecce",
+      "en": "Province of Lecce",
+      "de": "Provinz von Lecce"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-LC",
+    "descrizione": {
+      "it": "Provincia di Lecco",
+      "en": "Province of Lecco",
+      "de": "Provinz von Lecco"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-LI",
+    "descrizione": {
+      "it": "Provincia di Livorno",
+      "en": "Province of Livorno",
+      "de": "Provinz von Livorno"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-LO",
+    "descrizione": {
+      "it": "Provincia di Lodi",
+      "en": "Province of Praises",
+      "de": "Provinz von Lob"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-LU",
+    "descrizione": {
+      "it": "Provincia di Lucca",
+      "en": "Province of Lucca",
+      "de": "Provinz von Lucca"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-MC",
+    "descrizione": {
+      "it": "Provincia di Macerata",
+      "en": "Province of Macerata",
+      "de": "Provinz von Macerata"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-MN",
+    "descrizione": {
+      "it": "Provincia di Mantova",
+      "en": "Province of Mantua",
+      "de": "Provinz von Mantua"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-MS",
+    "descrizione": {
+      "it": "Provincia di Massa-Carrara",
+      "en": "Province of Massa-carrara",
+      "de": "Provinz von Massa-carrara"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-MT",
+    "descrizione": {
+      "it": "Provincia di Matera",
+      "en": "Province of Matera",
+      "de": "Provinz von Matera"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-ME",
+    "descrizione": {
+      "it": "Provincia di Messina",
+      "en": "Province of Messina",
+      "de": "Provinz von Messina"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-MI",
+    "descrizione": {
+      "it": "Provincia di Milano",
+      "en": "Province of Milan",
+      "de": "Provinz von Mailand"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-MO",
+    "descrizione": {
+      "it": "Provincia di Modena",
+      "en": "Province of Modena",
+      "de": "Provinz von Modena"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-MB",
+    "descrizione": {
+      "it": "Provincia di Monza e Brianza",
+      "en": "Province of Monza and brianza",
+      "de": "Provinz von Monza und brianza"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-NA",
+    "descrizione": {
+      "it": "Provincia di Napoli",
+      "en": "Province of Naples",
+      "de": "Provinz von Neapel"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-NO",
+    "descrizione": {
+      "it": "Provincia di Novara",
+      "en": "Province of Novara",
+      "de": "Provinz von Novara"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-NU",
+    "descrizione": {
+      "it": "Provincia di Nuoro",
+      "en": "Province of Nuoro",
+      "de": "Provinz von Nuoro"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-OR",
+    "descrizione": {
+      "it": "Provincia di Oristano",
+      "en": "Province of Oristano",
+      "de": "Provinz von Oristano"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PD",
+    "descrizione": {
+      "it": "Provincia di Padova",
+      "en": "Province of Padua",
+      "de": "Provinz von Padua"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PA",
+    "descrizione": {
+      "it": "Provincia di Palermo",
+      "en": "Province of Palermo",
+      "de": "Provinz von Palermo"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PR",
+    "descrizione": {
+      "it": "Provincia di Parma",
+      "en": "Province of Parma",
+      "de": "Provinz von Parma"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PV",
+    "descrizione": {
+      "it": "Provincia di Pavia",
+      "en": "Province of Pavia",
+      "de": "Provinz von Pavia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PG",
+    "descrizione": {
+      "it": "Provincia di Perugia",
+      "en": "Province of Perugia",
+      "de": "Provinz von Perugia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PE",
+    "descrizione": {
+      "it": "Provincia di Pescara",
+      "en": "Province of Pescara",
+      "de": "Provinz von Pescara"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PC",
+    "descrizione": {
+      "it": "Provincia di Piacenza",
+      "en": "Province of Piacenza",
+      "de": "Provinz von Piacenza"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PI",
+    "descrizione": {
+      "it": "Provincia di Pisa",
+      "en": "Province of Pisa",
+      "de": "Provinz von Pisa"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PT",
+    "descrizione": {
+      "it": "Provincia di Pistoia",
+      "en": "Province of Pistoia",
+      "de": "Provinz von Pistoia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PN",
+    "descrizione": {
+      "it": "Provincia di Pordenone",
+      "en": "Province of Pordenone",
+      "de": "Provinz von Pordenone"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PZ",
+    "descrizione": {
+      "it": "Provincia di Potenza",
+      "en": "Province of Power",
+      "de": "Provinz von Leistung"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-PO",
+    "descrizione": {
+      "it": "Provincia di Prato",
+      "en": "Province of Lawn",
+      "de": "Provinz von Rasen"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RG",
+    "descrizione": {
+      "it": "Provincia di Ragusa",
+      "en": "Province of Ragusa",
+      "de": "Provinz von Ragusa"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RA",
+    "descrizione": {
+      "it": "Provincia di Ravenna",
+      "en": "Province of Ravenna",
+      "de": "Provinz von Ravenna"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RC",
+    "descrizione": {
+      "it": "Provincia di Reggio Calabria",
+      "en": "Province of Reggio calabria",
+      "de": "Provinz von Reggio kalabrien"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RE",
+    "descrizione": {
+      "it": "Provincia di Reggio Emilia",
+      "en": "Province of Reggio emilia",
+      "de": "Provinz von Reggio emilia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RI",
+    "descrizione": {
+      "it": "Provincia di Rieti",
+      "en": "Province of Rieti",
+      "de": "Provinz von Rieti"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RN",
+    "descrizione": {
+      "it": "Provincia di Rimini",
+      "en": "Province of Rimini",
+      "de": "Provinz von Rimini"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RM",
+    "descrizione": {
+      "it": "Provincia di Roma",
+      "en": "Province of Rome",
+      "de": "Provinz von Rom"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-RO",
+    "descrizione": {
+      "it": "Provincia di Rovigo",
+      "en": "Province of Rovigo",
+      "de": "Provinz von Rovigo"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-SA",
+    "descrizione": {
+      "it": "Provincia di Salerno",
+      "en": "Province of Salerno",
+      "de": "Provinz von Salerno"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-SS",
+    "descrizione": {
+      "it": "Provincia di Sassari",
+      "en": "Province of Sassari",
+      "de": "Provinz von Sassari"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-SV",
+    "descrizione": {
+      "it": "Provincia di Savona",
+      "en": "Province of Savona",
+      "de": "Provinz von Savona"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-SI",
+    "descrizione": {
+      "it": "Provincia di Siena",
+      "en": "Province of Siena",
+      "de": "Provinz von Siena"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-SR",
+    "descrizione": {
+      "it": "Provincia di Siracusa",
+      "en": "Province of Syracuse",
+      "de": "Provinz von Syrakus"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-SO",
+    "descrizione": {
+      "it": "Provincia di Sondrio",
+      "en": "Province of Sondrio",
+      "de": "Provinz von Sondrio"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TA",
+    "descrizione": {
+      "it": "Provincia di Taranto",
+      "en": "Province of Taranto",
+      "de": "Provinz von Tarent"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TE",
+    "descrizione": {
+      "it": "Provincia di Teramo",
+      "en": "Province of Teramo",
+      "de": "Provinz von Teramo"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TR",
+    "descrizione": {
+      "it": "Provincia di Terni",
+      "en": "Province of Terni",
+      "de": "Provinz von Terni"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TO",
+    "descrizione": {
+      "it": "Provincia di Torino",
+      "en": "Province of Turin",
+      "de": "Provinz von Turin"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TP",
+    "descrizione": {
+      "it": "Provincia di Trapani",
+      "en": "Province of Trapani",
+      "de": "Provinz von Trapani"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TN",
+    "descrizione": {
+      "it": "Provincia di Trento",
+      "en": "Province of Trent",
+      "de": "Provinz von Trent"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TV",
+    "descrizione": {
+      "it": "Provincia di Treviso",
+      "en": "Province of Treviso",
+      "de": "Provinz von Treviso"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-TS",
+    "descrizione": {
+      "it": "Provincia di Trieste",
+      "en": "Province of Trieste",
+      "de": "Provinz von Triest"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-UD",
+    "descrizione": {
+      "it": "Provincia di Udine",
+      "en": "Province of Udine",
+      "de": "Provinz von Udine"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-VA",
+    "descrizione": {
+      "it": "Provincia di Varese",
+      "en": "Province of Varese",
+      "de": "Provinz von Varese"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-VE",
+    "descrizione": {
+      "it": "Provincia di Venezia",
+      "en": "Province of Venice",
+      "de": "Provinz von Venedig"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-VC",
+    "descrizione": {
+      "it": "Provincia di Vercelli",
+      "en": "Province of Vercelli",
+      "de": "Provinz von Vercelli"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-VR",
+    "descrizione": {
+      "it": "Provincia di Verona",
+      "en": "Province of Verona",
+      "de": "Provinz von Verona"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-VV",
+    "descrizione": {
+      "it": "Provincia di Vibo Valentia",
+      "en": "Province of Vibo valentia",
+      "de": "Provinz von Vibo valentia"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-VI",
+    "descrizione": {
+      "it": "Provincia di Vicenza",
+      "en": "Province of Vicenza",
+      "de": "Provinz von Vicenza"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "IT-VT",
+    "descrizione": {
+      "it": "Provincia di Viterbo",
+      "en": "Province of Viterbo",
+      "de": "Provinz von Viterbo"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  }
+]

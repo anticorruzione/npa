@@ -31,11 +31,11 @@
     "dataInizio":null,
     "dataFine":null
 },{
-  "codice": "05",
-  "descrizione": {
-       "it": "Scaduta",
-       "en": "Scaduta"
-     },
-   "dataInizio":null,
-   "dataFine":null
+   "codice": "05",
+   "descrizione": {
+        "it": "Scaduta",
+        "en": "Scaduta"
+      },
+    "dataInizio":null,
+    "dataFine":null
 }]

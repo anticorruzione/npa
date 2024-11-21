@@ -22,13 +22,13 @@
       "dataInizio": null,
       "dataFine": null
 },{
-  "codice": "00008",
-  "descrizione": {
-    "it": "Durc in corso di Validita",
-    "en": "Durc in corso di Validita"
-  },
-  "dataInizio": null,
-  "dataFine": null
+      "codice": "00008",
+      "descrizione": {
+        "it": "Durc in corso di Validita",
+        "en": "Durc in corso di Validita"
+      },
+      "dataInizio": null,
+      "dataFine": null
 },{
       "codice": "00021",
       "descrizione": {
@@ -47,21 +47,21 @@
       "dataInizio": null,
       "dataFine": null
 },{
-  "codice":"00010",
-  "descrizione": {
-    "it": "Verifica esistenza prospetto informativo disabili",
-    "en": "Verifica esistenza prospetto informativo disabili"
-},
-  "dataInizio":null,
-  "dataFine":null
+      "codice":"00010",
+      "descrizione": {
+        "it": "Verifica esistenza prospetto informativo disabili",
+        "en": "Verifica esistenza prospetto informativo disabili"
+    },
+      "dataInizio":null,
+      "dataFine":null
 },{
-  "codice":"00011",
-  "descrizione": {
-    "it": "Verifica esistenza rapporto parità di genere",
-    "en": "Verifica esistenza rapporto parità di genere"
-},
-  "dataInizio":null,
-  "dataFine":null
+      "codice":"00011",
+      "descrizione": {
+        "it": "Verifica esistenza rapporto parità di genere",
+        "en": "Verifica esistenza rapporto parità di genere"
+    },
+      "dataInizio":null,
+      "dataFine":null
 },{
       "codice": "00024",
       "descrizione": {
@@ -143,13 +143,13 @@
       "dataInizio": null,
       "dataFine": null     
 },{
-  "codice": "00042",
-  "descrizione": {
-    "it": "Carichi fiscali pendenti",
-    "en": "Carichi fiscali pendenti"
-  },
-  "dataInizio": null,
-  "dataFine": null
+      "codice": "00042",
+      "descrizione": {
+        "it": "Carichi fiscali pendenti",
+        "en": "Carichi fiscali pendenti"
+      },
+      "dataInizio": null,
+      "dataFine": null
 },{
       "codice": "00899",
       "descrizione": {

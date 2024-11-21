@@ -106,7 +106,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_1cl23sc">
+      <rule id="DecisionRule_1cl23sc">
         <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
         <inputEntry id="UnaryTests_15v9bsf">
           <text></text>
@@ -128,7 +128,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.i
           <text>some lotto in lotti
 satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.importo &gt; 431000) and lotto.derogaQualificazione.codice = "2")
 </text>
-</inputEntry>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0kr5jcc">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG119\"}"</text>
         </outputEntry>

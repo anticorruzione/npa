@@ -31,7 +31,7 @@
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG111\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_04l90t6">
+      <rule id="DecisionRule_04l90t6">
         <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
         <inputEntry id="UnaryTests_0zff2e4">
           <text>appalto.datiBase.importo = null or appalto.datiBase.importo &lt;= 0</text>
