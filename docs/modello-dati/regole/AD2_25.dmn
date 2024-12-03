@@ -162,18 +162,6 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipant
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_12qppxd">
-        <description>REG68_1: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
-        <inputEntry id="UnaryTests_19euog8">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta = null or count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&lt;0 or (every giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice = ""))</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01x9ia3">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1t6zjiq">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68_1\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0mm265n">
         <description>REG78: Indicare almeno un partecipante</description>
         <inputEntry id="UnaryTests_0x1mh3u">

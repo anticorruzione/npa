@@ -72,18 +72,6 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in agg
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1nfrkp2">
-        <description>REG68_1: il campo giustificazione aggiudicazione diretta è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
-        <inputEntry id="UnaryTests_1b5f0oo">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta = null or count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&lt;0 or (every giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice = ""))</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1htkza5">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0zdbh0h">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG68_1\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0cdguu5">
         <description>REG112: La lista delle aggiudicazioni deve contenere almeno un elemento.</description>
         <inputEntry id="UnaryTests_04ssljq">
