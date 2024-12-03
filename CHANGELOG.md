@@ -1095,6 +1095,14 @@ errori.json: Aggiunto errore REG68_1
 ### Segnalazioni
 * ticket 61371:
   * fix estrazione dati REG68_1
+  
+  
+# Note di rilascio del 22/11/2024 (In Esercizio)
+
+## Modello Dati
+  
+### Segnalazioni
+  * AD1*.dmn, AD2*.dmn,A1_29.dmn,A1_30.dmn,A1_31.dmn,A1_32.dmn,A1_33.dmn,A1_34.dmn,A1_35.dmn,A2_29.dmn,A2_30.dmn,A2_31.dmn,A2_32.dmn,A2_33.dmn,A2_34.dmn,A2_35.dmn: eliminata la REG68_1
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
