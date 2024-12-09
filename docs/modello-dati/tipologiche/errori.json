@@ -1106,6 +1106,33 @@
     "dataFine":null
 },
 {
+    "codice":"ERR124",
+    "descrizione": {
+		"it": "codiceFiscaleSA non presente nella lista delle stazioni appaltanti della scheda di indizione",
+		"en": "codiceFiscaleSA non presente nella lista delle stazioni appaltanti della scheda di indizione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR125",
+    "descrizione": {
+		"it": "L'oggetto indicato in appalto.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l'oggetto inserito nel campo Description (BT-24).",
+		"en": "L'oggetto indicato in appalto.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l'oggetto inserito nel campo Description (BT-24)."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ERR126",
+    "descrizione": {
+		"it": "L'oggetto indicato in lotti.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l'oggetto inserito nel campo Description (BT-24).",
+		"en": "L'oggetto indicato in lotti.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l'oggetto inserito nel campo Description (BT-24)."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
