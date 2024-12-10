@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_S2R" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+  <decision id="S2R" name="S2R">
+    <informationRequirement id="InformationRequirement_1n1x762">
+      <requiredInput href="#InputData_1d4qmvk" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_S2R" hitPolicy="COLLECT">
+      <input id="InputClause_1j0zzmu" biodi:width="374">
+        <inputExpression id="LiteralExpression_0foo7nh" typeRef="string">
+          <text>elencoSoggetti</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_08garo8" name="Errore" typeRef="string" biodi:width="457" />
+      <rule id="DecisionRule_1xdwudw">
+        <description></description>
+        <inputEntry id="UnaryTests_133pqj2">
+          <text>some soggetto in elencoSoggetti
+satisfies soggetto.partecipanti = null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f0gjxc">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG0\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mvk2tl">
+        <description>REG78: Indicare almeno un partecipante</description>
+        <inputEntry id="UnaryTests_1bv5g6g">
+          <text>some soggetto in elencoSoggetti
+satisfies count(soggetto.partecipanti)=0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19x68wf">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG78\"}"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1d4qmvk" name="elencoSoggetti" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
+      <dmndi:DMNShape id="DMNShape_1l1r0un" dmnElementRef="S2R">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0cdl2dt" dmnElementRef="InputData_1d4qmvk">
+        <dc:Bounds height="45" width="125" x="187" y="267" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0ho5134" dmnElementRef="InformationRequirement_1n1x762">
+        <di:waypoint x="250" y="267" />
+        <di:waypoint x="250" y="180" />
+        <di:waypoint x="250" y="160" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

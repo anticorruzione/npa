@@ -1109,7 +1109,64 @@ errori.json: Aggiunto errore REG68_1
 * ticket 57597:
 	* errori.json: inserito nuovo messaggio di errore ERR124
 * ticket 60734:
-	* errori.json: inseriti nuovi messaggii di errore ERR125, ERR126
+	* errori.json: inseriti nuovi messaggi di errore ERR125, ERR126
+
+
+<summary><h1>Note di rilascio del 10/12/2024 (Changelog-04)</h1></summary>
+
+**NOTA**
+* Pubblicazione contenuti su GitHub: 10/12/2024
+* Rilascio in Qualificazione: 17/01/2025
+* Rilascio in Esercizio: 17/02/2025
+  
+**la nota di rilascio potrà essere integrata successivamente**
+    
+### Modello Dati 
+* modello-dati-npa.yaml:
+  * aggiunta nuova scheda S2R
+  
+### Schede 
+* modello-dati-schede-A7.1.2.yaml:
+	* oggetto AggiudicazioneA7Type: deprecati i campi: acquisizioneCup, afferenteInvestimentiPNRR, cupLotto, paritaDiGenereGenerazionale, partecipanti, finanziamenti, datiBaseAccessibilita
+	* oggetto AggiudicazioneA7Type: aggiunti i campi: valore soglia anomalia, offerte Presentate, numero offerte ammesse, esitoProceduraAnnullata, datiBaseRisultatoProcedura, datiBaseSottomissioniRicevute
+* modello-dati-schede-dati-comuni.yaml: 
+	* oggetto AggiudicazioneA7Type: deprecati i campi: acquisizioneCup, afferenteInvestimentiPNRR, cupLotto, paritaDiGenereGenerazionale, partecipanti, finanziamenti, datiBaseAccessibilita
+	* oggetto AggiudicazioneA7Type: aggiunti i campi: valore soglia anomalia, offerte Presentate, numero offerte ammesse, esitoProceduraAnnullata, datiBaseRisultatoProcedura, datiBaseSottomissioniRicevute
+ 	* aggiunto l'oggetto MotivoRichiestaRettificaEnum
+* modello-dati-schede-S2R.yaml:
+	* nuova scheda di rettifica della scheda S2
+
+### Tipologiche
+* errori.json:
+	* aggiornata la descrizione della REG100 e della REG18
+ 	* aggiunti gli errori REG19 e REG20_1
+* motivoRichiestaRettifica.json: nuova tipologica per la scheda S2R
+* giustificazioniAggiudicazioneDiretta.json: aggiornata alla versione ted sdk 1.12
+	* modificate le label su below-thres-sme, int-oper, tra-ser
+ 	* aggiunte occorrenze char-imp, exc-circ-rail, sim-infra
+  	* rimossa occorrenza rail
+* tipoProcedura.json: aggiornata alla versione ted sdk 1.12
+	* modificate le label su comp-tend
+ 	* aggiunta occorrenzea exp-int-rail
+* codiceScheda.json: 
+  * aggiunta la nuova scheda S2R.
+
+## Orchestratore
+* Nella riga relativa alla scheda SC1, nella colonna ‘scheda successiva’, eliminata la scheda SA1.
+* Modificata la riga della scheda S2: aggiunta la S2R come possibile scheda successiva
+* Aggiunte le informazioni sulla nuova scheda S2R
+  
+### Regole
+* AD3.dmn, AD*_25.dmn, AD*_26.dmn, AD*_27.dmn: 
+	* aggiornata la REG100 per consentire più partecipanti in caso di accordo quadro.
+* A7.1.1.dmn, A7.1.2.dmn: 
+	* aggiunte le regole REG47, REG50, REG51, REG52
+* S2R.dmn: aggiunte regole per la nuova scheda S2R
+* P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P1_23.dmn,P1_24.dmn,P2_10.dmn,P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P2_23.dmn,P2_24.dmn,P3_1.dmn,P3_2.dmn,P3_3.dmn,P3_4.dmn,P3_5.dmn,P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn,P6_1.dmn,P6_2.dmn:
+	* aggiornata la REG18
+ 	* aggiunte le REG19 e REG20_1
+
+
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.

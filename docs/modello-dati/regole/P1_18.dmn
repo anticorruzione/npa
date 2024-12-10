@@ -80,9 +80,9 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_18_0038">
-        <description>REG67: il campo giustificazione procedura accelerata è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara</description>
+        <description>REG67: il campo giustificazione procedura accelerata è obbligatorio in caso di procedura accelerata</description>
         <inputEntry id="UnaryTests_P1_18_0115">
-          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call" and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
+          <text>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.proceduraAccelerata != null and appalto.datiBaseProcedura.proceduraAccelerata and (appalto.datiBaseProcedura.giustificazioneProceduraAccelerata = null or appalto.datiBaseProcedura.giustificazioneProceduraAccelerata="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_18_0116">
           <text></text>

@@ -175,15 +175,15 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG78\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0bemo05">
-        <description>REG100: Negli affidamenti diretti è consentito inserire un solo idPartecipante</description>
-        <inputEntry id="UnaryTests_1tsk3x5">
-          <text></text>
+      <rule id="DecisionRule_0fvhxpk">
+        <description>REG100: Negli affidamenti diretti è consentito inserire un solo idPartecipante, se non è un accordo quadro</description>
+        <inputEntry id="UnaryTests_1129krn">
+          <text>(is defined(appalto.datiBaseStrumentiProcedura)=false or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false or appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none")</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_00a35i5">
-          <text>some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1</text>
+        <inputEntry id="UnaryTests_0r9y1do">
+          <text>(some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1)</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0nqpumt">
+        <outputEntry id="LiteralExpression_138j2gg">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG100\"}"</text>
         </outputEntry>
       </rule>

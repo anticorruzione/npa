@@ -139,6 +139,7 @@ components:
             oneOf:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S1.yaml#/components/schemas/SchedaS1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S2.yaml#/components/schemas/SchedaS2Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S2R.yaml#/components/schemas/SchedaS2RType'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S3.yaml#/components/schemas/SchedaS3Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S4.yaml#/components/schemas/SchedaS4Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-A1.29.yaml#/components/schemas/SchedaA1_29Type'

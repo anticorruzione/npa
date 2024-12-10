@@ -222,4 +222,12 @@
   },
   "dataInizio": null,
   "dataFine": null
+},{
+  "codice": "00007",
+  "descrizione": {
+    "it": "Iscrizione WhiteList antimafia",
+    "en": "Iscrizione WhiteList antimafia"
+  },
+  "dataInizio": null,
+  "dataFine": null
 }]

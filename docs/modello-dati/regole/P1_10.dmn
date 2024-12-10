@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_10" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.6.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_10" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_appalto_P1_10" name="appalto" />
   <inputData id="InputData_lotti_P1_10" name="lotti" />
   <inputData id="InputData_stazioniAppaltanti_P1_10" name="stazioniAppaltanti" />
@@ -268,19 +268,33 @@ and count(lotto.ipotesiCollegamento.cigCollegato) &lt;2</text>
       </rule>
       <rule id="DecisionRule_P1_10_0023">
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
-’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
         <inputEntry id="UnaryTests_P1_10_0070">
-          <text></text>
+          <text>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_10_0071">
-          <text>some lotto in lotti
-satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false)</text>
+          <text>(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_10_0072">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_10_0024">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f56n37">
+        <description>REG19: E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</description>
+        <inputEntry id="UnaryTests_1y1vjoo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v70dsi">
+          <text>some lotto in lotti satisfies is defined(lotto.acquisizioneCup) and lotto.acquisizioneCup and (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mvtb72">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oynbpe">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG19\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_10_0024">
@@ -300,6 +314,22 @@ satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lo
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_10_0025">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05j4hmh">
+        <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
+        <inputEntry id="UnaryTests_07hyco2">
+          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m3r99y">
+          <text>(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) &gt; 0)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nmtheh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dqbw1b">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_10_0025">
@@ -398,22 +428,6 @@ satisfies lotto.paritaDiGenereGenerazionale != null and lotto.afferenteInvestime
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_10_0031">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG28\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P1_10_0031">
-        <description>REG29: Modalità Acquisizione: il campo è obbligatorio se l'oggetto del contratto è 'Servizi' o 'Forniture'.</description>
-        <inputEntry id="UnaryTests_P1_10_0094">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_10_0095">
-          <text>some lotto in lotti
-satisfies (lotto.datiBase.oggettoContratto.codice = "services" or lotto.datiBase.oggettoContratto.codice = "supplies") and (lotto.modalitaAcquisizione = null or lotto.modalitaAcquisizione = "" or lotto.modalitaAcquisizione.codice = null or lotto.modalitaAcquisizione.codice = "")</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_10_0096">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_10_0032">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG29\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_10_0032">
@@ -685,7 +699,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "works" or lotto.datiBase.
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1d2nfsz">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG120\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG120\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1616upz">
@@ -701,7 +715,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t4rh9t">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG121\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG121\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0c7kgeb">
@@ -717,7 +731,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0i646y9">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

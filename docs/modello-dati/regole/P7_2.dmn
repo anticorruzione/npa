@@ -143,7 +143,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.i
 satisfies ((lotto.datiBase.oggettoContratto.codice != "works" or lotto.datiBase.importo &gt; 1000000) and lotto.derogaQualificazione.codice = "3")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1d2nfsz">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG120\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG120\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1616upz">
@@ -156,7 +156,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "works" or lotto.datiBase.
 satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo &gt; 750000) and lotto.derogaQualificazione.codice = "4")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t4rh9t">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG121\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG121\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0c7kgeb">
@@ -169,7 +169,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
 satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo &gt; 1000000) and lotto.derogaQualificazione.codice = "5")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0i646y9">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

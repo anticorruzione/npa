@@ -83,42 +83,73 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P2_24_0023">
+            <rule id="DecisionRule_P1_10_0023">
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
-’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
-        <inputEntry id="UnaryTests_P2_24_0070">
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
+        <inputEntry id="UnaryTests_P1_10_0070">
+          <text>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P1_10_0071">
+          <text>(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_P1_10_0072">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_P2_24_0071">
-          <text>some lotto in lotti
-satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false)</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P2_24_0072">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P2_24_0024">
+        <outputEntry id="LiteralExpression_P1_10_0024">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P2_24_0024">
+      <rule id="DecisionRule_0f56n37">
+        <description>REG19: E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</description>
+        <inputEntry id="UnaryTests_1y1vjoo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v70dsi">
+          <text>some lotto in lotti satisfies is defined(lotto.acquisizioneCup) and lotto.acquisizioneCup and (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mvtb72">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oynbpe">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG19\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_P1_10_0024">
         <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
 - lotto.acquisizionecup=’N’ e oggettoContratto="services" o ‘supplies’
 - lotto.acquisizionecup=’N’ e oggettoContratto="works" e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
 E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
-        <inputEntry id="UnaryTests_P2_24_0073">
+        <inputEntry id="UnaryTests_P1_10_0073">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_P2_24_0074">
+        <inputEntry id="UnaryTests_P1_10_0074">
           <text>some lotto in lotti
 satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_P2_24_0075">
+        <inputEntry id="UnaryTests_P1_10_0075">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_P2_24_0025">
+        <outputEntry id="LiteralExpression_P1_10_0025">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_05j4hmh">
+        <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
+        <inputEntry id="UnaryTests_07hyco2">
+          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m3r99y">
+          <text>(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) &gt; 0)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nmtheh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dqbw1b">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
+        </outputEntry>
+      </rule>
+
       <rule id="DecisionRule_P2_24_0033">
         <description>REG32: Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</description>
         <inputEntry id="UnaryTests_P2_24_0100">

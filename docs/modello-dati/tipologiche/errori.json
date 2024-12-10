@@ -1342,8 +1342,17 @@
 {
     "codice":"REG18",
     "descrizione": {
-		"it": "E’ obbligatorio valorizzare a SI il campo acquisizioneCup se il campo afferenteInvestimentiPNRR è valorizzato a SI",
-		"en": "E’ obbligatorio valorizzare a SI il campo acquisizioneCup se il campo afferenteInvestimentiPNRR è valorizzato a SI"
+		"it": "E’ obbligatorio valorizzare a SI il campo acquisizioneCup se il campo afferenteInvestimentiPNRR è valorizzato a SI e l'appalto non è di tipo Accordo Quadro/convenzione",
+		"en": "E’ obbligatorio valorizzare a SI il campo acquisizioneCup se il campo afferenteInvestimentiPNRR è valorizzato a SI e l'appalto non è di tipo Accordo Quadro/convenzione"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG19",
+    "descrizione": {
+		"it": "E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI",
+		"en": "E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1353,6 +1362,15 @@
     "descrizione": {
 		"it": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria",
 		"en": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG20_1",
+    "descrizione": {
+		"it": "Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione",
+		"en": "Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1702,8 +1720,8 @@
 {
     "codice":"REG67",
     "descrizione": {
-		"it": "il campo giustificazione procedura accelerata è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara",
-		"en": "il campo giustificazione procedura accelerata è obbligatorio se il tipo di procedura è Negoziata senza previa indizione di gara"
+		"it": "il campo giustificazione procedura accelerata è obbligatorio se la procedura è accelerata.",
+		"en": "il campo giustificazione procedura accelerata è obbligatorio se la procedura è accelerata."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2008,8 +2026,8 @@
 {
     "codice":"REG100",
     "descrizione": {
-		"it": "Negli affidamenti diretti è consentito inserire un solo idPartecipante",
-		"en": "Negli affidamenti diretti è consentito inserire un solo idPartecipante"
+		"it": "Negli affidamenti diretti è consentito inserire un solo idPartecipante, se non è un accordo quadro.",
+		"en": "Negli affidamenti diretti è consentito inserire un solo idPartecipante, se non è un accordo quadro."
 	},
     "dataInizio":null,
     "dataFine":null

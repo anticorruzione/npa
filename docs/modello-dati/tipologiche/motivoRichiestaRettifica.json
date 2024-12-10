@@ -1,0 +1,27 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Variazione del partecipante prima dell'aggiudicazione",
+		"en": "Variazione del partecipante prima dell'aggiudicazione"
+		},
+    "dataInizio":"2025-01-17T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Ammissione di un nuovo partecipante a seguito di sentenza",
+		"en": "Ammissione di un nuovo partecipante a seguito di sentenza"
+		},
+    "dataInizio":"2025-01-17T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Errore di trasmissione da parte della PAD",
+		"en": "Errore di trasmissione da parte della PAD"
+		},
+    "dataInizio":"2025-01-17T00:00:00Z",
+    "dataFine":null
+}]

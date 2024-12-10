@@ -244,6 +244,10 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
       description: Motivo di richiesta di modifica - fare riferimento ai valori contenuti nel file [motivoRichiestaModifica.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoRichiestaModifica.json)
+    MotivoRichiestaRettificaEnum: 
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Motivo di richiesta di rettifica - fare riferimento ai valori contenuti nel file [motivoRichiestaRettifica.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoRichiestaRettifica.json)
     AnnullamentoEnum:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
@@ -420,6 +424,41 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/MisurePremialiEnum'
+    ParitaDiGenereGenerazionaleA7Type:
+      description: Deprecato. Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)?
+      type: object
+      additionalProperties: false
+      properties:
+        derogaAQ:
+          description: Deroga per adesione ad AQ/Convenzione precedente alle linee guida DPO sull’articolo 47 del DL 77/2021 e ss.m.i.?
+          type: boolean
+        quota30PerCento:
+          description: Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)? Valori ammessi - SI/NO/SI_QUOTA_INFERIORE
+          type: string
+          enum: ['SI', 'NO', 'SI_QUOTA_INFERIORE'] 
+        quotaInferioreOccupFemminile:
+          description: Previsione di una quota inferiore con riferimento all’occupazione femminile
+          type: number
+          format: double
+          minimum: 0
+          maximum: 100
+        quotaInferioreOccupGiovanile:
+          description: Previsione di una quota inferiore con riferimento all’occupazione giovanile
+          type: number
+          format: double
+          minimum: 0
+          maximum: 100        
+        motivoDeroga:
+          type: array
+          items:
+            $ref: '#/components/schemas/MotivoDerogaEnum'
+        ulterioriMisurePremiali:
+          description: Previsione nel bando di gara, nell’avviso o nell’invito di ulteriori misure premiali che attribuiscono un punteggio aggiuntivo all’offerente o al candidato.
+          type: boolean          
+        misurePremiali:
+          type: array
+          items:
+            $ref: '#/components/schemas/MisurePremialiEnum'            
     DatiPersonaFisicaType:
       description: Dati relativi alla persona fisica
       type: object
@@ -2914,37 +2953,44 @@ components:
         datiBaseAccessibilita:
           $ref: '#/components/schemas/DatiBaseAccessibilitaType'
     AggiudicazioneA7Type:
+      allOf: 
+      - $ref: '#/components/schemas/AggiudicazioneCompletaType'
       description: Oggetto che riporta i dati di aggiudicazione per procedura negoziata senza bando pari o sopra soglia.
       type: object
-      required: [afferenteInvestimentiPNRR,cig,partecipanti,finanziamenti]
+      required: [cig,numeroOfferteAmmesse]
       properties:
         cig:
           description: CIG affidamento incarico esterno di progettazione (in caso di progettista esterno)
-          type: string              
+          type: string         
+        numeroOfferteAmmesse:
+          description: numero di offerte ammesse
+          type: number
+          format: integer          
         afferenteInvestimentiPNRR:
-          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          description: Deprecato. L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
           type: boolean 
         acquisizioneCup:
-          description: Il contratto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.? (E' necessario acquisire e comunicare il CUP per interventi finanziati, anche in parte, con risorse Comunitarie) (Si/No)
+          description: Deprecato. Il contratto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.? (E' necessario acquisire e comunicare il CUP per interventi finanziati, anche in parte, con risorse Comunitarie) (Si/No)
           type: boolean          
         cupLotto:
-          description: Cup associati al lotto
+          description: Deprecato. Cup associati al lotto
           type: array
           items: 
             type: string 
             pattern: ^[a-zA-Z0-9]{15}$            
         paritaDiGenereGenerazionale:
-          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleType'
+          $ref: '#/components/schemas/ParitaDiGenereGenerazionaleA7Type'
         quadroEconomicoStandard:
           $ref: '#/components/schemas/QuadroEconomicoType'
         quadroEconomicoConcessioni:
           $ref: '#/components/schemas/QuadroEconomicoConcessioniType' 
         partecipanti:
           type: array
+          description: Deprecato
           items: 
             $ref: '#/components/schemas/PartecipanteADType'
         finanziamenti:
-          description: Dati relativi ai finanziamenti
+          description: Deprecato. Dati relativi ai finanziamenti
           type: array
           items:
             $ref: '#/components/schemas/FinanziamentoType'             
@@ -3287,7 +3333,18 @@ components:
           description: giustificazione
           type: string
         giustificazioneMl:
-          $ref: '#/components/schemas/MultilinguaType'  
+          $ref: '#/components/schemas/MultilinguaType'
+    DatiBaseAccessibilitaA7Type:
+      description: Deprecato. Dato in comune con il Business Group Strategic Procurement delle eforms
+      additionalProperties: false
+      properties:
+        accessibilita:
+          $ref: '#/components/schemas/AccessibilitaEnum'
+        giustificazione:
+          description: giustificazione
+          type: string
+        giustificazioneMl:
+          $ref: '#/components/schemas/MultilinguaType'          
     DatiBaseAggiudicazioneAppaltoType:
       description:  Dato in comune con il Business Group Contract delle eforms
       required: [dataAggiudicazione]

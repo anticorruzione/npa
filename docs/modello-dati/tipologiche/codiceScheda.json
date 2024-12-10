@@ -566,6 +566,15 @@
     "dataFine":null
 },
 {
+  "codice":"S2R",
+  "descrizione": {
+  "it": "Rettifica/Integrazione scheda S2.",
+  "en": "Rettifica/Integrazione scheda S2."
+  },
+  "dataInizio":null,
+  "dataFine":null
+},
+{
     "codice":"S3",
     "descrizione": {
 		"it": "Scheda relativa ai soggetti incaricati della progettazione.",

@@ -21,6 +21,58 @@
         </inputExpression>
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
+      <rule id="DecisionRule_0aqqlcc">
+        <description>REG47: Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</description>
+        <inputEntry id="UnaryTests_1ws1uby">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02fin7i">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOfferteAmmesse)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h4jsfc">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG47\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_162i735">
+        <description>REG50: Il valore del campo “offertaEconomica” non è coerente</description>
+        <inputEntry id="UnaryTests_1fxqozd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17fhkb6">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies (some offerta in aggiudicazione.offertePresentate 
+satisfies (offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100)) </text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0poxjj2">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG50\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08ilyhr">
+        <description>REG51: Richiesto almeno un valore tra offertaEconomica e offertaInAumento</description>
+        <inputEntry id="UnaryTests_01fy5k3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ehbnr7">
+          <text>some aggiudicazione in aggiudicazioni satisfies (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = true and is defined(offerta.offertaEconomica) = true ) or (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = false and is defined(offerta.offertaEconomica) = false )))</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18911v9">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG51\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pvtsp0">
+        <description>REG52: Non è stato inserito l’importo dell’aggiudicatario</description>
+        <inputEntry id="UnaryTests_1jnwu59">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yzqoju">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ekmbnf">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1fwm4fd">
         <description>REG112: La lista delle aggiudicazioni deve contenere almeno un elemento.</description>
         <inputEntry id="UnaryTests_0hwkldw">
