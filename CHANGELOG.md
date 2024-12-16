@@ -939,13 +939,11 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * ISDA1.dmn: aggiunte le regole REG98 e REG99
 * ISDA2.dmn: aggiunte le regole REG98 e REG99
 
-# Note di rilascio del 06/08/2024 (Changelog-03)
+# Note di rilascio del 06/08/2024 (Changelog-03 In esercizio)
 **NOTA**
 * Pubblicazione contenuti su GitHub: 15/10/2024 (eseguita come da pianificazione)
 * Rilascio in Qualificazione: 15/11/2024 (eseguito come da pianificazione)
 * Rilascio in Esercizio: 16/12/2024 (eseguita come da ultima pianificazione)
-  
-**la nota di rilascio potrà essere integrata successivamente**
     
 ### Modello Dati 
 * modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede AOC nell'oggetto SchedaComunicaAppaltoType e SOC, COC nell'oggetto SchedaPostPubblicazioneType
