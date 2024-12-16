@@ -943,7 +943,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 **NOTA**
 * Pubblicazione contenuti su GitHub: 15/10/2024 (eseguita come da pianificazione)
 * Rilascio in Qualificazione: 15/11/2024 (eseguito come da pianificazione)
-* Rilascio in Esercizio: 16/12/2024 (ripianificata)
+* Rilascio in Esercizio: 16/12/2024 (eseguita come da ultima pianificazione)
   
 **la nota di rilascio potrà essere integrata successivamente**
     
