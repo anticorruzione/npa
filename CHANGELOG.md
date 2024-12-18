@@ -1110,7 +1110,7 @@ errori.json: Aggiunto errore REG68_1
 	* errori.json: inseriti nuovi messaggi di errore ERR125, ERR126
 
 
-<summary><h1>Note di rilascio del 10/12/2024 (Changelog-04)</h1></summary>
+<summary><h1>Note di rilascio del 10/12/2024 (Changelog-04 SDK 1.12)</h1></summary>
 
 **NOTA**
 * Pubblicazione contenuti su GitHub: 10/12/2024
