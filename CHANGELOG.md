@@ -1165,6 +1165,12 @@ errori.json: Aggiunto errore REG68_1
  	* aggiunte le REG19 e REG20_1
 
 
+# Note di rilascio del 23/12/2024 (In Esercizio)
+### Tipologiche
+* ticket 62834:
+	* errori.json: inserito nuovo messaggio di errore ERR127
+
+
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.

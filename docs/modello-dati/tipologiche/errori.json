@@ -1133,6 +1133,15 @@
     "dataFine":null
 },
 {
+    "codice":"ERR127",
+    "descrizione": {
+		"it": "CIG duplicati in elenco soggetti",
+		"en": "CIG duplicati in elenco soggetti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",

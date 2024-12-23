@@ -23,7 +23,7 @@
       <rule id="DecisionRule_0216qim">
         <description>REG126: L'importo indicato deve essere maggiore di zero</description>
         <inputEntry id="UnaryTests_1iib549">
-          <text>conclusione.importo &lt; = 0</text>
+          <text>conclusione.importo &lt;= 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_03i8nux">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG126\"}"</text>
