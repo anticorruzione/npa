@@ -1171,6 +1171,11 @@ errori.json: Aggiunto errore REG68_1
 	* errori.json: inserito nuovo messaggio di errore ERR127
 
 
+# Note di rilascio del 15/01/2025 (In Esercizio)
+### Orchestratore  
+* Modificata la colonna V "nuovoStatoAppalto": 
+  * schede ISDA1, ISDA2: impostato il valore PUBB
+
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
