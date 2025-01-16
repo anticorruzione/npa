@@ -1131,12 +1131,48 @@
 	},
     "dataInizio":null,
     "dataFine":null
-},
+},	
 {
     "codice":"ERR127",
     "descrizione": {
 		"it": "CIG duplicati in elenco soggetti",
 		"en": "CIG duplicati in elenco soggetti"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},		
+{
+    "codice":"ERR128",
+    "descrizione": {
+		"it": "Errore generico durante la comunicazione con l'anagrafe Persona Giuridica",
+		"en": "Errore generico durante la comunicazione con l'anagrafe Persona Giuridica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},		
+{
+    "codice":"ERR129",
+    "descrizione": {
+		"it": "Il Codice Fiscale del partecipante non è censito in anagrafe Persona Giuridica",
+		"en": "Il Codice Fiscale del partecipante non è censito in anagrafe Persona Giuridica"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},			
+{
+    "codice":"ERR130",
+    "descrizione": {
+		"it": "Scheda Afferente Investimenti PNRR senza CUP presenti in REGIS",
+		"en": "Scheda Afferente Investimenti PNRR senza CUP presenti in REGIS"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},			
+{
+    "codice":"ERR131",
+    "descrizione": {
+		"it": "CUP presenti in REGIS ma non afferenti a Investimenti PNRR",
+		"en": "CUP presenti in REGIS ma non afferenti a Investimenti PNRR"
 	},
     "dataInizio":null,
     "dataFine":null

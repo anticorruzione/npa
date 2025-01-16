@@ -1137,7 +1137,7 @@ errori.json: Aggiunto errore REG68_1
 ### Tipologiche
 * errori.json:
 	* aggiornata la descrizione della REG100 e della REG18
- 	* aggiunti gli errori REG19 e REG20_1
+ 	* aggiunti gli errori ERR128, ERR129, ERR130, ERR131, REG19, REG20_1
 * motivoRichiestaRettifica.json: nuova tipologica per la scheda S2R
 * giustificazioniAggiudicazioneDiretta.json: aggiornata alla versione ted sdk 1.12
 	* modificate le label su below-thres-sme, int-oper, tra-ser
