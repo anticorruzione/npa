@@ -1113,9 +1113,10 @@ errori.json: Aggiunto errore REG68_1
 <summary><h1>Note di rilascio del 10/12/2024 (Changelog-04 SDK 1.12)</h1></summary>
 
 **NOTA**
-* Pubblicazione contenuti su GitHub: 10/12/2024
-* Rilascio in Qualificazione: 17/01/2025
-* Rilascio in Esercizio: 17/02/2025
+* Pubblicazione contenuti su GitHub: 10/12/2024 (completato come da pianificazione)
+* Rilascio in Qualificazione: 17/01/2025 (completato come da pianificazione)
+* Rilascio in Esercizio: 17/02/2025 (escluso sdk1.12)
+* Rilascio in Esercizio sdk1.12: ripianificato al 27/03/2025
   
 **la nota di rilascio potrà essere integrata successivamente**
     
