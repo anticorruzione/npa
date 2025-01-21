@@ -29,7 +29,7 @@ components:
         subappalto:
           $ref: '#/components/schemas/SubappaltoType'
     SchedaES1Type:
-      description: Scheda di esito subappalto
+      description: Esito Richiesta subappalto. Autorizzazione/diniego subappalto. Articolo119 decreto legislativo 36/2023
       type: object
       required: [anacForm]
       additionalProperties: false

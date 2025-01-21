@@ -28,7 +28,7 @@ components:
         sospensione:
           $ref: '#/components/schemas/SospensioneType'           
     SchedaSQ1Type:
-      description: Scheda di superamento del quarto del tempo contrattuale
+      description: Scheda di superamento del quarto del tempo contrattuale. Articolo 121 decreto legislativo 36/2023
       type: object
       required: [anacForm]
       additionalProperties: false

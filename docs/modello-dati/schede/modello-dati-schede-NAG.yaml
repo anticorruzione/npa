@@ -29,7 +29,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoNAGType'          
     SchedaNAGType:
-      description: Scheda di mancata aggiudicazione della gara
+      description: Mancata aggiudicazione di procedura sotto soglia europea.
       type: object
       required: [anacForm]
       additionalProperties: false

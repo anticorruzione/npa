@@ -77,7 +77,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP7_2Type'    
    SchedaP7_2Type:
-      description: Procedura negoziata senza bando sottosoglia. Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023. Articolo 2 Allegato II.1. Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023. Articolo 31 decreto legislativo  208/2011. Articolo 127 decreto legislativo 36/2023. Articolo 128 comma 8 decreto legislativo 36/2023.
+      description: Procedura negoziata senza bando; Procedura per appalti specifici in uno SDA. Articolo 76 decreto legislativo 36/2023. Articolo 32 comma 8 decreto legislativo 36/2023. Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023. Articolo 2 Allegato II.1. Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023. Articolo 31 decreto legislativo  208/2011. Articolo 127 decreto legislativo 36/2023. Articolo 128 comma 8 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

@@ -61,7 +61,7 @@ components:
         datiInizio:
           $ref: '#/components/schemas/DatiInizioType'
     SchedaI1Type:
-      description: Scheda di inizio esecuzione
+      description: Avvio dell'esecuzione
       type: object
       required: [anacForm]
       additionalProperties: false

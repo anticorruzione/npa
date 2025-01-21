@@ -33,7 +33,7 @@ components:
         sospensione:
           $ref: '#/components/schemas/SospensioneType'           
     SchedaSO1Type:
-      description: Scheda di sospensione
+      description: Sospensione in fase di esecuzione per qualunque procedura. Articolo 121 decreto legislativo 36/2023
       type: object
       required: [anacForm]
       additionalProperties: false

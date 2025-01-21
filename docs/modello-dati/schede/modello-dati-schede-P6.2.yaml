@@ -45,7 +45,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP6_2Type'         
     SchedaP6_2Type:
-      description: Adesione AQ/convenzione con successivo confronto competitivo (ordinario/speciale). Articolo 59 comma 4 lettere b) e c) decreto legislativo 36/2023; Articolo 154 decreto legislativo 36/2023.
+      description: Adesione AQ/convenzione con successivo confronto competitivo (ordinario/speciale). Articolo 59 comma 4 lettere b) e c) decreto legislativo 36/2023. Articolo 154 decreto legislativo 36/2023. Articolo 127 decreto legislativo 36/2023. Articolo 128 comma 6 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

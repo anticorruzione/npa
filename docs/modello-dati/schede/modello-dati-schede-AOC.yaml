@@ -69,7 +69,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneAOCType'      
     SchedaAOCType:
-      description: Flusso Organi Costituzionali.
+      description: Scheda di indizione per gli Organi Costituzionali.
       type: object
       required: [anacForm]
       additionalProperties: false

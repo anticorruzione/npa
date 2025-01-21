@@ -60,7 +60,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP2_20Type' 
     SchedaP2_20Type:
-      description: Bando di gara — settori ordinari, regime alleggerito. Articolo 127 decreto legislativo 36/2023. Articolo 128 comma 8 decreto legislativo 36/2023.
+      description: Bando di gara — settori ordinari, regime alleggerito. Articolo 50 decreto legislativo 36/2023. Articolo 127 decreto legislativo 36/2023. Articolo 128 comma 8 decreto legislativo 36/2023
       type: object
       required: [anacForm,espd]
       additionalProperties: false

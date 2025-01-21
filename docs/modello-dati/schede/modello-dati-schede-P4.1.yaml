@@ -30,7 +30,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP4_1Type'    
    SchedaP4_1Type:
-      description: Scheda di Finanza di progetto. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 174 comma 3 decreto legislativo 36/2023. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
+      description: PPP - Finanza di progetto. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 174 comma 3 decreto legislativo 36/2023. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

@@ -1,80 +1,80 @@
 [{
     "codice":"PL1_1",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform1",
-		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform1"
+		"it": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva generale. Articolo 48, paragrafo 1, della direttiva 2014/24/UE; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva generale. Articolo 48, paragrafo 1, della direttiva 2014/24/UE; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_2",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform2.",
-		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform2."
+		"it": "Avviso di pubblicazione di un avviso periodico indicativo relativo al profilo di committente — direttiva settoriale. Articolo 67, paragrafo 1, della direttiva 2014/25/UE; Articolo 161 comma 1 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023.",
+		"en": "Avviso di pubblicazione di un avviso periodico indicativo relativo al profilo di committente — direttiva settoriale. Articolo 67, paragrafo 1, della direttiva 2014/25/UE; Articolo 161 comma 1 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_3",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3.",
-		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3."
+		"it": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva per il settore della difesa. Articolo 30, paragrafo 1, terzo comma, della direttiva 2009/81/CE; Articolo 21 decreto legislativo 208/2011; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva per il settore della difesa. Articolo 30, paragrafo 1, terzo comma, della direttiva 2009/81/CE; Articolo 21 decreto legislativo 208/2011; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_4",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform4.",
-		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform4."
+		"it": "Avviso di preinformazione a fini unicamente informativi — direttiva generale. Articolo 48, paragrafo 1, della direttiva 2014/24/UE; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione a fini unicamente informativi — direttiva generale. Articolo 48, paragrafo 1, della direttiva 2014/24/UE; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_5",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform5.",
-		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform5."
+		"it": "Avviso periodico indicativo a fini unicamente informativi — direttiva settoriale. Articolo 67, paragrafo 1, della direttiva 2014/25/UE; Articolo 161 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso periodico indicativo a fini unicamente informativi — direttiva settoriale. Articolo 67, paragrafo 1, della direttiva 2014/25/UE; Articolo 161 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_6",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6.",
-		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform6."
+		"it": "Avviso di preinformazione a fini unicamente informativi — direttiva per il settore della difesa. Articolo 30, paragrafo 1, della direttiva 2009/81/CE escluso/difesa; Articolo 21 decreto legislativo 208/2011; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione a fini unicamente informativi — direttiva per il settore della difesa. Articolo 30, paragrafo 1, della direttiva 2009/81/CE escluso/difesa; Articolo 21 decreto legislativo 208/2011; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_7",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.",
-		"en": "Scheda di pianificazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7."
+		"it": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva generale. Articolo 27, paragrafo 2, della direttiva 2014/24/UE; Articolo 28, paragrafo 3, della direttiva 2014/24/UE; Articolo 81 comma 1 decretolegislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva generale. Articolo 27, paragrafo 2, della direttiva 2014/24/UE; Articolo 28, paragrafo 3, della direttiva 2014/24/UE; Articolo 81 comma 1 decretolegislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_8",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8.",
-		"en": "Scheda di pianificazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform8."
+		"it": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva settoriale. Articolo 45, paragrafo 2, della direttiva 2014/25/UE; Articolo 153 decreto legislativo 36/2023; Articolo 161 comma 2 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva settoriale. Articolo 45, paragrafo 2, della direttiva 2014/25/UE; Articolo 153 decreto legislativo 36/2023; Articolo 161 comma 2 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"PL1_9",
     "descrizione": {
-		"it": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9.",
-		"en": "Scheda di pianificazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform9."
+		"it": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva per il settore della difesa. Articolo 33, paragrafo 3, della direttiva 2009/81/CE; Articolo 21 comma 4 decretolegislativo 208/2011; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — direttiva per il settore della difesa. Articolo 33, paragrafo 3, della direttiva 2009/81/CE; Articolo 21 comma 4 decretolegislativo 208/2011; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
 },{
     "codice":"P1_10",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform10.",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform10."
+		"it": "Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE; Articolo 81 comma 2 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime ordinario. Articolo 48, paragrafo 2, della direttiva 2014/24/UE; Articolo 81 comma 2 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -82,8 +82,8 @@
 {
     "codice":"P1_11",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform11.",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform11."
+		"it": "Avviso periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime ordinario. Articolo 67, paragrafo 2, della direttiva 2014/25/UE; Articolo 155 comma 3 decreto legislativo 36/2023; Articolo 161 comma 2 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023.",
+		"en": "Avviso periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime ordinario. Articolo 67, paragrafo 2, della direttiva 2014/25/UE; Articolo 155 comma 3 decreto legislativo 36/2023; Articolo 161 comma 2 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -91,8 +91,8 @@
 {
     "codice":"P1_12",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform12.",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform12."
+		"it": "Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime alleggerito. Articolo 75, paragrafo 1, lettera b), della direttiva 2014/24/UE ; Articolo 127 comma 1 lettera b) decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva generale, regime alleggerito. Articolo 75, paragrafo 1, lettera b), della direttiva 2014/24/UE ; Articolo 127 comma 1 lettera b) decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -100,8 +100,8 @@
 {
     "codice":"P1_13",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform13.",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform13."
+		"it": "Bando periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera b), della direttiva 2014/25/UE; Articolo 173 decreto legislativo 36/2023; Articolo 127 comma 4 deceto legislativo 36/2023.",
+		"en": "Bando periodico indicativo utilizzato come avviso di indizione di gara — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera b), della direttiva 2014/25/UE; Articolo 173 decreto legislativo 36/2023; Articolo 127 comma 4 deceto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -109,8 +109,8 @@
 {
     "codice":"P1_14",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia regime alleggerito con invio al TED dell'eform14.",
-		"en": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia regime alleggerito con invio al TED dell'eform14."
+		"it": "Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva sulle concessioni, regime alleggerito. Articolo 31, paragrafo 3, della direttiva 2014/23/UE ; Articolo 182.comma 6  decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato come avviso di indizione di gara — direttiva sulle concessioni, regime alleggerito. Articolo 31, paragrafo 3, della direttiva 2014/23/UE ; Articolo 182.comma 6  decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -118,8 +118,8 @@
 {
     "codice":"P1_15_1",
     "descrizione": {
-		"it": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15.",
-		"en": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15."
+		"it": "Avviso sull'esistenza di un sistema di qualificazione. Articolo 68 della direttiva 2014/25/UE; Articolo 92, paragrafo 1, lettera c), della direttiva 2014/25/UE; Articolo 162 comma 1 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023.",
+		"en": "Avviso sull'esistenza di un sistema di qualificazione. Articolo 68 della direttiva 2014/25/UE; Articolo 92, paragrafo 1, lettera c), della direttiva 2014/25/UE; Articolo 162 comma 1 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -127,8 +127,8 @@
 {
     "codice":"P1_15_2",
     "descrizione": {
-		"it": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15.",
-		"en": "Scheda di pubblicazione per appalti settori speciali pari /sopra soglia con invio al TED dell'eform15."
+		"it": "Avviso sull'esistenza di un sistema di qualificazione con indizione di procedura di scelta del contraente. Articolo 68 della direttiva 2014/25/UE; Articolo 92, paragrafo 1, lettera c), della direttiva 2014/25/UE; Articolo 155 comma 3 lettera b)  decreto legislativo 36/2023; Articolo 162 comma 2 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023.",
+		"en": "Avviso sull'esistenza di un sistema di qualificazione con indizione di procedura di scelta del contraente. Articolo 68 della direttiva 2014/25/UE; Articolo 92, paragrafo 1, lettera c), della direttiva 2014/25/UE; Articolo 155 comma 3 lettera b)  decreto legislativo 36/2023; Articolo 162 comma 2 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -136,8 +136,8 @@
 {
     "codice":"P1_16",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform16.",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform16."
+		"it": "Bando di gara — direttiva generale, regime ordinario. Articolo 49 della direttiva 2014/24/UE; Articolo 84 decreto legislativo 36/2023; Articolo 85 decreto legislativo 36/2023.",
+		"en": "Bando di gara — direttiva generale, regime ordinario. Articolo 49 della direttiva 2014/24/UE; Articolo 84 decreto legislativo 36/2023; Articolo 85 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -145,8 +145,8 @@
 {
     "codice":"P1_17",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform17.",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia con invio al TED dell'eform17."
+		"it": "Bando di gara — direttiva settoriale, regime ordinario. Articolo 69 della direttiva 2014/25/UE ; Articolo 155 comma 3 lettera c) decreto legislativo 36/2023; Articolo 163 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023",
+		"en": "Bando di gara — direttiva settoriale, regime ordinario. Articolo 69 della direttiva 2014/25/UE ; Articolo 155 comma 3 lettera c) decreto legislativo 36/2023; Articolo 163 decreto legislativo 36/2023; Articolo 164 decreto legislativo 36/2023"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -154,8 +154,8 @@
 {
     "codice":"P1_18",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform18.",
-		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform18."
+		"it": "Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE; Articolo 22 decreto legislativo 208/2011; Articolo 84 decreto legislativo 36/2023; Articolo 85 decreto legislativo 36/2023.",
+		"en": "Bando di gara — direttiva per il settore della difesa, regime ordinario. Articolo 30, paragrafo 2, della direttiva 2009/81/CE; Articolo 22 decreto legislativo 208/2011; Articolo 84 decreto legislativo 36/2023; Articolo 85 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -163,8 +163,8 @@
 {
     "codice":"P1_19",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia con invio al TED dell'eform19.",
-		"en": "Scheda di pubblicazione avviso per concessioni pari /sopra soglia con invio al TED dell'eform19."
+		"it": "Bando di concessione - direttiva sulle concessioni, regime ordinario, PPP. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "Bando di concessione - direttiva sulle concessioni, regime ordinario, PPP. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -172,8 +172,8 @@
 {
     "codice":"P1_20",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform20.",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari pari /sopra soglia regime alleggerito con invio al TED dell'eform20."
+		"it": "Bando di gara — direttiva generale, regime alleggerito. Articolo 75, paragrafo 1, lettera a), della direttiva 2014/24/UE; Articolo 127 comma 1 lettera a) decreto legislativo 36/2023.",
+		"en": "Bando di gara — direttiva generale, regime alleggerito. Articolo 75, paragrafo 1, lettera a), della direttiva 2014/24/UE; Articolo 127 comma 1 lettera a) decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -181,8 +181,8 @@
 {
     "codice":"P1_21",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform21.",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali pari /sopra soglia regime alleggerito con invio al TED dell'eform21."
+		"it": "Avviso di gara — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera a),della direttiva 2014/25/UE; Articolo 173 decreto legislativo 36/2023; Articolo 127 comma 4 deceto legislativo 36/2023.",
+		"en": "Avviso di gara — direttiva settoriale, regime alleggerito. Articolo 92, paragrafo 1, lettera a),della direttiva 2014/25/UE; Articolo 173 decreto legislativo 36/2023; Articolo 127 comma 4 deceto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -190,8 +190,8 @@
 {
     "codice":"P1_23",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per settori ordinari pari /sopra soglia concorso progettazione con invio al TED dell'eform23.",
-		"en": "Scheda di pubblicazione avviso per settori ordinari pari /sopra soglia concorso progettazione con invio al TED dell'eform23."
+		"it": "Avviso o bando di concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 1, della direttiva 2014/24/UE; Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso o bando di concorso di progettazione — direttiva generale, progettazione. Articolo 79, paragrafo 1, della direttiva 2014/24/UE; Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -199,8 +199,8 @@
 {
     "codice":"P1_24",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per settori speciali pari /sopra soglia concorso progettazione con invio al TED dell'eform24.",
-		"en": "Scheda di pubblicazione avviso per settori speciali pari /sopra soglia concorso progettazione con invio al TED dell'eform24."
+		"it": "Avviso di concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, primo comma, della direttiva 2014/25/UE; Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso di concorso di progettazione — direttiva settoriale, progettazione. Articolo 96, paragrafo 1, primo comma, della direttiva 2014/25/UE; Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -208,8 +208,8 @@
 {
     "codice":"PL2_1",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sotto soglia senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sotto soglia senza invio al ted"
+		"it": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — settori ordinari. Articolo 50 decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — settori ordinari. Articolo 50 decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -217,8 +217,8 @@
 {
     "codice":"PL2_2",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali sotto soglia senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali sotto soglia senza invio al ted"
+		"it": "Avviso di pubblicazione di un avviso periodico indicativo relativo al profilo di committente — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023.",
+		"en": "Avviso di pubblicazione di un avviso periodico indicativo relativo al profilo di committente — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -226,8 +226,8 @@
 {
     "codice":"PL2_3",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sotto soglia senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sotto soglia senza invio al ted"
+		"it": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva per il settore della difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva per il settore della difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -235,8 +235,8 @@
 {
     "codice":"PL2_7",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie (solo per: 1mln <= L< soglia) senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie (solo per: 1mln <= L< soglia) senza invio al ted"
+		"it": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — settori ordinari. Articolo 50 comma 1 lett. d) decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — settori ordinari. Articolo 50 comma 1 lett. d) decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -244,8 +244,8 @@
 {
     "codice":"PL2_8",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia  senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia  senza invio al ted"
+		"it": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -253,8 +253,8 @@
 {
     "codice":"PL2_9",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; procedure ordinarie (solo per: 1mln <L< soglia) senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; procedure ordinarie (solo per: 1mln <L< soglia) senza invio al ted"
+		"it": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — settore della difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 comma 1 lett. d) decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato per abbreviare i termini per la ricezione delle offerte — settore della difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 comma 1 lett. d) decreto legislativo 36/2023; Articolo 81 comma 1 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -262,8 +262,8 @@
 {
     "codice":"P2_10",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie; (solo per: 1mln <=L< soglia) senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia; procedure ordinarie; (solo per: 1mln <=L< soglia) senza invio al ted"
+		"it": "Avviso di preinformazione utilizzato come avviso di indizione di gara — settori ordinari. Articolo 50,  decreto legislativo 36/2023; Articolo 81 comma 2 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato come avviso di indizione di gara — settori ordinari. Articolo 50,  decreto legislativo 36/2023; Articolo 81 comma 2 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -271,8 +271,8 @@
 {
     "codice":"P2_11",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted"
+		"it": "Avviso periodico indicativo utilizzato come avviso di indizione di gara — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023.",
+		"en": "Avviso periodico indicativo utilizzato come avviso di indizione di gara — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -280,8 +280,8 @@
 {
     "codice":"P2_12",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia regime alleggerito senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia regime alleggerito senza invio al ted"
+		"it": "Avviso di preinformazione utilizzato come avviso di indizione di gara — settori ordinari, regime alleggerito. Articolo 50 decreto legislativo 36/2023; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato come avviso di indizione di gara — settori ordinari, regime alleggerito. Articolo 50 decreto legislativo 36/2023; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -289,8 +289,8 @@
 {
     "codice":"P2_13",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia regime alleggerito senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia regime alleggerito senza invio al ted"
+		"it": "Bando periodico indicativo utilizzato come avviso di indizione di gara — settori speciali, regime alleggerito. Articolo 50 comma 5 decreto legislativo 36/2023; Libro III decreto legislativo 36/2023.",
+		"en": "Bando periodico indicativo utilizzato come avviso di indizione di gara — settori speciali, regime alleggerito. Articolo 50 comma 5 decreto legislativo 36/2023; Libro III decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -298,8 +298,8 @@
 {
     "codice":"P2_14",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per concessioni sottosoglia regime alleggerito senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per concessioni sottosoglia regime alleggerito senza invio al ted"
+		"it": "Avviso di preinformazione utilizzato come avviso di indizione di gara — concessioni, regime alleggerito. Articolo 187 decreto legislativo 36/2023.",
+		"en": "Avviso di preinformazione utilizzato come avviso di indizione di gara — concessioni, regime alleggerito. Articolo 187 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -307,8 +307,8 @@
 {
     "codice":"P2_16",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori ordinari sottosoglia (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted"
+		"it": "Bando di gara — settori ordinari. Articolo 50 decreto legislativo 36/2023.",
+		"en": "Bando di gara — settori ordinari. Articolo 50 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -316,8 +316,8 @@
 {
     "codice":"P2_17",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settori speciali sottosoglia senza invio al ted"
+		"it": "Bando di gara — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023.",
+		"en": "Bando di gara — settori speciali. Articolo 50 decreto legislativo 36/2023; Articolo 50 comma 5 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -325,8 +325,8 @@
 {
     "codice":"P2_18",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per appalti settore difesa e sicurezza sottosoglia; (procedure ordinarie solo per: 1mln <L< soglia) senza invio al ted"
+		"it": "Bando di gara — settore della difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 comma 1 lettera d) decreto legislativo 36/2023.",
+		"en": "Bando di gara — settore della difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 comma 1 lettera d) decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -334,8 +334,8 @@
 {
     "codice":"P2_19",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per concessioni sottosoglia senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per concessioni sottosoglia senza invio al ted"
+		"it": "Bando di concessione - concessioni. Articolo 187 decreto legislativo 36/2023.",
+		"en": "Bando di concessione - concessioni. Articolo 187 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -343,8 +343,8 @@
 {
     "codice":"P2_20",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per settori ordinari sottosoglia regime alleggerito senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per settori ordinari sottosoglia regime alleggerito senza invio al ted"
+		"it": "Bando di gara — settori ordinari, regime alleggerito. Articolo 50 decreto legislativo 36/2023; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023.",
+		"en": "Bando di gara — settori ordinari, regime alleggerito. Articolo 50 decreto legislativo 36/2023; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -352,8 +352,8 @@
 {
     "codice":"P2_21",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per settori speciali sottosoglia -  regime alleggerito senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per settori speciali sottosoglia -  regime alleggerito senza invio al ted"
+		"it": "Avviso di gara - settori speciali, regime alleggerito. Articolo 50 comma 5 decreto legislativo 36/2023; Libro III decreto legislativo 36/2023.",
+		"en": "Avviso di gara - settori speciali, regime alleggerito. Articolo 50 comma 5 decreto legislativo 36/2023; Libro III decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -361,8 +361,8 @@
 {
     "codice":"P2_23",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per settori ordinari sottosoglia concorsi di progettazione senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per settori ordinari sottosoglia concorsi di progettazione senza invio al ted"
+		"it": "Avviso o bando di concorso di progettazione - settori ordinari. Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso o bando di concorso di progettazione - settori ordinari. Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -370,8 +370,8 @@
 {
     "codice":"P2_24",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso per settori speciali sottosoglia concorsi di progettazione senza invio al ted",
-		"en": "Scheda di pubblicazione avviso per settori speciali sottosoglia concorsi di progettazione senza invio al ted"
+		"it": "Avviso di concorso di progettazione - settori speciali. Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso di concorso di progettazione - settori speciali. Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -379,8 +379,8 @@
 {
     "codice":"P3_1",
     "descrizione": {
-		"it": "Scheda di pubblicazione relativa ai contratti esclusi (generale o di tipo accordo quadro).",
-		"en": "Scheda di pubblicazione relativa ai contratti esclusi (generale o di tipo accordo quadro)."
+		"it": "Appalti e concorsi di progettazione esclusi. Delibera ANAC n. 584 del 19 dicembre 2023 (solo per i contratti esclusi soggetti a contributo ANAC).",
+        "en": "Appalti e concorsi di progettazione esclusi. Delibera ANAC n. 584 del 19 dicembre 2023 (solo per i contratti esclusi soggetti a contributo ANAC)."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -388,8 +388,8 @@
 {
     "codice":"P3_2",
     "descrizione": {
-		"it": "Scheda di pubblicazione relativa ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ.",
-		"en": "Scheda di pubblicazione relativa ai contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ."
+		"it": "Concessioni escluse. Delibera ANAC n. 584 del 19 dicembre 2023 (solo per i contratti esclusi soggetti a contributo ANAC).",
+        "en": "Concessioni escluse. Delibera ANAC n. 584 del 19 dicembre 2023 (solo per i contratti esclusi soggetti a contributo ANAC)."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -397,8 +397,8 @@
 {
     "codice":"P3_3",
     "descrizione": {
-		"it": "Scheda di pubblicazione relativa ai contratti esclusi - adesione con confronto competitivo.",
-		"en": "Scheda di pubblicazione relativa ai contratti esclusi - adesione con confronto competitivo."
+		"it": "Contratti esclusi - Acquisizione del CIG figlio per adesione AQ/convenzione con successivo confronto competitivo (solo per procedure il cui bando è stato pubblicato entro il 31/12/2023). Delibera ANAC n. 584 del 19 dicembre 2023",
+        "en": "Contratti esclusi - Acquisizione del CIG figlio per adesione AQ/convenzione con successivo confronto competitivo (solo per procedure il cui bando è stato pubblicato entro il 31/12/2023). Delibera ANAC n. 584 del 19 dicembre 2023"
 		},
     "dataInizio":null,
     "dataFine":null
@@ -406,8 +406,8 @@
 {
     "codice":"P3_4",
     "descrizione": {
-		"it": "Scheda di pubblicazione relativa al contraente generale.",
-		"en": "Scheda di pubblicazione relativa al contraente generale."
+		"it": "Affidamento a contraente generale. Artt. 204 decreto legislativo 36/2023; Articolo 205 comma 6 e comma 7 decreto legislativo 36/2023.",
+		"en": "Affidamento a contraente generale. Artt. 204 decreto legislativo 36/2023; Articolo 205 comma 6 e comma 7 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -415,8 +415,8 @@
 {
     "codice":"P3_5",
     "descrizione": {
-		"it": "Scheda di pubblicazione relativa alla scelta del socio privato nella società mista.",
-		"en": "Scheda di pubblicazione relativa alla scelta del socio privato nella società mista."
+		"it": "Scelta del socio privato nella società mista.",
+		"en": "Scelta del socio privato nella società mista."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -424,8 +424,8 @@
 {
     "codice":"P4_1",
     "descrizione": {
-		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto.",
-		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto."
+		"it": "PPP - Finanza di progetto. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Finanza di progetto. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -433,8 +433,8 @@
 {
     "codice":"P4_2",
     "descrizione": {
-		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Locazione Finanziaria",
-		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Locazione Finanziaria"
+		"it": "PPP - Locazione finanziaria. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Locazione finanziaria. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -442,8 +442,8 @@
 {
     "codice":"P4_3",
     "descrizione": {
-		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità.",
-		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità."
+		"it": "PPP - Contratto di disponibilità. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Contratto di disponibilità. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -451,8 +451,8 @@
 {
     "codice":"P4_4",
     "descrizione": {
-		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC.",
-		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC."
+		"it": "PPP - Contratto EPC. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Contratto EPC. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -460,8 +460,8 @@
 {
     "codice":"P4_5",
     "descrizione": {
-		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione.",
-		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione."
+		"it": "PPP - Concessione di servizi e costruzione e gestione. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Concessione di servizi e costruzione e gestione. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -469,8 +469,8 @@
 {
     "codice":"P4_6",
     "descrizione": {
-		"it": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratti di parternariato sociale.",
-		"en": "Scheda relativa ai contratti di Partenariato Pubblico Privato - Contratti di parternariato sociale."
+		"it": "PPP - Contratti di partenariato sociale. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Contratti di partenariato sociale. Articolo 31, paragrafo 1, della direttiva 2014/23/UE; Articolo 174 comma 3 decreto legislativo 36/2023; Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -478,8 +478,8 @@
 {
     "codice":"P5",
     "descrizione": {
-		"it": "Scheda relativa ad appalti soggetti a sola tracciabilità.",
-		"en": "Scheda relativa ad appalti soggetti a sola tracciabilità."
+		"it": "Contratti esclusi o estranei, soggetti a sola tracciabilità. L. 136/2010 e determina n.4/201 aggiornata con delibera n. 585 del 19 dicembre 2023 ( solo per i contratti estranei al Codice e che acquisiscono il CIG solo a fini della tracciabilità) delibera ANAC n. 584 del 19 dicembre 2023 (solo per contratti e concorsi di progettazione esclusi non soggetti a contributo ANAC).",
+        "en": "Contratti esclusi o estranei, soggetti a sola tracciabilità. L. 136/2010 e determina n.4/201 aggiornata con delibera n. 585 del 19 dicembre 2023 ( solo per i contratti estranei al Codice e che acquisiscono il CIG solo a fini della tracciabilità) delibera ANAC n. 584 del 19 dicembre 2023 (solo per contratti e concorsi di progettazione esclusi non soggetti a contributo ANAC)."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -487,8 +487,8 @@
 {
     "codice":"P6_1",
     "descrizione": {
-		"it": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni)",
-		"en": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (concessioni)"
+		"it": "Concessioni - Acquisizione del CIG figlio per adesione AQ/convenzione, con successivo confronto competitivo (solo per concessioni affidate con accordi quadro/convenzioni il cui bando è stato pubblicato entro il 31/12/2023.",
+        "en": "Concessioni - Acquisizione del CIG figlio per adesione AQ/convenzione, con successivo confronto competitivo (solo per concessioni affidate con accordi quadro/convenzioni il cui bando è stato pubblicato entro il 31/12/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -496,8 +496,8 @@
 {
     "codice":"P6_2",
     "descrizione": {
-		"it": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (ordinario/speciale)",
-		"en": "Scheda relativa alle adesioni AQ/convenzione con successivo confronto competitivo (ordinario/speciale)"
+		"it": "Appalti - Acquisizione del CIG figlio per adesione AQ/convenzione con successivo confronto competitivo (solo per appalti affidati con accordi quadro/convenzioni il cui bando è stato pubblicato entro il 31/12/2023). Articolo 59 comma 4 lettere b) e c) decreto legislativo 36/2023; Articolo 154 decreto legislativo 36/2023 Articolo 127 decreto legislativo 36/2023, Articolo 128 comma 6 decreto legislativo 36/2023.",
+        "en": "Appalti - Acquisizione del CIG figlio per adesione AQ/convenzione con successivo confronto competitivo (solo per appalti affidati con accordi quadro/convenzioni il cui bando è stato pubblicato entro il 31/12/2023). Articolo 59 comma 4 lettere b) e c) decreto legislativo 36/2023; Articolo 154 decreto legislativo 36/2023 Articolo 127 decreto legislativo 36/2023, Articolo 128 comma 6 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -505,8 +505,8 @@
 {
     "codice":"P7_1_1",
     "descrizione": {
-		"it": "Scheda di procedura negoziata senza bando pari o sopra soglia.",
-		"en": "Scheda di procedura negoziata senza bando pari o sopra soglia."
+		"it": "Procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023; Artcolo 182 commi 7,8,9 decreto legislativo 36//2023.",
+		"en": "Procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023; Artcolo 182 commi 7,8,9 decreto legislativo 36//2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -514,8 +514,8 @@
 {
     "codice":"P7_1_2",
     "descrizione": {
-		"it": "Scheda di procedura negoziata senza bando pari o sopra soglia.",
-		"en": "Scheda di procedura negoziata senza bando pari o sopra soglia."
+		"it": "Procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023.",
+		"en": "Procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -523,8 +523,8 @@
 {
     "codice":"P7_1_3",
     "descrizione": {
-		"it": "Scheda di procedura negoziata senza bando sottosoglia.",
-		"en": "Scheda di procedura negoziata senza bando sottosoglia."
+		"it": "Procedura negoziata senza bando sottosoglia. Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023; Articolo 2 Allegato II.1; Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023; Articolo 31 decreto legislativo  208/2011; Articolo 187 decreto legislativo 36/2023; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023.",
+		"en": "Procedura negoziata senza bando sottosoglia. Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023; Articolo 2 Allegato II.1; Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023; Articolo 31 decreto legislativo  208/2011; Articolo 187 decreto legislativo 36/2023; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -532,8 +532,8 @@
 {
     "codice":"P7_2",
     "descrizione": {
-		"it": "Scheda di procedura negoziata senza bando sottosoglia.",
-		"en": "Scheda di procedura negoziata senza bando sottosoglia."
+		"it": "Procedura negoziata senza bando; Procedura per appalti specifici in uno SDA. Articolo 76 decreto legislativo 36/2023; Articolo 32 comma 2 decreto legislativo 36/2023; Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023; Articolo 2 Allegato II.1; Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023; Articolo 31 decreto legislativo  208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023.",
+		"en": "Procedura negoziata senza bando; Procedura per appalti specifici in uno SDA. Articolo 76 decreto legislativo 36/2023; Articolo 32 comma 2 decreto legislativo 36/2023; Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023; Articolo 2 Allegato II.1; Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023; Articolo 31 decreto legislativo  208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 comma 8 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -541,8 +541,8 @@
 {
     "codice":"P7_3",
     "descrizione": {
-		"it": "Scheda di avviso per la costituzione elenco.",
-		"en": "Scheda di avviso per la costituzione elenco."
+		"it": "Avviso per la costituzione elenco. Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023; Articolo 3 Allegato II.1; Articolo 31 decreto legislativo  208/2011.",
+		"en": "Avviso per la costituzione elenco. Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023; Articolo 3 Allegato II.1; Articolo 31 decreto legislativo  208/2011."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -550,8 +550,8 @@
 {
     "codice":"S1",
     "descrizione": {
-		"it": "Scheda soggetti che hanno manifestato interesse nelle procedure a due fasi",
-		"en": "Scheda soggetti che hanno manifestato interesse nelle procedure a due fasi"
+		"it": "Elenco dei soggetti che hanno manifestato interesse nelle procedure a due fasi.",
+		"en": "Elenco dei soggetti che hanno manifestato interesse nelle procedure a due fasi."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -559,8 +559,8 @@
 {
     "codice":"S2",
     "descrizione": {
-		"it": "Scheda relative alle offerte ricevute/OE invitati.",
-		"en": "Scheda relative alle offerte ricevute/OE invitati."
+		"it": "Elenco offerte ricevute/OE invitati.",
+		"en": "Elenco offerte ricevute/OE invitati."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -577,8 +577,8 @@
 {
     "codice":"S3",
     "descrizione": {
-		"it": "Scheda relativa ai soggetti incaricati della progettazione.",
-		"en": "Scheda relativa ai soggetti incaricati della progettazione."
+		"it": "Elenco dei soggetti incaricati della progettazione.",
+		"en": "Elenco dei soggetti incaricati della progettazione."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -586,8 +586,8 @@
 {
     "codice":"S4",
     "descrizione": {
-		"it": "Scheda relativa alla costituzione della società di scopo.",
-		"en": "Scheda relativa alla costituzione della società di scopo."
+		"it": "Variazione Aggiudicatari/Costituzione della società di scopo.",
+		"en": "Variazione Aggiudicatari/Costituzione della società di scopo."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -595,8 +595,8 @@
 {
     "codice":"AD1_25",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform25.",
-		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform25."
+		"it": "Avviso per la trasparenza volontaria ex ante, direttiva generale. Articolo 3 bis della direttiva 89/665/CEE; Articolo 86 decreto legislativo 36/2023.",
+		"en": "Avviso per la trasparenza volontaria ex ante, direttiva generale. Articolo 3 bis della direttiva 89/665/CEE; Articolo 86 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -604,8 +604,8 @@
 {
     "codice":"AD1_26",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform26.",
-		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform26."
+		"it": "Avviso per la trasparenza volontaria ex ante, direttiva settoriale. Articolo 3 bis della direttiva 89/665/CEE; Articolo 86 decreto legislativo 36/2023.",
+		"en": "Avviso per la trasparenza volontaria ex ante, direttiva settoriale. Articolo 3 bis della direttiva 89/665/CEE; Articolo 86 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -613,8 +613,8 @@
 {
     "codice":"AD1_27",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform27.",
-		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform27."
+		"it": "Avviso per la trasparenza volontaria ex ante, direttiva difesa. Articolo 64 della direttiva 2009/81/CE.",
+		"en": "Avviso per la trasparenza volontaria ex ante, direttiva difesa. Articolo 64 della direttiva 2009/81/CE."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -622,8 +622,8 @@
 {
     "codice":"AD1_28",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform28.",
-		"en": "Scheda di affidamento diretto (EU), valida per i soprasoglia e sottoglia con invio al TED con eform28."
+		"it": "Avviso per la trasparenza volontaria ex ante, direttiva concessioni. Articolo 3 bis delle direttive 89/665/CEE e 92/13/CEE; Articolo 86 decreto legislativo 36/2023.",
+		"en": "Avviso per la trasparenza volontaria ex ante, direttiva concessioni. Articolo 3 bis delle direttive 89/665/CEE e 92/13/CEE; Articolo 86 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -631,8 +631,9 @@
 {
     "codice":"AD2_25",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
-		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		"descrizione": {
+        "it": "Settori Ordinari - Affidamento di lavori o servizi consistenti nella ripetizione di lavori o servizi analoghi (solo per procedure il cui bando è stato pubblicato entro il 31/12/2023 e che prevedono l'opzione della ripetizione di lavori/ servizi analoghi). Articolo 76 comma 6 decreto legislativo 36/2023.",
+        "en": "Settori Ordinari - Affidamento di lavori o servizi consistenti nella ripetizione di lavori o servizi analoghi (solo per procedure il cui bando è stato pubblicato entro il 31/12/2023 e che prevedono l'opzione della ripetizione di lavori/ servizi analoghi). Articolo 76 comma 6 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -640,8 +641,8 @@
 {
     "codice":"AD2_26",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
-		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		"it": "Settori Speciali - Affidamento di lavori o servizi consistenti nella ripetizione di lavori o servizi analoghi (solo per procedure il cui bando è stato pubblicato entro il 31/12/2023 e che prevedono l'opzione della ripetizione di lavori/ servizi analoghi). Articolo 158 comma 2 lettera f) decreto legislativo 36/2023.",
+        "en": "Settori Speciali - Affidamento di lavori o servizi consistenti nella ripetizione di lavori o servizi analoghi (solo per procedure il cui bando è stato pubblicato entro il 31/12/2023 e che prevedono l'opzione della ripetizione di lavori/ servizi analoghi). Articolo 158 comma 2 lettera f) decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -649,8 +650,8 @@
 {
     "codice":"AD2_27",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
-		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		"it": "Affidamento diretto sopra la soglia minima e sotto la soglia comunitaria, difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023; Articolo 50 comma 9 decreto legislativo 36/2023.",
+		"en": "Affidamento diretto sopra la soglia minima e sotto la soglia comunitaria, difesa. Articolo 31 decreto legislativo 208/2011; Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023; Articolo 50 comma 9 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -658,8 +659,8 @@
 {
     "codice":"AD2_28",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED.",
-		"en": "Scheda di affidamento diretto (EU), valida per i sottoglia > 5K, senza invio al TED."
+		"it": "Affidamento diretto. Articolo 182 comma 7 decreto legislativo 36/2023; Articolo 187 decreto legislativo 36/2023.",
+		"en": "Affidamento diretto. Articolo 182 comma 7 decreto legislativo 36/2023; Articolo 187 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -667,8 +668,8 @@
 {
     "codice":"AD3",
     "descrizione": {
-		"it": "Scheda di affidamento diretto (EU), valida per affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED.",
-		"en": "Scheda di affidamento diretto (EU), valida per affidamento diretto < limite massimo dell'affidamento diretto, senza invio al TED."
+		"it": "Affidamento diretto >= 5k € e entro i valori ammessi. Articolo 50 comma 9 decreto legislativo 36/2023.",
+		"en": "Affidamento diretto >= 5k € e entro i valori ammessi. Articolo 50 comma 9 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -676,8 +677,8 @@
 {
     "codice":"AD4",
     "descrizione": {
-		"it": "Scheda di adesione AQ/convenzione senza successivo confronto competitivo, senza invio al TED.",
-		"en": "Scheda di adesione AQ/convenzione senza successivo confronto competitivo, senza invio al TED."
+		"it": "Appalti e concessioni - Acquisizione del CIG figlio per adesione ad accordo quadro/convenzione senza successivo confronto competitivo (solo per appalti o concessioni affidate con accordi quadro/convenzioni il cui bando è stato pubblicato entro il 31/12/2023). Articolo 59 comma 4 lettera a) decreto legislativo 36/2023;Articolo 154 decreto legislativo 36/2023 Articolo 127 decreto legislativo 36/2023, Articolo 128 comma 6 decreto legislativo 36/2023.",
+        "en": "Appalti e concessioni - Acquisizione del CIG figlio per adesione ad accordo quadro/convenzione senza successivo confronto competitivo (solo per appalti o concessioni affidate con accordi quadro/convenzioni il cui bando è stato pubblicato entro il 31/12/2023). Articolo 59 comma 4 lettera a) decreto legislativo 36/2023;Articolo 154 decreto legislativo 36/2023 Articolo 127 decreto legislativo 36/2023, Articolo 128 comma 6 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -685,8 +686,8 @@
 {
     "codice":"AD5",
     "descrizione": {
-		"it": "Scheda relativa gli appalti di importo inferiore a 5K, senza invio al TED.",
-		"en": "Scheda relativa gli appalti di importo inferiore a 5K, senza invio al TED."
+		"it": "Affidamento diretto di appalti di importo inferiore a 5.000 euro. Articolo 49 c. 6; Articolo 50 c.1 lett. a) e b) decreto legislativo 36/2023.",
+        "en": "Affidamento diretto di appalti di importo inferiore a 5.000 euro. Articolo 49 c. 6; Articolo 50 c.1 lett. a) e b) decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -694,8 +695,8 @@
 {
     "codice":"A1_29",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 29",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 29"
+		"it": "Avviso aggiudicazione direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE; Articolo 111 decreto legislativo 36/2023.",
+		"en": "Avviso aggiudicazione direttiva generale, regime ordinario. Articolo 50 della direttiva 2014/24/UE; Articolo 111 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -703,8 +704,8 @@
 {
     "codice":"A1_30",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 30",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 30"
+		"it": "Avviso aggiudicazione direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE; Articolo 163 comma 2 decreto legislativo 36/2023.",
+		"en": "Avviso aggiudicazione direttiva settoriale, regime ordinario. Articolo 70 della direttiva 2014/25/UE; Articolo 163 comma 2 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -712,8 +713,8 @@
 {
     "codice":"A1_31",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 31",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 31"
+		"it": "Avviso aggiudicazione  direttiva difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE; Articolo 23 decretoegislativo 208/2011.",
+		"en": "Avviso aggiudicazione  direttiva difesa. Articolo 30, paragrafo 3, della direttiva 2009/81/CE; Articolo 23 decretoegislativo 208/2011."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -721,8 +722,8 @@
 {
     "codice":"A1_32",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 32",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 32"
+		"it": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE; Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime ordinario. Articolo 32, paragrafo 2 (riferimento all’allegato VII), della direttiva 2014/23/UE; Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -730,8 +731,8 @@
 {
     "codice":"A1_33",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 33",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 33"
+		"it": "Avviso di aggiudicazione di un appalto, direttiva generale, regime allegerito. Articolo 75, paragrafo 2, della direttiva 2014/24/UE; Articolo 127 comma 3 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di un appalto, direttiva generale, regime allegerito. Articolo 75, paragrafo 2, della direttiva 2014/24/UE; Articolo 127 comma 3 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -739,8 +740,8 @@
 {
     "codice":"A1_34",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 34",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 34"
+		"it": "Avviso di aggiudicazione di un appalto, direttiva settoriale, regime allegerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE; Articolo 173 decreto legislativo 36/2023; Articoo 127 comma 3 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di un appalto, direttiva settoriale, regime allegerito. Articolo 92, paragrafo 2, della direttiva 2014/25/UE; Articolo 173 decreto legislativo 36/2023; Articoo 127 comma 3 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -748,8 +749,8 @@
 {
     "codice":"A1_35",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 35",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 35"
+		"it": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime allegerito. Articolo 32, paragrafo 2 (riferimento all’allegato; Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime allegerito. Articolo 32, paragrafo 2 (riferimento all’allegato; Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -757,8 +758,8 @@
 {
     "codice":"A1_36",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 36",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 36"
+		"it": "Avviso sui risultati di un concorso di progettazione, direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE; Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso sui risultati di un concorso di progettazione, direttiva generale, progettazione. Articolo 79, paragrafo 2, della direttiva 2014/24/UE; Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -766,8 +767,8 @@
 {
     "codice":"A1_37",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 37",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione soprasoglia con invio al TED dell'eform 37"
+		"it": "Avviso sui risultati di un concorso di progettazione, direttiva settoriale, progettazione. Articolo 96, paragrafo 1, secondo comma, della direttiva 2014/25/UE; Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso sui risultati di un concorso di progettazione, direttiva settoriale, progettazione. Articolo 96, paragrafo 1, secondo comma, della direttiva 2014/25/UE; Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -775,8 +776,8 @@
 {
     "codice":"A2_29",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso aggiudicazione direttiva generale, regime ordinario. Articolo 50 comma 9 decreto legislativo 36/2023.",
+		"en": "Avviso aggiudicazione direttiva generale, regime ordinario. Articolo 50 comma 9 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -784,8 +785,8 @@
 {
     "codice":"A2_30",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso aggiudicazione direttiva settoriale, regime ordinario. Articolo 50 comma 9 decreto legislativo 36/2023.",
+		"en": "Avviso aggiudicazione direttiva settoriale, regime ordinario. Articolo 50 comma 9 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -793,8 +794,8 @@
 {
     "codice":"A2_31",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso aggiudicazione, direttiva settore difesa. Articolo 31, decreto legislativo 208/2011; Articolo 50 comma 9 decreto legislativo 36/2023.",
+		"en": "Avviso aggiudicazione, direttiva settore difesa. Articolo 31, decreto legislativo 208/2011; Articolo 50 comma 9 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -802,8 +803,8 @@
 {
     "codice":"A2_32",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime ordinario. Articolo 187 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime ordinario. Articolo 187 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -811,8 +812,8 @@
 {
     "codice":"A2_33",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso di aggiudicazione di un appalto, direttiva generale, regime allegerito. Articolo 50 comma 9 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di un appalto, direttiva generale, regime allegerito. Articolo 50 comma 9 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -820,8 +821,8 @@
 {
     "codice":"A2_34",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso di aggiudicazione di un appalto, direttiva settoriale, regime allegerito. Articolo 50 comma 9 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di un appalto, direttiva settoriale, regime allegerito. Articolo 50 comma 9 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -829,8 +830,8 @@
 {
     "codice":"A2_35",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime allegerito. Art. 187 decreto legislativo 36/2023.",
+		"en": "Avviso di aggiudicazione di una concessione, direttiva concessioni, regime allegerito. Art. 187 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -838,8 +839,8 @@
 {
     "codice":"A2_36",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso sui risultati di un concorso di progettazione, direttiva generale, progettazione. Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso sui risultati di un concorso di progettazione, direttiva generale, progettazione. Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -847,8 +848,8 @@
 {
     "codice":"A2_37",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione sottosoglia senza invio al TED"
+		"it": "Avviso sui risultati di un concorso di progettazione, direttiva settoriale, progettazione. Articolo 46 decreto legislativo 36/2023.",
+		"en": "Avviso sui risultati di un concorso di progettazione, direttiva settoriale, progettazione. Articolo 46 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -856,8 +857,8 @@
 {
     "codice":"A3_1",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi (generale o di tipo accordo quadro)",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi (generale o di tipo accordo quadro)"
+		"it": "Contratti esclusi (generale o di tipo accordo quadro). Articolo 10 direttiva 2014/24/UE e articolo 21 direttiva 2014/25/UE.",
+		"en": "Contratti esclusi (generale o di tipo accordo quadro). Articolo 10 direttiva 2014/24/UE e articolo 21 direttiva 2014/25/UE."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -865,8 +866,8 @@
 {
     "codice":"A3_2",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ"
+		"it": "Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ. Articolo 10 direttiva 2014/23/UE.",
+		"en": "Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ. Articolo 10 direttiva 2014/23/UE."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -874,8 +875,8 @@
 {
     "codice":"A3_3",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai Contratti esclusi - adesione con confronto competitivo"
+		"it": "Contratti esclusi - adesione con confronto competitivo.",
+		"en": "Contratti esclusi - adesione con confronto competitivo."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -883,8 +884,8 @@
 {
     "codice":"A3_4",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa al contraente generale ",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa al contraente generale "
+		"it": "Contraente generale. Artt. 204 e 205 decreto legislativo 36/2023.",
+		"en": "Contraente generale. Artt. 204 e 205 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -892,8 +893,8 @@
 {
     "codice":"A3_5",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa alla scelta del socio privato nella società mista",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa alla scelta del socio privato nella società mista"
+		"it": "Scelta del socio privato nella società mista. Articolo 13 c. 3 decreto legislativo 36/2023; Articolo 17 decretolegislativo 175/2016.",
+		"en": "Scelta del socio privato nella società mista. Articolo 13 c. 3 decreto legislativo 36/2023; Articolo 17 decretolegislativo 175/2016."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -901,8 +902,8 @@
 {
     "codice":"A3_6",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ad affidamento a soc. inhouse",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ad affidamento a soc. inhouse"
+		"it": "Affidamento a società in house. Articolo 7 decreto legislativo 36/2023; Articolo 120 comma 3 decreto legislativo 104/2010.",
+		"en": "Affidamento a società in house. Articolo 7 decreto legislativo 36/2023; Articolo 120 comma 3 decreto legislativo 104/2010."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -910,8 +911,8 @@
 {
     "codice":"A4_1",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto.",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Finanza di progetto."
+		"it": "PPP - Finanza di progetto. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Finanza di progetto. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -919,8 +920,8 @@
 {
     "codice":"A4_2",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Locazione finanziaria.",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Locazione finanziaria."
+		"it": "PPP - Locazione finanziaria. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Locazione finanziaria. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -928,8 +929,8 @@
 {
     "codice":"A4_3",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità.",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto di disponibilità."
+		"it": "PPP - Contratto di disponibilità. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Contratto di disponibilità. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -937,8 +938,8 @@
 {
     "codice":"A4_4",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC.",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Contratto EPC."
+		"it": "PPP - Contratto EPC. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Contratto EPC. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -946,8 +947,8 @@
 {
     "codice":"A4_5",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione.",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato - Concessione di servizi e costruzione e gestione."
+		"it": "PPP - Concessione di servizi e costruzione e gestione. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Concessione di servizi e costruzione e gestione. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -955,8 +956,8 @@
 {
     "codice":"A4_6",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Contratti di partenariato sociale.",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa ai contratti di Partenariato Pubblico Privato -  Contratti di partenariato sociale."
+		"it": "PPP - Contratti di partenariato sociale. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023.",
+		"en": "PPP - Contratti di partenariato sociale. Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -964,8 +965,8 @@
 {
     "codice":"A7_1_1",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia"
+		"it": "Aggiudicazione procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023.",
+		"en": "Aggiudicazione procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -973,8 +974,8 @@
 {
     "codice":"A7_1_2",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione procedura negoziata senza bando pari o sopra soglia"
+		"it": "Aggiudicazione procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023.",
+		"en": "Aggiudicazione procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023; Articolo  158 decreto legislativo 36/2023; Articolo 18 decreto legislativo 208/2011; Articolo 127 decreto legislativo 36/2023; Articolo 128 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -982,8 +983,8 @@
 {
     "codice":"NAG",
     "descrizione": {
-		"it": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura",
-		"en": "Scheda di pubblicazione avviso di aggiudicazione relativa alla mancata aggiudicazione procedura"
+		"it": "Mancata aggiudicazione di procedura sotto soglia europea.",
+		"en": "Mancata aggiudicazione di procedura sotto soglia europea."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -991,8 +992,8 @@
 {
     "codice":"SC1",
     "descrizione": {
-		"it": "Scheda di sottoscrizione del contratto",
-		"en": "Scheda di sottoscrizione del contratto"
+		"it": "Sottoscrizione del contratto.",
+		"en": "Sottoscrizione del contratto."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1000,8 +1001,8 @@
 {
     "codice":"I1",
     "descrizione": {
-		"it": "Scheda di inizio esecuzione",
-		"en": "Scheda di inizio esecuzione"
+		"it": "Avvio dell'esecuzione.",
+		"en": "Avvio dell'esecuzione."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1009,8 +1010,8 @@
 {
     "codice":"M1",
     "descrizione": {
-		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38 o eform39",
-		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform38 o eform39"
+		"it": "Modifica contrattuale, direttiva generale e direttiva settoriale. Articolo 72, paragrafo 1, della direttiva 2014/24/UE; Articolo 89, paragrafo 1, della direttiva 2014/25/UE; Articolo 141 comma 3 lettera i) decreto legislativo 36/2023; Articolo 120 comma 14 e comma 15 decreto legislativo 36/2023; Articolo 5 comma 11 e comma 12 Allegato II.14.",
+		"en": "Modifica contrattuale, direttiva generale e direttiva settoriale. Articolo 72, paragrafo 1, della direttiva 2014/24/UE; Articolo 89, paragrafo 1, della direttiva 2014/25/UE; Articolo 141 comma 3 lettera i) decreto legislativo 36/2023; Articolo 120 comma 14 e comma 15 decreto legislativo 36/2023; Articolo 5 comma 11 e comma 12 Allegato II.14."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1018,8 +1019,8 @@
 {
     "codice":"M1_40",
     "descrizione": {
-		"it": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform40",
-		"en": "Scheda relativa alle modifiche contrattuali soprasoglia con invio al TED dell'eform40"
+		"it": "Modifica contrattuale, direttiva concessioni. Articolo 43, paragrafo 1, della direttiva 2014/23/UE; Articolo 189 comma 5 decreto legislativo 36/2023.",
+		"en": "Modifica contrattuale, direttiva concessioni. Articolo 43, paragrafo 1, della direttiva 2014/23/UE; Articolo 189 comma 5 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1027,8 +1028,8 @@
 {
     "codice":"M2",
     "descrizione": {
-		"it": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED",
-		"en": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED"
+		"it": "Modifica contrattuale sottosoglia, generale e settoriale. Articolo 72, paragrafo 1, della direttiva 2014/24/UE; Articolo 141 comma 3 lettera i) decreto o legislativo 36/2023; Articolo 120 comma 14 e comma 15 decreto legislativo 36/2023; Articolo 5 comma 11 e comma 12 Allegato II.14.",
+		"en": "Modifica contrattuale sottosoglia, generale e settoriale. Articolo 72, paragrafo 1, della direttiva 2014/24/UE; Articolo 141 comma 3 lettera i) decreto o legislativo 36/2023; Articolo 120 comma 14 e comma 15 decreto legislativo 36/2023; Articolo 5 comma 11 e comma 12 Allegato II.14."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1036,8 +1037,8 @@
 {
     "codice":"M2_40",
     "descrizione": {
-		"it": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED",
-		"en": "Scheda relativa alle modifiche contrattuali sottosoglia senza invio al TED"
+		"it": "Modifica contrattuale sottosoglia, concessioni. Articolo 187 comma 2 decreto legislativo 36/2023; Articolo 189 comma 5 decreto legislativo 36/2023.",
+		"en": "Modifica contrattuale sottosoglia, concessioni. Articolo 187 comma 2 decreto legislativo 36/2023; Articolo 189 comma 5 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1045,8 +1046,8 @@
 {
     "codice":"SA1",
     "descrizione": {
-		"it": "Scheda di stato avanzamento lavori",
-		"en": "Scheda di stato avanzamento lavori"
+		"it": "Stato Avanzamento lavori per qualunque procedura.",
+		"en": "Stato Avanzamento lavori per qualunque procedura."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1054,8 +1055,8 @@
 {
     "codice":"RSU1",
     "descrizione": {
-		"it": "Scheda di richiesta subappalto",
-		"en": "Scheda di richiesta subappalto"
+		"it": "Comunicazione richiesta di subappalto per qualunque procedura. Articolo 119 decreto legislativo 36/2023.",
+		"en": "Comunicazione richiesta di subappalto per qualunque procedura. Articolo 119 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1063,8 +1064,8 @@
 {
     "codice":"ES1",
     "descrizione": {
-		"it": "Scheda di esito richiesta subappalto",
-		"en": "Scheda di esito richiesta subappalto"
+		"it": "Esito Richiesta subappalto; Autorizzazione/diniego subappalto. Articolo119 decreto legislativo 36/2023.",
+		"en": "Esito Richiesta subappalto; Autorizzazione/diniego subappalto. Articolo119 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1072,8 +1073,8 @@
 {
     "codice":"CS1",
     "descrizione": {
-		"it": "Scheda di conclusione subappalto",
-		"en": "Scheda di conclusione subappalto"
+		"it": "Conclusione subappalto. Articolo 119 decreto legislativo 36/2023.",
+		"en": "Conclusione subappalto. Articolo 119 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1081,8 +1082,8 @@
 {
     "codice":"SO1",
     "descrizione": {
-		"it": "Scheda di sospensione",
-		"en": "Scheda di sospensione"
+		"it": "Sospensione in fase di esecuzione per qualunque procedura. Articolo 121 decreto legislativo 36/2023.",
+		"en": "Sospensione in fase di esecuzione per qualunque procedura. Articolo 121 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1090,8 +1091,8 @@
 {
     "codice":"SQ1",
     "descrizione": {
-		"it": "Scheda di superamento del quarto del tempo contrattuale",
-		"en": "Scheda di superamento del quarto del tempo contrattuale"
+		"it": "Superamento del quarto del tempo contrattuale. Articolo 121 decreto legislativo 36/2023.",
+		"en": "Superamento del quarto del tempo contrattuale. Articolo 121 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1099,8 +1100,8 @@
 {
     "codice":"RI1",
     "descrizione": {
-		"it": "Scheda di ripresa prestazione",
-		"en": "Scheda di ripresa prestazione"
+		"it": "Ripresa Prestazione. Articolo 121 decreto legislativo 36/2023.",
+		"en": "Ripresa Prestazione. Articolo 121 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1108,8 +1109,8 @@
 {
     "codice":"AC1",
     "descrizione": {
-		"it": "Scheda di accordo bonario",
-		"en": "Scheda di accordo bonario"
+		"it": "Accordo bonario. Articoli 210 e 211 decreto legislativo 36/2023.",
+		"en": "Accordo bonario. Articoli 210 e 211 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1117,8 +1118,8 @@
 {
     "codice":"IR1",
     "descrizione": {
-		"it": "Scheda di istanza di recesso",
-		"en": "Scheda di istanza di recesso"
+		"it": "Istanza di recesso.",
+		"en": "Istanza di recesso."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1126,8 +1127,8 @@
 {
     "codice":"CO1",
     "descrizione": {
-		"it": "Scheda di conclusione",
-		"en": "Scheda di conclusione"
+		"it": "Conclusione.",
+		"en": "Conclusione."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1135,8 +1136,8 @@
 {
     "codice":"CO2",
     "descrizione": {
-		"it": "Scheda di conclusione per flussi < 5K",
-		"en": "Scheda di conclusione per flussi < 5K"
+		"it": "Conclusione.",
+		"en": "Conclusione."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1144,8 +1145,8 @@
 {
     "codice":"CL1",
     "descrizione": {
-		"it": "Scheda di collaudo",
-		"en": "Scheda di collaudo"
+		"it": "Collaudo. Articolo 116 decreto legislativo 36/2023 e allegato II.14.",
+		"en": "Collaudo. Articolo 116 decreto legislativo 36/2023 e allegato II.14."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1153,8 +1154,8 @@
 {
     "codice":"CM1",
     "descrizione": {
-		"it": "Scheda di comunicazione modifica dati della procedura per appalti sopra o pari a 5K euro",
-		"en": "Scheda di comunicazione modifica dati della procedura per appalti sopra o pari a 5K euro"
+		"it": "Scheda di comunicazione modifica dati della procedura per appalti sopra o pari a 5K euro.",
+		"en": "Scheda di comunicazione modifica dati della procedura per appalti sopra o pari a 5K euro."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1162,8 +1163,8 @@
 {
     "codice":"CM2",
     "descrizione": {
-		"it": "Scheda di comunicazione modifica dati della procedura per appalti sotto i 5K euro",
-		"en": "Scheda di comunicazione modifica dati della procedura per appalti sotto i 5K euro"
+		"it": "Scheda di comunicazione modifica dati della procedura per appalti sotto i 5K euro.",
+		"en": "Scheda di comunicazione modifica dati della procedura per appalti sotto i 5K euro."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1206,8 +1207,8 @@
 {
     "codice":"ANN",
     "descrizione": {
-		"it": "Scheda di annullamento affidamento",
-		"en": "Scheda di annullamento affidamento"
+		"it": "Annullamento affidamento.",
+		"en": "Annullamento affidamento."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1215,8 +1216,8 @@
 {
     "codice":"AOC",
     "descrizione": {
-		"it": "Scheda di indizione per gli Organi Costituzionali",
-		"en": "Scheda di indizione per gli Organi Costituzionali"
+		"it": "Procedura di affidamento riservata agli Organi Costituzionali. Articolo 224 comma 7 decreto legislativo 36/2023.",
+        "en": "Procedura di affidamento riservata agli Organi Costituzionali. Articolo 224 comma 7 decreto legislativo 36/2023."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1224,8 +1225,8 @@
 {
     "codice":"SOC",
     "descrizione": {
-		"it": "Scheda di richiesta subappalto per gli Organi Costituzionali",
-		"en": "Scheda di richiesta subappalto per gli Organi Costituzionali"
+		"it": "Scheda di richiesta subappalto per gli Organi Costituzionali.",
+		"en": "Scheda di richiesta subappalto per gli Organi Costituzionali."
 		},
     "dataInizio":null,
     "dataFine":null
@@ -1233,8 +1234,8 @@
 {
     "codice":"COC",
     "descrizione": {
-		"it": "Scheda di conclusione per gli Organi Costituzionali",
-		"en": "Scheda di conclusione per gli Organi Costituzionali"
+		"it": "Scheda di conclusione per gli Organi Costituzionali.",
+		"en": "Scheda di conclusione per gli Organi Costituzionali."
 		},
     "dataInizio":null,
     "dataFine":null

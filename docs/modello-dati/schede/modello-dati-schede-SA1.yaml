@@ -65,7 +65,7 @@ components:
         avanzamento:
           $ref: '#/components/schemas/AvanzamentoType'          
     SchedaSA1Type:
-      description: Scheda di avanzamento
+      description: Stato Avanzamento lavori per qualunque procedura
       type: object
       required: [anacForm]
       additionalProperties: false

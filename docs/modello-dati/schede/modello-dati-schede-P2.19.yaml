@@ -57,7 +57,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP2_19Type'       
     SchedaP2_19Type:
-      description: Bando di concessione - concessioni
+      description: Bando di concessione - concessioni. Articolo 187 decreto legislativo 36/2023
       type: object
       required: [anacForm,espd]
       additionalProperties: false

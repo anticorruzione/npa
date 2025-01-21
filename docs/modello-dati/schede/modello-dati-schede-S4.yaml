@@ -18,7 +18,7 @@ components:
         motivoVariazione: 
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotiviVariazioneAnagraficaEnum'
     SchedaS4Type:
-      description: Scheda relativa alla Variazione Aggiudicatari/Costituzione della società di scopo.
+      description: Variazione Aggiudicatari/Costituzione della società di scopo.
       type: object
       required: [anacForm]
       additionalProperties: false

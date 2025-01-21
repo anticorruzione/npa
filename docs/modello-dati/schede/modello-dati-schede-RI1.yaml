@@ -43,7 +43,7 @@ components:
         sospensione:
           $ref: '#/components/schemas/SospensioneType'           
     SchedaRI1Type:
-      description: Scheda di ripresa prestazioni
+      description: Scheda di ripresa prestazioni. Articolo 121 decreto legislativo 36/2023
       type: object
       required: [anacForm]
       additionalProperties: false

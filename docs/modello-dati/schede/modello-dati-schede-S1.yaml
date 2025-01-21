@@ -29,7 +29,7 @@ components:
           items:
             $ref: '#/components/schemas/ElencoSoggettiRichiedentiType'
     SchedaS1Type:
-      description: Elenco di soggetti che hanno presentato manifestazione di interesse o domanda di partecipazione
+      description: Elenco dei soggetti che hanno manifestato interesse nelle procedure a due fasi.
       type: object
       required: [anacForm]
       additionalProperties: false

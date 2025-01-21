@@ -107,7 +107,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneAD3Type'      
     SchedaAD3Type:
-      description: Affidamento diretto >= 5k € e entro i valori ammessi. Articolo 50 comma 9 decreto legislativo 36/2023.
+      description: Affidamento diretto >= 5k € e < limite massimo dell'affidamento diretto. Articolo 50 comma 9 decreto legislativo 36/2023.
       type: object
       required: [anacForm]
       additionalProperties: false

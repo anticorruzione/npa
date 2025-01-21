@@ -57,7 +57,7 @@ components:
         subappalto:
           $ref: '#/components/schemas/SubappaltoType'
     SchedaRSU1Type:
-      description: Comunicazione richiesta di subappalto per qualunque procedura.
+      description: Comunicazione richiesta di subappalto per qualunque procedura. Articolo 119 decreto legislativo 36/2023
       type: object
       required: [anacForm,espd]
       additionalProperties: false

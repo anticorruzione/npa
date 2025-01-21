@@ -30,7 +30,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP4_2Type'    
    SchedaP4_2Type:
-      description: Scheda di Locazione Finanziaria. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 174 comma 3 decreto legislativo 36/2023. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
+      description: PPP - Locazione finanziaria. Articolo 31, paragrafo 1, della direttiva 2014/23/UE. Articolo 174 comma 3 decreto legislativo 36/2023. Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023.
       type: object
       required: [anacForm,eform]
       additionalProperties: false

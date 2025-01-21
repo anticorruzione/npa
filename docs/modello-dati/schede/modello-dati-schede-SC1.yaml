@@ -54,7 +54,7 @@ components:
         datiContratto:
           $ref: '#/components/schemas/DatiContrattoType'
     SchedaSC1Type:
-      description: Scheda di sottoscrizione del contratto
+      description: Sottoscrizione del contratto 
       type: object
       required: [anacForm]
       additionalProperties: false

@@ -32,7 +32,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP7_1_1Type'    
    SchedaP7_1_1Type:
-      description: Procedura negoziata senza bando pari o sopra soglia. Articolo  76 decreto legislativo 36/2023. Articolo  158 decreto legislativo 36/2023. Articolo 18 decreto legislativo 208/2011. Articolo 127 decreto legislativo 36/2023. Articolo 128 decreto legislativo 36/2023.
+      description: Procedura negoziata senza bando pari o sopra soglia con successiva pubblicazione sul TED dell'avviso di aggiudicazione. Articolo  76 decreto legislativo 36/2023. Articolo  158 decreto legislativo 36/2023. Articolo 18 decreto legislativo 208/2011. Articolo 127 decreto legislativo 36/2023. Articolo 128 decreto legislativo 36/2023. Articolo 182 commi 7,8,9 decreto legislativo 36//2023
       type: object
       required: [anacForm]
       additionalProperties: false

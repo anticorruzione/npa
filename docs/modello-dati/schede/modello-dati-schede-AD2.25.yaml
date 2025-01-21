@@ -56,7 +56,7 @@ components:
           items:
             $ref: '#/components/schemas/AggiudicazioneAD2_25Type'      
     SchedaAD2_25Type:
-      description: Affidamento diretto sopra la soglia minima e sotto la soglia comunitaria, generale. Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023. Articolo 50 comma 9 decreto legislativo 36/2023.
+      description: Affidamento diretto sopra la soglia minima e >= limite massimo dell'affidamento diretto, generale. Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023. Articolo 50 comma 9 decreto legislativo 36/2023.
       type: object
       required: [anacForm,espd]
       additionalProperties: false

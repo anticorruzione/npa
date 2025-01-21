@@ -70,7 +70,7 @@ components:
         collaudo:
           $ref: '#/components/schemas/CollaudoType'
     SchedaCL1Type:
-      description: Scheda di collaudo
+      description: Scheda di collaudo. Articolo 116 decreto legislativo 36/2023 e allegato II.14
       type: object
       required: [anacForm]
       additionalProperties: false
