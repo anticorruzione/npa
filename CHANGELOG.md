@@ -1184,7 +1184,7 @@ errori.json: Aggiunto errore REG68_1
 
 
 # Note di rilascio del 21/01/2025 (In Esercizio)
-## Orchestratore
+### Orchestratore
 * Aggiornato il file schema-cronologia-schede.xlsx
 
 ### Schede
