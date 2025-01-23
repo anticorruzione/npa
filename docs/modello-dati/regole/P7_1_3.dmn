@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P7_1_3" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.6.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P7_1_3" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P7_1_3" name="P7_1_3">
     <informationRequirement id="InformationRequirement_1ovi4jt">
       <requiredInput href="#InputData_09c4xl3" />
@@ -53,6 +53,31 @@
         </inputEntry>
         <outputEntry id="LiteralExpression_0fv31nb">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bknjva">
+        <description>REG14: Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </description>
+        <inputEntry id="UnaryTests_1nqnh2h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ojitgl">
+          <text>some lotto in lotti
+satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != "10"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16u5d7a">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG14\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1aiarb7">
+        <description>REG15: Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato</description>
+        <inputEntry id="UnaryTests_1trkfu2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18eglkj">
+          <text>some lotto in lotti satisfies (lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and (lotto.ipotesiCollegamento.cigCollegato = null or count(lotto.ipotesiCollegamento.cigCollegato) = 0 or lotto.ipotesiCollegamento.cigCollegato[1]= ""))</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16lwx6u">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG15\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ikxmb9">

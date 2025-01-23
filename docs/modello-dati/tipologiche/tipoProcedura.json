@@ -86,26 +86,5 @@
 		"de": "Wettbewerbliches Ausschreibungverfahren"
 		},	
     "dataInizio":null,
-    "dataFine":"2025-01-16T00:00:00Z"
-},
-{
-    "codice":"comp-tend",
-    "descrizione": {
-		"it": "Gara d'appalto (articolo 5(3) del regolamento 1370/2007)",
-		"en": "Competitive tendering (article 5(3) of Regulation 1370/2007)",
-		"de": "Wettbewerbsausschreibung (Artikel 5(3) der Verordnung 1370/2007)"
-		},	
-    "dataInizio":"2025-01-17T00:00:00Z",
     "dataFine":null
-},
-{
-    "codice":"exp-int-rail",
-    "descrizione": {
-		"it": "Richiesta di espressione di interesse - solo per il ferroviario (articolo 5(3b) del regolamento 1370/2007)",
-		"en": "Request for expression of interest – only for rail (article 5(3b) of Regulation 1370/2007)",
-		"de": "Aufforderung zur Interessensbekundung - nur für die Bahn (Artikel 5(3b) der Verordnung 1370/2007)"
-		},	
-    "dataInizio":"2025-01-17T00:00:00Z",
-    "dataFine":null
-}
-]
+}]

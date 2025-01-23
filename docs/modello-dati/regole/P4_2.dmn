@@ -146,24 +146,7 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P4_2_0003">
-        <description>REG16: Cig collegato: se Motivo di collegamento CIG è valorizzato a '1: Ripetizione di lavori o servizi analoghi' il cig collegato deve prevedere ripetizioni.</description>
-        <inputEntry id="UnaryTests_P4_2_0007">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P4_2_0008">
-          <text>some lotto in lotti
-satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice = "1"
-and count(lotto.ipotesiCollegamento.cigCollegato) &lt;2</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P4_2_0009">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P4_2_0003">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG16\"}"</text>
-        </outputEntry>
-      </rule>
-            <rule id="DecisionRule_P1_10_0023">
+      <rule id="DecisionRule_P1_10_0023">
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
         <inputEntry id="UnaryTests_P1_10_0070">

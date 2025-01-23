@@ -46,26 +46,6 @@
 		"de": "Aufträge in kleinem Maßstab an kleine und mittlere Unternehmen"
 		},
     "dataInizio":null,
-    "dataFine":"2025-01-16T00:00:00Z"
-},
-{
-    "codice":"below-thres-sme",
-    "descrizione": {
-		"it": "Piccolo contratto con una piccola o media impresa (articolo 5(4) 2° comma del regolamento 1370/2007)",
-		"en": "Small contract with a small or medium-sized enterprise (article 5(4) 2nd paragraph of Regulation 1370/2007)",
-		"de": "Kleiner Vertrag mit einem kleinen oder mittelständischen Unternehmen (Artikel 5(4) 2. Absatz der Verordnung 1370/2007)"
-		},
-    "dataInizio":"2025-01-17T00:00:00Z",
-    "dataFine":null
-},
-{
-    "codice":"char-imp",
-    "descrizione": {
-		"it": "Caratteristiche strutturali e geografiche del mercato/rete o miglioramento della qualità dei servizi o dell'efficienza dei costi - solo per il ferroviario (articolo 5(4a) del regolamento 1370/2007)",
-		"en": "Structural and geographical characteristics of market/network or improvement of quality of services or cost-efficiency – only for rail (article 5(4a) of Regulation 1370/2007)",
-		"de": "Strukturelle und geographische Merkmale des Marktes/Netzwerks oder Verbesserung der Servicequalität oder Kosteneffizienz - nur für die Bahn (Artikel 5(4a) der Verordnung 1370/2007)"
-		},
-    "dataInizio":"2025-01-17T00:00:00Z",
     "dataFine":null
 },
 {
@@ -169,16 +149,6 @@
     "dataFine":null
 },
 {
-    "codice":"exc-circ-rail",
-    "descrizione": {
-		"it": "Circostanze eccezionali - solo per il ferroviario (articolo 5(3a) del regolamento 1370/2007)",
-		"en": "Exceptional circumstances – only for rail (article 5(3a) of Regulation 1370/2007)",
-		"de": "Außergewöhnliche Umstände - nur für die Bahn (Artikel 5(3a) der Verordnung 1370/2007)"
-		},
-    "dataInizio":"2025-01-17T00:00:00Z",
-    "dataFine":null
-},
-{
     "codice":"exclusive",
     "descrizione": {
 		"it": "L'appalto può essere eseguito solo da un particolare operatore economico per motivi di tutela di diritti esclusivi, inclusi i diritti di proprietà intellettuale",
@@ -216,16 +186,6 @@
 		"de": "Interner Betreiber"
 		},
     "dataInizio":null,
-    "dataFine":"2025-01-16T00:00:00Z"
-},
-{
-    "codice":"int-oper",
-    "descrizione": {
-		"it": "Operatore interno (articolo 5(2) del regolamento 1370/2007)",
-		"en": "Internal operator (article 5(2) of Regulation 1370/2007)",
-		"de": "Interne Betreiber (Artikel 5(2) der Verordnung 1370/2007)"
-		},
-    "dataInizio":"2025-01-17T00:00:00Z",
     "dataFine":null
 },
 {
@@ -326,7 +286,7 @@
 		"de": "Schienenverkehr"
 		},
     "dataInizio":null,
-    "dataFine":"2025-01-17T00:00:00Z"
+    "dataFine":null
 },
 {
     "codice":"rd",
@@ -389,16 +349,6 @@
     "dataFine":null
 },
 {
-    "codice":"sim-infra",
-    "descrizione": {
-		"it": "Gestione simultanea dell'intera o di una parte importante dell'infrastruttura - solo per il ferroviario (articolo 5(4b) del regolamento 1370/2007)",
-		"en": "Simultaneous management of the entire or major part of the infrastructure – only for rail (article 5(4b) of Regulation 1370/2007)",
-		"de": "Gleichzeitiges Management der gesamten oder eines großen Teils der Infrastruktur - nur für die Bahn (Artikel 5(4b) der Verordnung 1370/2007)"
-		},
-    "dataInizio":"2025-01-17T00:00:00Z",
-    "dataFine":null
-},
-{
     "codice":"spe-arrang",
     "descrizione": {
 		"it": "Attività direttamente esposte alla concorrenza e appalti soggetti a disposizioni specifiche",
@@ -426,16 +376,6 @@
 		"de": "Konzessionen, die im Bereich der Luftverkehrsdienste auf der Grundlage der Erteilung einer Betriebsgenehmigung im Sinne der Verordnung (EG) Nr. 1008/2008 oder für Konzessionen im Bereich der öffentlichen Personenverkehrsdienste im Sinne der Verordnung (EG) Nr. 1370/2007 vergeben werden"
 		},
     "dataInizio":null,
-    "dataFine":"2025-01-16T00:00:00Z"
-},
-{
-    "codice":"tra-ser",
-    "descrizione": {
-		"it": "Concessioni per servizi di trasporto aereo basate sulla concessione di una licenza di esercizio nel senso del Regolamento (CE) n. 1008/2008",
-		"en": "Concessions for air transport services based on the granting of an operating licence within the meaning of Regulation (EC) No 1008/2008",
-		"de": "Konzessionen für Luftverkehrsdienste auf der Grundlage der Erteilung einer Betriebslizenz im Sinne der Verordnung (EG) Nr. 1008/2008"
-		},
-    "dataInizio":"2025-01-17T00:00:00Z",
     "dataFine":null
 },
 {

@@ -677,7 +677,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 </details>
 
 <details>
-<summary><h1>Note di rilascio del 05/04/2024</h1></summary>
+<summary><h1>Note di rilascio del 05/04/2024 (in Esercizio)</h1></summary>
 
 **NOTA: La nuova operazione /richiedi-documenti è utilizzabile in ambiente di qualificazione a partire dal 6 giugno**
 
@@ -716,7 +716,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 </details>
 
 <details>
-<summary><h1> Note di rilascio del 21/05/2024 (in Esercizio)</h1></summary>
+<summary><h1>Note di rilascio del 21/05/2024 (in Esercizio il 30/05/2024)</h1></summary>
 
 ### Schede 
 * modello-dati-schede-P2*.yaml, modello-dati-schede-P3*.yaml, modello-dati-schede-P7_3.yaml, modello-dati-schede-AD2*.yaml,modello-dati-schede-AD3.yaml, modello-dati-schede-AD4.yaml, modello-dati-schede-AD5.yaml, modello-dati-schede-A3_6.yaml, modello-dati-schede-dati-comuni.yaml:
@@ -769,9 +769,12 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * enteCertificante.json:
   * nuova tipologica usata internamente dal FE della SA per la trascodfica.
 * aggiornata codiceScheda.json
+
 </details>
 
-# Note di rilascio del 02/08/2024 (Changelog-01 In esercizio)
+<details>
+<summary><h1>Note di rilascio del 02/08/2024 (Changelog-01)</h1></summary>
+	
 **NOTA**
 * Pubblicazione contenuti su GitHub: già pubblicati
 * Rilascio in Qualificazione: 07/08/2024
@@ -787,8 +790,12 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 	* rimossa la richiesta di ESPD
 ### Orchestratore
 * modificata la colonna includeESPD a "NO" per la scheda P3_1
+  
+</details>
 
-# Note di rilascio del 06/08/2024 (Changelog-02 - In esercizio)
+<details>
+<summary><h1>Note di rilascio del 06/08/2024 (Changelog-02 - In Esercizio)</h1></summary>
+
 **NOTA**
 * Pubblicazione contenuti su GitHub: 12/09/2024
 * Rilascio in Qualificazione: 24/09/2024 (rilasciata il 27/09/2024)
@@ -807,7 +814,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * statoAutorizzazione.json
   * aggiunto il valore: 05
 * tipoDocumento.json:
-  * aggiunti i seguenti valori: 00008 00042 00010 e 00011
+  * aggiunti i seguenti valori: 00008, 00042, 00010 e 00011
 * errori.json
   * aggiunto il valore : FVX58, REG111, REG113, FVC01, FVC02 FVX53, FVX54, FVX55, FVX56, FVX57, ERR114, ERR115, ERR116, ERR117, ERR118, ERR119, ERR120, ERR121, ERR122, ERR123
 * tipoPrefettura.json
@@ -829,6 +836,7 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
   * modificato il nome dei modelli dati utlizzato per richiedere i documenti agli enti certificanti. Rimosso il carattere "_"
 * modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede ISDA1,ISDA2 nell'oggetto SchedaComunicaAppaltoType e S0,CSDA1,CSDA2 nell'oggetto SchedaPostPubblicazioneType
 * rimosso il campo idSDA dall'oggetto AppaltoISDABaseType
+* aggiunto il campo importo all'oggetto LottoISDABaseType
   
 ### Schede 
 * issue 853: 
@@ -936,14 +944,15 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 	* inserito controllo sul campo motivazioneCIG
 * ISDA1.dmn, ISDA2.dmn, S0.dmn, CSDA1.dmn, CSDA2.dmn: nuove regole per la gestione dello SDA
 * CM1.dmn,CM2.dmn,AD5.dmn,P5.dmn: aggiornate le regole in coerenza con la nuova cardinalità del cupLotto
-* ISDA1.dmn: aggiunte le regole REG98 e REG99
-* ISDA2.dmn: aggiunte le regole REG98 e REG99
+* ticket 59346 P7_2.dmn rimossa regola 113
+</details>
 
-# Note di rilascio del 06/08/2024 (Changelog-03 In esercizio)
+<details>
+<summary><h1>Note di rilascio del 06/08/2024 (Changelog-03 In Esercizio)</h1></summary>
+
 **NOTA**
-* Pubblicazione contenuti su GitHub: 15/10/2024 (eseguita come da pianificazione)
-* Rilascio in Qualificazione: 15/11/2024 (eseguito come da pianificazione)
-* Rilascio in Esercizio: 16/12/2024 (eseguita come da ultima pianificazione)
+  
+**la nota di rilascio potrà essere integrata successivamente**
     
 ### Modello Dati 
 * modello-dati-npa.yaml: aggiunti i riferimenti alle nuove schede AOC nell'oggetto SchedaComunicaAppaltoType e SOC, COC nell'oggetto SchedaPostPubblicazioneType
@@ -1010,6 +1019,8 @@ Il rilascio in esercizio è pianificato per le ore 13:00 e avra' una durata di c
 * SC1.dmn: aggiunta la regola REG117
 * P1_10.dmn, P1_11.dmn, P1_12.dmn, P1_13.dmn, P1_14.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn, P2_11.dmn, P2_12.dmn, P2_13.dmn, P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P3_4.dmn,P3_5.dmn,P4*.dmn,P6*.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn,AD1_25.dmn,AD2_25.dmn,AD1_26.dmn,AD2_26.dmn,AD1_28.dmn,AD2_28.dmn: aggiunte le regole REG118, REG119, REG120, REG121, REG122
 * AOC.dmn, SOC.dmn, COC.dmn: aggiunte le regole relative alle nuove schede per il flusso degli Organi Costituzionali
+
+</details>
 
 <details>
 <summary><h1>Note di rilascio del 09/09/2024  (In Esercizio)</h1></summary>
@@ -1102,12 +1113,34 @@ errori.json: Aggiunto errore REG68_1
 ### Segnalazioni
   * AD1*.dmn, AD2*.dmn,A1_29.dmn,A1_30.dmn,A1_31.dmn,A1_32.dmn,A1_33.dmn,A1_34.dmn,A1_35.dmn,A2_29.dmn,A2_30.dmn,A2_31.dmn,A2_32.dmn,A2_33.dmn,A2_34.dmn,A2_35.dmn: eliminata la REG68_1
 
-# Note di rilascio del 09/12/2024 (In Esercizio)
+# Note di rilascio del del 28/11/2024 (In Esercizio)
+
+## Modello Dati
+  
+### Segnalazioni
+  * ticket 62742:
+  	* P1_10.dmn, P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn, P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn, P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn, P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P3*.dmn, P4*.dmn, P6*.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn: corretta la sintassi delle regole REG120, REG121, REG122
+  * segnalazione interna:
+    * AOC.dmn, SOC.dmn: corrette le reg REG115, REG116
+
+# Note di rilascio del 29/11/2024 (In Esercizio)
+
+## Modello Dati
+  
+### Regole
+  * ticket 60143:
+  	* P1_10.dmn, P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn, P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn, P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn, P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P3*.dmn, P4*.dmn, P6*.dmn: eliminata la REG29
+   * ticket 59349:
+   	* P1_16.dmn,P1_17.dmn, P1_18.dmn, P2_16.dmn, P2_17.dmn, P2_18.dmn, P3_4.dmn, P3_5.dmn, P6_1.dmn, P6_2.dmn: modificata la REG67
+
 ### Tipologiche
 * ticket 57597:
 	* errori.json: inserito nuovo messaggio di errore ERR124
 * ticket 60734:
 	* errori.json: inseriti nuovi messaggi di errore ERR125, ERR126
+* ticket 59349:
+	* errori.json: modificato l'errore REG67
+
 
 
 <summary><h1>Note di rilascio del 10/12/2024 (Changelog-04 SDK 1.12)</h1></summary>
@@ -1188,7 +1221,33 @@ errori.json: Aggiunto errore REG68_1
 * Aggiornato il file schema-cronologia-schede.xlsx
 
 ### Schede
-* uniformate le descrizioni delle scehde in base a quanto previsto da orchestratore;
+* uniformate le descrizioni delle schede in base a quanto previsto da orchestratore;
+
+
+# Note di rilascio del 23/01/2025 (In Esercizio)
+
+### Regole
+* ticket 62440, 62813:
+  * modificata la REG15, rimossa la REG16:
+    * P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn,P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P6_2.dmn;
+  
+  * rimossa la REG16:
+    * P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn,P6_1.dmn;
+
+  * aggiunta la REG14 e REG15:
+    * P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn;
+
+  * AD3.dmn:
+    * aggiunta la REG31 e REG31_1, REG34_1, REG35_1, REG36_1; rimosse le REG34, REG35 e REG36;
+
+### Orchestratore
+* ticket 65026:
+  * Aggiornato il file schema-cronologia-schede.xlsx
+
+### Tipologiche
+* errori.json:
+  * modificato messaggio di errore REG15
+  * inserito nuovo messaggio di errore REG31, REG31_1, REG34_1, REG35_1, REG36_1;
 
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
