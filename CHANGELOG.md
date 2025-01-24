@@ -1042,7 +1042,8 @@ A1_29.dmn,A1_30.dmn,A1_31.dmn,A1_32.dmn,A1_33.dmn,A1_34.dmn,A1_35.dmn,A1_36.dmn,
 * aggiunto il valore 713 nella colonna flussoAppartenenza
 </details>
 
-# Note di rilascio del 01/10/2024 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 01/10/2024 (In Esercizio)</h1></summary>
 
 ## Modello Dati
 
@@ -1057,8 +1058,10 @@ errori.json: Aggiunto errore REG68_1
   * P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P2_10.dmn,P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn: corretta la sintassi della regola REG106 per considerare anche l'orario
   * P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P1_23.dmn,P1_24.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P2_23.dmn,P2_24.dmn,P3_1.dmn,P3_2.dmn,P3_3.dmn,P3_4.dmn,P3_5.dmn,P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn: corretta la sintassi delle regole REG105 e REG106 per considerare anche l'orario
   * P6_1.dmn,P6_2.dmn: corretta la sintassi della regola REG105 per considerare anche l'orario
- 
-# Note di rilascio del 03/10/2024 (In Esercizio)
+</details>
+
+<details>
+<summary><h1>Note di rilascio del 03/10/2024 (In Esercizio)</h1></summary>
 
 ## Modello Dati
 
@@ -1068,8 +1071,10 @@ errori.json: Aggiunto errore REG68_1
 
 * ticket 59350:
   * P1_23.dmn,P1_24.dmn: eliminate le REG98 e REG99 inserite per errore nell'ultimo rilascio
+</details>
 
-# Note di rilascio del 13/11/2024 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 13/11/2024 (In Esercizio)</h1></summary>
 
 ## Modello Dati
 ### Schede
@@ -1104,16 +1109,19 @@ errori.json: Aggiunto errore REG68_1
 ### Segnalazioni
 * ticket 61371:
   * fix estrazione dati REG68_1
+</details>
   
-  
-# Note di rilascio del 22/11/2024 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 22/11/2024 (In Esercizio)</h1></summary>
 
 ## Modello Dati
   
 ### Segnalazioni
   * AD1*.dmn, AD2*.dmn,A1_29.dmn,A1_30.dmn,A1_31.dmn,A1_32.dmn,A1_33.dmn,A1_34.dmn,A1_35.dmn,A2_29.dmn,A2_30.dmn,A2_31.dmn,A2_32.dmn,A2_33.dmn,A2_34.dmn,A2_35.dmn: eliminata la REG68_1
+</details>
 
-# Note di rilascio del del 28/11/2024 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 28/11/2024 (In Esercizio)</h1></summary>
 
 ## Modello Dati
   
@@ -1122,8 +1130,10 @@ errori.json: Aggiunto errore REG68_1
   	* P1_10.dmn, P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn, P1_16.dmn,P1_17.dmn,P1_19.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn, P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn, P2_16.dmn,P2_17.dmn,P2_19.dmn,P2_20.dmn,P2_21.dmn,P3*.dmn, P4*.dmn, P6*.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn: corretta la sintassi delle regole REG120, REG121, REG122
   * segnalazione interna:
     * AOC.dmn, SOC.dmn: corrette le reg REG115, REG116
+</details>
 
-# Note di rilascio del 29/11/2024 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 29/11/2024 (In Esercizio)</h1></summary>
 
 ## Modello Dati
   
@@ -1140,8 +1150,7 @@ errori.json: Aggiunto errore REG68_1
 	* errori.json: inseriti nuovi messaggi di errore ERR125, ERR126
 * ticket 59349:
 	* errori.json: modificato l'errore REG67
-
-
+</details>
 
 <summary><h1>Note di rilascio del 10/12/2024 (Changelog-04 SDK 1.12)</h1></summary>
 
@@ -1198,12 +1207,11 @@ errori.json: Aggiunto errore REG68_1
 	* aggiornata la REG18
  	* aggiunte le REG19 e REG20_1
 
+<summary><h1>Note di rilascio del 23/12/2024 (In Esercizio)</h1></summary>
 
-# Note di rilascio del 23/12/2024 (In Esercizio)
 ### Tipologiche
 * ticket 62834:
 	* errori.json: inserito nuovo messaggio di errore ERR127
-
 
 # Note di rilascio del 15/01/2025 (In Esercizio)
 ### Orchestratore  
@@ -1222,7 +1230,6 @@ errori.json: Aggiunto errore REG68_1
 
 ### Schede
 * uniformate le descrizioni delle schede in base a quanto previsto da orchestratore;
-
 
 # Note di rilascio del 23/01/2025 (In Esercizio)
 
