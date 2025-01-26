@@ -35,3 +35,15 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 | `25/09/2024`    | `00010` | `Verifica esistenza prospetto informativo disabili` | `-` | `Ministero del Lavoro` |
 | `25/09/2024`    | `00011` | `Verifica esistenza rapporto parità di genere` | `-` | `Ministero del Lavoro` |
 | `In Progress`   | `00009` | `Sanzioni Ispettorato del lavoro` | `-` | `Isp. Naz. Lavoro` |
+
+## Casi di test
+
+Vengono qui riportati i casi di test in ambiente PDND di collaudo degli enti certificanti che li hanno messi a disposizione
+
+
+| `Codice Documento`  | `Descrizione Documento` | `Ente Certificante` | `Caso di test` |
+| :-------------: | :---------------: | :-------------------- | ----------------- | 
+| `00004` | `Certificato integrale del casellario giudiziario`  | `Min.Giustizia` | `1) Cognome: CESARE	Nome: AUGUSTO		Nato il 02/04/1957 a ROMA (ITALIA) CF: CSRGST57D02H501Q, 2) NERONE POMPEO, 01/01/1977, ROMA (ITALIA), NRNPMP77A01H501U, 3) MARCANTONIO GIULIO, 01/05/1971, ROMA (ITALIA), MRCGLI71E01H501B 4) AGRIPPA	MENENIO, 05/01/1968, ROMA (ITALIA), GRPMNN68A05H501H` |
+| `00010` | `Verifica esistenza prospetto informativo disabili` | `Ministero del Lavoro` | `Codice fiscale 48863580097` |
+| `00011` | `Verifica esistenza rapporto parità di genere` | `Ministero del Lavoro` | `Codice fiscale 48863580097` |
+| `00008` | `DURC emesso in corso di validità` | `Inps` | `Codici fiscali 00385090485, 05836271212, SNCFNC59A06F284S` |
