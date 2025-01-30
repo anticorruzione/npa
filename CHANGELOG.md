@@ -1231,6 +1231,7 @@ errori.json: Aggiunto errore REG68_1
 ### Schede
 * uniformate le descrizioni delle schede in base a quanto previsto da orchestratore;
 
+
 # Note di rilascio del 23/01/2025 (In Esercizio)
 
 ### Regole
@@ -1255,6 +1256,14 @@ errori.json: Aggiunto errore REG68_1
 * errori.json:
   * modificato messaggio di errore REG15
   * inserito nuovo messaggio di errore REG31, REG31_1, REG34_1, REG35_1, REG36_1;
+  
+
+# Note di rilascio del 29/01/2025 (In Esercizio)
+
+### Orchestratore
+* ticket 65796:
+  * Modificata la colonna Y "codiciSchedeCorrelate": 
+	  * scheda RI1: aggiunto il valore SQ1
 
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
