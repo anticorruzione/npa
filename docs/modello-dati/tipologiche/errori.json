@@ -3340,4 +3340,24 @@
    },
    "dataInizio":null,
    "dataFine":null
+},
+{
+   "codice":"FVQOE01",
+   "descrizione": {
+       "it": "Criteri di ricerca non ammessi, popolare in modo alternativo chiaveAccesso o codicePrtocolloIstruttoria e codiceFiscaleOE",
+       "en": "Search criteria not allowed, populate in an alternative way keyAccess or codeProtocol Investigation and tax codeOE",
+       "de": "Suchkriterien nicht zulässig, füllen Sie alternativ keyAccess oder codeProtocolInquiry und OE-Steuercode aus"
+   },
+   "dataInizio":null,
+   "dataFine":null
+},
+{
+   "codice":"FVQ01",
+   "descrizione": {
+       "it": "Contratto Fascicolo Chiuso",
+       "en": "Closed File Contract",
+       "de": "Vertrag über geschlossene Dateien"
+   },
+   "dataInizio":null,
+   "dataFine":null
 }]

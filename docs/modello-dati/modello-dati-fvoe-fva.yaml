@@ -384,7 +384,7 @@ components:
             impostato a true.
           type: boolean
           example: true
-    DatiNominativo_00004:
+    DatiNominativo00004:
       description: Oggetto che riporta i dati del soggetto
       type: object
       additionalProperties: false
@@ -455,7 +455,7 @@ components:
               pattern: '^[A-N]\d{3}$'
               maxLength: 4
               example: H501
-    DatiAll_00004:
+    DatiAll00004:
       description: >-
         Oggetto che riporta i dati per richiedere il documento CERTIFICATO DEL
         CASELLARIO GIUDIZIARIO (INTEGRALE)
@@ -466,7 +466,7 @@ components:
         - AltriDati
       properties:
         DatiNominativo:
-            $ref: '#/components/schemas/DatiNominativo_00004'
+            $ref: '#/components/schemas/DatiNominativo00004'
         AltriDati:
           type: object
           additionalProperties: false
@@ -475,26 +475,30 @@ components:
           properties:
             LinguaTedesca:
               description: >-
-                indica se il soggetto é da verificare. In questa release DEVE
+                indica la lingua con cui produrre il documento. In questa release DEVE
                 essere impostato a true.
               type: boolean
               example: true
-    DatiSa00004:
+    DatiSA00004:
       description: >-
         Oggetto che riporta i dati per richiedere il documento CERTIFICATO DEL
         CASELLARIO GIUDIZIARIO (INTEGRALE)
       type: object
       additionalProperties: false
       required:
+        - type
         - datiSoggetti
       properties:
+        type:
+          type: string
+          example: 'DatiSA00004'
         datiSoggetti:
           description: Lista dei nominativi
           type: array
           minItems: 1
           items:
-            $ref: '#/components/schemas/DatiAll_00004'
-    DatiNominativo_00020:
+            $ref: '#/components/schemas/DatiAll00004'
+    DatiNominativo00020:
       description: Oggetto che riporta i dati del soggetto
       type: object
       additionalProperties: false
@@ -542,18 +546,22 @@ components:
               pattern: '^[A-Z]\d{3}$'
               maxLength: 4
               example: F205  
-    DatiSa00020:
+    DatiSA00020:
       description: >-
         Oggetto che riporta i dati per richiedere il documento CERTIFICATO
         DELL'ANAGRAFE DELLE SANZIONI AMMINISTRATIVE DIPENDENTI DA REATO
       type: object
       additionalProperties: false
       required:
+        - type
         - DatiNominativo
         - AltriDati
       properties:
+        type:
+          type: string
+          example: 'DatiSA00020'
         DatiNominativo:
-          $ref: '#/components/schemas/DatiNominativo_00020'
+          $ref: '#/components/schemas/DatiNominativo00020'
         AltriDati:
           type: object
           additionalProperties: false
@@ -566,15 +574,19 @@ components:
                 essere impostato a true.
               type: boolean
               example: true
-    DatiSa00036:
+    DatiSA00036:
       description: >-
         Oggetto che riporta i dati per richiedere il documento DATI REDDITUALI SOCIETA DI PERSONE e per il documento DATI REDDITUALI IMPRESA INDIVIDUALE
       type: object
       additionalProperties: false
       required:
+        - type
         - annoRiferimento
         - domicilioFiscale
       properties:
+        type:
+          type: string
+          example: 'DatiSA00036'
         annoRiferimento:
           description: anno di cui si richiede il documento
           type: string
@@ -593,16 +605,20 @@ components:
               pattern: '^[A-M]\d{3}$'
               maxLength: 4
               example: I318
-    DatiSa00047:
+    DatiSA00047:
       description: >-
         Oggetto che riporta i dati per richiedere il documento CONSISTENZA MEDIA
         PERSONALE
       type: object
       additionalProperties: false
       required:
+        - type
         - matr_OE
         - anno
       properties:
+        type:
+          type: string
+          example: 'DatiSA00047'
         matr_OE:
           description: matricola dell'OE
           type: string
@@ -615,16 +631,20 @@ components:
           pattern: '^(19\d\d|20[0-9][0-9])$'
           maxLength: 4
           example: '2023'
-    DatiSa00048:
+    DatiSA00048:
       description: >-
         Oggetto che riporta i dati per richiedere il documento COSTO COMPLESSIVO
         PERSONALE
       type: object
       additionalProperties: false
       required:
+        - type
         - matr_OE
         - anno
       properties:
+        type:
+          type: string
+          example: 'DatiSA00048'
         matr_OE:
           description: matricola dell'OE
           type: string
@@ -637,15 +657,19 @@ components:
           pattern : '^(19\d\d|20[0-9][0-9])$'
           maxLength: 4
           example: '2023'
-    DatiSa00050:
+    DatiSA00050:
       description: >-
         Oggetto che riporta i dati per richiedere il documento COMUNICAZIONE ANTIMAFIA
       type: object
       additionalProperties: false
       required:
+        - type
         - altrisoggetti
         - prefettura
       properties:
+        type:
+          type: string
+          example: 'DatiSA00850'
         prefettura:
           description: Prefettura. Fare riferimento ai valori contenuti nel file [tipoPrefettura.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoPrefettura.json)
           pattern: IT-(AG|AL|AN|AO|AR|AP|AT|AV|BA|BT|BL|BN|BG|BI|BO|BZ|BS|BR|CA|CL|CB|CI|CE|CT|CZ|CH|CO|CS|CR|KR|CN|EN|FM|FE|FI|FG|FC|FR|GE|GO|GR|IM|IS|SP|AQ|LT|LE|LC|LI|LO|LU|MC|MN|MS|MT|ME|MI|MO|MB|NA|NO|NU|OR|PD|PA|PR|PV|PG|PU|PE|PC|PI|PT|PN|PZ|PO|RG|RA|RC|RE|RI|RN|RM|RO|SA|SS|SV|SI|SR|SO|SU|TA|TE|TR|TO|TP|TN|TV|TS|UD|VA|VE|VB|VC|VR|VV|VI|VT)$
@@ -659,15 +683,19 @@ components:
           minItems: 1
           items:
             $ref: '#/components/schemas/Soggetto00050'
-    DatiSa00899:
+    DatiSA00899:
       description: >-
         Oggetto che riporta dati generici dell' Operatore Economico
       type: object
       additionalProperties: false
       required:
+        - type
         - tipoDocumentoOE
         - dettaglioDocumentoOE
       properties:
+        type:
+          type: string
+          example: 'DatiSA00899'
         tipoDocumentoOE:
           description: Descrizione breve del tipo documento che si vuole richiedere all'OE
           type: string
@@ -694,10 +722,12 @@ components:
         datiRichiesta:
           description: dati necessari alla richiesta specifici per tipoDocumento inviati in formato json.
           oneOf:
-            - $ref: '#/components/schemas/DatiSa00004'
-            - $ref: '#/components/schemas/DatiSa00020'
-            - $ref: '#/components/schemas/DatiSa00036'
-            - $ref: '#/components/schemas/DatiSa00047'
-            - $ref: '#/components/schemas/DatiSa00048'
-            - $ref: '#/components/schemas/DatiSa00050'
-            - $ref: '#/components/schemas/DatiSa00899'        
+            - $ref: '#/components/schemas/DatiSA00004'
+            - $ref: '#/components/schemas/DatiSA00020'
+            - $ref: '#/components/schemas/DatiSA00036'
+            - $ref: '#/components/schemas/DatiSA00047'
+            - $ref: '#/components/schemas/DatiSA00048'
+            - $ref: '#/components/schemas/DatiSA00050'
+            - $ref: '#/components/schemas/DatiSA00899'        
+          discriminator:
+            propertyName: type

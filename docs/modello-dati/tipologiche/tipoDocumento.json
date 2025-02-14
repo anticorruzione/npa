@@ -151,6 +151,14 @@
       "dataInizio": null,
       "dataFine": null
 },{
+      "codice": "00898",
+      "descrizione": {
+        "it": "Documento generico SOA",
+        "en": "Documento generico SOA"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
       "codice": "00899",
       "descrizione": {
         "it": "Documento generico OE",
@@ -225,8 +233,8 @@
 },{
   "codice": "00007",
   "descrizione": {
-    "it": "Iscrizione WhiteList antimafia",
-    "en": "Iscrizione WhiteList antimafia"
+    "it": "Iscrizione WhiteList antimafia",
+    "en": "Iscrizione WhiteList antimafia"
   },
   "dataInizio": null,
   "dataFine": null
