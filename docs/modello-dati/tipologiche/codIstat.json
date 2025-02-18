@@ -11795,7 +11795,7 @@
 		"en": "BARDELLO"
 		},
     "dataInizio":"2000-01-01T00:00:00Z",
-    "dataFine":"2099-12-31T00:00:00Z"
+	"dataFine":"2022-12-31T23:00:00Z"
 },
 {
     "codice":"003012010",
@@ -11876,7 +11876,25 @@
 		"en": "BREGANO"
 		},
     "dataInizio":"2000-01-01T00:00:00Z",
-    "dataFine":"2099-12-31T00:00:00Z"
+	"dataFine":"2022-12-31T23:00:00Z"
+},
+{
+    "codice":"003012144",
+    "descrizione": {
+		"it": "BARDELLO CON MALGESSO E BREGANO",
+		"en": "BARDELLO CON MALGESSO E BREGANO"
+		},
+    "dataInizio":"1999-12-31T23:00:00Z",
+	"dataFine":"2099-12-30T23:00:00Z"
+},
+{
+    "codice":"003013256",
+    "descrizione": {
+		"it": "UGGIATE CON RONAGO",
+		"en": "UGGIATE CON RONAGO"
+		},
+    "dataInizio":"1999-12-31T23:00:00Z",
+	"dataFine":"2099-12-30T23:00:00Z"
 },
 {
     "codice":"003012019",
@@ -12569,7 +12587,7 @@
 		"en": "MALGESSO"
 		},
     "dataInizio":"2000-01-01T00:00:00Z",
-    "dataFine":"2099-12-31T00:00:00Z"
+	"dataFine":"2022-12-31T23:00:00Z"
 },
 {
     "codice":"003012096",
@@ -33117,6 +33135,24 @@
 		},
     "dataInizio":"2000-01-01T00:00:00Z",
     "dataFine":"2099-12-31T00:00:00Z"
+},
+{
+    "codice":"005025075",
+    "descrizione": {
+		"it": "SETTEVILLE",
+		"en": "SETTEVILLE"
+		},
+    "dataInizio":"1999-12-31T23:00:00Z",
+    "dataFine":"2099-12-30T23:00:00Z"
+},
+{
+    "codice":"005028108",
+    "descrizione": {
+		"it": "SANTA CATERINA D'ESTE",
+		"en": "SANTA CATERINA D'ESTE"
+		},
+    "dataInizio":"1999-12-31T23:00:00Z",
+    "dataFine":"2099-12-30T23:00:00Z"
 },
 {
     "codice":"005027043",

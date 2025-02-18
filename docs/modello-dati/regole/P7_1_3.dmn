@@ -80,6 +80,60 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG15\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_00aco6n">
+        <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
+        <inputEntry id="UnaryTests_005gb65">
+          <text>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oejnu3">
+          <text>(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c2ipb9">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fd3l00">
+        <description>REG19: E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</description>
+        <inputEntry id="UnaryTests_0lpdl6k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l0nv27">
+          <text>some lotto in lotti satisfies is defined(lotto.acquisizioneCup) and lotto.acquisizioneCup and (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qpebk6">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG19\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cws9cr">
+        <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
+- lotto.acquisizionecup=’N’ e oggettoContratto="services" o ‘supplies’
+- lotto.acquisizionecup=’N’ e oggettoContratto="works" e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
+        <inputEntry id="UnaryTests_19my0vn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jpmn1j">
+          <text>some lotto in lotti
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11th55r">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18vvnbm">
+        <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
+        <inputEntry id="UnaryTests_0tc63jg">
+          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17au8z4">
+          <text>(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) &gt; 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1g5gy6p">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1ikxmb9">
         <description>REG98: L'importo indicato nell'oggetto appalto.datiBase.importo deve essere &gt; 0.</description>
         <inputEntry id="UnaryTests_0edphb3">

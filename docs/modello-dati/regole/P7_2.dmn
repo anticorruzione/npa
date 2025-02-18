@@ -8,7 +8,7 @@
       <requiredInput href="#InputData_1uv2z7c" />
     </informationRequirement>
     <decisionTable id="DecisionTable_P7_2" hitPolicy="COLLECT">
-      <input id="InputClause_0609wxu">
+      <input id="InputClause_0609wxu" biodi:width="250">
         <inputExpression id="LiteralExpression_03xw5rj" typeRef="string">
           <text>appalto</text>
         </inputExpression>
@@ -18,7 +18,7 @@
           <text>lotti</text>
         </inputExpression>
       </input>
-      <output id="Errore_P7_2" name="Errore" typeRef="string" biodi:width="477" />
+      <output id="Errore_P7_2" name="Errore" typeRef="string" biodi:width="384" />
       <rule id="DecisionRule_1211n5w">
         <description>REG4_1: Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
         <inputEntry id="UnaryTests_0k6f521">
@@ -78,6 +78,86 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
         </inputEntry>
         <outputEntry id="LiteralExpression_1wqn5wh">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG15\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15e6rgd">
+        <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
+        <inputEntry id="UnaryTests_1m9lh6w">
+          <text>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x1ecp1">
+          <text>(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dwt69k">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03tqbf2">
+        <description>REG19: E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</description>
+        <inputEntry id="UnaryTests_185n5a4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0akxun0">
+          <text>some lotto in lotti satisfies is defined(lotto.acquisizioneCup) and lotto.acquisizioneCup and (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04nstb4">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG19\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1erqmep">
+        <description>REG20: Cup associati al lotto: il campo non è obbligatorio se:
+- lotto.acquisizionecup=’N’ e oggettoContratto="services" o ‘supplies’
+- lotto.acquisizionecup=’N’ e oggettoContratto="works" e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</description>
+        <inputEntry id="UnaryTests_1hh3rkh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nrpl9i">
+          <text>some lotto in lotti
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gv6yjh">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02aszdj">
+        <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
+        <inputEntry id="UnaryTests_1p22eh9">
+          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v9rslk">
+          <text>(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) &gt; 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0toxsaa">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0j3o2t9">
+        <description>REG37: Somme opzioni e rinnovi: se l’appalto prevede opzioni/rinnovi deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_10x7qou">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q3evfi">
+          <text>some lotto in lotti
+satisfies lotto.opzioniRinnovi and (lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t0og9d">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG37\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oa0mv0">
+        <description>REG38: Somme ripetizione: se l’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari deve essere indicato un importo maggiore di 0.</description>
+        <inputEntry id="UnaryTests_09oqzpx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hzkxa3">
+          <text>some lotto in lotti
+satisfies lotto.ripetizioniEConsegneComplementari and (lotto.quadroEconomicoStandard.sommeRipetizioni = null or lotto.quadroEconomicoStandard.sommeRipetizioni = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n5nieo">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG38\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ikxmb9">

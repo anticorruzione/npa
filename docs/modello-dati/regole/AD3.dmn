@@ -190,7 +190,7 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
       <rule id="DecisionRule_0eszjic">
         <description>REG100: Negli affidamenti diretti è consentito inserire un solo idPartecipante, se non è un accordo quadro</description>
         <inputEntry id="UnaryTests_0j7ded2">
-          <text>(appalto.accordoQuadro =false)</text>
+		  <text>(is defined(appalto.accordoQuadro) and appalto.accordoQuadro = false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0j6tkpb">
           <text>(some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1)</text>
