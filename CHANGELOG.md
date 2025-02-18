@@ -1157,7 +1157,7 @@ errori.json: Aggiunto errore REG68_1
 **NOTA**
 * Pubblicazione contenuti su GitHub: 10/12/2024 (completato come da pianificazione)
 * Rilascio in Qualificazione: 17/01/2025 (completato, escluso sdk 1.12)
-* Rilascio in Esercizio: 17/02/2025 (escluso sdk1.12)
+* Rilascio in Esercizio: 17/02/2025 (completato, escluso sdk1.12)
 * Rilascio in Esercizio sdk1.12: ripianificato al 27/03/2025
   
 **la nota di rilascio potrà essere integrata successivamente**
