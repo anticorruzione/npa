@@ -30,4 +30,21 @@
 		},
     "dataInizio":null,
     "dataFine":null
-}]
+},{
+    "codice":"FVQ",
+    "descrizione": {
+        "it": "Fascicolo Virtuale del contratto SOA",
+        "en": "Fascicolo Virtuale del contratto SOA"
+        },
+    "dataInizio":null,
+    "dataFine":null
+},{
+    "codice":"FVQOE",
+    "descrizione": {
+        "it": "Fascicolo Virtuale del contratto SOA dell'OE",
+        "en": "Fascicolo Virtuale del contratto SOA dell'OE"
+        },
+    "dataInizio":null,
+    "dataFine":null
+}
+]
