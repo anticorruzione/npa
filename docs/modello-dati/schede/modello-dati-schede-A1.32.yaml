@@ -7,7 +7,7 @@ components:
     AnacFormA1_32Type:
       description: Contiene tutti i dati relativi all'aggiudicazione.
       type: object
-      required: [appalto,aggiudicazioni]
+      required: [aggiudicazioni]
       additionalProperties: false
       properties:
         appalto:

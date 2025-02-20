@@ -7,7 +7,7 @@ components:
     AnacFormA4_4Type:
       description: Contiene i dati per la scheda di aggiudicazione relativa al contratto EPC.
       type: object
-      required: [appalto,aggiudicazioni] 
+      required: [aggiudicazioni] 
       additionalProperties: false
       properties:
         appalto:

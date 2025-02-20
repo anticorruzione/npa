@@ -7,7 +7,7 @@ components:
     AnacFormA4_6Type:
       description: Contiene i dati per la scheda di aggiudicazione relativa ai contratti di partenariato sociale.
       type: object
-      required: [appalto,aggiudicazioni] 
+      required: [aggiudicazioni] 
       additionalProperties: false
       properties:
         appalto:

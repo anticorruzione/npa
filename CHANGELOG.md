@@ -1267,6 +1267,14 @@ errori.json: Aggiunto errore REG68_1
 	  * scheda RI1: aggiunto il valore SQ1
 
 
+# Note di rilascio del 20/02/2025 (In Esercizio)
+
+## Modello Dati
+### Schede
+* ticket 62734, 67380, 66167:
+	* rimossa obbligatorietà del campo appalto all'interno di anacForm per le schede A1_32, A2_32, A2_35, A3_1, A3_2, A4_1, A4_2, A4_3, A4_4, A4_5, A4_6;
+
+
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.

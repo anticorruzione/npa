@@ -36,7 +36,7 @@ components:
     AnacFormA3_1Type:
       description: Contiene tutti i dati relativi all'aggiudicazione
       type: object
-      required: [appalto,aggiudicazioni]
+      required: [aggiudicazioni]
       properties:
         appalto:
           $ref: '#/components/schemas/AppaltoA3_1Type'
