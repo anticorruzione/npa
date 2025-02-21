@@ -3,7 +3,8 @@ info:
   title: Modello Dati - Scheda S2R - Scheda di rettifica o integrazione dei dati inviati con la scheda S2.
   description: | 
     La scheda S2R deve essere utilizzata per rettificare o integrare i dati dei partecipanti.\
-    La scheda può essere inviata più volte solo dopo la scheda S2 e solo prima della successiva scheda di aggiudicazione.\In caso di partecipante singolo le operazioni consentite sono inserimento e variazione.\
+    La scheda può essere inviata più volte solo dopo la scheda S2 e solo prima della successiva scheda di aggiudicazione.
+    \In caso di partecipante singolo le operazioni consentite sono inserimento e variazione.\
     Inserimento - Indicare un nuovo idPartecipante per inserirlo in elenco.\
     Variazione - Indicando un idPartecipante esistente il sistema sovrascriverà le informazioni presenti con quelle inviate.\
     In caso di gruppo deve essere sempre inviata la struttura completa dei partecipanti, con tutte le informazioni. Il sistema sostituirà i dati esistenti con quelli inviati in rettifica.\
