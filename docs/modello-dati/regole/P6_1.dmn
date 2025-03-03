@@ -102,7 +102,7 @@ satisfies lotto.datiBase.oggettoContratto.codice="services" and lotto.servizioPu
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
         <inputEntry id="UnaryTests_P1_10_0070">
-          <text>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
+          <text>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = ""))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_10_0071">
           <text>(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</text>
@@ -151,7 +151,7 @@ satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lo
       <rule id="DecisionRule_05j4hmh">
         <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
         <inputEntry id="UnaryTests_07hyco2">
-          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
+          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "" and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m3r99y">
           <text>(some lotto in lotti

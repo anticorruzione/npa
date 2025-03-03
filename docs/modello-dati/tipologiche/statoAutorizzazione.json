@@ -38,4 +38,12 @@
       },
     "dataInizio":null,
     "dataFine":null
+},{
+   "codice": "06",
+   "descrizione": {
+        "it": "Annullata",
+        "en": "Annullata"
+      },
+    "dataInizio":null,
+    "dataFine":null
 }]

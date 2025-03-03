@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD1_26" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.4.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD1_26" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_0evotmu" name="appalto" />
   <inputData id="InputData_0klp5hk" name="aggiudicazioni" />
   <decision id="AD1_26" name="AD1_26">
@@ -47,9 +47,9 @@
       </rule>
       <rule id="DecisionRule_AD1_10_0023">
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
-’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
         <inputEntry id="UnaryTests_AD1_10_0070">
-          <text></text>
+          <text>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = ""))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0071">
           <text>some aggiudicazione in aggiudicazioni
@@ -57,6 +57,31 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR = true and (aggiudicazione.ac
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0024">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vlhokw">
+        <description>REG19: E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</description>
+        <inputEntry id="UnaryTests_0juzcpa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01lqhzu">
+          <text>some aggiudicazione in aggiudicazioni satisfies is defined(aggiudicazione.acquisizioneCup) and aggiudicazione.acquisizioneCup and (is defined(aggiudicazione.cupLotto)=false or count(aggiudicazione.cupLotto) = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zjfr8y">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG19\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yopd4b">
+        <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
+        <inputEntry id="UnaryTests_0mzerko">
+          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "" and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18no6o0">
+          <text>(some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.afferenteInvestimentiPNRR = true and is defined(aggiudicazione.cupLotto) and count(aggiudicazione.cupLotto) &gt; 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kla2xr">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_AD1_10_0033">
@@ -199,7 +224,7 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG112\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_12xm90p">
+      <rule id="DecisionRule_12xm90p">
         <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
         <inputEntry id="UnaryTests_0xe75lf">
           <text></text>

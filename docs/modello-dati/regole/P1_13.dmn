@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_13" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_13" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P1_13" name="P1_13">
     <informationRequirement id="InformationRequirement_P1_13_01">
       <requiredInput href="#InputData_appalto_P1_13" />
@@ -85,9 +85,9 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_13_0004">
-        <description>REG4_1: Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
+        <description>REG4_1: Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
         <inputEntry id="UnaryTests_P1_13_0010">
-          <text>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice = null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</text>
+          <text>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = "")) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_13_0011">
           <text></text>
@@ -97,21 +97,6 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_13_0004">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_1\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P1_13_0005">
-        <description>REG4_2: Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
-        <inputEntry id="UnaryTests_P1_13_0013">
-          <text>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice != null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice = "999"))</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_13_0014">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_13_0015">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_13_0005">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_2\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_13_0001">
@@ -258,7 +243,7 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
         <inputEntry id="UnaryTests_P1_10_0070">
-          <text>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
+          <text>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = ""))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_P1_10_0071">
           <text>(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</text>
@@ -307,7 +292,7 @@ satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lo
       <rule id="DecisionRule_05j4hmh">
         <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
         <inputEntry id="UnaryTests_07hyco2">
-          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
+          <text>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "" and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m3r99y">
           <text>(some lotto in lotti

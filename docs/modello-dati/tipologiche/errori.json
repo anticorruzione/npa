@@ -3360,4 +3360,14 @@
    },
    "dataInizio":null,
    "dataFine":null
+},
+{
+   "codice":"FVX67",
+   "descrizione": {
+       "it": "Errore Servizio esterno. Aggiorna Autorizzazione - Non Disponibile",
+       "en": "External Service Error. Update Authorization - Not Available",
+       "de": "Externer Servicefehler. Update-Autorisierung – Nicht verfügbar"
+   },
+   "dataInizio":null,
+   "dataFine":null
 }]

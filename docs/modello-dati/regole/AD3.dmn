@@ -47,9 +47,11 @@
       </rule>
       <rule id="DecisionRule_AD1_10_0023">
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione
+REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
         <inputEntry id="UnaryTests_AD1_10_0070">
-          <text></text>
+          <text>((is defined(appalto.accordoQuadro)=true and appalto.accordoQuadro=false) or is defined(appalto.accordoQuadro)=false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_AD1_10_0071">
           <text>some aggiudicazione in aggiudicazioni
@@ -57,6 +59,31 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR = true and (aggiudicazione.ac
         </inputEntry>
         <outputEntry id="LiteralExpression_AD1_10_0024">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG18\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tvexko">
+        <description>REG19: E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</description>
+        <inputEntry id="UnaryTests_05at2iz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a9l1mu">
+          <text>some aggiudicazione in aggiudicazioni satisfies is defined(aggiudicazione.acquisizioneCup) and aggiudicazione.acquisizioneCup and (is defined(aggiudicazione.cupLotto)=false or count(aggiudicazione.cupLotto) = 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cw7h2z">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG19\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m35f39">
+        <description>REG20_1: Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</description>
+        <inputEntry id="UnaryTests_11hubqn">
+          <text>(is defined(appalto.accordoQuadro)=true and appalto.accordoQuadro)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lr0qfb">
+          <text>(some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.afferenteInvestimentiPNRR = true and is defined(aggiudicazione.cupLotto) and count(aggiudicazione.cupLotto) &gt; 0)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yzhiac">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0h3nkj1">
@@ -190,7 +217,7 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
       <rule id="DecisionRule_0eszjic">
         <description>REG100: Negli affidamenti diretti è consentito inserire un solo idPartecipante, se non è un accordo quadro</description>
         <inputEntry id="UnaryTests_0j7ded2">
-		  <text>(is defined(appalto.accordoQuadro) and appalto.accordoQuadro = false)</text>
+          <text>(is defined(appalto.accordoQuadro) and appalto.accordoQuadro = false)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0j6tkpb">
           <text>(some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1)</text>
