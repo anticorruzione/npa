@@ -1,17 +1,20 @@
 # AVVISI:
 ## 1
+Si comunica che la REG4_1 è stata sospesa fino al 16 maggio 2025 poichè poteva causare il fallimento della conferma di avvisi di rettifica per bandi pubblicati prima del rilascio del changelog-04, laddove la regola, malfunzionante, era stata fixata.
+
+## 2
 Si invitano tutti gli utenti a prendere visione del calendario di manutenzione programmata degli ambienti PDND da parte di PagoPA:
 -	Attestazione lunedì 10 marzo dalle 14.00 alle 17:00
 -	Collaudo mercoledì 12 marzo dalle 14.00 alle 17:00
 -	Produzione sabato 15 marzo dalle 16.00 alle 19:00
 
-## 2
+## 3
 E' stata pubblicata sulla PDND di attestazione e di esercizio la nuova versione dei servizi FVC che include il richiedi-documenti in POST
 
-## 3
+## 4
 Come da [roadmap](/docs/specifiche-jws/roadmap.md), si ricorda a tutti i soggetti che sono stati autorizzati all’accesso temporaneo agli eService della Piattaforma Contratti Pubblici, che a partire dal 9 ottobre 2023, per poter accedere agli eService attualmente disponibili che implementano il contesto di sicurezza, dovranno effettuare l’onboarding su PDND attraverso la richiesta di iscrizione tra le piattaforme certificate come indicato nelle [regole tecniche](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) emanate da AgID 
 
-## 4
+## 5
 Attivato il nuovo ambiente di ATTESTAZIONE per le piattaforme.
 L'ambiente è destinato all'esecuzione di test funzionali per la verifica delle attività di MAC, è esposto su PDND e disponibile alle sole piattaforme certificate.
 ANAC non garantisce livelli di servizio sulla disponibilità dell'ambiente ed è ammesso un disallineamento temporaneo di versione tra tale ambiente e quello di esercizio in coincidenza con le operazioni di rilascio di MAC, MAD o MEV.
