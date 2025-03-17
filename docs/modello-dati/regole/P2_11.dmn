@@ -84,21 +84,6 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P2_11_0004">
-        <description>REG4_1: Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
-        <inputEntry id="UnaryTests_P2_11_0010">
-          <text>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = "")) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P2_11_0011">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P2_11_0012">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P2_11_0004">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_1\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_P2_11_0013">
         <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'ggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 5.382.000.</description>
         <inputEntry id="UnaryTests_P2_11_0037">
@@ -289,7 +274,6 @@ satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) 
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
         </outputEntry>
       </rule>
-
       <rule id="DecisionRule_P2_11_0025">
         <description>REG21: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: La sezione è obbligatoria se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
         <inputEntry id="UnaryTests_P2_11_0076">
@@ -611,7 +595,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_1cl23sc">
+      <rule id="DecisionRule_1cl23sc">
         <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
         <inputEntry id="UnaryTests_15v9bsf">
           <text></text>

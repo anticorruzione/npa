@@ -84,21 +84,6 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P1_19_0004">
-        <description>REG4_1: Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
-        <inputEntry id="UnaryTests_P1_19_0010">
-          <text>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = "")) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_19_0011">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_19_0012">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_19_0004">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_1\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_P1_19_0013">
         <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'ggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 5.382.000.</description>
         <inputEntry id="UnaryTests_P1_19_0037">

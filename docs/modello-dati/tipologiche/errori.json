@@ -1045,8 +1045,8 @@
 {
     "codice":"ERR117",
     "descrizione": {
-		"it": "Per un partecipante con stato In valutazione è possibile inserire solo operazioni di conferma e cancellazione.",
-		"en": "For a participant with status In evaluation, only Confirm and Delete operations can be performed."
+		"it": "Per un partecipante con stato In valutazione è possibile inserire solo operazioni di conferma, modifica e cancellazione.",
+		"en": "For a participant with status In evaluation, only Confirm, Modify and Delete operations can be performed."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1054,8 +1054,8 @@
 {
     "codice":"ERR118",
     "descrizione": {
-		"it": "Per un partecipante con stato Iscritto è possibile inserire solo operazioni di rivalutazione e cancellazione.",
-		"en": "For a participant with status Enrolled, only Re-evaluation and Delete operations can be performed."
+		"it": "Per un partecipante con stato Iscritto è possibile inserire solo operazioni di rivalutazione, modifica e cancellazione.",
+		"en": "For a participant with status Enrolled, only Re-evaluation, Modify and Delete operations can be performed."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1068,7 +1068,16 @@
 	},
     "dataInizio":null,
     "dataFine":null
-},	
+},		
+{
+    "codice":"ERR119_1",
+    "descrizione": {
+		"it": "Per un nuovo partecipante è possibile inserire solo operazioni di inserimento e conferma.",
+		"en": "For a new participant only Insert and Confirm operations can be performed"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
 {
     "codice":"ERR120",
     "descrizione": {
@@ -2969,6 +2978,15 @@
    "descrizione": {
        "it": "Soggetto Rappresentato non presente",
        "en": "Soggetto Rappresentato non presente"
+   },
+   "dataInizio":null,
+   "dataFine":null   
+},	
+{
+   "codice":"SEC16",
+   "descrizione": {
+       "it": "Stazione appaltante non abilitata",
+       "en": "Stazione appaltante non abilitata"
    },
    "dataInizio":null,
    "dataFine":null   

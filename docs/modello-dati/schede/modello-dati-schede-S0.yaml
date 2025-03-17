@@ -1,6 +1,12 @@
 openapi: 3.0.0
 info:
   title: Modello Dati - Scheda S0 - Elenco richieste di adesione SDA
+  description: | 
+    L'operazione di Inserimento pone in stato "In Valutazione" il partecipante nel caso di nuovo partecipante o di partecipante precedentemente cancellato. \
+    L'operazione di Conferma pone in stato "Iscritto" il partecipante nel caso di partecipante con stato "In valutazione" o in stato "Cancellato", e permette l'inserimento diretto di un nuovo partecipante in stato "Iscritto". \
+    L'operazione di Rivalutazione pone in stato "In Valutazione" il partecipante con stato "Iscritto". \
+    L'operazione di Modifica è possibile per partecipanti in stato "In valutazione" o "Iscritto", lasciando inalterato lo stato del partecipante. \
+    L'operazione di Cancellazione è possibile per partecipanti in stato "In valutazione" o "Iscritto", e pone lo stato del partecipante in "Cancellato".
   version: 1.0.0
 components:
   schemas:

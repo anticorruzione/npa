@@ -19,18 +19,6 @@
         </inputExpression>
       </input>
       <output id="Errore_P7_1_1" name="Errore" typeRef="string" biodi:width="477" />
-      <rule id="DecisionRule_1211n5w">
-        <description>REG4_1: Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</description>
-        <inputEntry id="UnaryTests_0k6f521">
-          <text>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = "")) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1y6sd5n">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0b7jcfl">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_1\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1p14lkf">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_02rz0vc">
