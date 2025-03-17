@@ -1296,8 +1296,11 @@ errori.json: Aggiunto errore REG68_1
 	* aggiunta descrizione sulle tipologie di operazioni consentitE per la scheda S0;
 
 ### Regole
-* rimossa la REG68 per le schede A1_32, A1_35;
-  
+* ticket 69407:
+  * eliminata la REG 4_1 da ripristinare in data 16/05/2025 su Indicazione specifica nella call del 10/03/2025
+  * sulle seguenti schede:
+  * P1_10, P1_11, P1_12, P1_13, P1_14, P1_16, P1_17, P1_19, P1_20, P1_21, P2_10, P2_11, P2_12, P2_13, P2_14, P2_16, P2_17, P2_19, P2_20, P2_21, P7_1_1, P7_1_2, P7_1_3, P7_2
+
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
