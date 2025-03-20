@@ -1303,6 +1303,9 @@ errori.json: Aggiunto errore REG68_1
 * modello-dati-schede-S0.yaml (ticket 68069, 68308, 68309, 68310, 68311, 67614, 68829, 68946, 69212):
 	* aggiunta descrizione sulle tipologie di operazioni consentitE per la scheda S0;
 
+### Regole
+* rimossa la REG68 per le schede A1_32, A1_35;
+
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
