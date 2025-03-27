@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P3_1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P3_1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_appalto_P3_1" name="appalto" />
   <inputData id="InputData_lotti_P3_1" name="lotti" />
   <inputData id="InputData_stazioniAppaltanti_P3_1" name="stazioniAppaltanti" />
@@ -92,7 +92,7 @@ satisfies lotto.motivoEsclusioneOrdinarioSpeciale.codice= "12"</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG9\"}"</text>
         </outputEntry>
       </rule>
-            <rule id="DecisionRule_P1_10_0023">
+      <rule id="DecisionRule_P1_10_0023">
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
         <inputEntry id="UnaryTests_P1_10_0070">
@@ -158,7 +158,6 @@ satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) 
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
         </outputEntry>
       </rule>
-
       <rule id="DecisionRule_P3_1_0025">
         <description>REG21: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: La sezione è obbligatoria se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
         <inputEntry id="UnaryTests_P3_1_0076">
@@ -303,38 +302,6 @@ satisfies lotto.datiBase.oggettoContratto.codice="supplies" and (lotto.quadroEco
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_1_0010">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG36\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P3_1_0011">
-        <description>REG37: Somme opzioni e rinnovi: se l’appalto prevede opzioni/rinnovi deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_P3_1_0031">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P3_1_0032">
-          <text>some lotto in lotti
-satisfies lotto.opzioniRinnovi and (lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = 0)</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P3_1_0033">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P3_1_0011">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG37\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P3_1_0012">
-        <description>REG38: Somme ripetizione: se l’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari deve essere indicato un importo maggiore di 0.</description>
-        <inputEntry id="UnaryTests_P3_1_0034">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P3_1_0035">
-          <text>some lotto in lotti
-satisfies lotto.ripetizioniEConsegneComplementari and (lotto.quadroEconomicoStandard.sommeRipetizioni = null or lotto.quadroEconomicoStandard.sommeRipetizioni = 0)</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P3_1_0036">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P3_1_0012">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG38\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_1_0036">

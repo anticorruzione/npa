@@ -100,38 +100,6 @@ satisfies lotto.datiBase.oggettoContratto.codice = "works" and lotto.strumentiEl
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P1_19_0001">
-        <description>REG6_1: Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</description>
-        <inputEntry id="UnaryTests_P1_19_0001">
-          <text>appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_19_0002">
-          <text>some lotto in lotti
-satisfies lotto.condizioniNegoziata=null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_19_0003">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_19_0001">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG6_1\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P1_19_0002">
-        <description>REG6_2: Condizioni Negoziata: se il valore del tipo di procedura (scelta contraente) è diverso da "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata non deve essere valorizzato.</description>
-        <inputEntry id="UnaryTests_P1_19_0004">
-          <text>appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_19_0005">
-          <text>some lotto in lotti
-satisfies lotto.condizioniNegoziata != null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_19_0006">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_19_0002">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG6_2\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1t5ps76">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_0v1qx7v">
@@ -404,22 +372,6 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         </inputEntry>
         <outputEntry id="LiteralExpression_P1_19_0038">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1oiflb4">
-        <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</description>
-        <inputEntry id="UnaryTests_1bngedq">
-          <text>appalto.datiBaseProcedura.tipoProcedura.codice = "open" or appalto.datiBaseProcedura.tipoProcedura.codice = "oth-single"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jq49yh">
-          <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="")</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_146yua6">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0otk16x">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG95\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0g72lga">

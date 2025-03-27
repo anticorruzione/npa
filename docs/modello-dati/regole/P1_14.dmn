@@ -84,38 +84,6 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_P1_14_0001">
-        <description>REG6_1: Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</description>
-        <inputEntry id="UnaryTests_P1_14_0001">
-          <text>appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_14_0002">
-          <text>some lotto in lotti
-satisfies lotto.condizioniNegoziata=null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_14_0003">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_14_0001">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG6_1\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_P1_14_0002">
-        <description>REG6_2: Condizioni Negoziata: se il valore del tipo di procedura (scelta contraente) è diverso da "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata non deve essere valorizzato.</description>
-        <inputEntry id="UnaryTests_P1_14_0004">
-          <text>appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_14_0005">
-          <text>some lotto in lotti
-satisfies lotto.condizioniNegoziata != null</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_P1_14_0006">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_P1_14_0002">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG6_2\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1t5ps76">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_0v1qx7v">

@@ -1159,7 +1159,7 @@ errori.json: Aggiunto errore REG68_1
 * Rilascio in Qualificazione: 17/01/2025 (completato, escluso sdk 1.12)
 * Rilascio in Esercizio: 17/02/2025 (completato, escluso sdk1.12)
 * Rilascio in Qualificazione sdk1.12: 18/02/2025 (completato)
-* Rilascio in Esercizio sdk1.12: 27/03/2025
+* Rilascio in Esercizio sdk1.12: 27/03/2025 (completato)
   
 **la nota di rilascio potrà essere integrata successivamente**
     
@@ -1211,13 +1211,16 @@ errori.json: Aggiunto errore REG68_1
 * P1_19.dmn: eliminate le REG6_1, REG6_2, REG95 perché il campo tipoProcedura (bt-105) non è più consentito dal TED nella versione sdk1.12
 * A1_32.dmn, A1_35.dmn: eliminata la REG68 perché il campo tipoProcedura (bt-105) non è più consentito dal TED nella versione sdk1.12
 
+<details>
 <summary><h1>Note di rilascio del 23/12/2024 (In Esercizio)</h1></summary>
 
 ### Tipologiche
 * ticket 62834:
 	* errori.json: inserito nuovo messaggio di errore ERR127
+</details>
 
-# Note di rilascio del 15/01/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 15/01/2025 (In Esercizio)</h1></summary>
 ### Orchestratore  
 * Modificata la colonna V "nuovoStatoAppalto": 
   * schede ISDA1, ISDA2: impostato il valore PUBB
@@ -1226,18 +1229,19 @@ errori.json: Aggiunto errore REG68_1
 * AD1_28.dmn: 
 	* modificato valore dell'attributo id del tag ```<decision>```
   * modificato valore dell'attributo dmnElementRef del tag ```<dmndi:DMNShape>```.
+</details>
 
-
-# Note di rilascio del 21/01/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 21/01/2025 (In Esercizio)</h1></summary>
 ### Orchestratore
 * Aggiornato il file schema-cronologia-schede.xlsx
 
 ### Schede
 * uniformate le descrizioni delle schede in base a quanto previsto da orchestratore;
+</details>
 
-
-# Note di rilascio del 23/01/2025 (In Esercizio)
-
+<details>
+<summary><h1>Note di rilascio del 23/01/2025 (In Esercizio)</h1></summary>
 ### Regole
 * ticket 62440, 62813:
   * modificata la REG15, rimossa la REG16:
@@ -1260,39 +1264,42 @@ errori.json: Aggiunto errore REG68_1
 * errori.json:
   * modificato messaggio di errore REG15
   * inserito nuovo messaggio di errore REG31, REG31_1, REG34_1, REG35_1, REG36_1;
-  
+</details>
 
-# Note di rilascio del 29/01/2025 (In Esercizio)
-
+<details>
+<summary><h1>Note di rilascio del 29/01/2025 (In Esercizio)</h1></summary>
 ### Orchestratore
 * ticket 65796:
   * Modificata la colonna Y "codiciSchedeCorrelate": 
 	  * scheda RI1: aggiunto il valore SQ1
+</details>
 
-
-# Note di rilascio del 20/02/2025 (In Esercizio)
-
+<details>
+<summary><h1>Note di rilascio del 20/02/2025 (In Esercizio)</h1></summary>
 ## Modello Dati
 ### Schede
 * ticket 62734, 67380, 66167:
 	* rimossa obbligatorietà del campo appalto all'interno di anacForm per le schede A1_32, A2_32, A2_35, A3_1, A3_2, A4_1, A4_2, A4_3, A4_4, A4_5, A4_6;
+</details>
 
-
-# Note di rilascio del 03/03/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 03/03/2025 (In Esercizio)</h1></summary>
 ### Regole
 * ticket 60876, 67879 e 68466:
   * modificata la REG4_1, rimossa la REG4_2, corretta sintassi delle REG18, REG19, REG20_1, REG101;
+</details>
 
-
-# Note di rilascio del 10/03/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 10/03/2025 (In Esercizio)</h1></summary>
 ### Regole
 * ticket 69407:
   * eliminata la REG 4_1 da ripristinare in data 16/05/2025 su Indicazione specifica nella call del 10/03/2025
   * sulle seguenti schede:
   * P1_10, P1_11, P1_12, P1_13, P1_14, P1_16, P1_17, P1_19, P1_20, P1_21, P2_10, P2_11, P2_12, P2_13, P2_14, P2_16, P2_17, P2_19, P2_20, P2_21, P7_1_1, P7_1_2, P7_1_3, P7_2
+</details>
 
-
-# Note di rilascio del 17/03/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 17/03/2025 (In Esercizio)</h1></summary>
 ### Tipologiche
 * errori.json:
   * modificato messaggio di errore ERR117, ERR118;
@@ -1301,11 +1308,15 @@ errori.json: Aggiunto errore REG68_1
 ## Modello Dati
 ### Schede
 * modello-dati-schede-S0.yaml (ticket 68069, 68308, 68309, 68310, 68311, 67614, 68829, 68946, 69212):
-	* aggiunta descrizione sulle tipologie di operazioni consentitE per la scheda S0;
+	* aggiunta descrizione sulle tipologie di operazioni consentite per la scheda S0;
+</details>
 
+# Note di rilascio del 27/03/2025 (In Esercizio)
 ### Regole
-* rimossa la REG68 per le schede A1_32, A1_35;
-
+* ticket 60876, 67879 e 68466:
+  * aggiunte le REG21, REG22, REG23, REG24, REG27, REG28 sulle seguenti schede: A3_6, AD1_25, AD1_26, AD1_28, AD2_25, AD2_26, AD2_28, AD3, AD4
+* ticket 70939:
+  * eliminate le REG37, REG38 dalla scheda: P3_1
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
