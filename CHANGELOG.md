@@ -1211,6 +1211,9 @@ errori.json: Aggiunto errore REG68_1
 * P1_19.dmn: eliminate le REG6_1, REG6_2, REG95 perché il campo tipoProcedura (bt-105) non è più consentito dal TED nella versione sdk1.12
 * A1_32.dmn, A1_35.dmn: eliminata la REG68 perché il campo tipoProcedura (bt-105) non è più consentito dal TED nella versione sdk1.12
 
+## Documentazione
+* Nella sezione Standard adottati del file README.md è stata aggiornata la versione sdk dell'eForms da adottare (1.12).
+
 <details>
 <summary><h1>Note di rilascio del 23/12/2024 (In Esercizio)</h1></summary>
 
