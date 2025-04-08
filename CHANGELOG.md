@@ -1321,6 +1321,12 @@ errori.json: Aggiunto errore REG68_1
 * ticket 70939:
   * eliminate le REG37, REG38 dalla scheda: P3_1
 
+# Note di rilascio del 07/04/2025 (In Esercizio)
+### Regole
+* ticket 73104:
+  * rimosse le REG21, REG22, REG23, REG24, REG27, REG28 sulle seguenti schede: A3_6, AD1_25, AD1_26, AD1_28, AD2_25, AD2_26, AD2_28, AD3, AD4
+
+
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.
