@@ -172,3 +172,12 @@ L’Autorità Nazionale Anticorruzione si riserva la facoltà di non fornire ris
 
 # Roadmap del progetto
 Le scadenze principali del progetto (milestones) sono consultabili nella [Roadmap](./roadmap.md). Fermo restando le scadenze principali la roadmap può essere aggiornata in qualunque momento
+
+## Licenza
+Questo progetto è rilasciato sotto la **European Union Public Licence (EUPL), versione 1.2**.
+
+La EUPL è una licenza open source approvata dalla Commissione Europea. Garantisce la libertà di utilizzare, modificare e ridistribuire il software, a condizione che eventuali opere derivate siano rilasciate sotto la stessa licenza o una delle licenze compatibili indicate.
+La EUPL è pensata per essere legalmente valida in tutti gli Stati membri dell'Unione Europea ed è disponibile in tutte le lingue ufficiali dell'UE.
+
+Per maggiori informazioni, consulta il testo completo della licenza (in italiano):  
+📄 [https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12](https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12)
