@@ -21,6 +21,11 @@ ANAC non garantisce livelli di servizio sulla disponibilità dell'ambiente ed è
 Di tale attività viene data informazione sul presente canale, il disallineamento può avere una durata fino a 3 giorni lavorativi.
 Nella sezione Ambienti di interoperabilità i dettagli per la connessione
 
+## 6
+Si comunica che, a causa di un’operazione errata eseguita in fase di aggiornamento della piattaforma DBMS dell’ambiente di Qualificazione, i dati registrati tra le 23:00 del 2 aprile 2025 e le 11:00 del 4 aprile 2025 sono andati persi e non sono recuperabili.
+Ci scusiamo per l’inconveniente.
+Si informa che i servizi sono attualmente correttamente funzionanti.
+
 # Descrizione
 Il repository contiene la documentazione tecnica dei servizi di cooperazione applicativa che **le stazioni appaltanti** possono utilizzare per integrarsi con la Nuova Piattaforma Appalti (NPA) e con il Fascicolo Virtuale dell'Operatore Economico (FVOE) messi a disposizione dall'Autorità Nazionale Anticorruzione (ANAC), per governare l'ecosistema nazionale di approvvigionamento digitale per la gestione degli appalti pubblici.
 
