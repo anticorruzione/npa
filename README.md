@@ -22,7 +22,7 @@ Di tale attività viene data informazione sul presente canale, il disallineament
 Nella sezione Ambienti di interoperabilità i dettagli per la connessione
 
 ## 6
-Si comunica che, a causa di un’operazione errata eseguita in fase di aggiornamento della piattaforma DBMS dell’ambiente di Qualificazione, i dati registrati tra le 23:00 del 2 aprile 2025 e le 11:00 del 4 aprile 2025 sono andati persi e non sono recuperabili.
+Si comunica che, a causa di un’operazione eseguita in fase di aggiornamento della piattaforma DBMS dell’ambiente di Qualificazione, i dati registrati tra le 23:00 del 2 aprile 2025 e le 11:00 del 4 aprile 2025 sono andati persi e non sono recuperabili.
 Ci scusiamo per l’inconveniente.
 Si informa che i servizi sono attualmente correttamente funzionanti.
 
