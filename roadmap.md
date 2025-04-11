@@ -1,8 +1,30 @@
-# Roadmap
-> *Marzo 2023*: rilascio delle specifiche dei servizi esposti dalla NPA per la gestione del Ciclo di vita dell'Appalto, del Fascicolo Virtuale dell'Operatore Economico e del Fascicolo Virtuale dell'Appalto
+<summary><h1>RoadMap della PCP</h1></summary>
 
-> *Luglio 2023*: disponibilità dell'ambiente di qualificazione
+**NOTA**
+- Le date riportate con il carattere asterisco (\*) sono da intendersi come *presunte*, e potranno essere oggetto di variazione.
 
-> *Ottobre 2023*: piattaforma in ambiente di produzione
+---
 
-> *Giugno 2024*: rilascio ulteriori funzionalità per il FVOE
+|ID|Titolo|Descrizione|Documentazione<br>Qualificazione<br>Esercizio|ChangeLog|
+|:---:|:--|:--|:---|:---|
+|61139|Rimozione logica voce dalla tipologica tipoIncarico.json|Rimozione della voce "3": "Aggiudicatario qualificato" dalla tipologica tipoIncarico.json, poiché replica della voce "3" della tipologica TipoSoggetto.json|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|72189|Revisione campo ”strumentiElettroniciSpecifici"|Revisione del campo ”strumentiElettroniciSpecifici”: reso obbligatorio ed esteso a tutte le procedure ad eccezione delle AD5|11/04/2025<br>18/04/2025<br>08/05/2025|CHG-05|
+|69518|Revisione regola ERR 2|Revisione delle verifiche in caso di invio di una scheda di aggiudicazione soprasoglia: Prendere come riferimento l'esito procedura contenuto nell'eform ed applicare i seguenti controlli: valore "open-nw" --> nessun controllo; valore "clos-nw" --> il flag "aggiudicatario" deve essere false per tutti gli elementi della lista partecipanti del lotto; valore "selec-w" --> il flag "aggiudicatario" deve essere true per almeno un elemento della lista partecipanti del lotto|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|59332|Orchestratore - mancano le schede di esecuzione dopo la S4|Modifica della riga dell'orchestratore relativa alla scheda S4 in modo che possa essere inviata in qualunque momento nella fase di esecuzione. Inserimento nella colonna "schedaSuccessiva" dei valori "M1,M1_40,M2,M2_40,SA1,RSU1,SO1,AC1,IR1,CO1,ES1,CL1,S4,S3"|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|60018|Inserimento nuova voce in tipologica 'Modalità di pagamento’ scheda SA1|Introduzione della nuova voce con codice 3 ‘Somme in denaro e trasferimento in proprietà di beni immobili' nella tipologica 'Modalità di pagamento’ della scheda SA1.|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|60848|Aggiornamento Flussi per la Scheda M2|Modifica della riga dell'orchestratore relativa alla scheda M2, aggiungendo il flusso 225 nella colonna "flussoAppartenenza".|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|61321|Nuova voce tipologica per interruzione anticipata CO1|Introduzione della nuova voce "Annullata in autotutela per errore amministrativo" nella tipologica causaInterruzioneAnticipata della scheda CO1|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|61663|Modica Flussi schede M2 e M2_40|Modifica della riga dell'orchestratore relativa alle schede M2 e M2_40, aggiungendo i flussi 40, 711, 712, 713 nella colonna "flussoAppartenenza".|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|61666|Modifica flussi per la scheda M2_40|Modifica della riga dell'orchestratore relativa alla scheda M2_40, aggiungendo i flussi 41,42,43,44,45 e 46 nella colonna "flussoAppartenenza".|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|61692|Modifica flussi per la scheda M2|Modifica della riga dell'orchestratore relativa alla scheda M2, aggiungendo i flussi 31,33,34 nella colonna "flussoAppartenenza".|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|62095|Modifica orchestratore per le schede AD*|Modifica della riga dell'orchestratore relativa alle schede AD1_*, AD2_*, AD3, AD4, AD5 aggiungendo come schedaSuccessiva anche la scheda S4.|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|63880|Schede M*: Migliore specifica del tipo per il campo urlDocumentazione|Impostare l'attributo "format: url" nel campo urlDocumentazione presente nelle schede M*.|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|64532|Aggiunta Stato Finale per Schede CO2|Modifica della riga dell'orchestratore relativa alla scheda CO2, valorizzando la colonna "schedaSuccessiva" con "STATO FINALE".|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|73177|Aggiornamento orchestratore flusso 115|Modifica della riga dell'orchestratore relativa alla scheda P1_15_2, valorizzando la colonna "schedaSuccessiva" con "S1,S2,A1_30".|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|60177|Eliminazione e sostituzione della tipologica 'EsitoProceduraNag'|Deprecata la tipologica esitoProceduraNag perché sostituita da esitoProceduraAnnullata. Eliminazione del file esitoProceduraNag.json dal github. |11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|69676|Scheda P4_1 : Correzione pubblicazioneTED su orchestratore|Modifica della riga dell'orchestratore relativa alla scheda P4_1 (PPP - Finanza di progetto) valorizzando a SI la colonna "pubblicazioneTED".|11/04/2025<br>14/04/2025<br>08/05/2025|CHG-05|
+|69270|Creazione scheda integrazione dati|Inserimento della nuova scheda ID per l'integrazione dei dati non essenziali ai fini della pubblicità legale e del flusso della procedura. La scheda in stesura iniziale prevede la possibilità di modificare la lista di CUP, può essere inviata in qualunque punto del flusso dopo l'azione di pubblicazione e non prevede l'invio di un nuovo avviso.|11/04/2025<br>11/04/2025<br>11/04/2025*|CHG-05|
+|60137|AVR - Introduzione comunicazione anagrafica per avvio verifiche requisiti|Inserimento della comunicazione anagrafica per l'attivazione della verifica dei requisiti. La comunicazione AVR contiene l’anagrafica dei soggetti che hanno manifestato interesse a seguito di un eventuale avviso di indagine di mercato che è stato pubblicato utilizzando una scheda PL1 o PL2, oppure l'anagrafica dei soggetti individuati dalla SA (senza l'invio preventivo di una PL1 e PL2) ai fini di affidamento diretto. La comunicazione consente di attivare l’FVOE per tali soggetti. Non attribuisce il CIG.|15/04/2025<br>16/05/2025*<br>16/06/2025*|CHG-05|
+|56474|TVR - Comunicazione di Termine Verifiche Requisiti FVOE|Introduzione della comunicazione TVR: Terminazione Verifiche FVOE. La comunicazione è utilizzata per indicare il termine delle verifiche FVOE attivate con comunicazione AVR quando la Stazione Appaltante decide di non proseguire con la procedura di affidamento.|15/04/2025<br>16/05/2025*<br>16/06/2025*|CHG-05|
+|58794|Ripristino stato precedente ultima comunicazione|Inserimento funzionalità di annullamento di una comunicazione precedente avvenuta tramite la conferma di una scheda.||CHG-06|
+|74116|<strong>Ripristino regole parità di genere</strong>|Ripristino delle regole REG21, REG22, REG23, REG24, REG27, REG28 sulle seguenti schede: A3_6, AD1_25, AD1_26, AD1_28, AD2_25, AD2_26, AD2_28, AD3, AD4|/<br>/<br>18/04/2025|/|

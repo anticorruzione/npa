@@ -964,7 +964,7 @@ components:
           description: Indicare se è prevista la costituzione di una società di scopo
           type: boolean
         settore:
-          $ref: '#/components/schemas/SettoreEnum'    
+          $ref: '#/components/schemas/SettoreEnum'
     AppaltoP_15Type:
       description: Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione
       type: object
@@ -2227,6 +2227,7 @@ components:
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
+          format: url
         motivoRevisionePrezzi: 
           $ref: '#/components/schemas/MotiviRevisionePrezziEnum'
         cigNuovaProcedura:
@@ -2246,6 +2247,7 @@ components:
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
+          format: url
         motivoRevisionePrezzi: 
           $ref: '#/components/schemas/MotiviRevisionePrezziEnum'
         cigNuovaProcedura:
@@ -2526,7 +2528,7 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64           
+          maxLength: 64  
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
         linkDocumenti:
@@ -2595,7 +2597,7 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64            
+          maxLength: 64   
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
         linkDocumenti:
@@ -2646,7 +2648,7 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64            
+          maxLength: 64         
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
         linkDocumenti:

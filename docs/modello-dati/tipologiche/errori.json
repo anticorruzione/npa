@@ -1187,6 +1187,24 @@
     "dataFine":null
 },	
 {
+    "codice":"ERR132",
+    "descrizione": {
+		"it": "Errore durante la chiamata al servizio di verifica del CUP",
+		"en": "Errore durante la chiamata al servizio di verifica del CUP"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"ERR133",
+    "descrizione": {
+		"it": "Errore durante la chiamata al servizio di verifica del CUP in Regis",
+		"en": "Errore durante la chiamata al servizio di verifica del CUP in Regis"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
@@ -2375,6 +2393,15 @@
     "descrizione": {
 		"it": "L'importo indicato deve essere maggiore di zero.",
 		"en": "L'importo indicato deve essere maggiore di zero."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG127",
+    "descrizione": {
+		"it": "Indicare almeno un Cup.",
+		"en": "Indicare almeno un Cup."
 	},
     "dataInizio":null,
     "dataFine":null

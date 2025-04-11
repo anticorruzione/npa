@@ -1238,4 +1238,13 @@
 		},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ID",
+    "descrizione": {
+    "it": "Scheda per l'integrazione dei dati non essenziali ai fini della pubblicità legale e del flusso della procedura.",
+    "en": "Scheda per l'integrazione dei dati non essenziali ai fini della pubblicità legale e del flusso della procedura."
+    },
+    "dataInizio":null,
+    "dataFine":null
 }]

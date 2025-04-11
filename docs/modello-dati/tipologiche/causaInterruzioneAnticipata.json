@@ -60,4 +60,13 @@
 		},
     "dataInizio":"2019-06-26T00:00:00Z",
     "dataFine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Annullata in autotutela per errore amministrativo",
+		"en": "Annullata in autotutela per errore amministrativo"
+		},
+    "dataInizio":"2025-04-08T00:00:00Z",
+    "dataFine":null
 }]

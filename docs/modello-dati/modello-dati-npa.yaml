@@ -53,7 +53,7 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-PL2.8.yaml#/components/schemas/SchedaPL2_8Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-PL2.9.yaml#/components/schemas/SchedaPL2_9Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.15.1.yaml#/components/schemas/SchedaP1_15_1Type'
-              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P7.3.yaml#/components/schemas/SchedaP7_3Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P7.3.yaml#/components/schemas/SchedaP7_3Type'              
       SchedaComunicaAppaltoType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         allOf: # estende il modello dati SchedaType
@@ -200,6 +200,7 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S0.yaml#/components/schemas/SchedaS0Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CSDA1.yaml#/components/schemas/SchedaCSDA1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CSDA2.yaml#/components/schemas/SchedaCSDA2Type' 
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ID.yaml#/components/schemas/SchedaIDType' 
       CigType:
         description: coppia lotIdentifier-cig
         type: object
