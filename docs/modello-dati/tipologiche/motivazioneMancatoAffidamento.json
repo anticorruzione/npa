@@ -1,0 +1,16 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"Decisione dell’Amministrazione"
+		},
+    "dataInizio":"2025-03-31T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"Esito negativo delle verifiche"
+		},
+    "dataInizio":"2025-03-31T00:00:00Z",
+    "dataFine":null
+}]

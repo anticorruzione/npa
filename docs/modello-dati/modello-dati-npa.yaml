@@ -54,6 +54,8 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-PL2.9.yaml#/components/schemas/SchedaPL2_9Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P1.15.1.yaml#/components/schemas/SchedaP1_15_1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P7.3.yaml#/components/schemas/SchedaP7_3Type'              
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AVR.yaml#/components/schemas/SchedaAVRType'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-TVR.yaml#/components/schemas/SchedaTVRType'
       SchedaComunicaAppaltoType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         allOf: # estende il modello dati SchedaType

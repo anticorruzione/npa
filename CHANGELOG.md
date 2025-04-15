@@ -1342,15 +1342,17 @@ errori.json: Aggiunto errore REG68_1
     
 ## Modello Dati 
 * modello-dati-npa.yaml:
-  * aggiunte nuove schede ID
-* modello-dati-schede-dati-comuni.yaml: aggiunto l'oggetto strumentiElettroniciSpecifici per le schede ISDA1, ISDA2, P1_18, P1_20, P1_21, P1_23, P1_24, P2_12, P2_13, P2_14, P2_18, P2_20, P2_21, P2_23, P2_24, P6_1, P6_2, P4_6, AD2_25, AD2_26, AD2_27, AD2_28, AD3, AD4, AD1_25, AD1_26, AD1_28, P1_12, P1_13, AD1_27, P1_14
+  * aggiunte nuove schede ID, AVR, TVR
+* modello-dati-schede-dati-comuni.yaml: 
+  * aggiunto l'oggetto strumentiElettroniciSpecifici per le schede ISDA1, ISDA2, P1_18, P1_20, P1_21, P1_23, P1_24, P2_12, P2_13, P2_14, P2_18, P2_20, P2_21, P2_23, P2_24, P6_1, P6_2, P4_6, AD2_25, AD2_26, AD2_27, AD2_28, AD3, AD4, AD1_25, AD1_26, AD1_28, P1_12, P1_13, AD1_27, P1_14
+  * aggiunto il campo idSchedaAvr per le schede AD1*, AD2*, AD3, AD5, P7_2
 
 ### Schede
 * modello-dati-schede-dati-comuni.yaml:
   * modificati gli oggetti ModificaContrattualeType e ModificaContrattuale_40Type aggiungendo l'attributo format: url per urlDocumentazione
 
 ## Orchestratore  
-* Aggiunte le informazioni sulle nuove schede ID
+* Aggiunte le informazioni sulle nuove schede ID, AVR, TVR
 * Per tutte le schede di indizione, post-pubblicazione, esecuzione (no conclusione) aggiunta la scheda ID come schedaSuccessiva
 * Modificata la colonna J "pubblicazioneTED": 
   * scheda P4_1: impostata pubblicazioneTED a SI
@@ -1359,6 +1361,7 @@ errori.json: Aggiunto errore REG68_1
   * schede AD1*, AD2*, AD3, AD4, AD5: aggiunta la scheda S4
   * schede CO2, P5: impostato il valore STATO_FINALE
   * scheda P1_15_2: aggiunte le schede S1,S2
+  * schede PL1_1, PL1_2, PL1_3, PL1_4, PL1_5, PL1_6, PL1_7, PL1_8, PL1_9, PL2_1, PL2_2, PL2_3, PL2_7, PL2_8, PL2_9: aggiunta scheda AVR
 * Modificata la colonna S "flussoAppartenenza": 
   * scheda M2: aggiunto il valore 31, 33, 34, 225
   * schede M2, M2_40: aggiunti i valori 40, 711, 712, 713
@@ -1379,7 +1382,7 @@ errori.json: Aggiunto errore REG68_1
   * aggiunti errori ERR132, ERR133
   * aggiunte regole REG127, REG128, REG129, REG130
 * codiceScheda.json:
-  * aggiunta codice scheda ID
+  * aggiunta codice scheda ID, AVR, TVR
   * aggiunte regole REG127, REG128, REG129, REG130
 * statoPiano.json:
   * aggiunta voce TERM
@@ -1388,7 +1391,7 @@ errori.json: Aggiunto errore REG68_1
 * modificata REG5: impostato importo di soglia a 1.000.000, per le schede P1_10, P1_11, P1_16, P1_17, P1_19, P2_10, P2_11, P2_16, P2_17, P2_19
 * aggiunta REG5 alle seguenti schede: P4_1, P4_2, P4_3, P4_4, P4_5, P7_1_1, P7_1_2, P7_1_3, P7_2, P1_15_2, AD1_25, AD1_26
 * eliminata la REG5 per le schede P3_4, P3_5
-
+* AVR.dmn, TVR.dmn: aggiunte le regole relative alle nuove schede AVR, TVR
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.

@@ -1247,4 +1247,22 @@
     },
     "dataInizio":null,
     "dataFine":null
+},
+{
+  "codice":"AVR",
+  "descrizione": {
+  "it": "Introduzione comunicazione anagrafica per avvio verifiche requisiti.",
+  "en": "Introduzione comunicazione anagrafica per avvio verifiche requisiti."
+  },
+  "dataInizio":null,
+  "dataFine":null
+},
+{
+  "codice":"TVR",
+  "descrizione": {
+  "it": "Comunicazione di Termine Verifiche Requisiti FVOE.",
+  "en": "Comunicazione di Termine Verifiche Requisiti FVOE."
+  },
+  "dataInizio":null,
+  "dataFine":null
 }]

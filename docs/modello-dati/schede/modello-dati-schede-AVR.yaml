@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda AVR - Introduzione comunicazione anagrafica per avvio verifiche requisiti
+  description: | 
+    La scheda AVR (Introduzione comunicazione anagrafica per avvio verifiche requisiti) è una scheda anagrafica che  contiene l’anagrafica dei soggetti che hanno manifestato interesse a seguito di un  eventuale avviso di indagine di mercato che è stato pubblicato utilizzando una scheda PL1 o PL2.
+      Oppure può essere inviata con nominativi già a disposizione della SA, senza l'invio preventivo di una PL1 e PL2. \
+      Consente di attivare l’FVOE e non attribuisce il CIG.\
+      La AVR non porta all'identificazione di alcun OE aggiudicatario.\
+      Dopo l’invio di una AVR, è possibile procedere con un affidamento diretto o con la lettera di invito per l’avvio della procedura negoziata.
+      Oppure è possibile procedere con una scheda di terminazione qualora i controlli abbiano esito negativo e non si pervenga all'affidamento o si decida di non proseguire nelle procedure di affidamento (TVR - Comunicazione di Termine Verifiche Requisiti FVOE).
+  version: 1.0.0
+components:
+  schemas:
+    AnacFormAVRType:
+      description: Anagrafica dei soggetti.
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'
+      type: object
+      additionalProperties: false
+      required: [elencoSoggetti]
+      properties:
+        idPianificazione:
+          description: identificativo restituito dal servizio all’invio della scheda di Pianificazione.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+        elencoSoggetti:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SoggettoType'
+    SchedaAVRType:
+      description: Introduzione comunicazione anagrafica per avvio verifiche requisiti
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormAVRType'

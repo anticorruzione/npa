@@ -260,6 +260,10 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
       description: Motivo deroga qualificazione - fare riferimento ai valori contenuti nel file [motivoDerogaQlf.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoDerogaQlf.json)
+    MotivazioneMancatoAffidamentoEnum: 
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Motivazione della decisione di chiusura delle verifiche FVOE - fare riferimento ai valori contenuti nel file [motivazioneMancatoAffidamento.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivazioneMancatoAffidamento.json)
     CategoriaType: 
       description: categoria prevalente o scorporabile
       type: object
@@ -862,6 +866,11 @@ components:
           type: string
           minLength: 8
           maxLength: 64  
+        idSchedaAvr:
+          description: identificativo restituito dal servizio all’invio della scheda AVR.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         idSDA:
           description: Identificativo univoco dello SDA rilasciato da ANAC.
           type: string
@@ -2529,6 +2538,11 @@ components:
           type: string
           minLength: 8
           maxLength: 64  
+        idSchedaAvr:
+          description: identificativo restituito dal servizio all’invio della scheda AVR.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
         linkDocumenti:
@@ -2597,7 +2611,12 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64   
+          maxLength: 64 
+        idSchedaAvr:
+          description: identificativo restituito dal servizio all’invio della scheda AVR.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"    
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
         linkDocumenti:
@@ -2648,7 +2667,12 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64         
+          maxLength: 64        
+        idSchedaAvr:
+          description: identificativo restituito dal servizio all’invio della scheda AVR.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"   
         motivoUrgenza:
           $ref: '#/components/schemas/MotivoUrgenzaEnum'       
         linkDocumenti:
@@ -2711,7 +2735,12 @@ components:
           description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
           type: string
           minLength: 8
-          maxLength: 64       
+          maxLength: 64   
+        idSchedaAvr:
+          description: identificativo restituito dal servizio all’invio della scheda AVR.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"      
         settore: 
           $ref: '#/components/schemas/SettoreEnum'
         motivoUrgenza:

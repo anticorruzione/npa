@@ -51,4 +51,13 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"TERM",
+	"descrizione": {
+		"it": "Terminata",
+		"en": "Terminata"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]
