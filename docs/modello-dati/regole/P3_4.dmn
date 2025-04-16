@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P3_4" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="16.4.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P3_4" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P3_4" name="P3_4">
     <informationRequirement id="InformationRequirement_P3_4_01">
       <requiredInput href="#InputData_appalto_P3_4" />
@@ -65,22 +65,6 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </inputEntry>
         <outputEntry id="LiteralExpression_P3_4_0020">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0gbtrb3">
-        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'ggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 5.382.000.</description>
-        <inputEntry id="UnaryTests_1u62d1t">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zj3hkf">
-          <text>some lotto in lotti
-satisfies lotto.datiBase.oggettoContratto.codice="works" and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 5382000</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lndbq2">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0tq0n62">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P3_4_0020">
@@ -160,7 +144,7 @@ satisfies lotto.lavoroOAcquistoPrevistoInProgrammazione and lotto.cui = null</te
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG11\"}"</text>
         </outputEntry>
       </rule>
-            <rule id="DecisionRule_P1_10_0023">
+      <rule id="DecisionRule_P1_10_0023">
         <description>REG18: E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</description>
         <inputEntry id="UnaryTests_P1_10_0070">
@@ -226,7 +210,6 @@ satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) 
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
         </outputEntry>
       </rule>
-
       <rule id="DecisionRule_P3_4_0025">
         <description>REG21: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: La sezione è obbligatoria se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
         <inputEntry id="UnaryTests_P3_4_0076">
@@ -582,7 +565,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_1cl23sc">
+      <rule id="DecisionRule_1cl23sc">
         <description>REG118: Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</description>
         <inputEntry id="UnaryTests_15v9bsf">
           <text></text>

@@ -1344,8 +1344,14 @@ errori.json: Aggiunto errore REG68_1
 * modello-dati-npa.yaml:
   * aggiunte nuove schede ID, AVR, TVR
 * modello-dati-schede-dati-comuni.yaml: 
-  * aggiunto l'oggetto strumentiElettroniciSpecifici per le schede ISDA1, ISDA2, P1_18, P1_20, P1_21, P1_23, P1_24, P2_12, P2_13, P2_14, P2_18, P2_20, P2_21, P2_23, P2_24, P6_1, P6_2, P4_6, AD2_25, AD2_26, AD2_27, AD2_28, AD3, AD4, AD1_25, AD1_26, AD1_28, P1_12, P1_13, AD1_27, P1_14
+  * aggiunto l'oggetto strumentiElettroniciSpecifici per le schede ISDA1, ISDA2, P1_18, P1_20, P1_21, P1_23, P1_24, P2_12, P2_13, P2_14, P2_18, P2_20, P2_21, P2_23, P2_24, P6_1, P6_2, P4_6, AD2_25, AD2_26, AD2_27, AD2_28, AD1_25, AD1_26, AD1_28, P1_12, P1_13, AD1_27, P1_14
   * aggiunto il campo idSchedaAvr per le schede AD1*, AD2*, AD3, AD5, P7_2
+* modello-dati-schede-AD3.yaml: 
+  * aggiunto l'oggetto strumentiElettroniciSpecifici
+* modello-dati-schede-AD4.yaml: 
+  * aggiunto l'oggetto strumentiElettroniciSpecifici
+* modello-dati-schede-P3.4.yaml, modello-dati-schede-P3.5.yaml: 
+  * deprecato il campo strumentiElettroniciSpecifici
 
 ### Schede
 * modello-dati-schede-dati-comuni.yaml:
@@ -1381,6 +1387,7 @@ errori.json: Aggiunto errore REG68_1
 * errori.json:
   * aggiunti errori ERR132, ERR133
   * aggiunte regole REG127, REG128, REG129, REG130
+  * modificata la descrizione della regola REG5
 * codiceScheda.json:
   * aggiunta codice scheda ID, AVR, TVR
   * aggiunte regole REG127, REG128, REG129, REG130

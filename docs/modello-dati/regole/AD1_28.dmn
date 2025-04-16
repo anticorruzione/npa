@@ -19,6 +19,19 @@
         </inputExpression>
       </input>
       <output id="OutputClause_0ah2sls" name="Errore" typeRef="string" biodi:width="382" />
+      <rule id="DecisionRule_0jgwe7c">
+        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico concessioni tranne sommeADisposizione  è maggiore della soglia europea 1.000.000.</description>
+        <inputEntry id="UnaryTests_12m5l4e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_116mxhl">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and aggiudicazione.strumentiElettroniciSpecifici=null and (aggiudicazione.quadroEconomicoConcessioni.impLavori + aggiudicazione.quadroEconomicoConcessioni.impServizi + aggiudicazione.quadroEconomicoConcessioni.impForniture + aggiudicazione.quadroEconomicoConcessioni.finanziamentiCanoniPA + aggiudicazione.quadroEconomicoConcessioni.entrateUtenza + aggiudicazione.quadroEconomicoConcessioni.introitoAttivo + aggiudicazione.quadroEconomicoConcessioni.impTotaleSicurezza + aggiudicazione.quadroEconomicoConcessioni.ulterioriSommeNoRibasso +  aggiudicazione.quadroEconomicoConcessioni.sommeOpzioniRinnovi) &gt; 1000000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07slm1y">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1osq1ip">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_0uj5s08">

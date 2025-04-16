@@ -1306,8 +1306,8 @@
 {
     "codice":"REG5",
     "descrizione": {
-		"it": "Il campo strumentiElettroniciSpecifici non può essere null",
-		"en": "Il campo strumentiElettroniciSpecifici non può essere null"
+		"it": "Il campo strumentiElettroniciSpecifici è obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico, oppure la somma degli importi dei lotti, è maggiore della soglia europea 1.000.000",
+		"en": "Il campo strumentiElettroniciSpecifici è obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico, oppure la somma degli importi dei lotti, è maggiore della soglia europea 1.000.000",		
 	},
     "dataInizio":null,
     "dataFine":null

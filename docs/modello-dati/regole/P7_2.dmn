@@ -19,6 +19,19 @@
         </inputExpression>
       </input>
       <output id="Errore_P7_2" name="Errore" typeRef="string" biodi:width="384" />
+      <rule id="DecisionRule_1ehet80">
+        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 1.000.000.</description>
+        <inputEntry id="UnaryTests_0sob5mu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ss2tlt">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "works" and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xty4ya">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1p14lkf">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_02rz0vc">

@@ -67,6 +67,22 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1f28pas">
+        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma degli importi dei lotti, è maggiore della soglia europea 1.000.000.</description>
+        <inputEntry id="UnaryTests_0rimcc2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ae2pzm">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice="works" and lotto.strumentiElettroniciSpecifici=null and (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo)) &gt; 1000000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t33c2a">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14rx75q">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_P4_5_0001">
         <description>REG6_1: Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</description>
         <inputEntry id="UnaryTests_P4_5_0001">

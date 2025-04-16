@@ -1,15 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_15_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="14.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P1_15_2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P1_15_2" name="P1_15_2">
+    <informationRequirement id="InformationRequirement_0ke2i00">
+      <requiredInput href="#InputData_17056gq" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1970668">
+      <requiredInput href="#InputData_1lxsten" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1d6d61r">
+      <requiredInput href="#InputData_0kt3j49" />
+    </informationRequirement>
     <decisionTable id="DecisionTable_P1_15_2" hitPolicy="COLLECT">
-      <output id="Errore_AD1_10" typeRef="string" biodi:width="477" />
+      <input id="InputClause_1llwdd8">
+        <inputExpression id="LiteralExpression_09s6ode" typeRef="string">
+          <text>appalto</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_12sjlj9">
+        <inputExpression id="LiteralExpression_1gu7559" typeRef="string">
+          <text>lotti</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_11tajed">
+        <inputExpression id="LiteralExpression_182l7qw" typeRef="string">
+          <text>stazioniAppaltanti</text>
+        </inputExpression>
+      </input>
+      <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
+      <rule id="DecisionRule_1h3gvfp">
+        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 1.000.000.</description>
+        <inputEntry id="UnaryTests_1ob1i7c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09rvo6n">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "works" and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cvu2rh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09qhp3p">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
+  <inputData id="InputData_17056gq" name="appalto" />
+  <inputData id="InputData_1lxsten" name="stazioniAppaltanti" />
+  <inputData id="InputData_0kt3j49" name="lotti" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="P1_15_2">
         <dc:Bounds height="80" width="180" x="150" y="110" />
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1l4tk9e" dmnElementRef="InputData_17056gq">
+        <dc:Bounds height="45" width="125" x="87" y="257" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0lcji3s" dmnElementRef="InformationRequirement_0ke2i00">
+        <di:waypoint x="150" y="257" />
+        <di:waypoint x="240" y="210" />
+        <di:waypoint x="240" y="190" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1kfwvwq" dmnElementRef="InputData_1lxsten">
+        <dc:Bounds height="45" width="125" x="327" y="257" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1c6upmb" dmnElementRef="InformationRequirement_1970668">
+        <di:waypoint x="390" y="257" />
+        <di:waypoint x="285" y="210" />
+        <di:waypoint x="285" y="190" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0ufd206" dmnElementRef="InputData_0kt3j49">
+        <dc:Bounds height="45" width="125" x="-153" y="257" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1ii5jwg" dmnElementRef="InformationRequirement_1d6d61r">
+        <di:waypoint x="-90" y="257" />
+        <di:waypoint x="195" y="210" />
+        <di:waypoint x="195" y="190" />
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>

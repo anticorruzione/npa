@@ -84,6 +84,22 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG3\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_00jueta">
+        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma degli importi dei lotti, è maggiore della soglia europea 1.000.000.</description>
+        <inputEntry id="UnaryTests_1fexjl1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ipbnne">
+          <text>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice="works" and lotto.strumentiElettroniciSpecifici=null and (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo)) &gt; 1000000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u5l3oa">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02z9s3f">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1t5ps76">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_0v1qx7v">

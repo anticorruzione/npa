@@ -66,7 +66,7 @@ components:
       allOf: # estende la classe LottoP3BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP3BaseType'    
       type: object
-      required: [afferenteInvestimentiPNRR,strumentiElettroniciSpecifici,lavoroOAcquistoPrevistoInProgrammazione, categoria,servizioPubblicoLocale,contrattiDisposizioniParticolari,datiBase,quadroEconomicoStandard,datiBaseTerminiInvio,datiBaseCPV,datiBaseDocumenti,datiBaseAggiudicazione]
+      required: [afferenteInvestimentiPNRR,lavoroOAcquistoPrevistoInProgrammazione, categoria,servizioPubblicoLocale,contrattiDisposizioniParticolari,datiBase,quadroEconomicoStandard,datiBaseTerminiInvio,datiBaseCPV,datiBaseDocumenti,datiBaseAggiudicazione]
       additionalProperties: false
       properties:
         afferenteInvestimentiPNRR:
@@ -82,7 +82,7 @@ components:
           description: Flag servizio pubblico locale
           type: boolean       
         strumentiElettroniciSpecifici:
-          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          description: Deprecato - Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean
         contrattiDisposizioniParticolari:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ContrattiDisposizioniParticolariEnum'  
@@ -157,4 +157,4 @@ components:
         anacForm:
           $ref: '#/components/schemas/AnacFormP3_4Type'
         espd:
-         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'           
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'      
