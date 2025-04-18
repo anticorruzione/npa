@@ -1,28 +1,27 @@
 [{
-    "codice":"1",
-    "descrizione": {
-		"it": "Somme in denaro",
-		"en": "Somme in denaro"
-		},
-    "dataInizio":null,
-    "dataFine":null
+  "codice":"1",
+  "descrizione": {
+  "it": "Somme in denaro",
+  "en": "Somme in denaro"
+  },
+  "dataInizio":null,
+  "dataFine":null
 },
 {
-    "codice":"2",
-    "descrizione": {
-		"it": "Trasferimento in proprietà  di  beni immobili",
-		"en": "Trasferimento in proprietà  di  beni immobili"
-		},
-    "dataInizio":null,
-    "dataFine":null
+  "codice":"2",
+  "descrizione": {
+  "it": "Trasferimento in proprietà  di  beni immobili",
+  "en": "Trasferimento in proprietà  di  beni immobili"
+  },
+  "dataInizio":null,
+  "dataFine":null
 },
-,
 {
-    "codice":"3",
-    "descrizione": {
-		"it": "Somme in denaro e trasferimento in proprietà di beni immobili",
-		"en": "Somme in denaro e trasferimento in proprietà di beni immobili"
-		},
-    "dataInizio":"2025-04-08T00:00:00Z",
-    "dataFine":null
+  "codice":"3",
+  "descrizione": {
+  "it": "Somme in denaro e trasferimento in proprietà di beni immobili",
+  "en": "Somme in denaro e trasferimento in proprietà di beni immobili"
+  },
+  "dataInizio":"2025-04-08T00:00:00Z",
+  "dataFine":null
 }]

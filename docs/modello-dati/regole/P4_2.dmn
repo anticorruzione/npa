@@ -68,13 +68,13 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ofja4n">
-        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma degli importi dei lotti, è maggiore della soglia europea 1.000.000.</description>
+        <description>REG5: Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e l'importo del lotto è maggiore della soglia europea 1.000.000.</description>
         <inputEntry id="UnaryTests_0raybi8">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0if8l0z">
           <text>some lotto in lotti
-satisfies lotto.datiBase.oggettoContratto.codice="works" and lotto.strumentiElettroniciSpecifici=null and (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo)) &gt; 1000000</text>
+satisfies lotto.datiBase.oggettoContratto.codice="works" and lotto.strumentiElettroniciSpecifici=null and lotto.datiBase.importo &gt; 1000000</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hf93ra">
           <text></text>
