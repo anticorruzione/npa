@@ -1318,14 +1318,14 @@ errori.json: Aggiunto errore REG68_1
   * modificato messaggio di errore ERR117, ERR118;
   * aggiunti messaggi di errore ERR119_1, SEC16;
 
-## Modello Dati
 ### Schede
 * modello-dati-schede-S0.yaml (ticket 68069, 68308, 68309, 68310, 68311, 67614, 68829, 68946, 69212):
 	* aggiunta descrizione sulle tipologie di operazioni consentite per la scheda S0;
 </details>
 
 <details>
-# Note di rilascio del 27/03/2025 (In Esercizio)
+<summary><h1>Note di rilascio del 27/03/2025 (In Esercizio)</h1></summary>
+
 ### Regole
 * ticket 60876, 67879 e 68466:
   * aggiunte le REG21, REG22, REG23, REG24, REG27, REG28 sulle seguenti schede: A3_6, AD1_25, AD1_26, AD1_28, AD2_25, AD2_26, AD2_28, AD3, AD4
@@ -1334,7 +1334,7 @@ errori.json: Aggiunto errore REG68_1
 </details>
 
 <details>
-# Note di rilascio del 07/04/2025 (In Esercizio)
+<summary><h1>Note di rilascio del 07/04/2025 (In Esercizio)</h1></summary>
 
 ### Regole
 * ticket 73104:
