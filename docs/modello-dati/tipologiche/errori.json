@@ -3210,8 +3210,8 @@
 {
    "codice":"FVX48",
    "descrizione": {
-       "it": "Codice Fiscale Professionistra non valido",
-       "en": "Codice Fiscale Professionistra non valido"
+       "it": "Codice Fiscale Professionista non valido",
+       "en": "Codice Fiscale Professionista non valido"
    },
    "dataInizio":null,
    "dataFine":null
