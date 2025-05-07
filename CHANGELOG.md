@@ -1347,10 +1347,10 @@ errori.json: Aggiunto errore REG68_1
 * Pubblicazione contenuti su GitHub: 11/04/2025
 * Rilascio in Qualificazione: 14/04/2025
 * Rilascio in Qualificazione: 18/04/2025 (campo strumentiElettroniciSpecifici, REG5)
-* Rilascio in Esercizio: 08/05/2025
+* Rilascio in Esercizio: Come da Roadmap
 * Pubblicazione contenuti su GitHub: 15/04/2025 (schede AVR, TVR)
 * Rilascio in Qualificazione: 16/05/2025 (schede AVR, TVR)
-* Rilascio in Esercizio: 16/06/2025 (schede AVR, TVR)
+* Rilascio in Esercizio: Come da Roadmap (schede AVR, TVR)
 
   **la nota di rilascio potrà essere integrata successivamente**
     
