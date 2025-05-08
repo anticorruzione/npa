@@ -1428,6 +1428,14 @@ errori.json: Aggiunto errore REG68_1
   * errori.json: corretta descrizione errore FVX48
   * tipoDocumento.json: corretta descrizione tipologica 00034
 
+
+# Note di rilascio del 08/05/2025 (In Esercizio)
+
+## Orchestratore  
+* scheda A2_31: aggiunti i flussi 61, 62
+* schede A2_32, A2_35: aggiunto il flusso 61
+* schede A2_29, A2_30, A2_33, A2_34: aggiunto il flusso 62
+
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.
