@@ -13,7 +13,7 @@ components:
       additionalProperties: false
       properties:
         motivoRichiestaModifica:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoRichiestaModificaEnum'    
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoRichiestaModificaEnum'    
         cup:
           description: Cup
           type: array
