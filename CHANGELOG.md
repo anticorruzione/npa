@@ -1379,7 +1379,8 @@ errori.json: Aggiunto errore REG68_1
 * Modificata la colonna R "schedaSuccessiva": 
   * scheda S4: impostato elenco di schede successive M1,M1_40,M2,M2_40,SA1,RSU1,SO1,AC1,IR1,CO1,ES1,CL1,S4,S3
   * schede AD1*, AD2*, AD3, AD4, AD5: aggiunta la scheda S4
-  * schede CO2, P5: impostato il valore STATO_FINALE
+  * schede P5: impostato il valore CM1, ANN
+  * schede CO2: impostato il valore STATO_FINALE
   * scheda P1_15_2: aggiunte le schede S1,S2
   * schede PL1_1, PL1_2, PL1_3, PL1_4, PL1_5, PL1_6, PL1_7, PL1_8, PL1_9, PL2_1, PL2_2, PL2_3, PL2_7, PL2_8, PL2_9: aggiunta scheda AVR
 * Modificata la colonna S "flussoAppartenenza": 
