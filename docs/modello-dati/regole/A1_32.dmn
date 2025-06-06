@@ -46,20 +46,7 @@ satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOff
         <outputEntry id="LiteralExpression_0nf57qi">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG47\"}"</text>
         </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0gn1gdf">
-        <description>REG52: Non è stato inserito l’importo dell’aggiudicatario</description>
-        <inputEntry id="UnaryTests_1vfxd4n">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14iixdo">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0einc5h">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
-        </outputEntry>
-      </rule>
+      </rule>      
       <rule id="DecisionRule_1nxnyvr">
         <description>REG112: La lista delle aggiudicazioni deve contenere almeno un elemento.</description>
         <inputEntry id="UnaryTests_1uj2n80">

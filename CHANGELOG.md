@@ -1377,7 +1377,7 @@ errori.json: Aggiunto errore REG68_1
 * Modificata la colonna J "pubblicazioneTED": 
   * scheda P4_1: impostata pubblicazioneTED a SI
 * Modificata la colonna R "schedaSuccessiva": 
-  * scheda S4: impostato elenco di schede successive M1,M1_40,M2,M2_40,SA1,RSU1,SO1,AC1,IR1,CO1,ES1,CL1,S4,S3
+  * scheda S4: impostato elenco di schede successive M1,M1_40,M2,M2_40,SA1,RSU1,SO1,AC1,IR1,CO1,ES1,CL1,S4,S3,SC1
   * schede AD1*, AD2*, AD3, AD4, AD5: aggiunta la scheda S4
   * schede P5: impostato il valore CM1, ANN
   * schede CO2: impostato il valore STATO_FINALE
@@ -1437,6 +1437,14 @@ errori.json: Aggiunto errore REG68_1
   * scheda A2_31: aggiunti i flussi 61, 62
   * schede A2_32, A2_35: aggiunto il flusso 61
   * schede A2_29, A2_30, A2_33, A2_34: aggiunto il flusso 62
+
+
+# Note di rilascio del 06/06/2025 (In Esercizio)
+### Tipologiche
+* ticket 77555:
+  * errori.json: modificata descrizione regola REG5
+* tipoDocumento.json: corretta descrizione tipologica 00071
+
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.

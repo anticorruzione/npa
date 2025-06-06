@@ -91,23 +91,10 @@ satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) 
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ehbnr7">
-          <text>some aggiudicazione in aggiudicazioni satisfies (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = true and is defined(offerta.offertaEconomica) = true ) or (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = false and is defined(offerta.offertaEconomica) = false )))</text>
+          <text>some aggiudicazione in aggiudicazioni satisfies (some offerta in aggiudicazione.offertePresentate satisfies (offerta.aggiudicatario) and ((is defined (offerta.offertaInAumento) = true and is defined(offerta.offertaEconomica) = true ) or (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = false and is defined(offerta.offertaEconomica) = false ))))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18911v9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG51\"}"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0pvtsp0">
-        <description>REG52: Non è stato inserito l’importo dell’aggiudicatario</description>
-        <inputEntry id="UnaryTests_1jnwu59">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yzqoju">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ekmbnf">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1i7ye0y">
