@@ -1445,6 +1445,10 @@ errori.json: Aggiunto errore REG68_1
   * errori.json: modificata descrizione regola REG5
 * tipoDocumento.json: corretta descrizione tipologica 00071
 
+### Regole
+* rimossa REG52 dalle schede A1_29, A1_30, A1_31, A1_32, A1_33, A1_34, A1_36, A1_37;
+* modificata la REG51 per le schede A1_29, A1_30, A1_33, A1_34;
+
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
