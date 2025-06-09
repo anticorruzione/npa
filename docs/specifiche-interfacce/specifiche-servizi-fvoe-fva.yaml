@@ -398,7 +398,7 @@ paths:
       description: viene richiesta la produzione di un nuovo documento agli enti certificatori. ASINCRONO - ASIMMETRICO.
       operationId: idDocumentoRichiediPost
       requestBody:
-        description: Inserimento Richiesta di Accesso
+        description: Inserimento Richiesta Documento
         content:
           application/json:
             schema:
@@ -1265,12 +1265,12 @@ components:
       allOf: # estende il modello dati DocumentoRichiediType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoRichiediType'
       example:
-        type: "DatiSA00036"
         chiaveAccesso: "2022-01-23T12:02:05Z"
         tipoDocumento: 
           idTipologica : "tipoDocumento"
           codice : "00004"
         datiRichiesta:
+          type: "DatiSA00036"
           annoRiferimento : "2022"
           domicilioFiscale:
             codicecatastale: "I345"        
