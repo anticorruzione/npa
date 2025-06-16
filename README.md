@@ -1,35 +1,39 @@
 # AVVISI:
 ## 1
-In relazione alla issue [pagopa/pdnd-interop-frontend#1215](https://github.com/pagopa/pdnd-interop-frontend/issues/1215) pubblicata da PagoPA, come comunicato nel precedente avviso, l'API gateway di ANAC è stato aggiornato lunedì 26 maggio in ambiente di ATTESTAZIONE. Si comunica che giovedì 29 maggio nella fascia oraria 14:30-15:30 si provvederà ad effettuare l'aggiornamento dell'API gateway in ambiente di QUALIFICAZIONE e potranno, pertanto, verificarsi temporanei disservizi. Seguirà avviso con indicazione del giorno e della fascia oraria di potenziale indisponibilità dell'ambiente per l'aggiornamento dell'API gateway di ESERCIZIO.
+In relazione alla issue https://github.com/pagopa/pdnd-interop-frontend/issues/1215 pubblicata da PagoPA, si comunica che martedì 24 giugno 2025 nella fascia oraria 14:00-15:30 si provvederà ad effettuare l'aggiornamento dell'API gateway di ANAC in ambiente di ESERCIZIO e potranno, pertanto, verificarsi temporanei disservizi.
+
 ## 2
+In relazione alla issue [pagopa/pdnd-interop-frontend#1215](https://github.com/pagopa/pdnd-interop-frontend/issues/1215) pubblicata da PagoPA, come comunicato nel precedente avviso, l'API gateway di ANAC è stato aggiornato lunedì 26 maggio in ambiente di ATTESTAZIONE. Si comunica che giovedì 29 maggio nella fascia oraria 14:30-15:30 si provvederà ad effettuare l'aggiornamento dell'API gateway in ambiente di QUALIFICAZIONE e potranno, pertanto, verificarsi temporanei disservizi. Seguirà avviso con indicazione del giorno e della fascia oraria di potenziale indisponibilità dell'ambiente per l'aggiornamento dell'API gateway di ESERCIZIO.
+
+## 3
 Come da issue https://github.com/pagopa/pdnd-interop-frontend/issues/1215 pubblicata da PagoPA, è necessario aggiornare l'API gateway di ANAC per recepire le modifiche apportate allo scambio di token su PDND entro le date indicate.
 Si comunica che lunedì 26 maggio nella fascia oraria 14:30-15:30 potranno pertanto verificarsi temporanei disservizi in ambiente di ATTESTAZIONE.
 Salvo imprevisti si provvederà ad eseguire analoga attività in ambiente di QUALIFICAZIONE nel corso della medesima settimana. 
 Seguirà avviso con indicazione del giorno e della fascia oraria di potenziale indisponibilità dell'ambiente per l'aggiornamento dell'API gateway di QUALIFICAZIONE.
 
-## 3
+## 4
 Si comunica che la REG4_1 è stata sospesa fino al 16 maggio 2025 poichè poteva causare il fallimento della conferma di avvisi di rettifica per bandi pubblicati prima del rilascio del changelog-04, laddove la regola, malfunzionante, era stata fixata.
 
-## 4
+## 5
 Si invitano tutti gli utenti a prendere visione del calendario di manutenzione programmata degli ambienti PDND da parte di PagoPA:
 -	Attestazione lunedì 10 marzo dalle 14.00 alle 17:00
 -	Collaudo mercoledì 12 marzo dalle 14.00 alle 17:00
 -	Produzione sabato 15 marzo dalle 16.00 alle 19:00
 
-## 5
+## 6
 E' stata pubblicata sulla PDND di attestazione e di esercizio la nuova versione dei servizi FVC che include il richiedi-documenti in POST
 
-## 6
+## 7
 Come da [roadmap](/docs/specifiche-jws/roadmap.md), si ricorda a tutti i soggetti che sono stati autorizzati all’accesso temporaneo agli eService della Piattaforma Contratti Pubblici, che a partire dal 9 ottobre 2023, per poter accedere agli eService attualmente disponibili che implementano il contesto di sicurezza, dovranno effettuare l’onboarding su PDND attraverso la richiesta di iscrizione tra le piattaforme certificate come indicato nelle [regole tecniche](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) emanate da AgID 
 
-## 7
+## 8
 Attivato il nuovo ambiente di ATTESTAZIONE per le piattaforme.
 L'ambiente è destinato all'esecuzione di test funzionali per la verifica delle attività di MAC, è esposto su PDND e disponibile alle sole piattaforme certificate.
 ANAC non garantisce livelli di servizio sulla disponibilità dell'ambiente ed è ammesso un disallineamento temporaneo di versione tra tale ambiente e quello di esercizio in coincidenza con le operazioni di rilascio di MAC, MAD o MEV.
 Di tale attività viene data informazione sul presente canale, il disallineamento può avere una durata fino a 3 giorni lavorativi.
 Nella sezione Ambienti di interoperabilità i dettagli per la connessione
 
-## 8
+## 9
 Si comunica che, a causa di un’operazione eseguita in fase di aggiornamento della piattaforma DBMS dell’ambiente di Qualificazione, i dati registrati tra le 23:00 del 2 aprile 2025 e le 11:00 del 4 aprile 2025 sono andati persi e non sono recuperabili.
 Ci scusiamo per l’inconveniente.
 Si informa che i servizi sono attualmente correttamente funzionanti.
