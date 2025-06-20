@@ -90,7 +90,7 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1bdm4qf">
-          <text>{\"idTipologica\":\"errori\",\"codice\":\"REG4_1\"}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG4_1\"}"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_P1_10_0013">
