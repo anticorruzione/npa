@@ -55,8 +55,8 @@
 {
     "codice":"TERM",
 	"descrizione": {
-		"it": "Terminata",
-		"en": "Terminata"
+		"it": "Terminato",
+		"en": "Terminato"
 	},
     "dataInizio":null,
     "dataFine":null
