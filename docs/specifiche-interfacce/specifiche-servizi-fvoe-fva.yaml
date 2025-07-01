@@ -2078,6 +2078,8 @@ components:
           - codiceFiscale: "80140110588"
         appalto:
           idAppalto: "ACD4546346A"
+        piano:
+          idPianificazione: "ACD4546346A"
     AutorizzaAccessoRequest:
       allOf: # estende il modello dati AutorizzaAccessoType
         - $ref: '#/components/schemas/AutorizzazioneAccessoType'
