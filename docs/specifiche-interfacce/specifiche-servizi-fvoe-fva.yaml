@@ -1015,7 +1015,7 @@ paths:
         - SA
       summary: API Rest per la ricerca dei fascicoli degli appalti. SINCRONO
       description: viene recuperata la lista con i dati di sintesi dei FVPQ. SINCRONO
-      operationId: idFascicoliRicerca
+      operationId: idFascicoliRicercaFVPQ
       parameters:
         - name: codiceSA
           in: query
@@ -1882,7 +1882,7 @@ paths:
         - SA
       summary: API Rest per verificare l'esito della richiesta di accesso. SINCRONO
       description: API Rest per il recupero dell'esito della richiesta di accesso. SINCRONO
-      operationId: idAccessoVerificaRichiestaFVOE
+      operationId: idAccessoVerificaRichiestaFVPQOE
       parameters:
         - name: codiceFiscale
           in: query
