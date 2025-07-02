@@ -512,6 +512,9 @@ components:
             $ref: '#/components/schemas/TipoPianoEnum'
           stato:
             $ref: '#/components/schemas/StatoPianoEnum' 
+      PianoType:
+        allOf: # estende la classe PianoBaseType
+          - $ref: '#/components/schemas/PianoBaseType'
       StatoType:
         type: object
         additionalProperties: false
