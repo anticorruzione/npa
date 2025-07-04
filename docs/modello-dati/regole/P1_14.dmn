@@ -115,6 +115,22 @@ satisfies lotto.datiBase.oggettoContratto.codice="works" and lotto.strumentiElet
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0ii7qwr">
+        <description>REG5_1: il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici</description>
+        <inputEntry id="UnaryTests_1tk0ep7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01tb8ll">
+          <text>some lotto in lotti
+satisfies is defined(lotto.strumentiElettroniciSpecifici) and is defined (lotto.docFAP) = false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06etch1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dy45zk">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5_1\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1t5ps76">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_0v1qx7v">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD2_25" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_AD2_25" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.2.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <inputData id="InputData_aggiudicazioni" name="aggiudicazioni" />
   <inputData id="InputData_appalto" name="appalto" />
   <decision id="AD2_25" name="AD2_25">
@@ -84,7 +84,7 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR = true and is defined(aggiudi
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG20_1\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_AD2_25_0025">
+      <rule id="DecisionRule_AD2_25_0025">
         <description>REG21: Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: La sezione è obbligatoria se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</description>
         <inputEntry id="UnaryTests_AD2_25_0076">
           <text></text>
@@ -92,7 +92,7 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR = true and is defined(aggiudi
         <inputEntry id="UnaryTests_AD2_25_0077">
           <text>some aggiudicazione in aggiudicazioni
 satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.paritaDiGenereGenerazionale = null</text>
-        </inputEntry>        
+        </inputEntry>
         <outputEntry id="LiteralExpression_AD2_25_0026">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG21\"}"</text>
         </outputEntry>
@@ -236,7 +236,7 @@ satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggi
         </inputEntry>
         <inputEntry id="UnaryTests_1hl8hz5">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0))</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vhcjuw">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
@@ -249,7 +249,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in agg
         </inputEntry>
         <inputEntry id="UnaryTests_1ggxp4y">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruoloOE.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice="10" or partecipante.ruoloOE.codice="12") and (partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1unf3ls">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>

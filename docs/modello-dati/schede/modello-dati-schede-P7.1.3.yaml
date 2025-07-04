@@ -39,3 +39,5 @@ components:
       properties:
         anacForm:
           $ref: '#/components/schemas/AnacFormP7_1_3Type'          
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'           

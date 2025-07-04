@@ -1394,6 +1394,15 @@
     "dataFine":null
 },
 {
+    "codice":"REG5_1",
+    "descrizione": {
+		"it": "Il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici",
+		"en": "Il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"REG6_1",
     "descrizione": {
 		"it": "Il campo condizioniNegoziata non può essere null",

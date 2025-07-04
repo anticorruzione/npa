@@ -5,7 +5,7 @@
 		"en": "Mandatario in RTI"
 		},
     "dataInizio":null,
-    "dataFine":null
+    "dataFine":"2025-07-31T00:00:00Z"
 },
 {
     "codice":"2",
@@ -14,7 +14,7 @@
 		"en": "Mandante in RTI"
 		},
     "dataInizio":null,
-    "dataFine":null
+    "dataFine":"2025-07-31T00:00:00Z"
 },
 {
     "codice":"3",
@@ -23,7 +23,7 @@
 		"en": "Operatore Economico monosoggettivo"
 		},
     "dataInizio":null,
-    "dataFine":null
+    "dataFine":"2025-07-31T00:00:00Z"
 },
 {
     "codice":"4",
@@ -50,7 +50,7 @@
 		"en": "Consorzio ordinario"
 		},
     "dataInizio":null,
-    "dataFine":null
+    "dataFine":"2025-07-31T00:00:00Z"
 },
 {
     "codice":"7",
@@ -59,7 +59,7 @@
 		"en": "Consorzio stabile"
 		},
     "dataInizio":null,
-    "dataFine":null
+    "dataFine":"2025-07-31T00:00:00Z"
 },
 {
     "codice":"8",
@@ -68,7 +68,7 @@
 		"en": "Consorzio fra società cooperative di produzione e lavoro"
 		},
     "dataInizio":null,
-    "dataFine":null
+    "dataFine":"2025-07-31T00:00:00Z"
 },
 {
     "codice":"9",
@@ -77,7 +77,7 @@
 		"en": "Consorzio tra imprese artigiane"
 		},
     "dataInizio":null,
-    "dataFine":null
+    "dataFine":"2025-07-31T00:00:00Z"
 },
 {
     "codice":"10",
@@ -104,6 +104,42 @@
 		"en": "Mandante di GEIE"
 		},
     "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"13",
+    "descrizione": {
+		"it": "Mandatario",
+		"en": "Mandatario"
+		},
+    "dataInizio":"2025-07-31T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"14",
+    "descrizione": {
+		"it": "Operatore Economico",
+		"en": "Operatore Economico"
+		},
+    "dataInizio":"2025-07-31T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"15",
+    "descrizione": {
+		"it": "Impresa cooptata",
+		"en": "Impresa cooptata"
+		},
+    "dataInizio":"2025-07-31T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"16",
+    "descrizione": {
+		"it": "Subappaltatore qualificante in offerta",
+		"en": "Subappaltatore qualificante in offerta"
+		},
+    "dataInizio":"2025-07-31T00:00:00Z",
     "dataFine":null
 }]
 

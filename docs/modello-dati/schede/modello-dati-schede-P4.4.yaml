@@ -14,6 +14,9 @@ components:
         strumentiElettroniciSpecifici:
           description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
           type: boolean
+        docFAP:
+          description: è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM
+          type: boolean
    AnacFormP4_4Type:
       description: Contiene i dati per la scheda di Contratto EPC
       allOf: # estende la classe AnacFormBaseType

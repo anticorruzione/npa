@@ -1265,4 +1265,22 @@
   },
   "dataInizio":null,
   "dataFine":null
+},
+{
+    "codice":"AD6",
+    "descrizione": {
+		"it": "Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.",
+        "en": "Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED."
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CO3",
+    "descrizione": {
+		"it": "Scheda di conclusione affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce.",
+        "en": "Scheda di conclusione affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce."
+		},
+    "dataInizio":null,
+    "dataFine":null
 }]

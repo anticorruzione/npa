@@ -83,6 +83,22 @@ satisfies lotto.datiBase.oggettoContratto.codice="works" and lotto.strumentiElet
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1p8z3an">
+        <description>REG5_1: il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici</description>
+        <inputEntry id="UnaryTests_07yrarj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h6t5hn">
+          <text>some lotto in lotti
+satisfies is defined(lotto.strumentiElettroniciSpecifici) and is defined (lotto.docFAP) = false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_182mrh7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_141fsqq">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5_1\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_P4_5_0001">
         <description>REG6_1: Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</description>
         <inputEntry id="UnaryTests_P4_5_0001">

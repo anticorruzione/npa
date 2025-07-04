@@ -1,0 +1,27 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Correzione: Il CUP è stato inserito erroneamente oppure omesso durante l’acquisizione del CIG;",
+		"en": "Correzione: Il CUP è stato inserito erroneamente oppure omesso durante l’acquisizione del CIG;"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Identificazione del CUP successivo all’acquisizione del CIG: il CUP non era stato associato inizialmente perché la procedura di affidamento non era destinata alla realizzazione del progetto specifico",
+		"en": "Identificazione del CUP successivo all’acquisizione del CIG: il CUP non era stato associato inizialmente perché la procedura di affidamento non era destinata alla realizzazione del progetto specifico"
+		},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Modifiche ai sensi della Delibera CIPE n.63/2020: il CUP inizialmente associato al CIG è stato sostituito, fuso o scisso e deve essere aggiornato",
+		"en": "Modifiche ai sensi della Delibera CIPE n.63/2020: il CUP inizialmente associato al CIG è stato sostituito, fuso o scisso e deve essere aggiornato"
+		},	
+    "dataInizio":null,
+    "dataFine":null
+}]

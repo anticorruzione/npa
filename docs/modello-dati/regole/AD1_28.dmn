@@ -32,6 +32,19 @@ satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and aggiudic
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1hnupfc">
+        <description>REG5_1: il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici</description>
+        <inputEntry id="UnaryTests_07fltrw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mhvul0">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies is defined(aggiudicazione.strumentiElettroniciSpecifici) and is defined (aggiudicazione.docFAP) = false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v7a4q2">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG5_1\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1osq1ip">
         <description>REG7: E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</description>
         <inputEntry id="UnaryTests_0uj5s08">
@@ -195,7 +208,7 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-jus
         </inputEntry>
         <inputEntry id="UnaryTests_19btv0t">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0))</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0v7k8hx">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
@@ -208,7 +221,7 @@ satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in agg
         </inputEntry>
         <inputEntry id="UnaryTests_1c5y6uc">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruoloOE.codice="2" and (partecipante.importo != null or partecipante.importo &gt; 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice="10" or partecipante.ruoloOE.codice="12") and (partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vtb5ha">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>

@@ -1340,7 +1340,7 @@ errori.json: Aggiunto errore REG68_1
 * ticket 73104:
   * rimosse le REG21, REG22, REG23, REG24, REG27, REG28 sulle seguenti schede: A3_6, AD1_25, AD1_26, AD1_28, AD2_25, AD2_26, AD2_28, AD3, AD4
 </details>
-
+<details>
 <summary><h1>Note di rilascio del 09/04/2025 (Changelog-05)</h1></summary>
 
 **NOTA**
@@ -1414,6 +1414,7 @@ errori.json: Aggiunto errore REG68_1
 * aggiunta REG5 alle seguenti schede: P4_1, P4_2, P4_3, P4_4, P4_5, P7_1_1, P7_1_2, P7_1_3, P7_2, P1_15_2, AD1_25, AD1_26
 * eliminata la REG5 per le schede P3_4, P3_5
 * AVR.dmn, TVR.dmn: aggiunte le regole relative alle nuove schede AVR, TVR
+</details>
 
 # Note di rilascio del 18/04/2025 (In Esercizio)
 ### Regole
@@ -1449,8 +1450,71 @@ errori.json: Aggiunto errore REG68_1
 * rimossa REG52 dalle schede A1_29, A1_30, A1_31, A1_32, A1_33, A1_34, A1_36, A1_37;
 * modificata la REG51 per le schede A1_29, A1_30, A1_33, A1_34;
 
+<summary><h1>Note di rilascio del 04/07/2025 (Changelog-06)</h1></summary>
+
+**NOTA**
+* Pubblicazione contenuti su GitHub: 04/07/2025
+* Rilascio in Qualificazione: Come da Roadmap
+* Rilascio in Esercizio: Come da Roadmap
+* Rilascio in Qualificazione: Come da Roadmap (nuove schede beni infungbili, AD6, CO3)
+* Rilascio in Esercizio: Come da Roadmap (nuove schede beni infungbili, AD6, CO3)
+
+  **la nota di rilascio potrà essere integrata successivamente**
+    
+## Modello Dati 
+* modello-dati-npa.yaml:
+  * aggiunte nuove schede AD6, CO3 relative al nuovo flusso dei beni infungibili
+
+### Schede
+* modello-dati-schede-dati-comuni.yaml: 
+	* aggiunte le sezioni quadro economico standard e concessioni in AggiudicazioneAD1_27Type
+	* aggiunto l'oggetto CcnlEnum
+	* modificato il campo ccnl da string a tipologica, aggiunto il riferimento al nuovo oggetto CcnlEnum
+	* aggiunto l'oggetto MotivoVariazioneCUPEnum
+	* aggiunto l'oggetto MotivoCorrezioneEnum
+ 	* aggiunto il campo docFAP in tutti gli oggetti in cui è già presente il campo strumentiElettroniciSpecifici
+
+* modello-dati-schede-P7.1.1.yaml,modello-dati-schede-P7.1.2.yaml,modello-dati-schede-P7.1.3.yaml: aggiunto il campo facoltativo espd
+
+* modello-dati-schede-A3.6.yaml,modello-dati-schede-AD3.yaml,modello-dati-schede-AD4.yaml,modello-dati-schede-P3.1.yaml,modello-dati-schede-P3.2.yaml,modello-dati-schede-P3.3.yaml: modificato il campo ccnl da string a tipologica, aggiunto il riferimento al nuovo oggetto CcnlEnum
+
+* modello-dati-schede-ID.yaml: 
+	* aggiunto l'oggetto comunicazioneCUP
+	* aggiunto il campo docFAP
+	* aggiunto l'oggetto comunicazioneRibassoAggiudicazione
+
+* modello-dati-schede-P4.1.yaml,modello-dati-schede-P4.2.yaml,modello-dati-schede-P4.3.yaml,modello-dati-schede-P4.4.yaml,modello-dati-schede-P4.5.yaml,modello-dati-schede-AD3.yaml,modello-dati-schede-AD4.yaml: 
+	* aggiunto il campo docFAP negli oggetti in cui è già presente il campo strumentiElettroniciSpecifici
+* modello-dati-schede.AD6.yaml, modello-dati-schede-CO3.yaml: schede relative al nuovo flusso dei beni infungibili
+
+## Orchestratore  
+* modificata la scheda successiva di PL1_8: corretta P1_15 con P1_15_2
+* modificato il flusso di appartenenza delle schede CO1, ID, S1, S2, S3, SC1: escluso il flusso 5
+* modificato l'elenco delle schede successive della CO1: prevista anche la SC1
+* modificata la colonna includeEspd delle schede P7_1_*: aggiunto SI,NO 
+* modificato l'elenco delle schede successive della SA1: aggiunte le schede SQ1 e RI1
+* modificato il flusso di appartenenza delle schede: S1, S2, S3, SC1, CO1, S2R: escluso il flusso 60
+* Aggiunte le righe con le informazioni relative alle nuove schede relative ai beni infungibili AD6 E CO3
+* eliminata la S3 come scheda successiva alle schede S2, S2R, ID
+
+### Tipologiche
+* ruoloOE.json: eliminate alcune voci, aggiunte altre.
+* condizioniNegoziata.json: eliminate voci chiuse prima del 2024
+* Creata la nuova tipologica ccnl.json
+* Creata la nuova tipologica motivoVariazioneCUP
+* Creata la nuova tipologica motivoCorrezione
+* errori.json: aggiunto l'errore REG5_1
+* codiceScheda.json: aggiunte nuove schede AD6, CO3
+
+### Regole
+* AD1_27.dmn, AD2_27.dmn: aggiunte le regole sui quadri economici standard e concessioni: REG31, REG31_1, REG34_1, REG35_1, REG36_1
+* AD*.dmn: modificata la sintassi delle regole REG52 e REG53.
+* ID.dmn: aggiornate le regole in base alla nuova struttura della scheda.
+* AD1_25.dmn,AD1_26.dmn,AD1_28.dmn,P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P1_15_2.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P2_10.dmn,P2_11.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn:
+aggiunta regola REG5_1
+* CO2.dmn, COC.dmn,CS1.dmn,IR1.dmn,RI1.dmn,RSU1.dmn,S1.dmn,S2.dmn,S2R.dmn,SO1.dmn,SQ1.dmn: aggiornata la annotation con il riferimento alla REG0
+* AD6.dmn, CO3.dmn: regole relative al nuovo flusso dei beni infungibili
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.
-

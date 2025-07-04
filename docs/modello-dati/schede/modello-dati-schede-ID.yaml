@@ -2,24 +2,51 @@ openapi: 3.0.0
 info:
   title: Modello Dati - Scheda ID - Scheda  per l'integrazione dei dati non essenziali ai fini della pubblicità legale e del flusso della procedura.
   description: | 
-    La scheda dovrà contenere ogni volta la lista dei cup validi. Questa lista sovrascriverà la precedente lista inviata.\
-    Quindi i cup validi saranno sempre solo quelli inviati con l'ultima scheda ID.
+    In caso di modifica dei cup la scheda dovrà contenere ogni volta la lista dei cup validi. Questa lista sovrascriverà la precedente lista inviata.\
+    Quindi i cup validi saranno sempre solo quelli inviati con l'ultima scheda ID.\
+    La scheda permette la modifica del ribasso di aggiudicazione solo in caso di omessa comunicazione in fase di affidamento.\
+    Con questa scheda può essere comunicata anche l'informazione relativa al docFAP, ovvero se è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM
   version: 1.0.0
 components:
   schemas:
-    ComunicazioneIDType:
+    ComunicazioneCUPType:
       type: object
-      required: [motivoRichiestaModifica,cup]
+      required: [motivoVariazioneCUP,cup]
       additionalProperties: false
       properties:
-        motivoRichiestaModifica:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoRichiestaModificaEnum'    
+        motivoVariazioneCUP:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoVariazioneCUPEnum'    
         cup:
           description: Cup
           type: array
           items:
             type: string
             pattern: ^[a-zA-Z0-9]{15}$
+    ComunicazioneRibassoAggiudicazioneType:
+      type: object
+      required: [motivoCorrezione,ribassoAggiudicazione]
+      additionalProperties: false
+      properties:
+        motivoCorrezione:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoCorrezioneEnum'    
+        ribassoAggiudicazione:
+          description: ribasso di aggiudicazione. valori ammessi-> (x<100); sono ammessi valori negativi.
+          type: integer
+          maximum: 99           
+    ComunicazioneIDType:
+      type: object
+      required: [motivoRichiestaModifica]
+      additionalProperties: false
+      properties:
+        motivoRichiestaModifica:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoRichiestaModificaEnum'    
+        comunicazioneCUP:
+            $ref: '#/components/schemas/ComunicazioneCUPType'
+        comunicazioneRibassoAggiudicazione:
+            $ref: '#/components/schemas/ComunicazioneRibassoAggiudicazioneType'
+        docFAP:
+          description: è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM
+          type: boolean
     AnacFormIDType:
       type: object
       required: [cig,comunicazione]
