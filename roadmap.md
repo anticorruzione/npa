@@ -53,5 +53,5 @@
 |62794|Modifica delle stazioni appaltanti coinvolte nella procedura|Funzionalità di inserimento, sostituzione, eliminazione di soggetti dall'elenco delle Stazioni Appaltanti|/<br>/<br>/<br>|/|
 |68715|introduzione eForm SDK 1.13|Aggiornamento del modello dati allo schema eForm SDK 1.13|/<br>/<br>|/
 |77857|refactoring tipo dato o nome per i campi data/ora||/<br>/<br>/<br>|CHG-07|
-|79454|aggiornamento tipologica xxxxxmotivoDeroga||/<br>/<br>|/
+|79454|aggiornamento tipologica motivoDerogaQlf||/<br>/<br>|/
 |78309|gestione elenco fornitori - accesso FVOE|Nuova funzionalità per inizializzazione, gestione e chiusura elenco fornitore al fine di consentire l'accesso al FVOE|/<br>/<br>/<br>|CHG-07|
