@@ -518,6 +518,16 @@ components:
       PianoType:
         allOf: # estende la classe PianoBaseType
           - $ref: '#/components/schemas/PianoBaseType'
+      PianoBaseType:
+        type: object
+        additionalProperties: false
+        properties:
+          idPianificazione:
+            description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Pianificazione. (A UUID specified by RFC4122)
+          tipo: 
+            $ref: '#/components/schemas/TipoPianoEnum'
+          stato:
+            $ref: '#/components/schemas/StatoPianoEnum' 
       StatoType:
         type: object
         additionalProperties: false
