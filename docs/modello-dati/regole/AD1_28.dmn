@@ -208,7 +208,7 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-jus
         </inputEntry>
         <inputEntry id="UnaryTests_19btv0t">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo &lt;= 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruolo.codice!="10" and partecipante.ruolo.codice!="12") and (partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0v7k8hx">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
@@ -221,7 +221,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipan
         </inputEntry>
         <inputEntry id="UnaryTests_1c5y6uc">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice="10" or partecipante.ruoloOE.codice="12") and (partecipante.importo &gt; 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruolo.codice="10" or partecipante.ruolo.codice="12") and (partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vtb5ha">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>

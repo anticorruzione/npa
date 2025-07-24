@@ -38,8 +38,8 @@ satisfies aggiudicazione.importoAggiudicazione &gt;= 5000 </text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_19btv0t">
-          <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo &lt;= 0)</text>
+          <text>some aggiudicazione in aggiudicazioni 
+satisfies aggiudicazione.importoAggiudicazione &lt;= 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0v7k8hx">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>

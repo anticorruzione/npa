@@ -1456,14 +1456,14 @@ errori.json: Aggiunto errore REG68_1
 * Pubblicazione contenuti su GitHub: 04/07/2025
 * Rilascio in Qualificazione: Come da Roadmap
 * Rilascio in Esercizio: Come da Roadmap
-* Rilascio in Qualificazione: Come da Roadmap (nuove schede beni infungbili, AD6, CO3)
-* Rilascio in Esercizio: Come da Roadmap (nuove schede beni infungbili, AD6, CO3)
+* Rilascio in Qualificazione: Come da Roadmap (nuove schede beni infungbili, ABI, CBI)
+* Rilascio in Esercizio: Come da Roadmap (nuove schede beni infungbili, ABI, CBI)
 
   **la nota di rilascio potrà essere integrata successivamente**
     
 ## Modello Dati 
 * modello-dati-npa.yaml:
-  * aggiunte nuove schede AD6, CO3 relative al nuovo flusso dei beni infungibili
+  * aggiunte nuove schede ABI, CBI relative al nuovo flusso dei beni infungibili
 
 ### Schede
 * modello-dati-schede-dati-comuni.yaml: 
@@ -1485,7 +1485,7 @@ errori.json: Aggiunto errore REG68_1
 
 * modello-dati-schede-P4.1.yaml,modello-dati-schede-P4.2.yaml,modello-dati-schede-P4.3.yaml,modello-dati-schede-P4.4.yaml,modello-dati-schede-P4.5.yaml,modello-dati-schede-AD3.yaml,modello-dati-schede-AD4.yaml: 
 	* aggiunto il campo docFAP negli oggetti in cui è già presente il campo strumentiElettroniciSpecifici
-* modello-dati-schede.AD6.yaml, modello-dati-schede-CO3.yaml: schede relative al nuovo flusso dei beni infungibili
+* modello-dati-schede.ABI.yaml, modello-dati-schede-CBI.yaml: schede relative al nuovo flusso dei beni infungibili
 
 ## Orchestratore  
 * modificata la scheda successiva di PL1_8: corretta P1_15 con P1_15_2
@@ -1494,7 +1494,7 @@ errori.json: Aggiunto errore REG68_1
 * modificata la colonna includeEspd delle schede P7_1_*: aggiunto SI,NO 
 * modificato l'elenco delle schede successive della SA1: aggiunte le schede SQ1 e RI1
 * modificato il flusso di appartenenza delle schede: S1, S2, S3, SC1, CO1, S2R: escluso il flusso 60
-* Aggiunte le righe con le informazioni relative alle nuove schede relative ai beni infungibili AD6 E CO3
+* Aggiunte le righe con le informazioni relative alle nuove schede relative ai beni infungibili ABI E CBI
 * eliminata la S3 come scheda successiva alle schede S2, S2R, ID
 
 ### Tipologiche
@@ -1504,7 +1504,7 @@ errori.json: Aggiunto errore REG68_1
 * Creata la nuova tipologica motivoVariazioneCUP
 * Creata la nuova tipologica motivoCorrezione
 * errori.json: aggiunto l'errore REG5_1
-* codiceScheda.json: aggiunte nuove schede AD6, CO3
+* codiceScheda.json: aggiunte nuove schede ABI, CBI
 
 ### Regole
 * AD1_27.dmn, AD2_27.dmn: aggiunte le regole sui quadri economici standard e concessioni: REG31, REG31_1, REG34_1, REG35_1, REG36_1
@@ -1513,7 +1513,7 @@ errori.json: Aggiunto errore REG68_1
 * AD1_25.dmn,AD1_26.dmn,AD1_28.dmn,P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_14.dmn,P1_15_2.dmn,P1_16.dmn,P1_17.dmn,P1_19.dmn,P2_10.dmn,P2_11.dmn,P2_16.dmn,P2_17.dmn,P2_19.dmn,P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P7_2.dmn:
 aggiunta regola REG5_1
 * CO2.dmn, COC.dmn,CS1.dmn,IR1.dmn,RI1.dmn,RSU1.dmn,S1.dmn,S2.dmn,S2R.dmn,SO1.dmn,SQ1.dmn: aggiornata la annotation con il riferimento alla REG0
-* AD6.dmn, CO3.dmn: regole relative al nuovo flusso dei beni infungibili
+* ABI.dmn, CBI.dmn: regole relative al nuovo flusso dei beni infungibili
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.

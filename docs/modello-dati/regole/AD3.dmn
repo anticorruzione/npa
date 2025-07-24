@@ -262,7 +262,7 @@ satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggi
         </inputEntry>
         <inputEntry id="UnaryTests_1hl8hz5">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo &lt;= 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruolo.codice!="10" and partecipante.ruolo.codice!="12") and (partecipante.importo &lt;= 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vhcjuw">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
@@ -275,7 +275,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipan
         </inputEntry>
         <inputEntry id="UnaryTests_1ggxp4y">
           <text>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice="10" or partecipante.ruoloOE.codice="12") and (partecipante.importo &gt; 0)</text>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruolo.codice="10" or partecipante.ruolo.codice="12") and (partecipante.importo &gt; 0)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1unf3ls">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG53\"}"</text>

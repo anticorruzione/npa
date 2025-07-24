@@ -1267,19 +1267,19 @@
   "dataFine":null
 },
 {
-    "codice":"AD6",
+    "codice":"ABI",
     "descrizione": {
-		"it": "Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.",
-        "en": "Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED."
+		"it": "Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.",
+        "en": "Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED."
 		},
     "dataInizio":null,
     "dataFine":null
 },
 {
-    "codice":"CO3",
+    "codice":"CBI",
     "descrizione": {
-		"it": "Scheda di conclusione affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce.",
-        "en": "Scheda di conclusione affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce."
+		"it": "Scheda di conclusione relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce.",
+        "en": "Scheda di conclusione relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce."
 		},
     "dataInizio":null,
     "dataFine":null

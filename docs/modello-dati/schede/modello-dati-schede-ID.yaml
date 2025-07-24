@@ -10,6 +10,7 @@ info:
 components:
   schemas:
     ComunicazioneCUPType:
+      description: Dati inerenti la modifica del CUP
       type: object
       required: [motivoVariazioneCUP,cup]
       additionalProperties: false
@@ -23,6 +24,7 @@ components:
             type: string
             pattern: ^[a-zA-Z0-9]{15}$
     ComunicazioneRibassoAggiudicazioneType:
+      description: Dati inerenti la comunicazione del ribasso di aggiudicazione
       type: object
       required: [motivoCorrezione,ribassoAggiudicazione]
       additionalProperties: false
