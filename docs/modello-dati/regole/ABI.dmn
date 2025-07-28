@@ -19,6 +19,19 @@
         </inputExpression>
       </input>
       <output id="OutputClause_0ah2sls" name="Errore" typeRef="string" biodi:width="422" />
+      <rule id="DecisionRule_073k8zl">
+        <description>REG131: L'importo di aggiudicazione non può superare i 221K</description>
+        <inputEntry id="UnaryTests_1pjl02o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t8fruw">
+          <text>some aggiudicazione in aggiudicazioni 
+satisfies aggiudicazione.importoAggiudicazione &gt;= 221000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xwjm6w">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG131\"}"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0rnx8fl">
         <description>REG52: Non è stato inserito l’importo dell’aggiudicatario</description>
         <inputEntry id="UnaryTests_0zvb2ie">

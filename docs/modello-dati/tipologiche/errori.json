@@ -2524,6 +2524,15 @@
     "dataFine":null
 },
 {
+    "codice":"REG131",
+    "descrizione": {
+		"it": "L'importo di aggiudicazione non può superare i 221K",
+		"en": "L'importo di aggiudicazione non può superare i 221K"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"AUT01",
     "descrizione": {
         "it": "l'utente non è presente tra le stazioni appaltanti",
