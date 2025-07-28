@@ -1276,6 +1276,32 @@ paths:
             $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
+  /rollback-scheda:
+    post:
+      tags:
+        - comunicaPostPubblicazione
+      summary: API Rest per il rollback dei dati inviati per una specifica Scheda. ASINCRONO - ASIMMETRICO
+      description: Il servizio consente di effettuare il rollback per una specifica Scheda e, qualora il tipo di scheda lo consente e ci siano le condizioni, avvia la fase di rollback dei lotti o contratti impattati. ASINCRONO - ASIMMETRICO
+      operationId: rollbackScheda
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RollbackSchedaRequest'
+        required: true
+      responses:
+        '200':
+            $ref: '#/components/responses/200AckResponse'           
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+            $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []
   /esito-operazione:
     get:
       tags:
@@ -2183,6 +2209,22 @@ components:
       required:
         - idScheda 
         - idAppalto
+    RollbackSchedaRequest:
+      description: Oggetto in ingresso al servizio    
+      type: object
+      additionalProperties: false
+      properties:
+        idScheda:
+          description: identificativo univoco della scheda definita da ANAC. (A UUID specified by RFC4122).
+          type: string
+          format: uuid
+          example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce"
+        motivazione:
+          description: motivazione del rollback
+          type: string
+      required:
+        - idScheda
+        - motivazione
     AvvisoRequest:
       description: Oggetto in ingresso al servizio    
       type: object
