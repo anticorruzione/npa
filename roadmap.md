@@ -46,7 +46,7 @@
 |60461|Inserimento ESPD facoltativo nelle schede P7_1_x|In analogia con quanto presente nella scheda P7_2, aggiornamento dell'orchestratore in relazione alle schede P7_1_1, P7_1_2, P7_1_3, valorizzando la colonna "includeESPD" come "SI,NO", previsione dell'ESPD come facoltativo. Conseguentemente modifica delle schede corrispondenti per prevedere la presenza facoltativa dell'ESPD.|04/07/2025<br>05/08/2025<br>/<br>|CHG-06|
 |78515|Aggiornamento flusso esecuzione|Previsione invio scheda SQ1 e RI1 dopo scheda SA1|04/07/2025<br>05/08/2025<br>/<br>|CHG-06|
 |81331|Inibizione invio scheda S3 prima della scheda di esito|La tabella di orchestrazione va modificata per impedire l'invio della scheda S3 prima della scheda di esito A*|04/07/2025<br>05/08/2025<br>/<br>|CHG-06|
-|70237|Modifica contrattuale per scheda P7_2|Aggiunta del flusso 72 per la scheda M2||04/07/2025<br>05/08/2025<br>/<br>|CHG-06|
+|70237|Modifica contrattuale per scheda P7_2|Aggiunta del flusso 72 per la scheda M2|04/07/2025<br>05/08/2025<br>/<br>|CHG-06|
 |57290|revisione scheda RSU1 - richiesta subappalto|refactoring del modello dati, miglioramento della gestione del sub appalto a cascata|/<br>/<br>|CHG-07|
 |58792|partecipante type - refactoring modello dati|refactoring del modello dati per la  gestione dei gruppi multilivello |/<br>/<br>|CHG-07|
 |58793|StazioneAppaltanteType - refactoring modello dati|refactoring del modello dati StazioneAppaltanteType per il miglioramento della gestione delle deleghe |/<br>/<br>|CHG-07|
