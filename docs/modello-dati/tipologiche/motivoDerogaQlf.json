@@ -51,4 +51,31 @@
 		},
     "dataInizio":"2024-11-15T00:00:00Z",
     "dataFine":null
+},
+{
+    "codice":"7",
+    "descrizione": {
+		"it": "Ordini su strumenti di acquisto a valere su strumenti di acquisto messi a disposizione da centrali di committenza qualificate e dai soggetti aggregatori.",
+		"en": "Ordini su strumenti di acquisto a valere su strumenti di acquisto messi a disposizione da centrali di committenza qualificate e dai soggetti aggregatori."
+		},
+    "dataInizio":"2025-08-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"8",
+    "descrizione": {
+		"it": "Procedure svolte all’estero, ai sensi del Decreto 17 gennaio 2024, n. 32 (modifiche al D.M. 2 novembre 2017, n. 192).",
+		"en": "Procedure svolte all’estero, ai sensi del Decreto 17 gennaio 2024, n. 32 (modifiche al D.M. 2 novembre 2017, n. 192)."
+		},
+    "dataInizio":"2025-08-05T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"9",
+    "descrizione": {
+		"it": "Affidamento di servizi di architettura e ingegneria di valore pari o superiore alle soglie di qualificazione, se in possesso della qualificazione corrispondente all’importo stimato dei lavori posti a base di gara per i quali sono richiesti i predetti servizi. ai sensi dell’art. 3, comma 4, Allegato II.4, purché non ricorrano le condizioni dell’appalto integrato.",
+		"en": "Affidamento di servizi di architettura e ingegneria di valore pari o superiore alle soglie di qualificazione, se in possesso della qualificazione corrispondente all’importo stimato dei lavori posti a base di gara per i quali sono richiesti i predetti servizi. ai sensi dell’art. 3, comma 4, Allegato II.4, purché non ricorrano le condizioni dell’appalto integrato."
+		},
+    "dataInizio":"2025-08-05T00:00:00Z",
+    "dataFine":null
 }]

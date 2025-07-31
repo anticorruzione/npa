@@ -1513,7 +1513,7 @@ errori.json: Aggiunto errore REG68_1
 * Creata la nuova tipologica motivoVariazioneCUP
 * Creata la nuova tipologica motivoCorrezione
 * Creata la nuova tipologica motivoAnnullamentoComunicazione
-* Aggiornate le tipologiche esitoOperazione, tipoOperazione, statoScheda
+* Aggiornate le tipologiche esitoOperazione, tipoOperazione, statoScheda, motivoDerogaQlf
 * errori.json: 
   * aggiunti gli errori ERR134, ERR135, ERR136, ERR137, ERR138, ERR139, ERR140, ERR141, ERR142, ERR143, ERR144, ERR145, ERR146, ERR147
   * aggiunto l'errore REG5_1, REG131
