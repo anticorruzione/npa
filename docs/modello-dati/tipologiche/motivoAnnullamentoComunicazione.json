@@ -1,0 +1,20 @@
+[
+	{
+		"codice": "1",
+		"descrizione": {
+			"it": "Annullamento comunicazione a seguito intervento autorità giudiziaria",
+			"en": "Annullamento comunicazione a seguito intervento autorità giudiziaria"
+		},
+		"dataInizio": "2024-07-01T00:00:00Z",
+		"dataFine": null
+	},
+	{
+		"codice": "2",
+		"descrizione": {
+			"it": "Errata comunicazione effettuata dalla Piattaforma Approvvigionamento Digitale per anomalia software",
+			"en": "Errata comunicazione effettuata dalla Piattaforma Approvvigionamento Digitale per anomalia software"
+		},
+		"dataInizio": "2024-07-01T00:00:00Z",
+		"dataFine": null
+	}
+]

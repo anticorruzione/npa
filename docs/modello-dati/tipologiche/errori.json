@@ -1286,6 +1286,42 @@
     "dataFine":null
 },
 {
+	"codice":"ERR143",
+    "descrizione": {
+		"it": "Non è ammesso il Rollback per questa tipologia di scheda",
+		"en": "Non è ammesso il Rollback per questa tipologia di scheda"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR144",
+    "descrizione": {
+		"it": "Per questo appalto è stato già effettuato un Rollback",
+		"en": "Per questo appalto è stato già effettuato un Rollback"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR145",
+    "descrizione": {
+		"it": "È stato inserito il campo comunicazioneRibassoAggiudicazione per un lotto non aggiudicato.",
+		"en": "È stato inserito il campo comunicazioneRibassoAggiudicazione per un lotto non aggiudicato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR146",
+    "descrizione": {
+		"it": "Non è possibile comunicare il campo ribassoAggiudicazione per il lotto indicato.",
+		"en": "Non è possibile comunicare il campo ribassoAggiudicazione per il lotto indicato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",

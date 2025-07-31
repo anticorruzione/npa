@@ -1340,6 +1340,7 @@ errori.json: Aggiunto errore REG68_1
 * ticket 73104:
   * rimosse le REG21, REG22, REG23, REG24, REG27, REG28 sulle seguenti schede: A3_6, AD1_25, AD1_26, AD1_28, AD2_25, AD2_26, AD2_28, AD3, AD4
 </details>
+
 <details>
 <summary><h1>Note di rilascio del 09/04/2025 (Changelog-05)</h1></summary>
 
@@ -1389,7 +1390,6 @@ errori.json: Aggiunto errore REG68_1
   * schede M2_40: aggiunti i valori 41, 42, 43, 44, 45, 46
   * schede P7_2, AD1_25, AD1_26, AD1_27, AD1_28, AD2_25, AD2_26, AD2_27, AD2_28, AD3, AD5, CO2, CM2, ANN: aggiunto il valore 300
 
-
 ### Tipologiche
 * tipoIncarico.json:
   * rimossa la voce con codice "3"
@@ -1416,12 +1416,16 @@ errori.json: Aggiunto errore REG68_1
 * AVR.dmn, TVR.dmn: aggiunte le regole relative alle nuove schede AVR, TVR
 </details>
 
-# Note di rilascio del 18/04/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 18/04/2025 (In Esercizio)</h1></summary>
+
 ### Regole
 * ticket 74116:
   * aggiunte le REG21, REG22, REG23, REG24, REG27, REG28 sulle seguenti schede: A3_6, AD1_25, AD1_26, AD1_28, AD2_25, AD2_26, AD2_28, AD3, AD4
+</details>
 
-# Note di rilascio del 29/04/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 29/04/2025 (In Esercizio)</h1></summary>
 
 ## Modello Dati
 
@@ -1429,18 +1433,21 @@ errori.json: Aggiunto errore REG68_1
 * ticket 76046:
   * errori.json: corretta descrizione errore FVX48
   * tipoDocumento.json: corretta descrizione tipologica 00034
+</details>
 
-
-# Note di rilascio del 08/05/2025 (In Esercizio)
+<details>
+<summary><h1>Note di rilascio del 08/05/2025 (In Esercizio)</h1></summary>
 
 ### Orchestratore
 * ticket 75362:
   * scheda A2_31: aggiunti i flussi 61, 62
   * schede A2_32, A2_35: aggiunto il flusso 61
   * schede A2_29, A2_30, A2_33, A2_34: aggiunto il flusso 62
+</details>
 
+<details>
+<summary><h1>Note di rilascio del 06/06/2025 (In Esercizio)</h1></summary>
 
-# Note di rilascio del 06/06/2025 (In Esercizio)
 ### Tipologiche
 * ticket 77555:
   * errori.json: modificata descrizione regola REG5
@@ -1449,6 +1456,7 @@ errori.json: Aggiunto errore REG68_1
 ### Regole
 * rimossa REG52 dalle schede A1_29, A1_30, A1_31, A1_32, A1_33, A1_34, A1_36, A1_37;
 * modificata la REG51 per le schede A1_29, A1_30, A1_33, A1_34;
+</details>
 
 <summary><h1>Note di rilascio del 04/07/2025 (Changelog-06)</h1></summary>
 
@@ -1496,6 +1504,7 @@ errori.json: Aggiunto errore REG68_1
 * modificato il flusso di appartenenza delle schede: S1, S2, S3, SC1, CO1, S2R: escluso il flusso 60
 * Aggiunte le righe con le informazioni relative alle nuove schede relative ai beni infungibili ABI E CBI
 * eliminata la S3 come scheda successiva alle schede S2, S2R, ID
+* modificato il flusso di appartenenza della scheda M2: aggiunto il flusso 72
 
 ### Tipologiche
 * ruoloOE.json: eliminate alcune voci, aggiunte altre.
@@ -1503,7 +1512,11 @@ errori.json: Aggiunto errore REG68_1
 * Creata la nuova tipologica ccnl.json
 * Creata la nuova tipologica motivoVariazioneCUP
 * Creata la nuova tipologica motivoCorrezione
-* errori.json: aggiunto l'errore REG5_1
+* Creata la nuova tipologica motivoAnnullamentoComunicazione
+* Aggiornate le tipologiche esitoOperazione, tipoOperazione, statoScheda
+* errori.json: 
+  * aggiunti gli errori ERR134, ERR135, ERR136, ERR137, ERR138, ERR139, ERR140, ERR141, ERR142, ERR143, ERR144, ERR145, ERR146, ERR147
+  * aggiunto l'errore REG5_1, REG131
 * codiceScheda.json: aggiunte nuove schede ABI, CBI
 
 ### Regole

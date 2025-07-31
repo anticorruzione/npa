@@ -1276,32 +1276,6 @@ paths:
             $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
-  /rollback-scheda:
-    post:
-      tags:
-        - comunicaPostPubblicazione
-      summary: API Rest per il rollback dei dati inviati per una specifica Scheda. ASINCRONO - ASIMMETRICO
-      description: Il servizio consente di effettuare il rollback per una specifica Scheda e, qualora il tipo di scheda lo consente e ci siano le condizioni, avvia la fase di rollback dei lotti o contratti impattati. ASINCRONO - ASIMMETRICO
-      operationId: rollbackScheda
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/RollbackSchedaRequest'
-        required: true
-      responses:
-        '200':
-            $ref: '#/components/responses/200AckResponse'           
-        '400':
-            $ref: '#/components/responses/400BadRequest'
-        '404':
-            $ref: '#/components/responses/404NotFound'
-        '429':
-            $ref: '#/components/responses/429TooManyRequests'
-        '500':
-            $ref: '#/components/responses/500InternalServerError'
-      security:
-        - apiKeyAuth: []
   /esito-operazione:
     get:
       tags:
@@ -1381,6 +1355,32 @@ paths:
               application/problem+json:
                 schema:
                   $ref: '#/components/schemas/ErrorResponse'
+      security:
+        - apiKeyAuth: []
+  /rollback:
+    post:
+      tags:
+        - serviziComuni
+      summary: API Rest per il rollback dei dati inviati per una specifica Scheda. ASINCRONO - ASIMMETRICO
+      description: Il servizio consente di effettuare il rollback per una specifica Scheda e, qualora il tipo di scheda lo consente e ci siano le condizioni, avvia la fase di rollback dei lotti o contratti impattati. ASINCRONO - ASIMMETRICO
+      operationId: rollbackScheda
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RollbackSchedaRequest'
+        required: true
+      responses:
+        '200':
+            $ref: '#/components/responses/200AckResponse'           
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+            $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
   /recupera-elenco-tipologiche:
@@ -1845,6 +1845,8 @@ components:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoRuoloEnum'
     ErroriEnum:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/ErroriEnum'      
+    MotivoAnnullamentoComunicazioneEnum:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/MotivoAnnullamentoComunicazioneEnum'
     AppaltoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AppaltoType'
     DatiPianoType:
@@ -1888,7 +1890,7 @@ components:
     ContentDocumentType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/ContentDocumentType' 
     ProfiloSAType:
-      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/ProfiloSAType'  
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/ProfiloSAType'
     RecuperaProfiloResponse: 
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
@@ -2219,9 +2221,8 @@ components:
           type: string
           format: uuid
           example: "68aa8c04-0d00-40f6-8d81-b59de3a3dcce"
-        motivazione:
-          description: motivazione del rollback
-          type: string
+        motivazione:  
+          $ref: '#/components/schemas/MotivoAnnullamentoComunicazioneEnum'
       required:
         - idScheda
         - motivazione
