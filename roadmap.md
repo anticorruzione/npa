@@ -51,9 +51,7 @@
 |57290|revisione scheda RSU1 - richiesta subappalto|refactoring del modello dati, miglioramento della gestione del sub appalto a cascata|/<br>/<br>|CHG-07|
 |58792|partecipante type - refactoring modello dati|refactoring del modello dati per la  gestione dei gruppi multilivello |/<br>/<br>|CHG-07|
 |58793|StazioneAppaltanteType - refactoring modello dati|refactoring del modello dati StazioneAppaltanteType per il miglioramento della gestione delle deleghe |/<br>/<br>|CHG-07|
-|59814|Rettifica avvisi sotto soglia|Introdurre la possibilità di gestire rettifiche per avvisi di aggiudicazione sottosoglia A2*|/<br>/<br>|/|
 |62794|Modifica delle stazioni appaltanti coinvolte nella procedura|Funzionalità di inserimento, sostituzione, eliminazione di soggetti dall'elenco delle Stazioni Appaltanti|/<br>/<br>/<br>|/|
 |68715|introduzione eForm SDK 1.13|Aggiornamento del modello dati allo schema eForm SDK 1.13|/<br>/<br>|/
 |77857|refactoring tipo dato o nome per i campi data/ora||/<br>/<br>/<br>|CHG-07|
-|79454|aggiornamento tipologica motivoDerogaQlf||/<br>/<br>|/
 |78309|gestione elenco fornitori - accesso FVOE|Nuova funzionalità per inizializzazione, gestione e chiusura elenco fornitore al fine di consentire l'accesso al FVOE|/<br>/<br>/<br>|CHG-07|

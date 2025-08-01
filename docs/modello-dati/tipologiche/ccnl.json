@@ -1,1181 +1,1312 @@
-[{
-    "codice":"A01",
-    "descrizione": {
-		"it": "operai agricoli e florovivaisti; impiegati, quadri e dirigenti dell'agricoltura",
-		"en": "operai agricoli e florovivaisti; impiegati, quadri e dirigenti dell'agricoltura",
-	    	"de": "operai agricoli e florovivaisti; impiegati, quadri e dirigenti dell'agricoltura"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"A02",
-    "descrizione": {
-		"it": "attività di contoterzismo in agricoltura",
-		"en": "attività di contoterzismo in agricoltura",
-	    	"de": "attività di contoterzismo in agricoltura"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"A03",
-    "descrizione": {
-		"it": "consorzi di bonifica e di miglioramento fondiario, sistemazioni idraulico-forestali",
-		"en": "consorzi di bonifica e di miglioramento fondiario, sistemazioni idraulico-forestali",
-	    	"de": "consorzi di bonifica e di miglioramento fondiario, sistemazioni idraulico-forestali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"A04",
-    "descrizione": {
-		"it": "consorzi agrari",
-		"en": "consorzi agrari",
-	    	"de": "consorzi agrari"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"A05",
-    "descrizione": {
-		"it": "settore zootecnico",
-		"en": "settore zootecnico",
-	    	"de": "settore zootecnico"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"B01",
-    "descrizione": {
-		"it": "industria chimica, chimica farmaceutica, fibre chimiche, ceramica e abrasivi",
-		"en": "industria chimica, chimica farmaceutica, fibre chimiche, ceramica e abrasivi",
-		"de": "industria chimica, chimica farmaceutica, fibre chimiche, ceramica e abrasivi"
+[
+	{
+		"codice": "A01",
+		"descrizione": {
+			"it": "operai agricoli e florovivaisti; impiegati, quadri e dirigenti dell'agricoltura",
+			"en": "operai agricoli e florovivaisti; impiegati, quadri e dirigenti dell'agricoltura",
+			"de": "operai agricoli e florovivaisti; impiegati, quadri e dirigenti dell'agricoltura"
+		},
+		"dataInizio": null,
+		"dataFine": null
 	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"B02",
-    "descrizione": {
-		"it": "settore conciario",
-		"en": "settore conciario",
-		"de": "settore conciario"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"B03",
-    "descrizione": {
-		"it": "piastrelle di ceramica e dei materiali refrattari",
-		"en": "piastrelle di ceramica e dei materiali refrattari",
-	    "de": "piastrelle di ceramica e dei materiali refrattari"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"B04",
-    "descrizione": {
-		"it": "settore del vetro e delle lampade",
-		"en": "settore del vetro e delle lampade",
-		"de": "settore del vetro e delle lampade"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"B05",
-    "descrizione": {
-		"it": "energia e del petrolio",
-		"en": "energia e del petrolio",
-		"de": "energia e del petrolio"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"B06",
-    "descrizione": {
-		"it": "attività minerarie",
-		"en": "attività minerarie",
-		"de": "attività minerarie"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"B07",
-    "descrizione": {
-		"it": "settore della gomma e della plastica",
-		"en": "settore della gomma e della plastica",
-		"de": "settore della gomma e della plastica"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"C01",
-    "descrizione": {
-		"it": "settore metalmeccanico e installazione di impianti",
-		"en": "settore metalmeccanico e installazione di impianti",
-		"de": "settore metalmeccanico e installazione di impianti"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"C02",
-    "descrizione": {
-		"it": "settore orafo, argentiero e della gioielleria",
-		"en": "settore orafo, argentiero e della gioielleria",
-		"de": "settore orafo, argentiero e della gioielleria"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"D01",
-    "descrizione": {
-		"it": "industrie tessili e dell'abbigliamento",
-		"en": "industrie tessili e dell'abbigliamento",
-		"de": "industrie tessili e dell'abbigliamento"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"D02",
-    "descrizione": {
-		"it": "sistema industriale integrato di beni e servizi tessili e medici affini (lavanderie industriali e sterilizzazione strumentario chirurgico)",
-		"en": "sistema industriale integrato di beni e servizi tessili e medici affini (lavanderie industriali e sterilizzazione strumentario chirurgico)",
-		"de": "sistema industriale integrato di beni e servizi tessili e medici affini (lavanderie industriali e sterilizzazione strumentario chirurgico)"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"D03",
-    "descrizione": {
-		"it": "industrie dei settori pelli e succedanei, produzione di ombrelli-ombrelloni",
-		"en": "industrie dei settori pelli e succedanei, produzione di ombrelli-ombrelloni",
-		"de": "industrie dei settori pelli e succedanei, produzione di ombrelli-ombrelloni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"D04",
-    "descrizione": {
-		"it": "industria delle calzature",
-		"en": "industria delle calzature",
-		"de": "industria delle calzature"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"D05",
-    "descrizione": {
-		"it": "settore giocattoli, giochi, modellismo",
-		"en": "settore giocattoli, giochi, modellismo",
-		"de": "settore giocattoli, giochi, modellismo"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"D06",
-    "descrizione": {
-		"it": "produzione di penne, matite, parti staccate di matite, penne, articoli affini e per gli addetti alle aziende produttrici di spazzole, pennelli, scope e preparatrici relative materie prime",
-		"en": "produzione di penne, matite, parti staccate di matite, penne, articoli affini e per gli addetti alle aziende produttrici di spazzole, pennelli, scope e preparatrici relative materie prime",
-		"de": "produzione di penne, matite, parti staccate di matite, penne, articoli affini e per gli addetti alle aziende produttrici di spazzole, pennelli, scope e preparatrici relative materie prime"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"D07",
-    "descrizione": {
-		"it": "settore occhiali e articoli inerenti l'occhialeria",
-		"en": "settore occhiali e articoli inerenti l'occhialeria",
-		"de": "settore occhiali e articoli inerenti l'occhialeria"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"E01",
-    "descrizione": {
-		"it": "industrie alimentari",
-		"en": "industrie alimentari",
-		"de": "industrie alimentari"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"E02",
-    "descrizione": {
-		"it": "pesca",
-		"en": "pesca",
-		"de": "pesca"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"E03",
-    "descrizione": {
-		"it": "lavorazione della foglia di tabacco",
-		"en": "lavorazione della foglia di tabacco",
-		"de": "lavorazione della foglia di tabacco"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"E04",
-    "descrizione": {
-		"it": "panificazione - produzione e vendita",
-		"en": "panificazione - produzione e vendita",
-		"de": "panificazione - produzione e vendita"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"F01",
-    "descrizione": {
-		"it": "aziende edili",
-		"en": "aziende edili",
-		"de": "aziende edili"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"F02",
-    "descrizione": {
-		"it": "produzione di laterizi e manufatti in cemento",
-		"en": "produzione di laterizi e manufatti in cemento",
-		"de": "produzione di laterizi e manufatti in cemento"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"F03",
-    "descrizione": {
-		"it": "produzione di cemento, calce, gesso e malte",
-		"en": "produzione di cemento, calce, gesso e malte",
-		"de": "produzione di cemento, calce, gesso e malte"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"F04",
-    "descrizione": {
-		"it": "escavazione e lavorazione dei materiali lapidei, ghiaia, sabbia e inerti",
-		"en": "escavazione e lavorazione dei materiali lapidei, ghiaia, sabbia e inerti",
-		"de": "escavazione e lavorazione dei materiali lapidei, ghiaia, sabbia e inerti"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"F05",
-    "descrizione": {
-		"it": "settori legno, sughero, mobile ed arredamento e boschivi e forestali",
-		"en": "settori legno, sughero, mobile ed arredamento e boschivi e forestali",
-		"de": "settori legno, sughero, mobile ed arredamento e boschivi e forestali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"F06",
-    "descrizione": {
-		"it": "costruzione di strade ed autostrade",
-		"en": "costruzione di strade ed autostrade",
-		"de": "costruzione di strade ed autostrade"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G01",
-    "descrizione": {
-		"it": "settore cartario e cartotecnico",
-		"en": "settore cartario e cartotecnico",
-		"de": "settore cartario e cartotecnico"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G02",
-    "descrizione": {
-		"it": "settore grafico ed editoriale",
-		"en": "settore grafico ed editoriale",
-		"de": "settore grafico ed editoriale"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G03",
-    "descrizione": {
-		"it": "videofonografici",
-		"en": "videofonografici",
-		"de": "videofonografici"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G04",
-    "descrizione": {
-		"it": "fotolaboratori",
-		"en": "fotolaboratori",
-		"de": "fotolaboratori"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G05",
-    "descrizione": {
-		"it": "filiera del cinema e dell'audiovisivo (industria, troupes, doppiaggio, generici, esercizi cinematografici)",
-		"en": "filiera del cinema e dell'audiovisivo (industria, troupes, doppiaggio, generici, esercizi cinematografici)",
-		"de": "filiera del cinema e dell'audiovisivo (industria, troupes, doppiaggio, generici, esercizi cinematografici)"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G06",
-    "descrizione": {
-		"it": "Teatri e Fondazioni Lirico Sinfoniche (artisti, tecnici, impiegati) e Professori d'orchestra della RAI",
-		"en": "Teatri e Fondazioni Lirico Sinfoniche (artisti, tecnici, impiegati) e Professori d'orchestra della RAI",
-		"de": "Teatri e Fondazioni Lirico Sinfoniche (artisti, tecnici, impiegati) e Professori d'orchestra della RAI"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G07",
-    "descrizione": {
-		"it": "settore della Comunicazione e dei servizi innovativi per le imprese",
-		"en": "settore della Comunicazione e dei servizi innovativi per le imprese",
-		"de": "settore della Comunicazione e dei servizi innovativi per le imprese"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G08",
-    "descrizione": {
-		"it": "imprese radio televisive, multimediali e multipiattaforma",
-		"en": "imprese radio televisive, multimediali e multipiattaforma",
-		"de": "imprese radio televisive, multimediali e multipiattaforma"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G09",
-    "descrizione": {
-		"it": "giornalisti",
-		"en": "giornalisti",
-		"de": "giornalisti"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G10",
-    "descrizione": {
-		"it": "ippica",
-		"en": "ippica",
-		"de": "ippica"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G11",
-    "descrizione": {
-		"it": "aziende editrici e stampatrici di giornali quotidiani ed agenzie di stampa",
-		"en": "aziende editrici e stampatrici di giornali quotidiani ed agenzie di stampa",
-		"de": "aziende editrici e stampatrici di giornali quotidiani ed agenzie di stampa"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G12",
-    "descrizione": {
-		"it": "produzione culturale e spettacolo  ",
-		"en": "produzione culturale e spettacolo  ",
-		"de": "produzione culturale e spettacolo  "	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G13",
-    "descrizione": {
-		"it": "SIAE",
-		"en": "SIAE",
-		"de": "SIAE"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"G14",
-    "descrizione": {
-		"it": "aziende aereofotogrammetriche",
-		"en": "aziende aereofotogrammetriche",
-		"de": "aziende aereofotogrammetriche"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H01",
-    "descrizione": {
-		"it": "terziario, distribuzione e servizi",
-		"en": "terziario, distribuzione e servizi",
-		"de": "terziario, distribuzione e servizi"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H02",
-    "descrizione": {
-		"it": "turismo",
-		"en": "turismo",
-		"de": "turismo"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H03",
-    "descrizione": {
-		"it": "pubblici esercizi, ristorazione collettiva e commerciale",
-		"en": "pubblici esercizi, ristorazione collettiva e commerciale",
-		"de": "pubblici esercizi, ristorazione collettiva e commerciale"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H04",
-    "descrizione": {
-		"it": "aziende ortofrutticole ed agrumarie",
-		"en": "aziende ortofrutticole ed agrumarie",
-		"de": "aziende ortofrutticole ed agrumarie"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H05",
-    "descrizione": {
-		"it": "vigilanza privata e servizi fiduciari",
-		"en": "vigilanza privata e servizi fiduciari",
-		"de": "vigilanza privata e servizi fiduciari"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H06",
-    "descrizione": {
-		"it": "agenti immobiliari e mandatari",
-		"en": "agenti immobiliari e mandatari",
-		"de": "agenti immobiliari e mandatari"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H07",
-    "descrizione": {
-		"it": "farmacie",
-		"en": "farmacie",
-		"de": "farmacie"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H08",
-    "descrizione": {
-		"it": "fiori, verde e piante ornamentali ",
-		"en": "fiori, verde e piante ornamentali ",
-		"de": "fiori, verde e piante ornamentali "	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H09",
-    "descrizione": {
-		"it": "proprietari di fabbricati",
-		"en": "proprietari di fabbricati",
-		"de": "proprietari di fabbricati"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H10",
-    "descrizione": {
-		"it": "amministratori di condominio",
-		"en": "amministratori di condominio",
-		"de": "amministratori di condominio"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H11",
-    "descrizione": {
-		"it": "studi professionali",
-		"en": "studi professionali",
-		"de": "studi professionali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H12",
-    "descrizione": {
-		"it": "lavoro domestico e di cura",
-		"en": "lavoro domestico e di cura",
-		"de": "lavoro domestico e di cura"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H13",
-    "descrizione": {
-		"it": "acconciatura, estetica, tricologia non curativa, tatuaggio, piercing e centri benessere",
-		"en": "acconciatura, estetica, tricologia non curativa, tatuaggio, piercing e centri benessere",
-		"de": "acconciatura, estetica, tricologia non curativa, tatuaggio, piercing e centri benessere"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H14",
-    "descrizione": {
-		"it": "impianti e attività sportive",
-		"en": "impianti e attività sportive",
-		"de": "impianti e attività sportive"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I01",
-    "descrizione": {
-		"it": "logistica, trasporto merci e spedizione",
-		"en": "logistica, trasporto merci e spedizione",
-		"de": "logistica, trasporto merci e spedizione"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I02",
-    "descrizione": {
-		"it": "trasporto marittimo e porti",
-		"en": "trasporto marittimo e porti",
-		"de": "trasporto marittimo e porti"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I03",
-    "descrizione": {
-		"it": "ferrovie",
-		"en": "ferrovie",
-		"de": "ferrovie"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I04",
-    "descrizione": {
-		"it": "trasporto aereo",
-		"en": "trasporto aereo",
-		"de": "trasporto aereo"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I05",
-    "descrizione": {
-		"it": "Autoferrotranvieri e Internavigatori (Mobilità - TPL)",
-		"en": "Autoferrotranvieri e Internavigatori (Mobilità - TPL)",
-		"de": "Autoferrotranvieri e Internavigatori (Mobilità - TPL)"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I06",
-    "descrizione": {
-		"it": "radiotaxi e autoservizi pubblici non di linea, autoservizi privati",
-		"en": "radiotaxi e autoservizi pubblici non di linea, autoservizi privati",
-		"de": "radiotaxi e autoservizi pubblici non di linea, autoservizi privati"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I07",
-    "descrizione": {
-		"it": "settore funerario",
-		"en": "settore funerario",
-		"de": "settore funerario"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I08",
-    "descrizione": {
-		"it": "autoscuole, scuole nautiche, studi di consulenza automobilistica e nautica",
-		"en": "autoscuole, scuole nautiche, studi di consulenza automobilistica e nautica",
-		"de": "autoscuole, scuole nautiche, studi di consulenza automobilistica e nautica"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I09",
-    "descrizione": {
-		"it": "trasporto a fune",
-		"en": "trasporto a fune",
-		"de": "trasporto a fune"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I10",
-    "descrizione": {
-		"it": "società e consorzi concessionari di autostrade e trafori",
-		"en": "società e consorzi concessionari di autostrade e trafori",
-		"de": "società e consorzi concessionari di autostrade e trafori"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I11",
-    "descrizione": {
-		"it": "servizi in appalto per conto dell'Amministrazione della Difesa, Interni, Giustizia, Forze dell'Ordine e Amministrazioni militari",
-		"en": "servizi in appalto per conto dell'Amministrazione della Difesa, Interni, Giustizia, Forze dell'Ordine e Amministrazioni militari",
-		"de": "servizi in appalto per conto dell'Amministrazione della Difesa, Interni, Giustizia, Forze dell'Ordine e Amministrazioni militari"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"I12",
-    "descrizione": {
-		"it": "agenzie marittime raccomandatarie e mediatori marittimi",
-		"en": "agenzie marittime raccomandatarie e mediatori marittimi",
-		"de": "agenzie marittime raccomandatarie e mediatori marittimi"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"J01",
-    "descrizione": {
-		"it": "credito ed assicurazioni",
-		"en": "credito ed assicurazioni",
-		"de": "credito ed assicurazioni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"J02",
-    "descrizione": {
-		"it": "Banca d'Italia e riscossione tributi",
-		"en": "Banca d'Italia e riscossione tributi",
-		"de": "Banca d'Italia e riscossione tributi"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K01",
-    "descrizione": {
-		"it": "aziende elettriche",
-		"en": "aziende elettriche",
-		"de": "aziende elettriche"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K02",
-    "descrizione": {
-		"it": "gas e acqua",
-		"en": "gas e acqua",
-		"de": "gas e acqua"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K03",
-    "descrizione": {
-		"it": "telecomunicazioni",
-		"en": "telecomunicazioni",
-		"de": "telecomunicazioni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K04",
-    "descrizione": {
-		"it": "aziende termali",
-		"en": "aziende termali",
-		"de": "aziende termali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K05",
-    "descrizione": {
-		"it": "pulizia, facility management, servizi integrati",
-		"en": "pulizia, facility management, servizi integrati",
-		"de": "pulizia, facility management, servizi integrati"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K06",
-    "descrizione": {
-		"it": "CONI servizi e federazioni sportive",
-		"en": "CONI servizi e federazioni sportive",
-		"de": "CONI servizi e federazioni sportive"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K07",
-    "descrizione": {
-		"it": "servizi ambientali",
-		"en": "servizi ambientali",
-		"de": "servizi ambientali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"K08",
-    "descrizione": {
-		"it": "servizi postali",
-		"en": "servizi postali",
-		"de": "servizi postali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T01",
-    "descrizione": {
-		"it": "scuola non statale",
-		"en": "scuola non statale",
-		"de": "scuola non statale"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T02",
-    "descrizione": {
-		"it": "università non statale",
-		"en": "università non statale",
-		"de": "università non statale"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T03",
-    "descrizione": {
-		"it": "formazione professionale",
-		"en": "formazione professionale",
-		"de": "formazione professionale"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T04",
-    "descrizione": {
-		"it": "assistenza non statale",
-		"en": "assistenza non statale",
-		"de": "assistenza non statale"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T05",
-    "descrizione": {
-		"it": "assistenza non statale",
-		"en": "assistenza non statale",
-		"de": "assistenza non statale"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T06",
-    "descrizione": {
-		"it": "cultura",
-		"en": "cultura",
-		"de": "cultura"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T07",
-    "descrizione": {
-		"it": "enti e istituzioni private, pubbliche e del terzo settore",
-		"en": "enti e istituzioni private, pubbliche e del terzo settore",
-		"de": "enti e istituzioni private, pubbliche e del terzo settore"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T08",
-    "descrizione": {
-		"it": "regolamenti contrattuali per i dipendenti dei sindacati",
-		"en": "regolamenti contrattuali per i dipendenti dei sindacati",
-		"de": "regolamenti contrattuali per i dipendenti dei sindacati"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V01",
-    "descrizione": {
-		"it": "dirigenti di azienda",
-		"en": "dirigenti di azienda",
-		"de": "dirigenti di azienda"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V02",
-    "descrizione": {
-		"it": "agenzie di somministrazione di lavoro",
-		"en": "agenzie di somministrazione di lavoro",
-		"de": "agenzie di somministrazione di lavoro"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V03",
-    "descrizione": {
-		"it": "CCNL plurisettoriali del settore manifatturiero delle organizzazioni degli artigiani PMI rappresentate al CNEL",
-		"en": "CCNL plurisettoriali del settore manifatturiero delle organizzazioni degli artigiani PMI rappresentate al CNEL",
-		"de": "CCNL plurisettoriali del settore manifatturiero delle organizzazioni degli artigiani PMI rappresentate al CNEL"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V04",
-    "descrizione": {
-		"it": "Ambasciate, Consolati, Legazioni, Istituti culturali, Organismi Internazionali, basi USA in Italia",
-		"en": "Ambasciate, Consolati, Legazioni, Istituti culturali, Organismi Internazionali, basi USA in Italia",
-		"de": "Ambasciate, Consolati, Legazioni, Istituti culturali, Organismi Internazionali, basi USA in Italia"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V05",
-    "descrizione": {
-		"it": "istituti per il sostentamento del clero",
-		"en": "istituti per il sostentamento del clero",
-		"de": "istituti per il sostentamento del clero"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V06",
-    "descrizione": {
-		"it": "CCNL plurisettoriali, microsettoriali, altri e vari",
-		"en": "CCNL plurisettoriali, microsettoriali, altri e vari",
-		"de": "CCNL plurisettoriali, microsettoriali, altri e vari"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S000",
-    "descrizione": {
-		"it": "CCNL del personale del comparto autonomo della Presidenza del Consiglio dei Ministri",
-		"en": "CCNL del personale del comparto autonomo della Presidenza del Consiglio dei Ministri",
-		"de": "CCNL del personale del comparto autonomo della Presidenza del Consiglio dei Ministri"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S003",
-    "descrizione": {
-		"it": "CCNL del personale dell'area dirigenziale della Presidenza del Consiglio dei Ministri",
-		"en": "CCNL del personale dell'area dirigenziale della Presidenza del Consiglio dei Ministri",
-		"de": "CCNL del personale dell'area dirigenziale della Presidenza del Consiglio dei Ministri"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S641",
-    "descrizione": {
-		"it": "CCNL del personale non dirigente del Coni",
-		"en": "CCNL del personale non dirigente del Coni",
-		"de": "CCNL del personale non dirigente del Coni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S642",
-    "descrizione": {
-		"it": "CCNL del personale dirigente del Coni",
-		"en": "CCNL del personale dirigente del Coni",
-		"de": "CCNL del personale dirigente del Coni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S651",
-    "descrizione": {
-		"it": "CCNL del personale non dirigente di Unioncamere",
-		"en": "CCNL del personale non dirigente di Unioncamere",
-		"de": "CCNL del personale non dirigente di Unioncamere"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S821",
-    "descrizione": {
-		"it": "Forze di polizia ad ordinamento militare - personale non dirigente",
-		"en": "Forze di polizia ad ordinamento militare - personale non dirigente",
-		"de": "Forze di polizia ad ordinamento militare - personale non dirigente"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S831",
-    "descrizione": {
-		"it": "Forze di polizia ad ordinamento civile - personale non dirigente",
-		"en": "Forze di polizia ad ordinamento civile - personale non dirigente",
-		"de": "Forze di polizia ad ordinamento civile - personale non dirigente"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S841",
-    "descrizione": {
-		"it": "personale non direttivo e non dirigente del Corpo Nazionale dei Vigili del Fuoco",
-		"en": "personale non direttivo e non dirigente del Corpo Nazionale dei Vigili del Fuoco",
-		"de": "personale non direttivo e non dirigente del Corpo Nazionale dei Vigili del Fuoco"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S842",
-    "descrizione": {
-		"it": "personale direttivo e dirigente del Corpo Nazionale dei Vigili del Fuoco",
-		"en": "personale direttivo e dirigente del Corpo Nazionale dei Vigili del Fuoco",
-		"de": "personale direttivo e dirigente del Corpo Nazionale dei Vigili del Fuoco"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S730",
-    "descrizione": {
-		"it": "Accordo sindacale per il personale della carriera diplomatica, relativamente al servizio prestato in Italia",
-		"en": "Accordo sindacale per il personale della carriera diplomatica, relativamente al servizio prestato in Italia",
-		"de": "Accordo sindacale per il personale della carriera diplomatica, relativamente al servizio prestato in Italia"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S740",
-    "descrizione": {
-		"it": "accordo sindacale per il personale della carriera prefettizia",
-		"en": "accordo sindacale per il personale della carriera prefettizia",
-		"de": "accordo sindacale per il personale della carriera prefettizia"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S811",
-    "descrizione": {
-		"it": "personale non dirigente delle Forze armate",
-		"en": "personale non dirigente delle Forze armate",
-		"de": "personale non dirigente delle Forze armate"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S005",
-    "descrizione": {
-		"it": "CCNL relativo al personale del Comparto Funzioni Centrali",
-		"en": "CCNL relativo al personale del Comparto Funzioni Centrali",
-		"de": "CCNL relativo al personale del Comparto Funzioni Centrali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S025",
-    "descrizione": {
-		"it": "CCNL relativo al personale dell'Area Funzioni Centrali (dirigenti)",
-		"en": "CCNL relativo al personale dell'Area Funzioni Centrali (dirigenti)",
-		"de": "CCNL relativo al personale dell'Area Funzioni Centrali (dirigenti)"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S105",
-    "descrizione": {
-		"it": "CCNL relativo al personale del Comparto Funzioni Locali",
-		"en": "CCNL relativo al personale del Comparto Funzioni Locali",
-		"de": "CCNL relativo al personale del Comparto Funzioni Locali"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S125",
-    "descrizione": {
-		"it": "CCNL relativo al personale dell'area delle Funzioni Locali (dirigenti)",
-		"en": "CCNL relativo al personale dell'area delle Funzioni Locali (dirigenti)",
-		"de": "CCNL relativo al personale dell'area delle Funzioni Locali (dirigenti)"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S305",
-    "descrizione": {
-		"it": "CCNL relativo al personale del Comparto Istruzione e Ricerca",
-		"en": "CCNL relativo al personale del Comparto Istruzione e Ricerca",
-		"de": "CCNL relativo al personale del Comparto Istruzione e Ricerca"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S325",
-    "descrizione": {
-		"it": "CCNL relativo al personale dell'Area Istruzione e Ricerca (dirigenti)",
-		"en": "CCNL relativo al personale dell'Area Istruzione e Ricerca (dirigenti)",
-		"de": "CCNL relativo al personale dell'Area Istruzione e Ricerca (dirigenti)"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S205",
-    "descrizione": {
-		"it": "CCNL relativo al personale del Comparto Sanità",
-		"en": "CCNL relativo al personale del Comparto Sanità",
-		"de": "CCNL relativo al personale del Comparto Sanità"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S225",
-    "descrizione": {
-		"it": "CCNL dell'Area Sanità (dirigenti)",
-		"en": "CCNL dell'Area Sanità (dirigenti)",
-		"de": "CCNL dell'Area Sanità (dirigenti)"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S241",
-    "descrizione": {
-		"it": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici di medicina generale ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e successive modificazioni e integrazioni",
-		"en": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici di medicina generale ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e successive modificazioni e integrazioni",
-		"de": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici di medicina generale ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e successive modificazioni e integrazioni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S261",
-    "descrizione": {
-		"it": "ACN per la disciplina dei rapporti con gli specialisti ambulatoriali interni, veterinari ed altre professionalità sanitarie (biologi, chimici, psicologi) ambulatoriali ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e succ. modificazioni e integrazioni",
-		"en": "ACN per la disciplina dei rapporti con gli specialisti ambulatoriali interni, veterinari ed altre professionalità sanitarie (biologi, chimici, psicologi) ambulatoriali ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e succ. modificazioni e integrazioni",
-		"de": "ACN per la disciplina dei rapporti con gli specialisti ambulatoriali interni, veterinari ed altre professionalità sanitarie (biologi, chimici, psicologi) ambulatoriali ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e succ. modificazioni e integrazioni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"S251",
-    "descrizione": {
-		"it": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici pediatri di libera scelta ai sensi dell'art.8 del D. Lgs.n. 502 del 1992 e succ. modificazioni e integrazioni",
-		"en": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici pediatri di libera scelta ai sensi dell'art.8 del D. Lgs.n. 502 del 1992 e succ. modificazioni e integrazioni",
-		"de": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici pediatri di libera scelta ai sensi dell'art.8 del D. Lgs.n. 502 del 1992 e succ. modificazioni e integrazioni"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H675",
-    "descrizione": {
-		"it": "Accordo collettivo nazionale per la regolamentazione dell'attività di collaborazione alle imprese che svolgono, attraverso l'ausilio di piattaforme digitali, attività di acquisto e rivendita di un carrello contenente prodotti di largo consumo ordinati on line dal cliente",
-		"en": "Accordo collettivo nazionale per la regolamentazione dell'attività di collaborazione alle imprese che svolgono, attraverso l'ausilio di piattaforme digitali, attività di acquisto e rivendita di un carrello contenente prodotti di largo consumo ordinati on line dal cliente",
-		"de": "Accordo collettivo nazionale per la regolamentazione dell'attività di collaborazione alle imprese che svolgono, attraverso l'ausilio di piattaforme digitali, attività di acquisto e rivendita di un carrello contenente prodotti di largo consumo ordinati on line dal cliente"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"H670",
-    "descrizione": {
-		"it": "collaboratori telefonici dei call center",
-		"en": "collaboratori telefonici dei call center",
-		"de": "collaboratori telefonici dei call center"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T099",
-    "descrizione": {
-		"it": "Collaboratori di Enti di Ricerca privati, IRCCS E Strutture Sanitarie private",
-		"en": "Collaboratori di Enti di Ricerca privati, IRCCS E Strutture Sanitarie private",
-		"de": "Collaboratori di Enti di Ricerca privati, IRCCS E Strutture Sanitarie private"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"T283",
-    "descrizione": {
-		"it": "Collaboratori UNIVERSITA' NON STATALI",
-		"en": "Collaboratori UNIVERSITA' NON STATALI",
-		"de": "Collaboratori UNIVERSITA' NON STATALI"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V172",
-    "descrizione": {
-		"it": "Accordo Collettivo Nazionale per la regolamentazione delle Collaborazioni esclusivamente personali nel settore delle ricerche di mercato",
-		"en": "Accordo Collettivo Nazionale per la regolamentazione delle Collaborazioni esclusivamente personali nel settore delle ricerche di mercato",
-		"de": "Accordo Collettivo Nazionale per la regolamentazione delle Collaborazioni esclusivamente personali nel settore delle ricerche di mercato"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V154",
-    "descrizione": {
-		"it": "COLLABORAZIONI Coordinate e Continuative",
-		"en": "COLLABORAZIONI Coordinate e Continuative",
-		"de": "COLLABORAZIONI Coordinate e Continuative"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V112",
-    "descrizione": {
-		"it": "Accordo collettivo nazionale per la regolamentazione delle collaborazioni coordinate e continuative",
-		"en": "Accordo collettivo nazionale per la regolamentazione delle collaborazioni coordinate e continuative",
-		"de": "Accordo collettivo nazionale per la regolamentazione delle collaborazioni coordinate e continuative"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V113",
-    "descrizione": {
-		"it": "CCNL per i collaboratori coordinati e continuativi delle società e associazioni sportive dilettantistiche",
-		"en": "CCNL per i collaboratori coordinati e continuativi delle società e associazioni sportive dilettantistiche",
-		"de": "CCNL per i collaboratori coordinati e continuativi delle società e associazioni sportive dilettantistiche"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V121",
-    "descrizione": {
-		"it": "COLLABORAZIONI Coordinate e Continuative",
-		"en": "COLLABORAZIONI Coordinate e Continuative",
-		"de": "COLLABORAZIONI Coordinate e Continuative"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V131",
-    "descrizione": {
-		"it": "COLLABORAZIONI Coordinate e Continuative",
-		"en": "COLLABORAZIONI Coordinate e Continuative",
-		"de": "COLLABORAZIONI Coordinate e Continuative"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V141",
-    "descrizione": {
-		"it": "COLLABORAZIONI Coordinate e Continuative",
-		"en": "COLLABORAZIONI Coordinate e Continuative",
-		"de": "COLLABORAZIONI Coordinate e Continuative"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"V152",
-    "descrizione": {
-		"it": "CCNL per il settore dei servizi di ausilio familiare",
-		"en": "CCNL per il settore dei servizi di ausilio familiare",
-		"de": "CCNL per il settore dei servizi di ausilio familiare"	},
-    "dataInizio":null,
-    "dataFine":null
-},
-{
-    "codice":"NA",
-    "descrizione": {
-		"it": "Non applicabile",
-		"en": "Non applicabile",
-		"de": "Non applicabile"
-		},	
-    "dataInizio":null,
-    "dataFine":null
-}]
+	{
+		"codice": "A02",
+		"descrizione": {
+			"it": "attività di contoterzismo in agricoltura",
+			"en": "attività di contoterzismo in agricoltura",
+			"de": "attività di contoterzismo in agricoltura"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "A03",
+		"descrizione": {
+			"it": "consorzi di bonifica e di miglioramento fondiario, sistemazioni idraulico-forestali",
+			"en": "consorzi di bonifica e di miglioramento fondiario, sistemazioni idraulico-forestali",
+			"de": "consorzi di bonifica e di miglioramento fondiario, sistemazioni idraulico-forestali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "A04",
+		"descrizione": {
+			"it": "consorzi agrari",
+			"en": "consorzi agrari",
+			"de": "consorzi agrari"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "A05",
+		"descrizione": {
+			"it": "settore zootecnico",
+			"en": "settore zootecnico",
+			"de": "settore zootecnico"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "B01",
+		"descrizione": {
+			"it": "industria chimica, chimica farmaceutica, fibre chimiche, ceramica e abrasivi",
+			"en": "industria chimica, chimica farmaceutica, fibre chimiche, ceramica e abrasivi",
+			"de": "industria chimica, chimica farmaceutica, fibre chimiche, ceramica e abrasivi"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "B02",
+		"descrizione": {
+			"it": "settore conciario",
+			"en": "settore conciario",
+			"de": "settore conciario"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "B03",
+		"descrizione": {
+			"it": "piastrelle di ceramica e dei materiali refrattari",
+			"en": "piastrelle di ceramica e dei materiali refrattari",
+			"de": "piastrelle di ceramica e dei materiali refrattari"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "B04",
+		"descrizione": {
+			"it": "settore del vetro e delle lampade",
+			"en": "settore del vetro e delle lampade",
+			"de": "settore del vetro e delle lampade"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "B05",
+		"descrizione": {
+			"it": "energia e del petrolio",
+			"en": "energia e del petrolio",
+			"de": "energia e del petrolio"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "B06",
+		"descrizione": {
+			"it": "attività minerarie",
+			"en": "attività minerarie",
+			"de": "attività minerarie"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "B07",
+		"descrizione": {
+			"it": "settore della gomma e della plastica",
+			"en": "settore della gomma e della plastica",
+			"de": "settore della gomma e della plastica"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "C01",
+		"descrizione": {
+			"it": "settore metalmeccanico e installazione di impianti",
+			"en": "settore metalmeccanico e installazione di impianti",
+			"de": "settore metalmeccanico e installazione di impianti"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "C02",
+		"descrizione": {
+			"it": "settore orafo, argentiero e della gioielleria",
+			"en": "settore orafo, argentiero e della gioielleria",
+			"de": "settore orafo, argentiero e della gioielleria"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "D01",
+		"descrizione": {
+			"it": "industrie tessili e dell'abbigliamento",
+			"en": "industrie tessili e dell'abbigliamento",
+			"de": "industrie tessili e dell'abbigliamento"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "D02",
+		"descrizione": {
+			"it": "sistema industriale integrato di beni e servizi tessili e medici affini (lavanderie industriali e sterilizzazione strumentario chirurgico)",
+			"en": "sistema industriale integrato di beni e servizi tessili e medici affini (lavanderie industriali e sterilizzazione strumentario chirurgico)",
+			"de": "sistema industriale integrato di beni e servizi tessili e medici affini (lavanderie industriali e sterilizzazione strumentario chirurgico)"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "D03",
+		"descrizione": {
+			"it": "industrie dei settori pelli e succedanei, produzione di ombrelli-ombrelloni",
+			"en": "industrie dei settori pelli e succedanei, produzione di ombrelli-ombrelloni",
+			"de": "industrie dei settori pelli e succedanei, produzione di ombrelli-ombrelloni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "D04",
+		"descrizione": {
+			"it": "industria delle calzature",
+			"en": "industria delle calzature",
+			"de": "industria delle calzature"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "D05",
+		"descrizione": {
+			"it": "settore giocattoli, giochi, modellismo",
+			"en": "settore giocattoli, giochi, modellismo",
+			"de": "settore giocattoli, giochi, modellismo"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "D06",
+		"descrizione": {
+			"it": "produzione di penne, matite, parti staccate di matite, penne, articoli affini e per gli addetti alle aziende produttrici di spazzole, pennelli, scope e preparatrici relative materie prime",
+			"en": "produzione di penne, matite, parti staccate di matite, penne, articoli affini e per gli addetti alle aziende produttrici di spazzole, pennelli, scope e preparatrici relative materie prime",
+			"de": "produzione di penne, matite, parti staccate di matite, penne, articoli affini e per gli addetti alle aziende produttrici di spazzole, pennelli, scope e preparatrici relative materie prime"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "D07",
+		"descrizione": {
+			"it": "settore occhiali e articoli inerenti l'occhialeria",
+			"en": "settore occhiali e articoli inerenti l'occhialeria",
+			"de": "settore occhiali e articoli inerenti l'occhialeria"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "E01",
+		"descrizione": {
+			"it": "industrie alimentari",
+			"en": "industrie alimentari",
+			"de": "industrie alimentari"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "E02",
+		"descrizione": {
+			"it": "pesca",
+			"en": "pesca",
+			"de": "pesca"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "E03",
+		"descrizione": {
+			"it": "lavorazione della foglia di tabacco",
+			"en": "lavorazione della foglia di tabacco",
+			"de": "lavorazione della foglia di tabacco"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "E04",
+		"descrizione": {
+			"it": "panificazione - produzione e vendita",
+			"en": "panificazione - produzione e vendita",
+			"de": "panificazione - produzione e vendita"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "F01",
+		"descrizione": {
+			"it": "aziende edili",
+			"en": "aziende edili",
+			"de": "aziende edili"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "F02",
+		"descrizione": {
+			"it": "produzione di laterizi e manufatti in cemento",
+			"en": "produzione di laterizi e manufatti in cemento",
+			"de": "produzione di laterizi e manufatti in cemento"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "F03",
+		"descrizione": {
+			"it": "produzione di cemento, calce, gesso e malte",
+			"en": "produzione di cemento, calce, gesso e malte",
+			"de": "produzione di cemento, calce, gesso e malte"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "F04",
+		"descrizione": {
+			"it": "escavazione e lavorazione dei materiali lapidei, ghiaia, sabbia e inerti",
+			"en": "escavazione e lavorazione dei materiali lapidei, ghiaia, sabbia e inerti",
+			"de": "escavazione e lavorazione dei materiali lapidei, ghiaia, sabbia e inerti"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "F05",
+		"descrizione": {
+			"it": "settori legno, sughero, mobile ed arredamento e boschivi e forestali",
+			"en": "settori legno, sughero, mobile ed arredamento e boschivi e forestali",
+			"de": "settori legno, sughero, mobile ed arredamento e boschivi e forestali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "F06",
+		"descrizione": {
+			"it": "costruzione di strade ed autostrade",
+			"en": "costruzione di strade ed autostrade",
+			"de": "costruzione di strade ed autostrade"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G01",
+		"descrizione": {
+			"it": "settore cartario e cartotecnico",
+			"en": "settore cartario e cartotecnico",
+			"de": "settore cartario e cartotecnico"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G02",
+		"descrizione": {
+			"it": "settore grafico ed editoriale",
+			"en": "settore grafico ed editoriale",
+			"de": "settore grafico ed editoriale"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G03",
+		"descrizione": {
+			"it": "videofonografici",
+			"en": "videofonografici",
+			"de": "videofonografici"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G04",
+		"descrizione": {
+			"it": "fotolaboratori",
+			"en": "fotolaboratori",
+			"de": "fotolaboratori"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G05",
+		"descrizione": {
+			"it": "filiera del cinema e dell'audiovisivo (industria, troupes, doppiaggio, generici, esercizi cinematografici)",
+			"en": "filiera del cinema e dell'audiovisivo (industria, troupes, doppiaggio, generici, esercizi cinematografici)",
+			"de": "filiera del cinema e dell'audiovisivo (industria, troupes, doppiaggio, generici, esercizi cinematografici)"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G06",
+		"descrizione": {
+			"it": "Teatri e Fondazioni Lirico Sinfoniche (artisti, tecnici, impiegati) e Professori d'orchestra della RAI",
+			"en": "Teatri e Fondazioni Lirico Sinfoniche (artisti, tecnici, impiegati) e Professori d'orchestra della RAI",
+			"de": "Teatri e Fondazioni Lirico Sinfoniche (artisti, tecnici, impiegati) e Professori d'orchestra della RAI"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G07",
+		"descrizione": {
+			"it": "settore della Comunicazione e dei servizi innovativi per le imprese",
+			"en": "settore della Comunicazione e dei servizi innovativi per le imprese",
+			"de": "settore della Comunicazione e dei servizi innovativi per le imprese"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G08",
+		"descrizione": {
+			"it": "imprese radio televisive, multimediali e multipiattaforma",
+			"en": "imprese radio televisive, multimediali e multipiattaforma",
+			"de": "imprese radio televisive, multimediali e multipiattaforma"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G09",
+		"descrizione": {
+			"it": "giornalisti",
+			"en": "giornalisti",
+			"de": "giornalisti"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G10",
+		"descrizione": {
+			"it": "ippica",
+			"en": "ippica",
+			"de": "ippica"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G11",
+		"descrizione": {
+			"it": "aziende editrici e stampatrici di giornali quotidiani ed agenzie di stampa",
+			"en": "aziende editrici e stampatrici di giornali quotidiani ed agenzie di stampa",
+			"de": "aziende editrici e stampatrici di giornali quotidiani ed agenzie di stampa"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G12",
+		"descrizione": {
+			"it": "produzione culturale e spettacolo  ",
+			"en": "produzione culturale e spettacolo  ",
+			"de": "produzione culturale e spettacolo  "
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G13",
+		"descrizione": {
+			"it": "SIAE",
+			"en": "SIAE",
+			"de": "SIAE"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "G14",
+		"descrizione": {
+			"it": "aziende aereofotogrammetriche",
+			"en": "aziende aereofotogrammetriche",
+			"de": "aziende aereofotogrammetriche"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H01",
+		"descrizione": {
+			"it": "terziario, distribuzione e servizi",
+			"en": "terziario, distribuzione e servizi",
+			"de": "terziario, distribuzione e servizi"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H02",
+		"descrizione": {
+			"it": "turismo",
+			"en": "turismo",
+			"de": "turismo"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H03",
+		"descrizione": {
+			"it": "pubblici esercizi, ristorazione collettiva e commerciale",
+			"en": "pubblici esercizi, ristorazione collettiva e commerciale",
+			"de": "pubblici esercizi, ristorazione collettiva e commerciale"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H04",
+		"descrizione": {
+			"it": "aziende ortofrutticole ed agrumarie",
+			"en": "aziende ortofrutticole ed agrumarie",
+			"de": "aziende ortofrutticole ed agrumarie"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H05",
+		"descrizione": {
+			"it": "vigilanza privata e servizi fiduciari",
+			"en": "vigilanza privata e servizi fiduciari",
+			"de": "vigilanza privata e servizi fiduciari"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H06",
+		"descrizione": {
+			"it": "agenti immobiliari e mandatari",
+			"en": "agenti immobiliari e mandatari",
+			"de": "agenti immobiliari e mandatari"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H07",
+		"descrizione": {
+			"it": "farmacie",
+			"en": "farmacie",
+			"de": "farmacie"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H08",
+		"descrizione": {
+			"it": "fiori, verde e piante ornamentali ",
+			"en": "fiori, verde e piante ornamentali ",
+			"de": "fiori, verde e piante ornamentali "
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H09",
+		"descrizione": {
+			"it": "proprietari di fabbricati",
+			"en": "proprietari di fabbricati",
+			"de": "proprietari di fabbricati"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H10",
+		"descrizione": {
+			"it": "amministratori di condominio",
+			"en": "amministratori di condominio",
+			"de": "amministratori di condominio"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H11",
+		"descrizione": {
+			"it": "studi professionali",
+			"en": "studi professionali",
+			"de": "studi professionali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H12",
+		"descrizione": {
+			"it": "lavoro domestico e di cura",
+			"en": "lavoro domestico e di cura",
+			"de": "lavoro domestico e di cura"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H13",
+		"descrizione": {
+			"it": "acconciatura, estetica, tricologia non curativa, tatuaggio, piercing e centri benessere",
+			"en": "acconciatura, estetica, tricologia non curativa, tatuaggio, piercing e centri benessere",
+			"de": "acconciatura, estetica, tricologia non curativa, tatuaggio, piercing e centri benessere"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H14",
+		"descrizione": {
+			"it": "impianti e attività sportive",
+			"en": "impianti e attività sportive",
+			"de": "impianti e attività sportive"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I01",
+		"descrizione": {
+			"it": "logistica, trasporto merci e spedizione",
+			"en": "logistica, trasporto merci e spedizione",
+			"de": "logistica, trasporto merci e spedizione"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I02",
+		"descrizione": {
+			"it": "trasporto marittimo e porti",
+			"en": "trasporto marittimo e porti",
+			"de": "trasporto marittimo e porti"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I03",
+		"descrizione": {
+			"it": "ferrovie",
+			"en": "ferrovie",
+			"de": "ferrovie"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I04",
+		"descrizione": {
+			"it": "trasporto aereo",
+			"en": "trasporto aereo",
+			"de": "trasporto aereo"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I05",
+		"descrizione": {
+			"it": "Autoferrotranvieri e Internavigatori (Mobilità - TPL)",
+			"en": "Autoferrotranvieri e Internavigatori (Mobilità - TPL)",
+			"de": "Autoferrotranvieri e Internavigatori (Mobilità - TPL)"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I06",
+		"descrizione": {
+			"it": "radiotaxi e autoservizi pubblici non di linea, autoservizi privati",
+			"en": "radiotaxi e autoservizi pubblici non di linea, autoservizi privati",
+			"de": "radiotaxi e autoservizi pubblici non di linea, autoservizi privati"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I07",
+		"descrizione": {
+			"it": "settore funerario",
+			"en": "settore funerario",
+			"de": "settore funerario"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I08",
+		"descrizione": {
+			"it": "autoscuole, scuole nautiche, studi di consulenza automobilistica e nautica",
+			"en": "autoscuole, scuole nautiche, studi di consulenza automobilistica e nautica",
+			"de": "autoscuole, scuole nautiche, studi di consulenza automobilistica e nautica"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I09",
+		"descrizione": {
+			"it": "trasporto a fune",
+			"en": "trasporto a fune",
+			"de": "trasporto a fune"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I10",
+		"descrizione": {
+			"it": "società e consorzi concessionari di autostrade e trafori",
+			"en": "società e consorzi concessionari di autostrade e trafori",
+			"de": "società e consorzi concessionari di autostrade e trafori"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I11",
+		"descrizione": {
+			"it": "servizi in appalto per conto dell'Amministrazione della Difesa, Interni, Giustizia, Forze dell'Ordine e Amministrazioni militari",
+			"en": "servizi in appalto per conto dell'Amministrazione della Difesa, Interni, Giustizia, Forze dell'Ordine e Amministrazioni militari",
+			"de": "servizi in appalto per conto dell'Amministrazione della Difesa, Interni, Giustizia, Forze dell'Ordine e Amministrazioni militari"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "I12",
+		"descrizione": {
+			"it": "agenzie marittime raccomandatarie e mediatori marittimi",
+			"en": "agenzie marittime raccomandatarie e mediatori marittimi",
+			"de": "agenzie marittime raccomandatarie e mediatori marittimi"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "J01",
+		"descrizione": {
+			"it": "credito ed assicurazioni",
+			"en": "credito ed assicurazioni",
+			"de": "credito ed assicurazioni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "J02",
+		"descrizione": {
+			"it": "Banca d'Italia e riscossione tributi",
+			"en": "Banca d'Italia e riscossione tributi",
+			"de": "Banca d'Italia e riscossione tributi"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K01",
+		"descrizione": {
+			"it": "aziende elettriche",
+			"en": "aziende elettriche",
+			"de": "aziende elettriche"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K02",
+		"descrizione": {
+			"it": "gas e acqua",
+			"en": "gas e acqua",
+			"de": "gas e acqua"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K03",
+		"descrizione": {
+			"it": "telecomunicazioni",
+			"en": "telecomunicazioni",
+			"de": "telecomunicazioni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K04",
+		"descrizione": {
+			"it": "aziende termali",
+			"en": "aziende termali",
+			"de": "aziende termali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K05",
+		"descrizione": {
+			"it": "pulizia, facility management, servizi integrati",
+			"en": "pulizia, facility management, servizi integrati",
+			"de": "pulizia, facility management, servizi integrati"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K06",
+		"descrizione": {
+			"it": "CONI servizi e federazioni sportive",
+			"en": "CONI servizi e federazioni sportive",
+			"de": "CONI servizi e federazioni sportive"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K07",
+		"descrizione": {
+			"it": "servizi ambientali",
+			"en": "servizi ambientali",
+			"de": "servizi ambientali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "K08",
+		"descrizione": {
+			"it": "servizi postali",
+			"en": "servizi postali",
+			"de": "servizi postali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T01",
+		"descrizione": {
+			"it": "scuola non statale",
+			"en": "scuola non statale",
+			"de": "scuola non statale"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T02",
+		"descrizione": {
+			"it": "università non statale",
+			"en": "università non statale",
+			"de": "università non statale"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T03",
+		"descrizione": {
+			"it": "formazione professionale",
+			"en": "formazione professionale",
+			"de": "formazione professionale"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T04",
+		"descrizione": {
+			"it": "sanità non statale",
+			"en": "sanità non statale",
+			"de": "sanità non statale"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T05",
+		"descrizione": {
+			"it": "assistenza non statale",
+			"en": "assistenza non statale",
+			"de": "assistenza non statale"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T06",
+		"descrizione": {
+			"it": "cultura",
+			"en": "cultura",
+			"de": "cultura"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T07",
+		"descrizione": {
+			"it": "enti e istituzioni private, pubbliche e del terzo settore",
+			"en": "enti e istituzioni private, pubbliche e del terzo settore",
+			"de": "enti e istituzioni private, pubbliche e del terzo settore"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T08",
+		"descrizione": {
+			"it": "regolamenti contrattuali per i dipendenti dei sindacati",
+			"en": "regolamenti contrattuali per i dipendenti dei sindacati",
+			"de": "regolamenti contrattuali per i dipendenti dei sindacati"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V01",
+		"descrizione": {
+			"it": "dirigenti di azienda",
+			"en": "dirigenti di azienda",
+			"de": "dirigenti di azienda"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V02",
+		"descrizione": {
+			"it": "agenzie di somministrazione di lavoro",
+			"en": "agenzie di somministrazione di lavoro",
+			"de": "agenzie di somministrazione di lavoro"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V03",
+		"descrizione": {
+			"it": "CCNL plurisettoriali del settore manifatturiero delle organizzazioni degli artigiani PMI rappresentate al CNEL",
+			"en": "CCNL plurisettoriali del settore manifatturiero delle organizzazioni degli artigiani PMI rappresentate al CNEL",
+			"de": "CCNL plurisettoriali del settore manifatturiero delle organizzazioni degli artigiani PMI rappresentate al CNEL"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V04",
+		"descrizione": {
+			"it": "Ambasciate, Consolati, Legazioni, Istituti culturali, Organismi Internazionali, basi USA in Italia",
+			"en": "Ambasciate, Consolati, Legazioni, Istituti culturali, Organismi Internazionali, basi USA in Italia",
+			"de": "Ambasciate, Consolati, Legazioni, Istituti culturali, Organismi Internazionali, basi USA in Italia"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V05",
+		"descrizione": {
+			"it": "istituti per il sostentamento del clero",
+			"en": "istituti per il sostentamento del clero",
+			"de": "istituti per il sostentamento del clero"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V06",
+		"descrizione": {
+			"it": "CCNL plurisettoriali, microsettoriali, altri e vari",
+			"en": "CCNL plurisettoriali, microsettoriali, altri e vari",
+			"de": "CCNL plurisettoriali, microsettoriali, altri e vari"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S000",
+		"descrizione": {
+			"it": "CCNL del personale del comparto autonomo della Presidenza del Consiglio dei Ministri",
+			"en": "CCNL del personale del comparto autonomo della Presidenza del Consiglio dei Ministri",
+			"de": "CCNL del personale del comparto autonomo della Presidenza del Consiglio dei Ministri"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S003",
+		"descrizione": {
+			"it": "CCNL del personale dell'area dirigenziale della Presidenza del Consiglio dei Ministri",
+			"en": "CCNL del personale dell'area dirigenziale della Presidenza del Consiglio dei Ministri",
+			"de": "CCNL del personale dell'area dirigenziale della Presidenza del Consiglio dei Ministri"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S641",
+		"descrizione": {
+			"it": "CCNL del personale non dirigente del Coni",
+			"en": "CCNL del personale non dirigente del Coni",
+			"de": "CCNL del personale non dirigente del Coni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S642",
+		"descrizione": {
+			"it": "CCNL del personale dirigente del Coni",
+			"en": "CCNL del personale dirigente del Coni",
+			"de": "CCNL del personale dirigente del Coni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S651",
+		"descrizione": {
+			"it": "CCNL del personale non dirigente di Unioncamere",
+			"en": "CCNL del personale non dirigente di Unioncamere",
+			"de": "CCNL del personale non dirigente di Unioncamere"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S821",
+		"descrizione": {
+			"it": "Forze di polizia ad ordinamento militare - personale non dirigente",
+			"en": "Forze di polizia ad ordinamento militare - personale non dirigente",
+			"de": "Forze di polizia ad ordinamento militare - personale non dirigente"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S831",
+		"descrizione": {
+			"it": "Forze di polizia ad ordinamento civile - personale non dirigente",
+			"en": "Forze di polizia ad ordinamento civile - personale non dirigente",
+			"de": "Forze di polizia ad ordinamento civile - personale non dirigente"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S841",
+		"descrizione": {
+			"it": "personale non direttivo e non dirigente del Corpo Nazionale dei Vigili del Fuoco",
+			"en": "personale non direttivo e non dirigente del Corpo Nazionale dei Vigili del Fuoco",
+			"de": "personale non direttivo e non dirigente del Corpo Nazionale dei Vigili del Fuoco"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S842",
+		"descrizione": {
+			"it": "personale direttivo e dirigente del Corpo Nazionale dei Vigili del Fuoco",
+			"en": "personale direttivo e dirigente del Corpo Nazionale dei Vigili del Fuoco",
+			"de": "personale direttivo e dirigente del Corpo Nazionale dei Vigili del Fuoco"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S730",
+		"descrizione": {
+			"it": "Accordo sindacale per il personale della carriera diplomatica, relativamente al servizio prestato in Italia",
+			"en": "Accordo sindacale per il personale della carriera diplomatica, relativamente al servizio prestato in Italia",
+			"de": "Accordo sindacale per il personale della carriera diplomatica, relativamente al servizio prestato in Italia"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S740",
+		"descrizione": {
+			"it": "accordo sindacale per il personale della carriera prefettizia",
+			"en": "accordo sindacale per il personale della carriera prefettizia",
+			"de": "accordo sindacale per il personale della carriera prefettizia"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S811",
+		"descrizione": {
+			"it": "personale non dirigente delle Forze armate",
+			"en": "personale non dirigente delle Forze armate",
+			"de": "personale non dirigente delle Forze armate"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S005",
+		"descrizione": {
+			"it": "CCNL relativo al personale del Comparto Funzioni Centrali",
+			"en": "CCNL relativo al personale del Comparto Funzioni Centrali",
+			"de": "CCNL relativo al personale del Comparto Funzioni Centrali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S025",
+		"descrizione": {
+			"it": "CCNL relativo al personale dell'Area Funzioni Centrali (dirigenti)",
+			"en": "CCNL relativo al personale dell'Area Funzioni Centrali (dirigenti)",
+			"de": "CCNL relativo al personale dell'Area Funzioni Centrali (dirigenti)"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S105",
+		"descrizione": {
+			"it": "CCNL relativo al personale del Comparto Funzioni Locali",
+			"en": "CCNL relativo al personale del Comparto Funzioni Locali",
+			"de": "CCNL relativo al personale del Comparto Funzioni Locali"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S125",
+		"descrizione": {
+			"it": "CCNL relativo al personale dell'area delle Funzioni Locali (dirigenti)",
+			"en": "CCNL relativo al personale dell'area delle Funzioni Locali (dirigenti)",
+			"de": "CCNL relativo al personale dell'area delle Funzioni Locali (dirigenti)"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S305",
+		"descrizione": {
+			"it": "CCNL relativo al personale del Comparto Istruzione e Ricerca",
+			"en": "CCNL relativo al personale del Comparto Istruzione e Ricerca",
+			"de": "CCNL relativo al personale del Comparto Istruzione e Ricerca"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S325",
+		"descrizione": {
+			"it": "CCNL relativo al personale dell'Area Istruzione e Ricerca (dirigenti)",
+			"en": "CCNL relativo al personale dell'Area Istruzione e Ricerca (dirigenti)",
+			"de": "CCNL relativo al personale dell'Area Istruzione e Ricerca (dirigenti)"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S205",
+		"descrizione": {
+			"it": "CCNL relativo al personale del Comparto Sanità",
+			"en": "CCNL relativo al personale del Comparto Sanità",
+			"de": "CCNL relativo al personale del Comparto Sanità"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S225",
+		"descrizione": {
+			"it": "CCNL dell'Area Sanità (dirigenti)",
+			"en": "CCNL dell'Area Sanità (dirigenti)",
+			"de": "CCNL dell'Area Sanità (dirigenti)"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S241",
+		"descrizione": {
+			"it": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici di medicina generale ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e successive modificazioni e integrazioni",
+			"en": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici di medicina generale ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e successive modificazioni e integrazioni",
+			"de": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici di medicina generale ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e successive modificazioni e integrazioni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S261",
+		"descrizione": {
+			"it": "ACN per la disciplina dei rapporti con gli specialisti ambulatoriali interni, veterinari ed altre professionalità sanitarie (biologi, chimici, psicologi) ambulatoriali ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e succ. modificazioni e integrazioni",
+			"en": "ACN per la disciplina dei rapporti con gli specialisti ambulatoriali interni, veterinari ed altre professionalità sanitarie (biologi, chimici, psicologi) ambulatoriali ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e succ. modificazioni e integrazioni",
+			"de": "ACN per la disciplina dei rapporti con gli specialisti ambulatoriali interni, veterinari ed altre professionalità sanitarie (biologi, chimici, psicologi) ambulatoriali ai sensi dell'art.8 del D. Lgs. n. 502 del 1992 e succ. modificazioni e integrazioni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "S251",
+		"descrizione": {
+			"it": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici pediatri di libera scelta ai sensi dell'art.8 del D. Lgs.n. 502 del 1992 e succ. modificazioni e integrazioni",
+			"en": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici pediatri di libera scelta ai sensi dell'art.8 del D. Lgs.n. 502 del 1992 e succ. modificazioni e integrazioni",
+			"de": "Accordo Collettivo Nazionale per la disciplina dei rapporti con i medici pediatri di libera scelta ai sensi dell'art.8 del D. Lgs.n. 502 del 1992 e succ. modificazioni e integrazioni"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H675",
+		"descrizione": {
+			"it": "Accordo collettivo nazionale per la regolamentazione dell'attività di collaborazione alle imprese che svolgono, attraverso l'ausilio di piattaforme digitali, attività di acquisto e rivendita di un carrello contenente prodotti di largo consumo ordinati on line dal cliente",
+			"en": "Accordo collettivo nazionale per la regolamentazione dell'attività di collaborazione alle imprese che svolgono, attraverso l'ausilio di piattaforme digitali, attività di acquisto e rivendita di un carrello contenente prodotti di largo consumo ordinati on line dal cliente",
+			"de": "Accordo collettivo nazionale per la regolamentazione dell'attività di collaborazione alle imprese che svolgono, attraverso l'ausilio di piattaforme digitali, attività di acquisto e rivendita di un carrello contenente prodotti di largo consumo ordinati on line dal cliente"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "H670",
+		"descrizione": {
+			"it": "collaboratori telefonici dei call center",
+			"en": "collaboratori telefonici dei call center",
+			"de": "collaboratori telefonici dei call center"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T099",
+		"descrizione": {
+			"it": "Collaboratori di Enti di Ricerca privati, IRCCS E Strutture Sanitarie private",
+			"en": "Collaboratori di Enti di Ricerca privati, IRCCS E Strutture Sanitarie private",
+			"de": "Collaboratori di Enti di Ricerca privati, IRCCS E Strutture Sanitarie private"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "T283",
+		"descrizione": {
+			"it": "Collaboratori UNIVERSITA' NON STATALI",
+			"en": "Collaboratori UNIVERSITA' NON STATALI",
+			"de": "Collaboratori UNIVERSITA' NON STATALI"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V172",
+		"descrizione": {
+			"it": "Accordo Collettivo Nazionale per la regolamentazione delle Collaborazioni esclusivamente personali nel settore delle ricerche di mercato",
+			"en": "Accordo Collettivo Nazionale per la regolamentazione delle Collaborazioni esclusivamente personali nel settore delle ricerche di mercato",
+			"de": "Accordo Collettivo Nazionale per la regolamentazione delle Collaborazioni esclusivamente personali nel settore delle ricerche di mercato"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V154",
+		"descrizione": {
+			"it": "COLLABORAZIONI Coordinate e Continuative",
+			"en": "COLLABORAZIONI Coordinate e Continuative",
+			"de": "COLLABORAZIONI Coordinate e Continuative"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V112",
+		"descrizione": {
+			"it": "Accordo collettivo nazionale per la regolamentazione delle collaborazioni coordinate e continuative",
+			"en": "Accordo collettivo nazionale per la regolamentazione delle collaborazioni coordinate e continuative",
+			"de": "Accordo collettivo nazionale per la regolamentazione delle collaborazioni coordinate e continuative"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V113",
+		"descrizione": {
+			"it": "CCNL per i collaboratori coordinati e continuativi delle società e associazioni sportive dilettantistiche",
+			"en": "CCNL per i collaboratori coordinati e continuativi delle società e associazioni sportive dilettantistiche",
+			"de": "CCNL per i collaboratori coordinati e continuativi delle società e associazioni sportive dilettantistiche"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V121",
+		"descrizione": {
+			"it": "COLLABORAZIONI Coordinate e Continuative - UNPEC",
+			"en": "COLLABORAZIONI Coordinate e Continuative - UNPEC",
+			"de": "COLLABORAZIONI Coordinate e Continuative - UNPEC"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V131",
+		"descrizione": {
+			"it": "COLLABORAZIONI Coordinate e Continuative - CISI",
+			"en": "COLLABORAZIONI Coordinate e Continuative - CISI",
+			"de": "COLLABORAZIONI Coordinate e Continuative - CISI"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V141",
+		"descrizione": {
+			"it": "COLLABORAZIONI Coordinate e Continuative - FEDERTERZIARIO",
+			"en": "COLLABORAZIONI Coordinate e Continuative - FEDERTERZIARIO",
+			"de": "COLLABORAZIONI Coordinate e Continuative - FEDERTERZIARIO"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "V152",
+		"descrizione": {
+			"it": "CCNL per il settore dei servizi di ausilio familiare",
+			"en": "CCNL per il settore dei servizi di ausilio familiare",
+			"de": "CCNL per il settore dei servizi di ausilio familiare"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "NA",
+		"descrizione": {
+			"it": "Non applicabile",
+			"en": "Non applicabile",
+			"de": "Non applicabile"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	}
+]
