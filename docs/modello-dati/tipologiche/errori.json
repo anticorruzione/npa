@@ -1140,6 +1140,15 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ERR126_1",
+    "descrizione": {
+		"it": "L'oggetto indicato in aggiudicazioni.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l'oggetto inserito nel campo Description (BT-24).",
+		"en": "L'oggetto indicato in aggiudicazioni.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l'oggetto inserito nel campo Description (BT-24)."
+	},
+    "dataInizio":null,
+    "dataFine":null
 },	
 {
     "codice":"ERR127",
@@ -1306,8 +1315,8 @@
 {
 	"codice":"ERR145",
     "descrizione": {
-		"it": "È stato inserito il campo comunicazioneRibassoAggiudicazione per un lotto non aggiudicato.",
-		"en": "È stato inserito il campo comunicazioneRibassoAggiudicazione per un lotto non aggiudicato."
+		"it": "Operazione non consentita: è in corso una richiesta di rollback scheda.",
+		"en": "Operazione non consentita: è in corso una richiesta di rollback scheda"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -1315,8 +1324,26 @@
 {
 	"codice":"ERR146",
     "descrizione": {
+		"it": "È stato inserito il campo comunicazioneRibassoAggiudicazione per un lotto non aggiudicato.",
+		"en": "È stato inserito il campo comunicazioneRibassoAggiudicazione per un lotto non aggiudicato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR147",
+    "descrizione": {
 		"it": "Non è possibile comunicare il campo ribassoAggiudicazione per il lotto indicato.",
 		"en": "Non è possibile comunicare il campo ribassoAggiudicazione per il lotto indicato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR148",
+    "descrizione": {
+		"it": "Per questa scheda è stata già effettuata operazione di rollback.",
+		"en": "Per questa scheda è stata già effettuata operazione di rollback."
 	},
     "dataInizio":null,
     "dataFine":null
