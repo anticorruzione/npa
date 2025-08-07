@@ -1,50 +1,70 @@
-[{
-    "codice":"FVC",
-    "descrizione": {
-		"it": "Fascicolo Virtuale del Concorrente",
-		"en": "Fascicolo Virtuale del Concorrente"
+[
+	{
+		"codice": "FVC",
+		"descrizione": {
+			"it": "Fascicolo Virtuale del Concorrente",
+			"en": "Fascicolo Virtuale del Concorrente"
 		},
-    "dataInizio":null,
-    "dataFine":null
-},{
-    "codice":"FVOE",
-    "descrizione": {
-		"it": "Fascicolo Virtuale Operatore Economico",
-		"en": "Fascicolo Virtuale Operatore Economico"
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "FVOE",
+		"descrizione": {
+			"it": "Fascicolo Virtuale Operatore Economico",
+			"en": "Fascicolo Virtuale Operatore Economico"
 		},
-    "dataInizio":null,
-    "dataFine":null
-},{
-    "codice":"FVA",
-    "descrizione": {
-		"it": "Fascicolo Virtuale Appalto",
-		"en": "Fascicolo Virtuale Appalto"
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "FVA",
+		"descrizione": {
+			"it": "Fascicolo Virtuale Appalto",
+			"en": "Fascicolo Virtuale Appalto"
 		},
-    "dataInizio":null,
-    "dataFine":null
-},{
-    "codice":"FVUP",
-    "descrizione": {
-		"it": "Fascicolo Virtuale User Provisioning",
-		"en": "Fascicolo Virtuale User Provisioning"
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "FVUP",
+		"descrizione": {
+			"it": "Fascicolo Virtuale User Provisioning",
+			"en": "Fascicolo Virtuale User Provisioning"
 		},
-    "dataInizio":null,
-    "dataFine":null
-},{
-    "codice":"FVQ",
-    "descrizione": {
-        "it": "Fascicolo Virtuale del contratto SOA",
-        "en": "Fascicolo Virtuale del contratto SOA"
-        },
-    "dataInizio":null,
-    "dataFine":null
-},{
-    "codice":"FVQOE",
-    "descrizione": {
-        "it": "Fascicolo Virtuale del contratto SOA dell'OE",
-        "en": "Fascicolo Virtuale del contratto SOA dell'OE"
-        },
-    "dataInizio":null,
-    "dataFine":null
-}
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "FVQ",
+		"descrizione": {
+			"it": "Fascicolo Virtuale del contratto SOA",
+			"en": "Fascicolo Virtuale del contratto SOA"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "FVQOE",
+		"descrizione": {
+			"it": "Fascicolo Virtuale del contratto SOA dell'OE",
+			"en": "Fascicolo Virtuale del contratto SOA dell'OE"
+		},
+		"dataInizio": null,
+		"dataFine": null
+	},
+	{
+		"codice": "FVPQ",
+		"descrizione": {
+			"it": "Fascicolo Virtuale Verifiche Preliminari",
+			"en": "Fascicolo Virtuale Verifiche Preliminari"
+		}
+	},
+	{
+		"codice": "FVPQOE",
+		"descrizione": {
+			"it": "Fascicolo Virtuale Verifiche Preliminari Operatore Economico",
+			"en": "Fascicolo Virtuale Verifiche Preliminari Operatore Economico"
+		}
+	}
 ]
