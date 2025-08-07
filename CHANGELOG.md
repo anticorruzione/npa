@@ -1515,7 +1515,7 @@ errori.json: Aggiunto errore REG68_1
 * Creata la nuova tipologica motivoAnnullamentoComunicazione
 * Aggiornate le tipologiche esitoOperazione, tipoOperazione, statoScheda, motivoDerogaQlf
 * errori.json: 
-  * aggiunti gli errori ERR134, ERR135, ERR136, ERR137, ERR138, ERR139, ERR140, ERR141, ERR142, ERR143, ERR144, ERR145, ERR146, ERR147, ERR148, ERR149
+  * aggiunti gli errori ERR126_1, ERR134, ERR135, ERR136, ERR137, ERR138, ERR139, ERR140, ERR141, ERR142, ERR143, ERR144, ERR145, ERR146, ERR147, ERR148, ERR149
   * aggiunto l'errore REG5_1, REG131
 * codiceScheda.json: aggiunte nuove schede ABI, CBI
 
