@@ -1349,6 +1349,15 @@
     "dataFine":null
 },
 {
+	"codice":"ERR149",
+    "descrizione": {
+		"it": "È necessario popolare il campo idContratto o cig nel body della scheda.",
+		"en": "È necessario popolare il campo idContratto o cig nel body della scheda."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
