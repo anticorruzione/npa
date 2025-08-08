@@ -482,7 +482,7 @@ paths:
         - SA
       summary: API Rest per verificare lo stato della richiesta di generazione del documento. SINCRONO.
       description: API Rest per il recupero dello stato in cui si trova il documento di cui si é richiesto la generazione dagli enti certificatori. SINCRONO.
-      operationId: idDocumentoVerificaRichiestaFVPQOE
+      operationId: idDocumentoVerificaRichiestaFVOE
       parameters:
         - in: query
           name: idRichiesta
@@ -1602,7 +1602,7 @@ paths:
         - SA
       summary: API Rest per verificare lo stato della richiesta di generazione del documento. SINCRONO.
       description: API Rest per il recupero dello stato in cui si trova il documento di cui si é richiesto la generazione dagli enti certificatori. SINCRONO.
-      operationId: idDocumentoVerificaRichiestaFVOE
+      operationId: idDocumentoVerificaRichiestaFVPQOE 
       parameters:
         - name: idRichiesta
           in: query
