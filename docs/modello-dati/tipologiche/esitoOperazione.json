@@ -429,4 +429,31 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"SC_IN_ROLLBACK",
+    "descrizione": {
+		"it": "Scheda in rollback",
+		"en": "Scheda in rollback"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_ROLLBACK",
+    "descrizione": {
+		"it": "Scheda rollbackata",
+		"en": "Scheda rollbackata"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_N_ROLLBACK",
+    "descrizione": {
+		"it": "Scheda non rollbackata",
+		"en": "Scheda non rollbackata"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]

@@ -42,4 +42,13 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"ANN",
+    "descrizione": {
+		"it": "Annullata",
+		"en": "Annullata"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]

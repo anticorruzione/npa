@@ -204,4 +204,13 @@
     },
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"SC_ROLLBACK",
+    "descrizione": {
+        "it": "Rollback Scheda",
+        "en": "Rollback Scheda"
+    },
+    "dataInizio":null,
+    "dataFine":null
 }]

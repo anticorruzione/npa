@@ -83,16 +83,16 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0uf8m6e">
-        <description>REG101: indicare almeno uno dei campi di cui si richiede la modifica</description>
+        <description>REG127: indicare almeno un Cup</description>
         <inputEntry id="UnaryTests_1hc1990">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1a4e2bn">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.cup)&gt;1 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</text>
+satisfies count(aggiudicazione.cup)&gt;0 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jttif7">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG101\"}"</text>
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG127\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
