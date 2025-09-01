@@ -1505,6 +1505,7 @@ errori.json: Aggiunto errore REG68_1
 * Aggiunte le righe con le informazioni relative alle nuove schede relative ai beni infungibili ABI E CBI
 * eliminata la S3 come scheda successiva alle schede S2, S2R, ID
 * modificato il flusso di appartenenza della scheda M2: aggiunto il flusso 72
+* aggiunte le colonne schedaAnnullabile e servizioPostAnnullamento
 
 ### Tipologiche
 * ruoloOE.json: eliminate alcune voci, aggiunte altre.
