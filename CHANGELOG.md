@@ -1466,6 +1466,7 @@ errori.json: Aggiunto errore REG68_1
 * Rilascio in Esercizio: Come da Roadmap
 * Rilascio in Qualificazione: Come da Roadmap (nuove schede beni infungbili, ABI, CBI)
 * Rilascio in Esercizio: Come da Roadmap (nuove schede beni infungbili, ABI, CBI)
+* Rilascio in Qualificazione: 09/09/2025 (per la scheda ID modificata la descrizione del campo ribassoAggiudicazione all'interno dell'oggetto comunicazioneRibassoAggiudicazione, e modificato il type del campo da integer a double)
 
   **la nota di rilascio potrà essere integrata successivamente**
     

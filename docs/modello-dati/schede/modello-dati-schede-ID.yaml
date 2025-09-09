@@ -32,9 +32,11 @@ components:
         motivoCorrezione:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoCorrezioneEnum'    
         ribassoAggiudicazione:
-          description: ribasso di aggiudicazione. valori ammessi-> (x<100); sono ammessi valori negativi.
-          type: integer
-          maximum: 99           
+          description: ribasso di aggiudicazione. valori ammessi-> (x<100); sono ammessi valori negativi. I valori positivi saranno considerati come integrazione del campo offertePresentate.offertaEconomica, mentre i valori negativi andranno ad integrare il campo offertePresentate.offertaInAumento.
+          type: number
+          format: double
+          maximum: 100
+          exclusiveMaximum: true
     ComunicazioneIDType:
       type: object
       required: [motivoRichiestaModifica]
