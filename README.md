@@ -1,5 +1,18 @@
 # AVVISI:
 
+## Attenzione
+Si ricorda che l’area Issues di questo progetto è destinata al supporto delle segnalazioni ricevute riguardanti i servizi disponibili per la qualificazione e l’attestazione delle piattaforme.
+
+Quest’area è pubblica:
+pertanto, nelle segnalazioni non devono quindi essere inserite informazioni riservate quali:
+
+-	password o credenziali,
+-	configurazioni di sicurezza,
+-	log applicativi o documenti contenenti dati sensibili,
+-	dati personali o informazioni soggette a vincoli di riservatezza contrattuale.
+
+Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
+
 ## 16/07/2025 - Aggiornamento del certificato SSL dei servizi ANAC
 Il certificato SSL dei servizi ANAC verrà aggiornato secondo il seguente calendario: </br>
   •	21 luglio: ambiente di pre-produzione (attestazione) </br>
