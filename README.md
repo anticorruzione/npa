@@ -190,12 +190,15 @@ La cartella [scenari-di-esempio](docs/scenari-di-esempio) contiene una sequenza 
 
 ## Disclaimer
 Si ricorda che l’area Issues di questo progetto è destinata al supporto delle segnalazioni ricevute riguardanti i servizi disponibili per la qualificazione e l’attestazione delle piattaforme.
+
 Quest’area è pubblica:
 pertanto, nelle segnalazioni non devono quindi essere inserite informazioni riservate quali:
-•	password o credenziali,
-•	configurazioni di sicurezza,
-•	log applicativi o documenti contenenti dati sensibili,
-•	dati personali o informazioni soggette a vincoli di riservatezza contrattuale.
+
+-	password o credenziali,
+-	configurazioni di sicurezza,
+-	log applicativi o documenti contenenti dati sensibili,
+-	dati personali o informazioni soggette a vincoli di riservatezza contrattuale.
+
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
 L’Autorità Nazionale Anticorruzione si riserva la facoltà di non fornire risposta puntuale a tutte le issues ricevute ed è sollevata da eventuali responsabilità dovuta:
