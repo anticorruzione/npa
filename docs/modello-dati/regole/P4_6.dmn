@@ -358,22 +358,6 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG66\"}"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1oiflb4">
-        <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</description>
-        <inputEntry id="UnaryTests_1bngedq">
-          <text>appalto.datiBaseProcedura.tipoProcedura.codice = "open" or appalto.datiBaseProcedura.tipoProcedura.codice = "oth-single"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jq49yh">
-          <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="")</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_146yua6">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0otk16x">
-          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG95\"}"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0g72lga">
         <description>REG96: E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
         <inputEntry id="UnaryTests_1izcarr">

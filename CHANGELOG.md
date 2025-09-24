@@ -1530,6 +1530,16 @@ aggiunta regola REG5_1
 * CO2.dmn, COC.dmn,CS1.dmn,IR1.dmn,RI1.dmn,RSU1.dmn,S1.dmn,S2.dmn,S2R.dmn,SO1.dmn,SQ1.dmn: aggiornata la annotation con il riferimento alla REG0
 * ABI.dmn, CBI.dmn: regole relative al nuovo flusso dei beni infungibili
 
+
+<details>
+<summary><h1>Note di rilascio del 24/09/2025 (In Esercizio)</h1></summary>
+
+### Regole
+* ticket 85898, 85924:
+  * rimossa la REG95:
+    * P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn;
+</details>
+
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.
