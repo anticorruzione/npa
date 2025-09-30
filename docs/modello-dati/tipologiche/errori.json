@@ -1358,6 +1358,15 @@
     "dataFine":null
 },
 {
+	"codice":"ERR150",
+    "descrizione": {
+		"it": "La scheda non può essere rollbackata.",
+		"en": "La scheda non può essere rollbackata."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
