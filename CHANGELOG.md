@@ -1507,6 +1507,7 @@ errori.json: Aggiunto errore REG68_1
 * eliminata la S3 come scheda successiva alle schede S2, S2R, ID
 * modificato il flusso di appartenenza della scheda M2: aggiunto il flusso 72
 * aggiunte le colonne schedaAnnullabile e servizioPostAnnullamento
+* modificato l'elenco delle schede successive della S3: rimosse le schede A1_29,A1_30,A1_31,A1_32,A1_33,A1_34,A1_35,A1_36,A1_37,A2_29,A2_30,A2_31,A2_32,A2_33,A2_34,A2_35,A2_36,A2_37,A3_1,A3_2,A3_3,A3_4,A3_5, A4_1,A4_2,A4_3,A4_4,A4_5,A4_6,A7_1_1,A7_1_2
 
 ### Tipologiche
 * ruoloOE.json: eliminate alcune voci, aggiunte altre.
