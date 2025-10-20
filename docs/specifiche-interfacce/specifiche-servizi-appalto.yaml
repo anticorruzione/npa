@@ -257,18 +257,20 @@ paths:
           example: '2015-05-28T14:07:17Z'  
         - in: query
           name: page
-          description: numero della pagina da visualizzare
+          description: "numero della pagina da visualizzare (min: 1)"
           schema:
             type: integer
             format: int32
             default: 1
+            minimum: 1 
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: "numero di elementi per pagina (max: 20)"
           schema:
             type: integer
             format: int32
             default: 20
+            maximum: 20
       responses:
         '200':
           description: Operazione terminato con successo
@@ -480,18 +482,20 @@ paths:
           example: '2015-05-28T14:07:17Z'  
         - in: query
           name: page
-          description: numero della pagina da visualizzare
+          description: "numero della pagina da visualizzare (min: 1)"
           schema:
             type: integer
             format: int32
             default: 1
+            minimum: 1 
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: "numero di elementi per pagina (max: 20)"
           schema:
             type: integer
             format: int32
             default: 20
+            maximum: 20
       responses:
         '200':
           description: Operazione terminato con successo
@@ -663,18 +667,20 @@ paths:
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         - in: query
           name: page
-          description: numero della pagina da visualizzare
+          description: "numero della pagina da visualizzare (min: 1)"
           schema:
             type: integer
             format: int32
             default: 1
+            minimum: 1 
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: "numero di elementi per pagina (max: 20)"
           schema:
             type: integer
-            format: int32 
+            format: int32
             default: 20
+            maximum: 20
       responses:
         '200':
           description: Operazione terminato con successo
@@ -886,18 +892,20 @@ paths:
           example: '2022-01-23T12:02:05Z'    
         - in: query
           name: page
-          description: numero della pagina da visualizzare
+          description: "numero della pagina da visualizzare (min: 1)"
           schema:
             type: integer
             format: int32
             default: 1
+            minimum: 1 
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: "numero di elementi per pagina (max: 20)"
           schema:
             type: integer
             format: int32
             default: 20
+            maximum: 20
       responses:
         '200':
           description: Operazione terminato con successo
@@ -1162,18 +1170,20 @@ paths:
             example: 'IN_LAV'
         - in: query
           name: page
-          description: numero della pagina da visualizzare
+          description: "numero della pagina da visualizzare (min: 1)"
           schema:
             type: integer
             format: int32
             default: 1
+            minimum: 1 
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: "numero di elementi per pagina (max: 20)"
           schema:
             type: integer
             format: int32
             default: 20
+            maximum: 20
       responses:
         '200':
           description: Operazione terminato con successo
@@ -1393,20 +1403,22 @@ paths:
       parameters:
         - in: query
           name: page
-          description: numero della pagina da visualizzare
+          description: "numero della pagina da visualizzare (min: 1)"
           required: false
           schema:
             type: integer
             format: int32
             default: 1
-        - in: query
+            minimum: 1 
+        - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: "numero di elementi per pagina (max: 100)"
           required: false
           schema:
             type: integer
             format: int32
-            default: 20     
+            default: 20
+            maximum: 100    
       responses:
         '200':
           description: Operazione terminato con successo
@@ -1455,18 +1467,20 @@ paths:
             example: '2022-01-23T12:02:05Z'
         - in: query
           name: page
-          description: numero della pagina da visualizzare
+          description: "numero della pagina da visualizzare (min: 1)"
           schema:
             type: integer
             format: int32
             default: 1
+            minimum: 1 
         - in: query  
           name: perPage
-          description: numero di elementi per pagina
+          description: "numero di elementi per pagina (max: 100)"
           schema:
             type: integer
             format: int32
-            default: 20            
+            default: 20
+            maximum: 100           
       responses:
         '200':
           description: Operazione terminato con successo
