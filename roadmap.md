@@ -73,14 +73,14 @@
 |68087|Cancellazione appalti non confermati dopo 90 giorni|Verrà realizzato un job che provvederà alla cancellazione degli appalti non confermati dopo 90 giorni|/<br>/<br>/<br>|CHG-07|
 |68485|Affidamento diretto: Correzione per Esenzione dai contributi in casi di ripetizioni di lavori e servizi analoghi|Aggiunta della sezione ipotesiCollegamento nelle schede di affidamento diretto|/<br>/<br>/<br>|CHG-07|
 |81541|Verifica flussi non associato a comunicazioni di variazione contrattuale|Modifica dell’orchestratore per permettere l’invio delle schede di modifica contrattuale M2* per le schede A3_6, P2_17 e AD2_28|/<br>/<br>/<br>|CHG-07|
-|84809|Revisione flusso 72 per differenziazione procedure negoziate sopra e sotto soglia comunitaria|Revisione flusso 72 per differenziazione procedure negoziate sopra e sotto soglia comunitaria|/<br>/<br>/<br>|CHG-07|
+|84809|Revisione flussi 61,62 e 72 per differenziazione procedure negoziate sopra e sotto soglia comunitaria |Revisione flussi 61,62 e 72 per differenziazione procedure negoziate sopra e sotto soglia comunitaria. Introduzione di una nuova scheda di indizione per il flusso soprasoglia.|/<br>/<br>/<br>|CHG-07|
 |87011|Aggiornamento tabella istat|Aggiornamento della tabella istat con allineamento alla versione attuale|/<br>/<br>/<br>|CHG-07|
 |84677|Revisione Scheda ID - Integrazione Dati|Aggiunta idPartecipante all'oggetto comunicazioneRibassoAggiudicazione|/<br>/<br>/<br>|CHG-07|
 |83225|Revisione Scheda S2|modifica all'elenco dei flussi di appartenenza della scheda S2 con rimozione del flusso 40|/<br>/<br>/<br>|CHG-07|
 |72902|Revisione Regole Scheda S3|Introduzione di una regola che verifichi la coerenza tra il tipo di progettazione e il tipo di soggetto indicato.|/<br>/<br>/<br>|CHG-07|
 |61141|Inserimento tetto massimo su scheda AD3|Introduzione di una regola che blocca la scheda in caso di appalto di lavori di importo superiore a € 150.000 e di servizi e forniture di importo superiore a € 140.000|/<br>/<br>/<br>|CHG-07|
 ||||||
-|57290|Revisione scheda RSU1 - richiesta subappalto|Revisione del campo codice fiscale, modifica della cardinalità da molti a uno.|/<br>/<br>/<br>||
+|57290|Revisione scheda RSU1 - richiesta subappalto|Revisione del modello dati della scheda RSU1.|/<br>/<br>/<br>||
 |68714|Revisione flusso di esecuzione|Revisione della corretta successione delle schede di avvio del flusso SC1 e I1, per eliminare la possibilità di non rilevare la data di sottoscrizione del contratto. Revisione della successione di eventi della fase di conclusione|/<br>/<br>/<br>||
 |70558|TED - Migrazione Nuove API v3|Aggiornamento API endpoint URLs e modifica del nome del parametro "noticeAuthorLocale" in "noticeAuthorLang"|/<br>/<br>/<br>||
 |86830|Introduzione xsd per validazione eForm|Introduzione di una validazione dello schema eform per verifiche sintattiche sul valore assegnato ai campi relativi a valori di tipo numerico (intero o reale) e date, per i quali il TED non esegue verifica|/<br>/<br>/<br>||
