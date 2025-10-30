@@ -4,6 +4,7 @@ info:
   version: 1.0.0
   description: |-
    Vengono riportati gli oggetti usati dalle operazioni FVOE e FVA
+paths: {}
 components:
   schemas:
     StatoAutorizzazioneEnum:  
@@ -113,15 +114,6 @@ components:
       properties:
         appalto:
           $ref: '#/components/schemas/AppaltoType'
-    FVPQType:
-      allOf: # estende lo schema dati di FascicoloType
-        - $ref: '#/components/schemas/FascicoloType'
-      description: Oggetto che riporta i dati del FVPQ
-      type: object
-      additionalProperties: false
-      properties:
-        piano:
-          $ref: '#/components/schemas/PianoType'
     DocumentoType:
       description: Oggetto che riporta i dati del Documento
       type: object
@@ -489,8 +481,7 @@ components:
           properties:
             LinguaTedesca:
               description: >-
-                indica la lingua con cui produrre il documento. In questa release DEVE
-                essere impostato a true.
+                indica la lingua con cui produrre il documento.
               type: boolean
               example: true
     DatiSA00004:
@@ -584,8 +575,7 @@ components:
           properties:
             LinguaTedesca:
               description: >-
-                indica se il soggetto é da verificare. In questa release DEVE
-                essere impostato a true.
+                indica la lingua con cui produrre il documento.
               type: boolean
               example: true
     DatiSA00036:
