@@ -114,6 +114,15 @@ components:
       properties:
         appalto:
           $ref: '#/components/schemas/AppaltoType'
+    FVPQType:
+      allOf: # estende lo schema dati di FascicoloType
+        - $ref: '#/components/schemas/FascicoloType'
+      description: Oggetto che riporta i dati del FVPQ
+      type: object
+      additionalProperties: false
+      properties:
+        piano:
+          $ref: '#/components/schemas/PianoType'
     DocumentoType:
       description: Oggetto che riporta i dati del Documento
       type: object
