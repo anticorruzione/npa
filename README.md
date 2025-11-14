@@ -13,6 +13,9 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 14/11/2025 - Sospensione dei servizi per migrazione PSN
+I servizi di interoperabilità in ambiente di esercizio saranno sospesi dalle ore 8.00 di venerdi 21 novembre alle ore 8.00 di martedi 25 novembre per consentire il completamento della migrazione degli stessi sul Polo Strategico Nazionale. Maggiori dettagli sui servizi interessati dall'attività sono disponibili nell'[avviso](https://www.anticorruzione.it/-/avviso.13.11.25.psn) pubblicato sul portale dell'Autorità 
+
 ## 16/07/2025 - Aggiornamento del certificato SSL dei servizi ANAC
 Il certificato SSL dei servizi ANAC verrà aggiornato secondo il seguente calendario: </br>
   •	21 luglio: ambiente di pre-produzione (attestazione) </br>
