@@ -79,8 +79,8 @@
 |83225|Revisione Scheda S2|modifica all'elenco dei flussi di appartenenza della scheda S2 con rimozione del flusso 40|/<br>/<br>/<br>|CHG-07|
 |72902|Revisione Regole Scheda S3|Introduzione di una regola che verifichi la coerenza tra il tipo di progettazione e il tipo di soggetto indicato.|/<br>/<br>/<br>|CHG-07|
 |61141|Inserimento tetto massimo su scheda AD3|Introduzione di una regola che blocca la scheda in caso di appalto di lavori di importo superiore a € 150.000 e di servizi e forniture di importo superiore a € 140.000|/<br>/<br>/<br>|CHG-07|
+|57290|Revisione scheda RSU1 - richiesta subappalto|Revisione del modello dati della scheda RSU1.|/<br>/<br>/<br>|CHG-07|
 ||||||
-|57290|Revisione scheda RSU1 - richiesta subappalto|Revisione del modello dati della scheda RSU1.|/<br>/<br>/<br>||
 |68714|Revisione flusso di esecuzione|Revisione della corretta successione delle schede di avvio del flusso SC1 e I1, per eliminare la possibilità di non rilevare la data di sottoscrizione del contratto. Revisione della successione di eventi della fase di conclusione|/<br>/<br>/<br>||
 |70558|TED - Migrazione Nuove API v3|Aggiornamento API endpoint URLs e modifica del nome del parametro "noticeAuthorLocale" in "noticeAuthorLang"|/<br>/<br>/<br>||
 |86830|Introduzione xsd per validazione eForm|Introduzione di una validazione dello schema eform per verifiche sintattiche sul valore assegnato ai campi relativi a valori di tipo numerico (intero o reale) e date, per i quali il TED non esegue verifica|/<br>/<br>/<br>||
