@@ -1541,6 +1541,13 @@ aggiunta regola REG5_1
     * P4_1.dmn,P4_2.dmn,P4_3.dmn,P4_4.dmn,P4_5.dmn,P4_6.dmn;
 </details>
 
+<summary><h1>Note di rilascio del 07/01/2026 (In Esercizio)</h1></summary>
+
+### Orchestratore
+* ticket 93808:
+  * modificato l'elenco delle schede successive della S4: aggiunta la scheda CO2
+
+
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.
