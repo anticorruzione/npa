@@ -1551,7 +1551,7 @@ aggiunta regola REG5_1
 <summary><h1>Note di rilascio del 09/01/2026 (Changelog-07)</h1></summary>
 
 **NOTA**
-* Pubblicazione contenuti su GitHub: 09/01/2025
+* Pubblicazione contenuti su GitHub: 09/01/2026
 * Rilascio in Qualificazione: Come da Roadmap
 * Rilascio in Esercizio: Come da Roadmap
 
