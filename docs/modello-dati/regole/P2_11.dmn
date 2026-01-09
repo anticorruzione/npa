@@ -707,6 +707,66 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1ee2uz7">
+        <description>REG133: Definire solo uno dei campi tra durata e altraDurata</description>
+        <inputEntry id="UnaryTests_1mox35q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19qr42c">
+          <text>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qvurll">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qal9sv">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG133\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k0himm">
+        <description>REG134: Il campo durata non può essere vuoto</description>
+        <inputEntry id="UnaryTests_10extch">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1785bp6">
+          <text>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = ""</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04faxvu">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ecjoz3">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG134\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xg6jw4">
+        <description>REG135: Definire almeno uno dei campi tra durata e altraDurata</description>
+        <inputEntry id="UnaryTests_0raabiv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1548n8z">
+          <text>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tf0hqw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05i7f83">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG135\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_197y48f">
+        <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
+        <inputEntry id="UnaryTests_0s36fcc">
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00fyuql">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wf33az">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u2xwkt">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG136\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_0422du2" name="lotti" />

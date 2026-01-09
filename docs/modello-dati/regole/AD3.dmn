@@ -318,6 +318,32 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG112\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_00l4rpu">
+        <description>REG144: Per appalti di lavori l'importo non può superare i 150000 euro</description>
+        <inputEntry id="UnaryTests_1plvzr9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0svzon3">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and aggiudicazione.importoAggiudicazione &gt; 150000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fpbtgj">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG144\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g400lx">
+        <description>REG145: Per appalti di servizi e forniture l'importo non può superare i 140000 euro</description>
+        <inputEntry id="UnaryTests_0yt7zj4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1skf7kp">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice != "works" and aggiudicazione.importoAggiudicazione &gt; 140000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1exvuft">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG145\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

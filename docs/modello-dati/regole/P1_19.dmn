@@ -406,13 +406,13 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0g72lga">
-        <description>REG96: E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
+        <description>REG96: E' obbligatorio inserire almeno uno dei due campi tra scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
         <inputEntry id="UnaryTests_1izcarr">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bpo583">
           <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte="") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0viirst">
@@ -423,13 +423,13 @@ satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or 
         </outputEntry>
       </rule>
       <rule id="DecisionRule_117r61g">
-        <description>REG97: Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
+        <description>REG97: Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
         <inputEntry id="UnaryTests_1pdxw01">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_050br9q">
           <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00w9vwt">
@@ -471,14 +471,14 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1qae09b">
-        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf0l">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xbdfzt">
           <text>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ibafgn">
           <text></text>

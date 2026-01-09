@@ -2143,8 +2143,8 @@
 {
     "codice":"REG81",
     "descrizione": {
-		"it": "Non è stata indicata la data di ultimazione",
-		"en": "Non è stata indicata la data di ultimazione"
+		"it": "E' necessario indicare la data di ultimazione o la data di interruzione anticipata.",
+		"en": "E' necessario indicare la data di ultimazione o la data di interruzione anticipata"
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2269,8 +2269,8 @@
 {
     "codice":"REG95",
     "descrizione": {
-		"it": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131).",
-		"en": "Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131)."
+		"it": "Per il tipo di procedura aperta o altra procedura a fase unica il campo scadenzaPresentazioneOfferte è obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131).",
+		"en": "Per il tipo di procedura aperta o altra procedura a fase unica il campo scadenzaPresentazioneOfferte è obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2278,8 +2278,8 @@
 {
     "codice":"REG96",
     "descrizione": {
-		"it": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).",
-		"en": "E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630)."
+		"it": "E' obbligatorio inserire almeno uno dei due campi tra scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).",
+		"en": "E' obbligatorio inserire almeno uno dei due campi tra scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2287,8 +2287,8 @@
 {
     "codice":"REG97",
     "descrizione": {
-		"it": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).",
-		"en": "Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630)."
+		"it": "Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).",
+		"en": "Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2359,8 +2359,8 @@
 {
     "codice":"REG105",
     "descrizione": {
-		"it": "La data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131).",
-		"en": "La data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131)."
+		"it": "La data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131).",
+		"en": "La data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131)."
 	},
     "dataInizio":null,
     "dataFine":null
@@ -2609,6 +2609,132 @@
     "descrizione": {
 		"it": "L'importo di aggiudicazione non può superare i 221K",
 		"en": "L'importo di aggiudicazione non può superare i 221K"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG132",
+    "descrizione": {
+		"it": "La scheda può essere utilizzata solo per procedure con oggetto del contratto servizi o forniture.",
+		"en": "La scheda può essere utilizzata solo per procedure con oggetto del contratto servizi o forniture."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG133",
+    "descrizione": {
+		"it": "Definire solo uno dei campi tra durata e altraDurata.",
+		"en": "Definire solo uno dei campi tra durata e altraDurata."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG134",
+    "descrizione": {
+		"it": "Il campo durata non può essere vuoto.",
+		"en": "Il campo durata non può essere vuoto."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG135",
+    "descrizione": {
+		"it": "Definire almeno uno dei campi tra durata e altraDurata.",
+		"en": "Definire almeno uno dei campi tra durata e altraDurata."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG136",
+    "descrizione": {
+		"it": "Valore della tipologica TipoProcedura non ammesso.",
+		"en": "Valore della tipologica TipoProcedura non ammesso."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG137",
+    "descrizione": {
+		"it": "Indicare almeno un invitato.",
+		"en": "Indicare almeno un invitato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG138",
+    "descrizione": {
+		"it": "I campi di tipo testo non possono essere vuoti.",
+		"en": "I campi di tipo testo non possono essere vuoti."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG139",
+    "descrizione": {
+		"it": "Definire almeno un conferente subappalto.",
+		"en": "Definire almeno un conferente subappalto."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG140",
+    "descrizione": {
+		"it": "Definire un solo conferente subappalto.",
+		"en": "Definire un solo conferente subappalto."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG141",
+    "descrizione": {
+		"it": "In caso di subappalto a cascata deve essere indicato l'idSubappalto.",
+		"en": "In caso di subappalto a cascata deve essere indicato l'idSubappalto."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG142",
+    "descrizione": {
+		"it": "Indicare almeno un soggetto.",
+		"en": "Indicare almeno un soggetto."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG143",
+    "descrizione": {
+		"it": "Indicare almeno un soggetto.",
+		"en": "Indicare almeno un soggetto."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG144",
+    "descrizione": {
+		"it": "Per appalti di lavori l'importo non può superare i 150000 euro.",
+		"en": "Per appalti di lavori l'importo non può superare i 150000 euro."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG145",
+    "descrizione": {
+		"it": "Per appalti di servizi e forniture l'importo non può superare i 140000 euro.",
+		"en": "Per appalti di servizi e forniture l'importo non può superare i 140000 euro."
 	},
     "dataInizio":null,
     "dataFine":null

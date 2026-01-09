@@ -149,9 +149,9 @@ components:
           items:
             $ref: '#/components/schemas/LottoP3_4Type'              
     SchedaP3_4Type:
-      description: Affidamento a contraente generale. Artt. 204 decreto legislativo 36/2023. Articolo 205 comma 6 e comma 7 decreto legislativo 36/2023.
+      description: Affidamento a contraente generale. Artt. 204 decreto legislativo 36/2023. Articolo 205 comma 6 e comma 7 decreto legislativo 36/2023. Delibera Anac n. 584/2023
       type: object
-      required: [anacForm,espd]
+      required: [anacForm]
       additionalProperties: false
       properties:
         anacForm:

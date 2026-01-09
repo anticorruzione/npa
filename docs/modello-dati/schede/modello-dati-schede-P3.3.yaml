@@ -76,9 +76,9 @@ components:
           items:
             $ref: '#/components/schemas/LottoP3_3Type'             
     SchedaP3_3Type:
-      description: Contratti esclusi - adesione con confronto competitivo. 
+      description: Contratti esclusi - adesione con confronto competitivo. Delibera Anac n. 584/2023
       type: object
-      required: [anacForm,espd]
+      required: [anacForm]
       additionalProperties: false
       properties:
         anacForm:

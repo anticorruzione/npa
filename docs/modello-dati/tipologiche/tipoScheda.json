@@ -1,0 +1,27 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Procedura negoziata senza bando",
+		"en": "Procedura negoziata senza bando"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Adesione ad accordo quadro - appalto",
+		"en": "Adesione ad accordo quadro - appalto"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Adesione ad accordo quadro - concessioni",
+		"en": "Adesione ad accordo quadro - concessioni"
+		},	
+    "dataInizio":null,
+    "dataFine":"2025-11-30T00:00:00Z"
+}]

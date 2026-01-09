@@ -1,0 +1,45 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Inserimento",
+		"en": "Inserimento"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Conferma",
+		"en": "Conferma"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"3",
+    "descrizione": {
+		"it": "Cancellazione",
+		"en": "Cancellazione"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+},
+{
+  "codice":"4",
+  "descrizione": {
+  "it": "Modifica",
+  "en": "Modifica"
+  },
+  "dataInizio":"2025-11-30T00:00:00Z",
+  "dataFine":null
+},
+{
+    "codice":"5",
+    "descrizione": {
+		"it": "Rivalutazione",
+		"en": "Rivalutazione"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+}]

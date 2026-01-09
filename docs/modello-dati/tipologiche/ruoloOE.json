@@ -141,5 +141,14 @@
 		},
     "dataInizio":"2025-07-31T00:00:00Z",
     "dataFine":null
+},
+{
+    "codice":"17",
+    "descrizione": {
+		"it": "Progettista incaricato",
+		"en": "Progettista incaricato"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
 }]
 

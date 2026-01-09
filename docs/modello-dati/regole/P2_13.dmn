@@ -691,6 +691,21 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1yrl300">
+        <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
+        <inputEntry id="UnaryTests_0bj3bza">
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b9pc6u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yktxq9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u7fwl1">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG136\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_1m4sheg" name="lotti" />

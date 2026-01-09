@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda S1_2 - Elenco dei soggetti invitati.
+  version: 1.0.0
+components:
+  schemas:
+    ElencoSoggettiType:
+      description: Elenco di soggetti invitati.
+      type: object
+      additionalProperties: false
+      required: [cig,dataInvito, scadenzaPresentazioneOfferta,elencoSoggetti]
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string
+        elencoSoggetti:
+          description: Dati relativi ai soggetti invitati
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SoggettoType'
+        dataInvito: 
+          description: Data della lettera di invito
+          type: string
+          format: date-time
+        scadenzaPresentazioneOfferta: 
+          description: Data della scadenza di presentazione dell'offerta
+          type: string
+          format: date-time        
+      
+    SchedaS1_2Type:
+      description: 'elenco dei soggetti che hanno presentato offerta.'
+      type: object
+      additionalProperties: false
+      required: [anacForm]
+      properties:
+        anacForm:
+          type: object
+          additionalProperties: false
+          required: [elencoSoggetti]
+          properties:
+            elencoSoggetti:
+              type: array
+              items:
+                $ref: '#/components/schemas/ElencoSoggettiType'              
+                       

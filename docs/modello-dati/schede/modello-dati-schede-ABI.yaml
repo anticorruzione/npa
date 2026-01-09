@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.
+  title: Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED. L'utilizzo della scheda è limitato a procedure con oggetto del contratto servizi o forniture. 
   version: 1.0.0
 components:
   schemas:
@@ -49,7 +49,12 @@ components:
         settore:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SettoreEnum'
         datiBase:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoADType'           
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoADType'
+        idPianificazione:
+          description: identificativo di attività di preinformazione o di verifica preliminare dei requisiti.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     AnacFormABIType:
       description: Contiene tutti i dati relativi a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED. 
       allOf: # estende la classe AnacFormBaseType

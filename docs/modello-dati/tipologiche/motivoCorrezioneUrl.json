@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "omessa comunicazione in fase di indizione",
+		"en": "omessa comunicazione in fase di indizione"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "modifica della pubblicazione successiva all'indizione",
+		"en": "modifica della pubblicazione successiva all'indizione"
+		},
+    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataFine":null
+}]

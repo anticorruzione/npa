@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P2_24" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_P2_24" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.2.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="P2_24" name="P2_24">
     <informationRequirement id="InformationRequirement_P2_24_01">
       <requiredInput href="#InputData_appalto_P2_24" />
@@ -214,13 +214,13 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct valu
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1oiflb4">
-        <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</description>
+        <description>REG95: Per il tipo di procedura aperta o altra procedura a fase unica il campo scadenzaPresentazioneOfferte è obbligatorio.</description>
         <inputEntry id="UnaryTests_1bngedq">
           <text>appalto.datiBaseProcedura.tipoProcedura.codice = "open" or appalto.datiBaseProcedura.tipoProcedura.codice = "oth-single"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jq49yh">
           <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="")</text>
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte="")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_146yua6">
           <text></text>
@@ -230,13 +230,13 @@ satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or 
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0g72lga">
-        <description>REG96: E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
+        <description>REG96: E' obbligatorio inserire almeno uno dei due campi tra scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
         <inputEntry id="UnaryTests_1izcarr">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bpo583">
           <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte="") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0viirst">
@@ -247,13 +247,13 @@ satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or 
         </outputEntry>
       </rule>
       <rule id="DecisionRule_117r61g">
-        <description>REG97: Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
+        <description>REG97: Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
         <inputEntry id="UnaryTests_1pdxw01">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_050br9q">
           <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00w9vwt">
@@ -295,14 +295,14 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1qae09b">
-        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf0l">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xbdfzt">
           <text>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ibafgn">
           <text></text>
@@ -341,6 +341,21 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
         </inputEntry>
         <outputEntry id="LiteralExpression_1pig80u">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG110\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c9zhci">
+        <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
+        <inputEntry id="UnaryTests_1xrdhb7">
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["open","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_021lkrq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zc08gl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l6691b">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG136\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

@@ -71,9 +71,9 @@ components:
           items:
             $ref: '#/components/schemas/LottoP3_2Type'              
     SchedaP3_2Type:
-      description: Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ. Articolo 10 della direttiva 2014/23/UE.
+      description: Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ. Articolo 10 della direttiva 2014/23/UE. Delibera Anac n. 584/2023
       type: object
-      required: [anacForm,espd]
+      required: [anacForm]
       additionalProperties: false
       properties:
         anacForm:

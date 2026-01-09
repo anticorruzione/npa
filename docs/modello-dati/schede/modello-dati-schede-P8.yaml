@@ -1,0 +1,239 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda P8 - Scheda per procedure negoziate senza bando o adesioni ad AQ soprasoglia.
+  version: 1.0.0
+components:
+  schemas:
+   QuadroEconomicoType:
+      description: Oggetto che riporta tutti i dati del quadro economico standard
+      type: object
+      required: 
+        - sommeOpzioniRinnovi
+        - sommeRipetizioni
+      additionalProperties: false
+      properties:
+        impLavori:
+          description: Importo componente lavori in €
+          type: number
+          format: double
+        impServizi:
+          description: Importo componente servizi in €
+          type: number
+          format: double
+        impForniture:
+          description: Importo componente forniture in €
+          type: number
+          format: double
+        impTotaleSicurezza:
+          description: Importo totale per l'attuazione della sicurezza
+          type: number
+          format: double
+        ulterioriSommeNoRibasso:
+          description: Ulteriori somme non soggette a ribasso
+          type: number
+          format: double
+        impProgettazione:
+          description: Importo della progettazione in caso di appalto integrato
+          type: number
+          format: double
+        sommeOpzioniRinnovi:
+          description: Somme per opzioni/rinnovi
+          type: number
+          format: double
+        sommeRipetizioni:
+          description: Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari
+          type: number
+          format: double
+        sommeADisposizione:
+          description: Somme a disposizione - Iva e altre Imposte e tasse
+          type: number
+          format: double  
+   AppaltoP8Type:
+      description: Oggetto che riporta i dati dell'appalto
+      type: object
+      required: [codiceAppalto,tipoScheda,datiBase,datiBaseProcedura,datiBaseStrumentiProcedura, contrattoDifesa,settore]
+      additionalProperties: false
+      properties:
+        codiceAppalto:
+          description: Identificativo univoco dell'appalto definito dalla Stazione Appaltante
+          type: string
+          minLength: 8
+          maxLength: 64
+        tipoScheda: 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/TipoSchedaEnum'
+        idSchedaAvr:
+          description: identificativo restituito dal servizio all’invio della scheda AVR.
+          type: string   
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"  
+        idSDA:
+          description: Identificativo univoco dello SDA rilasciato da ANAC.
+          type: string
+          format: uuid 
+        idPianificazione:
+          description: ID pianificazione
+          type: string  
+          format: uuid
+        cigAccordoQuadro:
+          description: CIG relativo all’accordo quadro/convenzione cui si aderisce
+          type: string
+        contrattoDifesa:
+          description: Contratto Difesa
+          type: boolean
+        settore: 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/SettoreEnum' 
+        termineRidottoAvvisoPreinformazione:
+          description: E' stato utilizzato un termine ridotto con avviso di preinformazione?
+          type: boolean           
+        categorieMerceologiche:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategorieMerceologicheEnum'
+        motivazioneCIG:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivazioneCIGEnum'  
+        motivoUrgenza:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoUrgenzaEnum'       
+        linkDocumenti:
+          description: Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)
+          type: string
+          format: url   
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAppaltoType'
+        datiBaseProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseProceduraCompletoType'
+        datiBaseStrumentiProcedura:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseStrumentiProceduraP7_2Type'         
+   LottoP8Type:
+      description: Oggetto che riporta i dati del lotto
+      type: object
+      additionalProperties: false
+      required: [lotIdentifier,condizioniNegoziata,servizioPubblicoLocale,lavoroOAcquistoPrevistoInProgrammazione,ipotesiCollegamento,afferenteInvestimentiPNRR,ccnl,categoria,prestazioniComprese, finanziamenti,tipoRealizzazione,codIstat,ripetizioniEConsegneComplementari,opzioniRinnovi,datiBase,datiBaseCPV,datiBaseContratto,contrattiDisposizioniParticolari,datiBaseAggiudicazione,datiBaseAggiuntivi,datiBaseTerminiInvio]
+      properties:
+        lotIdentifier:
+          description: Id univoco del lotto generato dalla stazione appaltante
+          type: string 
+        categorieMerceologiche:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategorieMerceologicheEnum'   
+        strumentiElettroniciSpecifici:
+          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
+          type: boolean 
+        docFAP:
+          description: è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM
+          type: boolean
+        motivoEsclusioneOrdinarioSpeciale:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoEsclusioneOrdinarioSpecialeEnum'
+        motivoEsclusioneConcessione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoEsclusioneConcessioneEnum'
+        condizioniNegoziata:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CondizioniNegoziataEnum' 
+        contrattiDisposizioniParticolari:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ContrattiDisposizioniParticolariEnum'  
+        codIstat:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CodIstatEnum' 
+        servizioPubblicoLocale:
+          description: Flag servizio pubblico locale
+          type: boolean           
+        lavoroOAcquistoPrevistoInProgrammazione:
+          description: Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione
+          type: boolean            
+        cui:
+          description: CUI programma triennale lavori pubblici o programma biennale forniture e servizi
+          type: string
+          pattern: ^[a-zA-Z0-9]{20,22}$   
+        ripetizioniEConsegneComplementari:
+          description: L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?
+          type: boolean            
+        ipotesiCollegamento:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/IpotesiCollegamentoType'  
+        opzioniRinnovi:
+          description: L’appalto prevede opzioni/rinnovi?
+          type: boolean          
+        afferenteInvestimentiPNRR:
+          description: L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?
+          type: boolean    
+        acquisizioneCup:
+          description: Il contratto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.? (E' necessario acquisire e comunicare il CUP per interventi finanziati, anche in parte, con risorse Comunitarie) (Si/No)
+          type: boolean            
+        cupLotto:
+          description: Cup associati al lotto
+          type: array
+          items: 
+            type: string 
+            pattern: ^[a-zA-Z0-9]{15}$
+        paritaDiGenereGenerazionale:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ParitaDiGenereGenerazionaleType' 
+        ccnl:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CcnlEnum'          
+        modalitaAcquisizione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModalitaAcquisizioneEnum'
+        tipologiaLavoro:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/TipologiaLavoroEnum'
+        categoria:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
+        categoriaScorporabile:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum'          
+        prestazioniComprese:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PrestazioniEnum'           
+        finanziamenti:
+          description: Dati relativi ai finanziamenti
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/FinanziamentoType' 
+        tipoRealizzazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/TipoRealizzazioneContrattoEnum'  
+        derogaQualificazione:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoDerogaQlfEnum'
+        datiBase:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseLottoType'
+        datiBaseCPV:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseCPVType'
+        datiBaseContratto:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseContrattoP7Type'
+        datiBaseAggiudicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiudicazioneType'
+        datiBaseAggiuntivi:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAggiuntiviType'       
+        datiBaseAccessibilita:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseAccessibilitaType'
+        datiBaseComunicazione:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseComunicazioneType'  
+        datiBaseDocumenti:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiOptionalType'               
+        quadroEconomicoStandard:
+          allOf: 
+          - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/QuadroEconomicoType' 
+        datiBaseTerminiInvio:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseTerminiInvioSoloOraType'
+   AnacFormP8Type:
+      description: Contiene i dati per la scheda di procedure negoziate senza bando o adesioni ad AQ soprasoglia
+      allOf: # estende la classe AnacFormBaseType
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/AnacFormBaseType'   
+      type: object
+      required: [appalto,lotti] 
+      additionalProperties: false
+      properties:
+        appalto:
+          $ref: '#/components/schemas/AppaltoP8Type'
+        lotti:
+          description: Dati relativi ai lotti
+          type: array
+          items:
+            $ref: '#/components/schemas/LottoP8Type'    
+   SchedaP8Type:
+      description: Procedura negoziata senza bando soprasoglia;Articolo 76 decreto legislativo 36/2023. Articolo 32 comma 8 decreto legislativo 36/2023. Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023. Articolo 2 Allegato II.1. Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023. Articolo 31 decreto legislativo  208/2011. Articolo 127 decreto legislativo 36/2023. Articolo 128 comma 8 decreto legislativo 36/2023.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormP8Type'   
+        espd:
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'           

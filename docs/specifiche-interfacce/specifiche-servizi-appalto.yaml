@@ -7,7 +7,7 @@ info:
     Sono descritte le specifiche dei servizi esposti dalla Piattaforma Contratti Pubblici (PCP), richiamabili dalle Stazioni Appaltanti, per la gestione e la raccolta delle informazioni rilevanti nei processi che compongono l’intero ciclo di vita degli appalti.
 
       #### Documentazione
-      La documentazione a supporto delle specifiche di interfaccia con i sistemi che interoperano con il nuovo sistema di digitalizzazione è redatta con il linguaggio di markup Markdown ed è presente al segunete url:
+      La documentazione a supporto delle specifiche di interfaccia con i sistemi che interoperano con il nuovo sistema di digitalizzazione è redatta con il linguaggio di markup Markdown ed è presente al seguente url:
     ```
   # I termini del servizio.
   # Chi posso contattare per informazioni sul servizio e sul suo stato?
@@ -48,9 +48,11 @@ tags:
   - name: serviziComuni
     description: In questo contesto si riportano i servizi comuni, ossia quelli che possono essere richiamati dalle Stazioni appaltanti in più contesti della PCP.
   - name: codeList
-    description: In questo contesto si riportano i servizi per il recupero delle tipologiche.     
+    description: In questo contesto si riportano i servizi per il recupero delle tipologiche.
   - name: serviziTecnici 
-    description: Operazioni richiesti dalle linee guida sull'interoperabilità
+    description: Operazioni richiesti dalle linee guida sull'interoperabilità.
+  - name: gestioneElenchi
+    description: In questo contesto rientrano tutti i servizi richiamabili dalla SA che permetteranno la creazione, l’invio e la consultazione degli elenchi di operatori economici.
 paths:
   /status:
     get:
@@ -110,7 +112,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo. Viene restituito l'idPiano generato da ANAC
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -142,7 +150,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -173,7 +187,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -357,7 +377,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo. Viene restituito l'idAppalto generato da ANAC
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -389,7 +415,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -420,7 +452,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -537,7 +575,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -1100,7 +1144,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -1331,21 +1381,39 @@ paths:
       responses:
         '200':
           description: Esecuzione avvenuta con successo
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/EsitoOperazioneListaResponse'
         '404':
             description: Identificativo non trovato
-            headers: *ratelimit_headers
+            headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
             content:
               application/problem+json:
                 schema:
                   $ref: '#/components/schemas/ErrorResponse'
         '400':
             description: Richiesta malformata
-            headers: *ratelimit_headers
+            headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
             content:
              application/problem+json:
                 schema:
@@ -1554,7 +1622,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -1675,7 +1749,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -1707,7 +1787,13 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: *ratelimit_headers
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
           content:
             application/json:
               schema:
@@ -1746,6 +1832,136 @@ paths:
           $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
+  /crea-elenco-operatori-oe:
+    post:
+      summary: API Rest generica per l'inserimento di una scheda dati degli operatori
+        economici inseriti. SINCRONO
+      description: API Rest generica per l'inserimento di una scheda dati degli operatori
+        economici inseriti.
+      operationId: creaSchedaElencoOE
+      tags:
+      - gestioneElenchi
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreaSchedaElencoOERequest'
+        required: true
+      responses:
+        '200':
+          description: Operazione terminato con successo.
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreaSchedaElencoOEResponse'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []
+  /conferma-elenco-operatori-oe:
+    post:
+      tags:
+      - gestioneElenchi
+      summary: API Rest generica per la conferma di una scheda dati degli operatori economici inseriti. ASINCRONO - ASIMMETRICO
+      description: API Rest generica per la conferma di una scheda dati degli operatori economici inseriti.
+      operationId: confermaSchedaElencoOE
+      requestBody:
+        description: Oggetto generico in ingresso al servizio
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfermaSchedaOERequest'
+        required: true
+      responses:
+        '200':
+          description: Operazione terminato con successo.
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfermaSchedaOEResponse'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []
+  /consulta-elenco-operatori-oe:
+    get:
+      tags:
+      - gestioneElenchi
+      summary: API Rest per la ricerca degli operatori economici inseriti contestualmente ad una scheda. SINCRONO
+      description: Vengono recuperati i dati degli operatori economici inseriti.
+      operationId: consultaElencoOperatoriOE
+      parameters:
+      - description: Identificativo univoco dell'ElencoOE
+        in: query
+        name: idElenco
+        required: false
+        schema:
+          format: uuid
+          type: string
+      - description: numero della pagina da visualizzare
+        in: query
+        name: page
+        required: false
+        schema:
+          default: '1'
+          type: string
+      - description: numero di elementi per pagina
+        in: query
+        name: perPage
+        required: false
+        schema:
+          default: '20'
+          type: string
+      responses:
+        '200':
+          description: Operazione terminato con successo.
+          headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsultaSchedaOEResponse'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []  
 components:
   headers:
     Retry-After:
@@ -1798,21 +2014,39 @@ components:
   responses:
     200AckResponse:
       description: Richiesta accettata
-      headers: *ratelimit_headers
+      headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/AckResponse'
     400BadRequest:
       description: Richiesta malformattata
-      headers: *ratelimit_headers
+      headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
       content:
         application/problem+json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
     404NotFound:
       description: Dato non trovato
-      headers: *ratelimit_headers
+      headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
       content:
         application/problem+json:
           schema:
@@ -1828,7 +2062,13 @@ components:
             $ref: '#/components/schemas/ErrorResponse'
     500InternalServerError:
       description: Errore generico. Operazione terminato con errore. Viene restitutito il dettaglio dell'errore
-      headers: *ratelimit_headers
+      headers: &ratelimit_headers 
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
       content:
         application/problem+json:
           schema:
@@ -1889,6 +2129,8 @@ components:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaComunicaAppaltoType'
     SchedaPostPubblicazioneType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaPostPubblicazioneType'
+    SchedaElencoPostPubblicazioneType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaElencoPostPubblicazioneType'
     SchedaType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaType'
     EsitoOperazioneType:
@@ -2640,7 +2882,75 @@ components:
       example:
         detail: "Cancellazione eseguita con successo"
         status: 200
-        title: "Operazione Effettuata"
+        title: "Operazione Effettuata"    
+    CreaSchedaElencoOERequest:
+      description: Oggetto in ingresso al servizio
+      properties:
+        idPianificazione:
+          format: uuid
+          type: string
+        scheda:
+          $ref: '#/components/schemas/SchedaElencoPostPubblicazioneType'
+      required:
+      - idPianificazione
+      - scheda
+      type: object
+    CreaSchedaElencoOEResponse:
+      description: Risposta generica servizio
+      properties:
+        detail:
+          type: string
+        idElenco:
+          format: uuid
+          type: string
+        instance:
+          type: string
+        status:
+          format: int32
+          type: integer
+        title:
+          type: string
+        type:
+          type: string
+      type: object
+    ConfermaSchedaOERequest:
+      description: Oggetto in ingresso al servizio
+      properties:
+        idElenco:
+          format: uuid
+          type: string
+        idScheda:
+          format: uuid
+          type: string
+      required:
+      - idElenco
+      - idScheda
+      type: object
+    ConfermaSchedaOEResponse:
+      description: Risposta generica servizio
+      properties:
+        detail:
+          type: string
+        idElenco:
+          format: uuid
+          type: string
+        instance:
+          type: string
+        status:
+          format: int32
+          type: integer
+        title:
+          type: string
+        type:
+          type: string
+      type: object
+    ConsultaSchedaOEResponse:
+      description: Risposta generica servizio
+      allOf: # estende lo schema dati di BaseResponse
+        - $ref: '#/components/schemas/BaseResponse'
+      properties:
+        elenco:
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaOEType'
   securitySchemes:
     apiKeyAuth:
       type: apiKey

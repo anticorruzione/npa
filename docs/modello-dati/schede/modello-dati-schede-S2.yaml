@@ -1,20 +1,20 @@
 openapi: 3.0.0
 info:
-  title: Modello Dati - Scheda S2 - Per la procedura a fase unica è l'elenco dei soggetti che hanno presentato offerta. Per le procedure a due fasi è l'elenco dei soggetti invitati e di quelli che non hanno presentato offerta.
+  title: Modello Dati - Scheda S2 - Elenco dei soggetti che hanno presentato offerta. 
   version: 1.0.0
 components:
   schemas:
     ElencoSoggettiType:
-      description: Elenco di soggetti che hanno presentato offerta e di ulteriori invitati che non hanno presentato offerta.
+      description: Elenco di soggetti che hanno presentato offerta
       type: object
       additionalProperties: false
-      required: [cig, dataScadenzaPresentazioneOfferta,partecipanti]
+      required: [cig,partecipanti]
       properties:
         cig:
           description: codice identificativo lotto
           type: string
         invitatiCheNonHannoPresentatoOfferta:
-          description: Dati relativi ai soggetti invitati che non hanno presentato offerta
+          description: Deprecato - Dati relativi ai soggetti invitati che non hanno presentato offerta
           type: array
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/InvitatoType'
@@ -24,16 +24,16 @@ components:
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'              
         dataInvito: 
-          description: Data della lettera di invito
+          description: Deprecato - Data della lettera di invito
           type: string
           format: date-time
         dataScadenzaPresentazioneOfferta: 
-          description: Data della scadenza di presentazione dell'offerta
+          description: Deprecato - Data della scadenza di presentazione dell'offerta
           type: string
           format: date-time        
       
     SchedaS2Type:
-      description: "Per la procedura a fase unica: è l'elenco dei soggetti che hanno presentato offerta.Per le procedure a due fasi: è l'elenco dei soggetti invitati e di quelli che non hanno presentato offerta."
+      description: "Elenco dei soggetti che hanno presentato offerta."
       type: object
       additionalProperties: false
       required: [anacForm]

@@ -372,14 +372,14 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1qae09b">
-        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf0l">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xbdfzt">
           <text>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ibafgn">
           <text></text>

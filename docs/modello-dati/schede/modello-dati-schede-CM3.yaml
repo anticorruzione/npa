@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: Modello Dati - Scheda CM3 - Scheda di comunicazione modifica dati della procedura negoziata senza bando.
+  version: 1.0.0
+components:
+  schemas:
+    ComunicazioneCM3Type:
+      allOf: 
+      - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ComunicazioneType'
+      type: object
+      additionalProperties: false
+      required: [datiBase,datiBaseProcedura,datiBaseStrumentiProcedura]
+      properties:
+        scadenzaPresentazioneOfferte: 
+          description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
+          type: string
+          format: date-time
+    AnacFormCM3Type:
+      type: object
+      required: [cig,comunicazione]
+      additionalProperties: false
+      properties:
+        cig:
+          description: codice identificativo lotto
+          type: string 
+        comunicazione:
+            $ref: '#/components/schemas/ComunicazioneCM3Type'        
+    SchedaCM3Type:
+      description: Scheda di comunicazione modifica dati della procedura negoziata senza bando.
+      type: object
+      required: [anacForm]
+      additionalProperties: false
+      properties:
+        anacForm:
+          $ref: '#/components/schemas/AnacFormCM3Type'

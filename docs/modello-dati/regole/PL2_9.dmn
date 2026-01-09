@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_PL2_9" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="15.1.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_PL2_9" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.2.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="PL2_9" name="PL2_9">
     <informationRequirement id="InformationRequirement_1pbrt39">
       <requiredInput href="#InputData_0jj7j7u" />
@@ -20,13 +20,13 @@
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
       <rule id="DecisionRule_117r61g">
-        <description>REG97: Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
+        <description>REG97: Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</description>
         <inputEntry id="UnaryTests_050br9q">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0nyn3wg">
           <text>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1r55cm1">
@@ -59,20 +59,20 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1qae09b">
-        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
+        <description>REG105: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf0l">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xbdfzt">
           <text>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_01bit47">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>
         </outputEntry>
       </rule>
-	  <rule id="DecisionRule_1qae09c">
+      <rule id="DecisionRule_1qae09c">
         <description>REG106: la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</description>
         <inputEntry id="UnaryTests_0w0gf02">
           <text></text>
@@ -85,7 +85,19 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
         <outputEntry id="LiteralExpression_01bit43">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG106\"}"</text>
         </outputEntry>
-      </rule>	  
+      </rule>
+      <rule id="DecisionRule_0pulwek">
+        <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
+        <inputEntry id="UnaryTests_0c3jt0p">
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["neg-w-call","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bxec83">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05d08le">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG136\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_0jj7j7u" name="lotti" />

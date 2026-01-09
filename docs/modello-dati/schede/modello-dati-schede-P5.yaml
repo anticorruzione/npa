@@ -59,7 +59,7 @@ components:
           items:
             $ref: '#/components/schemas/LottoP5Type'       
    SchedaP5Type:
-      description: Appalti soggetti a sola tracciabilità. Articoli 6, 139, 142, 143, 144 decreto legislativo 36/2023.
+      description: Appalti soggetti a sola tracciabilità. Articoli 6, 139, 142, 143, 144 decreto legislativo 36/2023. Delibera Anac n. 584/2023
       type: object
       required: [anacForm]
       additionalProperties: false

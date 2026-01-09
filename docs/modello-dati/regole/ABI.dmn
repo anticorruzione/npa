@@ -95,6 +95,19 @@ satisfies count(aggiudicazione.cup)&gt;0 and (every c in aggiudicazione.cup sati
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG127\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1adj410">
+        <description>REG132: La scheda può essere utilizzata solo per procedure con oggetto del contratto servizi o forniture.</description>
+        <inputEntry id="UnaryTests_0n12ijx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fnrmxi">
+          <text>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1agghep">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG132\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_0k6u5e5" name="appalto" />

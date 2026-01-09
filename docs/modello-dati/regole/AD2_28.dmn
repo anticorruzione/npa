@@ -355,6 +355,18 @@ satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "services" or (so
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG122\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0dtewhs">
+        <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
+        <inputEntry id="UnaryTests_1sprgd3">
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["neg-wo-call","oth-mult","oth-single"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g017fa">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01tljyj">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG136\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_0k6u5e5" name="appalto" />

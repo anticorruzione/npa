@@ -275,7 +275,19 @@ components:
     MotivoCorrezioneEnum: 
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
-      description: Motivo variazione CUP - fare riferimento ai valori contenuti nel file [motivoCorrezione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoCorrezione.json)      
+      description: Motivo variazione CUP - fare riferimento ai valori contenuti nel file [motivoCorrezione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoCorrezione.json) 
+    MotivoCorrezioneUrlEnum: 
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Motivo correzione url - fare riferimento ai valori contenuti nel file [motivoCorrezione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoCorrezioneUrl.json) 
+    TipoSchedaEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Tipo di scheda - fare riferimento ai valori contenuti nel file [tipoScheda.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoScheda.json)
+    OperazioneElencoEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Operazione Elenco - fare riferimento ai valori contenuti nel file [operazioneElenco.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/operazioneElenco.json)    
     CategoriaType: 
       description: categoria prevalente o scorporabile
       type: object
@@ -3769,6 +3781,27 @@ components:
           type: array
           items:        
             $ref: '#/components/schemas/GiustificazioneAggiudicazioneDirettaEnum'            
+    DatiBaseProceduraAD2Type:
+      description: Dato in comune con il Business Group Procedure delle eforms
+      type: object
+      additionalProperties: false
+      required: [tipoProcedura]
+      properties:
+        tipoProcedura:
+          $ref: '#/components/schemas/TipoProceduraEnum'  
+        giustificazioniAggiudicazioneDiretta:
+          type: array
+          items: 
+           $ref: '#/components/schemas/GiustificazioneAggiudicazioneDirettaType'           
+    GiustificazioneAggiudicazioneDirettaType:
+          properties:
+            giustificazioneAggiudicazioneDiretta:
+              $ref: '#/components/schemas/GiustificazioneAggiudicazioneDirettaEnum'
+            cigCollegato:
+              description: CIG collegato
+              type: array
+              items: 
+                type: string
     DatiBaseContrattoType:
       description: Dato in comune con il Business Group Place of Performance delle eforms
       type: object
@@ -3963,7 +3996,7 @@ components:
           description: Data e ora di scadenza per la presentazione della richiesta di invito - nei casi in cui la scheda preveda un eform, corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
           type: string
           format: date-time
-        oraScadenzaPresentazioneOfferte: 
+        scadenzaPresentazioneOfferte: 
           description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
           format: date-time   
@@ -3979,10 +4012,10 @@ components:
           format: date-time          
     DatiBaseTerminiInvioSoloOraType:
       description: Dato in comune con il Business Group Submission Terms delle eforms 
-      required: [oraScadenzaPresentazioneOfferte]
+      required: [scadenzaPresentazioneOfferte]
       additionalProperties: false
       properties:
-        oraScadenzaPresentazioneOfferte: 
+        scadenzaPresentazioneOfferte: 
           description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
           type: string
           format: date-time            

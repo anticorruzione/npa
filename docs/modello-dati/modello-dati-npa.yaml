@@ -110,6 +110,7 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P7.1.2.yaml#/components/schemas/SchedaP7_1_2Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P7.1.3.yaml#/components/schemas/SchedaP7_1_3Type'              
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P7.2.yaml#/components/schemas/SchedaP7_2Type'  
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-P8.yaml#/components/schemas/SchedaP8Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.25.yaml#/components/schemas/SchedaAD1_25Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.26.yaml#/components/schemas/SchedaAD1_26Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-AD1.27.yaml#/components/schemas/SchedaAD1_27Type'
@@ -142,6 +143,7 @@ components:
           body:
             oneOf:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S1.yaml#/components/schemas/SchedaS1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S1_2.yaml#/components/schemas/SchedaS1_2Type'            
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S2.yaml#/components/schemas/SchedaS2Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S2R.yaml#/components/schemas/SchedaS2RType'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S3.yaml#/components/schemas/SchedaS3Type'
@@ -206,6 +208,68 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CSDA2.yaml#/components/schemas/SchedaCSDA2Type' 
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ID.yaml#/components/schemas/SchedaIDType' 
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CBI.yaml#/components/schemas/SchedaCBIType'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SE.yaml#/components/schemas/SchedaSEType'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-C7_3.yaml#/components/schemas/SchedaC7_3Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CM3.yaml#/components/schemas/SchedaCM3Type'
+      SchedaElencoPostPubblicazioneType:
+        description: Scheda generica definita dal contesto in cui si trova l'appalto
+        allOf: # estende il modello dati SchedaType
+          - $ref: '#/components/schemas/SchedaType'       
+        type: object
+        additionalProperties: false
+        properties:
+          _dataModifica:
+            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          body:
+            oneOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SE.yaml#/components/schemas/SchedaSEType'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-C7_3.yaml#/components/schemas/SchedaC7_3Type'
+      DatiSchedaOEType:
+        description: Oggetto Complesso che riporta tutti i dati della scheda elenco OE per il contesto gestioneElenchi
+        type: object
+        additionalProperties: false
+        properties:
+          id:
+            description: identificativo univoco dell'ElencoOE definito da ANAC. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"   
+          idElenco:
+            description: identificativo univoco dell'ElencoOE definito da ANAC. Restituito dall'operazione di creazione Elenco OE. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6" 
+          operatoriEconomici:
+            $ref: '#/components/schemas/OperatoreEconomicoType'
+      OperatoreEconomicoType:
+        properties:
+          operatoreEconomico:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/PartecipanteType'
+          operazione:
+            $ref: '#/components/schemas/OperazioneElencoEnum'
+          statoOperatoreEconomico:
+            type: string
+          historyList:
+            items:
+              $ref: '#/components/schemas/History'
+            type: array
+      History:
+        properties:
+          tipoOperazione:
+            type: string
+          dataOperazione:
+            format: date-time
+            type: string
+          statoPartecipante:
+            type: string
+          statoPartecipantePrecedente:
+            type: string
+          userOperazione:
+            type: string
+      type: object
       CigType:
         description: coppia lotIdentifier-cig
         type: object
@@ -725,3 +789,5 @@ components:
         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/StatoPianoEnum'
       TipoPianoEnum:
         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipoPianoEnum'
+      OperazioneElencoEnum:
+        $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/OperazioneElencoEnum'

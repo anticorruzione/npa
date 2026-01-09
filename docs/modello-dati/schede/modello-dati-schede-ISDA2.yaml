@@ -36,7 +36,7 @@ components:
         datiBaseDocumenti:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDocumentiType'
         datiBaseDurata:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDurataSDAType'
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/DatiBaseDurataType'
     AnacFormISDA2Type:
       description: Contiene i dati per la scheda di istituzione SDA.
       allOf: # estende la classe AnacFormBaseType

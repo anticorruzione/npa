@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ISDA2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.0.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ISDA2" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.2.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="ISDA2" name="ISDA2">
     <informationRequirement id="InformationRequirement_0qk9zn8">
       <requiredInput href="#InputData_1gcht8t" />
@@ -54,6 +54,42 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0g89uon">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG99\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fne2c5">
+        <description>REG133: Definire solo uno dei campi tra durata e altraDurata</description>
+        <inputEntry id="UnaryTests_1s5f1c0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13lb7if">
+          <text>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lgrz68">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG133\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03h231g">
+        <description>REG134: Il campo durata non può essere vuoto</description>
+        <inputEntry id="UnaryTests_0orqyeu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dpfc3g">
+          <text>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = ""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19jk2wh">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG134\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0arrhd1">
+        <description>REG135: Definire almeno uno dei campi tra durata e altraDurata</description>
+        <inputEntry id="UnaryTests_0sefjry">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dqu07f">
+          <text>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lx28g9">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG135\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
