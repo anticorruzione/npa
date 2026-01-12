@@ -79,8 +79,8 @@ Sono previsti tre distinti ambienti disponibili alle Piattaforme Digitali di App
 L'ambiente di qualificazione è destinato alle PDA durante la fase di certificazione dei propri componenti.
 L'accesso all'ambiente è garantito ai soggetti iscritti nel Registro delle Piattaforme Certificate, pubblicato da ANAC e gestito da AgID, che sono in fase di certificazione.
 Per le modalità di presentazione della domanda di certificazione si faccia riferimento alle norme tecniche ed alle istruzioni operative pubblicate da AgID sul proprio portale.
-Gli utenti e le stazioni appaltanti di test sono generati da ANAC e comunicati al gestore della piattaforma in fase di cerificazione.
-La richiesta di generazione di utenti di test può essere fatta invianfo un'email a ufficio.uscp@anticorruzione.it
+Gli utenti e le stazioni appaltanti di test sono generati da ANAC e comunicati al gestore della piattaforma in fase di certificazione.
+La richiesta di generazione di utenti di test può essere fatta inviando un'email a ufficio.uscp@anticorruzione.it
 
 ## Ambiente di ATTESTAZIONE
 L'ambiente di ATTESTAZIONE è destinato alle PDA durante la fase di esercizio dei propri componenti.
