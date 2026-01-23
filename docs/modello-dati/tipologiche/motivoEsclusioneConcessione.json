@@ -176,7 +176,7 @@
 		"en": "Appalti Difesa e Sicurezza soggetti al D. Lgs 208/2011"
 		},	
     "dataInizio":"2024-08-02T00:00:00Z",
-    "dataFine":"2025-11-30T00:00:00Z"
+    "dataFine":"2026-04-30T00:00:00Z"
 },
 {
     "codice":"21",
@@ -184,6 +184,6 @@
 		"it": "Appalti nei settori della difesa e della sicurezza",
 		"en": "Appalti nei settori della difesa e della sicurezza"
 		},	
-    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataInizio":"2026-04-30T00:00:00Z",
     "dataFine":null
 }]

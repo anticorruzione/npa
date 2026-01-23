@@ -167,7 +167,7 @@
 		"en": "Contratti disciplinati dal decreto legislativo n. 208/2011 e contratti ai quali non si applica neanche il decreto legislativo n. 208/2011, in virtù dell’art. 6 del medesimo decreto (art. 136 comma 1 lett. a) e lett. b) d. lgs. 36/2023)"
 		},	
     "dataInizio":"2024-05-28T00:00:00Z",
-    "dataFine":"2025-11-30T00:00:00Z"
+    "dataFine":"2026-04-30T00:00:00Z"
 },
 {
     "codice":"20",
@@ -212,7 +212,7 @@
 		"en": "Appalti Difesa e Sicurezza soggetti al D. Lgs 208/2011"
 		},	
     "dataInizio":"2024-08-02T00:00:00Z",
-    "dataFine":"2025-11-30T00:00:00Z"
+    "dataFine":"2026-04-30T00:00:00Z"
 },
 {
     "codice":"25",
@@ -220,6 +220,6 @@
 		"it": "Appalti nei settori della difesa e della sicurezza",
 		"en": "Appalti nei settori della difesa e della sicurezza"
 		},	
-    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataInizio":"2026-04-30T00:00:00Z",
     "dataFine":null
 }]

@@ -4,7 +4,7 @@
 		"it": "omessa comunicazione in fase di indizione",
 		"en": "omessa comunicazione in fase di indizione"
 		},
-    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataInizio":"2026-04-30T00:00:00Z",
     "dataFine":null
 },
 {
@@ -13,6 +13,6 @@
 		"it": "modifica della pubblicazione successiva all'indizione",
 		"en": "modifica della pubblicazione successiva all'indizione"
 		},
-    "dataInizio":"2025-11-30T00:00:00Z",
+    "dataInizio":"2026-04-30T00:00:00Z",
     "dataFine":null
 }]
