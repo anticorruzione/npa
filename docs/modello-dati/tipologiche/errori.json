@@ -1198,8 +1198,8 @@
 {
     "codice":"ERR132",
     "descrizione": {
-		"it": "Errore durante la chiamata al servizio di verifica del CUP",
-		"en": "Errore durante la chiamata al servizio di verifica del CUP"
+		"it": "Servizio di verifica del CUP erogato dal DIPE indisponibile. Effettuare un nuovo tentativo di Conferma successivamente.",
+		"en": "Servizio di verifica del CUP erogato dal DIPE indisponibile. Effettuare un nuovo tentativo di Conferma successivamente."
 	},
     "dataInizio":null,
     "dataFine":null

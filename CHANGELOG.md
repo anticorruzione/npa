@@ -1674,6 +1674,12 @@ aggiunta regola REG5_1
 ### Orchestratore
 * ticket 87512:
   * scheda S3: impostato schedaAnnullabile a SI
+  
+<summary><h1>Note di rilascio del 30/01/2026 (In Esercizio)</h1></summary>
+
+### Tipologiche
+* errori.json:
+  * modificato messaggio dell'errore ERR132
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
