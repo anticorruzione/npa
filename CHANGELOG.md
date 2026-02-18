@@ -1608,6 +1608,7 @@ aggiunta regola REG5_1
 
 ## Orchestratore  
 * modificate le righe di ABI e CBI, colonna Settore-regime.
+* modificata la riga di ABI, colonna pubblicazioneNazionale: inserito il valore SI.
 * modificate le righe delle schede P3*, colonna includeESPD: inserito il valore SI, NO.
 * modificate le righe delle schede P3* e P5, colonna schedaNormativa: aggiunto il riferimento alla delibera anac n. 584/2023
 * modificata la riga della scheda AC1, colonna schedaSuccessiva: aggiunta la scheda CL1
@@ -1630,7 +1631,7 @@ aggiunta regola REG5_1
  	* colonna schedaSuccessiva: aggiunte le schede A1* per comunicare gara deserta o non aggiudicata
 * modificate le righe delle schede M2 e M2_40, colonna flussoAppartenenza: aggiunti i flussi 36,217,228
 * aggiunta la riga relativa alla nuova scheda P8 per le procedure negoziate senza bando o adesione ad AQ soprasoglia
-* modificata la riga della scheda A1_29, colonna flussoAppartenenza: aggiunto il flusso 800
+* modificate le righe delle schede A1_29 e M1, colonna flussoAppartenenza: aggiunto il flusso 800
   
 ### Tipologiche
 * errori.json:

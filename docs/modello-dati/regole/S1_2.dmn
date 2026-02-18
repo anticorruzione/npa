@@ -33,7 +33,7 @@
         <description>REG138: I campi di tipo testo non possono essere vuoti</description>
         <inputEntry id="UnaryTests_1u8l5gp">
           <text>some soggetto in elencoSoggetti
-satisfies ((soggetto.codiceFiscale = null or soggetto.codiceFiscale="") or (soggetto.denominazione = null or soggetto.denominazione="") or (soggetto.idPartecipante = null or soggetto.idPartecipante="") or (soggetto.dataInvito = null or soggetto.dataInvito ="") or (soggetto.scadenzaPresentazioneOfferta = null or soggetto.scadenzaPresentazioneOfferta=""))</text>
+satisfies ((soggetto.codiceFiscale = null or soggetto.codiceFiscale="") or (soggetto.denominazione = null or soggetto.denominazione="") or (soggetto.idPartecipante = null or soggetto.idPartecipante="") or (soggetto.dataInvito = null or soggetto.dataInvito ="") or (soggetto.scadenzaPresentazioneOfferte = null or soggetto.scadenzaPresentazioneOfferte=""))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0mpy0zg">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG138\"}"</text>
