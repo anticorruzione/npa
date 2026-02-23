@@ -50,7 +50,7 @@
 |70237|Modifica contrattuale per scheda P7_2|Aggiunta del flusso 72 per la scheda M2|04/07/2025<br>05/08/2025<br>30/09/2025|CHG-06||
 |79454|aggiornamento tipologica motivoDerogaQlf|Revisione della lista dei voci della tipologica, con aggiunta di nuove voci|04/07/2025<br>05/08/2025<br>30/09/2025|CHG-06||
 |||||||
-|79142|gestione flusso acquisizione beni infungibili|Limitazione di utilizzo ai soli servizi e forniture. Aggiunta del campo facoltativo Id Pianificazione.Pubblicazione su PVL della scheda ABI|09/01/2026<br>31/03/2026*<br>30/04/2026*<br>|CHG-07|:x:|
+|79142<br>97247|gestione flusso acquisizione beni infungibili|Limitazione di utilizzo ai soli servizi e forniture. Aggiunta del campo facoltativo Id Pianificazione.Pubblicazione su PVL della scheda ABI|09/01/2026<br>31/03/2026*<br>30/04/2026*<br>|CHG-07|:x:|
 |69809|Rimozione tipologica motivoEsclusioneTracciabilita|La tipologica motivoEsclusioneTracciabilita sarà rimossa perché non utilizzata|09/01/2026<br>31/03/2026*<br>30/04/2026*|CHG-07|:white_check_mark:|
 |61141|Inserimento tetto massimo su scheda AD3|Introduzione di una regola che blocca la scheda in caso di appalto di lavori di importo superiore a € 150.000 e di servizi e forniture di importo superiore a € 140.000|09/01/2026<br>31/03/2026*<br>30/04/2026*|CHG-07|:x:|
 |68666|Modifica flusso Scheda AC1|Sarà aggiunta la scheda CL1 come successiva alla scheda AC1|09/01/2026<br>31/03/2026*<br>30/04/2026*|CHG-07|:x:|
