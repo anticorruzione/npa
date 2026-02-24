@@ -1608,7 +1608,9 @@ aggiunta regola REG5_1
 
 ## Orchestratore  
 * modificate le righe di ABI e CBI, colonna Settore-regime.
-* modificata la riga di ABI, colonna pubblicazioneNazionale: inserito il valore SI.
+* modificata la riga di ABI:
+	* colonna pubblicazioneNazionale: inserito il valore SI
+	* colonna schedaSuccessiva: escluse le schede ANN e CM1
 * modificate le righe delle schede P3*, colonna includeESPD: inserito il valore SI, NO.
 * modificate le righe delle schede P3* e P5, colonna schedaNormativa: aggiunto il riferimento alla delibera anac n. 584/2023
 * modificata la riga della scheda AC1, colonna schedaSuccessiva: aggiunta la scheda CL1
