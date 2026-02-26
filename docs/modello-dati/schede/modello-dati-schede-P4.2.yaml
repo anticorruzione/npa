@@ -9,14 +9,7 @@ components:
       allOf: # estende la classe LottoP4BaseType
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/LottoP4BaseType'      
       type: object
-      additionalProperties: false    
-      properties:
-        strumentiElettroniciSpecifici:
-          description: Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche
-          type: boolean
-        docFAP:
-          description: è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM
-          type: boolean
+      additionalProperties: false
    AnacFormP4_2Type:
       description: Contiene i dati per la scheda di Locazione Finanziaria
       allOf: # estende la classe AnacFormBaseType

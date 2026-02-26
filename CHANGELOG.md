@@ -1692,6 +1692,13 @@ aggiunta regola REG5_1
 		* colonna schedaSuccessiva: aggiunta la scheda CM2
 	* modificata la riga della scheda CM2:
 		* colonna schedaSuccessiva: aggiunta la scheda S4
+		
+<summary><h1>Note di rilascio del 26/02/2026 (In Esercizio)</h1></summary>
+
+### Orchestratore
+* ticket 98397:
+	* modello-dati-schede-P4.1.yaml,modello-dati-schede-P4.2.yaml,modello-dati-schede-P4.3.yaml,modello-dati-schede-P4.4.yaml,modello-dati-schede-P4.5.yaml:
+		* rimosse le properties duplicate strumentiElettroniciSpecifici e docFAP (già presenti nello schema LottoP4BaseType)
 
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
