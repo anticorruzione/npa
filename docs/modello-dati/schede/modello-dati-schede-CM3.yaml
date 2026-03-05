@@ -9,7 +9,6 @@ components:
       - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ComunicazioneType'
       type: object
       additionalProperties: false
-      required: [datiBase,datiBaseProcedura,datiBaseStrumentiProcedura]
       properties:
         scadenzaPresentazioneOfferte: 
           description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
