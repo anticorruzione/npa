@@ -2715,8 +2715,8 @@
 {
     "codice":"REG143",
     "descrizione": {
-		"it": "Indicare almeno un soggetto.",
-		"en": "Indicare almeno un soggetto."
+		"it": "Tipo progettazione e tipo soggetto non coerenti.",
+		"en": "Tipo progettazione e tipo soggetto non coerenti."
 	},
     "dataInizio":null,
     "dataFine":null
