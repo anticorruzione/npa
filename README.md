@@ -13,6 +13,12 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 11/03/2026 - Sospensione dei servizi PCP e FVOE di Qualificazione per manutenzione straordinaria
+A causa di un intervento di manutenzione straordinaria, dalle ore 13.00 alle ore 15.00 di mercoledì 18 marzo 2026 verranno sospesi i servizi di interoperabilità erogati alle Piattaforme di Approvvigionamento Digitale in ambiente di Qualificazione
+
+## 11/03/2026 - Sospensione dei servizi FVOE di Esercizio per manutenzione straordinaria
+Come riportato nell'[avviso](https://portale-servizi.anticorruzione.it/home) pubblicato sul Portale Servizi dell'Autorità, a causa di un intervento di manutenzione straordinaria, dalle ore 13.00 alle ore 16.00 di lunedì 16 marzo 2026 verranno sospesi i servizi del Fascicolo Virtuale dell'Operatore Economico compresi quelli erogati alle Piattaforme di Approvvigionamento Digitale 
+
 ## 12/02/2026 - Manutenzione straordinaria
 Come riportato nell'[avviso](https://portale-servizi.anticorruzione.it/home) pubblicato sul Portale Servizi dell'Autorità, a causa di un intervento di urgente manutenzione straordinaria, dalle ore 13.00 alle ore 14.00 di venerdì 13 febbraio potrebbero verificarsi disservizi su alcuni servizi dell'Autorità, compresi quelli erogati alle Piattaforme di Approvvigionamento Digitale 
 
