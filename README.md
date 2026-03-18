@@ -13,6 +13,15 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 18/03/2026 - Disservizi Ted
+Si riporta l'avviso ricevuto dal TeD alle ore 16:06 di oggi
+
+Dear eSenders
+We would like to inform you that eNotices2 is currently experiencing a technical issue, which may prevent access to the application and its API (Publication API).
+As a result, some operations related to the submission and processing of notices are currently affected.
+Our technical teams are actively investigating the situation and working to restore the service as soon as possible.
+We apologise for any inconvenience this may cause and thank you for your understanding.
+
 ## 11/03/2026 - Sospensione dei servizi PCP e FVOE di Qualificazione per manutenzione straordinaria
 A causa di un intervento di manutenzione straordinaria, dalle ore 13.00 alle ore 15.00 di mercoledì 18 marzo 2026 verranno sospesi i servizi di interoperabilità erogati alle Piattaforme di Approvvigionamento Digitale in ambiente di Qualificazione
 
