@@ -28,7 +28,7 @@ components:
           format: date-time        
       
     SchedaS1_2Type:
-      description: 'elenco dei soggetti che hanno presentato offerta.'
+      description: 'elenco dei soggetti invitati.'
       type: object
       additionalProperties: false
       required: [anacForm]
