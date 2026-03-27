@@ -1700,6 +1700,20 @@ aggiunta regola REG5_1
 	* modello-dati-schede-P4.1.yaml,modello-dati-schede-P4.2.yaml,modello-dati-schede-P4.3.yaml,modello-dati-schede-P4.4.yaml,modello-dati-schede-P4.5.yaml:
 		* rimosse le properties duplicate strumentiElettroniciSpecifici e docFAP (già presenti nello schema LottoP4BaseType)
 
+<summary><h1>Note di rilascio del 27/03/2026 (In Esercizio)</h1></summary>
+
+### Tipologiche
+* ticket 94574:
+	* errori.json: modificata la descrizione dell'errore REG20
+  
+### Regole
+* ticket 94574:
+	* P1_10.dmn,P1_11.dmn,P1_12.dmn,P1_13.dmn,P1_16.dmn,P1_17.dmn,P1_20.dmn,P1_21.dmn,P2_10.dmn,P2_11.dmn,P2_12.dmn,P2_13.dmn,P2_14.dmn,P2_16.dmn,P2_17.dmn,P2_20.dmn,P2_21.dmn,P3_1.dmn,P3_2.dmn,P3_3.dmn,P3_4.dmn,P3_5.dmn,P6_1.dmn,P6_2.dmn,P7_2.dmn,P7_1_1.dmn,P7_1_2.dmn,P7_1_3.dmn,P8.dmn: modificata la regola REG20 escludendo l'obbligatorietà per gli accordi quadro
+
+* ticket 98916:
+	* M1.dmn,M2.dmn: eliminate le regole REG55,REG56,REG63
+ 	* M1_40.dmn,M2_40.dmn: eliminate le regole REG55,REG56
+
 <summary><h1>Scadenza certificato digitale *.anticorruzione.it</h1></summary>
 * Il certificato digitale SSL utilizzato per i servizi di ANAC è in scadenza il prossimo 24 luglio. La nuova catena di certificazione pubblica è disponibile per il download nella cartella docs/certificato SSL.
 Il certificato sarà installato alle 17.00 di oggi (18 luglio) negli ambienti di qualificazione e attestazione e il 22 luglio alle ore 13.00 in ambiente di esercizio.

@@ -1603,8 +1603,8 @@
 {
     "codice":"REG20",
     "descrizione": {
-		"it": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria",
-		"en": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria"
+		"it": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria e l'appalto non è di tipo Accordo Quadro/convenzione",
+		"en": "Il campo cupLotto è obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria e l'appalto non è di tipo Accordo Quadro/convenzione"
 	},
     "dataInizio":null,
     "dataFine":null
