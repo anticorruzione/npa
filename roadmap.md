@@ -87,6 +87,6 @@
 |||||||
 |58792|partecipante type - refactoring modello dati|refactoring del modello dati per la  gestione dei gruppi multilivello |/<br>/<br>/<br>|/||
 |62794|Modifica delle stazioni appaltanti coinvolte nella procedura|Funzionalità di inserimento, sostituzione, eliminazione di soggetti dall'elenco delle Stazioni Appaltanti|/<br>/<br>/<br>|/||
-|68715|introduzione eForm SDK 1.13|Aggiornamento del modello dati allo schema eForm SDK 1.13|13/04/2026*<br>15/05/2026*<br>15/06/2026*<br>|/||
+|68715|introduzione eForm SDK 1.13|Aggiornamento del modello dati allo schema eForm SDK 1.13.3<br>(la pianificazione è stata aggiornata a seguito della disponibilità della versione SDK 1.13.3 - ora nuovo riferimento - e dello slittamento della data di fine vita della versione 1.12)|25/05/2026*<br>30/06/2026*<br>14/09/2026*<br>|/||
 |77856|Tipologica tipoProcedura eliminare voce 99 - procedura di gara|Sarà chiusa la voce 99 della tipologica tipoProcedura|/<br>/<br>/<br>|||
 |58793|StazioneAppaltanteType - refactoring modello dati|Refactoring del modello dati della stazione appaltante per ottimizzazione della struttura e disambiguamento delle informazioni di delega e funzioni svolte|/<br>/<br>/<br>||
