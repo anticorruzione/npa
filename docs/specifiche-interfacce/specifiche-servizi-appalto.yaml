@@ -1000,6 +1000,39 @@ paths:
           $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []
+  /consulta-avviso-oscurato:
+    get:
+      tags:
+        - pubblicaAvviso
+      summary: API Rest per il recupero del dettaglio di un Avviso Oscurato dal sistema PVL. SINCRONO
+      description: Viene resituita la definizione di un Avviso Oscurato con tutte le sue informazioni di dettaglio.
+      operationId: consultaAvvisoOscurato
+      parameters:
+        - in: query
+          name: idAvviso
+          description: Identificativo dell'Avviso generato da ANAC.
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+      responses:
+        '200':
+          description: Operazione terminato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsultaAvvisoOscuratoResponse'   
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []
   /consulta-rendering-avviso:
     get:
       tags:
@@ -2113,8 +2146,12 @@ components:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/PaginazioneType'
     SchedaGroupType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/SchedaGroupType'
+    AvvisoPVLOscuratoType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoPVLOscuratoType'
     AvvisoType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoType'
+    AppaltoBaseType:
+      $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AppaltoBaseType'
     AvvisoBaseType:
       $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/AvvisoBaseType'      
     StatoAvvisoType:
@@ -2766,6 +2803,26 @@ components:
       properties:
         avviso:
           $ref: '#/components/schemas/AvvisoType'
+        appalto:
+            $ref: '#/components/schemas/AppaltoBaseType'
+        piano:
+            $ref: '#/components/schemas/DatiPianoBaseType'            
+        scheda:
+            $ref: '#/components/schemas/SchedaGroupType'
+    ConsultaAvvisoOscuratoResponse:
+      allOf: # estende lo schema dati di BaseResponse
+        - $ref: '#/components/schemas/BaseResponse'
+      properties:
+        avviso:
+          $ref: '#/components/schemas/AvvisoType'
+        appalto:
+            $ref: '#/components/schemas/AppaltoBaseType'
+        piano:
+            $ref: '#/components/schemas/DatiPianoBaseType'            
+        scheda:
+            $ref: '#/components/schemas/SchedaGroupType'
+        avvisoPVLOscurato:
+            $ref: '#/components/schemas/AvvisoPVLOscuratoType'
     RenderingAvvisoResponse:
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'

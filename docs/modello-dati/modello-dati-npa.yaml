@@ -453,13 +453,70 @@ components:
       AvvisoType:
         allOf: # estende la classe AvvisoCommonType
           - $ref: '#/components/schemas/AvvisoCommonType'
+      AvvisoPVLOscuratoType:
+        type: object
+        additionalProperties: false
         properties:
-          appalto:
-            $ref: '#/components/schemas/AppaltoBaseType'
-          piano:
-            $ref: '#/components/schemas/DatiPianoBaseType'            
-          scheda:
-            $ref: '#/components/schemas/SchedaGroupType'
+          idAvviso:
+            description: identificativo univoco dell'Avviso generato da ANAC.
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          idAvvisoPVL:
+            description: identificativo univoco dell'Avviso generato da ANAC.
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          idAppalto:
+            description: identificativo univoco dell'Appalto generato da ANAC.
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          idPianificazione:
+            description: identificativo univoco della Pianificazione definito da ANAC. Restituito dall'operazione di creazione Pianificazione. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          idScheda:
+            description: Identificativo univoco della Scheda definito da ANAC. (A UUID specified by RFC4122)
+            type: string
+            format: uuid
+            example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+          _dataCreazione:
+            description: data creazione della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          _dataModifica:
+            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          dataControllo:
+            description: data in cui è stato effettuato il controllo dello stato avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          dataNotifica:
+            description: data in cui è stato notifica l'oscuramento dell'avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
+            type: string
+            format: date-time
+            example: '2022-01-23T12:02:05Z'
+          operazione:
+            description: operazione che ha generato oscuramento dell'Avviso sulla PPL nazionale
+            type: string
+          invalidFields:
+            type: object
+            additionalProperties: true
+          modifiedFields:
+            type: object
+            additionalProperties: true
+          warningFields:
+            type: object
+            additionalProperties: true
+          nonConformeFields:
+            type: object
+            additionalProperties: true
       DatiPubblicazioneEUType:
         type: object
         additionalProperties: false
