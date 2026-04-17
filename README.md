@@ -13,6 +13,9 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 17/04/2026 - Possibili disservizi dei servizi PCP e FVOE di Esercizio per manutenzione straordinaria
+A causa di un intervento di manutenzione straordinaria, dalle ore 17.00 alle ore 20.00 di mercoledì 22 aprile 2026 i servizi di interoperabilità erogati alle Piattaforme di Approvvigionamento Digitale in ambiente di Esercizio potranno subire saltuari disservizi di breve durata
+
 ## 27/03/2026 - Sospensione dei servizi FVOE di Esercizio per manutenzione straordinaria Errata corrige
 A correzione del precedente avviso del 26/03/2026, si segnala che, a causa di un intervento di manutenzione straordinaria, dalle ore 17.00 alle ore 19.00 di giovedì 2 aprile 2026 verranno sospesi i servizi del Fascicolo Virtuale dell'Operatore Economico compresi quelli erogati alle Piattaforme di Approvvigionamento Digitale
 
