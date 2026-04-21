@@ -13,6 +13,13 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 21/04/2026 - Disservizi Ted
+Si riporta l'avviso ricevuto dal TeD alle ore 16:34 del 20 aprile
+
+Dear eSenders
+Due to maintenance, TED Developer Portal (Production) may experience temporary disruptions on 23 April, between 07:00 and 09:00 (CEST). We suggest that you inform your users if needed.
+We apologise for the inconvenience and thank you for your understanding. 
+
 ## 17/04/2026 - Possibili disservizi sui servizi PCP e FVOE di Esercizio per manutenzione straordinaria
 A causa di un intervento di manutenzione straordinaria, dalle ore 17.00 alle ore 20.00 di mercoledì 22 aprile 2026 i servizi di interoperabilità erogati alle Piattaforme di Approvvigionamento Digitale in ambiente di Esercizio potranno subire saltuari disservizi di breve durata
 
