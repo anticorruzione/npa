@@ -456,4 +456,58 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"AV_OSCURATO_PVL",
+    "descrizione": {
+		"it": "Avviso oscurato",
+		"en": "Avviso oscurato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_N_OSCURATO_PVL",
+    "descrizione": {
+		"it": "Avviso non oscurato",
+		"en": "Avviso non oscurato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},	
+{
+    "codice":"AV_DEOSCURATO_PVL",
+    "descrizione": {
+		"it": "Avviso deoscurato",
+		"en": "Avviso deoscurato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_N_DEOSCURATO_PVL",
+    "descrizione": {
+		"it": "Avviso non deoscurato",
+		"en": "Avviso non deoscurato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_MODIFICATO_PVL",
+    "descrizione": {
+		"it": "Metadati avviso modificati",
+		"en": "Metadati avviso modificati"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_N_MODIFICATO_PVL",
+    "descrizione": {
+		"it": "Metadati avviso non modificati",
+		"en": "Metadati avviso non modificati"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]

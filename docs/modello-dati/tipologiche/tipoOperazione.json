@@ -213,4 +213,40 @@
     },
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"AV_OSCURAMENTO",
+    "descrizione": {
+		"it": "Avviso oscurato",
+		"en": "Avviso oscurato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_MODIFICA",
+    "descrizione": {
+		"it": "Metadati Avviso modificati manualmente dal BO PVL",
+		"en": "Metadati Avviso modificati manualmente dal BO PVL"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_DEOSCURAMENTO_AUTOMATICO",
+    "descrizione": {
+		"it": "Avviso deoscurato",
+		"en": "Avviso deoscurato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AV_DEOSCURAMENTO_MANUALE",
+    "descrizione": {
+		"it": "Avviso deoscurato dal BO PVL",
+		"en": "Avviso deoscurato dal BO PVL"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]

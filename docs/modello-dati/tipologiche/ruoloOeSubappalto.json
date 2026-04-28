@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Aggiudicatario",
+		"en": "Aggiudicatario"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Subappaltatore",
+		"en": "Subappaltatore"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]

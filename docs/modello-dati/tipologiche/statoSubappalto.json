@@ -1,0 +1,54 @@
+[{
+    "codice":"RICHIESTO",
+    "descrizione": {
+		"it": "Richiesto",
+		"en": "Richiesto"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"AUTORIZZATO",
+    "descrizione": {
+		"it": "Autorizzato",
+		"en": "Autorizzato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"NON_APPROVATO",
+    "descrizione": {
+		"it": "Non approvato",
+		"en": "Non approvato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REVOCATO",
+    "descrizione": {
+		"it": "Revocato",
+		"en": "Revocato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"CHIUSO",
+    "descrizione": {
+		"it": "Chiuso",
+		"en": "Chiuso"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"ANNULLATO",
+    "descrizione": {
+		"it": "Annullato",
+		"en": "Annullato"
+	},
+    "dataInizio":null,
+    "dataFine":null
+}]
