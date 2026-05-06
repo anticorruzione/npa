@@ -36,7 +36,7 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 |   `25/09/2024`   |      `00011`       | `Verifica esistenza rapporto parità di genere`               | `-` | `Ministero del Lavoro`  |
 |   `30/04/2026`    |      `00099`       | `Contributo ANAC`                                            | `-` | `ANAC`                  |
 |  `In Progress`   |      `00014`       | `Certificazione IAF`                                         | `-` | `IAF`                   |
-|  `In Progress`   |       `TBD`        | `Consultazione Bilancio`                                     | `-` | `Infocamere`            |
+|  `In Progress`   |       `TBD`        | `Consultazione Bilandio`                                     | `-` | `Infocamere`            |
 
 ## Casi di test
 
@@ -49,5 +49,5 @@ Vengono qui riportati i casi di test in ambiente PDND di collaudo degli enti cer
 |      `00010`       | `Verifica esistenza prospetto informativo disabili` | `Ministero del Lavoro` | `Codice fiscale 48863580097` |
 |      `00011`       | `Verifica esistenza rapporto parità di genere` | `Ministero del Lavoro` | `Codice fiscale 48863580097` |
 |      `00008`       | `DURC emesso in corso di validità` | `Inps`                 | `Codici fiscali 00385090485, 05836271212, SNCFNC59A06F284S` |
-|      `00099`       | `Contributo ANAC` | `ANAC`                 | `cig": "B00012EADB","idAppalto":"13cddd5d-c54b-4013-b4b0-8232b5194883","codiceFiscale": "00126690502"` |
+|      `00099`       | `Contributo ANAC` | `ANAC`                 | `"cig": "B00012EADB","idAppalto":"13cddd5d-c54b-4013-b4b0-8232b5194883","codiceFiscale": "00126690502"` |
 

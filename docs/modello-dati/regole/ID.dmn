@@ -32,7 +32,7 @@
       <rule id="DecisionRule_0y5sg6w">
         <description>REG8_1: L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</description>
         <inputEntry id="UnaryTests_0vpt0zs">
-          <text>comunicazioneUrl.url != null and comunicazioneUrl.url != "" and starts with(comunicazioneUrl.url,"http:") = false and starts with(comunicazioneUrl.url,"https:") = false</text>
+          <text>is defined(comunicazione.comunicazioneUrl) and comunicazione.comunicazioneUrl.url != null and comunicazione.comunicazioneUrl.url != "" and starts with(comunicazione.comunicazioneUrl.url,"http:") = false and starts with(comunicazione.comunicazioneUrl.url,"https:") = false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15kfsn8">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>

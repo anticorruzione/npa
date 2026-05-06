@@ -1367,6 +1367,15 @@
     "dataFine":null
 },
 {
+	"codice":"ERR151",
+    "descrizione": {
+		"it": "Avviso non oscurato.",
+		"en": "Avviso non oscurato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
