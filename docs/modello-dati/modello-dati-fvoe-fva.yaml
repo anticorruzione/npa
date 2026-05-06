@@ -696,6 +696,33 @@ components:
           minItems: 1
           items:
             $ref: '#/components/schemas/Soggetto00050'
+    DatiSA00099:
+      description: >-
+        Oggetto che riporta i dati per richiedere il documento CONTRIBUTO ANAC
+      type: object
+      additionalProperties: false
+      required:
+        - idAppalto
+        - cig
+        - codiceFiscale
+        - dataOraRiferimento
+      properties:
+        idAppalto:
+          description: Identificativo dell'appalto
+          pattern: /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+          type: string
+        cig:
+          type: string
+          description: Identificativo della cig
+        codiceFiscale:
+          description: Codice fiscale o partita iva dell'operatore economico per cui si richiede il documento
+          type: string
+          example: 'MRORSS77T05E472I'
+        dataOraRiferimento:
+          description: data e ora di riferimento
+          type: string
+          format: date-time
+          example: '1980-02-01T00:00:00+01:00'
     DatiSA00899:
       description: >-
         Oggetto che riporta dati generici dell' Operatore Economico
@@ -741,6 +768,7 @@ components:
             - $ref: '#/components/schemas/DatiSA00047'
             - $ref: '#/components/schemas/DatiSA00048'
             - $ref: '#/components/schemas/DatiSA00050'
+            - $ref: '#/components/schemas/DatiSA00099'
             - $ref: '#/components/schemas/DatiSA00899'        
           discriminator:
             propertyName: type

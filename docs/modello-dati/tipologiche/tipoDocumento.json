@@ -133,7 +133,7 @@
         "en": "DURC inarcassa professionisti"
       },
       "dataInizio": null,
-      "dataFine": null     
+      "dataFine": null
 },{
       "codice": "00041",
       "descrizione": {
@@ -141,12 +141,20 @@
         "en": "Dati reddituali impresa individuale"
       },
       "dataInizio": null,
-      "dataFine": null     
+      "dataFine": null
 },{
       "codice": "00042",
       "descrizione": {
         "it": "Carichi fiscali pendenti",
         "en": "Carichi fiscali pendenti"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00099",
+      "descrizione": {
+        "it": "Contributo ANAC",
+        "en": "ANAC Contribution"
       },
       "dataInizio": null,
       "dataFine": null

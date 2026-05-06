@@ -36,7 +36,7 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 |   `25/09/2024`   |      `00011`       | `Verifica esistenza rapporto parità di genere`               | `-` | `Ministero del Lavoro`  |
 |   `30/04/2026`    |      `00099`       | `Contributo ANAC`                                            | `-` | `ANAC`                  |
 |  `In Progress`   |      `00014`       | `Certificazione IAF`                                         | `-` | `IAF`                   |
-|  `In Progress`   |       `TBD`        | `Consultazione Bilandio`                                     | `-` | `Infocamere`            |
+|  `In Progress`   |       `TBD`        | `Consultazione Bilancio`                                     | `-` | `Infocamere`            |
 
 ## Casi di test
 
