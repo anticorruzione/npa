@@ -15,28 +15,28 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 °Note: La lista verrà aggiornata in base alle nuove integrazioni 
 
 | `Data Esercizio` | `Codice Documento` | `Descrizione Documento`                                      | `Modello Dati` | `Ente Certificante`     |
-|:----------------:|:------------------:|:-------------------------------------------------------------| ----------------- |-------------------------| 
-|   `23/01/2024`   |      `00033`       | `Estratto del casellario informatico ANAC`                   | `-` | `Anac`                  |
+|:----------------:|:------------------:|:-------------------------------------------------------------|----------------|-------------------------| 
+|   `23/01/2024`   |      `00033`       | `Estratto del casellario informatico ANAC`                   | `-`            | `Anac`                  |
 |   `23/01/2024`   |      `00004`       | `Certificato integrale del casellario giudiziario`           | `DatiSA_00004` | `Min.Giustizia`         |
-|   `23/01/2024`   |      `00021`       | `Comunicazione regolarità fiscale`                           | `-` | `Agenzia delle Entrate` |
-|   `23/01/2024`   |      `00034`       | `Visura al registo delle imprese`                            | `-` | `Unioncamere`           |
+|   `23/01/2024`   |      `00021`       | `Comunicazione regolarità fiscale`                           | `-`            | `Agenzia delle Entrate` |
+|   `23/01/2024`   |      `00034`       | `Visura al registo delle imprese`                            | `-`            | `Unioncamere`           |
 |   `23/01/2024`   |      `00005`       | `Anagrafe delle sanzioni amministrative dipendenti da reato` | `DatiSA_00020` | `Min. Giustizia`        |
-|   `23/01/2024`   |      `00038`       | `DURC inarcassa professionista`                              | `-` | `Inarcassa`             |
-|   `23/01/2024`   |      `00039`       | `DURC inarcassa impresa`                                     | `-` | `Inarcassa`             |
+|   `23/01/2024`   |      `00038`       | `DURC inarcassa professionista`                              | `-`            | `Inarcassa`             |
+|   `23/01/2024`   |      `00039`       | `DURC inarcassa impresa`                                     | `-`            | `Inarcassa`             |
 |   `23/01/2024`   |      `00035`       | `Dati reddituali società di persone`                         | `DatiSA_00036` | `Agenzia delle Entrate` |
 |   `23/01/2024`   |      `00036`       | `Consistenza media personale`                                | `DatiSA_00047` | `Inps`                  |
 |   `23/01/2024`   |      `00037`       | `Costo complessivo personale`                                | `DatiSA_00048` | `Inps`                  |
 |   `23/01/2024`   |      `00001`       | `Comunicazione antimafia`                                    | `DatiSA_00050` | `Min. Interno`          |
-|   `23/01/2024`   |      `00041`       | `Dati reddituali impresa individuale`                        | `DatiSA_00036`| `Agenzia delle Entrate` |
+|   `23/01/2024`   |      `00041`       | `Dati reddituali impresa individuale`                        | `DatiSA_00036` | `Agenzia delle Entrate` |
 |   `23/01/2024`   |      `00899`       | `Documento Generico OE`                                      | `DatiSA_00899` | `Operatore Econimico`   |
-|   `16/09/2024`   |      `00042`       | `Carichi Fiscali Pendenti`                                   | `-` | `Agenzia delle Entrate` |
-|   `07/11/2024`   |      `00007`       | `Iscrizione WhiteList antimafia`                             | `-` | `Min. Interno`          |
-|   `02/08/2024`   |      `00008`       | `DURC emesso in corso di validità`                           | `-` | `Inps`                  |
-|   `25/09/2024`   |      `00010`       | `Verifica esistenza prospetto informativo disabili`          | `-` | `Ministero del Lavoro`  |
-|   `25/09/2024`   |      `00011`       | `Verifica esistenza rapporto parità di genere`               | `-` | `Ministero del Lavoro`  |
-|   `30/04/2026`    |      `00099`       | `Contributo ANAC`                                            | `-` | `ANAC`                  |
-|  `In Progress`   |      `00014`       | `Certificazione IAF`                                         | `-` | `IAF`                   |
-|  `In Progress`   |       `TBD`        | `Consultazione Bilancio`                                     | `-` | `Infocamere`            |
+|   `16/09/2024`   |      `00042`       | `Carichi Fiscali Pendenti`                                   | `-`            | `Agenzia delle Entrate` |
+|   `07/11/2024`   |      `00007`       | `Iscrizione WhiteList antimafia`                             | `-`            | `Min. Interno`          |
+|   `02/08/2024`   |      `00008`       | `DURC emesso in corso di validità`                           | `-`            | `Inps`                  |
+|   `25/09/2024`   |      `00010`       | `Verifica esistenza prospetto informativo disabili`          | `-`            | `Ministero del Lavoro`  |
+|   `25/09/2024`   |      `00011`       | `Verifica esistenza rapporto parità di genere`               | `-`            | `Ministero del Lavoro`  |
+|   `30/04/2026`    |      `00099`       | `Contributo ANAC`                                            | `DatiSA_00099` | `ANAC`                  |
+|  `In Progress`   |      `00014`       | `Certificazione IAF`                                         | `-`            | `IAF`                   |
+|  `In Progress`   |       `TBD`        | `Consultazione Bilancio`                                     | `-`            | `Infocamere`            |
 
 ## Casi di test
 
