@@ -13,6 +13,9 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 07/05/2026 - Nuova documentazione disponibile su FVOE
+Pubblicato l'aggiornamento delle specifiche tecniche dei servizi di interoperabilità del FVOE per consentire la verifica del pagamento del contributo dovuto all'Autoritò da parte degli OE partecipanti agli appalti
+
 ## 24/04/2026 - Nuovo disservizio annunciato dal Ted sulle API di produzione
 Si riporta l'avviso ricevuto dal TeD alle ore 12:48 di oggi 24 aprile
 
