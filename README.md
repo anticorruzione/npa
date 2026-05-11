@@ -13,6 +13,14 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 11/05/2026 - Nuovo disservizio annunciato dal TeD sulle API di produzione
+Si riporta di seguito l'avviso ricevuto dal TeD alle ore 11.22 di oggi, 11 maggio
+
+Dear developers
+This is to inform you that the Publication API of the TED API may encounter disruptions in the Production environment on 12 May, between 07:00 and 09:00 (CEST).
+The service disruption is due to urgent maintenance in TED eNotices2 in Production.
+Please inform your users if necessary. Thank you for your understanding.
+
 ## 07/05/2026 - Nuova documentazione disponibile su FVOE
 Pubblicato l'aggiornamento delle specifiche tecniche dei servizi di interoperabilità del FVOE per consentire la verifica del pagamento del contributo dovuto all'Autorità da parte degli OE partecipanti agli appalti
 
