@@ -3789,7 +3789,7 @@ components:
       properties:
         tipoProcedura:
           $ref: '#/components/schemas/TipoProceduraEnum'  
-        giustificazioniAggiudicazioneDiretta:
+        giustificazioniAggiudicazioneDirettaAD:
           type: array
           items: 
            $ref: '#/components/schemas/GiustificazioneAggiudicazioneDirettaType'           
