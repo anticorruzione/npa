@@ -13,6 +13,9 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 18/05/2026 - Sospensione dei servizi FVOE di Esercizio per manutenzione straordinaria
+A causa di un intervento di manutenzione straordinaria, dalle ore 16.00 di venerdì 22 maggio 2026 alle ore 8.00 di lunedì 25 maggio 2026 verranno sospesi i servizi del Fascicolo Virtuale dell'Operatore Economico compresi quelli erogati alle Piattaforme di Approvvigionamento Digitale
+
 ## 11/05/2026 - Nuovo disservizio annunciato dal TeD sulle API di produzione
 Si riporta di seguito l'avviso ricevuto dal TeD alle ore 11.22 di oggi, 11 maggio
 
