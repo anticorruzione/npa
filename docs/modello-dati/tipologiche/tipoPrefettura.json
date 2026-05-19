@@ -700,6 +700,16 @@
     "dataFine": null
   },
   {
+    "codice": "IT-PU",
+    "descrizione": {
+      "it": "Provincia di Pesaro e Urbino",
+      "en": "Province of Pesaro and Urbino",
+      "de": "Provinz von Pesaro und Urbino"
+    },
+    "dataInizio": null,
+    "dataFine": null
+  },
+  {
     "codice": "IT-PZ",
     "descrizione": {
       "it": "Provincia di Potenza",
