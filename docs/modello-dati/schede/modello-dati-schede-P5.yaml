@@ -25,7 +25,7 @@ components:
    LottoP5Type:
       description: Oggetto che riporta i dati del lotto.
       type: object
-      required: [lotIdentifier,datiBase,sceltaContraente]
+      required: [lotIdentifier,datiBase,sceltaContraente,fattispecieTracciabilita]
       additionalProperties: false
       properties:
         lotIdentifier:
