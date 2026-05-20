@@ -1637,7 +1637,7 @@ aggiunta regola REG5_1
   
 ### Tipologiche
 * errori.json:
-	* aggiunti gli errori REG132,REG133,REG134,REG135,REG136,REG137,REG138,REG139,REG140,REG141,REG142,REG143,REG144,REG145
+	* aggiunti gli errori REG132,REG133,REG134,REG135,REG136,REG137,REG138,REG139,REG140,REG141,REG142,REG143,REG144,REG145,ERR153,ERR154,ERR155,ERR156
  	* modificata la descrizione dell'errore REG81
   	* rinominato il campo oraScadenzaPresentazioneOfferte in scadenzaPresentazioneOfferte nei messaggi
 * motivoEsclusioneTracciabilita.json: rimossa perché non utilizzata

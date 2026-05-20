@@ -1376,6 +1376,51 @@
     "dataFine":null
 },
 {
+	"codice":"ERR152",
+    "descrizione": {
+		"it": "È stato inserito un eform diverso dal precedente per la rettifica di un avviso oscurato.",
+		"en": "È stato inserito un eform diverso dal precedente per la rettifica di un avviso oscurato."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR153",
+    "descrizione": {
+		"it": "Per l'idSubappalto indicato nel body non è stato trovato alcun Subappalto.",
+		"en": "Per l'idSubappalto indicato nel body non è stato trovato alcun Subappalto."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR154",
+    "descrizione": {
+		"it": "Operazione non consentita per lo stato del subappalto indicato nel body.",
+		"en": "Operazione non consentita per lo stato del subappalto indicato nel body."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR155",
+    "descrizione": {
+		"it": "Il subappaltante a cascata indicato non corrisponde con quello presente come subappaltatore nel subappalto precedente.",
+		"en": "Il subappaltante a cascata indicato non corrisponde con quello presente come subappaltatore nel subappalto precedente."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR156",
+    "descrizione": {
+		"it": "Non è possibile procedere con la chiusura del subappalto, in quanto risultano ancora attivi subappalti in cascata collegati e non ancora chiusi.",
+		"en": "Non è possibile procedere con la chiusura del subappalto, in quanto risultano ancora attivi subappalti in cascata collegati e non ancora chiusi."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
