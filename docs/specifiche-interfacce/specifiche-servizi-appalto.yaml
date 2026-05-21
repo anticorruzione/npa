@@ -1931,7 +1931,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConfermaSchedaOEResponse'
+                $ref: '#/components/schemas/AckResponse'
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -1957,20 +1957,6 @@ paths:
         schema:
           format: uuid
           type: string
-      - description: numero della pagina da visualizzare
-        in: query
-        name: page
-        required: false
-        schema:
-          default: '1'
-          type: string
-      - description: numero di elementi per pagina
-        in: query
-        name: perPage
-        required: false
-        schema:
-          default: '20'
-          type: string
       responses:
         '200':
           description: Operazione terminato con successo.
@@ -1984,7 +1970,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsultaSchedaOEResponse'
+                $ref: '#/components/schemas/ConsultaElencoOEResponse'
         '400':
             $ref: '#/components/responses/400BadRequest'
         '404':
@@ -3001,13 +2987,32 @@ components:
         type:
           type: string
       type: object
-    ConsultaSchedaOEResponse:
+    ConsultaElencoOEResponse:
       description: Risposta generica servizio
       allOf: # estende lo schema dati di BaseResponse
         - $ref: '#/components/schemas/BaseResponse'
       properties:
         elenco:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/DatiSchedaOEType'
+          $ref: '#/components/schemas/ElencoOEType'
+    ElencoOEType:
+      description: Oggetto Complesso che riporta tutti i dati della scheda elenco OE per il contesto gestioneElenchi
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          description: identificativo univoco dell'ElencoOE definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        idElenco:
+          description: identificativo univoco dell'ElencoOE definito da ANAC. Restituito dall'operazione di creazione Elenco OE. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+        operatoriEconomici:
+          type: array
+          items:
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/OperatoreEconomicoType'
   securitySchemes:
     apiKeyAuth:
       type: apiKey
