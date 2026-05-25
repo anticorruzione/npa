@@ -1727,6 +1727,13 @@ aggiunta regola REG5_1
 
 <summary><h1>Note di rilascio del 25/05/2026</h1></summary>
 
+**NOTA**
+* Pubblicazione contenuti su GitHub: 25/05/2026
+* Rilascio in Qualificazione: Come da Roadmap
+* Rilascio in Esercizio: Come da Roadmap
+
+  **la nota di rilascio potrà essere integrata successivamente**
+
 ### Tipologiche
 * tipoProcedura.json: aggiornate le descrizioni delle voci: exp-int-rail e comp-tend
 * giustificazioniAggiudicazioneDiretta.json:
