@@ -696,6 +696,21 @@ satisfies (is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.da
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG135\"}"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0bycehl">
+        <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
+        <inputEntry id="UnaryTests_18tikyu">
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","open","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10rgy4a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_091inrk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06awbnf">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG136\"}"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_0tq3gr1" name="lotti" />

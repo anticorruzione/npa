@@ -2427,6 +2427,15 @@
       "en": "Prov. Brabant Wallon"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "BE31",
+    "descrizione": {
+      "it": "Prov. Brabant wallon",
+      "en": "Prov. Brabant wallon"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -7575,7 +7584,7 @@
       "en": "Suhl, Kreisfreie Stadt"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "DEG05",
@@ -7629,7 +7638,7 @@
       "en": "Schmalkalden-Meiningen"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "DEG0C",
@@ -7665,7 +7674,7 @@
       "en": "Ilm-Kreis"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "DEG0G",
@@ -7683,7 +7692,7 @@
       "en": "Sonneberg"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "DEG0I",
@@ -7737,6 +7746,15 @@
       "en": "Eisenach, Kreisfreie Stadt"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "DEG0Q",
+    "descrizione": {
+      "it": "Schmalkalden-Meiningen",
+      "en": "Schmalkalden-Meiningen"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -7746,6 +7764,51 @@
       "en": "Wartburgkreis"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "DEG0R",
+    "descrizione": {
+      "it": "Wartburgkreis",
+      "en": "Wartburgkreis"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "DEG0S",
+    "descrizione": {
+      "it": "Suhl, Kreisfreie Stadt",
+      "en": "Suhl, Kreisfreie Stadt"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "DEG0T",
+    "descrizione": {
+      "it": "Ilm-Kreis",
+      "en": "Ilm-Kreis"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "DEG0U",
+    "descrizione": {
+      "it": "Saalfeld-Rudolstadt",
+      "en": "Saalfeld-Rudolstadt"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "DEG0V",
+    "descrizione": {
+      "it": "Sonneberg",
+      "en": "Sonneberg"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -9519,7 +9582,7 @@
       "en": "Keski-Suomi"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI194",
@@ -9528,7 +9591,7 @@
       "en": "Etelä-Pohjanmaa"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI195",
@@ -9537,7 +9600,7 @@
       "en": "Pohjanmaa"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI196",
@@ -9555,6 +9618,33 @@
       "en": "Pirkanmaa"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "FI199",
+    "descrizione": {
+      "it": "Pirkanmaa",
+      "en": "Pirkanmaa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "FI19A",
+    "descrizione": {
+      "it": "Pohjanmaa",
+      "en": "Pohjanmaa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "FI19B",
+    "descrizione": {
+      "it": "Pirkanmaa",
+      "en": "Pirkanmaa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -9609,7 +9699,7 @@
       "en": "Päijät-Häme"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI1C4",
@@ -9618,7 +9708,7 @@
       "en": "Kymenlaakso"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI1C5",
@@ -9627,6 +9717,24 @@
       "en": "Etelä-Karjala"
     },
     "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "FI1C6",
+    "descrizione": {
+      "it": "Päijät-Häme",
+      "en": "Päijät-Häme"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "FI1C7",
+    "descrizione": {
+      "it": "Kymenlaakso",
+      "en": "Kymenlaakso"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -9645,7 +9753,7 @@
       "en": "Etelä-Savo"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI1D2",
@@ -9654,7 +9762,7 @@
       "en": "Pohjois-Savo"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI1D3",
@@ -9663,7 +9771,7 @@
       "en": "Pohjois-Karjala"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "FI1D5",
@@ -9699,6 +9807,33 @@
       "en": "Pohjois-Pohjanmaa"
     },
     "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "FI1DA",
+    "descrizione": {
+      "it": "Pohjois-Pohjanmaa",
+      "en": "Pohjois-Pohjanmaa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "FI1DB",
+    "descrizione": {
+      "it": "Pohjois-Savo",
+      "en": "Pohjois-Savo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "FI1DC",
+    "descrizione": {
+      "it": "Pohjois-Karjala",
+      "en": "Pohjois-Karjala"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -11598,6 +11733,15 @@
       "en": "Csongrád"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "HU333",
+    "descrizione": {
+      "it": "Csongrád-Csanád",
+      "en": "Csongrád-Csanád"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -11832,6 +11976,15 @@
       "en": "Reggio di Calabria"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "ITF65",
+    "descrizione": {
+      "it": "Reggio Calabria",
+      "en": "Reggio Calabria"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -12129,7 +12282,7 @@
       "en": "Kurzeme"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "LV005",
@@ -12147,7 +12300,7 @@
       "en": "Rīga"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "LV007",
@@ -12156,7 +12309,7 @@
       "en": "Pierīga"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "LV008",
@@ -12165,7 +12318,7 @@
       "en": "Vidzeme"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "LV009",
@@ -12174,6 +12327,33 @@
       "en": "Zemgale"
     },
     "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "LV00A",
+    "descrizione": {
+      "it": "Rīga",
+      "en": "Rīga"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "LV00B",
+    "descrizione": {
+      "it": "Kurzeme",
+      "en": "Kurzeme"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "LV00C",
+    "descrizione": {
+      "it": "Vidzeme",
+      "en": "Vidzeme"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -12471,7 +12651,7 @@
       "en": "Oost-Groningen"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NL112",
@@ -12489,6 +12669,24 @@
       "en": "Overig Groningen"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "NL114",
+    "descrizione": {
+      "it": "Oost-Groningen",
+      "en": "Oost-Groningen"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL115",
+    "descrizione": {
+      "it": "Overig Groningen",
+      "en": "Overig Groningen"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -12507,7 +12705,7 @@
       "en": "Noord-Friesland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NL125",
@@ -12516,7 +12714,7 @@
       "en": "Zuidwest-Friesland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NL126",
@@ -12525,6 +12723,24 @@
       "en": "Zuidoost-Friesland"
     },
     "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "NL127",
+    "descrizione": {
+      "it": "Noord-Friesland",
+      "en": "Noord-Friesland"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL128",
+    "descrizione": {
+      "it": "Zuidwest-Friesland",
+      "en": "Zuidwest-Friesland"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -12687,7 +12903,7 @@
       "en": "Utrecht"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NL310",
@@ -12696,7 +12912,7 @@
       "en": "Utrecht"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NL32",
@@ -12732,7 +12948,7 @@
       "en": "Agglomeratie Haarlem"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NL325",
@@ -12768,6 +12984,24 @@
       "en": "Groot-Amsterdam"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "NL32A",
+    "descrizione": {
+      "it": "Agglomeratie Haarlem",
+      "en": "Agglomeratie Haarlem"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL32B",
+    "descrizione": {
+      "it": "Groot-Amsterdam",
+      "en": "Groot-Amsterdam"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -12777,7 +13011,7 @@
       "en": "Zuid-Holland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z",
   },
   {
     "codice": "NL332",
@@ -12786,7 +13020,7 @@
       "en": "Agglomeratie ’s-Gravenhage"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z",
   },
   {
     "codice": "NL333",
@@ -12795,7 +13029,7 @@
       "en": "Delft en Westland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z",
   },
   {
     "codice": "NL337",
@@ -12804,7 +13038,7 @@
       "en": "Agglomeratie Leiden en Bollenstreek"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z",
   },
   {
     "codice": "NL33A",
@@ -12813,7 +13047,7 @@
       "en": "Zuidoost-Zuid-Holland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z",
   },
   {
     "codice": "NL33B",
@@ -12822,7 +13056,7 @@
       "en": "Oost-Zuid-Holland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z",
   },
   {
     "codice": "NL33C",
@@ -12831,7 +13065,7 @@
       "en": "Groot-Rijnmond"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z",
   },
   {
     "codice": "NL34",
@@ -12858,6 +13092,87 @@
       "en": "Overig Zeeland"
     },
     "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "NL35",
+    "descrizione": {
+      "it": "Utrecht",
+      "en": "Utrecht"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL350",
+    "descrizione": {
+      "it": "Utrecht",
+      "en": "Utrecht"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL36",
+    "descrizione": {
+      "it": "Zuid-Holland",
+      "en": "Zuid-Holland"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL361",
+    "descrizione": {
+      "it": "Agglomeratie ’s-Gravenhage",
+      "en": "Agglomeratie ’s-Gravenhage"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL362",
+    "descrizione": {
+      "it": "Delft en Westland",
+      "en": "Delft en Westland"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL363",
+    "descrizione": {
+      "it": "Agglomeratie Leiden en Bollenstreek",
+      "en": "Agglomeratie Leiden en Bollenstreek"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL364",
+    "descrizione": {
+      "it": "Zuidoost-Zuid-Holland",
+      "en": "Zuidoost-Zuid-Holland"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL365",
+    "descrizione": {
+      "it": "Oost-Zuid-Holland",
+      "en": "Oost-Zuid-Holland"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NL366",
+    "descrizione": {
+      "it": "Groot-Rijnmond",
+      "en": "Groot-Rijnmond"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -13020,6 +13335,15 @@
       "en": "Trøndelag"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "NO060",
+    "descrizione": {
+      "it": "Trøndelag/Trööndelage",
+      "en": "Trøndelag/Trööndelage"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -13038,6 +13362,33 @@
       "en": "Nordland"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z",
+  },
+  {
+    "codice": "NO071",
+    "descrizione": {
+      "it": "Nordland/Nordlánnda",
+      "en": "Nordland/Nordlánnda"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NO072",
+    "descrizione": {
+      "it": "Troms/Romsa/Tromssa",
+      "en": "Troms/Romsa/Tromssa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NO073",
+    "descrizione": {
+      "it": "Finnmark/Finnmárku/Finmarkku",
+      "en": "Finnmark/Finnmárku/Finmarkku"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -13047,7 +13398,7 @@
       "en": "Troms og Finnmark"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NO08",
@@ -13074,6 +13425,33 @@
       "en": "Viken"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "NO083",
+    "descrizione": {
+      "it": "Østfold",
+      "en": "Østfold"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NO084",
+    "descrizione": {
+      "it": "Akershus",
+      "en": "Akershus"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NO085",
+    "descrizione": {
+      "it": "Buskerud",
+      "en": "Buskerud"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -13092,7 +13470,7 @@
       "en": "Vestfold og Telemark"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "NO092",
@@ -13101,6 +13479,24 @@
       "en": "Agder"
     },
     "dataInizio": null,
+    "dataFine": null
+  },
+  {
+    "codice": "NO093",
+    "descrizione": {
+      "it": "Vestfold",
+      "en": "Vestfold"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "NO094",
+    "descrizione": {
+      "it": "Telemark",
+      "en": "Telemark"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -14154,6 +14550,15 @@
       "en": "Alto Tâmega"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "PT11B",
+    "descrizione": {
+      "it": "Alto Tâmega e Barroso",
+      "en": "Alto Tâmega e Barroso"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -14208,7 +14613,7 @@
       "en": "Centro (PT)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16B",
@@ -14217,7 +14622,7 @@
       "en": "Oeste"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16D",
@@ -14226,7 +14631,7 @@
       "en": "Região de Aveiro"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16E",
@@ -14235,7 +14640,7 @@
       "en": "Região de Coimbra"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16F",
@@ -14244,7 +14649,7 @@
       "en": "Região de Leiria"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16G",
@@ -14253,7 +14658,7 @@
       "en": "Viseu Dão Lafões"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16H",
@@ -14262,7 +14667,7 @@
       "en": "Beira Baixa"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16I",
@@ -14271,7 +14676,7 @@
       "en": "Médio Tejo"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT16J",
@@ -14280,7 +14685,7 @@
       "en": "Beiras e Serra da Estrela"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT17",
@@ -14289,7 +14694,7 @@
       "en": "Área Metropolitana de Lisboa"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT170",
@@ -14298,7 +14703,7 @@
       "en": "Área Metropolitana de Lisboa"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT18",
@@ -14307,7 +14712,7 @@
       "en": "Alentejo"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT181",
@@ -14316,7 +14721,7 @@
       "en": "Alentejo Litoral"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT184",
@@ -14325,7 +14730,7 @@
       "en": "Baixo Alentejo"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT185",
@@ -14334,7 +14739,7 @@
       "en": "Lezíria do Tejo"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT186",
@@ -14343,7 +14748,7 @@
       "en": "Alto Alentejo"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "PT187",
@@ -14352,6 +14757,186 @@
       "en": "Alentejo Central"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "PT19",
+    "descrizione": {
+      "it": "Centro (PT)",
+      "en": "Centro (PT)"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT191",
+    "descrizione": {
+      "it": "Região de Aveiro",
+      "en": "Região de Aveiro"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT192",
+    "descrizione": {
+      "it": "Região de Coimbra",
+      "en": "Região de Coimbra"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT193",
+    "descrizione": {
+      "it": "Região de Leiria",
+      "en": "Região de Leiria"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT194",
+    "descrizione": {
+      "it": "Viseu Dão Lafões",
+      "en": "Viseu Dão Lafões"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT195",
+    "descrizione": {
+      "it": "Beira Baixa",
+      "en": "Beira Baixa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT196",
+    "descrizione": {
+      "it": "Beiras e Serra da Estrela",
+      "en": "Beiras e Serra da Estrela"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1A",
+    "descrizione": {
+      "it": "Grande Lisboa",
+      "en": "Grande Lisboa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1A0",
+    "descrizione": {
+      "it": "Grande Lisboa",
+      "en": "Grande Lisboa"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1B",
+    "descrizione": {
+      "it": "Península de Setúbal",
+      "en": "Península de Setúbal"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1B0",
+    "descrizione": {
+      "it": "Península de Setúbal",
+      "en": "Península de Setúbal"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1C",
+    "descrizione": {
+      "it": "Alentejo",
+      "en": "Alentejo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1C1",
+    "descrizione": {
+      "it": "Alentejo Litoral",
+      "en": "Alentejo Litoral"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1C2",
+    "descrizione": {
+      "it": "Baixo Alentejo",
+      "en": "Baixo Alentejo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1C3",
+    "descrizione": {
+      "it": "Alto Alentejo",
+      "en": "Alto Alentejo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1C4",
+    "descrizione": {
+      "it": "Alentejo Central",
+      "en": "Alentejo Central"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1D",
+    "descrizione": {
+      "it": "Oeste e Vale do Tejo",
+      "en": "Oeste e Vale do Tejo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1D1",
+    "descrizione": {
+      "it": "Oeste",
+      "en": "Oeste"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1D2",
+    "descrizione": {
+      "it": "Médio Tejo",
+      "en": "Médio Tejo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "PT1D3",
+    "descrizione": {
+      "it": "Lezíria do Tejo",
+      "en": "Lezíria do Tejo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   },
   {
@@ -16989,7 +17574,7 @@
       "en": "United Kingdom"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC",
@@ -16998,7 +17583,7 @@
       "en": "North East (England)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC1",
@@ -17007,7 +17592,7 @@
       "en": "Tees Valley and Durham"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC11",
@@ -17016,7 +17601,7 @@
       "en": "Hartlepool and Stockton-on-Tees"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC12",
@@ -17025,7 +17610,7 @@
       "en": "South Teesside"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC13",
@@ -17034,7 +17619,7 @@
       "en": "Darlington"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC14",
@@ -17043,7 +17628,7 @@
       "en": "Durham CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC2",
@@ -17052,7 +17637,7 @@
       "en": "Northumberland and Tyne and Wear"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC21",
@@ -17061,7 +17646,7 @@
       "en": "Northumberland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC22",
@@ -17070,7 +17655,7 @@
       "en": "Tyneside"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKC23",
@@ -17079,7 +17664,7 @@
       "en": "Sunderland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD",
@@ -17088,7 +17673,7 @@
       "en": "North West (England)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD1",
@@ -17097,7 +17682,7 @@
       "en": "Cumbria"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD11",
@@ -17106,7 +17691,7 @@
       "en": "West Cumbria"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD12",
@@ -17115,7 +17700,7 @@
       "en": "East Cumbria"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD3",
@@ -17124,7 +17709,7 @@
       "en": "Greater Manchester"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD33",
@@ -17133,7 +17718,7 @@
       "en": "Manchester"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD34",
@@ -17142,7 +17727,7 @@
       "en": "Greater Manchester South West"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD35",
@@ -17151,7 +17736,7 @@
       "en": "Greater Manchester South East"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD36",
@@ -17160,7 +17745,7 @@
       "en": "Greater Manchester North West"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD37",
@@ -17169,7 +17754,7 @@
       "en": "Greater Manchester North East"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD4",
@@ -17178,7 +17763,7 @@
       "en": "Lancashire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD41",
@@ -17187,7 +17772,7 @@
       "en": "Blackburn with Darwen"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD42",
@@ -17196,7 +17781,7 @@
       "en": "Blackpool"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD44",
@@ -17205,7 +17790,7 @@
       "en": "Lancaster and Wyre"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD45",
@@ -17214,7 +17799,7 @@
       "en": "Mid Lancashire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD46",
@@ -17223,7 +17808,7 @@
       "en": "East Lancashire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD47",
@@ -17232,7 +17817,7 @@
       "en": "Chorley and West Lancashire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD6",
@@ -17241,7 +17826,7 @@
       "en": "Cheshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD61",
@@ -17250,7 +17835,7 @@
       "en": "Warrington"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD62",
@@ -17259,7 +17844,7 @@
       "en": "Cheshire East"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD63",
@@ -17268,7 +17853,7 @@
       "en": "Cheshire West and Chester"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD7",
@@ -17277,7 +17862,7 @@
       "en": "Merseyside"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD71",
@@ -17286,7 +17871,7 @@
       "en": "East Merseyside"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD72",
@@ -17295,7 +17880,7 @@
       "en": "Liverpool"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD73",
@@ -17304,7 +17889,7 @@
       "en": "Sefton"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKD74",
@@ -17313,7 +17898,7 @@
       "en": "Wirral"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE",
@@ -17322,7 +17907,7 @@
       "en": "Yorkshire and the Humber"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE1",
@@ -17331,7 +17916,7 @@
       "en": "East Yorkshire and Northern Lincolnshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE11",
@@ -17340,7 +17925,7 @@
       "en": "Kingston upon Hull, City of"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE12",
@@ -17349,7 +17934,7 @@
       "en": "East Riding of Yorkshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE13",
@@ -17358,7 +17943,7 @@
       "en": "North and North East Lincolnshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE2",
@@ -17367,7 +17952,7 @@
       "en": "North Yorkshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE21",
@@ -17376,7 +17961,7 @@
       "en": "York"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE22",
@@ -17385,7 +17970,7 @@
       "en": "North Yorkshire CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE3",
@@ -17394,7 +17979,7 @@
       "en": "South Yorkshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE31",
@@ -17403,7 +17988,7 @@
       "en": "Barnsley, Doncaster and Rotherham"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE32",
@@ -17412,7 +17997,7 @@
       "en": "Sheffield"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE4",
@@ -17421,7 +18006,7 @@
       "en": "West Yorkshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE41",
@@ -17430,7 +18015,7 @@
       "en": "Bradford"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE42",
@@ -17439,7 +18024,7 @@
       "en": "Leeds"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE44",
@@ -17448,7 +18033,7 @@
       "en": "Calderdale and Kirklees"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKE45",
@@ -17457,7 +18042,7 @@
       "en": "Wakefield"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF",
@@ -17466,7 +18051,7 @@
       "en": "East Midlands (England)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF1",
@@ -17475,7 +18060,7 @@
       "en": "Derbyshire and Nottinghamshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF11",
@@ -17484,7 +18069,7 @@
       "en": "Derby"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF12",
@@ -17493,7 +18078,7 @@
       "en": "East Derbyshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF13",
@@ -17502,7 +18087,7 @@
       "en": "South and West Derbyshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF14",
@@ -17511,7 +18096,7 @@
       "en": "Nottingham"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF15",
@@ -17520,7 +18105,7 @@
       "en": "North Nottinghamshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF16",
@@ -17529,7 +18114,7 @@
       "en": "South Nottinghamshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF2",
@@ -17538,7 +18123,7 @@
       "en": "Leicestershire, Rutland and Northamptonshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF21",
@@ -17547,7 +18132,7 @@
       "en": "Leicester"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF22",
@@ -17556,7 +18141,7 @@
       "en": "Leicestershire CC and Rutland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF24",
@@ -17565,7 +18150,7 @@
       "en": "West Northamptonshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF25",
@@ -17574,7 +18159,7 @@
       "en": "North Northamptonshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF3",
@@ -17583,7 +18168,7 @@
       "en": "Lincolnshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKF30",
@@ -17592,7 +18177,7 @@
       "en": "Lincolnshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG",
@@ -17601,7 +18186,7 @@
       "en": "West Midlands (England)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG1",
@@ -17610,7 +18195,7 @@
       "en": "Herefordshire, Worcestershire and Warwickshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG11",
@@ -17619,7 +18204,7 @@
       "en": "Herefordshire, County of"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG12",
@@ -17628,7 +18213,7 @@
       "en": "Worcestershire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG13",
@@ -17637,7 +18222,7 @@
       "en": "Warwickshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG2",
@@ -17646,7 +18231,7 @@
       "en": "Shropshire and Staffordshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG21",
@@ -17655,7 +18240,7 @@
       "en": "Telford and Wrekin"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG22",
@@ -17664,7 +18249,7 @@
       "en": "Shropshire CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG23",
@@ -17673,7 +18258,7 @@
       "en": "Stoke-on-Trent"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG24",
@@ -17682,7 +18267,7 @@
       "en": "Staffordshire CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG3",
@@ -17691,7 +18276,7 @@
       "en": "West Midlands"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG31",
@@ -17700,7 +18285,7 @@
       "en": "Birmingham"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG32",
@@ -17709,7 +18294,7 @@
       "en": "Solihull"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG33",
@@ -17718,7 +18303,7 @@
       "en": "Coventry"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG36",
@@ -17727,7 +18312,7 @@
       "en": "Dudley"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG37",
@@ -17736,7 +18321,7 @@
       "en": "Sandwell"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG38",
@@ -17745,7 +18330,7 @@
       "en": "Walsall"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKG39",
@@ -17754,7 +18339,7 @@
       "en": "Wolverhampton"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH",
@@ -17763,7 +18348,7 @@
       "en": "East of England"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH1",
@@ -17772,7 +18357,7 @@
       "en": "East Anglia"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH11",
@@ -17781,7 +18366,7 @@
       "en": "Peterborough"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH12",
@@ -17790,7 +18375,7 @@
       "en": "Cambridgeshire CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH14",
@@ -17799,7 +18384,7 @@
       "en": "Suffolk"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH15",
@@ -17808,7 +18393,7 @@
       "en": "Norwich and East Norfolk"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH16",
@@ -17817,7 +18402,7 @@
       "en": "North and West Norfolk"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH17",
@@ -17826,7 +18411,7 @@
       "en": "Breckland and South Norfolk"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH2",
@@ -17835,7 +18420,7 @@
       "en": "Bedfordshire and Hertfordshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH21",
@@ -17844,7 +18429,7 @@
       "en": "Luton"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH23",
@@ -17853,7 +18438,7 @@
       "en": "Hertfordshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH24",
@@ -17862,7 +18447,7 @@
       "en": "Bedford"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH25",
@@ -17871,7 +18456,7 @@
       "en": "Central Bedfordshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH3",
@@ -17880,7 +18465,7 @@
       "en": "Essex"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH31",
@@ -17889,7 +18474,7 @@
       "en": "Southend-on-Sea"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH32",
@@ -17898,7 +18483,7 @@
       "en": "Thurrock"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH34",
@@ -17907,7 +18492,7 @@
       "en": "Essex Haven Gateway"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH35",
@@ -17916,7 +18501,7 @@
       "en": "West Essex"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH36",
@@ -17925,7 +18510,7 @@
       "en": "Heart of Essex"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKH37",
@@ -17934,7 +18519,7 @@
       "en": "Essex Thames Gateway"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI",
@@ -17943,7 +18528,7 @@
       "en": "London"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI3",
@@ -17952,7 +18537,7 @@
       "en": "Inner London - West"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI31",
@@ -17961,7 +18546,7 @@
       "en": "Camden and City of London"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI32",
@@ -17970,7 +18555,7 @@
       "en": "Westminster"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI33",
@@ -17979,7 +18564,7 @@
       "en": "Kensington & Chelsea and Hammersmith & Fulham"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI34",
@@ -17988,7 +18573,7 @@
       "en": "Wandsworth"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI4",
@@ -17997,7 +18582,7 @@
       "en": "Inner London - East"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI41",
@@ -18006,7 +18591,7 @@
       "en": "Hackney and Newham"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI42",
@@ -18015,7 +18600,7 @@
       "en": "Tower Hamlets"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI43",
@@ -18024,7 +18609,7 @@
       "en": "Haringey and Islington"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI44",
@@ -18033,7 +18618,7 @@
       "en": "Lewisham and Southwark"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI45",
@@ -18042,7 +18627,7 @@
       "en": "Lambeth"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI5",
@@ -18051,7 +18636,7 @@
       "en": "Outer London - East and North East"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI51",
@@ -18060,7 +18645,7 @@
       "en": "Bexley and Greenwich"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI52",
@@ -18069,7 +18654,7 @@
       "en": "Barking & Dagenham and Havering"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI53",
@@ -18078,7 +18663,7 @@
       "en": "Redbridge and Waltham Forest"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI54",
@@ -18087,7 +18672,7 @@
       "en": "Enfield"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI6",
@@ -18096,7 +18681,7 @@
       "en": "Outer London - South"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI61",
@@ -18105,7 +18690,7 @@
       "en": "Bromley"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI62",
@@ -18114,7 +18699,7 @@
       "en": "Croydon"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI63",
@@ -18123,7 +18708,7 @@
       "en": "Merton, Kingston upon Thames and Sutton"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI7",
@@ -18132,7 +18717,7 @@
       "en": "Outer London - West and North West"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI71",
@@ -18141,7 +18726,7 @@
       "en": "Barnet"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI72",
@@ -18150,7 +18735,7 @@
       "en": "Brent"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI73",
@@ -18159,7 +18744,7 @@
       "en": "Ealing"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI74",
@@ -18168,7 +18753,7 @@
       "en": "Harrow and Hillingdon"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKI75",
@@ -18177,7 +18762,7 @@
       "en": "Hounslow and Richmond upon Thames"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ",
@@ -18186,7 +18771,7 @@
       "en": "South East (England)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ1",
@@ -18195,7 +18780,7 @@
       "en": "Berkshire, Buckinghamshire and Oxfordshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ11",
@@ -18204,7 +18789,7 @@
       "en": "Berkshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ12",
@@ -18213,7 +18798,7 @@
       "en": "Milton Keynes"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ13",
@@ -18222,7 +18807,7 @@
       "en": "Buckinghamshire CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ14",
@@ -18231,7 +18816,7 @@
       "en": "Oxfordshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ2",
@@ -18240,7 +18825,7 @@
       "en": "Surrey, East and West Sussex"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ21",
@@ -18249,7 +18834,7 @@
       "en": "Brighton and Hove"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ22",
@@ -18258,7 +18843,7 @@
       "en": "East Sussex CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ25",
@@ -18267,7 +18852,7 @@
       "en": "West Surrey"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ26",
@@ -18276,7 +18861,7 @@
       "en": "East Surrey"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ27",
@@ -18285,7 +18870,7 @@
       "en": "West Sussex (South West)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ28",
@@ -18294,7 +18879,7 @@
       "en": "West Sussex (North East)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ3",
@@ -18303,7 +18888,7 @@
       "en": "Hampshire and Isle of Wight"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ31",
@@ -18312,7 +18897,7 @@
       "en": "Portsmouth"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ32",
@@ -18321,7 +18906,7 @@
       "en": "Southampton"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ34",
@@ -18330,7 +18915,7 @@
       "en": "Isle of Wight"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ35",
@@ -18339,7 +18924,7 @@
       "en": "South Hampshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ36",
@@ -18348,7 +18933,7 @@
       "en": "Central Hampshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ37",
@@ -18357,7 +18942,7 @@
       "en": "North Hampshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ4",
@@ -18366,7 +18951,7 @@
       "en": "Kent"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ41",
@@ -18375,7 +18960,7 @@
       "en": "Medway"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ43",
@@ -18384,7 +18969,7 @@
       "en": "Kent Thames Gateway"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ44",
@@ -18393,7 +18978,7 @@
       "en": "East Kent"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ45",
@@ -18402,7 +18987,7 @@
       "en": "Mid Kent"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKJ46",
@@ -18411,7 +18996,7 @@
       "en": "West Kent"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK",
@@ -18420,7 +19005,7 @@
       "en": "South West (England)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK1",
@@ -18429,7 +19014,7 @@
       "en": "Gloucestershire, Wiltshire and Bristol/Bath area"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK11",
@@ -18438,7 +19023,7 @@
       "en": "Bristol, City of"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK12",
@@ -18447,7 +19032,7 @@
       "en": "Bath and North East Somerset, North Somerset and South Gloucestershire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK13",
@@ -18456,7 +19041,7 @@
       "en": "Gloucestershire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK14",
@@ -18465,7 +19050,7 @@
       "en": "Swindon"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK15",
@@ -18474,7 +19059,7 @@
       "en": "Wiltshire CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK2",
@@ -18483,7 +19068,7 @@
       "en": "Dorset and Somerset"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK23",
@@ -18492,7 +19077,7 @@
       "en": "Somerset"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK24",
@@ -18501,7 +19086,7 @@
       "en": "Bournemouth, Christchurch and Poole"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK25",
@@ -18510,7 +19095,7 @@
       "en": "Dorset"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK3",
@@ -18519,7 +19104,7 @@
       "en": "Cornwall and Isles of Scilly"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK30",
@@ -18528,7 +19113,7 @@
       "en": "Cornwall and Isles of Scilly"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK4",
@@ -18537,7 +19122,7 @@
       "en": "Devon"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK41",
@@ -18546,7 +19131,7 @@
       "en": "Plymouth"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK42",
@@ -18555,7 +19140,7 @@
       "en": "Torbay"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKK43",
@@ -18564,7 +19149,7 @@
       "en": "Devon CC"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL",
@@ -18573,7 +19158,7 @@
       "en": "Wales"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL1",
@@ -18582,7 +19167,7 @@
       "en": "West Wales and The Valleys"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL11",
@@ -18591,7 +19176,7 @@
       "en": "Isle of Anglesey"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL12",
@@ -18600,7 +19185,7 @@
       "en": "Gwynedd"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL13",
@@ -18609,7 +19194,7 @@
       "en": "Conwy and Denbighshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL14",
@@ -18618,7 +19203,7 @@
       "en": "South West Wales"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL15",
@@ -18627,7 +19212,7 @@
       "en": "Central Valleys"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL16",
@@ -18636,7 +19221,7 @@
       "en": "Gwent Valleys"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL17",
@@ -18645,7 +19230,7 @@
       "en": "Bridgend and Neath Port Talbot"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL18",
@@ -18654,7 +19239,7 @@
       "en": "Swansea"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL2",
@@ -18663,7 +19248,7 @@
       "en": "East Wales"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL21",
@@ -18672,7 +19257,7 @@
       "en": "Monmouthshire and Newport"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL22",
@@ -18681,7 +19266,7 @@
       "en": "Cardiff and Vale of Glamorgan"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL23",
@@ -18690,7 +19275,7 @@
       "en": "Flintshire and Wrexham"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKL24",
@@ -18699,7 +19284,7 @@
       "en": "Powys"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM",
@@ -18708,7 +19293,7 @@
       "en": "Scotland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM5",
@@ -18717,7 +19302,7 @@
       "en": "North Eastern Scotland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM50",
@@ -18726,7 +19311,7 @@
       "en": "Aberdeen City and Aberdeenshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM6",
@@ -18735,7 +19320,7 @@
       "en": "Highlands and Islands"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM61",
@@ -18744,7 +19329,7 @@
       "en": "Caithness & Sutherland and Ross & Cromarty"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM62",
@@ -18753,7 +19338,7 @@
       "en": "Inverness & Nairn and Moray, Badenoch & Strathspey"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM63",
@@ -18762,7 +19347,7 @@
       "en": "Lochaber, Skye & Lochalsh, Arran & Cumbrae and Argyll & Bute"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM64",
@@ -18771,7 +19356,7 @@
       "en": "Na h-Eileanan Siar (Western Isles)"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM65",
@@ -18780,7 +19365,7 @@
       "en": "Orkney Islands"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM66",
@@ -18789,7 +19374,7 @@
       "en": "Shetland Islands"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM7",
@@ -18798,7 +19383,7 @@
       "en": "Eastern Scotland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM71",
@@ -18807,7 +19392,7 @@
       "en": "Angus and Dundee City"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM72",
@@ -18816,7 +19401,7 @@
       "en": "Clackmannanshire and Fife"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM73",
@@ -18825,7 +19410,7 @@
       "en": "East Lothian and Midlothian"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM75",
@@ -18834,7 +19419,7 @@
       "en": "Edinburgh, City of"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM76",
@@ -18843,7 +19428,7 @@
       "en": "Falkirk"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM77",
@@ -18852,7 +19437,7 @@
       "en": "Perth & Kinross and Stirling"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM78",
@@ -18861,7 +19446,7 @@
       "en": "West Lothian"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM8",
@@ -18870,7 +19455,7 @@
       "en": "West Central Scotland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM81",
@@ -18879,7 +19464,7 @@
       "en": "East Dunbartonshire, West Dunbartonshire and Helensburgh & Lomond"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM82",
@@ -18888,7 +19473,7 @@
       "en": "Glasgow City"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM83",
@@ -18897,7 +19482,7 @@
       "en": "Inverclyde, East Renfrewshire and Renfrewshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM84",
@@ -18906,7 +19491,7 @@
       "en": "North Lanarkshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM9",
@@ -18915,7 +19500,7 @@
       "en": "Southern Scotland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM91",
@@ -18924,7 +19509,7 @@
       "en": "Scottish Borders"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM92",
@@ -18933,7 +19518,7 @@
       "en": "Dumfries & Galloway"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM93",
@@ -18942,7 +19527,7 @@
       "en": "East Ayrshire and North Ayrshire mainland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM94",
@@ -18951,7 +19536,7 @@
       "en": "South Ayrshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKM95",
@@ -18960,7 +19545,7 @@
       "en": "South Lanarkshire"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN",
@@ -18969,7 +19554,7 @@
       "en": "Northern Ireland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0",
@@ -18978,7 +19563,7 @@
       "en": "Northern Ireland"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN06",
@@ -18987,7 +19572,7 @@
       "en": "Belfast"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN07",
@@ -18996,7 +19581,7 @@
       "en": "Armagh City, Banbridge and Craigavon"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN08",
@@ -19005,7 +19590,7 @@
       "en": "Newry, Mourne and Down"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN09",
@@ -19014,7 +19599,7 @@
       "en": "Ards and North Down"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0A",
@@ -19023,7 +19608,7 @@
       "en": "Derry City and Strabane"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0B",
@@ -19032,7 +19617,7 @@
       "en": "Mid Ulster"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0C",
@@ -19041,7 +19626,7 @@
       "en": "Causeway Coast and Glens"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0D",
@@ -19050,7 +19635,7 @@
       "en": "Antrim and Newtownabbey"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0E",
@@ -19059,7 +19644,7 @@
       "en": "Lisburn and Castlereagh"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0F",
@@ -19068,7 +19653,7 @@
       "en": "Mid and East Antrim"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKN0G",
@@ -19077,7 +19662,7 @@
       "en": "Fermanagh and Omagh"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKZ",
@@ -19086,7 +19671,7 @@
       "en": "Extra-Regio NUTS 1"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKZZ",
@@ -19095,7 +19680,7 @@
       "en": "Extra-Regio NUTS 2"
     },
     "dataInizio": null,
-    "dataFine": null
+    "dataFine": "2026-08-03T00:00:00Z"
   },
   {
     "codice": "UKZZZ",
@@ -19104,6 +19689,124 @@
       "en": "Extra-Regio NUTS 3"
     },
     "dataInizio": null,
+    "dataFine": "2026-08-03T00:00:00Z"
+  },
+  {
+    "codice": "XK",
+    "descrizione": {
+      "it": "Kosovë/Kosovo",
+      "en": "Kosovë/Kosovo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK0",
+    "descrizione": {
+      "it": "Kosovë/Kosovo",
+      "en": "Kosovë/Kosovo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  }
+  ,
+  {
+    "codice": "XK00",
+    "descrizione": {
+      "it": "Kosovë/Kosovo",
+      "en": "Kosovë/Kosovo"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK001",
+    "descrizione": {
+      "it": "Prishtinë/Priština",
+      "en": "Prishtinë/Priština"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK002",
+    "descrizione": {
+      "it": "Mitrovicë/Mitrovica",
+      "en": "Mitrovicë/Mitrovica"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK003",
+    "descrizione": {
+      "it": "Pejë/Peć",
+      "en": "Pejë/Peć"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK004",
+    "descrizione": {
+      "it": "Prizren/Prizren",
+      "en": "Prizren/Prizren"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK005",
+    "descrizione": {
+      "it": "Ferizaj/Uroševac",
+      "en": "Ferizaj/Uroševac"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK006",
+    "descrizione": {
+      "it": "Gjilan/Gnjilane",
+      "en": "Gjilan/Gnjilane"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XK007",
+    "descrizione": {
+      "it": "Gjakovë/Đakovica",
+      "en": "Gjakovë/Đakovica"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XKZ",
+    "descrizione": {
+      "it": "Extra-Regio NUTS 1",
+      "en": "Extra-Regio NUTS 1"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XKZZ",
+    "descrizione": {
+      "it": "Extra-Regio NUTS 2",
+      "en": "Extra-Regio NUTS 2"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
+    "dataFine": null
+  },
+  {
+    "codice": "XKZZZ",
+    "descrizione": {
+      "it": "Extra-Regio NUTS 3",
+      "en": "Extra-Regio NUTS 3"
+    },
+    "dataInizio": "2026-08-03T00:00:00Z",
     "dataFine": null
   }
 ]

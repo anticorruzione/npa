@@ -758,7 +758,7 @@ satisfies (is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.da
       <rule id="DecisionRule_197y48f">
         <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
         <inputEntry id="UnaryTests_0s36fcc">
-          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00fyuql">
           <text></text>

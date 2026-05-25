@@ -694,7 +694,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       <rule id="DecisionRule_1yrl300">
         <description>REG136: Valore della tipologica TipoProcedura non ammesso</description>
         <inputEntry id="UnaryTests_0bj3bza">
-          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
+          <text>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1b9pc6u">
           <text></text>
