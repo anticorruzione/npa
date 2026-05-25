@@ -1421,6 +1421,33 @@
     "dataFine":null
 },
 {
+	"codice":"ERR157",
+    "descrizione": {
+		"it": "Formato data non valido per un campo dell'eForm.",
+		"en": "Formato data non valido per un campo dell'eForm."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR158",
+    "descrizione": {
+		"it": "Formato ora non valido per un campo dell'eForm.",
+		"en": "Formato ora non valido per un campo dell'eForm."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+	"codice":"ERR159",
+    "descrizione": {
+		"it": "Formato importo non valido per un campo dell'eForm.",
+		"en": "Formato importo non valido per un campo dell'eForm."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",
