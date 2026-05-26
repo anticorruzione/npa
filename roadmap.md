@@ -83,12 +83,16 @@
 |86830|Introduzione xsd per validazione eForm|Introduzione di una validazione dello schema eform per verifiche sintattiche sul valore assegnato ai campi relativi a valori di tipo numerico (intero o reale) e date, per i quali il TED non esegue verifica|09/01/2026<br>03/07/2026*<br>03/08/2026*|CHG-07|:x:|
 |78309|Gestione elenco fornitori - accesso FVOE|La P7_3 avvierà un flusso analogo alle schede ISDA, con la creazione di un elenco di fornitori con accesso al fascicolo.|09/01/2026<br>03/07/2026*<br>03/08/2026*|CHG-07|:white_check_mark:|
 |||||||
+|89451|Adeguamento PCP al BO PVL|Adeguamento del sistema PCP al BackOffice PVL, volto a garantire la corretta interoperabilità dei dati per la pubblicazione degli avvisi. Il BackOffice PVL applica controlli di validazione sui dati trasmessi da PCP e, in caso di esito negativo, procede con l’oscuramento temporaneo dell’avviso, notificando l’evento al sistema PCP. Quest’ultimo recepisce la notifica, aggiorna il proprio stato informativo e rende disponibile il dettaglio dell’oscuramento.|14/04/2026<br>04/06/2026*<br>07/07/2026*<br>|/|:white_check_mark:|
+|||||||
 |68714|Revisione flusso di esecuzione|Revisione della corretta successione delle schede di avvio del flusso SC1 e I1, per eliminare la possibilità di non rilevare la data di sottoscrizione del contratto. Revisione della successione di eventi della fase di conclusione|15/06/2026*<br>15/07/2026*<br>14/08/2026*<br>|||
 |84595|Reingegnerizzazione rettifiche|Aggiunta di una colonna extra su orchestratore che agisca da "semaforo" per consentire le rettifiche|15/06/2026*<br>15/07/2026*<br>14/08/2026*<br>|||
 |||||||
 |58792|partecipante type - refactoring modello dati|refactoring del modello dati per la  gestione dei gruppi multilivello |/<br>/<br>/<br>|/||
 |62794|Modifica delle stazioni appaltanti coinvolte nella procedura|Funzionalità di inserimento, sostituzione, eliminazione di soggetti dall'elenco delle Stazioni Appaltanti|/<br>/<br>/<br>|/||
+|||||||
 |68715|introduzione eForm SDK 1.13|Aggiornamento del modello dati allo schema eForm SDK 1.13.3<br>(la pianificazione è stata aggiornata a seguito della disponibilità della versione SDK 1.13.3 - ora nuovo riferimento - e dello slittamento della data di fine vita della versione 1.12)|25/05/2026<br>03/08/2026*<br>14/09/2026*<br>|/||
+|||||||
 |77856|Tipologica tipoProcedura eliminare voce 99 - procedura di gara|Sarà chiusa la voce 99 della tipologica tipoProcedura|/<br>/<br>/<br>|||
 |58793|StazioneAppaltanteType - refactoring modello dati|Refactoring del modello dati della stazione appaltante per ottimizzazione della struttura e disambiguamento delle informazioni di delega e funzioni svolte|/<br>/<br>/<br>||
 |||||||
