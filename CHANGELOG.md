@@ -1725,7 +1725,7 @@ aggiunta regola REG5_1
   * Modificata la colonna R "schedaSuccessiva": 
     * schede M1, M1_40, M2, M2_40, RSU1, ES1, AC1: aggiunto valore I1
 
-<summary><h1>Note di rilascio del 25/05/2026</h1></summary>
+<summary><h1>Note di rilascio del 25/05/2026 (SDK 1.13.3)</h1></summary>
 
 **NOTA**
 * Pubblicazione contenuti su GitHub: 25/05/2026
