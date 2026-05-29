@@ -2943,7 +2943,7 @@ components:
       properties:
         detail:
           type: string
-        idElenco:
+        idScheda:
           format: uuid
           type: string
         instance:

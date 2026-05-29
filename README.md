@@ -254,8 +254,12 @@ Nella tabella seguente sono disciplinati i tempi massimi e minimi per l'adozione
 **NB**: l'aggiornamento del flusso di monitoraggio può includere l'aggiornamento o l'estensione del modello dati anche mediante l'introduzione di nuove schede.
 
 ## Standard adottati
- - eForms sdk versione 1.9.0 fino al 27/03/2025; 1.12 dal 27/03/2025
- - ESPD versione 2.1.1;
+* eForms:
+  * versione 1.9.0 fino al 27/03/2025; 
+  * versione 1.12 dal 27/03/2025;
+  * versione 1.13.3 dal 14/09/2026;
+
+* ESPD versione 2.1.1;
 
 **NB**: nel momento in cui il sistema sarà in esercizio, l'upgrade delle versioni utilizzate sarà pubblicato con almeno 90 giorni di anticipo.
 
