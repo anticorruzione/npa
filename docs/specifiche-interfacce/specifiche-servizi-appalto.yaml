@@ -2969,24 +2969,6 @@ components:
       - idElenco
       - idScheda
       type: object
-    ConfermaSchedaOEResponse:
-      description: Risposta generica servizio
-      properties:
-        detail:
-          type: string
-        idElenco:
-          format: uuid
-          type: string
-        instance:
-          type: string
-        status:
-          format: int32
-          type: integer
-        title:
-          type: string
-        type:
-          type: string
-      type: object
     ConsultaElencoOEResponse:
       description: Risposta generica servizio
       allOf: # estende lo schema dati di BaseResponse
