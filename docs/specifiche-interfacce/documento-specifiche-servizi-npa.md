@@ -16,6 +16,7 @@
   | PPL  | Piattaforma di Pubblicità legale |
   | PDND  | Piattaforma Digitale Nazionale Dati |
   | NPA  | Nuova Piattaforma Appalti, con l'acronimo si può far riferimento ai servizi specifici della componente di monitoraggio dell'appalto o in generale ai servizi erogati dai moduli NPA, FVA, FVOE |
+  | PVL  | Piattaforma di Pubblicità a Valore Legale |
   
   ## 1.2 Riferimenti
    -  [Agid-Specifiche tecniche per la definizione del DGUE elettronico italiano “eDGUE-IT”](https://www.agid.gov.it/sites/default/files/repository_files/edgue-it_specifiche_tecniche_v1.0.0_0.pdf)
@@ -297,7 +298,7 @@ Sarà possibile invocare anche i seguenti servizi facoltativi:
 
 -	cancella-avviso: servizio di sospensione di una richiesta di pubblicazione, sia nazionale sia europea, di un avviso non ancora pubblicato. L’Appalto transita nello stato “STOP PUBBLICAZIONE” e l’Avviso in “ANNULLA PUBBLICAZIONE”;
 -	modifica-avviso: servizio di creazione di un nuovo Avviso che sostituisce il precedente non ancora pubblicato o con pubblicazione fallita per errore rilevato dal TED. L'invocazione del servizio determina la rigenerazione e sostituzione dei codici CIG per ogni lotto. L’Appalto rimane in stato “IN ATTESA PUBBLICAZIONE” e l’avviso transita nello stato “IN ATTESA PUBBLICAZIONE”;
--	rettifica-avviso: servizio utile alla creazione di un’avviso di rettifica in caso di pubblicazione già avvenuta; L’Appalto rimane nello stato “PUBBLICATO”, mentre lo stato dell’avviso transiterà in ”IN ATTESA PUBBLICAZIONE”.
+-	rettifica-avviso: servizio utile alla creazione di un’avviso di rettifica in caso di pubblicazione già avvenuta o pubblicazione bloccata da PVL (oscuramento); nel primo caso l’Appalto rimane nello stato “PUBBLICATO”, mentre lo stato dell’avviso transiterà in ”IN ATTESA PUBBLICAZIONE”; nel secondo caso l’Appalto rimane nello stato “IN ATTESA PUBBLICAZIONE", mentre lo stato dell’avviso transiterà in ”IN ATTESA PUBBLICAZIONE”.
 -	stato-avviso: servizio tramite il quale avviene il recupero dello stato in cui si trova un Avviso. Il compito dispositivo di aggiornare lo stato dell'avviso proveniente dai sistemi esterni, TED e/o PPL-ANAC, sarà in carico ad un task schedulato NPA. Pertanto il recupero dello stato da parte del servizio insiste su uno stato avviso NPA che restituisce anche la data in cui il task schedulato ha effettuato il controllo sui sistemi esterni;
 -	recupera-cig: servizio per il recupero dei CIG generati e assegnati ai lotti dell’Appalto. Il servizio è il medesimo descritto nel contesto di comunicaAppalto;
 -	ricerca-avviso: servizio per la ricerca degli avvisi di un appalto in base ai criteri di input. 
