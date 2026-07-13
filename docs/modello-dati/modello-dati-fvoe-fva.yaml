@@ -346,6 +346,13 @@ components:
           description: identificativo univoco del documento
           type: string
           example: "507f1f77bcf86cd799439011"
+        listaIdDocumento:
+          description: Elenco degli identificativi univoci dei documenti caricati dall'utente. Restituito esclusivamente per richieste di tipo "Documento generico OE"
+          type: array
+          minItems: 1
+          items:
+            type: string
+            example: "1909c793-bdbe-4f2c-aa7e-4104145c739b"
     Soggetto00050:
       description: Oggetto che riporta i dati del soggetto
       type: object
