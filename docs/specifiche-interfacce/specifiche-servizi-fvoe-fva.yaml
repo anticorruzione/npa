@@ -2095,7 +2095,7 @@ components:
       allOf: # estende il modello dati DocumentoRichiediType
         - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-fvoe-fva.yaml#/components/schemas/DocumentoRichiediType'
       example:
-        chiaveAccesso: "2022-01-23T12:02:05Z"
+        chiaveAccesso: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
         tipoDocumento:
           idTipologica : "tipoDocumento"
           codice : "00004"
@@ -2105,6 +2105,48 @@ components:
           domicilioFiscale:
             codicecatastale: "I345"
       examples:
+        casellario00004:
+          summary: Certificato integrale del casellario giudiziario (00004)
+          value:
+            chiaveAccesso: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+            tipoDocumento:
+              id: "tipoDocumento"
+              codice: "00004"
+            datiRichiesta:
+              type: "DatiSA00004"
+              datiSoggetti:
+                - DatiNominativo:
+                    Nome: "AUGUSTO"
+                    Cognome: "CESARE"
+                    Sesso: "M"
+                    CF: "CSRGST57D02H501Q"
+                    DatiNascita:
+                      Giorno: "02"
+                      Mese: "04"
+                      Anno: "1957"
+                      CodiceCatastoStato: "Z000"
+                      CodiceCatastoComuneItaliano: "H501"
+                  AltriDati:
+                    LinguaTedesca: false
+        anagrafeSanzioni00005:
+          summary: Anagrafe delle sanzioni amministrative dipendenti da reato (00005)
+          value:
+            chiaveAccesso: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
+            tipoDocumento:
+              id: "tipoDocumento"
+              codice: "00005"
+            datiRichiesta:
+              type: "DatiSA00020"
+              DatiNominativo:
+                DenominazioneSociale: "Mangiare Bene Italia S.p.A."
+                CodiceFormaGiuridica: "SP"
+                PIVA: "11115678901"
+                DatiSedeSociale:
+                  Indirizzo: "C. Farina"
+                  CodiceCatastoStato: "Z000"
+                  CodiceCatastoComuneItaliano: "F205"
+              AltriDati:
+                LinguaTedesca: false
         carichiPendenti00006:
           summary: Certificato dei carichi pendenti penali (00006)
           value:

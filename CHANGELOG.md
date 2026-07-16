@@ -1761,6 +1761,7 @@ aggiunta regola REG5_1
   * creato DatiSA00014 per la certificazione IAF (tipo documento 00014)
   * creato DatiSA00045 per il bilancio aziendale InfoCamere (tipo documento 00045)
   * esteso DocumentoRichiediType.datiRichiesta (oneOf/discriminator) con i nuovi schemi
+  * confermati/riallineati i modelli già esistenti DatiSA00004 (tipo documento 00004) e DatiSA00020 (tipo documento 00005)
 
 ### Tipologiche
 * tipoDocumento.json:
@@ -1771,9 +1772,10 @@ aggiunta regola REG5_1
 * documento-specifiche-enticertificanti.md:
   * aggiornata la tabella tipi documento richiedibili (00006, 00014, 00045)
 * specifiche-servizi-fvoe-fva.yaml:
-  * aggiunti esempi di RichiediDocumentiRequest per 00006, 00014 e 00045
+  * corretto l'esempio di default di RichiediDocumentiRequest (prima mistificava codice 00004 con DatiSA00036)
+  * aggiunti esempi di RichiediDocumentiRequest per 00004, 00005, 00006, 00014 e 00045
 * roadmap.md:
-  * aggiunta voce di roadmap per il rilascio dei documenti enti certificanti 00006, 00014 e 00045
+  * aggiunta voce di roadmap per il rilascio/aggiornamento dei documenti enti certificanti 00004, 00005, 00006, 00014 e 00045
 
 <summary><h1>Note di rilascio del 08/06/2026</h1></summary>
 

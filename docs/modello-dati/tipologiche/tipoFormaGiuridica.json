@@ -1,524 +1,247 @@
 [
   {
-    "codice": "AG",
+    "codice": "IMPR_AGR",
     "descrizione": {
-      "it": "AGENZIA",
-      "en": "AGENZIA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Imprenditore individuale agricolo",
+      "en": "Imprenditore individuale agricolo"
+    }
   },
   {
-    "codice": "AC",
+    "codice": "IMPR_NAG",
     "descrizione": {
-      "it": "ASSOCIAZIONE",
-      "en": "ASSOCIAZIONE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Imprenditore individuale non agricolo",
+      "en": "Imprenditore individuale non agricolo"
+    }
   },
   {
-    "codice": "AI",
+    "codice": "LIB_PROF",
     "descrizione": {
-      "it": "ASSOCIAZIONE IMPRESA",
-      "en": "ASSOCIAZIONE IMPRESA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Libero professionista",
+      "en": "Libero professionista"
+    }
   },
   {
-    "codice": "PA",
+    "codice": "LAV_AUT",
     "descrizione": {
-      "it": "ASSOCIAZIONE IN PARTECIPAZIONE",
-      "en": "ASSOCIAZIONE IN PARTECIPAZIONE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Lavoratore autonomo",
+      "en": "Lavoratore autonomo"
+    }
   },
   {
-    "codice": "ASP",
+    "codice": "SOC_SEMP",
     "descrizione": {
-      "it": "ASSOCIAZIONE PROFESSIONALE",
-      "en": "ASSOCIAZIONE PROFESSIONALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società semplice",
+      "en": "Società semplice"
+    }
   },
   {
-    "codice": "AT",
+    "codice": "SNC",
     "descrizione": {
-      "it": "AZIENDA AUTONOMA STATALE",
-      "en": "AZIENDA AUTONOMA STATALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società in nome collettivo",
+      "en": "Società in nome collettivo"
+    }
   },
   {
-    "codice": "AM",
+    "codice": "SAS",
     "descrizione": {
-      "it": "AZIENDA MUNICIPALE",
-      "en": "AZIENDA MUNICIPALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società in accomandita semplice",
+      "en": "Società in accomandita semplice"
+    }
   },
   {
-    "codice": "AP",
+    "codice": "STUD_ASS",
     "descrizione": {
-      "it": "AZIENDA PROVINCIALE",
-      "en": "AZIENDA PROVINCIALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Studio associato e società di professionisti",
+      "en": "Studio associato e società di professionisti"
+    }
   },
   {
-    "codice": "AR",
+    "codice": "SOC_FAT",
     "descrizione": {
-      "it": "AZIENDA REGIONALE",
-      "en": "AZIENDA REGIONALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società di fatto o irregolare, comunione ereditaria",
+      "en": "Società di fatto o irregolare, comunione ereditaria"
+    }
   },
   {
-    "codice": "LL",
+    "codice": "SPA",
     "descrizione": {
-      "it": "AZIENDA SPECIALE AI SENSI DELLA L. 142/90",
-      "en": "AZIENDA SPECIALE AI SENSI DELLA L. 142/90"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società per azioni",
+      "en": "Società per azioni"
+    }
   },
   {
-    "codice": "AL",
+    "codice": "SRL",
     "descrizione": {
-      "it": "AZIENDA SPECIALE DI ENTE LOCALE",
-      "en": "AZIENDA SPECIALE DI ENTE LOCALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società a responsabilità limitata",
+      "en": "Società a responsabilità limitata"
+    }
   },
   {
-    "codice": "CO",
+    "codice": "SRL_US",
     "descrizione": {
-      "it": "CONSORZIO",
-      "en": "CONSORZIO"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società a responsabilità limitata con un unico socio",
+      "en": "Società a responsabilità limitata con un unico socio"
+    }
   },
   {
-    "codice": "CZ",
+    "codice": "SAC_PA",
     "descrizione": {
-      "it": "CONSORZIO AI SENSI DELLA L. 142/90",
-      "en": "CONSORZIO AI SENSI DELLA L. 142/90"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società in accomandita per azioni",
+      "en": "Società in accomandita per azioni"
+    }
   },
   {
-    "codice": "CC",
+    "codice": "COOP_MP",
     "descrizione": {
-      "it": "CONSORZIO CON ATTIVITA' ESTERNA",
-      "en": "CONSORZIO CON ATTIVITA' ESTERNA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società cooperativa a mutualità prevalente",
+      "en": "Società cooperativa a mutualità prevalente"
+    }
   },
   {
-    "codice": "CR",
+    "codice": "COOP_DIV",
     "descrizione": {
-      "it": "CONSORZIO INTERCOMUNALE",
-      "en": "CONSORZIO INTERCOMUNALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società cooperativa diversa",
+      "en": "Società cooperativa diversa"
+    }
   },
   {
-    "codice": "CM",
+    "codice": "COOP_SOC",
     "descrizione": {
-      "it": "CONSORZIO MUNICIPALE",
-      "en": "CONSORZIO MUNICIPALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società cooperativa sociale",
+      "en": "Società cooperativa sociale"
+    }
   },
   {
-    "codice": "CS",
+    "codice": "COOP_MASS",
     "descrizione": {
-      "it": "COOPERATIVA SOCIALE",
-      "en": "COOPERATIVA SOCIALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società di mutua assicurazione",
+      "en": "Società di mutua assicurazione"
+    }
   },
   {
-    "codice": "OO",
+    "codice": "CNSZ_PR",
     "descrizione": {
-      "it": "COOPERATIVA SOCIALE",
-      "en": "COOPERATIVA SOCIALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Consorzio di diritto privato",
+      "en": "Consorzio di diritto privato"
+    }
   },
   {
-    "codice": "DI",
+    "codice": "SOC_CSNZ",
     "descrizione": {
-      "it": "DITTA INDIVIDUALE",
-      "en": "DITTA INDIVIDUALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società consortile",
+      "en": "Società consortile"
+    }
   },
   {
-    "codice": "ES",
+    "codice": "RAGG_IMPR",
     "descrizione": {
-      "it": "ENTE DI CUI ALLA L.R. 21-12-93 N.88",
-      "en": "ENTE DI CUI ALLA L.R. 21-12-93 N.88"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Associazione o raggruppamento temporaneo di imprese",
+      "en": "Associazione o raggruppamento temporaneo di imprese"
+    }
   },
   {
-    "codice": "EI",
+    "codice": "GRP_EU",
     "descrizione": {
-      "it": "ENTE IMPRESA",
-      "en": "ENTE IMPRESA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Gruppo europeo di interesse economico",
+      "en": "Gruppo europeo di interesse economico"
+    }
   },
   {
-    "codice": "EM",
+    "codice": "ENT_ECO",
     "descrizione": {
-      "it": "ENTE MORALE",
-      "en": "ENTE MORALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Ente pubblico economico",
+      "en": "Ente pubblico economico"
+    }
   },
   {
-    "codice": "EC",
+    "codice": "AZ_SP267",
     "descrizione": {
-      "it": "ENTE PUBBLICO COMMERCIALE",
-      "en": "ENTE PUBBLICO COMMERCIALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Azienda speciale ai sensi del t.u. 267/2000",
+      "en": "Azienda speciale ai sensi del t.u. 267/2000"
+    }
   },
   {
-    "codice": "EP",
+    "codice": "AZ_PUB207",
     "descrizione": {
-      "it": "ENTE PUBBLICO ECONOMICO",
-      "en": "ENTE PUBBLICO ECONOMICO"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Azienda pubblica di servizi alle persone ai sensi del d.lgs n. 207/2001",
+      "en": "Azienda pubblica di servizi alle persone ai sensi del d.lgs n. 207/2001"
+    }
   },
   {
-    "codice": "FN",
+    "codice": "ASS_RIC",
     "descrizione": {
-      "it": "FONDAZIONE",
-      "en": "FONDAZIONE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Associazione riconosciuta",
+      "en": "Associazione riconosciuta"
+    }
   },
   {
-    "codice": "FI",
+    "codice": "FOND_NB",
     "descrizione": {
-      "it": "FONDAZIONE IMPRESA",
-      "en": "FONDAZIONE IMPRESA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Fondazione (esclusa fondazione bancaria)",
+      "en": "Fondazione (esclusa fondazione bancaria)"
+    }
   },
   {
-    "codice": "GE",
+    "codice": "FOND_BAN",
     "descrizione": {
-      "it": "GRUPPO EUROPEO DI INTERESSE ECONOMICO",
-      "en": "GRUPPO EUROPEO DI INTERESSE ECONOMICO"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Fondazione bancaria",
+      "en": "Fondazione bancaria"
+    }
   },
   {
-    "codice": "IA",
+    "codice": "ENTE_ECC",
     "descrizione": {
-      "it": "IMPRESA ARTIGIANA",
-      "en": "IMPRESA ARTIGIANA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Ente ecclesiastico",
+      "en": "Ente ecclesiastico"
+    }
   },
   {
-    "codice": "II",
+    "codice": "SOC_MS",
     "descrizione": {
-      "it": "IMPRESA INDIVIDUALE",
-      "en": "IMPRESA INDIVIDUALE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Società di mutuo soccorso",
+      "en": "Società di mutuo soccorso"
+    }
   },
   {
-    "codice": "IC",
+    "codice": "ALT_ENTE_GIUR",
     "descrizione": {
-      "it": "ISTITUTO DI CREDITO",
-      "en": "ISTITUTO DI CREDITO"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Altra forma di ente privato con personalità giuridica",
+      "en": "Altra forma di ente privato con personalità giuridica"
+    }
   },
   {
-    "codice": "ID",
+    "codice": "ASS_NR",
     "descrizione": {
-      "it": "ISTITUTO DI CREDITO DI DIRITTO PUBBLICO",
-      "en": "ISTITUTO DI CREDITO DI DIRITTO PUBBLICO"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Associazione non riconosciuta",
+      "en": "Associazione non riconosciuta"
+    }
   },
   {
-    "codice": "MA",
+    "codice": "COMIT",
     "descrizione": {
-      "it": "MUTUA ASSICURAZIONE",
-      "en": "MUTUA ASSICURAZIONE"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Comitato",
+      "en": "Comitato"
+    }
   },
   {
-    "codice": "PC",
+    "codice": "COND",
     "descrizione": {
-      "it": "PICCOLA SOCIETA' COOPERATIVA",
-      "en": "PICCOLA SOCIETA' COOPERATIVA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Condominio",
+      "en": "Condominio"
+    }
   },
   {
-    "codice": "PS",
+    "codice": "ALT_ENTE_NG",
     "descrizione": {
-      "it": "PICCOLA SOCIETA' COOPERATIVA A RESPONSABILITA' LIMITATA",
-      "en": "PICCOLA SOCIETA' COOPERATIVA A RESPONSABILITA' LIMITATA"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Altra forma di ente privato senza personalità giuridica",
+      "en": "Altra forma di ente privato senza personalità giuridica"
+    }
   },
   {
-    "codice": "AA",
+    "codice": "IMPRE_ESTERO",
     "descrizione": {
-      "it": "S.A.P.A. - SOCIETA' IN ACCOMANDITA PER AZIONI",
-      "en": "S.A.P.A. - SOCIETA' IN ACCOMANDITA PER AZIONI"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "AS",
-    "descrizione": {
-      "it": "S.A.S. - SOCIETA' IN ACCOMANDITA SEMPLICE",
-      "en": "S.A.S. - SOCIETA' IN ACCOMANDITA SEMPLICE"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SN",
-    "descrizione": {
-      "it": "S.N.C. - SOCIETA' IN NOME COLLETTIVO",
-      "en": "S.N.C. - SOCIETA' IN NOME COLLETTIVO"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "CN",
-    "descrizione": {
-      "it": "SOCIETA' CONSORTILE",
-      "en": "SOCIETA' CONSORTILE"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SL",
-    "descrizione": {
-      "it": "SOCIETA' CONSORTILE A RESPONSABILITA' LIMITATA",
-      "en": "SOCIETA' CONSORTILE A RESPONSABILITA' LIMITATA"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "OS",
-    "descrizione": {
-      "it": "SOCIETA' CONSORTILE COOPERATIVA A RESPONSABILITA' LIMITATA",
-      "en": "SOCIETA' CONSORTILE COOPERATIVA A RESPONSABILITA' LIMITATA"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "AE",
-    "descrizione": {
-      "it": "SOCIETA' CONSORTILE IN ACCOMANDITA SEMPLICE",
-      "en": "SOCIETA' CONSORTILE IN ACCOMANDITA SEMPLICE"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "AN",
-    "descrizione": {
-      "it": "SOCIETA' CONSORTILE IN NOME COLLETTIVO",
-      "en": "SOCIETA' CONSORTILE IN NOME COLLETTIVO"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SO",
-    "descrizione": {
-      "it": "SOCIETA' CONSORTILE PER AZIONI",
-      "en": "SOCIETA' CONSORTILE PER AZIONI"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SA",
-    "descrizione": {
-      "it": "SOCIETA' COOPERATIVA",
-      "en": "SOCIETA' COOPERATIVA"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "CI",
-    "descrizione": {
-      "it": "SOCIETA' COOPERATIVA A RESPONSABILITA ILLIMITATA",
-      "en": "SOCIETA' COOPERATIVA A RESPONSABILITA ILLIMITATA"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "CL",
-    "descrizione": {
-      "it": "SOCIETA' COOPERATIVA A RESPONSABILITA LIMITATA",
-      "en": "SOCIETA' COOPERATIVA A RESPONSABILITA LIMITATA"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SC",
-    "descrizione": {
-      "it": "SOCIETA' COOPERATIVA A RESPONSABILITA' LIMITATA PER AZIONI",
-      "en": "SOCIETA' COOPERATIVA A RESPONSABILITA' LIMITATA PER AZIONI"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "OC",
-    "descrizione": {
-      "it": "SOCIETA' COOPERATIVA CONSORTILE",
-      "en": "SOCIETA' COOPERATIVA CONSORTILE"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "CA",
-    "descrizione": {
-      "it": "SOCIETA' COOPERATIVA PER AZIONI",
-      "en": "SOCIETA' COOPERATIVA PER AZIONI"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SS",
-    "descrizione": {
-      "it": "SOCIETA' COSTITUITA IN BASE A LEGGI DI ALTRO STATO",
-      "en": "SOCIETA' COSTITUITA IN BASE A LEGGI DI ALTRO STATO"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SM",
-    "descrizione": {
-      "it": "SOCIETA' DI MUTUO SOCCORSO",
-      "en": "SOCIETA' DI MUTUO SOCCORSO"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SE",
-    "descrizione": {
-      "it": "SOCIETA' SEMPLICE",
-      "en": "SOCIETA' SEMPLICE"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "ST",
-    "descrizione": {
-      "it": "SOCIETA' STRANIERA",
-      "en": "SOCIETA' STRANIERA"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SV",
-    "descrizione": {
-      "it": "SOCIETA' TRA AVVOCATI",
-      "en": "SOCIETA' TRA AVVOCATI"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SP",
-    "descrizione": {
-      "it": "S.P.A. - SOCIETA' PER AZIONI",
-      "en": "S.P.A. - SOCIETA' PER AZIONI"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "AU",
-    "descrizione": {
-      "it": "S.P.A.- SOCIETA' PER AZIONI CON SOCIO UNICO",
-      "en": "S.P.A.- SOCIETA' PER AZIONI CON SOCIO UNICO"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SR",
-    "descrizione": {
-      "it": "S.R.L. - SOCIETA' A RESPONSABILITA' LIMITATA",
-      "en": "S.R.L. - SOCIETA' A RESPONSABILITA' LIMITATA"
-    },
-    "dataInizio": null,
-    "dataFine": null
-  },
-  {
-    "codice": "SU",
-    "descrizione": {
-      "it": "S.R.L. - SOCIETA' A RESPONSABILITA' LIMITATA - UNICO SOCIO",
-      "en": "S.R.L. - SOCIETA' A RESPONSABILITA' LIMITATA - UNICO SOCIO"
-    },
-    "dataInizio": null,
-    "dataFine": null
+      "it": "Impresa o ente privato costituito all'estero non altrimenti classificabile che svolge una attività economica in Italia",
+      "en": "Impresa o ente privato costituito all'estero non altrimenti classificabile che svolge una attività economica in Italia"
+    }
   }
 ]

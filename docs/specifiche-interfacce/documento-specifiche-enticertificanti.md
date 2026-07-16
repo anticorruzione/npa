@@ -39,8 +39,6 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 |  `03/09/2026`   |      `00006`       | `Certificato dei carichi pendenti`                           | `DatiSA_00006` | `Min. Giustizia`        |
 |  `03/09/2026`   |      `00045`       | `Bilancio Aziendale`                                         | `DatiSA_00045` | `InfoCamere`            |
 
-> **Nota:** il tipo documento `00006` (carichi pendenti **penali**, Ministero della Giustizia) è distinto dal tipo documento `00042` (carichi **fiscali** pendenti, Agenzia delle Entrate).
-
 ## Casi di test
 
 Vengono qui riportati i casi di test in ambiente PDND di collaudo degli enti certificanti che li hanno messi a disposizione
@@ -49,6 +47,7 @@ Vengono qui riportati i casi di test in ambiente PDND di collaudo degli enti cer
 | `Codice Documento` | `Descrizione Documento` | `Ente Certificante`    | `Caso di test` |
 |:------------------:| :---------------: |:-----------------------| ----------------- | 
 |      `00004`       | `Certificato integrale del casellario giudiziario`  | `Min.Giustizia`        | `1) Cognome: CESARE	Nome: AUGUSTO		Nato il 02/04/1957 a ROMA (ITALIA) CF: CSRGST57D02H501Q, 2) NERONE POMPEO, 01/01/1977, ROMA (ITALIA), NRNPMP77A01H501U, 3) MARCANTONIO GIULIO, 01/05/1971, ROMA (ITALIA), MRCGLI71E01H501B 4) AGRIPPA	MENENIO, 05/01/1968, ROMA (ITALIA), GRPMNN68A05H501H` |
+|      `00005`       | `Anagrafe delle sanzioni amministrative dipendenti da reato` | `Min. Giustizia` | `Esempio body: vedi examples.anagrafeSanzioni00005 in specifiche-servizi-fvoe-fva.yaml (DenominazioneSociale, CodiceFormaGiuridica, PIVA, DatiSedeSociale, LinguaTedesca)` |
 |      `00010`       | `Verifica esistenza prospetto informativo disabili` | `Ministero del Lavoro` | `Codice fiscale 48863580097` |
 |      `00011`       | `Verifica esistenza rapporto parità di genere` | `Ministero del Lavoro` | `Codice fiscale 48863580097` |
 |      `00008`       | `DURC emesso in corso di validità` | `Inps`                 | `Codici fiscali 00385090485, 05836271212, SNCFNC59A06F284S` |
