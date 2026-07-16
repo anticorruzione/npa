@@ -734,6 +734,70 @@ components:
           type: string
           format: date-time
           example: "1980-02-01T00:00:00+01:00"
+    DatiSA00006:
+      description: >-
+        Oggetto che riporta i dati per richiedere il certificato dei carichi
+        pendenti penali (tipo documento 00006). Non confondere con i carichi
+        fiscali pendenti (tipo documento 00042).
+      type: object
+      additionalProperties: false
+      required:
+        - type
+        - codiceProcura
+      properties:
+        type:
+          type: string
+          example: "DatiSA00006"
+        codiceFiscale:
+          description: >-
+            Codice fiscale del soggetto. Se assente, viene usato il soggetto
+            indicato in codiceFiscaleSoggetti o associato alla richiesta.
+          type: string
+          pattern: "^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$"
+          example: "RSSMRA80B01H501T"
+        codiceProcura:
+          description: Codice della procura competente
+          type: string
+          example: "12345"
+    DatiSA00014:
+      description: >-
+        Oggetto che riporta i dati per richiedere la certificazione IAF
+        (tipo documento 00014). Nessun dato aggiuntivo obbligatorio: codice
+        fiscale e partita IVA sono ricavati dall'anagrafica del soggetto.
+      type: object
+      additionalProperties: false
+      required:
+        - type
+      properties:
+        type:
+          type: string
+          example: "DatiSA00014"
+    DatiSA00045:
+      description: >-
+        Oggetto che riporta i dati per richiedere il bilancio aziendale /
+        consultazione bilancio impresa (tipo documento 00045).
+      type: object
+      additionalProperties: false
+      required:
+        - type
+        - codiceFiscale
+        - anno
+      properties:
+        type:
+          type: string
+          example: "DatiSA00045"
+        codiceFiscale:
+          description: Codice fiscale dell'operatore economico
+          type: string
+          example: "12345678901"
+        anno:
+          description: Anno di riferimento del bilancio
+          type: string
+          pattern: "^[0-9]{4}$"
+          example: "2023"
+        annotazione:
+          description: Annotazione opzionale
+          type: string
     DatiSA00899:
       description: >-
         Oggetto che riporta dati generici dell' Operatore Economico
@@ -774,8 +838,11 @@ components:
           description: dati necessari alla richiesta specifici per tipoDocumento inviati in formato json.
           oneOf:
             - $ref: "#/components/schemas/DatiSA00004"
+            - $ref: "#/components/schemas/DatiSA00006"
+            - $ref: "#/components/schemas/DatiSA00014"
             - $ref: "#/components/schemas/DatiSA00020"
             - $ref: "#/components/schemas/DatiSA00036"
+            - $ref: "#/components/schemas/DatiSA00045"
             - $ref: "#/components/schemas/DatiSA00047"
             - $ref: "#/components/schemas/DatiSA00048"
             - $ref: "#/components/schemas/DatiSA00050"

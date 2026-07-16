@@ -1753,6 +1753,28 @@ aggiunta regola REG5_1
 ## Documentazione
 * Nella sezione Standard adottati del file README.md è stata aggiornata la versione sdk dell'eForms da adottare (1.13.3).
 
+<summary><h1>Note di rilascio del 16/07/2026</h1></summary>
+
+### Modello Dati FVOE/FVA
+* modello-dati-fvoe-fva.yaml:
+  * creato DatiSA00006 per il certificato dei carichi pendenti penali (tipo documento 00006)
+  * creato DatiSA00014 per la certificazione IAF (tipo documento 00014)
+  * creato DatiSA00045 per il bilancio aziendale InfoCamere (tipo documento 00045)
+  * esteso DocumentoRichiediType.datiRichiesta (oneOf/discriminator) con i nuovi schemi
+
+### Tipologiche
+* tipoDocumento.json:
+  * aggiunto codice 00006 - Certificato dei carichi pendenti
+  * aggiunto codice 00045 - Bilancio Aziendale
+
+### Specifiche interfacce
+* documento-specifiche-enticertificanti.md:
+  * aggiornata la tabella tipi documento richiedibili (00006, 00014, 00045)
+* specifiche-servizi-fvoe-fva.yaml:
+  * aggiunti esempi di RichiediDocumentiRequest per 00006, 00014 e 00045
+* roadmap.md:
+  * aggiunta voce di roadmap per il rilascio dei documenti enti certificanti 00006, 00014 e 00045
+
 <summary><h1>Note di rilascio del 08/06/2026</h1></summary>
 
 ### Orchestratore

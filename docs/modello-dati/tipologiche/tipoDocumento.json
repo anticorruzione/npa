@@ -22,10 +22,26 @@
       "dataInizio": null,
       "dataFine": null
 },{
+      "codice": "00006",
+      "descrizione": {
+        "it": "Certificato dei carichi pendenti",
+        "en": "Certificato dei carichi pendenti"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
       "codice": "00008",
       "descrizione": {
         "it": "Durc in corso di Validita",
         "en": "Durc in corso di Validita"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00014",
+      "descrizione": {
+        "it": "Certificazione IAF",
+        "en": "IAF Certification"
       },
       "dataInizio": null,
       "dataFine": null
@@ -147,6 +163,14 @@
       "descrizione": {
         "it": "Carichi fiscali pendenti",
         "en": "Carichi fiscali pendenti"
+      },
+      "dataInizio": null,
+      "dataFine": null
+},{
+      "codice": "00045",
+      "descrizione": {
+        "it": "Bilancio Aziendale",
+        "en": "Financial Statements"
       },
       "dataInizio": null,
       "dataFine": null

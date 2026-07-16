@@ -34,9 +34,12 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 |   `02/08/2024`   |      `00008`       | `DURC emesso in corso di validità`                           | `-`            | `Inps`                  |
 |   `25/09/2024`   |      `00010`       | `Verifica esistenza prospetto informativo disabili`          | `-`            | `Ministero del Lavoro`  |
 |   `25/09/2024`   |      `00011`       | `Verifica esistenza rapporto parità di genere`               | `-`            | `Ministero del Lavoro`  |
-|   `30/04/2026`    |      `00099`       | `Contributo ANAC`                                            | `DatiSA_00099` | `ANAC`                  |
-|  `In Progress`   |      `00014`       | `Certificazione IAF`                                         | `-`            | `IAF`                   |
-|  `In Progress`   |       `TBD`        | `Consultazione Bilancio`                                     | `-`            | `Infocamere`            |
+|   `30/04/2026`   |      `00099`       | `Contributo ANAC`                                            | `DatiSA_00099` | `ANAC`                  |
+|   `27/05/2026`   |      `00014`       | `Certificazione IAF`                                         | `DatiSA_00014` | `IAF`                   |
+|  `In Progress`   |      `00006`       | `Certificato dei carichi pendenti`                           | `DatiSA_00006` | `Min. Giustizia`        |
+|  `In Progress`   |      `00045`       | `Bilancio Aziendale`                                         | `DatiSA_00045` | `InfoCamere`            |
+
+> **Nota:** il tipo documento `00006` (carichi pendenti **penali**, Ministero della Giustizia) è distinto dal tipo documento `00042` (carichi **fiscali** pendenti, Agenzia delle Entrate).
 
 ## Casi di test
 
