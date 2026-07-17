@@ -780,24 +780,16 @@ components:
       additionalProperties: false
       required:
         - type
-        - codiceFiscale
         - anno
       properties:
         type:
           type: string
           example: "DatiSA00045"
-        codiceFiscale:
-          description: Codice fiscale dell'operatore economico
-          type: string
-          example: "12345678901"
         anno:
           description: Anno di riferimento del bilancio
           type: string
           pattern: "^[0-9]{4}$"
           example: "2023"
-        annotazione:
-          description: Annotazione opzionale
-          type: string
     DatiSA00899:
       description: >-
         Oggetto che riporta dati generici dell' Operatore Economico

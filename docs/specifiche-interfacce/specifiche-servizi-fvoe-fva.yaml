@@ -2176,7 +2176,6 @@ components:
               codice: "00045"
             datiRichiesta:
               type: "DatiSA00045"
-              codiceFiscale: "12345678901"
               anno: "2023"
     PaginazioneType:
       description: Oggetto per la paginazione dei risultati
