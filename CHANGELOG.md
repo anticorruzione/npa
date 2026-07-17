@@ -1764,10 +1764,11 @@ aggiunta regola REG5_1
   * confermati/riallineati i modelli già esistenti DatiSA00004 (tipo documento 00004) e DatiSA00020 (tipo documento 00005)
 
 ### Tipologiche
-* tipoDocumento.json:
+* aggiornata la tipologica tipoDocumento.json:
   * aggiunto codice 00006 - Certificato dei carichi pendenti
   * aggiunto codice 00045 - Bilancio Aziendale
-
+  * confermati i codici già presenti 00004 (Casellario giudiziario), 00005 (Anagrafe sanzioni amministrative dipendenti da reato) e 00014 (Certificazione IAF)
+* aggiornata la tipologica tipoFormaGiuridica.json
 ### Specifiche interfacce
 * documento-specifiche-enticertificanti.md:
   * aggiornata la tabella tipi documento richiedibili (00006, 00014, 00045)
