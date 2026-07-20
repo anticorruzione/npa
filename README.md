@@ -13,6 +13,10 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 20/07/2026 - Aggiornamento del certificato SSL dei servizi ANAC
+Il certificato SSL dei servizi ANAC verrà aggiornato lunedì 27 luglio 2026 in tutti gli ambienti (Qualificazione, Esercizio e Attestazione).
+Si precisa che la catena di certificazione rimarrà invariata rispetto al certificato in scadenza.
+
 ## 24/06/2026 - Possibili disservizi sui servizi PCP e FVOE di Esercizio per manutenzione straordinaria
 A causa di un intervento di manutenzione straordinaria, dalle ore 17.00 alle ore 20.00 di giovedì 25 giugno 2026 i servizi di interoperabilità erogati alle Piattaforme di Approvvigionamento Digitale in ambiente di Esercizio potranno subire saltuari disservizi di breve durata
 
