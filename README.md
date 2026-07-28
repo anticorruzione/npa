@@ -13,6 +13,13 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 28/07/2026 - Disservizio annunciato dal TeD sulle API di produzione
+Si riporta di seguito l'avviso ricevuto dal TeD alle ore 13.57 di oggi, 11 maggio
+
+Dear developers
+Please be informed that the TED API Publication API in the Production environment will be unavailable on 3 August 2026, from 07:00 to 08:00 CEST, due to planned maintenance on the TED publication infrastructure.
+During this period, publication-related operations in Production will not be available. Please inform your users if necessary. Thank you for your understanding.
+
 ## 20/07/2026 - Aggiornamento del certificato SSL dei servizi ANAC
 Il certificato SSL dei servizi ANAC verrà aggiornato lunedì 27 luglio 2026 in tutti gli ambienti (Qualificazione, Esercizio e Attestazione).
 Si precisa che la catena di certificazione rimarrà invariata rispetto al certificato in scadenza.
