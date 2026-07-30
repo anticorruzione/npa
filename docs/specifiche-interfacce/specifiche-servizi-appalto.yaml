@@ -2901,24 +2901,18 @@ components:
       - idPianificazione
       - scheda
       type: object
+      additionalProperties: false
     CreaSchedaElencoOEResponse:
+      allOf: # estende lo schema dati di BaseResponse
+        - $ref: '#/components/schemas/BaseResponse'
       description: Risposta generica servizio
-      properties:
-        detail:
-          type: string
-        idScheda:
-          format: uuid
-          type: string
-        instance:
-          type: string
-        status:
-          format: int32
-          type: integer
-        title:
-          type: string
-        type:
-          type: string
       type: object
+      properties:
+        idScheda:
+          description: Identificativo univoco della Scheda Elenco OE definito da ANAC. (A UUID specified by RFC4122)
+          type: string
+          format: uuid
+          example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
     ConfermaSchedaOERequest:
       description: Oggetto in ingresso al servizio
       properties:
@@ -2932,6 +2926,7 @@ components:
       - idElenco
       - idScheda
       type: object
+      additionalProperties: false
     ConsultaElencoOEResponse:
       description: Risposta generica servizio
       allOf: # estende lo schema dati di BaseResponse
@@ -2960,27 +2955,13 @@ components:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/OperatoreEconomicoType'
 
     ContrattoListaResponse:
-      description: Risposta generica servizio per ricerca contratti
-      allOf:
+      allOf: # estende la classe BaseResponse e PaginazioneType
         - $ref: '#/components/schemas/BaseResponse'
+        - $ref: '#/components/schemas/PaginazioneType'
+      description: Risposta generica servizio per ricerca contratti
       type: object
+      additionalProperties: false
       properties:
-        totRows:
-          description: Numero totale di record risultante dalla ricerca
-          format: int32
-          type: integer
-        totPages:
-          description: Numero totale di pagine risultanti dalla ricerca
-          format: int32
-          type: integer
-        currentPage:
-          description: Numero di pagina corrente
-          format: int32
-          type: integer
-        elementPage:
-          description: Numero di elementi per pagina
-          format: int32
-          type: integer
         result:
           description: Lista ContrattoTypeCompleto
           type: array
