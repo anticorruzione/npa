@@ -53,6 +53,8 @@ tags:
     description: Operazioni richiesti dalle linee guida sull'interoperabilità.
   - name: gestioneElenchi
     description: In questo contesto rientrano tutti i servizi richiamabili dalla SA che permetteranno la creazione, l’invio e la consultazione degli elenchi di operatori economici.
+  - name: gestioneContratto
+    description: In questo contesto rientrano i servizi richiamabili dalla SA per la ricerca e consultazione dei contratti sottoscritti.
 paths:
   /status:
     get:
@@ -112,13 +114,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo. Viene restituito l'idPiano generato da ANAC
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -150,13 +146,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -187,13 +177,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -377,13 +361,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo. Viene restituito l'idAppalto generato da ANAC
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -415,13 +393,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -452,13 +424,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -575,13 +541,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -1177,13 +1137,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -1414,39 +1368,21 @@ paths:
       responses:
         '200':
           description: Esecuzione avvenuta con successo
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/EsitoOperazioneListaResponse'
         '404':
             description: Identificativo non trovato
-            headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+            headers: *ratelimit_headers
             content:
               application/problem+json:
                 schema:
                   $ref: '#/components/schemas/ErrorResponse'
         '400':
             description: Richiesta malformata
-            headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+            headers: *ratelimit_headers
             content:
              application/problem+json:
                 schema:
@@ -1655,13 +1591,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -1782,13 +1712,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -1820,13 +1744,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -1981,6 +1899,75 @@ paths:
           $ref: '#/components/responses/500InternalServerError'
       security:
         - apiKeyAuth: []  
+
+  /ricerca-contratto:
+    get:
+      tags:
+      - gestioneContratto
+      summary: API Rest per la ricerca dei contratti. SINCRONO
+      description: Vengono recuperati i contratti secondo i criteri di ricerca forniti.
+      operationId: ricercaContratto
+      parameters:
+      - description: Identificativo univoco dell'Appalto definito da ANAC
+        in: query
+        name: idAppalto
+        required: true
+        schema:
+          format: uuid
+          type: string
+      - description: Identificativo univoco Gara-Lotto rilasciato da ANAC, alternativo all'idAppalto
+        in: query
+        name: cig
+        required: false
+        schema:
+          type: string
+      - description: Identificativo univoco Contratto rilasciato da ANAC, alternativo all'idAppalto
+        in: query
+        name: idContratto
+        required: false
+        schema:
+          format: uuid
+          type: string
+      - description: Numero della pagina da visualizzare
+        in: query
+        name: page
+        required: false
+        schema:
+          default: 1
+          format: int32
+          type: integer
+      - description: Numero di elementi per pagina
+        in: query
+        name: perPage
+        required: false
+        schema:
+          default: 20
+          format: int32
+          type: integer
+      responses:
+        '200':
+          description: Operazione terminato con successo.
+          headers:
+              X-RateLimit-Limit:
+                 $ref: '#/components/headers/X-RateLimit-Limit'
+              X-RateLimit-Remaining:
+                 $ref: '#/components/headers/X-RateLimit-Remaining'
+              X-RateLimit-Reset:
+                 $ref: '#/components/headers/X-RateLimit-Reset'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContrattoListaResponse'
+        '400':
+            $ref: '#/components/responses/400BadRequest'
+        '404':
+            $ref: '#/components/responses/404NotFound'
+        '429':
+            $ref: '#/components/responses/429TooManyRequests'
+        '500':
+          $ref: '#/components/responses/500InternalServerError'
+      security:
+        - apiKeyAuth: []
 components:
   headers:
     Retry-After:
@@ -2033,39 +2020,21 @@ components:
   responses:
     200AckResponse:
       description: Richiesta accettata
-      headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+      headers: *ratelimit_headers
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/AckResponse'
     400BadRequest:
       description: Richiesta malformattata
-      headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+      headers: *ratelimit_headers
       content:
         application/problem+json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
     404NotFound:
       description: Dato non trovato
-      headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+      headers: *ratelimit_headers
       content:
         application/problem+json:
           schema:
@@ -2081,13 +2050,7 @@ components:
             $ref: '#/components/schemas/ErrorResponse'
     500InternalServerError:
       description: Errore generico. Operazione terminato con errore. Viene restitutito il dettaglio dell'errore
-      headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+      headers: *ratelimit_headers
       content:
         application/problem+json:
           schema:
@@ -2995,6 +2958,89 @@ components:
           type: array
           items:
             $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-npa.yaml#/components/schemas/OperatoreEconomicoType'
+
+    ContrattoListaResponse:
+      description: Risposta generica servizio per ricerca contratti
+      allOf:
+        - $ref: '#/components/schemas/BaseResponse'
+      type: object
+      properties:
+        totRows:
+          description: Numero totale di record risultante dalla ricerca
+          format: int32
+          type: integer
+        totPages:
+          description: Numero totale di pagine risultanti dalla ricerca
+          format: int32
+          type: integer
+        currentPage:
+          description: Numero di pagina corrente
+          format: int32
+          type: integer
+        elementPage:
+          description: Numero di elementi per pagina
+          format: int32
+          type: integer
+        result:
+          description: Lista ContrattoTypeCompleto
+          type: array
+          items:
+            $ref: '#/components/schemas/ContrattoTypeCompleto'
+    ContrattoTypeCompleto:
+      description: Oggetto Complesso che riporta tutti i dati del contratto
+      type: object
+      properties:
+        idContratto:
+          description: Identificativo univoco Contratto rilasciato da ANAC
+          type: string
+          format: uuid
+        idAppalto:
+          description: Identificativo univoco dell'Appalto definito da ANAC
+          type: string
+          format: uuid
+        stato:
+          description: Stato del contratto
+          type: object
+          properties:
+            idTipologica:
+              type: string
+            codice:
+              type: string
+        dataControllo:
+          description: Data di controllo del contratto
+          type: string
+          format: date-time
+        dataCreazione:
+          description: Data creazione del contratto
+          type: string
+          format: date-time
+        userIdCreazione:
+          description: ID utente che ha creato il contratto
+          type: string
+        dataModifica:
+          description: Data modifica del contratto
+          type: string
+          format: date-time
+        userIdModifica:
+          description: ID utente che ha modificato il contratto
+          type: string
+        dataCancellazione:
+          description: Data cancellazione del contratto
+          type: string
+          format: date-time
+        userIdCancellazione:
+          description: ID utente che ha cancellato il contratto
+          type: string
+        schedeConfermate:
+          description: Lista schede confermate associate al contratto
+          type: array
+          items:
+            type: object
+        subappalti:
+          description: Lista subappalti associati al contratto
+          type: array
+          items:
+            type: object
   securitySchemes:
     apiKeyAuth:
       type: apiKey

@@ -91,7 +91,7 @@ Nel presente paragrafo si rappresentano i flussi di interoperabilità di tutto i
 - Nome servizio = Servizi che richiamano contesti e componenti interne all’NPA.
 
 Nella seguente [cartella](../diagrammi-drawio/), è consultabile il diagramma drawio.
-I singoli contesti sono descritti nei paragrafi da [5](#5contesto-gestioneutenti) a [12](#12contesto-gestioneelenchi).
+I singoli contesti sono descritti nei paragrafi da [5](#5contesto-gestioneutenti) a [13](#13contesto-gestionecontratto).
 
 ## 4.3	Diagramma a stati
 Nei paragrafi che seguono sono illustrati, attraverso diagrammi a stati, i passaggi di stato per le seguenti entità coinvolte:
@@ -124,7 +124,7 @@ Il diagramma seguente illustra i cambi di stato dell’entità Notice di TED:
 Nella seguente [cartella](../diagrammi-drawio/), è consultabile il diagramma drawio.
 
 ## 4.4	Utenti e ruoli
-I servizi di NPA e dei componenti FVA e FVOE sono erogati B2B alle piattaforme di negoziazione e gestione dell'appalto. Gli utenti finali del sistema sono identificati dalla piattaforma fruitrice dei servizi (si faccia riferimento al paragrafo [Contesto di sicurezza](#15contesto-di-sicurezza) per i dettagli tecnici), tuttavia tali soggetti devono essere registrati sui sistemi ANAC e dotati di un ruolo opportuno per poter accedere ai servizi NPA.
+I servizi di NPA e dei componenti FVA e FVOE sono erogati B2B alle piattaforme di negoziazione e gestione dell'appalto. Gli utenti finali del sistema sono identificati dalla piattaforma fruitrice dei servizi (si faccia riferimento al paragrafo [Contesto di sicurezza](#16contesto-di-sicurezza) per i dettagli tecnici), tuttavia tali soggetti devono essere registrati sui sistemi ANAC e dotati di un ruolo opportuno per poter accedere ai servizi NPA.
 Il ruoli previsti sono i seguenti:
   - RP, responsabile del progetto
   - DRP1, delegato dal responsabile del progetto per la fase di Programmazione
@@ -189,6 +189,7 @@ Nella tabella seguente si riporta l'elenco di tutti i servizi esposti, richiamab
   |**Modulo NPA**|**gestioneElenchi**| crea-elenco-operatori-oe  | RP |
   |**Modulo NPA**|**gestioneElenchi**| conferma-elenco-operatori-oe  | RP |
   |**Modulo NPA**|**gestioneElenchi**| consulta-elenco-operatori-oe  | RP |
+  |**Modulo NPA**|**gestioneContratto**| ricerca-contratto  | RP, DRP1 |
   |**Modulo NPA**|**codeList**| recupera-elenco-tipologiche  | * |
   |**Modulo NPA**|**codeList**| recupera-tipologica  | * |
   |**Modulo NPA**|**codeList**| recupera-valore-tipologica  | * |
@@ -423,7 +424,16 @@ I servizi che possono essere invocati in questo contesto sono i seguenti:
 - conferma-elenco-operatori-oe: servizio che consente la conferma dell'elenco operatori economici creato;
 - consulta-elenco-operatori-oe: servizio che consente la consultazione delle informazioni di dettaglio di un elenco operatori economici.
 
-# 13	Servizi comuni
+# 13	Contesto gestioneContratto
+
+In questo contesto rientrano i servizi richiamabili dalla SA per la ricerca e consultazione dei contratti sottoscritti.
+
+**Descrizione dei servizi**
+
+I servizi che possono essere invocati in questo contesto sono i seguenti:
+- ricerca-contratto: servizio che permette la ricerca dei contratti secondo i criteri di input forniti.
+
+# 14	Servizi comuni
 
 In questo capitolo si riportano i servizi comuni, ossia quelli che possono essere richiamati dalle Stazioni appaltanti in più contesti dell’NPA e che forniranno una risposta diversa a seconda della fase in cui vengono invocati:
 - esito-operazione: tramite questo servizio è possibile recuperare l’esito di una determinata operazione;
@@ -439,12 +449,12 @@ In questo capitolo si riportano i servizi comuni, ossia quelli che possono esser
 -	recupera-tipologica: tramite questo servizio è possibile recuperare l'elenco dei valori per una specifica tipologica.
 -	recupera-valore-tipologica: tramite questo servizio è possibile recuperare un valore puntuale per una specifica tipologica.
 
-# 14	Interfaccia servizi
+# 15	Interfaccia servizi
 Le interfacce dei servizi sono definite secondo gli standard di interoperabilità tramite API dei sistemi informatici che tutte le pubbliche amministrazioni devono adottare al fine di garantire l’interoperabilità dei propri sistemi con quelli di altri soggetti a favorire l’implementazione complessiva del sistema informativo delle PA (ModI).
 
 I file YAML con le specifiche delle interfacce dei servizi esposti dalla NPA sono consultabili nella cartella [specifiche-interfacce](../specifiche-interfacce/)
 
-# 15	Contesto di sicurezza
+# 16	Contesto di sicurezza
 Le Linee Guida di interoperabilità PDND sono destinate ai soggetti di cui all’articolo 2, comma 2, del CAD, i quali favoriscono la conoscenza e l’utilizzo del patrimonio informativo detenuto per finalità istituzionali nonché la condivisione dei dati con i soggetti che hanno diritto di accedervi ai fini dell’attuazione dell’articolo 50 del CAD e della semplificazione degli adempimenti dei cittadini e delle imprese, in conformità alla disciplina vigente, assicurando le modalità di scambio telematico per il tramite di API così come previsto dal ModI. 
 
 In particolare, i soggetti di cui all’articolo 2, comma 2, del CAD attuano le Linee Guida al fine di condividere i dati e le informazioni da essi detenuti, assicurando:
