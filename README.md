@@ -13,6 +13,15 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 04/08/2026 - Nuovo disservizio annunciato dal TeD sulle API di produzione
+Si riporta di seguito l'avviso ricevuto dal TeD alle ore 17.08 di ieri, 3 agosto
+
+Dear developers
+Due to scheduled maintenance, the TED Developer Portal in Production will be unavailable on 6 August between 07:00 and 09:00 (CEST). 
+As a result, all TED API operations requiring an authentication key will be affected during this period. We suggest that you inform your users if needed.
+We apologise for the inconvenience and thank you for your understanding
+
+
 ## 28/07/2026 - Disservizio annunciato dal TeD sulle API di produzione
 Si riporta di seguito l'avviso ricevuto dal TeD alle ore 13.57 di oggi, 28 luglio
 
