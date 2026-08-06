@@ -187,7 +187,7 @@ components:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.yaml#/components/schemas/SchedaM2Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-M2.40.yaml#/components/schemas/SchedaM2_40Type'  
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SA1.yaml#/components/schemas/SchedaSA1Type'  
-              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-RSU1.yaml#/components/schemas/SchedaRSU1Type'
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-RSU1_v2.0.yaml#/components/schemas/SchedaRSU1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SOC.yaml#/components/schemas/SchedaSOCType'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-ES1.yaml#/components/schemas/SchedaES1Type'
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-CS1.yaml#/components/schemas/SchedaCS1Type'              
