@@ -79450,5 +79450,23 @@
 		},
 		"dataInizio": "2000-01-01T00:00:00",
 		"dataFine": "2099-12-31T00:00:00"
+	},
+	{
+		"codice": "099999999",
+		"descrizione": {
+			"it": "Stato Estero",
+			"en": "Foreign Country"
+		},
+		"dataInizio": "2026-08-03T00:00:00",
+		"dataFine": null
+	},
+	{
+		"codice": "099990000",
+		"descrizione": {
+			"it": "Pluricomunale",
+			"en": "Multi-municipality"
+		},
+		"dataInizio": "2026-08-03T00:00:00",
+		"dataFine": null
 	}
 ]
