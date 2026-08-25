@@ -12,6 +12,13 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 -	dati personali o informazioni soggette a vincoli di riservatezza contrattuale.
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
+## 25/08/2026 - Disservizio annunciato dal TeD sulle API di produzione
+Si riporta di seguito l'avviso ricevuto dal TeD alle ore 17.02 di ieri, 24 agosto
+
+Dear developers
+Please be informed that the TED API Publication API in the Production environment will be unavailable on 27 August 2026, from 06:30 to 09:30 CEST, due to planned maintenance on the TED publication infrastructure.
+
+During this period, publication-related operations in Production will not be available. 
 
 ## 04/08/2026 - Nuovo disservizio annunciato dal TeD sulle API di produzione
 Si riporta di seguito l'avviso ricevuto dal TeD alle ore 17.08 di ieri, 3 agosto
