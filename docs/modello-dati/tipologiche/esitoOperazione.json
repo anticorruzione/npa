@@ -510,4 +510,13 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"SC_CONF_ELENCO_OE",
+    "descrizione": {
+		"it": "Scheda Elenco OE Confermata",
+		"en": "Scheda Elenco OE Confermata"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]

@@ -249,4 +249,22 @@
 	},
     "dataInizio":null,
     "dataFine":null
+},
+{
+    "codice":"SC_CREA_ELENCO_OE",
+    "descrizione": {
+		"it": "Crea scheda Elenco OE",
+		"en": "Crea scheda Elenco OEL"
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"SC_CONF_ELENCO_OE",
+    "descrizione": {
+		"it": "Conferma scheda Elenco OE",
+		"en": "Conferma scheda Elenco OE"
+	},
+    "dataInizio":null,
+    "dataFine":null
 }]
