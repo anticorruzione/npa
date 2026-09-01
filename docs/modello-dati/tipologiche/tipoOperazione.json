@@ -254,7 +254,7 @@
     "codice":"SC_CREA_ELENCO_OE",
     "descrizione": {
 		"it": "Crea scheda Elenco OE",
-		"en": "Crea scheda Elenco OEL"
+		"en": "Crea scheda Elenco OE"
 	},
     "dataInizio":null,
     "dataFine":null
