@@ -1,6 +1,17 @@
 openapi: 3.0.0
 info:
   title: Modello Dati - Scheda RSU1 - Scheda di richiesta di subappalto.
+  description: | 
+    La scheda RSU1 apre il ciclo di vita di un subappalto: ogni scheda confermata determina la creazione a sistema di un nuovo subappalto, agganciato al contratto indicato in idContratto e posto nello stato Richiesto.\
+    L'identificativo restituito dal servizio all'invio della scheda identifica il subappalto così creato e deve essere riportato nel campo idScheda della successiva scheda ES1 di esito.\
+    La scheda deve essere inviata secondo il modello dati previsto dalla presente versione: le richieste di subappalto trasmesse secondo il precedente modello dati non sono lavorate dal sistema.\
+    Più schede RSU1 possono essere inviate sullo stesso contratto: ciascuna dà luogo a un subappalto distinto, con un proprio ciclo autorizzativo e di conclusione.\
+    Conferente del subappalto - deve essere indicato uno solo dei due riferimenti disponibili: idAggiudicatario, se il subappalto è conferito dall'aggiudicatario del contratto, oppure idSubappaltanteACascata, se il subappalto è conferito da un soggetto che è a sua volta subappaltatore (subappalto a cascata). Il sistema attribuisce di conseguenza il ruolo del conferente nel contratto.\
+    Se valorizzato idAggiudicatario, il soggetto indicato deve essere un partecipante effettivamente aggiudicatario di un lotto del contratto: non è possibile indicare come conferente un partecipante non aggiudicatario.\
+    Subappalto a cascata - occorre valorizzare anche idSubappalto con l'identificativo restituito dalla scheda RSU1 del subappalto di livello superiore, dal quale il nuovo subappalto discende. Il sistema ammette il subappalto a cascata solo se il subappalto di livello superiore risulta autorizzato: non è possibile agganciare un subappalto a cascata a un subappalto ancora soltanto richiesto, non approvato, revocato, annullato o già concluso.\
+    Sempre nel caso di subappalto a cascata, il soggetto indicato in idSubappaltanteACascata deve coincidere con il subappaltatore del subappalto di livello superiore: non è possibile far discendere il nuovo subappalto da un soggetto estraneo a quella catena.\
+    I codici fiscali dei soggetti indicati come subappaltatore sono sottoposti alle verifiche di esistenza e validità previste per le persone giuridiche.\
+    L'evoluzione del subappalto richiesto si governa attraverso le successive schede ES1 e CS1.
   version: 1.0.0
 components:
   schemas:
@@ -42,7 +53,6 @@ components:
       description: Dati del conferente
       type: object
       additionalProperties: false
-      required: [codiceFiscale,denominazione,ruoloOE,tipoOE,idOE]
       properties:
         idAggiudicatario:
           description: id partecipante dell'aggiudicatario che conferisce il subappalto

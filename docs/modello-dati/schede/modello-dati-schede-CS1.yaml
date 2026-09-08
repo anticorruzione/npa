@@ -1,6 +1,13 @@
 openapi: 3.0.0
 info:
   title: Modello Dati - Scheda CS1 - Scheda di conclusione subappalto.
+  description: | 
+    La scheda CS1 conclude il ciclo di vita del subappalto e ne determina lo stato finale.\
+    Il campo idScheda deve riportare l'identificativo restituito all'invio della scheda ES1 di esito, e non quello della scheda RSU1 di richiesta: è attraverso la scheda ES1 indicata che il sistema risale al subappalto da concludere. La scheda può essere correlata unicamente a una scheda ES1 riferita allo stesso appalto e allo stesso contratto.\
+    In funzione di come viene valorizzata la scheda, lo stato del subappalto evolve come segue: con il termine di ultimazione della prestazione e l'importo effettivo il subappalto passa in stato Chiuso; con il motivo di mancata esecuzione valorizzato come Revoca autorizzazione il subappalto passa in stato Revocato; con il motivo di mancata esecuzione valorizzato come Annullamento in autotutela il subappalto passa in stato Annullato.\
+    Nei casi di mancata esecuzione la data trasmessa nella scheda viene registrata dal sistema come data del mancato subappalto e non come termine di ultimazione della prestazione: il motivo di mancata esecuzione va quindi valorizzato solo quando la prestazione non è stata effettivamente eseguita.\
+    La scheda è prevista per concludere un subappalto autorizzato; non sono previste comunicazioni di conclusione per subappalti non approvati o revocati in fase autorizzativa, il cui ciclo si intende già concluso con la scheda ES1.\
+    Subappalti a cascata - non è possibile concludere un subappalto se dal medesimo discendono subappalti a cascata ancora aperti, ossia richiesti o autorizzati e non ancora conclusi. La catena dei subappalti va pertanto conclusa a partire dai livelli inferiori, comunicando prima la conclusione dei subappalti a cascata e solo successivamente quella del subappalto da cui discendono.
   version: 1.0.0
 components:
   schemas:

@@ -1,6 +1,14 @@
 openapi: 3.0.0
 info:
   title: Modello Dati - Scheda ES1 - Scheda di esito subappalto.
+  description: | 
+    La scheda ES1 chiude la fase autorizzativa del subappalto richiesto con la scheda RSU1 e ne determina il nuovo stato.\
+    Il campo idScheda deve riportare l'identificativo restituito all'invio della scheda RSU1 di richiesta: la scheda può essere correlata unicamente a una scheda RSU1 riferita allo stesso appalto e allo stesso contratto.\
+    In funzione di come viene valorizzata la scheda, lo stato del subappalto evolve come segue: con la data di autorizzazione il subappalto passa in stato Autorizzato; con il motivo di mancato subappalto valorizzato come Mancata approvazione il subappalto passa in stato Non approvato; con il motivo di mancato subappalto valorizzato come Revoca della richiesta di subappalto il subappalto passa in stato Revocato.\
+    Solo uno dei due dati - data di autorizzazione del subappalto oppure motivo del mancato subappalto - deve essere valorizzato: una scheda che non riporta nessuno dei due è priva dell'esito da comunicare e non viene accettata dal sistema.\
+    I due dati sono inoltre alternativi tra loro: va valorizzato unicamente quello coerente con l'esito che si intende comunicare, e non entrambi.\
+    Solo un subappalto autorizzato consente le lavorazioni successive: la conclusione del subappalto con la scheda CS1 o il conferimento di un ulteriore subappalto a cascata con una nuova scheda RSU1. Per un subappalto non approvato o revocato il ciclo si intende concluso e non sono previste ulteriori comunicazioni.\
+    L'invio di più schede ES1 riferite alla stessa richiesta di subappalto non è una lavorazione prevista: lo stato del subappalto risulterebbe determinato dall'ultima scheda confermata.
   version: 1.0.0
 components:
   schemas:

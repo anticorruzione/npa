@@ -28,21 +28,21 @@ components:
           description: Lavoro/Servizio/Fornitura subappalto
           type: string
         oggettoMl:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MultilinguaType'         
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MultilinguaType'         
         importoPresunto:
           description: Importo presunto Lavoro/ Servizio/Fornitura, subappalto
           type: number
           format: double
         categoria:
-          $ref: 'https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
+          $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum' 
         categoriaScorporabile:
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum'          
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CategoriaEnum'          
         cpv:
           type: array
           items:
-            $ref: 'https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CPVEnum'   
+            $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/CPVEnum'   
     AnacFormRSU1Type:
       description: Contiene tutti i dati relativi alla scheda di Richiesta di Subappalto
       type: object
@@ -65,4 +65,4 @@ components:
         anacForm:
           $ref: '#/components/schemas/AnacFormRSU1Type'
         espd:
-         $ref: 'https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'            
+         $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/EspdRequestType'            
