@@ -289,7 +289,7 @@ Nella tabella seguente sono disciplinati i tempi massimi e minimi per l'adozione
 * eForms:
   * versione 1.9.0 fino al 27/03/2025; 
   * versione 1.12 dal 27/03/2025;
-  * versione 1.13.3 dal 14/09/2026;
+  * versione 1.13.3 dal 30/09/2026;
 
 * ESPD versione 2.1.1;
 
