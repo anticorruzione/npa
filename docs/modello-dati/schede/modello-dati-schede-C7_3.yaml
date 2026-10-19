@@ -16,8 +16,8 @@ components:
           format: uuid      
         dataChiusura: 
           description: data di chiusura dell'elenco
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     SchedaC7_3Type:
       description: Conclusione Elenco Fornitori.
       type: object

@@ -12,30 +12,30 @@ components:
       properties:
         dataCollaudo:
           description: Data del collaudo statico (ove ricorra)
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataCertificato:
           description: Data del certificato di regolare esecuzione
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         modoCollaudo:
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/ModoCollaudoEnum'
         dataNomina:
           description: Data nomina collaudatore/Commissione
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataInizio:
           description: Data inizio operazioni di collaudo 
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataRedazioneCertificato:
           description: Data redazione certificato di collaudo/ verifica di conformità
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataDeliberaAmmissibilita:
           description: Data delibera di ammissibilità del collaudo (ove prevista)
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         esito:
           description: Esito del collaudo/ verifica di conformità
           type: string

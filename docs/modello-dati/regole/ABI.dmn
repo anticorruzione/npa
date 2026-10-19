@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ABI" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.2.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ABI" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.12.2" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="ABI" name="ABI">
     <informationRequirement id="InformationRequirement_18mcapo">
       <requiredInput href="#InputData_0k6u5e5" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_182tifx">
       <requiredInput href="#InputData_15b23jq" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0n75y84">
+      <requiredInput href="#InputData_1ouk25i" />
     </informationRequirement>
     <decisionTable id="DecisionTable_139vsny" hitPolicy="COLLECT" biodi:annotationsWidth="552">
       <input id="InputClause_0doc50a" biodi:width="241">
@@ -18,6 +21,11 @@
           <text>aggiudicazioni</text>
         </inputExpression>
       </input>
+      <input id="InputClause_0f5gd1e">
+        <inputExpression id="LiteralExpression_01c6l6k" typeRef="string">
+          <text>stazioniAppaltanti</text>
+        </inputExpression>
+      </input>
       <output id="OutputClause_0ah2sls" name="Errore" typeRef="string" biodi:width="422" />
       <rule id="DecisionRule_073k8zl">
         <description>REG131: L'importo di aggiudicazione non può superare i 221K</description>
@@ -27,6 +35,10 @@
         <inputEntry id="UnaryTests_0t8fruw">
           <text>some aggiudicazione in aggiudicazioni 
 satisfies aggiudicazione.importoAggiudicazione &gt;= 221000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oti80j">
+          <text>every stazioneAppaltante in stazioniAppaltanti
+satisfies is defined(stazioneAppaltante.codiceFiscale) and not(list contains(["80242250589","80242290585"], stazioneAppaltante.codiceFiscale))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xwjm6w">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG131\"}"</text>
@@ -41,6 +53,9 @@ satisfies aggiudicazione.importoAggiudicazione &gt;= 221000</text>
           <text>some aggiudicazione in aggiudicazioni 
 satisfies aggiudicazione.importoAggiudicazione &lt;= 0</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1rhorv9">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0v7k8hx">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG52\"}"</text>
         </outputEntry>
@@ -54,6 +69,9 @@ satisfies aggiudicazione.importoAggiudicazione &lt;= 0</text>
           <text>some aggiudicazione in aggiudicazioni
 satisfies count(aggiudicazione.partecipanti)=0</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1uwg5x5">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1aadsz9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG78\"}"</text>
         </outputEntry>
@@ -65,6 +83,9 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
         </inputEntry>
         <inputEntry id="UnaryTests_08bqris">
           <text>some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1juzya0">
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rwfsf9">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG100\"}"</text>
@@ -78,6 +99,9 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
         <inputEntry id="UnaryTests_1q85g7o">
           <text>count(aggiudicazioni) &lt;= 0</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1kb7ndg">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_06r7al1">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG112\"}"</text>
         </outputEntry>
@@ -89,7 +113,10 @@ satisfies count(aggiudicazione.partecipanti)=0</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1a4e2bn">
           <text>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.cup)&gt;0 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</text>
+satisfies (is defined(aggiudicazione.cup) and  count(aggiudicazione.cup)&gt;0 and (every c in aggiudicazione.cup satisfies (c = null or c = "")))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ymy2gm">
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jttif7">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG127\"}"</text>
@@ -104,6 +131,9 @@ satisfies count(aggiudicazione.cup)&gt;0 and (every c in aggiudicazione.cup sati
           <text>some aggiudicazione in aggiudicazioni
 satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0vrzkx1">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1agghep">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG132\"}"</text>
         </outputEntry>
@@ -112,6 +142,9 @@ satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works"</text>
   </decision>
   <inputData id="InputData_0k6u5e5" name="appalto" />
   <inputData id="InputData_15b23jq" name="aggiudicazioni" />
+  <inputData id="InputData_1ouk25i" name="stazioniAppaltanti">
+    <variable id="InformationItem_0nzd6q6" name="stazioniAppaltanti" typeRef="Any" />
+  </inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_0g7nmsp" dmnElementRef="ABI">
@@ -122,16 +155,24 @@ satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works"</text>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_1cshdlb" dmnElementRef="InformationRequirement_18mcapo">
         <di:waypoint x="240" y="207" />
-        <di:waypoint x="300" y="180" />
-        <di:waypoint x="300" y="160" />
+        <di:waypoint x="285" y="180" />
+        <di:waypoint x="285" y="160" />
       </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_0zepln2" dmnElementRef="InputData_15b23jq">
         <dc:Bounds height="45" width="125" x="337" y="207" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_1kqu666" dmnElementRef="InformationRequirement_182tifx">
         <di:waypoint x="400" y="207" />
-        <di:waypoint x="360" y="180" />
-        <di:waypoint x="360" y="160" />
+        <di:waypoint x="330" y="180" />
+        <di:waypoint x="330" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1esr0l3" dmnElementRef="InputData_1ouk25i">
+        <dc:Bounds height="45" width="125" x="488" y="208" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0koomna" dmnElementRef="InformationRequirement_0n75y84">
+        <di:waypoint x="551" y="208" />
+        <di:waypoint x="375" y="180" />
+        <di:waypoint x="375" y="160" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

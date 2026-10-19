@@ -27,20 +27,20 @@ components:
             type: string  
         dataStipula:
           description: Data stipula del contratto
-          type: string
-          format: date-time            
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataEsecutivita:
           description: Data esecutività del contratto (ove prevista)
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataDecorrenza:
           description: Data di decorrenza contrattuale
-          type: string
-          format: date-time 
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataScadenza:
           description: Data di scadenza contrattuale
-          type: string
-          format: date-time          
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         importoCauzione:
           description: Importo cauzione definitiva in €
           type: number

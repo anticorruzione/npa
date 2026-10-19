@@ -12,12 +12,12 @@ components:
       properties:
         dataDisposizioneInizio:
           description: Data disposizione dell’inizio della prog. Esecutiva
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataApprovazione:
           description: Data approvazione del  progetto Esecutivo
-          type: string
-          format: date-time  
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         consegnaFrazionata:
           description: Consegna frazionata
           type: boolean
@@ -26,27 +26,27 @@ components:
           type: boolean
         dataVerbalePrimaConsegna:
           description: Data verbale prima consegna lavori
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataAvvioPrimaFase:
           description: Data di avvio della prima fase dell'esecuzione del contratto
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataVerbaleConsegnaDefinitiva:
           description: Data verbale consegna definitiva
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         consegnaSottoRiserva:
           description: Consegna sotto riserva di legge?
           type: boolean
         dataEffettivoInizio:
           description: Data di effettivo inizio lavori/servizi/forniture (consegna completa/avvio di tutte le prestazioni del contratto)
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataFinePrevista:
           description: Data fine prevista per dare ultimazione ai lavori/servizi/forniture 
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     AnacFormI1Type:
       description: Contiene tutti i dati di inizio prestazione
       type: object

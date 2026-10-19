@@ -24,10 +24,9 @@ components:
           _stato:
             $ref: '#/components/schemas/StatoSchedaEnum' 
           _dataCreazione:
-            description: data creazione della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data creazione della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
       SchedaPianificazioneType:
         description: Scheda generica definita dal contesto in cui si trova l'appalto
         allOf: # estende il modello dati SchedaType
@@ -136,10 +135,9 @@ components:
         additionalProperties: false
         properties:
           _dataModifica:
-            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           body:
             oneOf:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-S1.yaml#/components/schemas/SchedaS1Type'
@@ -219,10 +217,9 @@ components:
         additionalProperties: false
         properties:
           _dataModifica:
-            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           body:
             oneOf:
               - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-SE.yaml#/components/schemas/SchedaSEType'
@@ -261,8 +258,8 @@ components:
           tipoOperazione:
             type: string
           dataOperazione:
-            format: date-time
-            type: string
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           statoPartecipante:
             type: string
           statoPartecipantePrecedente:
@@ -326,15 +323,13 @@ components:
           operazione: 
              $ref: '#/components/schemas/TipoOperazioneSoggettoEnum'
           dataInizio:
-            description: data inizio incarico soggetto (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data inizio incarico soggetto (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataFine:
-            description: data fine incarico soggetto (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data fine incarico soggetto (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
       RuoloType:
         description: ruolo
         type: object
@@ -383,10 +378,9 @@ components:
             type: string
             example: 'Fornitura di strumento XX per XX'
           dataCreazione:
-            description: data creazione dell'appalto (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'       
+            description: data creazione dell'appalto (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           stato:
             $ref: '#/components/schemas/StatoAppaltoEnum'
       AppaltoType:
@@ -428,20 +422,17 @@ components:
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
           dataCreazione:
-            description: Data di crezione dell'Avviso  (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: Data di crezione dell'Avviso (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataPubblicazione:
-            description: Data di pubblicazione dell'Avviso. (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: Data di pubblicazione dell'Avviso. (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataControllo:
-            description: data in cui è stato effettuato il controllo dello stato avviso (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'            
+            description: data in cui è stato effettuato il controllo dello stato avviso (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           stato:
             $ref: '#/components/schemas/StatoAvvisoEnum'
           azione:
@@ -483,25 +474,21 @@ components:
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
           _dataCreazione:
-            description: data creazione della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data creazione della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           _dataModifica:
-            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data modifica della scheda (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataControllo:
-            description: data in cui è stato effettuato il controllo dello stato avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data in cui è stato effettuato il controllo dello stato avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataNotifica:
-            description: data in cui è stato notifica l'oscuramento dell'avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data in cui è stato notifica l'oscuramento dell'avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           operazione:
             description: operazione che ha generato oscuramento dell'Avviso sulla PPL nazionale
             type: string
@@ -529,25 +516,21 @@ components:
             description: versione dell'Avviso inviato al TED.
             type: string
           dataControllo:
-            description: data in cui è stato effettuato il controllo dello stato avviso sul TED (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data in cui è stato effettuato il controllo dello stato avviso sul TED (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataInoltroPubblicazione:
-            description: data in cui è stato effettuato l'invio dell'avviso al TED (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z' 
+            description: data in cui è stato effettuato l'invio dell'avviso al TED (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataRicezionePubblicazione:
-            description: data in cui è stata confermata dal TED la ricezione dell'avviso (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'             
+            description: data in cui è stata confermata dal TED la ricezione dell'avviso (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataPubblicazione:
-            description: data di pubblicazione dell'Avviso comunicata dal TED (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data di pubblicazione dell'Avviso comunicata dal TED (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           publicationId:
             description: identificativo univoco di pubblicazione della notice ricevuto dal TED.
             type: string
@@ -567,20 +550,17 @@ components:
             type: string
             format: uuid          
           dataControllo:
-            description: data in cui è stato effettuato il controllo dello stato avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data in cui è stato effettuato il controllo dello stato avviso sulla PPL nazionale (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataInoltroPubblicazione:
-            description: data in cui è stato effettuato la richiesta di pubblicazione dell'avviso nazionale a PVL (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'            
+            description: data in cui è stato effettuato la richiesta di pubblicazione dell'avviso nazionale a PVL (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           dataPubblicazione:
-            description: data di pubblicazione dell'Avviso nazionale comunicata da PVL (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data di pubblicazione dell'Avviso nazionale comunicata da PVL (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           stato:
             $ref: '#/components/schemas/StatoAvvisoEnum'
           tipo:
@@ -670,10 +650,9 @@ components:
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
           dataControllo:
-            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           stato:
             $ref: '#/components/schemas/StatoAppaltoEnum'              
       StatoLottoType:
@@ -686,10 +665,9 @@ components:
             type: string
             example: '9050626CD6'
           dataControllo:
-            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data in cui è stato effettuato il controllo sullo stato dell'appalto, lotto o contratto (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           stato:
             $ref: '#/components/schemas/StatoLottoEnum' 
       StatoContrattoType:
@@ -725,10 +703,9 @@ components:
             format: uuid
             example: "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"              
           dataControllo:
-            description: data in cui è stato effettuato il controllo sullo stato dell'avviso (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'
+            description: data in cui è stato effettuato il controllo sullo stato dell'avviso (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           stato:  
              $ref: '#/components/schemas/StatoAvvisoEnum'
       EsitoOperazioneType:
@@ -776,10 +753,9 @@ components:
           dettaglio:
             $ref: '#/components/schemas/DettaglioEsitoOperazioneEnum'
           dataControllo:
-            description: data in cui è stato effettuato il controllo dell'esito dell'operazione (A date-time specified by ISO 8601 as profiled by RFC 3339)
-            type: string
-            format: date-time
-            example: '2022-01-23T12:02:05Z'            
+            description: data in cui è stato effettuato il controllo dell'esito dell'operazione (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
           errori: 
             description: elenco degli errori
             type: array

@@ -23,20 +23,20 @@ components:
           format: double          
         dataCertificatoAnticipazione:
           description: Data del certificato di pagamento relativo all'anticipazione 
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataAvanzamento:
           description: Data Stato di avanzamento
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         impSal:
           description: Importo stato avanzamento progressivo (cumulato)
           type: number
           format: double
         dataCertificatoMandatoPagamento:
           description: Data di emissione del certificato/mandato di pagamento. Per lavori, indicare la data del certificato. Per servizi e forniture, indicare la data del mandato
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         impCertificatoMandatoPagamento:
           description: Importo del certificato/mandato di pagamento. Per lavori, indicare l’importo del certificato. Per servizi e forniture, indicare l’importo del mandato
           type: number

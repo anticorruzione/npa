@@ -19,8 +19,8 @@ components:
       properties:    
         dataAutorizzazione: 
           description: Data di autorizzazione del subappalto
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         motivoMancatoSubappalto: 
           $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/schede/modello-dati-schede-dati-comuni.yaml#/components/schemas/MotivoMancatoSubappaltoEnum'
     AnacFormES1Type:

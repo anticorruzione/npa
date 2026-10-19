@@ -2821,6 +2821,33 @@
     "dataFine":null
 },
 {
+    "codice":"REG146",
+    "descrizione": {
+		"it": "L'id del conferente subappalto non può essere lo stesso del ricevente.",
+		"en": "L'id del conferente subappalto non può essere lo stesso del ricevente."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG147",
+    "descrizione": {
+		"it": "In caso di più soggetti indicare il mandatario.",
+		"en": "In caso di più soggetti indicare il mandatario."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
+    "codice":"REG148",
+    "descrizione": {
+		"it": "In caso di più soggetti indicare il mandante.",
+		"en": "In caso di più soggetti indicare il mandante."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"AUT01",
     "descrizione": {
         "it": "l'utente non è presente tra le stazioni appaltanti",

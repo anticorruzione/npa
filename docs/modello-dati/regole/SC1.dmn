@@ -14,7 +14,7 @@
       <rule id="DecisionRule_0m0ht0d">
         <description>REG77: la data di scadenza deve essere superiore alla data di stipula</description>
         <inputEntry id="UnaryTests_0qvvbpl">
-          <text>datiContratto.dataStipula != null and datiContratto.dataStipula != "" and datiContratto.dataScadenza &lt; datiContratto.dataStipula</text>
+          <text>datiContratto.dataStipula != null and datiContratto.dataStipula != "" and datiContratto.dataScadenza != null and datiContratto.dataScadenza != "" and date and time(datiContratto.dataScadenza) &lt; date and time(datiContratto.dataStipula)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nyzfph">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG77\"}"</text>

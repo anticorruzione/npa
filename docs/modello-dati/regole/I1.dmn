@@ -14,7 +14,7 @@
       <rule id="DecisionRule_0m0ht0d">
         <description>REG57: Data approvazione del progetto Esecutivo: se digitata deve essere superiore alla data di disposizione dell’inizio della prog. Esecutiva</description>
         <inputEntry id="UnaryTests_0qvvbpl">
-          <text>datiInizio.dataApprovazione != null and datiInizio.dataApprovazione != "" and datiInizio.dataDisposizioneInizio != null and datiInizio.dataDisposizioneInizio != "" and datiInizio.dataApprovazione &lt; datiInizio.dataDisposizioneInizio</text>
+          <text>datiInizio.dataApprovazione != null and datiInizio.dataApprovazione != "" and datiInizio.dataDisposizioneInizio != null and datiInizio.dataDisposizioneInizio != "" and date and time(datiInizio.dataApprovazione) &lt; date and time(datiInizio.dataDisposizioneInizio)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nyzfph">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG57\"}"</text>

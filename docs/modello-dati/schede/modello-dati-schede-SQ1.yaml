@@ -12,8 +12,8 @@ components:
       properties:
         dataSuperamento:
           description: Data del superamento del quarto contrattuale
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     AnacFormSQ1Type:
       description: Contiene tutti i dati relativi alla scheda di superamento del quarto del tempo contrattuale
       type: object

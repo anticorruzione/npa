@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_RSU1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.8.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_RSU1" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.10.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="RSU1" name="RSU1">
     <informationRequirement id="InformationRequirement_00o5h7n">
       <requiredInput href="#InputData_1vsdrei" />
@@ -115,6 +115,44 @@ satisfies (soggetto.denominazione = null or soggetto.denominazione="")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1fgef34">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG129\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kvoihq">
+        <description>REG146: L'id del conferente subappalto non può essere lo stesso del ricevente</description>
+        <inputEntry id="UnaryTests_1rc7ftk">
+          <text>(subappalto.operatoreEconomicoSubappaltatore.idOE=subappalto.conferenteSubappalto.idAggiudicatario) or (subappalto.operatoreEconomicoSubappaltatore.idOE=subappalto.conferenteSubappalto.idSubappaltanteACascata)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fnz8tg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u6s0ds">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG146\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0atis0h">
+        <description>REG147: In caso di più soggetti indicare il mandatario</description>
+        <inputEntry id="UnaryTests_09b3o50">
+          <text>count(subappalto.operatoreEconomicoSubappaltatore.elencoSoggetti) &gt; 1 and every soggetto in subappalto.operatoreEconomicoSubappaltatore.elencoSoggetti
+satisfies (soggetto.ruoloOE.codice != "5" and soggetto.ruoloOE.codice != "13" )</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_145nj32">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wh0t80">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG147\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g0089t">
+        <description>REG148: In caso di più soggetti indicare il mandante</description>
+        <inputEntry id="UnaryTests_13wyv75">
+          <text>count(subappalto.operatoreEconomicoSubappaltatore.elencoSoggetti) &gt; 1 and every soggetto in subappalto.operatoreEconomicoSubappaltatore.elencoSoggetti
+satisfies (soggetto.ruoloOE.codice != "12" and soggetto.ruoloOE.codice != "10" )</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0al6evf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qpe8z0">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG148\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>

@@ -3,9 +3,55 @@ info:
   title: Modello Dati Tipologiche - OpenAPI 3.0
   version: 1.0.0
   description: |-
-    Vengono riportati gli oggetti delle tipologiche
+   Vengono riportati gli oggetti delle tipologiche e i tipi di dato base trasversali,
+   fra cui la definizione centralizzata del formato dei valori temporali.
 components:
   schemas:
+    # Tipi base per i valori temporali.
+    # Costituiscono l'unica sorgente di definizione del formato dei dati temporali scambiati
+    # con la PCP: sono referenziati tramite $ref da tutti i livelli - specifiche dei servizi,
+    # modello dati e yaml delle schede - cosi che una modifica apportata qui si propaghi
+    # automaticamente su tutti gli oggetti fruitori.
+    DataOraType:
+      description: |-
+        Data e ora secondo ISO 8601 as profiled by RFC 3339, con offset dal fuso orario UTC
+        indicato in forma esplicita e precisione al secondo.
+
+        Forma ammessa: `YYYY-MM-DDThh:mm:ss±hh:mm` (es. `2026-07-15T14:54:28+02:00`).
+
+        Non sono ammessi:
+        * l'indicatore di zona `Z` in luogo dell'offset numerico (utilizzare `+00:00`);
+        * la frazione di secondo (es. `.123`);
+        * l'omissione dell'offset, ossia una data e ora priva di fuso orario.
+      type: string
+      format: date-time
+      pattern: '^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T([01]\d|2[0-3]):[0-5]\d:[0-5]\d[+-]([01]\d|2[0-3]):[0-5]\d$'
+      minLength: 25
+      maxLength: 25
+      example: '2026-07-15T14:54:28+02:00'
+    DataType:
+      description: |-
+        Data di calendario secondo ISO 8601 as profiled by RFC 3339 (`full-date`).
+
+        Forma ammessa: `YYYY-MM-DD` (es. `2026-07-15`).
+      type: string
+      format: date
+      pattern: '^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$'
+      minLength: 10
+      maxLength: 10
+      example: '2026-07-15'
+    OraType:
+      description: |-
+        Ora del giorno secondo ISO 8601 as profiled by RFC 3339 (`full-time`), con offset dal
+        fuso orario UTC indicato in forma esplicita e precisione al secondo.
+
+        Forma ammessa: `hh:mm:ss±hh:mm` (es. `14:54:28+02:00`).
+      type: string
+      format: time
+      pattern: '^([01]\d|2[0-3]):[0-5]\d:[0-5]\d[+-]([01]\d|2[0-3]):[0-5]\d$'
+      minLength: 14
+      maxLength: 14
+      example: '14:54:28+02:00'
     TipologicaSchemaType:
       type: object
       properties:
@@ -17,21 +63,19 @@ components:
         - idTipologica
         - codice
     TipologicaSchemaEstesoType:
-      properties:
-        codice:
-          type: string
-        descrizione:
-          $ref: "#/components/schemas/I18NType"
-        dataInizio:
-          description: data inizio (A date-time specified by ISO 8601 as profiled by RFC 3339)
-          type: string
-          format: date-time
-          example: "2022-01-23T12:02:05Z"
-        dataFine:
-          description: data fine (A date-time specified by ISO 8601 as profiled by RFC 3339)
-          type: string
-          format: date-time
-          example: "2022-01-23T12:02:05Z"
+        properties:
+          codice:
+            type: string
+          descrizione:
+            $ref: '#/components/schemas/I18NType'
+          dataInizio:
+            description: data inizio (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: '#/components/schemas/DataOraType'
+          dataFine:
+            description: data fine (A date-time specified by ISO 8601 as profiled by RFC 3339, with explicit UTC offset)
+            allOf:
+              - $ref: '#/components/schemas/DataOraType'
     TipologicaSchemaErroriType:
       type: object
       properties:

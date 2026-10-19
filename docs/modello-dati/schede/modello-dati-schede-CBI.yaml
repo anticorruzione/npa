@@ -12,12 +12,12 @@ components:
       properties:
         dataInizio:
           description: Data di inizio
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataUltimazione:
           description: Data di ultimazione
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         importo: 
           description: Importo delle somme liquidate
           type: number

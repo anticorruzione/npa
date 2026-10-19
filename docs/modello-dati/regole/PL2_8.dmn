@@ -27,7 +27,7 @@
         <inputEntry id="UnaryTests_0xbdfzt">
           <text>some lotto in lotti
 satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) &lt;= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</text>
+ date and time(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte) &lt;= now()</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_01bit47">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG105\"}"</text>

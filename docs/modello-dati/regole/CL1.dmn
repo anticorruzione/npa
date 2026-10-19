@@ -50,7 +50,7 @@
       <rule id="DecisionRule_0ebyvv3">
         <description>REG90: Data inizio operazioni di collaudo antecedente la data  di nomina della commissione di collaudo/collaudatore </description>
         <inputEntry id="UnaryTests_1xy83gr">
-          <text>collaudo.dataInizio != null and collaudo.dataInizio != "" and collaudo.dataNomina != null and collaudo.dataNomina != "" and collaudo.dataInizio &lt; collaudo.dataNomina</text>
+          <text>collaudo.dataInizio != null and collaudo.dataInizio != "" and collaudo.dataNomina != null and collaudo.dataNomina != "" and date and time(collaudo.dataInizio) &lt; date and time(collaudo.dataNomina)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0y9q5as">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG90\"}"</text>
@@ -68,7 +68,7 @@
       <rule id="DecisionRule_1a63zwo">
         <description>REG92: Data redazione certificato antecedente la data di inizio operazioni di collaudo</description>
         <inputEntry id="UnaryTests_0cvi816">
-          <text>collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and collaudo.dataInizio != null and collaudo.dataInizio != "" and collaudo.dataRedazioneCertificato &lt; collaudo.dataInizio</text>
+          <text>collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and collaudo.dataInizio != null and collaudo.dataInizio != "" and date and time(collaudo.dataRedazioneCertificato) &lt; date and time(collaudo.dataInizio)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0cr53mp">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG92\"}"</text>
@@ -77,7 +77,7 @@
       <rule id="DecisionRule_1ywrkfy">
         <description>REG93: Data delibera di ammissibilità antecedente la data di redazione del certificato di collaudo</description>
         <inputEntry id="UnaryTests_0wdkw9q">
-          <text>collaudo.dataDeliberaAmmissibilita != null and collaudo.dataDeliberaAmmissibilita != "" and collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and collaudo.dataDeliberaAmmissibilita &lt; collaudo.dataRedazioneCertificato</text>
+          <text>collaudo.dataDeliberaAmmissibilita != null and collaudo.dataDeliberaAmmissibilita != "" and collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and date and time(collaudo.dataDeliberaAmmissibilita) &lt; date and time(collaudo.dataRedazioneCertificato)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0r6gjn7">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG93\"}"</text>

@@ -2329,8 +2329,8 @@ components:
       properties: 
         dataApprovazione:
           description: Data di approvazione della modifica contrattuale
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
@@ -2349,8 +2349,8 @@ components:
       properties: 
         dataApprovazione:
           description: Data di approvazione della modifica contrattuale
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         urlDocumentazione:
           description: URL documentazione varianti in corso d’opera
           type: string
@@ -2463,12 +2463,12 @@ components:
           type: string
         dataAffidamentoIncarico:
           description: Data di affidamento incarico (per progettazione esterna)
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         dataConsegna: 
           description: Data di consegna progetto (per progettazione esterna)
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     IncaricoType:
       description: Dati relativi agli incarichi tecnici
       type: object
@@ -3502,8 +3502,8 @@ components:
       properties:
         dataAggiudicazione:
           description: Data della decisione ufficiale di selezione dell'offerta vincitrice - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-1451 - Winner Decision Date del TED
-          type: string
-          format: date-time 
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     DatiBaseSottomissioniRicevuteType:
       description:  Dato in comune con il Business Group Received Submissions delle eforms
       additionalProperties: false
@@ -3994,12 +3994,12 @@ components:
       properties:
         scadenzaPresentazioneInvito:
           description: Data e ora di scadenza per la presentazione della richiesta di invito - nei casi in cui la scheda preveda un eform, corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         scadenzaPresentazioneOfferte: 
           description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
-          type: string
-          format: date-time   
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     DatiBaseTerminiInvioSoloScadenzaType:
       description: Dato in comune con il Business Group Submission Terms delle eforms
       required:
@@ -4008,8 +4008,8 @@ components:
       properties:
         scadenzaPresentazioneInvito:
           description: Data di scadenza per la presentazione della richiesta di invito - nei casi in cui la scheda preveda un eform, corrisponde ai campi bt-630 - Deadline Receipt Expressions e bt-1311 - Deadline Receipt Requests del TED
-          type: string
-          format: date-time          
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     DatiBaseTerminiInvioSoloOraType:
       description: Dato in comune con il Business Group Submission Terms delle eforms 
       required: [scadenzaPresentazioneOfferte]
@@ -4017,8 +4017,8 @@ components:
       properties:
         scadenzaPresentazioneOfferte: 
           description: Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED
-          type: string
-          format: date-time            
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     DatiBaseImportoType:
       description: Dato in comune con il Business Group Prize delle eforms 
       additionalProperties: false
@@ -4064,8 +4064,8 @@ components:
       properties:
         dataSottoscrizione:
           description: Data sottoscrizione eventuale atto aggiuntivo/ sottomissione - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-145 - Contract Conclusion Date del TED
-          type: string
-          format: date-time  
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         motiviModifica:
           $ref: '#/components/schemas/MotiviModificaContrattualeEnum'
         causaModifica:
@@ -4079,8 +4079,8 @@ components:
       properties: 
         dataInvioInviti: 
           description: Data stimata dell'invio degli inviti a presentare le offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-130  - Dispatch Invitation Tender del TED
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     DatiBaseDocumentiType:
       description:  Dato in comune con il Business Group Procurement Documents delle eforms
       additionalProperties: false
@@ -4112,15 +4112,15 @@ components:
       properties: 
         dataInizio: 
           description: La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         durata: 
           description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED
           type: string
         dataFine: 
           description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED
-          type: string
-          format: date-time 
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         altraDurata: 
           $ref: '#/components/schemas/AltraDurataEnum'  
     DatiBaseDurataSDAType:
@@ -4130,15 +4130,15 @@ components:
       properties: 
         dataInizio: 
           description: La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED
-          type: string
-          format: date-time
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         durata: 
           description: Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED
           type: string
         dataFine: 
           description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED
-          type: string
-          format: date-time 
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
         altraDurata: 
           $ref: '#/components/schemas/AltraDurataEnum' 
     DatiBaseDurataCSDAType:
@@ -4148,8 +4148,8 @@ components:
       properties: 
         dataFine: 
           description: La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED
-          type: string
-          format: date-time 
+          allOf:
+            - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/DataOraType'
     AnacFormPLBaseType:
       description: Contiene i dati comuni per le schede relative alle pianificazioni
       type: object
