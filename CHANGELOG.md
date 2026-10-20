@@ -1550,6 +1550,7 @@ aggiunta regola REG5_1
   * modificato l'elenco delle schede successive della S4: aggiunta la scheda CO2
 </details>
 
+<details>
 <summary><h1>Note di rilascio del 09/01/2026 (Changelog-07)</h1></summary>
 
 **NOTA**
@@ -1673,6 +1674,7 @@ aggiunta regola REG5_1
 * S3: aggiunta la regola REG143
 * AD3.dmn: aggiunte le regole REG144,REG145
 * P8.dmn: aggiunte le regole per la nuova scheda per le procedure negoziate senza bando o adesioni ad AQ soprasoglia
+</details>
 
 <details>
 <summary><h1>Note di rilascio del 12/01/2026 (In Esercizio)</h1></summary>
@@ -1739,6 +1741,7 @@ aggiunta regola REG5_1
     * schede M1, M1_40, M2, M2_40, RSU1, ES1, AC1: aggiunto valore I1
 </details>
 
+<details>
 <summary><h1>Note di rilascio del 25/05/2026 (SDK 1.13.3)</h1></summary>
 
 **NOTA**
@@ -1766,6 +1769,7 @@ aggiunta regola REG5_1
 
 ## Documentazione
 * Nella sezione Standard adottati del file README.md è stata aggiornata la versione sdk dell'eForms da adottare (1.13.3).
+</details>
 
 <summary><h1>Note di rilascio del 16/07/2026</h1></summary>
 
@@ -1792,6 +1796,7 @@ aggiunta regola REG5_1
 * roadmap.md:
   * aggiunta voce di roadmap per il rilascio/aggiornamento dei documenti enti certificanti 00004, 00005, 00006, 00014 e 00045
 
+<details>
 <summary><h1>Note di rilascio del 08/06/2026</h1></summary>
 
 ### Orchestratore
@@ -1800,6 +1805,7 @@ aggiunta regola REG5_1
 		* colonna schedaSuccessiva: aggiunta la scheda S1_2
 </details>
 
+<details>
 <summary><h1>Note di rilascio del 06/08/2026</h1></summary>
 
 ### Tipologiche
@@ -1809,10 +1815,14 @@ aggiunta regola REG5_1
 Le nuove voci della tipologica codIstat devono essere utilizzate qualora si intenda indicare un ambito geografico riferito a uno Stato estero oppure a una dimensione territoriale sovracomunale. In entrambi i casi, la valorizzazione di una delle due voci comporta l'obbligo di compilare anche il campo codNUTS, selezionando uno dei valori previsti dalla relativa tipologica.
 * ticket 105000, 109973:
 	* categorieMerceologiche.json: aggiunte le voci "Medicazioni speciali", "Protesi ginocchio", "Suturatrici", "Gestione e manutenzione delle aree verdi", "Arredi";
+</details>
 
-<summary><h1>Note di rilascio del 19/10/2026</h1></summary>
+<summary><h1>Note di rilascio del 19/10/2026 (DAT_PCP_07 - Centralizzazione del formato dei campi temporali)</h1></summary>
 
-## PdL DAT_PCP_07 - Centralizzazione del formato dei campi temporali
+**NOTA**
+* Pubblicazione contenuti su GitHub: 19/10/2026
+* Rilascio in Qualificazione: Come da Roadmap
+* Rilascio in Esercizio: Come da Roadmap
 
 ### Modello Dati
 * modello-dati-tipologiche.yaml:
@@ -1846,3 +1856,10 @@ Adeguate le regole di validazione DMN al nuovo formato dei campi temporali, in c
   * nelle regole che confrontano la scadenza di presentazione (scadenzaPresentazioneOfferte / scadenzaPresentazioneInvito, REG105/REG106) con il momento corrente, l'espressione `date and time(substring before(scadenza, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))` è stata sostituita con `date and time(scadenza) <= now()`. Rimossa la dipendenza dal suffisso "Z" e dalla ricostruzione manuale del timestamp corrente, ora ottenuto dalla funzione now()
 * CL1.dmn (REG90, REG92, REG93), I1.dmn (REG57), SC1.dmn (REG77):
   * i confronti tra date, prima eseguiti direttamente sulle stringhe, sono ora effettuati su valori tipizzati tramite `date and time(...)`, garantendo l'ordinamento cronologico corretto a prescindere dall'offset. In SC1.dmn aggiunto inoltre il controllo di valorizzazione (null / stringa vuota) sul campo dataScadenza
+
+<summary><h1>Note di rilascio del 20/10/2026</h1></summary>
+
+### Orchestratore
+* ticket 114287:
+	* modificata la riga delle schede PL2_1, PL2_2, PL2_3:
+		* colonna versione: inserito il valore 1.0
