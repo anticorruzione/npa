@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ID" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Scheda_ID" name="Regole" namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="17.12.3" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0" camunda:diagramRelationId="ad8e9e2b-ffef-4291-b177-ce7ee3ca7fa8">
   <decision id="ID" name="ID">
     <informationRequirement id="InformationRequirement_0qk9zn8">
       <requiredInput href="#InputData_1gcht8t" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0pcw3ao">
+      <requiredInput href="#InputData_16pwit1" />
     </informationRequirement>
     <decisionTable id="DecisionTable_ID" hitPolicy="COLLECT">
       <input id="comunicazione_ID" biodi:width="394">
@@ -10,11 +13,19 @@
           <text>comunicazione</text>
         </inputExpression>
       </input>
+      <input id="InputClause_1eqyogv">
+        <inputExpression id="LiteralExpression_0rzfk5o" typeRef="string">
+          <text>codiceSchedaInizialeAvvio</text>
+        </inputExpression>
+      </input>
       <output id="Errore_ID" name="Errore" typeRef="string" biodi:width="477" />
       <rule id="DecisionRule_1y1n4fo">
         <description>REG101: indicare almeno uno dei campi di cui si richiede la modifica</description>
         <inputEntry id="UnaryTests_1jerhf2">
-          <text>is defined(comunicazione.comunicazioneCUP) = false and is defined(comunicazione.comunicazioneRibassoAggiudicazione) = false and is defined(comunicazione.docFAP) = false and is defined(comunicazione.comunicazioneUrl) = false</text>
+          <text>is defined(comunicazione.comunicazioneCUP) = false and is defined(comunicazione.comunicazioneRibassoAggiudicazione) = false and is defined(comunicazione.docFAP) = false and is defined(comunicazione.comunicazioneUrl) = false and is defined(comunicazione.integrazioneDatiEsecuzione) = false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ph2jcy">
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1jfj8ky">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG101\"}"</text>
@@ -23,7 +34,10 @@
       <rule id="DecisionRule_0m0ht0d">
         <description>REG127: indicare almeno un Cup.</description>
         <inputEntry id="UnaryTests_0qvvbpl">
-          <text>is defined(comunicazione.comunicazioneCUP) and count(comunicazione.comunicazioneCUP.cup) &lt;= 0</text>
+          <text>is defined(comunicazione.comunicazioneCUP) and comunicazione.comunicazioneCUP.operazioneCUP = "INSERIMENTO" and (is defined(comunicazione.comunicazioneCUP.cup) = false or comunicazione.comunicazioneCUP.cup = null or count(comunicazione.comunicazioneCUP.cup) &lt;= 0)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mm72rw">
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nyzfph">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG127\"}"</text>
@@ -34,25 +48,81 @@
         <inputEntry id="UnaryTests_0vpt0zs">
           <text>is defined(comunicazione.comunicazioneUrl) and comunicazione.comunicazioneUrl.url != null and comunicazione.comunicazioneUrl.url != "" and starts with(comunicazione.comunicazioneUrl.url,"http:") = false and starts with(comunicazione.comunicazioneUrl.url,"https:") = false</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_03yff5v">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_15kfsn8">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG8\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1imdre8">
+        <description>REG146: in caso di richiesta di rimozione il campo cup non va compilato</description>
+        <inputEntry id="UnaryTests_060tnzr">
+          <text>is defined(comunicazione.comunicazioneCUP) and comunicazione.comunicazioneCUP.operazioneCUP = "RIMOZIONE" and is defined(comunicazione.comunicazioneCUP.cup)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uab793">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uinsn7">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG146\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_104sysl">
+        <description>REG147: Il cig indicato corrisponde ad una procedura per cui non è prevista la
+fase di esecuzione</description>
+        <inputEntry id="UnaryTests_09819zh">
+          <text>is defined(comunicazione.integrazioneDatiEsecuzione)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ucypp5">
+          <text>list contains(["P5","AD5","ABI"], codiceSchedaInizialeAvvio)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fk6s5f">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG147\"}"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_029ri11">
+        <description>REG148: Compilare almeno uno dei dati di esecuzione per cui si richiede l'integrazione.</description>
+        <inputEntry id="UnaryTests_1p5fox3">
+          <text>is defined(comunicazione.integrazioneDatiEsecuzione) and
+(is defined(comunicazione.integrazioneDatiEsecuzione.dataStipulaContratto) = false or comunicazione.integrazioneDatiEsecuzione.dataStipulaContratto = "") and 
+is defined(comunicazione.integrazioneDatiEsecuzione.consegnaSottoRiserva) = false and 
+(is defined(comunicazione.integrazioneDatiEsecuzione.dataEffettivoInizioPrestazione) = false or comunicazione.integrazioneDatiEsecuzione.dataEffettivoInizioPrestazione = "") and 
+(is defined(comunicazione.integrazioneDatiEsecuzione.dataFinePrevistaPrestazione) = false or comunicazione.integrazioneDatiEsecuzione.dataFinePrevistaPrestazione = "") 
+</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bb759t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ygb8fr">
+          <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG148\"}"</text>
         </outputEntry>
       </rule>
     </decisionTable>
   </decision>
   <inputData id="InputData_1gcht8t" name="comunicazione" />
+  <inputData id="InputData_16pwit1" name="codiceSchedaInizialeAvvio">
+    <variable id="InformationItem_0fic5gu" name="codiceSchedaInizialeAvvio" typeRef="Any" />
+  </inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_15do7a0">
       <dmndi:DMNShape id="DMNShape_AD1_10" dmnElementRef="ID">
         <dc:Bounds height="80" width="180" x="150" y="110" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_0t2cycj" dmnElementRef="InputData_1gcht8t">
-        <dc:Bounds height="45" width="125" x="178" y="268" />
+        <dc:Bounds height="45" width="125" x="267" y="268" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0h28df6" dmnElementRef="InformationRequirement_0qk9zn8">
-        <di:waypoint x="241" y="268" />
-        <di:waypoint x="240" y="210" />
-        <di:waypoint x="240" y="190" />
+        <di:waypoint x="330" y="268" />
+        <di:waypoint x="270" y="210" />
+        <di:waypoint x="270" y="190" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0js7o8e" dmnElementRef="InputData_16pwit1">
+        <dc:Bounds height="45" width="125" x="77" y="268" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_18qbh3j" dmnElementRef="InformationRequirement_0pcw3ao">
+        <di:waypoint x="140" y="268" />
+        <di:waypoint x="210" y="210" />
+        <di:waypoint x="210" y="190" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

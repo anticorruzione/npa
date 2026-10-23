@@ -1705,13 +1705,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:
@@ -1743,13 +1737,7 @@ paths:
       responses:
         '200':
           description: Operazione terminato con successo.
-          headers: &ratelimit_headers 
-              X-RateLimit-Limit:
-                 $ref: '#/components/headers/X-RateLimit-Limit'
-              X-RateLimit-Remaining:
-                 $ref: '#/components/headers/X-RateLimit-Remaining'
-              X-RateLimit-Reset:
-                 $ref: '#/components/headers/X-RateLimit-Reset'
+          headers: *ratelimit_headers
           content:
             application/json:
               schema:

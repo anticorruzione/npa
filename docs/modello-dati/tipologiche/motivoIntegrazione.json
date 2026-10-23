@@ -1,0 +1,18 @@
+[{
+    "codice":"1",
+    "descrizione": {
+		"it": "Omessa comunicazione in fase di esecuzione",
+		"en": "Omessa comunicazione in fase di esecuzione"
+		},
+    "dataInizio":"2026-10-10T00:00:00Z",
+    "dataFine":null
+},
+{
+    "codice":"2",
+    "descrizione": {
+		"it": "Il sistema non ha permesso l’invio della scheda I1",
+		"en": "Il sistema non ha permesso l’invio della scheda I1"
+		},
+    "dataInizio":"2026-10-10T00:00:00Z",
+    "dataFine":null
+}]

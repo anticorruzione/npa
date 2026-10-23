@@ -1448,6 +1448,15 @@
     "dataFine":null
 },
 {
+	"codice":"ERR160",
+    "descrizione": {
+		"it": "CIG e idContratto non coerenti.",
+		"en": "CIG e idContratto non coerenti."
+	},
+    "dataInizio":null,
+    "dataFine":null
+},
+{
     "codice":"ERR9999",
     "descrizione": {
 		"it": "errore generico",

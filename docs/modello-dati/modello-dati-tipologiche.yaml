@@ -219,3 +219,7 @@ components:
       allOf: # estende lo schema dati di TipologicaSchemaType
         - $ref: "#/components/schemas/TipologicaSchemaType"
       description: Operazione Elenco - fare riferimento ai valori contenuti nel file [operazioneElenco.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/operazioneElenco.json)
+    MotivoIntegrazioneEnum:
+      allOf: # estende lo schema dati di TipologicaSchemaType
+        - $ref: 'https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/modello-dati-tipologiche.yaml#/components/schemas/TipologicaSchemaType'     
+      description: Motivo Integrazione Dati Esecuzione - fare riferimento ai valori contenuti nel file [motivoIntegrazione.json](https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoIntegrazione.json)
