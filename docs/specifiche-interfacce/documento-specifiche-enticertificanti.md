@@ -35,9 +35,9 @@ Tutti i modelli dati sono presenti nel file [modello-dati-fvoe-fva.yaml](https:/
 |   `25/09/2024`   |      `00010`       | `Verifica esistenza prospetto informativo disabili`          | `-`            | `Ministero del Lavoro`  |
 |   `25/09/2024`   |      `00011`       | `Verifica esistenza rapporto parità di genere`               | `-`            | `Ministero del Lavoro`  |
 |   `30/04/2026`   |      `00099`       | `Contributo ANAC`                                            | `DatiSA_00099` | `ANAC`                  |
+|  `26/11/2026`   |      `00006`       | `Certificato dei carichi pendenti`                           | `DatiSA_00006` | `Min. Giustizia`        |
 |   `TBD`   |      `00014`       | `Certificazione IAF`                                         | `DatiSA_00014` | `IAF`                   |
 |  `TBD`   |      `00045`       | `Bilancio Aziendale`                                         | `DatiSA_00045` | `InfoCamere`            |
-|  `26/11/2026`   |      `00006`       | `Certificato dei carichi pendenti`                           | `DatiSA_00006` | `Min. Giustizia`        |
 
 ## Casi di test
 
