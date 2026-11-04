@@ -1864,7 +1864,7 @@ Adeguate le regole di validazione DMN al nuovo formato dei campi temporali, in c
 	* modificata la riga delle schede PL2_1, PL2_2, PL2_3:
 		* colonna versione: inserito il valore 1.0
 
-<summary><h1>Note di rilascio del 23/10/2026</h1></summary>
+<summary><h1>Note di rilascio del 23/10/2026 (solo documentazione)</h1></summary>
 
 ### Schede
 * ticket 96573:
