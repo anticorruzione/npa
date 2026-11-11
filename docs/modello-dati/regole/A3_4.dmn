@@ -35,13 +35,13 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-jus
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1375p7w">
-        <description>REG47: Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</description>
+        <description>REG47: Il numero di offerte ammesse non deve essere superiore al numero di offerte presentate</description>
         <inputEntry id="UnaryTests_0an2yyy">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1extrxn">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOfferteAmmesse)</text>
+satisfies (aggiudicazione.numeroOfferteAmmesse &gt; count(aggiudicazione.offertePresentate))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_01kmogs">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG47\"}"</text>

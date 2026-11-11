@@ -22,13 +22,13 @@
       </input>
       <output id="Errore_AD1_10" name="Errore" typeRef="string" biodi:width="477" />
       <rule id="DecisionRule_0aqqlcc">
-        <description>REG47: Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</description>
+        <description>REG47: Il numero di offerte ammesse non deve essere superiore al numero di offerte presentate</description>
         <inputEntry id="UnaryTests_1ws1uby">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02fin7i">
           <text>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOfferteAmmesse)</text>
+satisfies (aggiudicazione.numeroOfferteAmmesse &gt; count(aggiudicazione.offertePresentate))</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0h4jsfc">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG47\"}"</text>

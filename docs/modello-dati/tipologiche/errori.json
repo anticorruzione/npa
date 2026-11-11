@@ -1936,8 +1936,8 @@
 {
     "codice":"REG47",
     "descrizione": {
-		"it": "Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse",
-		"en": "Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse"
+		"it": "Il numero di offerte ammesse non deve essere superiore al numero di offerte presentate",
+		"en": "Il numero di offerte ammesse non deve essere superiore al numero di offerte presentate"
 	},
     "dataInizio":null,
     "dataFine":null
