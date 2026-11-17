@@ -400,8 +400,8 @@ paths:
     post:
       tags:
         - comunicaAppalto
-      summary: API Rest per l'eliminazione di un Appalto in lavorazione. SINCRONO
-      description: Eliminazione logica di un Appalto e dei lotti in lavorazione. SINCRONO
+      summary: API Rest per l'eliminazione di un Appalto non pubblicato. SINCRONO
+      description: Eliminazione logica di un Appalto e dei lotti in lavorazione o confermati. SINCRONO
       operationId: idAppaltoCancella
       requestBody:
         content:
