@@ -537,4 +537,14 @@
 		},
     "dataInizio":"2026-08-03T00:00:00Z",
     "dataFine":null
+},
+{
+    "codice":"ad-sport",
+    "descrizione": {
+		"it": "Affidamento diretto della rigenerazione, riqualificazione e ammodernamento e successiva gestione di un impianto sportivo a favore di Associazione o Società Sportiva senza fini di lucro ai sensi dell’art. 5 d.lgs. n. 38/2021",
+		"en": "Direct award of the regeneration, redevelopment and modernization, and subsequent management, of a sports facility to a non-profit Sports Association or Sports Club, pursuant to Article 5 of Legislative Decree No. 38/2021.",
+		"de": "Direktvergabe der Erneuerung, Aufwertung und Modernisierung sowie des anschließenden Betriebs einer Sportanlage zugunsten eines gemeinnützigen Sportvereins oder einer gemeinnützigen Sportgesellschaft gemäß Art. 5 des Gesetzesdekrets Nr. 38/2021."
+		},
+    "dataInizio":"2026-11-30T00:00:00Z",
+    "dataFine":null
 }]
