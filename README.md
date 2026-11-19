@@ -13,6 +13,14 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 19/11/2026 - Nuovo disservizio annunciato dal TeD sulle API di produzione
+Si riporta di seguito l'avviso ricevuto dal TeD alle ore 16.12 di oggi, 19 novembre
+
+Dear ANAC,  
+We would like to inform you that urgent maintenance is scheduled for the TED API Production environment on Friday, 20 November 2026, from 09:00 to 11:00 CET.  During this period, TED API services may be unavailable. 
+Please inform your users.  
+We apologise for the short notice and any inconvenience this may cause
+
 ## 18/11/2026 - Disservizio annunciato dal TeD sulle API di produzione
 Si riporta di seguito l'avviso ricevuto dal TeD alle ore 10.44 di oggi, 18 novembre, con la rettifica pubblicata nel pomeriggio 
 
