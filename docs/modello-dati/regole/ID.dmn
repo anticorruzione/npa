@@ -74,7 +74,7 @@ fase di esecuzione</description>
           <text>is defined(comunicazione.integrazioneDatiEsecuzione)</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ucypp5">
-          <text>list contains(["P5","AD5","ABI"], codiceSchedaInizialeAvvio)</text>
+          <text>list contains(["P5","AD5","ABI","AOC"], codiceSchedaInizialeAvvio)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0fk6s5f">
           <text>"{\"idTipologica\":\"errori\",\"codice\":\"REG147\"}"</text>
