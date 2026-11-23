@@ -13,6 +13,11 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+## 23/11/2026 - Indisponibilità delle API TeD in ambiente di test
+Le API TeD in ambiente di "preview" (test) sono attualmente indisponibili. 
+Da comunicazione di questa mattina non è al momento disponibile una data prevista per il ripristino del servizio.
+Per quanto riguarda ANAC il disservizio impatta su entrambi gli ambienti di qualificazione e attestazione.
+
 ## 19/11/2026 - Nuovo disservizio annunciato dal TeD sulle API di produzione
 Si riporta di seguito l'avviso ricevuto dal TeD alle ore 16.12 di oggi, 19 novembre
 
