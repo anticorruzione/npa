@@ -13,6 +13,10 @@ pertanto, nelle segnalazioni non devono quindi essere inserite informazioni rise
 
 Qualora fosse necessario trasmettere informazioni riservate, dovranno essere utilizzati canali alternativi, previamente concordati con ANAC.
 
+# 27/11/2026 - Disservizio annunciato dal TeD sulle API di produzione
+Si riporta di seguito l'avviso ricevuto dal TeD alle ore 17.19 di oggi, 27 novembre
+We would like to inform you that urgent maintenance is scheduled for eNotices2 in the Production environment on Monday, 30 November 2026, from 07:00 to 09:00 CET.  As a result of this maintenance, the TED Publication API in Production may experience brief service disruptions during this period. Please inform your users accordingly. We apologise for the short notice and any inconvenience this may cause
+
 ## 23/11/2026 - Indisponibilità delle API TeD in ambiente di test
 Le API TeD in ambiente di "preview" (test) sono attualmente indisponibili. 
 Da comunicazione di questa mattina non è al momento disponibile una data prevista per il ripristino del servizio.
